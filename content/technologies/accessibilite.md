@@ -6,7 +6,7 @@ La question du niveau d'exigence d'accessibilité doit être adressée dès le d
 
 ## Pourquoi avoir une version mobile et accessible de son site ? 
 
-La part du mobile dans la navigation sur Internet est constamment en croissance (estimée à plus de 50% du trafic en 2019, à plus de 60% en 2021). Vous comprenez ainsi pourquoi il est important d’anticiper le rendu des pages sur mobile dès la phase de conception graphique ! Ces versions peuvent aller d’une simple version responsive où le contenu est redimensionné en fonction de la taille de l’écran à une maquette mobile spécifique.
+La part du mobile dans la navigation sur Internet est constamment en croissance (estimée à plus de 50 % du trafic en 2019, à plus de 60 % en 2021). Vous comprenez ainsi pourquoi il est important d’anticiper le rendu des pages sur mobile dès la phase de conception graphique ! Ces versions peuvent aller d’une simple version responsive où le contenu est redimensionné en fonction de la taille de l’écran à une maquette mobile spécifique.
 
 L’intégration permet de faire en sorte que toutes les fonctionnalités et le contenu du site soient accessibles notamment aux personnes en situation de handicap visuel, auditif, moteur ou cognitif, sur toutes les tailles d’écran.
 

@@ -2,15 +2,15 @@
 title: "Vue.js : un peu de magie dans nos interfaces🧙‍♀️"
 ---
 
-Vue.js est un framework JavaScript, assez comparable à React. Tout comme ce dernier, il permet d'obtenir des interfaces fluides et rapides, sans avoir à rafraîchir la page après une action de l'utilisateur. Chez Elao, nous l'utilisons pour améliorer l'expérience utilisateur (UX) sur des pages comme par exemple des formulaires réactifs agrémentés d'animations d'aide à la saisie, un générateur de playlists, un outil pour recadrer un avatar, etc. Nous pouvons également l'utiliser pour constituer une application plus ambitieuse. 
+Vue.js est un framework JavaScript, assez comparable à React. Tout comme ce dernier, il permet d'**obtenir des interfaces fluides et rapides**, sans avoir à rafraîchir la page après une action de l'utilisateur. **Chez Elao, nous l'utilisons pour améliorer l'expérience utilisateur (UX)** sur des pages comme par exemple des formulaires réactifs agrémentés d'animations d'aide à la saisie, un générateur de playlists, un outil pour recadrer un avatar, etc. Nous pouvons également l'utiliser pour constituer une application plus ambitieuse. 
 
 ## Pourquoi nous faisons le choix d'utiliser Vue.js Chez Elao ? 
 
-Ce framework nous permet de facilement améliorer l'UX d'une page afin de la rendre réactive et super rapide à l'affichage, ce qui est très confortable poru l'utilisateur... et pour le développeur !
+- Ce framework nous permet de facilement améliorer l'UX d'une page afin de la rendre réactive et super rapide à l'affichage, ce qui est très confortable pour l'utilisateur... et pour le développeur !
 
-- Il y a autour de Vue.js une grande communauté, ce qui présente de nombreux intérêts : il est plus facile ainsi de progresser en posant des questions, on peut rencontrer de nombreuses personnes lors de meetups par exemple pour discuter des possibilités de Vue.js et enfin on peut bénéficier de différentes ressources produites par cette communauté. 
+- **Il y a autour de Vue.js une grande communauté**, ce qui présente de nombreux intérêts : il est plus facile ainsi de progresser en posant des questions, on peut rencontrer de nombreuses personnes lors de meetups par exemple pour discuter des possibilités de Vue.js et enfin on peut bénéficier de différentes ressources produites par cette communauté. 
 
-- L'approche composant de Vue.js permet de réutiliser simplement des briques d'interface. Combiné à sa simplicité d'intégration, ce framework est devenu un outil incontournable et très apprécié par les développeurs. 
+- L'approche composant de Vue.js **permet de réutiliser simplement des briques d'interface**. Combiné à sa simplicité d'intégration, ce framework est devenu un outil incontournable et très apprécié par les développeurs. 
 
 ## Vue.js et Symfony 🤝
 
@@ -18,7 +18,7 @@ On l'a vu, nous utilisons majoritairement Vue.js pour sa facilité d'utilisation
 
 ## Vue.js et référencement naturel (SEO)
 
-Nous sommes vigilants, lors de nos développements, à garantir le crawl des pages publiques aux robots d'indexation de différents moteurs de recherche, si c'est un objectif de notre client. Or, un site web comprenant des pages dont le HTLM est généré en javascript peut dans certaines conditions ne pas être "lues" par les moteurs de recherche. Néanmoins, il est tout à fait possible de penser des interfaces fluides et réactives et d'avoir des objectifs de visibilité : des solutions existent, et nous pouvons vous accompagner.
+Nous sommes vigilants, lors de nos développements, à garantir le crawl des pages publiques aux robots d'indexation de différents moteurs de recherche, si c'est un objectif de notre client. Or, un site web comprenant des pages dont le HTLM est généré en javascript peut dans certaines conditions ne pas être "lues" par les moteurs de recherche. Néanmoins, **il est tout à fait possible de penser des interfaces fluides et réactives et d'avoir des objectifs de visibilité** : des solutions existent, et nous pouvons vous accompagner.
 
 ## Les projets qui utilisent Vue.js
 

@@ -6,7 +6,7 @@ meta-description: "Nous vous aidons à réfléchir à des interfaces utilisateur
 
 Vue.js est un framework JavaScript, assez comparable à React. Tout comme ce dernier, il permet d'**obtenir des interfaces fluides et rapides**, sans avoir à rafraîchir la page après une action de l'utilisateur. **Chez Elao, nous l'utilisons pour améliorer l'expérience utilisateur (UX)** sur des pages comme par exemple des formulaires réactifs agrémentés d'animations d'aide à la saisie, un générateur de playlists, un outil pour recadrer un avatar, etc. Nous pouvons également l'utiliser pour constituer une application plus ambitieuse. 
 
-## Pourquoi nous faisons le choix d'utiliser Vue.js Chez Elao ? 
+## Pourquoi nous faisons le choix d'utiliser Vue.js chez Elao ? 
 
 - Ce framework nous permet de facilement améliorer l'UX d'une page afin de la rendre réactive et super rapide à l'affichage, ce qui est très confortable pour l'utilisateur... et pour le développeur !
 
@@ -28,7 +28,7 @@ Vue.js est ici utilisé dans diverses sections de l'applicatif, notamment afin d
 
 -> lien vers MJC
 
-Liste des évènements dans un agenda, rechercher des sorties rapidement via une interface simple et rapide ... C'est grâce à Vue.js !
+Liste des événements dans un agenda, rechercher des sorties rapidement via une interface simple et rapide ... C'est grâce à Vue.js !
 
 -> Lien vers Orléans Métropole 
 

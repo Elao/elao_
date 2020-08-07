@@ -20,7 +20,7 @@ On l'a vu, nous utilisons majoritairement Vue.js pour sa facilité d'utilisation
 
 ## Vue.js et référencement naturel (SEO)
 
-Nous sommes vigilants, lors de nos développements, à garantir le crawl des pages publiques aux robots d'indexation de différents moteurs de recherche, si c'est un objectif de notre client. Or, un site web comprenant des pages dont le HTLM est généré en javascript peut dans certaines conditions ne pas être "lues" par les moteurs de recherche. Néanmoins, **il est tout à fait possible de penser des interfaces fluides et réactives et d'avoir des objectifs de visibilité** : des solutions existent, comme par exemple la technique du Service Side Rendering. Nous pouvons vous accompagner dans cette démarche ou la réaliser nous-même !
+Nous sommes vigilants, lors de nos développements, à garantir le crawl des pages publiques aux robots d'indexation de différents moteurs de recherche, si c'est un objectif de notre client. Or, un site web comprenant des pages dont le HTML est généré en javascript peut dans certaines conditions ne pas être "lues" par les moteurs de recherche. Néanmoins, **il est tout à fait possible de penser des interfaces fluides et réactives et d'avoir des objectifs de visibilité** : des solutions existent, comme par exemple la technique du Service Side Rendering. Nous pouvons vous accompagner dans cette démarche ou la réaliser nous-même !
 
 ## Les projets qui utilisent Vue.js
 

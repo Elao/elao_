@@ -20,7 +20,7 @@ Tout l'enjeu de la pertinence se trouve également dans les différents moyens d
 
 ##ElasticSearch pour votre projet
 
-Obtenir un résultat de recherche pertinent est l'enjeu du moteur de recherche. Nous connaissons ces problématiques, et nous sommes capables d'apporter notre expertise pour vous guider vers le meilleur choix pour votre application selon vos besoins et les particularités de votre projet. En effet, ElasticSearch peut être une réponse pertinente, mais il existe d'autres solutions techniques telles qu'Algolia ou encore MeiliSearch. 
+Obtenir un résultat de recherche pertinent est l'enjeu du moteur de recherche. Nous connaissons ces problématiques, et nous sommes capables d'apporter notre expertise pour vous guider vers le meilleur choix pour votre application selon vos besoins et les particularités de votre projet. En effet, ElasticSearch peut être une réponse pertinente, mais il existe d'autres solutions techniques telles qu'Algolia ou encore MeiliSearch, que nous implémentons également selon les besoins de nos clients. 
 
 Nous pouvons intervenir à la fois pour mettre en réfléchir à une solution et mettre en place ElasticSearch dans le cadre du développement de votre application, ou bien nous pouvons vous apporter une expertise technique en tant que consultant pour faire auditer ou faire évoluer votre utilisation d'ElasticSearch. 
 

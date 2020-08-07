@@ -1,0 +1,17 @@
+name: Deploy to GH Pages
+on: push
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+      - name: Build site
+        uses: Cecilapp/Cecil-Action@2.0.0
+      - name: Deploy site
+        uses: Cecilapp/GitHub-Pages-deploy@2.0.1
+        env:
+          EMAIL: dev@elao.com
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BUILD_DIR: _site

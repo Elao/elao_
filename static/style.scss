@@ -1,7 +1,8 @@
 @import "scss/normalize";
-@import "scss/primer-support/index.scss";
-@import "scss/primer-base/index.scss";
-@import "scss/primer-utilities/index.scss";
-@import "scss/primer-layout/index.scss";
-@import "scss/primer-markdown/index.scss";
-@import "scss/primer-navigation/index.scss";
+
+@import "scss/base/_variables";
+@import "scss/base/_fonts";
+@import "scss/base/_layout";
+
+@import "scss/components/_header";
+@import "scss/components/_nav";

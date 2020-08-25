@@ -1,7 +1,16 @@
 .header {
   margin: 0 0 18px;
-  height: 120px;
-  width: 1280px;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }

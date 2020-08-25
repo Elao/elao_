@@ -2,7 +2,11 @@
 
 @import "scss/base/_variables";
 @import "scss/base/_fonts";
+@import "scss/base/_icons";
 @import "scss/base/_layout";
+@import "scss/base/_utilities";
+
 
 @import "scss/components/_header";
 @import "scss/components/_nav";
+@import "scss/components/_logo";

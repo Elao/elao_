@@ -7,4 +7,45 @@
   }
 }
 
-.nav__item {}
+.nav__item {
+  margin: 0 20px;
+
+  a {
+    display: flex;
+    align-items: center;
+    font-family: 'antikor medium';
+    color: $secondary;
+    text-decoration: none;
+
+    .icon {
+      margin-right: 15px;
+      font-size: 19px;
+    }
+
+    span {
+      padding-bottom: 7px;
+      position: relative;
+
+      &:after {
+        height: 2px;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background-color: $secondary;
+        transition: width ease-in .2s;
+      }
+    }
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    span {
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}

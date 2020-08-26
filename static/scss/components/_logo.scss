@@ -25,6 +25,12 @@
   }
 }
 
+@media (max-width: $screen-tablet) {
+  .logo {
+    width: 55px;
+  }
+}
+
 @-webkit-keyframes fade {
   0% { opacity: 0; }
   60% { opacity: 0; }

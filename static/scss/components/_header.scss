@@ -12,5 +12,13 @@
   .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media(max-width: $screen-desktop) {
+  .header {
+    padding: 0 15px;
+    height: 60px;
   }
 }

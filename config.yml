@@ -49,3 +49,10 @@ pagination:
 date:
   format: "j F Y"
   timezone: "Europe/Paris"
+assets:
+  fingerprint:
+    enabled: false
+  compile:
+    enabled: false
+  minify:
+    enabled: false

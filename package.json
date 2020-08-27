@@ -1,0 +1,30 @@
+{
+  "name": "elao_",
+  "version": "1.0.0",
+  "description": "elao website",
+  "main": "index.js",
+  "scripts": {
+    "watch": "encore dev --watch",
+    "build": "encore production --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elao/elao_.git"
+  },
+  "private": true,
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/Elao/elao_/issues"
+  },
+  "homepage": "https://github.com/Elao/elao_#readme",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.30.2",
+    "autoprefixer": "^9.8.6",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0"
+  },
+  "dependencies": {
+    "anchor-js": "^4.2.2"
+  }
+}

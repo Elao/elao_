@@ -18,7 +18,7 @@
         <link rel="canonical" href="{{ url(page, {canonical:true}) }}" />
         <meta property="og:url" content="{{ url(page, {canonical:true}) }}" />
         <meta property="og:site_name" content="{{ site.title }}" />
-        <link rel="stylesheet" href="{{ url(toCSS('style.scss')) }}">
+        <link rel="stylesheet" href="{{ url('build/style.css') }}">
     {% include 'partials/alternates.html.twig' %}
     {% endblock head %}
     </head>
@@ -178,8 +178,9 @@
                 {% endfor %}
             </section>
         </footer>
-        <script src="{{ url('/anchor.js') }}"></script>
-        <script>anchors.add();</script>
+        <script src="{{ url('build/runtime.js') }}"></script>
+        <script src="{{ url('build/vendors~app.js') }}"></script>
+        <script src="{{ url('build/app.js') }}"></script>
         {% include 'partials/googleanalytics.js.twig' %}
     </body>
 </html>

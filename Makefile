@@ -1,13 +1,16 @@
+.SILENT:
 
+-include .manala/Makefile
+
+## Install dependencies
 install:
 	composer install
 	npm install
 
-start:
-	symfony server:start
-
+## Watch assets
 watch:
 	npm run watch
 
+## Build assets
 build:
 	npm run build

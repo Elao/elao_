@@ -1,0 +1,17 @@
+####################################################################
+# !!! REMINDER !!!                                                 #
+# Don't forget to run `manala up` each time you update this file ! #
+####################################################################
+
+manala:
+    recipe: lazy.symfony
+
+app: elao
+
+system:
+    nginx:
+        version: 1.18
+    php:
+        version: 7.4
+    nodejs:
+        version: 12

@@ -2,20 +2,23 @@
 
 The Elao website.
 
-## Installation
+## Prerequisite
 
-```
-curl -LO https://cecil.app/cecil.phar
-mv cecil.phar /usr/local/bin/cecil
-chmod +x /usr/local/bin/cecil
-```
+- PHP 7.4
+- [Symfony](https://symfony.com/download) executable: `curl -sS https://get.symfony.com/cli/installer | bash`
 
-## Build
+### Install dependencies
 
-```
-cecil serve --drafts
-```
+    make install
 
-## Documentation
+## Contributing
 
-* [Cecil documentation](https://cecil.app/documentation/)
+### Start asset watcher
+
+    make watch
+
+### Start the dev server
+
+    make start
+
+The site is now available at: http://localhost:8000

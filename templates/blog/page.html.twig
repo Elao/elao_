@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% macro foo(id) %}
+  {% set p = site.pages.get(id) %}
+  <article>
+    <a href="{{ url(p.id) }}">{{ p.title }}</a>
+  </article>
+{% endmacro %}
+
+{% macro bar(page, nbr) %}
+  {% set r = site.pages|filter(p => p.id != page.id and p.variables.tags|default([])|filter(t => t in page.variables.tags|default([]))|length >= nbr) %}
+
+  {% for i in r %}
+    <article>
+      <a href="{{ url(i.id) }}">{{ i.title }}</a>
+    </article>
+  {% endfor %}
+{% endmacro %}
+
+{% block content %}
+
+  {% block author %}
+    <p>
+      Auteurs :
+
+      {# Get authors info from data #}
+      {% set authors = site.data.authors.authors|filter((value, key) => key in page.variables.authors|default([])) %}
+
+      {# If no authors, default to site author #}
+      {% if authors is empty %}
+        {% set authors = [site.author] %}
+      {% endif %}
+
+      {# Display authors #}
+      {% for id, author in authors %}
+        <a href="{{ url('authors/' ~ id) }}">{{ author.name }}</a> - {{ author.twitter }}
+        {%- if not loop.last %}, {% endif %}
+      {% endfor %}
+    <p>
+  {% endblock author %}
+
+  {% block tags %}
+    <p>Tags :
+      {% for tag in page.tags %}
+        <a href="{{ url('tags/' ~ tag) }}">{{ tag }}</a>
+      {% endfor %}
+    </p>
+  {% endblock tags %}
+
+  <p>Durée de lecture : {{ readtime(page.content) }} min</p>
+
+  {{ parent() }}
+
+  {# _self.foo('blog/article-5') #}
+
+  <h4>Ces articles pourraient vous intéresser:</h4>
+
+  {{ _self.bar(page, 2) }}
+
+
+{% endblock content %}

@@ -59,126 +59,133 @@
                         {% endblock %}
                     </a>
                 {% endblock %}
-                <!--
-                    Todo :
-                    - open / close mobile nav on click on .nav-toggle buttons
-                    - when mobile nav is open, .body is .body.no-scroll to prevent background scroll
-                 -->
-                <!-- Desktop nav -->
-                <nav class="nav">
-                    <ul>
-                        <li class="nav__item">
-                            <a href="#">
-                                <span>Nos services</span>
+
+                {% block desktop_nav %}
+                    <!--
+                        Todo :
+                        - open / close mobile nav on click on .nav-toggle buttons
+                        - when mobile nav is open, .body is .body.no-scroll to prevent background scroll
+                     -->
+                    <!-- Desktop nav -->
+                    <nav class="nav">
+                        <ul>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <span>Nos services</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <span>Notre méthodo</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <span>Nos valeurs</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <span>La tribu</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#">
+                                    <i class="icon icon--contact" aria-hidden="true"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                {% endblock %}
+
+                {% block mobile_nav %}
+                    <!-- Mobile nav -->
+                    <nav class="nav-mobile">
+                        <div class="nav-mobile__header">
+                            <a href="{{ path('homepage') }}">
+                                {{ block('logo') }}
                             </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">
-                                <span>Notre méthodo</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">
-                                <span>Nos valeurs</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">
-                                <span>La tribu</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#">
-                                <i class="icon icon--contact" aria-hidden="true"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- Mobile nav -->
-                <nav class="nav-mobile">
-                    <div class="nav-mobile__header">
-                        <a href="{{ path('homepage') }}">
-                            {{ block('logo') }}
-                        </a>
-                        <button class="nav-toggle nav-toggle--close">
-                            <i class="icon icon--close" aria-hidden="true"></i>
-                            <span class="screen-reader">Fermer le menu</span>
-                        </button>
-                    </div>
-                    <ul>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>Nos services</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>Notre méthodologie</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>Nos valeurs</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>Nos études de cas</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>La tribu</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item">
-                            <a href="#">
-                                <span>Blog</span>
-                            </a>
-                        </li>
-                        <li class="nav-mobile__item nav-mobile__item--large">
-                            <a href="#">
-                                <i class="icon icon--contact" aria-hidden="true"></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="nav-toggle nav-toggle--open">
-                    <i class="icon icon--hamburger" aria-hidden="true"></i>
-                    <span class="screen-reader">Ouvrir le menu</span>
-                </button>
+                            <button class="nav-toggle nav-toggle--close">
+                                <i class="icon icon--close" aria-hidden="true"></i>
+                                <span class="screen-reader">Fermer le menu</span>
+                            </button>
+                        </div>
+                        <ul>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>Nos services</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>Notre méthodologie</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>Nos valeurs</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>Nos études de cas</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>La tribu</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item">
+                                <a href="#">
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+                            <li class="nav-mobile__item nav-mobile__item--large">
+                                <a href="#">
+                                    <i class="icon icon--contact" aria-hidden="true"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="nav-toggle nav-toggle--open">
+                        <i class="icon icon--hamburger" aria-hidden="true"></i>
+                        <span class="screen-reader">Ouvrir le menu</span>
+                    </button>
+                {% endblock %}
             </div>
         </header>
         <main>
-        <div class="container">
-            {% block content %}
-            {% endblock content %}
-        </div>
+            <div class="container">
+                {% block content %}{% endblock %}
+            </div>
         </main>
-        <footer class="footer">
-            <section>
-                <h4>Nos liens</h4>
-                {#% for entry in site.menus.main|sortByWeight %}
-                    <a class="{% if url(page) == url(entry.url) %} selected{% endif %}" href="{{ url(entry.url) }}">{{ entry.name }}</a>
-                    {%- if not loop.last %} - {% endif %}
-                {% endfor %#}
-            </section>
-            <section>
-                <h4>Nous suivre</h4>
+        {% block footer %}
+            <footer class="footer">
+                <section>
+                    <h4>Nos liens</h4>
+                    {#% for entry in site.menus.main|sortByWeight %}
+                        <a class="{% if url(page) == url(entry.url) %} selected{% endif %}" href="{{ url(entry.url) }}">{{ entry.name }}</a>
+                        {%- if not loop.last %} - {% endif %}
+                    {% endfor %#}
+                </section>
+                <section>
+                    <h4>Nous suivre</h4>
 
-                {#% for entry in site.menus.social|sortByWeight %}
-                    <a href="{{ url(entry.url) }}">{{ entry.name }}</a>
-                    {%- if not loop.last %} - {% endif %}
-                {% endfor %#}
-            </section>
-        </footer>
+                    {#% for entry in site.menus.social|sortByWeight %}
+                        <a href="{{ url(entry.url) }}">{{ entry.name }}</a>
+                        {%- if not loop.last %} - {% endif %}
+                    {% endfor %#}
+                </section>
+            </footer>
+        {% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

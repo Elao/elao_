@@ -1,0 +1,49 @@
+.btn {
+  padding: 0 50px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  font-family: antikor bold;
+  color: #fff;
+  text-decoration: none;
+  background: $secondary;
+
+  svg {
+    transition: transform .4s;
+  }
+
+  .line-top {
+    transform: rotate(-45deg) translate(-6px, 0);
+    transform-origin: bottom;
+    opacity: 0;
+    transition: transform .4s, opacity .4s;
+  }
+
+  .line-bottom {
+    transform: rotate(45deg) translate(-9px, 0);
+    transform-origin: top;
+    opacity: 0;
+    transition: transform .4s, opacity .4s;
+  }
+
+  .line {
+    transform: scaleX(0.5);
+    transition: transform .4s;
+  }
+}
+
+.btn:hover {
+  svg {
+    transform: translateX(90px);
+  }
+
+  .line-top,
+  .line-bottom {
+    transform: rotate(0deg) translate(0, 0);
+    opacity: 1;
+  }
+
+  .line {
+    transform: scaleX(1);
+  }
+}

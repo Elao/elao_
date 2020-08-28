@@ -6,11 +6,13 @@
 @import "base/_layout";
 @import "base/_utilities";
 
-
 @import "components/_header";
 @import "components/_nav";
 @import "components/_nav-mobile";
 @import "components/_nav-toggle";
 @import "components/_logo";
+@import "components/_btn";
 
-// test3
+@import "components/_titles";
+
+@import "pages/_page-home";

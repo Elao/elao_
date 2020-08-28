@@ -1,0 +1,20 @@
+h1, .h1 {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: faktum bold;
+  font-size: 58px;
+  color: $primary;
+
+  span {
+    color: $secondary;
+
+    &:last-of-type {
+      &:after {
+        content: '_';
+        color: $primary;
+      }
+    }
+  }
+}

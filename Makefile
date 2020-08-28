@@ -4,7 +4,7 @@ install:
 	npm install
 
 start:
-    symfony server:start
+	symfony server:start
 
 watch:
 	npm run watch

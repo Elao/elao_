@@ -26,9 +26,10 @@
             <meta property="twitter:site" content="@tom32i">
             <meta property="twitter:creator" content="@tom32i">
             {% if meta_cover|default(false) %}
-            <meta property="twitter:image" content="{{ meta_cover }}">
+                <meta property="twitter:image" content="{{ meta_cover }}">
             {% endif %}
         {% endblock %}
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('style') }}
         {% endblock %}
@@ -60,6 +61,16 @@
                     </a>
                 {% endblock %}
 
+                {% set menu = [
+                    { path: 'services', label: 'Nos services' },
+                    { path: 'methodology', label: 'Notre méthodologie' },
+                    { path: 'case_studies', label: 'Nos études de cas', desktop: false },
+                    { path: 'values', label: 'Nos valeurs' },
+                    { path: 'team', label: 'La tribu' },
+                    { path: 'blog', label: 'Blog' },
+                    { path: 'contact', label: 'Contact', icon: 'contact' },
+                ] %}
+
                 {% block desktop_nav %}
                     <!--
                         Todo :
@@ -69,37 +80,16 @@
                     <!-- Desktop nav -->
                     <nav class="nav">
                         <ul>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <span>Nos services</span>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <span>Notre méthodo</span>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <span>Nos valeurs</span>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <span>La tribu</span>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <span>Blog</span>
-                                </a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#">
-                                    <i class="icon icon--contact" aria-hidden="true"></i>
-                                    <span>Contact</span>
-                                </a>
-                            </li>
+                            {% for item in menu|filter(item => item.desktop ?? true) %}
+                                <li class="nav__item">
+                                    <a href="{{ path(item.path) }}">
+                                        {% if item.icon ?? false %}
+                                            <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
+                                        {% endif %}
+                                        <span>{{ item.label }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 {% endblock %}
@@ -117,42 +107,16 @@
                             </button>
                         </div>
                         <ul>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>Nos services</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>Notre méthodologie</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>Nos valeurs</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>Nos études de cas</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>La tribu</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item">
-                                <a href="#">
-                                    <span>Blog</span>
-                                </a>
-                            </li>
-                            <li class="nav-mobile__item nav-mobile__item--large">
-                                <a href="#">
-                                    <i class="icon icon--contact" aria-hidden="true"></i>
-                                    <span>Contact</span>
-                                </a>
-                            </li>
+                            {% for item in menu|filter(item => item.mobile ?? true) %}
+                                <li class="nav-mobile__item">
+                                    <a href="{{ path(item.path) }}">
+                                        {% if item.icon ?? false %}
+                                            <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
+                                        {% endif %}
+                                        <span>{{ item.label }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </nav>
                     <button class="nav-toggle nav-toggle--open">

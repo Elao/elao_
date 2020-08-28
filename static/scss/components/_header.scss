@@ -1,0 +1,24 @@
+.header {
+  margin: 0 0 18px;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media(max-width: $screen-desktop) {
+  .header {
+    padding: 0 15px;
+    height: 60px;
+  }
+}

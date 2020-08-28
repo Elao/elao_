@@ -1,7 +1,7 @@
 ---
 title: Home
 ---
-
+<!--
 Elao est un atelier de co-conception d’applications web et mobile sur mesure
 
 ## Chiffres clés
@@ -49,3 +49,4 @@ Rejoindre la Tribu
 Mentions légales (c’est obligatoire)
 
 Protections des données
+ -->

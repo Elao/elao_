@@ -1,0 +1,17 @@
+$fonts: (
+  antikor regular: '../../fonts/antikor-regular',
+  antikor medium: '../../fonts/antikor-medium',
+  antikor bold: '../../fonts/antikor-bold',
+  faktum regular: '../../fonts/faktum-regular',
+  faktum bold: '../../fonts/faktum-bold'
+);
+
+@each $font-name, $font-path in $fonts {
+  @font-face {
+    font-family: '#{$font-name}';
+    src: url('#{$font-path}.woff2') format('woff2'),
+         url('#{$font-path}.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+}

@@ -1,0 +1,30 @@
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: $screen-tablet) {
+  .nav-toggle {
+    margin: 0;
+    padding: 3px;
+    display: flex;
+    align-items: flex-end;
+    border: none;
+    background: transparent;
+
+    .icon {
+      font-size: 18px;
+    }
+  }
+
+  .nav-toggle--open {
+    .icon {
+      color: $primary;
+    }
+  }
+
+  .nav-toggle--close {
+    .icon {
+      color: #fff;
+    }
+  }
+}

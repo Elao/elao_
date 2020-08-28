@@ -1,0 +1,62 @@
+.logo {
+  width: 95px;
+
+  path,
+  rect {
+    fill: $primary;
+  }
+}
+
+.logo--animated {
+  @for $i from 1 through 4 {
+    path:nth-child(#{$i}) {
+      opacity: 0;
+      -webkit-animation: fade 0 both;
+      animation: fade 0 both;
+      animation-delay: #{$i / 10}s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  rect {
+    transform: translateX(-240px);
+    -webkit-animation: type .4s ease-in both;
+    animation: type .4s ease-in both;
+  }
+}
+
+@media (max-width: $screen-tablet) {
+  .logo {
+    width: 55px;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity : 1; }
+}
+
+@keyframe fade {
+  0% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity : 1; }
+}
+
+@-webkit-keyframes type {
+  0% { transform: translateX(-240px); }
+  20% { transform: translateX(-240px); }
+  40% { transform: translateX(-191px); }
+  60% { transform: translateX(-137px); }
+  80% { transform: translateX(-63px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframe type {
+  0% { transform: translateX(-240px); }
+  20% { transform: translateX(-240px); }
+  40% { transform: translateX(-191px); }
+  60% { transform: translateX(-137px); }
+  80% { transform: translateX(-63px); }
+  100% { transform: translateX(0); }
+}

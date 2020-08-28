@@ -4,21 +4,16 @@ The Elao website.
 
 ## Prerequisite
 
-- PHP 7.4
-- [Symfony](https://symfony.com/download) executable: `curl -sS https://get.symfony.com/cli/installer | bash`
+- Docker
 
-### Install dependencies
+## Start the server
 
-    make install
+    make up
+
+The site is now available at: http://localhost:8080
 
 ## Contributing
 
 ### Start asset watcher
 
     make watch
-
-### Start the dev server
-
-    make start
-
-The site is now available at: http://localhost:8000

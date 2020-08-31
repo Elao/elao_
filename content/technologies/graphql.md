@@ -1,5 +1,5 @@
 ---
-title: "Elastic Search : un moteur de recherche simple et efficace pour votre application web"
+title: "Une API moderne, évolutive et robuste pour votre application - Elao vous accompagne !"
 ---
 
 # Une API moderne et évolutive au service de votre métier 
@@ -35,26 +35,31 @@ Un autre intérêt se situe dans sa facilité à évoluer. En effet, GraphQL per
 ### REST : une solution efficace et performante pour un exposer ses ressources
 
 Si le besoin de l'application ou de l'API est orienté ressources (par exemple une base de documents), REST répond parfaitement au besoin et on peut profiter de la facilité de mise en place du cache pour une réponse rapide. Même s'il y a une grande quantité de données, si le besoin est simple, REST est un bon choix technique, facile à requêter. 
+Par ailleurs, au sein d'un même projet, il est tout à fait possible d'avoir différentes API dont l'une en REST et l'autre en GraphQL, tout simplement parce que les problématiques ne sont pas les mêmes. 
 
-On peut même faire cohabiter les deux, selon les besoins. 
+Quelques exemples d'API pour lesquelles nous avons opté pour REST :
 
-Citer quelques exemples de projet avec contexte technique
+- Récupérer une liste de messages selon l'id d'une ville
+- Récupérer une liste de clients et toutes se propriétés pour afficher un formulaire
+- Récupérer une liste d'événements au sein d'une ville
 
-## GraphQL, historique d'une langage de requêtes pour API
+## GraphQL, historique d'une langage de requêtes pour API et outils
 
 C'est l'arrivée des applications mobile qui pousse Facebook, en 2012, à imaginer GraphQL. En effet, au moment de créer leur application mobile native, les ingénieurs se trouvent face à la nécessité de réfléchir à une implémentation moins coûteuse et plus rapide pour accéder aux données. GraphQL est né ! En 2015, le projet devient opensource. 
 
-Pour aider à travailler avec GraphQL, de nombreux projets ont vu le jour, dont notamment Apollo qui propose une bibliothèque client front-end et une structure de serveur back-end. Chez Elao, nous 
+Pour aider à travailler avec GraphQL, de nombreux projets ont vu le jour, dont voici une liste très succincte de ce qui nous semble être fondamental :
+- [Apollo](https://www.apollographql.com/), qui propose une bibliothèque client front-end et une structure de serveur back-end. Chez Elao, nous faisons le choix de travailler avec cette solution pour les interfaces développées en React ou VueJS. 
+- [GraphiQL](https://github.com/graphql/graphiql), qui permet d'avoir accès au schéma de son API mais également de tester une ou plusieurs requêtes. 
 
-## les cas clients
+## Les API développées pour nos clients
 
 - Tribü (REST)
 - K2 (REST)
 - MJC (GraphQL)
 - Musique & Music (GraphQL)
 
-## les articles
+## En savoir plus grâce à nos articles de blog
 
-- E-learning sans internet ou presque
+- Conception et développement d'API : l'interview croisée de l'équipe Élao
 - Comprendre le cache du client Graphql Apollo
 

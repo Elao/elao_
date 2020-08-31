@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+  {% block author %}
+    <p>
+      Auteurs :
+    <p>
+  {% endblock author %}
+
+  {% block tags %}
+    <p>Tags :
+      {% for tag in tags|default([]) %}
+        <a href="{{ path('blog_tag', { tag: tag }) }}">{{ tag }}</a>
+      {% endfor %}
+    </p>
+  {% endblock tags %}
+
+  <p>Durée de lecture : {#{ readtime(page.content) }#} min</p>
+
+  {{ article.content|default('') }}
+
+  <h4>Ces articles pourraient vous intéresser:</h4>
+
+{% endblock content %}

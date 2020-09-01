@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title caseStudy.title ~ ' | ' ~ parent() %}
+{% block meta_description caseStudy.description|default(parent()) %}
+
 {% block content %}
   <h1>{{ caseStudy.title }}</h1>
 

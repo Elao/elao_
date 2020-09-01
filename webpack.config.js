@@ -64,6 +64,11 @@ Encore
     .enableSassLoader()
     .enablePostCssLoader()
 
+    // Alias
+    .addAliases({
+        snake: `${__dirname}/assets/js/snake/`,
+    })
+
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 

@@ -5,6 +5,7 @@ import './bootstrap';
 import AOS from 'aos';
 
 import Toggle from './feature/Toggle';
+import 'snake';
 
 function init() {
     // Mobile navigation

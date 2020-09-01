@@ -1,0 +1,240 @@
+@import "base/_variables";
+
+body.snake {
+  overflow: hidden;
+}
+
+.snake-container {
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-brand;
+
+  .snake-renderer {
+    width: 100vw;
+    height: 100vh;
+
+    /** POINTS */
+
+    .point {
+      animation: popIn 400ms ease-out;
+
+      &.color-0 { fill: $color-primary; }
+      &.color-1 { fill: $color-dark; }
+      &.color-2 { fill: $color-info; }
+    }
+
+    /** HEADER */
+
+    .snake__logo {
+      rect, path {
+        fill: #ffffff;
+      }
+    }
+
+    .score {
+      fill: #ffffff;
+      font-size: 0.8px;
+      font-family: 'antikor bold';
+      text-anchor: end;
+    }
+
+    /** Crash Animation */
+
+    .crash__symbol {
+        fill: $code-primary;
+        font-family: 'faktum bold';
+        font-size: 0.05em;
+        text-anchor: middle;
+        transform-origin: 1px 1px;
+        animation: floating 2s linear infinite;
+    }
+
+    .crash__symbol:nth-child(5n+1) { animation-delay: -400ms; }
+    .crash__symbol:nth-child(5n+2) { animation-delay: -800ms; }
+    .crash__symbol:nth-child(5n+3) { animation-delay: -1200ms; }
+    .crash__symbol:nth-child(5n+4) { animation-delay: -1600ms; }
+
+    .shake {
+      animation-name: shake;
+      animation-duration: 600ms;
+      transform-origin:50% 50%;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
+    }
+  }
+
+  /** END SCREEN */
+
+  .snake__end-panel {
+    background-color: $color-secondary;
+    color: $color-brand;
+    font-family: 'faktum regular';
+    padding: 3em;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideDown 300ms ease-out;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+
+    .message {
+      font-size: 0.8em;
+      margin-bottom: 1em;
+
+      > span {
+        color: $color-primary;
+        font-family: 'faktum bold';
+      }
+    }
+
+    .end__score {
+      font-size: 4em;
+      font-family: 'antikor medium';
+      color: $color-primary;
+    }
+  }
+
+  /** Arrows */
+
+  .arrows {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .break {
+      flex-basis: 100%;
+      height: 0;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1em;
+      height: 1em;
+      line-height: 0.5em;
+      font-size: 0.5em;
+      margin: 0.1em;
+      padding: 0.8em;
+      color: $color-secondary;
+      background: $color-tertiary;
+      border-radius: 0.2em;
+    }
+
+    .icon::before {
+      display: block;
+    }
+
+    .icon.up::before { transform: rotate(-0.25turn); }
+    .icon.down::before { transform: rotate(0.25turn); }
+    .icon.left::before { transform: rotate(-0.5turn); }
+  }
+
+  /** CLOSE BUTTON */
+
+  .close-button {
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 3em;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    font-family: "faktum regular";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  /** TOUCH CONTROLS */
+
+  .touch-control {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.6em;
+    display: flex;
+    justify-content: space-between;
+
+    .pad {
+      display: flex;
+      flex-direction: column;
+      transform: rotate(45deg);
+
+      > div {
+        display: flex;
+      }
+
+      button {
+        width: 2em;
+        height: 2em;
+        padding: 0;
+        border: none;
+        color: $color-primary;
+        background: $color-secondary;
+        font-size: 2em;
+        font-family: "faktum bold";
+        opacity: 0.2;
+        border-radius: 0.2em;
+        margin: 0.05em;
+        touch-action: manipulation;
+
+        &::before {
+          display: block;
+        }
+
+        &[value="up"]::before { transform: rotate(-0.375turn); }
+        &[value="down"]::before { transform: rotate(0.125turn); }
+        &[value="right"]::before { transform: rotate(-0.125turn); }
+        &[value="left"]::before { transform: rotate(0.375turn); }
+      }
+    }
+  }
+
+  /** Animations */
+
+  @keyframes floating {
+    0% { transform: rotate3d(0, 0, 1, 0turn) scale3d(1, 1, 1); }
+    50% { transform: rotate3d(0, 0, 1, 0.5turn) scale3d(0.67, 0.67, 0.67); }
+    100% { transform: rotate3d(0, 0, 1, 1turn) scale3d(1, 1, 1); }
+  }
+
+  @-webkit-keyframes shake {
+    0% { -webkit-transform: translate3d(2%, 1%, 0) rotate3d(0, 0, 1, 0deg); }
+    20% { -webkit-transform: translate3d(-1%, -1.5%, 0) rotate3d(0, 0, 1, -1deg); }
+    40% { -webkit-transform: translate3d(-1.5%, 0%, 0) rotate3d(0, 0, 1, 1deg); }
+    60% { -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg); }
+  }
+
+  @keyframes popIn {
+    0% { transform: scale3d(0.5, 0.5, 0.5); }
+    75% { transform: scale3d(1.2, 1.2, 1.2); }
+    100% { transform: scale3d(1, 1, 1); }
+  }
+
+  @keyframes slideDown {
+    0% { top: 45%; opacity: 0; transform: translate(-50%, -50%) rotate3d(1, 0, 0,90deg); }
+    50% { opacity: 1; transform: translate(-50%, -50%) rotate3d(1, 0, 0,45deg); }
+    100% { top: 50%; transform: translate(-50%, -50%) rotate3d(1, 0, 0,0deg); }
+  }
+}

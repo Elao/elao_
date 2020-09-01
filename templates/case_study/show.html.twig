@@ -1,5 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  Etude de cas
+  <h1>{{ caseStudy.title }}</h1>
+
+  {{ caseStudy.content|raw }}
 {% endblock content %}

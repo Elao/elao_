@@ -31,6 +31,7 @@
         "symfony/web-link": "5.1.*",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "5.1.*",
+        "tom32i/content": "^1.0@dev",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },
@@ -92,5 +93,12 @@
             "allow-contrib": false,
             "require": "5.1.*"
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Tom32i/content.git"
+        }
+    ]
 }

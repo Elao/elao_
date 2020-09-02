@@ -9,7 +9,6 @@ class CaseStudyDenormalizer implements ContentDenormalizerInterface
 {
     public function denormalize($data, $class, $format = null, array $context = [])
     {
-        dump($data);
         return new CaseStudy(
             $data['title'],
             $data['description'] ?? null,

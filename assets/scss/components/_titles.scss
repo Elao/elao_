@@ -12,9 +12,34 @@ h1, .h1 {
 
     &:last-of-type {
       &:after {
-        content: '_';
         color: $primary;
+        content: '_';
       }
     }
+  }
+}
+
+.h1--small {
+  margin: 0;
+  font-size: 36px;
+}
+
+h2, .h2 {
+  margin-top: 0;
+  padding-top: 65px;
+  position: relative;
+  font-family: antikor bold;
+  font-size: 32px;
+  color: $secondary;
+  line-height: 1.45 !important;
+
+  &:before {
+    width: 50px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: $primary--light;
   }
 }

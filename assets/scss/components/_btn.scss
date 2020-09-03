@@ -4,46 +4,113 @@
   display: flex;
   align-items: center;
   font-family: antikor bold;
-  color: #fff;
+  font-size: 18px !important;
   text-decoration: none;
-  background: $secondary;
+  transition: background ease-in .1s;
 
-  svg {
-    transition: transform .4s;
-  }
-
-  .line-top {
-    transform: rotate(-45deg) translate(-6px, 0);
-    transform-origin: bottom;
-    opacity: 0;
-    transition: transform .4s, opacity .4s;
-  }
-
-  .line-bottom {
-    transform: rotate(45deg) translate(-9px, 0);
-    transform-origin: top;
-    opacity: 0;
-    transition: transform .4s, opacity .4s;
-  }
-
-  .line {
-    transform: scaleX(0.5);
-    transition: transform .4s;
+  > span {
+    position: relative;
+    line-height: initial !important;
   }
 }
 
-.btn:hover {
-  svg {
-    transform: translateX(90px);
+.btn--primary {
+  color: #fff;
+  background: $primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $primary;
+    background: $tertiary;
+  }
+}
+
+.btn--secondary {
+  color: #fff;
+  background: $secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: darken($secondary, 5%);
+  }
+}
+
+.btn--tertiary {
+  color: $primary;
+  background: $tertiary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: $primary;
+  }
+}
+
+.btn--animated {
+  .icon {
+    width: 40px;
+    position: absolute;
+    bottom: -8px;
+    right: -42px;
+    transition: transform .3s;
+
+    .base,
+    .tip {
+      fill: none;
+      stroke-width: 3.5;
+    }
+
+    .base {
+      transform: scaleX(0.5);
+      transition: transform .3s;
+    }
+
+    .tip {
+      transform: rotate(-45deg) translate(-6px, 0);
+      transform-origin: bottom;
+      opacity: 0;
+      transition: transform .3s, opacity .3s;
+
+    }
   }
 
-  .line-top,
-  .line-bottom {
-    transform: rotate(0deg) translate(0, 0);
-    opacity: 1;
+  &:hover,
+  &:active,
+  &:focus {
+    .icon {
+      transform: translateX(40px);
+
+      .base { transform: scaleX(1); }
+
+      .tip {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 1;
+      }
+    }
   }
 
-  .line {
-    transform: scaleX(1);
+  &.btn--primary {
+    .icon .base,
+    .icon .tip {
+      stroke: $secondary;
+    }
+  }
+
+  &.btn--secondary {
+    .icon .base,
+    .icon .tip {
+      stroke: $primary;
+    }
+  }
+
+  &.btn--tertiary {
+    .icon .base,
+    .icon .tip {
+      stroke: $secondary;
+    }
   }
 }

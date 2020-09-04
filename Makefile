@@ -1,4 +1,5 @@
 .SILENT:
+.PHONY: build
 
 -include .manala/Makefile
 

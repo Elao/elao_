@@ -1290,6 +1290,73 @@
             "time": "2020-08-17T13:51:41+00:00"
         },
         {
+            "name": "symfony/css-selector",
+            "version": "v5.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e544e24472d4c97b2d11ade7caacd446727c6bf9",
+                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\CssSelector\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Jean-François Simon",
+                    "email": "jeanfrancois.simon@sensiolabs.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony CssSelector Component",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-20T17:43:50+00:00"
+        },
+        {
             "name": "symfony/dependency-injection",
             "version": "v5.1.4",
             "source": {
@@ -5154,20 +5221,22 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tom32i/content.git",
-                "reference": "a0266f5ac77286c5f279bfd76ddedc2a31f5bdc0"
+                "reference": "e089b7200145feecec9438f6c00621b9f9d51605"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tom32i/content/zipball/a0266f5ac77286c5f279bfd76ddedc2a31f5bdc0",
-                "reference": "a0266f5ac77286c5f279bfd76ddedc2a31f5bdc0",
+                "url": "https://api.github.com/repos/Tom32i/content/zipball/e089b7200145feecec9438f6c00621b9f9d51605",
+                "reference": "e089b7200145feecec9438f6c00621b9f9d51605",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.7.4",
-                "php": "^7.2.9",
+                "ext-dom": "*",
+                "php": "^7.4",
                 "symfony/asset": "^5.1",
                 "symfony/config": "^5.1",
                 "symfony/console": "^5.1",
+                "symfony/css-selector": "^5.1",
                 "symfony/dependency-injection": "^5.1",
                 "symfony/dom-crawler": "^5.1",
                 "symfony/event-dispatcher": "^5.1",
@@ -5179,16 +5248,17 @@
                 "symfony/property-access": "^5.1",
                 "symfony/routing": "^5.1",
                 "symfony/serializer": "^5.1",
-                "symfony/webpack-encore-bundle": "^1.7",
                 "symfony/yaml": "^5.1",
-                "twig/twig": "^3.0"
+                "twig/twig": "^2.12|^3.0"
             },
             "require-dev": {
                 "ekino/phpstan-banned-code": "^0.3.1",
                 "friendsofphp/php-cs-fixer": "^2.16",
                 "phpstan/phpstan": "^0.12.32",
-                "phpunit/phpunit": "^9",
-                "symfony/twig-bridge": "^5.1"
+                "symfony/framework-bundle": "^5.1",
+                "symfony/phpunit-bridge": "^5.1",
+                "symfony/twig-bridge": "^5.1",
+                "symfony/twig-bundle": "^5.1"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -5198,7 +5268,13 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Content\\": "."
+                    "Content\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Content\\Tests\\": "tests",
+                    "App\\": "tests/fixtures/app/src"
                 }
             },
             "license": [
@@ -5221,7 +5297,7 @@
                 "source": "https://github.com/Tom32i/content/tree/master",
                 "issues": "https://github.com/Tom32i/content/issues"
             },
-            "time": "2020-09-01T17:28:54+00:00"
+            "time": "2020-09-04T12:27:04+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -5643,73 +5719,6 @@
                 }
             ],
             "time": "2020-06-24T13:36:18+00:00"
-        },
-        {
-            "name": "symfony/css-selector",
-            "version": "v5.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/e544e24472d4c97b2d11ade7caacd446727c6bf9",
-                "reference": "e544e24472d4c97b2d11ade7caacd446727c6bf9",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\CssSelector\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Jean-François Simon",
-                    "email": "jeanfrancois.simon@sensiolabs.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony CssSelector Component",
-            "homepage": "https://symfony.com",
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-05-20T17:43:50+00:00"
         },
         {
             "name": "symfony/debug-bundle",

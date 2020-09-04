@@ -24,7 +24,7 @@ class CaseStudyController extends AbstractController
      */
     public function index()
     {
-        $caseStudies = $this->manager->getContents(CaseStudy::class, ['created' => false]);
+        $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false]);
         $lastModified = max(array_map(fn($caseStudy) => $caseStudy->lastModified, $caseStudies));
 
         return $this->render('case_study/index.html.twig', [

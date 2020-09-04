@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2954b504a8958694b4c2de0a7a45a384",
+    "content-hash": "37d7af7a9072f7ec7ae063402a14eaed",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -5217,16 +5217,16 @@
         },
         {
             "name": "tom32i/content",
-            "version": "dev-master",
+            "version": "dev-review-di",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tom32i/content.git",
-                "reference": "e089b7200145feecec9438f6c00621b9f9d51605"
+                "reference": "52479fd88c735391cf6676480bca4b394a6656fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tom32i/content/zipball/e089b7200145feecec9438f6c00621b9f9d51605",
-                "reference": "e089b7200145feecec9438f6c00621b9f9d51605",
+                "url": "https://api.github.com/repos/Tom32i/content/zipball/52479fd88c735391cf6676480bca4b394a6656fe",
+                "reference": "52479fd88c735391cf6676480bca4b394a6656fe",
                 "shasum": ""
             },
             "require": {
@@ -5294,10 +5294,10 @@
                 "symfony"
             ],
             "support": {
-                "source": "https://github.com/Tom32i/content/tree/master",
+                "source": "https://github.com/Tom32i/content/tree/review-di",
                 "issues": "https://github.com/Tom32i/content/issues"
             },
-            "time": "2020-09-04T12:27:04+00:00"
+            "time": "2020-09-07T13:25:35+00:00"
         },
         {
             "name": "twig/extra-bundle",

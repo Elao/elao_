@@ -31,7 +31,7 @@
         "symfony/web-link": "5.1.*",
         "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "5.1.*",
-        "tom32i/content": "^1.0@dev",
+        "tom32i/content": "dev-review-di",
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0"
     },

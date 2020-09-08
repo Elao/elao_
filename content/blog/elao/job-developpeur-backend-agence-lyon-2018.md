@@ -1,4 +1,3 @@
-﻿
 ---
 type:           "post"
 title:          "À la recherche d'un développeur ou d'une développeuse Back"
@@ -13,7 +12,7 @@ header_img:     "/images/posts/headers/back.jpg"
 tags:           ["job", "web", "mobile", "lyon", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 
-author_username:    "elao"
+author_username: "elao"
 ---
 
 <div class="disclaimer">
@@ -22,6 +21,7 @@ author_username:    "elao"
 </div>
 
 Nous recherchons **un développeur ou une développeuse backend** pour notre tribu lyonnaise. Passionné(e) d'abord, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+
 <!--more-->
 
 ## Notre, votre mission
@@ -67,6 +67,7 @@ _Vous disposez d’un budget annuel pour la participation, entre autres, aux con
 Vous avez la liberté de faire quelques jours de télétravail par mois dans le respect de l’organisation des projets._
 
 -----------------------------------------------------------------------------------------------------------------
+
 <span class="side-note">📨</span>  Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres: **jobs@elao.com**
 
 [**Facilitateur(trice)**](/fr/elao/job-facilitateur-agence-lyon-2018)

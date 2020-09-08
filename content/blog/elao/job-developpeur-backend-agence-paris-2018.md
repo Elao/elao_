@@ -21,6 +21,7 @@ author_username:    "elao"
 </div>
 
 Nous recherchons **des développeuses ou développeurs** pour notre tribu parisienne. En quelques mots, voici le cadre et la mission que nous vous proposons. Notre site et notre blog vous apporteront également plus de précisions et l'équipe se fera une joie de compléter au besoin et/ou de témoigner de son quotidien !
+
 <!--more-->
 
 ## La mission
@@ -79,7 +80,6 @@ Si vous êtes plutôt intéressé(e) par la région lyonnaise, nous recherchons 
 [**Développeur(se) Backend**](/fr/elao/job-developpeur-backend-agence-lyon-2018)
 
 [**Développeur(se) Frontend**](/fr/elao/job-frontend-developpeur-agence-lyon-2018)
-
 
 ---
 

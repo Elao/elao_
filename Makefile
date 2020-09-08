@@ -25,11 +25,10 @@ build-assets:
 
 ## Build static site
 build-content:
+	bin/console c:c --env=prod
 	bin/console content:build --env=prod
 
 ## Build the site and serve the static version
-serve-static:
-	bin/console c:c --env=prod
-	bin/console content:build --env=prod
+serve-static: build-content
 	open http://localhost:8000
 	php -S localhost:8000 -t build

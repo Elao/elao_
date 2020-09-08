@@ -1,4 +1,3 @@
-﻿
 ---
 type:           "post"
 title:          "À la recherche d'un(e) «Sysadmin»"
@@ -17,8 +16,11 @@ author_username:    "elao"
 ---
 
 Nous recherchons **un ou une sysadmin, ascendant Ops pour renforcer notre tribu lyonnaise**.
-<br/>Pour plus d'informations sur nos métiers vous pouvez parcourir, notre [site](https://www.elao.com) et notre [blog](https://blog.elao.com) qui vous apporteront (normalement) plus de précisions sur nos domaines de compétences.
-<br/>L'équipe est interpellable sur twitter [@elao](https://twitter.com/Elao) et saura répondre à vos questions et témoigner de son quotidien !
+
+Pour plus d'informations sur nos métiers vous pouvez parcourir, notre [site](https://www.elao.com) et notre [blog](https://blog.elao.com) qui vous apporteront (normalement) plus de précisions sur nos domaines de compétences.
+
+L'équipe est interpellable sur twitter [@elao](https://twitter.com/Elao) et saura répondre à vos questions et témoigner de son quotidien !
+
 <!--more-->
 
 Nous sommes très attachés aux valeurs des communautés OpenSource dans lesquels nous nous efforçons de nous impliquer (Symfony, Ansible, AFUP, Meetups ...)
@@ -88,7 +90,6 @@ Enfin, vous avez un goût prononcé pour les défis techniques et la découverte
 _(✻) **Vie dans l’entreprise**_
 _Vous disposez d’un budget annuel pour la participation, entre autres, aux conférences. Nous encourageons votre présence aux conférences et autres évènements riches d'échanges et de partage.
 Vous avez la liberté de faire quelques jours de télétravail par mois dans le respect de l’organisation des projets._
-
 
 -----------------------------------------------------------------------------------------------------------------
 <span class="side-note">📨</span>  Venez échanger avec nous, nous faire part de vos objectifs et découvrir les nôtres: **jobs@elao.com**

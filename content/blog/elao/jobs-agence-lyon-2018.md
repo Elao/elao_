@@ -1,4 +1,3 @@
-﻿
 ---
 type:           "post"
 title:          "Session recrutements chez élao !"

@@ -15,7 +15,7 @@ categories:     ["elao", "recrutement", "Symfony"]
 author_username:    "elao"
 ---
 
-Elao recherche **une développeuse ou un développeur Backend expérimenté(e)** pour renforcer son équipe lyonnaise. N'hésitez pas à postuler, la démarche est totalement indolore ! 
+Elao recherche **une développeuse ou un développeur Backend expérimenté(e)** pour renforcer son équipe lyonnaise. N'hésitez pas à postuler, la démarche est totalement indolore !
 
 <!--more-->
 
@@ -32,8 +32,8 @@ Nous prenons en charge des projets d'applications web et mobile. Concrètement, 
 
 Les applications que nous développons s'appuient essentiellement sur :
 
-- le framework Symfony pour le Backend 
-- les librairies JS les plus récentes (React, Vue.js) pour le Front 
+- le framework Symfony pour le Backend
+- les librairies JS les plus récentes (React, Vue.js) pour le Front
 
 Mais nous restons bien entendu ouverts à d'autres technologies.
 
@@ -94,7 +94,7 @@ La possibilité vous est offerte de passer quelques journées en télé-travail.
 
 La fourchette de rémunération se situe entre 38k€ et 45k€ annuelle brute.
 
-Parmi les avantages proposés à nos collaborateurs : 
+Parmi les avantages proposés à nos collaborateurs :
 
 * mutuelle prise en charge par l'entreprise à 100%
 * tickets restaurant
@@ -104,7 +104,7 @@ Parmi les avantages proposés à nos collaborateurs :
 
 -----------------------------------------------------------------------------------------------------------------
 
-## Comment postuler ? 
+## Comment postuler ?
 
 <span class="side-note">📨</span>  Envoyez-nous votre CV accompagné d'un petit mot composé de votre plus belle écriture (ou en Arial taille 12, c'est bien aussi) à **jobs@elao.com**.
 

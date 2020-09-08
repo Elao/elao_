@@ -15,9 +15,9 @@
     </p>
   {% endblock tags %}
 
-  <p>Durée de lecture : {#{ readtime(page.content) }#} min</p>
+  <p>Durée de lecture : {#{ readtime(article.content) }#} min</p>
 
-  {{ article.content|default('') }}
+  {{ article.content|raw }}
 
   <h4>Ces articles pourraient vous intéresser:</h4>
 

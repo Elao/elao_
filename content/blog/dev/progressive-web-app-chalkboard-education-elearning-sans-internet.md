@@ -127,7 +127,7 @@ Il est indiqué le nombre de Ko à télécharger pour chaque mise à jour.
 [LocalStorage](https://developer.mozilla.org/fr/docs/Web/API/Storage/LocalStorage) et de réhydrater le *store* dès lors
 que la page web est rechargée :
 
-{{< highlight js >}}
+```js
 // store.js
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { applyMiddleware, compose, createStore } from 'redux';
@@ -148,7 +148,7 @@ const store = createStore(
 const networkInterface = createNetworkInterface({
   uri: 'https://api.chalkboard.education'
 });
-{{< /highlight >}}
+```
 
 *\#protips* : pour gérer l'accès à des contenus avec du routing et à la fois que ces contenus soient disponibles
 hors-ligne sans que l'url ait été visitée au préalable, il est quasi indispensable d'utiliser des urls avec un
@@ -167,9 +167,9 @@ Par exemple dans la requête suivante le *front* demande à la fois :
 
 - un *currentDate* (une date serveur),
 - la liste des *courses* (ses *folders*, les *sessions* des *folders*, les *files* des *sessions*),
-- et le *user* courant. 
+- et le *user* courant.
 
-{{< highlight js >}}
+```js
 // src/graphql/query/CoursesQuery.js
 import gql from 'graphql-tag';
 
@@ -205,7 +205,7 @@ export default gql`
     }
   }
 `;
-{{< /highlight >}}
+```
 
 Nous avons utilisé le très bon client GraphQL [Apollo client](https://github.com/apollographql/apollo-client).
 Il existe aussi une implémentation [Apollo pour React](https://github.com/apollographql/react-apollo) mais nous
@@ -215,7 +215,7 @@ ne l'avons pas utilisée étant donné que notre application n'est pas *API-cent
 Et pour l'identification de l'étudiant•e, on passe le *token user* dans l'entête HTTP
 [Authorization](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization) de cette façon :
 
-{{< highlight js >}}
+```js
 // store.js
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 
@@ -232,16 +232,16 @@ networkInterface.use([
       }
 
       const userToken = store.getState().currentUser.token;
-      
+
       req.options.headers.authorization = userToken
         ? `Bearer ${userToken}`
         : null;
-      
+
       next();
     }
   }
 ]);
-{{< /highlight >}}
+```
 
 ### Service worker
 
@@ -252,7 +252,7 @@ Pour mettre en cache les urls chargées au *runtime* il faut surcharger la confi
 avec [sw-precache](https://github.com/GoogleChromeLabs/sw-precache). On a ajouté une commande "generate-sw" dans notre
 fichier package.json :
 
-{{< highlight json >}}
+```json
 {
   "name": "ChalkboardEducationV2ReactFront",
   "private": true,
@@ -270,11 +270,11 @@ fichier package.json :
     "test": "react-scripts test --env=jsdom"
   }
 }
-{{< /highlight >}}
+```
 
 Configuration pour *sw-precache* pour gérer le *runtime caching* des images :
 
-{{< highlight js >}}
+```js
 // config/sw-precache-config.js
 module.exports = {
   staticFileGlobs: [
@@ -287,7 +287,7 @@ module.exports = {
     handler: 'cacheFirst'
   }]
 };
-{{< /highlight >}}
+```
 
 ### Le SMS pour transporter de la donnée à la place d'Internet
 
@@ -316,10 +316,10 @@ javascript *buildés*. Sur ce projet, nous avons essayé d'avoir le minimum de d
 
 `$ yarn build`
 
-{{< highlight cli >}}
+```bash
   276.43 KB (+142 B)  build/static/js/main.8502d0fb.js
-  587 B (+11 B)       build/static/css/main.7edcdc8b.css 
-{{< /highlight >}}
+  587 B (+11 B)       build/static/css/main.7edcdc8b.css
+```
 
 L'application *front* pèse ainsi moins de 300 Ko !
 
@@ -365,7 +365,7 @@ Cela a beaucoup d'avantages :
 
 Exemple de "nouveau" *controller* :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Ui\Admin\Action\Course;
@@ -431,12 +431,12 @@ class AssignUserAction
         ]);
     }
 }
-{{< /highlight >}}
+```
 
 Nous avons utilisé [l'autowiring des services](https://symfony.com/doc/current/service_container/autowiring.html)
-qui rend beaucoup plus simple la gestion des dépendances: 
+qui rend beaucoup plus simple la gestion des dépendances:
 
-{{< highlight yaml >}}
+```yaml
 services:
     _defaults:
         # automatically injects dependencies in services
@@ -447,7 +447,7 @@ services:
     # example:
     App\Ui\Admin\Action\Course\AssignUserAction:
         autowire: true
-{{< /highlight >}}
+```
 
 ### GraphQL et Symfony
 
@@ -457,7 +457,7 @@ lui-même utilisant l'implémentation en PHP de [webonyx/graphql-php](https://gi
 
 Déclaration d'un schéma d'un cours :
 
-{{< highlight yaml >}}
+```yaml
 Course:
     type: object
     config:
@@ -474,17 +474,17 @@ Course:
                 description: "The last update date of the course in format 2017-01-15 10:00"
             folders:
                 type: "[Folder]"
-{{< /highlight >}}
+```
 
 Déclaration d'un *resolver* d'un cours :
 
-{{< highlight yaml >}}
+```yaml
 services:
     App\Infrastructure\GraphQL\Resolver\CourseResolver:
         autowire: true
         tags:
             - { name: overblog_graphql.resolver, alias: "courses", method: "resolveCourses" }
-{{< /highlight >}}
+```
 
 Nous avions des besoins assez simples. La mise en place d'un serveur GraphQL n'est vraiment pas plus compliqué que REST.
 
@@ -497,7 +497,7 @@ Nous avons adoré travailler avec le *pattern Action-Domain-Response* pour des *
 
 Et par dessus tout, nous avons adoré que notre travail permette à des étudiant•e•s d'accéder à la connaissance.
 
-<blockquote> 
+<blockquote>
 « J'espère qu'avec Chalkboard Education chacun aura accès à l'éducation dont il rêve et qu'à mon échelle,
 je vais faire progresser le monde. »
 </blockquote>

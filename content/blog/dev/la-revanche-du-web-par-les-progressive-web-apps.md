@@ -60,13 +60,13 @@ mais celle-ci est dépréciée au profit du [Service Worker](https://developer.m
 
 Un service worker est déclaré ainsi dans le code JavaScript de vos pages :
 
-{{< highlight js >}}
+```js
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('/service-worker.js');
   });
 }
-{{< /highlight >}}
+```
 
 On dit alors que le Service Worker est "*registered*" dans le navigateur.
 De plus, le scope est très important : /service-worker.js à la racine du domaine signifie que le service worker est disponible pour l'ensemble du domaine.
@@ -74,7 +74,7 @@ S'il était dans un répertoire /blog/service-worker.js, il ne fonctionnerait qu
 
 Et notre service-worker.js dans tout ça ? Et bien, il contient des écouteurs d'évènements :
 
-{{< highlight js >}}
+```js
 self.addEventListener('install', event => {
   console.log('Service worker install');
 });
@@ -82,13 +82,13 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   console.log('Service worker ready');
 });
-{{< /highlight >}}
+```
 
 ### Gestion du cache
 
 La mise en cache de ressources se fait ainsi dans notre Service Worker :
 
-{{< highlight js >}}
+```js
 var CACHE_NAME = 'my-cache-v1';
 var urlsToCache = [
   '/',
@@ -104,12 +104,12 @@ self.addEventListener('install', function(event) {
       })
   );
 });
-{{< /highlight >}}
+```
 
 La récupération de ressources en cache se fait en écoutant l'évènement "fetch".
 Si la ressource n'est pas trouvée en cache, on tente notre chance via le réseau :
 
-{{< highlight js >}}
+```js
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
@@ -124,11 +124,11 @@ self.addEventListener('fetch', function(event) {
     )
   );
 });
-{{< /highlight >}}
+```
 
 Modifions notre code précédent pour mettre en cache la ressource récupérée du réseau :
 
-{{< highlight js >}}
+```js
 // we need to clone the response.
 var fetchRequest = event.request.clone();
 
@@ -150,7 +150,7 @@ return fetch(fetchRequest).then(
     return response;
   }
 );
-{{< /highlight >}}
+```
 
 Il s'agit ici d'un exemple simple. La gestion du cache n'est pas forcément triviale.
 De nombreuses stratégies de gestion du cache existent.
@@ -161,7 +161,7 @@ Il n'y a pas de "meilleure solution"; tout dépendra de votre besoin.
 
 Pour mettre à jour un Service Worker ou les ressources mises en cache par le Service Worker, il faut supprimer les ressources en cache.
 
-{{< highlight js >}}
+```js
 self.addEventListener('activate', function(event) {
   var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1'];
 
@@ -177,7 +177,7 @@ self.addEventListener('activate', function(event) {
     })
   );
 });
-{{< /highlight >}}
+```
 
 Les nouvelles versions des fichiers seront alors récupérées au prochain chargement de la page, via l'évènement "install" vu plus haut dans cet article.
 
@@ -212,7 +212,7 @@ L'ouverture du site dans le navigateur se présente comme une application native
 
 Ce Web App Manifest se présente sous forme d'un fichier json :
 
-{{< highlight json >}}
+```json
 {
   "short_name": "Elao App",
   "name": "Elao, agence web agile",
@@ -237,7 +237,7 @@ Ce Web App Manifest se présente sous forme d'un fichier json :
   "background_color": "#2196F3",
   "display": "standalone"
 }
-{{< /highlight >}}
+```
 
 À noter :
 
@@ -247,9 +247,9 @@ Ce Web App Manifest se présente sous forme d'un fichier json :
 
 Dans votre `<head>` html, il suffit de déclarer votre manifest de la façon suivante :
 
-{{< highlight html >}}
+```html
 <link rel="manifest" href="/manifest.json">
-{{< /highlight >}}
+```
 
 ### Bannière d'installation sur l'écran d'accueil
 
@@ -270,7 +270,7 @@ Afin qu'il soit sollicité dans le bon timing.
 Par exemple, dans le code ci-dessous, nous allons sauvegarder le prompt en écoutant l'évènement "beforeinstallprompt"
 et différer l'affichage lorsque l'utilisateur aura cliqué sur un bouton :
 
-{{< highlight js >}}
+```js
 var deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', function(e) {
@@ -297,7 +297,7 @@ btnSave.addEventListener('click', function() {
     });
   }
 });
-{{< /highlight >}}
+```
 
 ## Push Notifications
 
@@ -310,7 +310,7 @@ Les Push et les Notifications sont deux technologies différentes mais compléme
 
 Cela se passe ainsi, non pas dans le Service Worker mais dans le code JavaScript de vos pages :
 
-{{< highlight js >}}
+```js
 var swRegistration;
 var isSubscribed = false;
 
@@ -361,7 +361,7 @@ if ('serviceWorker' in navigator && 'PushManager' in window) {
     });
   }
 }
-{{< /highlight >}}
+```
 
 Le paramètre "userVisibleOnly: true" est une option mais il est en réalité requis.
 Cela permet de s'engager qu'une notification sera affichée à chaque fois qu'il y aura un Push.
@@ -371,15 +371,15 @@ consultez cet article : [Generating the applicationServerKey](https://developers
 
 Exemple d'objet Subscription généré par le navigateur :
 
-{{< highlight json >}}
-{  
-  "endpoint": "https://example.com/push-service/send/dbDqU8xX10w:APA91b...",  
-  "keys": {  
-    "auth": "qLAYRzG9TnUwbprns6H2Ew==",  
-    "p256dh": "BILXd-c1-zuEQYXH\\_tc3qmLq52cggfqqTr\\_ZclwqYl6A7-RX2J0NG3icsw..."  
-  }  
+```json
+{
+  "endpoint": "https://example.com/push-service/send/dbDqU8xX10w:APA91b...",
+  "keys": {
+    "auth": "qLAYRzG9TnUwbprns6H2Ew==",
+    "p256dh": "BILXd-c1-zuEQYXH\\_tc3qmLq52cggfqqTr\\_ZclwqYl6A7-RX2J0NG3icsw..."
+  }
 }
-{{< /highlight >}}
+```
 
 Le *endpoint* dépend du navigateur utilisé et c'est lui même qui vous le fourni.
 Par exemple pour Chrome, c'est un endpoint qui ressemble à ça : *https://android.googleapis.com/gcm/send/APA91bHPffi...*
@@ -391,18 +391,18 @@ Pour voir en détail comment gérer cela, consultez cet article : [Sending Messa
 
 La prise en compte d'une notification est réalisée par le Service Worker, en écoutant un évènement "push" :
 
-{{< highlight js >}}
+```js
 self.addEventListener('push', event => {
   event.waitUntil(
     // Display a notification
     self.registration.showNotification('You got a notification!');
   );
 });
-{{< /highlight >}}
+```
 
 Une notification ne requis qu'un titre, mais d'autres options sont possibles :
 
-{{< highlight js >}}
+```js
 self.registration.showNotification('You got a notification!', {
   "body": "Souhaitez-vous confirmer le rendez-vous du 20/11/2016 avec M. Martin ?",
   "icon": "/images/meeting.png",
@@ -412,7 +412,7 @@ self.registration.showNotification('You got a notification!', {
     { "action": "no", "title": "No", "icon": "images/no.png" }
   ]
  });
-{{< /highlight >}}
+```
 
 Comme vous pouvez le voir, outre le contenu et l'icone de la notification, il est possible :
 
@@ -421,16 +421,16 @@ Comme vous pouvez le voir, outre le contenu et l'icone de la notification, il es
 
 Deux autres écouteurs sont disponibles pour réaliser des actions lorsque l'utilisateur ouvre ou ferme la notification :
 
-{{< highlight js >}}
-self.addEventListener('notificationclick', event => {  
-  // Do something with the event  
-  event.notification.close();  
+```js
+self.addEventListener('notificationclick', event => {
+  // Do something with the event
+  event.notification.close();
 });
 
-self.addEventListener('notificationclose', event => {  
-  // Do something with the event  
+self.addEventListener('notificationclose', event => {
+  // Do something with the event
 });
-{{< /highlight >}}
+```
 
 Pour en savoir plus sur la gestion des notifications :
 

@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Sauvez un cookie 🍪, installez Matomo !"
 date:               "2019-03-21"
-date:               "2019-03-21"
+publishdate:        "2019-03-21"
 summary:            true
 draft:              false
 slug:               "retour-experience-matomo"
@@ -16,11 +16,11 @@ categories:         ["Dev", "Web"]
 author_username:    "aldeboissieu"
 ---
 
-Anciennement nommé Piwik, Matomo est une solution de mesure d'audience de sites web, alternative libre à Google Analytics. Chez Elao, nous avons souhaité l'utiliser définitivement pour analyser le trafic de notre site et de notre blog. Nous partageons avec vous quelques informations qui vous seront peut-être utiles si, vous aussi, **vous souhaitez rendre anonymes les informations relatives à vos visiteurs** 🔒. 
+Anciennement nommé Piwik, Matomo est une solution de mesure d'audience de sites web, alternative libre à Google Analytics. Chez Elao, nous avons souhaité l'utiliser définitivement pour analyser le trafic de notre site et de notre blog. Nous partageons avec vous quelques informations qui vous seront peut-être utiles si, vous aussi, **vous souhaitez rendre anonymes les informations relatives à vos visiteurs** 🔒.
 
-## A quoi sert Matomo ? 
+## A quoi sert Matomo ?
 
-Tout comme Google Analytics, Matomo permet de mieux comprendre la façon dont les utilisateurs arrivent sur nos sites. On peut ainsi envisager de répondre aux questions suivantes : d'où vient mon visiteur (réseaux sociaux ? Moteur de recherche ?) ? Quelles pages a-t-il visité ? Quelle a été la durée moyenne de sa visite ? Quelle est ma place dans l'univers ? Et autant d'autres questions qui permettent de **connaître le parcours de ses visiteurs**, afin d'améliorer l'ergonomie ou encore de remonter un éventuel trafic parasite. 
+Tout comme Google Analytics, Matomo permet de mieux comprendre la façon dont les utilisateurs arrivent sur nos sites. On peut ainsi envisager de répondre aux questions suivantes : d'où vient mon visiteur (réseaux sociaux ? Moteur de recherche ?) ? Quelles pages a-t-il visité ? Quelle a été la durée moyenne de sa visite ? Quelle est ma place dans l'univers ? Et autant d'autres questions qui permettent de **connaître le parcours de ses visiteurs**, afin d'améliorer l'ergonomie ou encore de remonter un éventuel trafic parasite.
 
 - **Matomo est un logiciel libre** sous licence GPLv3, conçu pour être auto-hébergé;
 - Toutes les données collectées sont stockées sur votre serveur et sont soumises à votre contrôle. Ainsi, **les informations de suivi de chaque visiteur ne sont pas partagées avec des tiers** contrairement à Google Analytics;
@@ -30,37 +30,37 @@ Tout comme Google Analytics, Matomo permet de mieux comprendre la façon dont le
 
 ## De quoi aurez-vous besoin pour installer Matomo ?
 
-Il est possible d'installer un serveur spécialement pour Matomo et d'y configurer plusieurs sites, de la même façon que fonctionne le multi-compte de Google Analytics. 
+Il est possible d'installer un serveur spécialement pour Matomo et d'y configurer plusieurs sites, de la même façon que fonctionne le multi-compte de Google Analytics.
 
-Les minima requis pour installer Matomo sont : 
+Les minima requis pour installer Matomo sont :
 
 - Un serveur web (Apache, Nginx, etc.);
 - PHP en version 5.5.9 ou plus;
 - Une base de données : MySQL ou MariaDB;
-- Les extensions PHP pdo. 
+- Les extensions PHP pdo.
 
 Faites vos choix :
 
 - installation [par archive](https://matomo.org/docs/installation/);
 - installation [par package](https://debian.matomo.org/) : ```apt-get install matomo```;
 - installation par [docker](<https://docs.docker.com/samples/library/matomo/>);
-- solution [hébergée par matomo](<https://matomo.org/pricing/>). 
+- solution [hébergée par matomo](<https://matomo.org/pricing/>).
 
-Matomo indique quelques conseils pour [optimiser son infrastructure](https://matomo.org/docs/optimize/) pour les sites à très fort trafic / volumétrie. Bref, cette solution semble s'appliquer à toutes sortes de besoins. 
+Matomo indique quelques conseils pour [optimiser son infrastructure](https://matomo.org/docs/optimize/) pour les sites à très fort trafic / volumétrie. Bref, cette solution semble s'appliquer à toutes sortes de besoins.
 
 ![Installation de Matomo](/images/posts/2019/matomo/install-matomo.png)
 
 
 
-## Comment l'utiliser sur vos sites web ? 
+## Comment l'utiliser sur vos sites web ?
 
-**Matomo fonctionne grâce à un marqueur JavaScript à insérer dans le header de votre site web**. Celui-ci vous est communiqué au moment de la création d'un compte pour un nouveau site. Tout comme le marqueur de Google Analytics, celui-ci est à insérer avant la fermeture de la balise ```</head>```. 
+**Matomo fonctionne grâce à un marqueur JavaScript à insérer dans le header de votre site web**. Celui-ci vous est communiqué au moment de la création d'un compte pour un nouveau site. Tout comme le marqueur de Google Analytics, celui-ci est à insérer avant la fermeture de la balise ```</head>```.
 
 
 
 ## Conformité avec la RGPD
 
-Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption de la demande de consentement avant de déposer un cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups. 
+Les récents renforcements de la protection des données ne vous ont probablement pas échappé. Ainsi, dans sa documentation ["Solutions pour les cookies de mesure d'audience"](https://www.cnil.fr/fr/solutions-pour-les-cookies-de-mesure-daudience), **la CNIL détaille les obligations légales à mettre en place en matière de cookies**, dès lors qu'il y a données collectées liées à une visite. Miracle 🙌 ! **Utiliser un outil d'analyse d'audience tel que Matomo ou AT Internet (Xiti) permet de bénéficier de l'exemption de la demande de consentement avant de déposer un cookie**, permettant ainsi à nos visiteurs d'économiser un clic, ce qui est bon à prendre en ces temps de frénésie de bandeaux / pop-ups.
 
 Les principaux points relatifs cités par la CNIL auxquels il faut être attentif et qui peuvent être paramétrés sont les suivants :
 
@@ -71,9 +71,9 @@ Les principaux points relatifs cités par la CNIL auxquels il faut être attenti
 
 <img src="https://media.giphy.com/media/wO9EzKpgf3pao/giphy.gif" />
 
-L'interface de Matomo permet de facilement configurer ces choix, puisqu'un menu est dédié à la vie privée, mêlant à la fois documentation et réglages. A noter que ces réglages se font au niveau de l'instance, donc **ces choix s'appliqueront sur tous les sites configurés**. Il n'est pour l'instant pas possible de les régler site par site. 
+L'interface de Matomo permet de facilement configurer ces choix, puisqu'un menu est dédié à la vie privée, mêlant à la fois documentation et réglages. A noter que ces réglages se font au niveau de l'instance, donc **ces choix s'appliqueront sur tous les sites configurés**. Il n'est pour l'instant pas possible de les régler site par site.
 
-Les réglages possibles concernent : 
+Les réglages possibles concernent :
 
 - **L'anonymisation des données** de suivi :
   - Nombre d'octets de l'adresse IP masqués, de 1 à 3;
@@ -81,19 +81,19 @@ Les réglages possibles concernent :
   - Remplacement de l'identifiant utilisateur par un pseudonyme.
 - **Suppression régulière des données stockées en base** (cf le troisième point cité ci-dessus, exigé par la CNIL), en indiquant le nombre de jours. Attention, ces infos sont utilisées par Matomo pour nourrir les rapports à propos des top keywords ou top pages. Ainsi, il faut bien penser à activer [l'auto-archivage des rapports](https://matomo.org/docs/setup-auto-archiving/);
 - Purges régulières de la base des données;
-- **Anonymisation des données trackées qui ne l'étaient pas** encore, dès lors qu'elles n'ont plus d'intérêt à être conservées. 
+- **Anonymisation des données trackées qui ne l'étaient pas** encore, dès lors qu'elles n'ont plus d'intérêt à être conservées.
 
-⚠️ : le [guide de conformité de Piwik (ancien nom de Matomo) proposé par la CNIL](https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf) ne semble plus à jour, puisqu'il pointe une modification du tag de tracking permettant d'indiquer une durée de timeout du cookie à 13 mois, alors que cette durée est désormais paramétrée par défaut, comme nous l'indique la [documentation de Matomo](https://developer.matomo.org/api-reference/tracking-javascript) (voir au paragraphe "Configuration of Tracking Cookies", pour la méthode ```setVisitorCookieTimeout```. 
+⚠️ : le [guide de conformité de Piwik (ancien nom de Matomo) proposé par la CNIL](https://www.cnil.fr/sites/default/files/typo/document/Configuration_piwik.pdf) ne semble plus à jour, puisqu'il pointe une modification du tag de tracking permettant d'indiquer une durée de timeout du cookie à 13 mois, alors que cette durée est désormais paramétrée par défaut, comme nous l'indique la [documentation de Matomo](https://developer.matomo.org/api-reference/tracking-javascript) (voir au paragraphe "Configuration of Tracking Cookies", pour la méthode ```setVisitorCookieTimeout```.
 
 
 
 ## Les fonctionnalités proposées par Matomo vs Google Analytics
 
-Pour les habitués de Google Analytics, le passage à une nouvelle ergonomie n'est pas évidente. En comparant deux périodes sur l'année, nous avons déjà pu nous assurer qu'aucun visiteur n'est laissé au bord de la route : les données semblent cohérentes. 
+Pour les habitués de Google Analytics, le passage à une nouvelle ergonomie n'est pas évidente. En comparant deux périodes sur l'année, nous avons déjà pu nous assurer qu'aucun visiteur n'est laissé au bord de la route : les données semblent cohérentes.
 
 ![Evolution de traffic](/images/posts/2019/matomo/Evolution-trafic-matomo.png)
 
-On retrouve les fondamentaux : 
+On retrouve les fondamentaux :
 
 - **Données relatives à l'audience,** c'est à dire toutes les infos qui concernent les visiteurs (provenances géographiques, logiciels utilisés);
 - **La carte en temps réel des visites**;
@@ -112,17 +112,17 @@ On peut noter quelques fonctionnalités remarquables de Matomo  :
 - Les nouveaux segments se paramètrent en composant ses propres règles par expression;
 - Un accès rapide permet d'accéder à la liste de **tous les liens sortants cliqués sur la période** (clic uniques et au total).
 
-Pour les personnes qui ont l'habitude de faire des campagnes Google Ads, il est possible de créer ses propres campagnes pour les suivre. 
+Pour les personnes qui ont l'habitude de faire des campagnes Google Ads, il est possible de créer ses propres campagnes pour les suivre.
 
-A noter : 
+A noter :
 
-- Matomo propose depuis peu un [Tag Manager](https://matomo.org/docs/tag-manager/), qui permet de mettre en place un plan de marquage, d'ajouter des scripts de tracking ou encore des liens d'affiliation, par exemple, depuis la même interface. 
+- Matomo propose depuis peu un [Tag Manager](https://matomo.org/docs/tag-manager/), qui permet de mettre en place un plan de marquage, d'ajouter des scripts de tracking ou encore des liens d'affiliation, par exemple, depuis la même interface.
 
 ![Fonctionnalités de Matomo](/images/posts/2019/matomo/features-analytics.png)
 
 ## Fonctionnalités payantes
 
-Utiliser les outils Google habitue à la "gratuité", mais n'oublions pas que Google tire profit des données qu'il stocke pour nous, relatives à la fréquentation de nos sites. Matomo se rémunère grâce aux dons et aux fonctionnalités vendues à ses utilisateurs. 
+Utiliser les outils Google habitue à la "gratuité", mais n'oublions pas que Google tire profit des données qu'il stocke pour nous, relatives à la fréquentation de nos sites. Matomo se rémunère grâce aux dons et aux fonctionnalités vendues à ses utilisateurs.
 
 [Des fonctionnalités supplémentaires pour les sites e-commerce](<https://matomo.org/docs/ecommerce-analytics/>), que nous n'avons pas eu l'occasion de tester pour l'instant, existent et proposent des features telles que l'analyse du panier, des produits cliqués, etc.);
 

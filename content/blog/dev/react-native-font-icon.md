@@ -66,13 +66,13 @@ _Note :_ Ici je ne fais que répéter les étapes décrites dans cet article ass
 
 Ajoutez la section suivante à votre `package.json` :
 
-{{< highlight json >}}
+```json
 {
     "rnpm": {
       "assets": ["./assets/fonts/"]
     }
 }
-{{< /highlight >}}
+```
 
 _Note :_ ici le chemin doit correspondre au dossier choisi à l'étape 4.
 
@@ -89,12 +89,12 @@ $ ls ./android/app/src/main/assets/fonts
 
 Côté iOS, votre fichier `ios/AcmeApp/Info.plist` devrait comprendre les nouvelles lignes qui suivent :
 
-{{< highlight xml >}}
+```xml
 <key>UIAppFonts</key>
 <array>
   <string>acmeIcon.ttf</string>
 </array>
-{{< /highlight >}}
+```
 
 _Note :_ La suite d'icônes est amenée à évoluer durant la vie de votre app. Pour la mettre à jour, remplacez votre fichier `./assets/fonts/acmeIcon.ttf` par sa nouvelle version puis exécutez `react-native link` à nouveau.
 
@@ -104,24 +104,24 @@ En CSS, pour afficher une icône à partir d'une police, on s'y prend de la mani
 
 On définit d'abord une classe pour notre pictogramme et on lui attribue un pseudo-élément contenant le caractère UTF-8 correspondant à l'icône voulue dans la police générée.
 
-{{< highlight css >}}
+```css
 .icon-home:before {
   font-family: 'acmeIcon';
   content: "\e902";
 }
-{{< /highlight >}}
+```
 
 Puis on l'affiche en HTML comme ceci :
 
-{{< highlight html >}}
+```html
 <span class="icon-home"></span>
-{{< /highlight >}}
+```
 
 Côté React Native, l'équivalent de cette technique s'écrirait ainsi :
 
-{{< highlight jsx >}}
+```jsx
 <Text style={{ fontFamily: 'acmeIcon' }}>{'\u{e902}'}</Text>
-{{< /highlight >}}
+```
 
 💡 _Petite subtilité :_ si le caractère UTF-8 en CSS se note `"\e902"`, en Javascript c'est `'\u{e902}'`.
 La partie variable pour chaque icône ici est `e902`. IcoMoon vous fournit ce code unique pour chaque pictogramme, à vous de l'adapter au format Javascript.
@@ -134,7 +134,7 @@ Bien que cette notation fonctionne, je vous propose de créer un composant réut
 
 Nous allons maintenant créer un composant `Icon` chargé de rendre une icône.
 
-{{< highlight javascript >}}
+```javascript
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Text, StyleSheet } from 'react-native';
@@ -188,24 +188,24 @@ export default class Icon extends Component {
     return <Text style={this.safeIconStyle([styles.icon, style])}>{icons[icon]}</Text>;
   }
 }
-{{< /highlight >}}
+```
 
 ### Utilisation du composant Icon
 
 Nous pouvons maintenant afficher des icônes dans notre app comme ceci :
 
-{{< highlight jsx >}}
+```jsx
 <Icon icon="home" style={{ fontSize: 16, color: 'green' }} />
-{{< /highlight >}}
+```
 
 _Note :_ Le composant `Icon` se comportera comme le composant `Text` de React Native, notamment concernant l'héritage des styles lorsqu'il est contenu dans un composant `Text` stylisé. Voir exemple ci-dessous :
 
-{{< highlight jsx >}}
+```jsx
 <Text style={styles.title}
   <Icon icon="home"/>
   Retour à l'accueil
 </Text>
-{{< /highlight >}}
+```
 
 Et le résultat !
 

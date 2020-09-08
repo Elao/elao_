@@ -18,7 +18,7 @@ author_username:    "vbouzeran"
 **Avertissement :**
 Depuis la rédaction de cet article sur l'injection de dépendances, le coeur de Symfony2 a évolué de façon notable, en particulier certaines classes du répertoire **DependencyInjection** mentionnées dans cet article ont été renommées, révisées, ou refondues. Toutefois, les principes généraux décrits dans cet article restent d'actualité.
 
-{{< figure src="/images/posts/2010/dependency-injection-symfony.png" title="Injection de dépendances" alt="dependency injection symfony Symfony 2 Linjection de dépendances" width="278" height="236">}}
+![dependency injection symfony Symfony 2 Linjection de dépendances" width="278" height="236](/images/posts/2010/dependency-injection-symfony.png)
 
 Cet article est le premier d'une série à venir sur Symfony 2. Pour commencer, je vous invite à télécharger la <a href="http://symfony-reloaded.org/code" target="_blank">sandbox</a> de Symfony 2. J'ai décidé de commencer par l'injection de dépendances car il s'agit d'un composant clé de Symfony 2, et que la bonne compréhension de cette nouvelle version du Framework doit forcément en passer par là. L'injection de dépendance est réellement au coeur du Framework.
 
@@ -68,7 +68,7 @@ L'injecteur de dépendances pourrait ressembler à quelque chose comme ça :
 
 #### Container généré
 
-{{< highlight php >}}
+```php
 <?php
 class Container()
 {
@@ -93,7 +93,7 @@ class Container()
   }
 }
 
-{{< /highlight >}}
+```
 
 L'injection de dépendances permet donc une gestion beaucoup plus claire et souple de ces différents "services". En modifiant ce fichier de configuration nous pourrions très simplement :
 
@@ -105,7 +105,7 @@ L'injection de dépendances permet donc une gestion beaucoup plus claire et soup
 
 A l'origine, sous Symfony 1.x, ce qui remplaçait plus ou moins l'injecteur de dépendances était le fichier **factories.yml** avec comme container l'objet **sfContext**. Ce fichier était chargé en cache (**factories.yml.php**) et les différents 'services' inclus dans l'objet **sfContext** au travers de sa propriété **factories**.
 
-{{< highlight php >}}
+```php
 <?php
 class sfContext implements ArrayAccess
 {
@@ -126,23 +126,23 @@ class sfContext implements ArrayAccess
     ....
   }
 }
-{{< /highlight >}}
+```
 
 
 Le fichier **factories.yml** était géré par la classe **sfFactoryConfigHandler** et aboutissait dans le cache au fichier **factories.yml.php** qui se contentait d'enrichir le tableau **$factories** du **sfContext**.
 
-{{< highlight php >}}
+```php
 
 $class = sfConfig::get('sf_factory_controller', 'sfFrontWebController');
 $this->factories['controller'] = new $class($this);
 $class = sfConfig::get('sf_factory_request', 'sfWebRequest');
 $this->factories['request'] = new $class(...)
-{{< /highlight >}}
+```
 
 
 Les différents services étaient ensuite accessibles au travers du *sfContext :
 
-{{< highlight php >}}
+```php
 <?php
 class sfContext implements ArrayAccess
 {
@@ -151,7 +151,7 @@ class sfContext implements ArrayAccess
   public function getRequest()
   ...
 }
-{{< /highlight >}}
+```
 
 
 ### Symfony 2 et l'injection de dépendances
@@ -162,7 +162,7 @@ En premier lieu, je vous conseille vivement la lecture de la documentation de Fa
 
 Jetons un oeil aux sources du composant (*/sandbox/src/vendor/symfony/src/Symfony/Components/DependencyInjection*) :
 
-{{< figure src="/images/posts/2010/di-folder.png" title="Injection de dépendances" alt="di folder Symfony 2   Linjection de dépendances" width="284" height="253">}}
+![di folder Symfony 2   Linjection de dépendances" width="284" height="253](/images/posts/2010/di-folder.png)
 
 * Le répertoire ***Dumper** *va contenir les classes permettant de dumper un ***Builder*** sous un format spécifique (Yaml, Xml, PHP, Graphviz).
 * Le répertoire ***Loader*** var contenir les classes permettant de charger des ***BuilderConfiguration*** à partir de formats spécifiques (Yaml, Xml, Ini)
@@ -175,7 +175,7 @@ Le fonctionnement est somme toute assez simple. Les différents loaders vont per
 Un schéma valant mieux qu'un long discours, on peut synthétiser le fonctionnement comme suit :
 Note: Le loader de fichiers .ini n'a pas été représenté puisqu'il ne permet que de définir des paramètres.
 
-{{< figure src="/images/posts/2010/injection-dependances.png" title="Injection de dépendances" alt="injection dependances Symfony 2   Linjection de dépendances" width="846" height="468">}}
+![injection dependances Symfony 2   Linjection de dépendances" width="846" height="468](/images/posts/2010/injection-dependances.png)
 
 **Le dumper Graphviz**: Ce dumper a pour objectif de générer un dump exploitable par le logiciel <a href="http://graphviz.org/" target="_blank">Graphviz</a> ; il va nous permettre d'obtenir un graphique représentant nos services et leurs dépendances.
 ****Le cache:**** Afin d'accélérer le fonctionnement des applications utilisant l'injection de dépendances, il est évident que les différents fichiers de configuration ne seront pas reparsés à chaque appel. En réalité, le container sera dumpé sous la forme d'une classe PHP et mise en cache.
@@ -263,7 +263,7 @@ Attardons nous un peu sur ces fameuses définitions de services qui sont un peu 
 A partir de ces informations, le builder sera capable de recréer la méthode permettant d'accéder au service.
 De façon très synthétique et grossière, la définition nous permettrait d'aboutir à une méthode comme ceci:
 
-{{< highlight php >}}
+```php
 <?php
 public function getServiceXXX()
 {
@@ -274,7 +274,7 @@ public function getServiceXXX()
   $service->$call();
   return $service;
 }
-{{< /highlight >}}
+```
 
 
 **Note: **Dans Symfony 2, les bundles de base utilisent le loader XML pour définir leurs services. Le format XML a l'avantage de pouvoir être validé via **Components/DependencyInjection/Loader/schema/dic/services/services-1.0.xsd**
@@ -283,7 +283,7 @@ public function getServiceXXX()
 
 Dans le répertoire Ressources/config/ du Bundle (** /sandbox/src/vendor/symfony/src/Symfony/Framework/ZendBundle**), on trouve le fichier : logger.xml. Il s'agit de notre fichier de configuration. Notre fichier qui sera chargé par le loader pour enrichir notre container.
 
-{{< highlight xml >}}
+```xml
 
 <!--?xml version="1.0" ?-->
 
@@ -294,7 +294,7 @@ Symfony\Framework\ZendBundle\Logger\LoggerZend_Log::CRITSymfony\Framework\ZendBu
 %zend.formatter.filesystem.format%
 
 %zend.logger.priority%
-{{< /highlight >}}
+```
 
 
 5 services sont définis: zend.logger, zend.logger.writer.filesystem, zend.formatter.filesystem, zend.logger.writer.debug et zend.logger.filter.
@@ -302,7 +302,7 @@ Les paramètres sont également définis dans le fichier.
 
 Ces différentes déclaration aboutiront à la création de méthodes de ce type dans le container généré par le Dumper PHP.
 
-{{< highlight php >}}
+```php
 <?php
 protected function getZend_LoggerService()
 {
@@ -363,15 +363,14 @@ protected function getLoggerService()
 {
   return $this->getZend_LoggerService();
 }
-{{< /highlight >}}
+```
 
  Comme vous pouvez le constater, une méthode getLoggerService est générée. Cette méthode est générée car un alias a été défini lors de la configuration du builder (ligne 59 du fichier ZendExtension.php).
 
-{{< highlight php>}}
-
+```php
 <?php
 $configuration->setAlias('logger', 'zend.logger');
-{{< /highlight >}}
+```
 
 
 #### Les annotations
@@ -386,7 +385,7 @@ Lorsque les différents Bundles vont définir leurs services, ceux-ci ne seront 
 
 Le fichier Bundle.php du WebBundle ressemble à ceci:
 
-{{< highlight php >}}
+```php
 <?php
 class Bundle extends BaseBundle
 {
@@ -396,13 +395,13 @@ class Bundle extends BaseBundle
     ....
   }
 }
-{{< /highlight >}}
+```
 
 
 La méthode **buildContainer()** définie sur chaque Bundle permet d'indiquer au **Kernel** comment configurer le Container pour ce Bundle. Ici, le Bundle va se contenter de déclarer une extension sur le loader. Il enregistre donc l'extension **WebExtension** dans le loader.
 Voyons maintenant le fichier WebExtension.php
 
-{{< highlight php >}}
+```php
 <?php
 class WebExtension extends LoaderExtension
 {
@@ -437,14 +436,14 @@ class WebExtension extends LoaderExtension
     return 'web';
   }
 }
-{{< /highlight >}}
+```
 
 
 On voit que les extensions permettent de charger des configurations de Builder un peu différemment. Dans les différents fichiers de configuration manipulés, quel que soit le format du loader utilisé, on se contente de déclarer des services. Cependant, il faut savoir qu'il est également possible de charger et configurer des extensions ainsi définies.
 Ce qu'on trouve en général dans les fichiers config.yml / config_dev.yml / config_prod.yml d'une application utilise principalement la déclaration des extensions prédéfinies par les Bundles et ne déclare pas de nouveaux services.
 Exemple:
 
-{{< highlight yaml >}}
+```yaml
 
 kernel.config: ~
 web.web: ~
@@ -457,7 +456,7 @@ priority: info
 path: %kernel.root_dir%/logs/%kernel.environment%.log
 swift.mailer:
 transport: gmail
-{{< /highlight >}}
+```
 
 
 Dans ce fichier de configuration, seules des extensions sont déclarées. A noter que si une extension n'est pas déclarée dans le fichier de configuration d'un Container, ses services ne seront pas inclus dans le Container final.
@@ -469,7 +468,7 @@ Afin de bien comprendre le fonctionnement, je vous propose une petite mise en pr
 
 Au niveau de la sandbox, les fichiers de configuration du Builder sont : config.yml, config_dev.yml et config_prod.yml. La méthode qui va charger ces fichiers est la méthode registerContainerConfiguration() de la classe HelloKernel. Nous allons travailler dans le cadre de nos exemples sur l'environnement de production. Le Container final généré se trouve dans le cache hello/cache/prod/helloProjectContainer.php
 
-{{< highlight php >}}
+```php
 <?php
 class HelloKernel extends Kernel
 {
@@ -482,7 +481,7 @@ class HelloKernel extends Kernel
   }
   ...
 }
-{{< /highlight >}}
+```
 
 
 C'est au niveau de cette méthode que nous allons intervenir dans un premier temps.
@@ -490,7 +489,7 @@ C'est au niveau de cette méthode que nous allons intervenir dans un premier tem
 #### Modifier la classe d'un service
  Dans notre premier exemple, nous allons tenter de modifier un service. En l'occurrence, le service représentant la requête, le bien nommé "RequestService". Notre container (HelloProjectContainer.php) définit le service ainsi:
 
-{{< highlight php >}}
+```php
 <?php
 protected function getRequestService()
 {
@@ -498,13 +497,13 @@ protected function getRequestService()
   $instance = new Symfony\Components\RequestHandler\Request();
   return $this->shared['request'] = $instance;
 }
-{{< /highlight >}}
+```
 
 
 Pour modifier la classe utilisée pour ce service, rien de plus simple, il nous suffit de modifier la configuration du container.
  Nous allons simplement modifier la classe associée dans la définition de ce service de cette façon :
 
-{{< highlight php >}}
+```php
 <?php
 public function registerContainerConfiguration()
 {
@@ -513,12 +512,12 @@ public function registerContainerConfiguration()
   $configuration->getDefinition('request')->setClass('MaClasseRequest'); // Nous modifions la définition du service "request"
   return $configuration;
 }
-{{< /highlight >}}
+```
 
 
 C'est fait ! Si on vide le cache et que l'on rappelle une url sur le projet, la définition de notre service dans le container ressemble maintenant à ça:
 
-{{< highlight php >}}
+```php
 <?php
 protected function getRequestService()
 {
@@ -526,13 +525,13 @@ protected function getRequestService()
     $instance = new MaClasseRequest();
     return $this->shared['request'] = $instance;
 }
-{{< /highlight >}}
+```
 
 
 #### Créer un service
  Dans cette exemple, nous allons voir comment déclarer un nouveau service. Nous allons tenter de déclarer le service "Monservice", utilisant la classe "Maclasse", dépendante du service "logger" sur laquelle on appellera les méthodes init1() et init2() à qui on passera le paramètre "coucou". Nous avions vu que le fichier config.yml déclarait les extensions à utiliser, mais c'est un fichier de configuration de Container comme un autre, nous pouvons donc y définir des services.
 
-{{< highlight yaml >}}
+```yaml
 
 services:
   monservice:
@@ -543,12 +542,12 @@ services:
     calls:
      - [init1, []]
       - [init2, ['coucou']]
-{{< /highlight >}}
+```
 
 
 C'est tout. Nous venons de déclarer un nouveau service dans notre application. Si nous jetons un oeil au Container généré:
 
-{{< highlight php >}}
+```php
 <?php
 protected function getMonserviceService()
 {
@@ -560,7 +559,7 @@ protected function getMonserviceService()
 
     return $this->shared['monservice'] = $instance;
 }
-{{< /highlight >}}
+```
 
 
 ### En conclusion

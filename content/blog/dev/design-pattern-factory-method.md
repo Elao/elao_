@@ -60,7 +60,7 @@ Enfin, je ne peux passer sous silence deux autres ouvrages qui me paraissent fon
 
 Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous gratifier d'une remarque liminaire : cet article est avant tout destiné à présenter le Design Pattern _Factory Method_, alors précisons d'emblée que ce qui suit n'est pas un pattern (et encore moins une pipe, mais ça, c'est un autre débat ...) :
 
-{{< highlight php >}}
+```php
     <?php
     class MyFactory {
         public static function getInstance($type = null) {
@@ -75,7 +75,7 @@ Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous g
             }
         }
     }
-{{< /highlight >}}
+```
 
 Ne me faites pas dire ce que je n'ai pas dit ... Je ne prétends pas du tout que le code ci-dessus relève d'une mauvaise conception. Ni que cette classe n'est pas une _factory_. Simplement, si l'on se réfère à la définition exacte du pattern `Factory Method`, on s'apercevra que l'on n'est pas en présence d'un pattern.
 
@@ -127,7 +127,7 @@ On distingue sur le schéma ci-dessus les participants suivants :
 
 ### Exposé de la problématique
 
-{{< highlight php >}}
+```php
     <?php
     class OrderHandler {
         public function orderProduct(Order $order, int $qty = 1): Product {
@@ -139,7 +139,7 @@ On distingue sur le schéma ci-dessus les participants suivants :
             return $orderedProduct;
         }
     }
-{{< /highlight >}}
+```
 
 La classe `OrderHandler` contient notamment une méthode `orderProduct` qui retourne un produit commandé après l'avoir instancié. Par rapport à notre schéma ci-dessus, `OrderHandler` correspondrait au `Creator` tandis que `Product` correspondrait à `ConcreteProduct`.
 
@@ -155,7 +155,7 @@ Il est possible qu'en l'état actuel de l'application, ce code fasse parfaitemen
 
 Nous allons à présent modifier notre classe `OrderHandler` pour nous rapprocher du pattern :
 
-{{< highlight php >}}
+```php
     <?php
     class OrderHandler {
         public function orderProduct(
@@ -174,7 +174,7 @@ Nous allons à présent modifier notre classe `OrderHandler` pour nous rapproche
             return new Product();
         }
     }
-{{< /highlight >}}
+```
 
 Les modifications apportées consistent à :
 

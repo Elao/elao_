@@ -33,7 +33,7 @@ During this tutorial, we will install Stats.d and Graphite on the same server ou
 # Install Graphite
 
 ## Installing graphite dependencies
-{{< highlight bash >}}
+```bash
 apt-get install -y python2.6 python-pip python-cairo python-django python-django-tagging
 apt-get install -y libapache2-mod-wsgi python-twisted python-memcache python-pysqlite2 python-simplejson
 pip install whisper
@@ -43,22 +43,22 @@ pip install graphite-web
 # Setup a vhost by grabbing the example the graphite team released on their repo.
 # In this file, you'll provide the url used to access to your Graphite dashboard
 wget https://raw.github.com/tmm1/graphite/master/examples/example-graphite-vhost.conf -O /etc/apache2/sites-available/graphite
-{{< /highlight >}}
+```
 
-{{< highlight bash >}}
+```bash
 # If you are running on a Debian, don't forget to replace in the vhost, the WSGISocketPrefix value by the following:
 WSGISocketPrefix /var/run/apache2/wsgi
-{{< /highlight >}}
+```
 
 ## Configuring graphite
-{{< highlight bash >}}
+```bash
 cd /opt/graphite/conf/
 cp graphite.wsgi.example graphite.wsgi
 cp carbon.conf.example carbon.conf
 cp storage-schemas.conf.example storage-schemas.conf
-{{< /highlight >}}
+```
 
-{{< highlight ini >}}
+```ini
 # Edit storage-schemas.conf in order to include a custom tweak provided by stats.d
 [stats]
 pattern = ^stats.*
@@ -71,15 +71,15 @@ retentions = 60:90d
 [default_1min_for_1day]
 pattern = .*
 retentions = 60s:1d
-{{< /highlight >}}
+```
 
-{{< highlight bash >}}
+```bash
 
 # Create a vi storage-aggregation.conf
 vi storage-aggregation.conf
-{{< /highlight >}}
+```
 
-{{< highlight ini >}}
+```ini
 # Then copy paste in it the following parameters
 [min]
 pattern = \.min$
@@ -100,27 +100,27 @@ aggregationMethod = sum
 pattern = .*
 xFilesFactor = 0.3
 aggregationMethod = average
-{{< /highlight >}}
+```
 
 # Let's go back to the installation process
-{{< highlight bash >}}
+```bash
 cd /opt/graphite/webapp/graphite
 python manage.py syncdb
 chown -R www-data:www-data /opt/graphite/storage/
-{{< /highlight >}}
+```
 
 ## Enabling graphite host
-{{< highlight bash >}}
+```bash
 a2ensite graphite
 /opt/graphite/bin/carbon-cache.py start
 /etc/init.d/apache2 resta
-{{< /highlight >}}
+```
 
 If you want the full detail on the graphite, take a look at [the source][2] I used for the installations steps.
 
 # Install [Stat.d][3]
 
-{{< highlight bash >}}
+```bash
 sudo apt-get update && apt-get install git-core curl build-essential openssl libssl-dev
 
 # Don't forget to go to the location you want to install node in (like cd /home/) before running these commands
@@ -139,24 +139,24 @@ cd ..
 git clone https://github.com/etsy/statsd
 cd statsd
 cp exampleConfig.js local.js
-{{< /highlight >}}
+```
 
 ## Edit local.js and make it looks like:
-{{< highlight js >}}
+```js
 {
 graphitePort: 2003
 , graphiteHost: "localhost"
 , port: 8125
 }
-{{< /highlight >}}
+```
 
 # Then you need to run stats.d
-{{< highlight bash >}}
+```bash
 apt-get install screen
 screen node stats.js local.js
 
 # Then press Ctrl + a + d in order to let run stats.js in background mode thanks to screen.
-{{< /highlight >}}
+```
 
 If you want the full detail, check out the [source][4].
 
@@ -166,7 +166,7 @@ You can access it with the URL you provided in your vhost
 
 Now, let's install the [StatsDClientBundle][5] in order to monitor our Symfony2 application
 
-{{< highlight json >}}
+```json
 
 // composer.json
 "require": {
@@ -174,9 +174,9 @@ Now, let's install the [StatsDClientBundle][5] in order to monitor our Symfony2 
     "liuggio/statsd-client-bundle": ">=1.2",
     # ..
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 // After running php composer.phar update liuggio/statsd-client-bundle
 // Enable the Bundle in AppKernel.php
 <?php
@@ -190,9 +190,9 @@ class AppKernel extends Kernel
          // ...
 
 // Then add the full configuration for the Bundle in app/config/config.yml
-{{< /highlight >}}
+```
 
-{{< highlight yaml >}}
+```yaml
 liuggio_stats_d_client:
   connection:
     host: localhost
@@ -205,7 +205,7 @@ liuggio_stats_d_client:
     liuggio_stats_d_client.collector.memory: 'collect.memory'
     liuggio_stats_d_client.collector.user: 'collect.user'
     liuggio_stats_d_client.collector.exception: 'collect.exception'
-{{< /highlight >}}
+```
 
 Note that we added the full configuration for the bundle which allow us to collect these usefull information such as logged users vs anonymous, memory usage.
 

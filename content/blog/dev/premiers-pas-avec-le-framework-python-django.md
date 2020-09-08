@@ -40,13 +40,13 @@ python
 
 Vous devriez alors voir apparaître une invitation de commande Python assez semblable à celle-ci :
 
-{{< highlight bash >}}
+```bash
 
 Python 2.5.2 (r252:60911, Jan 20 2010, 23:16:55)
 [GCC 4.3.2] on linux2
 Type 'help', 'copyright', 'credits' or 'license' for more information.
 >>>
-{{< /highlight >}}
+```
 
 
 Si ce n'est pas le cas, ou si vous utilisez l'OS Windows, il vous suffira de télécharger Python et l'installer :
@@ -65,13 +65,13 @@ A présent, il est temps de télécharger et installer Django :
 
 Si vous avez opté pour le téléchargement de l'archive de la distribution Django, l'installation consiste principalement à décompresser le contenu de l'archive dans un répertoire temporaire et à lancer le script d'installation. Voici un exemple en partant du principe que votre archive se trouve dans le répertoire ~/Temp :
 
-{{< highlight python >}}
+```python
 
 cd ~/Temp
 tar -zxvf Django-1.2.1.tar.gz
 cd Django-1.2.1
 sudo python setup.py install
-{{< /highlight >}}
+```
 
 
 L'installation devrait se dérouler normalement.
@@ -85,7 +85,7 @@ django-admin.py
 
 Si tout s'est déroulé correctement, vous devriez obtenir le résultat suivant (et notamment la liste des sous-commandes Django disponibles) :
 
-{{< highlight bash >}}
+```bash
 
 Usage: django-admin.py subcommand [options] [args]
       .....
@@ -98,7 +98,7 @@ Available subcommands:
   dbshell
   diffsettings
   ...
-{{< /highlight >}}
+```
 
 
 Si vous n'obtenez pas le résultat escompté, il va falloir rendre le script disponible. Pour les utilisateurs de Linux, cela consistera par exemple à créer un lien symbolique pointant sur ce fichier pour y accéder depuis n'importe quel emplacement. Quant aux utilisateurs de Windows, il leur suffira de copier ce fichier dans un répertoire inclus dans la variable d'environnement PATH, ou bien encore modifier la variable PATH en y ajoutant le chemin du répertoire parent du fichier **django-admin.py**
@@ -127,14 +127,14 @@ A présent, nous disposons d'un environnement de développement qui nous permet 
 
 Nous allons donc ouvrir (si ce n'est pas déjà fait) un terminal, nous placer dans le répertoire contenant nos projets Django (dans mon cas, ce répertoire s'appelle "**workspace-django**", il est situé dans ma "home") et exécuter le script de création du projet :
 
-{{< highlight python >}}
+```python
 
 cd ~/workspace-django
 django-admin.py startproject monprojet
 # Ca y est, le projet est initialisé, allons voir ce qu'il contient :
 cd monprojet
 ls -l
-{{< /highlight >}}
+```
 
 
 > Voici le contenu du projet immédiatement après sa création  <p>
@@ -182,7 +182,7 @@ Mais une des notions qui m'apparaît fondamentale pour définir une application,
 
 Quoi qu'il en soit, observons la structure de notre projet après que nous avons créé notre première application :
 
-{{< highlight python >}}
+```python
 + hello
   __init.py__
   models.py
@@ -192,7 +192,7 @@ Quoi qu'il en soit, observons la structure de notre projet après que nous avons
 __init.py__
 manage.py
 ........
-{{< /highlight >}}
+```
 
 
 Maintenant que nous disposons d'une structure enrichie, nous avons l'occasion d'aborder les concepts de **packages** et **modules** du langage Python. Il n'est pas question ici d'entrer dans le détail, mais simplement de bien s'entendre sur la terminologie du langage Python, car cela nous sera utile lorsque Django nous signalera en mode DEBUG des exceptions survenues dans tel ou tel module. Pour ceux qui souhaitent approfondir la question de l'organisation du code des applications Python, je les invite à consulter la documentation officielle de Python : <a href="http://docs.python.org/tutorial/modules.html">Modules in Python</a>.
@@ -210,7 +210,7 @@ Maintenant que nous disposons d'une structure enrichie, nous avons l'occasion d'
 
 Nous avons donc créé le squelette de notre application, mais dans un projet Django, toute application doit être déclarée dans le fichier **settings.py** pour être rendue disponible. Nous allons donc modifier ce fichier et ajouter une simple ligne (en toute fin de code) :
 
-{{< highlight python >}}
+```python
 
 # monprojet/settings.py
 ...
@@ -225,7 +225,7 @@ INSTALLED_APPS = (
     # Ici, nous ajoutons notre application :
     'hello',
 )
-{{< /highlight >}}
+```
 
 
 Profitez de cette modification pour consulter le contenu de ce fichier. C'est notamment dans ce fichier que l'on définit le mode debug (**DEBUG = True**), les paramètres de connexion à la base de données, l'emplacement où nous enregistrerons les templates, le répertoire "**media**" destiné à accueillir les fichiers statiques (feuilles de style, images, fichiers javascript ...) et bien d'autre choses. Pour connaître les principaux paramètres enregistrés dans ce fichier, je vous encourage à consulter la page de la documentation de Django traitant de la configuration d'un projet : <a href="http://docs.djangoproject.com/en/1.2/topics/settings/" target="_blank">Django Settings</a>.
@@ -242,7 +242,7 @@ A présent, nous pouvons nous atteler à la rédaction du code qui va nous perme
 
 Pour ajouter l'URL pointant sur notre méthode, nous allons ajouter une ligne à la fin du fichier **urls.py** :
 
-{{< highlight python >}}
+```python
 
 urlpatterns = patterns('',
     # Example:
@@ -252,7 +252,7 @@ urlpatterns = patterns('',
     # (r'^admin/', include(admin.site.urls)),
     (r'^hello/$', 'hello.views.hello'),
 )
-{{< /highlight >}}
+```
 
 
 Nous venons simplement de préciser que c'est la fonction "hello" du module "views" de l'application "hello" qui doit être appelée lorsque l'URL invoquée correspond exactement au pattern "hello/". Pour créer des URLS sous Django, vous noterez qu'il faut connaître un peu les expressions régulières. Ca, je me suis bien gardé de le préciser en introduction de peur de faire fuir le lecteur. J'avoue que le procédé est assez malhonnête, j'ai quelques scrupules, mais sincèrement, combien d'entre vous seraient parvenus jusqu'ici si j'avais mentionné les expressions régulières dès le début de cet article ? Et puis, sachez que moi-même je ne suis pas très rompu à la syntaxe des REGEXP, alors voici quelques exemples qui vont vous permettre de gérer 90 % des cas que vous serez amenés à rencontrer dans le cadre de l'ajout d'URLs sous Django :
@@ -271,14 +271,14 @@ A présent, si nous nous rendons sur la page <a href="http://localhost:8000/hell
 
 Voici le code complet du fichier views.py contenant notre fonction "hello" :
 
-{{< highlight python >}}
+```python
 
 # monprojet/hello/views.py
 from django.shortcuts import render_to_response
 
 def hello(request):
   return render_to_response('hello.html')
-{{< /highlight >}}
+```
 
 Si vous découvrez le langage Python, il n'y a rien de très compliqué. Noter qu'en Python, les délimitations des blocs de code (comme la définition du corps d'une méthode par exemple) sont marquées au moyen de l'indentation (là où les langages avec une syntaxe héritée du C utilisent les accolades). Nous utilisons également une méthode raccourcie de Django très utile, **render_to_response**, qui permet de retourner une réponse HTTP en lui passant en paramètre le nom de la template à afficher. Cette méthode appartenant au package django.shortcuts, il est nécessaire d'importer ce paquetage au début du code source.
 
@@ -292,7 +292,7 @@ Avec Django, il est nécessaire de mettre à jour le fichier settings.py pour in
 mkdir templates
 ```
 
-{{< highlight python >}}
+```python
 
 # monprojet/settings.py
 
@@ -304,7 +304,7 @@ TEMPLATE_DIRS = (
     '/home/roldo/workspace-django/monprojet/templates/',
 )
 ...
-{{< /highlight >}}
+```
 
 
 Et enfin, créer la template et y ajouter le contenu suivant :
@@ -318,33 +318,33 @@ Voilà, si vous rechargez la page dans votre navigateur, vous devriez voir appar
 
 Commençons par modifier le pattern de la route ...
 
-{{< highlight python >}}
+```python
 
 # monprojet/urls.py
 ...
 (r'^hello/(?P<firstname>[a-zA-Z]+)$', 'hello.views.hello'),
 ...
-{{< /highlight >}}
+```
 
 
 ... puis la fonction "hello" ...
 
-{{< highlight python >}}
+```python
 
 # monprojet/hello/views.py
 ...
 def hello(request, firstname):
   return render_to_response('hello.html', { 'firstname' : firstname })
-{{< /highlight >}}
+```
 
 
 ... et enfin, la template :
 
-{{< highlight html >}}
+```html
 
 <!-- monprojet/templates/hello.html -->
 <h1>Hello {{ firstname }} ! </h1>
-{{< /highlight >}}
+```
 
 
 Pour visualiser le résultat, rendez-vous à cette URL : <a href="http://localhost:8000/hello/Georges" target="_blank">http://localhost:8000/hello/Georges</a>

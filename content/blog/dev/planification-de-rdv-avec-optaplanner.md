@@ -171,7 +171,7 @@ Il n'est jamais simple de modéliser un problème de planification. Le moyen d'y
 
 Voici un extrait du code de MeetingSchedule :
 
-{{< highlight java >}}
+```java
 import org.optaplanner.core.api.domain.solution.PlanningEntityCollectionProperty;
 import org.optaplanner.core.api.domain.solution.PlanningScore;
 import org.optaplanner.core.api.domain.solution.PlanningSolution;
@@ -213,11 +213,11 @@ public class MeetingSchedule {
     public List<Sheet> getSheetList() {
         return sheetList;
     }
-{{< /highlight >}}
+```
 
 Et un extrait du code de Meeting :
 
-{{< highlight java >}}
+```java
 import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
@@ -239,16 +239,16 @@ public class Meeting {
     public Spot getSpot() {
         return spot;
     }
-{{< /highlight >}}
+```
 
 On peut voir que ce code comporte des annotations fournies par OptaPlanner :
 
 - __@PlanningSolution__ : définit l'entité d'une solution optimale contenant tous les rendez-vous.
-- __@PlanningEntityCollectionProperty__ : définit une collection de _PlanningEntity_. 
+- __@PlanningEntityCollectionProperty__ : définit une collection de _PlanningEntity_.
 - __@ProblemFactCollectionProperty__ : définit qu'une propriété sur une classe _PlanningSolution_ est une collection
 de données qui sert au planificateur mais qui ne changent pas lors de la résolution.
 - __@ValueRangeProvider__ : fournit les valeurs pouvant être utilisées dans une annotation _@PlanningVariable_.
-- __@PlanningEntity__ : définit l'élément d'une solution, ici un rendez-vous (_meeting_). 
+- __@PlanningEntity__ : définit l'élément d'une solution, ici un rendez-vous (_meeting_).
 - __@PlanningVariable__ : définit la variable (la ressource) que OptaPlanner attribue au PlanningEntity grâce à ses
 algorithmes de construction heuristique. Ici le créneau (_slot_) et le lieu (_spot_).
 
@@ -263,14 +263,14 @@ L'idée est que chaque règle va permettre d'agir sur ce score, en pénalisant l
 Il s'agit de l'__objectif__ : on souhaite maximiser le nombre de rendez-vous positionnés lors d'un événement.
 Le score de la solution est __pénalisée de -1__ pour chaque rendez-vous non positionné :
 
-{{< highlight java >}}
+```java
 rule "Assign every meeting"
     when
         Meeting(isNotAssigned())
     then
         scoreHolder.addMediumConstraintMatch(kcontext, -1);
 end
-{{< /highlight >}}
+```
 
 #### Contrainte "Hard"
 
@@ -281,22 +281,22 @@ indisponibles durant ce créneau.
 
 En langage Drools, on peut appeler une méthode du modèle :
 
-{{< highlight java >}}
+```java
 rule "Unavailability conflict"
     when
         Meeting(hasUnavailabilityConflict())
     then
         scoreHolder.addHardConstraintMatch(kcontext, -10);
 end
-{{< /highlight >}}
+```
 
 et dans le modèle Meeting :
 
-{{< highlight java >}}
+```java
 @PlanningEntity()
 public class Meeting {
     // ...
-    
+
     public boolean hasUnavailabilityConflict() {
         if (null == slot) {
             return false;
@@ -316,13 +316,13 @@ public class Meeting {
 
         return false;
     }
-{{< /highlight >}}
+```
 
 Prenons un exemple un peu plus complexe :
 lorsque la fiche de participant a consommé tous ses crédits de rendez-vous, il n'est pas possible de lui positionner un
 nouveau rendez-vous :
 
-{{< highlight java >}}
+```java
 rule "Sheet do not have enought meetings quantity conflict"
     when
         $sheet : Sheet($possibleMeetingsQuantity : possibleMeetingsQuantity)
@@ -334,7 +334,7 @@ rule "Sheet do not have enought meetings quantity conflict"
     then
         scoreHolder.addHardConstraintMatch(kcontext, -1);
 end
-{{< /highlight >}}
+```
 
 #### Contrainte "Soft"
 
@@ -345,7 +345,7 @@ Par exemple, nous allons satisfaire équitablement chaque participant en fonctio
 Pour cela, il faut calculer un ratio de nombre de rendez-vous positionnés sur le nombre de rendez-vous à positionner et
 pénaliser de -1 par palier de 10% :
 
-{{< highlight java >}}
+```java
 rule "Satisfaction : add -1 point penalty per 10% satisfaction = meetings assigned / possibleMeetingsQuantity"
     when
         $sheet : Sheet(possibleMeetingsQuantity > 0, $possibleMeetingsQuantity : possibleMeetingsQuantity)
@@ -356,13 +356,13 @@ rule "Satisfaction : add -1 point penalty per 10% satisfaction = meetings assign
     then
         scoreHolder.addSoftConstraintMatch(kcontext, - (int) Math.ceil(10 - 10 * (float) $meetingCount / $possibleMeetingsQuantity));
 end
-{{< /highlight >}}
+```
 
 ## Le solveur
 
 Notre configuration du solveur solver-config.xml :
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <solver>
   <solutionClass>org.vimeet.meetings.domain.MeetingSchedule</solutionClass>
@@ -388,7 +388,7 @@ Notre configuration du solveur solver-config.xml :
     <minutesSpentLimit>30</minutesSpentLimit>
   </termination>
 </solver>
-{{< /highlight >}}
+```
 
 Le solveur peut être configuré finement. Ici on alterne les phases de construction heuristique et la recherche
 locale.
@@ -397,7 +397,7 @@ Enfin avec le paramètre _termination / minutesSpentLimit_ on fixe le temps tota
 On injecte au solveur nos données _meetings-not-solved.xml_ contenant notre modèle de données avec des rendez-vous
 sans créneau ni lieu (_spot_ et _slot_ à null) et les ressources disponibles (créneaux, lieux, utilisateurs...) :
 
-{{< highlight java >}}
+```java
 import org.optaplanner.core.api.solver.Solver;
 import org.optaplanner.core.api.solver.SolverFactory;
 import org.optaplanner.meetings.common.persistence.SolutionDao;
@@ -426,7 +426,7 @@ public class MeetingsCliApp {
         // Write the solution
         meetingsDao.writeSolution(solvedMeetingSchedule, new File("path/to/meetings-solved.xml"));
     }
-{{< /highlight >}}
+```
 
 ## Demo
 

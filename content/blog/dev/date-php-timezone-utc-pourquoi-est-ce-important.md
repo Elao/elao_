@@ -38,9 +38,9 @@ La timezone permet également de savoir si on doit appliquer l'heure d'été ou 
 
 Si vous avez déjà travaillé avec des dates en PHP, vous avez surement été confronté à des problèmes de timezone. La plupart du temps, vous avez résolu le problème en remplaçant la timezone par defaut par la vôtre.
 
-{{< highlight ini >}}
+```ini
 date.timezone = Europe/Paris
-{{< /highlight >}}
+```
 
 Si cette solution règle votre souci immédiatement, nous allons voir que sur le long terme, ce n'est pas forcement une bonne idée.
 
@@ -74,23 +74,23 @@ Il est important également de toujours adjoindre une heure à vos dates, même 
 
 Par exemple, imaginons une table avec un champ date  (sans heure donc)
 
-{{< highlight php >}}
+```php
 <?php
 
-// Il est 10h31, Saisie de la date dans la timezone utilisateur 
-$date = new \DateTime('2017-10-17', new \DateTimeZone('Europe/Paris')); 
+// Il est 10h31, Saisie de la date dans la timezone utilisateur
+$date = new \DateTime('2017-10-17', new \DateTimeZone('Europe/Paris'));
 // Conversion en UTC
 $date->setTimezone(new \DateTimeZone('UTC'));
 // 2017-10-17 10:31 => 2017-10-17 09:31
 // enregistrement de 2017-10-17 dans la base de données
 
-// Il est 00h17, Saisie de la date dans la timezone utilisateur 
+// Il est 00h17, Saisie de la date dans la timezone utilisateur
 $date = new \DateTime('2017-10-17', new \DateTimeZone('Europe/Paris'));
 // Conversion en UTC
 $date->setTimezone(new \DateTimeZone('UTC'));
 // 2017-10-17 00:17 => 2017-10-16 23:17
 // enregistrement de 2017-10-16 dans la base de données
-{{< /highlight >}}
+```
 
 Dans l'exemple ci-dessus, si en base de données vous ne stockez que la date, vous perdrez l'information vous permettant d'appliquer correctement votre timezone et vous risquez d'avoir des décalages de jour en fonction de l'heure à laquelle votre code est exécuté. Sans heure, il est impossible de changer correctement de timezone.
 
@@ -104,38 +104,38 @@ L'option `model_timezone` vous permet de préciser la timezone dans laquelle les
 
 L'option `view_timezone` vous permet de préciser la timezone dans laquelle l'utilisateur saisit les dates. Il faut donc la renseigner avec la timezone souhaitée, celle de l'utilisateur que vous stockez sur son profil par exemple.
 
-{{< highlight php >}}
+```php
 public function buildForm(FormBuilderInterface $builder, array $options)
 {
   $builder->add('datetime', DateTimeType::class, [
     'view_timezone' => $options['user']->getTimezone()
   ]);
 }
-{{< /highlight >}}
+```
 
 ### L'affichage
 
 Pour l'affichage, vous pouvez configurer la timezone par defaut de Twig. Ainsi toutes les dates passant par le filtre `|date` seront automatiquement converties dans cette timezone.
 
-{{< highlight yaml >}}
+```yaml
 # config.yml
 twig:
     date:
         timezone: Europe/Paris
-{{< /highlight >}}
+```
 
 Si la timezone change en fonction de l'utilisateur, vous devez passer la timezone souhaitée au filtre :
 
-{{< highlight twig >}}
+```twig
 {{ my_date|date('d/m/Y', my_timezone) }}
-{{< /highlight >}}
+```
 
 Vous pouvez également écrire un mécanisme modifiant la timezone de Twig dynamiquement (un *event listener* sur la requête par exemple).
 
-{{< highlight php >}}
+```php
 $twig = new Twig_Environment($loader);
 $twig->getExtension('Twig_Extension_Core')->setTimezone('Europe/Paris');
-{{< /highlight >}}
+```
 
 ## API
 

@@ -27,9 +27,9 @@ Sass est un préprocesseur et une extension CSS3 dont l’objectif est d’appor
 
 *   **Les variables** vont permettre de stocker n'importe quelles informations (couleur, taille, texte, etc.) dans un objet que l'on déclare :
 
-{{< highlight css >}}
+```css
 $macouleur = #FFF ;
-{{< /highlight >}}
+```
 
 
 *   **Les règles imbriquées et les sélecteurs avancés** vont rendre les règles CSS plus compréhensibles selon le principe DRY ( Don’t Repeat Yourself ) avec l’imbrication des règles filles ou des actions contextualisées.
@@ -38,7 +38,7 @@ $macouleur = #FFF ;
 
 HTML
 
-{{< highlight html >}}
+```html
 <nav>
     <ul>
         <li>
@@ -52,11 +52,11 @@ HTML
         </li>
     </ul>
 </nav>
-{{< /highlight >}}
+```
 
 SCSS
 
-{{< highlight scss >}}
+```scss
 nav {
     border-bottom : 1px solid #CCC;
     ul {
@@ -75,23 +75,23 @@ nav {
          &:hover, &:active { background-color : #333;}
    }
 }
-{{< /highlight >}}
+```
 
 *   **Les mixins** vont permettre de réutiliser des morceaux de codes à n’importe quel endroit de vos feuilles de styles. Il est possible de leur donner des arguments afin de créer des fonctions complexes en utilisant qu’une seule ligne de code, très utile pour le cross browsers et les multiples variantes des propriétés CSS3.
 
 Un mixin se definit grace à la directive `@mixin`.
 
-{{< highlight scss >}}
+```scss
 
 @mixin mon-mixin{ 
  //instructions
 }
-{{< /highlight >}}
+```
 
 
 Et s’appelle avec la directive `@include`
 
-{{< highlight scss >}}
+```scss
 @mixin mon-mixin{ 
      -moz-border-radius: 10px;
      -webkit-border-radius: 10px;
@@ -101,11 +101,11 @@ Et s’appelle avec la directive `@include`
 .btn {
     @include mon-mixin.
 }
-{{< /highlight >}}
+```
 
 Exemple avec arguments
 
-{{< highlight scss >}}
+```scss
 @mixin belles-bordures-arrondies($arrondi) {
     -moz-border-radius: $arrondi;
     -webkit-border-radius: $arrondi;
@@ -114,12 +114,12 @@ Exemple avec arguments
 .btn {
     @include belles-bordures-arrondies(10px);
 }
-{{< /highlight >}}
+```
 
 
 *   **L'héritage** avec la directive `@extend` va permettre à un sélecteur d'hériter de tous les styles d'un autre sans dupliquer les propriétés CSS.
 
-{{< highlight scss >}}
+```scss
 .error {
     border: 1px solid $grey-border;
     background: $grey;
@@ -129,7 +129,7 @@ Exemple avec arguments
     @extend .error; 
     border-width: 3px;
 }
-{{< /highlight >}}
+```
 
 #### Deux extensions de fichiers possibles
 
@@ -137,7 +137,7 @@ Sass possède deux syntaxes :
 
 *   Le SCSS est la plus répandue car elle reprend la syntaxe CSS. Son extension de fichiers est .scss
 
-{{< highlight scss >}}
+```scss
 /* SCSS */
  section {
      margin-bottom: 1em;
@@ -145,29 +145,29 @@ Sass possède deux syntaxes :
          color: red;
      }
  }
-{{< /highlight >}}
+```
 
 
 *   Le SASS s'écrit sans élément de ponctuation. L’indentation marque l’imbrication des propriétés, des classes, etc ...; et le saut de ligne remplace le point-virgule.
 
-{{< highlight scss >}}
+```scss
 
 /* SASS */
  section
     margin-bottom: 1em
     .entry
         color: red
-{{< /highlight >}}
+```
 
 
 #### Installation
 
 SASS nécessite le langage `RUBY` pour fonctionner. Assurez vous d’avoir un environnement Ruby à jour ou installer le. Puis installer SASS, avec la commande
 
-{{< highlight bash >}}
+```bash
 
 gem install sass
-{{< /highlight >}}
+```
 
 
 #### Utilisation
@@ -186,10 +186,10 @@ Plusieurs façons :
 
 Compass est un framework pour Sass qui fournit une collection d'outils et de mixins déjà programmés. Il suffit d'importer Compass dans vos fichiers .scss pour y avoir accès et les utiliser dans vos projets :
 
-{{< highlight scss >}}
+```scss
 
 @import "compass";
-{{< /highlight >}}
+```
 
 
 #### Fonctionnalités
@@ -200,34 +200,34 @@ Si les nouveautés apportées par CSS3 sont assez fantastiques et prometteuses, 
 
 **Box-shadow**
 
-{{< highlight scss >}}
+```scss
 
 @include box-shadow(#000 1px 1px 4px);
-{{< /highlight >}}
+```
 
 
 **Border-radius**
 
-{{< highlight scss >}}
+```scss
 
 @include border-radius(5px);
-{{< /highlight >}}
+```
 
 
 **Background gradients**
 
-{{< highlight scss >}}
+```scss
 
 @include background-image(linear-gradient(white, #aaaaaa));
-{{< /highlight >}}
+```
 
 
 **Transitions**
 
-{{< highlight scss >}}
+```scss
 
 @include transition(all 0.2s linear);
-{{< /highlight >}}
+```
 
 
 **Sprites**
@@ -238,19 +238,19 @@ Dans un premier temps, il suffit de regrouper toutes les images dans un dossier.
 
 Dans un second temps, dans votre fichier scss, il faut importer les images puis générer le sprite.
 
-{{< highlight scss >}}
+```scss
 
 @import "<strong>icons</strong>/*.png";
 @include all-<strong>icons</strong>-sprites;
 $arrow-sprite-dimensions: true; /*Calculer automatiquement les dimensions */
-{{< /highlight >}}
+```
 
 
 Le sprite généré va inclure autant de classes qu'il y a d'images. Chaque élément aura comme classe "nomdudossierparent-nomdufichier". Dans l'exemple, la première icone aura ainsi comme classe "icons-home"
 
 CSS généré :
 
-{{< highlight scss >}}
+```scss
 
 .icons-home, .icons-about, .icons-contact, .icons-logout {
   background: url('../img/icon-s8021aff651.png') no-repeat;
@@ -258,25 +258,25 @@ CSS généré :
 .icons-home {
   background-position: 0 -72px;
  }
-{{< /highlight >}}
+```
 
 
 #### Installation
 
 Un projet Compass se crée en ligne de commande. Si le terminal vous rebute un peu, plusieurs outils tels quel Compass.app, CodeKit ou Scout ont une interface dédiée pour vous aider dans cette tâche.
 
-{{< highlight scss >}}
+```scss
 
 gem install compass
-{{< /highlight >}}
+```
 
 
 #### Création et compilation d'un projet
 
-{{< highlight scss >}}
+```scss
 
 compass create nomduprojet
-{{< /highlight >}}
+```
 
 Vous disposez alors d'un exemple possible d'arborescence de projet avec un ensemble de répertoires et fichiers.
 

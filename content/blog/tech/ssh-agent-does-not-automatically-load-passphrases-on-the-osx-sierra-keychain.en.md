@@ -47,10 +47,10 @@ ssh-add -A
 
 A permanent (and probably the "cleanest") workaround to this behavior consists in using the new SSH option `AddKeysToAgent` option in your `.ssh/config` file as shown below
 
-{{< highlight shell >}}
+```shell
 Host *
   AddKeysToAgent yes
-{{< /highlight >}}
+```
 
 N.B: This option does not add keys previously saved into the keychain __to the agent on boot;__ it adds keys to the agent **on use**.
 In other words, the keys are not added to the agent until you actually use them.
@@ -63,10 +63,10 @@ __You will have to re-enter your passphrase the first time you are using it afte
 
 For CLI users a partial solution is to add this to your dot files (`.zshrc`, `.bashrc`, `.bash_profile` ...).
 
-{{< highlight shell >}}
+```shell
 ssh-add -K ~/.ssh/my_private_key &> /dev/null
 ssh-add -A &> /dev/null
-{{< /highlight >}}
+```
 
 
 __This will only be effective when using terminal.__
@@ -75,7 +75,7 @@ __This will only be effective when using terminal.__
 
 The last solution is to call command `ssh-add -A` on every startup of macOS.
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -91,4 +91,4 @@ The last solution is to call command `ssh-add -A` on every startup of macOS.
     <true/>
 </dict>
 </plist>
-{{< /highlight >}}
+```

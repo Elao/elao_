@@ -29,7 +29,7 @@ La plupart des projets chez [élao](https://www.elao.com) ont [une architecture 
 Par exemple, nous avons dans notre classe métier «Produit» des méthodes nous permettant de créer directement des produits de différent _types_ comme des formules. Ces méthodes permettent d'abstraire certaines informations inutiles à faire figurer à chaque endroit du code et simplifient la création de ces produits.
 Nos _commands_ utilisent donc déjà ces méthodes pour créer des formules, et sont très flexibles pour chaque besoin différent.
 
-{{< highlight php >}}
+```php
 <?php
 
 class Product
@@ -52,13 +52,13 @@ class Product
       );
   }
 }
-{{< /highlight >}}
+```
 
 Nous avons initié cette réflexion après avoir rencontré les problèmes cités ci-dessus, mais également en explorant le code source, et notamment les tests fonctionnels du projet [Sylius](https://github.com/Sylius/Sylius/tree/master/features).
 
 Mais, arrêtons de tourner autour du pot. À quoi ressemble un test fonctionnel avec une orientation métier ?
 
-{{< highlight gherkin >}}
+```gherkin
 Feature: Manage the plans
   As an Admin, in order to manage my plans, I need to be able to create and update the plans
 
@@ -75,7 +75,7 @@ Feature: Manage the plans
     And I submit the form
     And I should be on this page "/fr/product"
     And the plan "Early bird" must cost 20
-{{< /highlight >}}
+```
 
 Nous n'avons plus à _loader_ des fixtures et à les maintenir, maintenant, nous pouvons utiliser un même _step_ (`And there is a plan called "AAAA" with a price of DDD`) pour plusieurs de nos tests fonctionnels, ce qui nous permet de créer des formules dans divers contextes.
 
@@ -85,7 +85,7 @@ Nous n'avons plus à _loader_ des fixtures et à les maintenir, maintenant, nous
 
 Tout d'abord, nous avons besoin d'installer Behat en _dev-dependencies_ de notre composer.json
 
-{{< highlight json >}}
+```json
 "require-dev": {
     "behat/behat": "^3.1",
     "behat/mink-browserkit-driver": "^1.3",
@@ -93,15 +93,15 @@ Tout d'abord, nous avons besoin d'installer Behat en _dev-dependencies_ de notre
     "behat/symfony2-extension": "^2.1",
     "webmozart/assert": "^1.1"
 }
-{{< /highlight >}}
+```
 
 Le point d'entrée de Behat est le fichier `behat.yml.dist` à la racine de notre projet. Afin de déporter l'ensemble de la logique de notre code Behat dans un seul et même endroit, notre fichier `behat.yml.dist` ne sert qu'à importer notre fichier de configuration:
 
 
-{{< highlight yaml >}}
+```yaml
 imports:
   - features/Behat/Resources/config/default.yml
-{{< /highlight >}}
+```
 
 L'architecture des repertoires de nos tests fonctionnels est la suivante:
 
@@ -122,7 +122,7 @@ Nous allons donc créer un _Manager_ qui nous permettra d'appeler nos méthodes 
 
 > features/Behat/Manager/ProductManager.php
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Manager;
@@ -149,7 +149,7 @@ class ProductManager
         $this->productRepository->add($plan);
     }
 }
-{{< /highlight >}}
+```
 
 Ce _Manager_ utilise la méthode _static_ que nous avons vue précédemment qui est également utilisée dans notre code métier. Nous aurions pu utiliser notre _Command Handler_ métier qui permet de créer une formule et donc ne pas à avoir à dupliquer certaines parties de notre code, mais pour des raisons de simplifications, nous partirons sur cet exemple.
 
@@ -157,7 +157,7 @@ Nous allons ensuite créer un service qui va nous servir de _proxy_, sous la for
 
 > features/Behat/Proxy/ProductProxy.php
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Proxy;
@@ -177,13 +177,13 @@ class ProductProxy
          return $this->productManager;
     }
 }
-{{< /highlight >}}
+```
 
 Et enfin, nous allons créer un _ProductContext_ afin de créer notre _step_ Gherkin
 
 > features/Behat/Context/ProductProxy.php
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Context;
@@ -211,13 +211,13 @@ class ProductContext implements Context
         ;
     }
 }
-{{< /highlight >}}
+```
 
 Ensuite, nous n'avons plus qu'à modifier notre fichier `default.yml` afin de lui spécifier l'utilisation du nouveau contexte que nous venons de créer.
 
 > features/Behat/Resources/config/default.yml
 
-{{< highlight yaml >}}
+```yaml
 default:
     extensions:
         Behat\Symfony2Extension:
@@ -234,7 +234,7 @@ default:
             contexts:
                 - App\Tests\Behat\Context\ProductContext:
                     - '@App\Tests\Behat\Proxy\ProductProxy'
-{{< /highlight >}}
+```
 
 Nous sommes donc maintenant en mesure d'utiliser notre _step_ dans nos features Behat et de créer des formules facilement, sans utiliser de fixtures. Ce qui permet l'évolution de nos tests avec notre code métier.
 
@@ -243,7 +243,7 @@ Nous allons réaliser le _step_ précédent `And the plan "Early bird" must cost
 
 Nous modifions alors notre _Manager_ afin d'y ajouter la fonction de récupération d'une formule via le _repository_. Notre _ProductContext_ accède donc à la formule et peut tester que son prix a bien été modifié comme nous le souhaitons.
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Manager;
@@ -259,9 +259,9 @@ class ProductManager
         ;
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Context;
@@ -286,7 +286,7 @@ class ProductContext implements Context
         Assert::same($plan->getPrice(), $price);
     }
 }
-{{< /highlight >}}
+```
 
 Et c'est tout, pas besoin de _parser_ le _DOM_ pour retrouver la valeur du prix de la formule et vérifier si il est égale à A ou B. Cela rend les _steps_ Behat beaucoup plus lisibles.
 
@@ -302,7 +302,7 @@ Ce _Storage_ contient simplement un tableau indexé par type de donnée stockée
 
 > features/Behat/Storage/Storage.php
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Storage;
@@ -322,11 +322,11 @@ class Storage
         return $this->storage[$name] ?? null;
     }
 }
-{{< /highlight >}}
+```
 
 On peut ensuite injecter ce _storage_ à notre _ProductProxy_ et on pourra piocher dans les données pour les modifier.
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Proxy;
@@ -351,11 +351,11 @@ class ProductProxy
          return $this->storage;
     }
 }
-{{< /highlight >}}
+```
 
 En repartant de notre test fonctionnel en Gherkin, nous pouvons donc avoir les _steps_ suivantes:
 
-{{< highlight gherkin >}}
+```gherkin
   Scenario: I can not buy a plan with an availability date passed
     Given the database is purged
     And there is a plan named "Premium" with a price of 100
@@ -365,11 +365,11 @@ En repartant de notre test fonctionnel en Gherkin, nous pouvons donc avoir les _
     When I go to this page "/fr/buy"
     Then I should see "Premium"
     And I can not buy "Premium"
-{{< /highlight >}}
+```
 
 Ce qui se retranscrirait dans le code du _ProductManager_ et du _ProductContext_ par:
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Manager;
@@ -408,9 +408,9 @@ class ProductManager
         $this->productRepository->set($plan);
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Tests\Behat\Context;
@@ -454,7 +454,7 @@ class ProductContext implements Context
         ;
     }
 }
-{{< /highlight >}}
+```
 
 À la lecture de notre test fonctionnel, nous comprenons tout de suite dans quel contexte nous nous trouvons, avec une formule non disponible, et nous testons qu'elle n'est plus achetable par un utilisateur.
 
@@ -463,14 +463,14 @@ class ProductContext implements Context
 Afin de rendre nos tests fonctionnels encore plus compréhensibles, nous avons de futurs axes d'amélioration comme pouvoir naviguer sur le site sans faire mention des urls qui n'ont pas toujours de notion métier.
 Ce qui permettrait la rédaction de _steps_ tel que:
 
-{{< highlight diff >}}
+```diff
 - When I go to this page "/fr/buy"
 + When I go to the products list
-{{< /highlight >}}
+```
 
 De même, la modification d'une entité peut se passer hors des _steps_ prédéfinis par Mink qui remplissent un formulaire, en utilisant un _DataNode_ contextualisé par exemple.
 
-{{< highlight diff >}}
+```diff
 - And I fill in the following:
 -   | reference | Early bird |
 -   | price     | 20         |
@@ -478,7 +478,7 @@ De même, la modification d'une entité peut se passer hors des _steps_ prédéf
 + And I modify this plan with
 +   | price     | 20         |
 +   | reference | Early bird |
-{{< /highlight >}}
+```
 
 Mais tout ceci demande de coder tous les contextes, les _steps_, les _proxies_, ce qui est très verbeux. Cependant la valeur ajoutée d'avoir une bonne couverture de tests fonctionnels est importante et le temps passé à coder les tests est du temps gagné en débogage.
 

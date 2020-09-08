@@ -22,7 +22,7 @@ When you need to translate the labels of the different forms in your app, you us
 
 **Here's what it looks like with a simple User form:**
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace Elao\UserBundle\Form\Type;
@@ -73,9 +73,9 @@ class RegisterType extends AbstractType
         return 'register';
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace Elao\UserBundle\Form\Type;
@@ -105,9 +105,9 @@ class GroupType extends AbstractType
         return 'group';
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight yaml >}}
+```yaml
 register:
     labels:
         firstname:      Your firstname
@@ -120,7 +120,7 @@ register:
         group:
             label:      Your Team
             name:       Name
-{{< /highlight >}}
+```
 
 
 We have some simple fields, a repeated password and an embedded Group form.
@@ -133,7 +133,7 @@ We have some simple fields, a repeated password and an embedded Group form.
 
 ## Remove all label translation keys from the forms:
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -159,9 +159,9 @@ class RegisterType extends AbstractType
 
     // ...
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -180,14 +180,14 @@ class GroupType extends AbstractType
 
     // ...
 }
-{{< /highlight >}}
+```
 
 
 **Better right ?**
 
 ## Construct the label translation keys automatically with form theming:
 
-{{< highlight twig >}}
+```twig
 
 {% extends "form_div_layout.html.twig" %}
 
@@ -224,7 +224,7 @@ class GroupType extends AbstractType
 
 {% endspaceless %}
 {% endmacro %}
-{{< /highlight >}}
+```
 
 
 What we do here:

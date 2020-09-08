@@ -23,7 +23,7 @@ Nginx fonctionne sur la base de blocs de configuration appelés « Contexte de c
 
 L'organisation des contextes est primordiale car leur positionnement dans la configuration n'est pas sans importance et s'apparente à un arbre.
 
-{{< highlight bash >}}
+```bash
 
 Global (ou Main)
 ├── Events
@@ -40,13 +40,13 @@ Global (ou Main)
     ├── geo
     ├── types
     └── charset_map
-{{< /highlight >}}
+```
 
 > **N.B.:** Le contexte **global** est particulier car non-défini explicitement. Toute directive spécifiée hors d'un contexte est considérée comme appartenant au contexte **global**.
 
 ### Exemple
 
-{{< highlight nginx >}}
+```nginx
 user www-data;
 worker_processes 1;
 
@@ -56,7 +56,7 @@ pid /var/run/nginx.pid;
 events {
     worker_connections 1024;
 }
-{{< /highlight >}}
+```
 
 
 # Les directives de type chaîne
@@ -71,7 +71,7 @@ A l'inverse les contextes pouvant être imbriqués les uns dans les autres, Ngin
 
 ## Exemple:
 
-{{< highlight nginx >}}
+```nginx
 server {
     root /srv/app/symfony/web;
 
@@ -87,7 +87,7 @@ server {
         # à partir de /srv/app/symfony/web
     }
 }
-{{< /highlight >}}
+```
 
 # Les directives de type tableau
 
@@ -101,19 +101,19 @@ La redéfinition d'une directive array-type à l'intérieur d'un même bloc, par
 
 ### Exemple
 
-{{< highlight nginx >}}
+```nginx
 fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 fastcgi_param HTTPS off;
-{{< /highlight >}}
+```
 
 
 Dans ce cas la directive `fastcgi_param` contient les données suivantes:
 
-{{< highlight yaml >}}
+```yaml
 fastcgi_param:
     - SCRIPT_FILENAME: $document_root$fastcgi_script_name
     - HTTPS: off
-{{< /highlight >}}
+```
 
 
 ## A l'intérieur de contextes différents
@@ -123,7 +123,7 @@ Ce comportement justifie souvent d'avoir une même configuration qui se répête
 
 ### Exemple
 
-{{< highlight nginx >}}
+```nginx
     location ~ ^/(frontend)\.php(/|$) {
         include conf.d/php_fpm_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
@@ -135,7 +135,7 @@ Ce comportement justifie souvent d'avoir une même configuration qui se répête
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_param HTTPS off;
     }
-{{< /highlight >}}
+```
 
 > ATTENTION: certaines directives sont propres à un contexte et ne peuvent donc pas être utilisées hors de celui-ci.
 
@@ -148,7 +148,7 @@ La directive `rewrite` est un bon exemple car elle peut être utilisée à la fo
 
 ### Exemple
 
-{{< highlight nginx >}}
+```nginx
 
 server {
     rewrite ^/elao-lyon(.*) /lyon$1 permanent; # Cette règle est toujours évaluée.
@@ -158,4 +158,4 @@ server {
                               # PEUT être évaluée en complément de la précédente.
     }
 }
-{{< /highlight >}}
+```

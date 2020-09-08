@@ -48,7 +48,7 @@ composer require symfony/webpack-encore-bundle
 
 Dans `webpack.config.js`, activez le *vue loader* avec `enableVueLoader()` :
 
-{{< highlight javascript >}}
+```javascript
 var Encore = require('@symfony/webpack-encore');
 
 Encore
@@ -62,7 +62,7 @@ Encore
 ;
 
 module.exports = webpackConfig;
-{{< /highlight >}}
+```
 
 **Webpack Encore** est maintenant paré pour compiler vos composants **Vue.js**.
 
@@ -80,7 +80,7 @@ Vous pouvez intégrer directement du templating **Vue.js** dans votre template *
 
 Néanmoins, il faut savoir que Twig et Vue.js utilisent les mêmes délimiteurs pour afficher les variables. S'il est possible de [modifier les délimiteurs utilisés par Twig](https://twig.symfony.com/doc/3.x/recipes.html#customizing-the-syntax) comme de modifier ceux par Vue.js. Je recommende plutôt d'encadrer votre template Vue.js par les balises `{% verbatim %}{% endverbatim %}` pour indiquer à Twig de ne pas interpréter le code à l'interieur.
 
-{{< highlight html >}}
+```html
 <h1>{{ 'Ce texte est rendu par Twig' }}</h1>
 
 {% verbatim %}
@@ -88,17 +88,17 @@ Néanmoins, il faut savoir que Twig et Vue.js utilisent les mêmes délimiteurs 
     {{ 'Ce texte est rendu par Vue.js' }}
   </div>
 {% endverbatim %}
-{{< /highlight >}}
+```
 
-{{< highlight javascript >}}
+```javascript
 import Vue from 'vue'
 
 new Vue({ el: '#app' })
-{{< /highlight >}}
+```
 
 Si vous utilisez des composants, vous pouvez soit utiliser des templates inlines :
 
-{{< highlight html >}}
+```html
 <div id="app">
   <mon-composant inline-template>
     <div>
@@ -106,9 +106,9 @@ Si vous utilisez des composants, vous pouvez soit utiliser des templates inlines
     </div>
   </mon-composant>
 </div>
-{{< /highlight >}}
+```
 
-{{< highlight javascript >}}
+```javascript
 const MonComposant = {
   data() {
     return { foobar: 'Foobar' }
@@ -121,11 +121,11 @@ new Vue({
     MonComposant
   },
 })
-{{< /highlight >}}
+```
 
 Soit utiliser des `x-templates` :
 
-{{< highlight html >}}
+```html
 <div id="app">
   <mon-composant></mon-composant>
 </div>
@@ -135,9 +135,9 @@ Soit utiliser des `x-templates` :
     {% verbatim %}{{ foobar }}{% endverbatim %}
   </div>
 </template>
-{{< /highlight >}}
+```
 
-{{< highlight javascript >}}
+```javascript
 const MonComposant = {
   template: '#mon-composant-template',
   data() {
@@ -151,11 +151,11 @@ new Vue({
     MonComposant
   },
 })
-{{< /highlight >}}
+```
 
 Ces deux méthodes sont interessantes si vous avez besoin de rendre des morceaux de Twig dans votre template Vue. C'est quelque chose qui peut être très utile pour lier un composant Vue à un formulaire Symfony par exemple.
 
-{{< highlight html >}}
+```html
 <div id="app">
 {{ form_start(form) }}
 
@@ -170,9 +170,9 @@ Ces deux méthodes sont interessantes si vous avez besoin de rendre des morceaux
 
 {{ form_end(form) }}
 </div>
-{{< /highlight >}}
+```
 
-{{< highlight javascript >}}
+```javascript
 const MyCounter = {
   props: ['content', 'max'],
   data() {
@@ -196,11 +196,11 @@ new Vue({
     MyCounter
   },
 })
-{{< /highlight >}}
+```
 
 Ou pour injecter des variables Twig dans les props :
 
-{{< highlight html >}}
+```html
 <div id="app">
   <my-component :name="'{{ app.user.username }}'" inline-template>
     <div>
@@ -218,11 +218,11 @@ Ou pour injecter des variables Twig dans les props :
     </ul>
   </my-api-component>
 </div>
-{{< /highlight >}}
+```
 
 Vous pouvez également injecter des données complexes en *JSON* :
 
-{{< highlight html >}}
+```html
 <div id="app">
   <my-component :initial-data="{{ data|json_encode }}">
     <ul>
@@ -234,31 +234,31 @@ Vous pouvez également injecter des données complexes en *JSON* :
     </ul>
   </my-component>
 </div>
-{{< /highlight >}}
+```
 
 Très pratique pour ajouter une petite touche de **Vue.js** par endroit, je ne recommande pas ces méthodes pour créer une application complexe.
 
 <div style="border-left: 5px solid #00a6ff;padding: 20px;margin: 20px 0;">
   Si vous souhaitez tout de même changer les délimiteurs, sur une instance de Vue :
 
-  {{< highlight javascript >}}
+  ```javascript
   new Vue({
     delimiters: ['${', '}']
   })
-  {{< /highlight >}}
+  ```
 
   ou globalement pour toutes les instances de Vue :
 
-  {{< highlight javascript >}}
+  ```javascript
   Vue.config.delimiters = ['${', '}'];
-  {{< /highlight >}}
+  ```
 
   Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
 
-  {{< highlight html >}}
+  ```html
   <h1>{{ variable_twig }}</h1>
   <p>${ variable_vue }<p>
-  {{< /highlight >}}
+  ```
 </div>
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
@@ -271,7 +271,7 @@ Une autre façon d'écrire vos composants est d'utiliser les [composants monofic
 
 `assets/components/Greeting.vue` :
 
-{{< highlight html >}}
+```html
 <template>
     <h2>{{ greeting }}</h2>
 </template>
@@ -285,11 +285,11 @@ Une autre façon d'écrire vos composants est d'utiliser les [composants monofic
     }
   };
 </script>
-{{< /highlight >}}
+```
 
 `assets/components/App.vue` :
 
-{{< highlight html >}}
+```html
 <template>
   <Greeting></Greeting>
 </template>
@@ -303,20 +303,20 @@ Une autre façon d'écrire vos composants est d'utiliser les [composants monofic
     },
   }
 </script>
-{{< /highlight >}}
+```
 
 `assets/app.js`
 
-{{< highlight javascript >}}
+```javascript
 import Vue from 'vue'
 import App from './components/App.vue'
 
 new Vue({ render: h => h(App) }).$mount('#app')
-{{< /highlight >}}
+```
 
 `template/app.html.twig` :
 
-{{< highlight html >}}
+```html
 <html>
   <head>
     {{ encore_entry_link_tags('app') }}
@@ -327,7 +327,7 @@ new Vue({ render: h => h(App) }).$mount('#app')
     {{ encore_entry_script_tags('cooptation') }}
   </body>
 </html>
-{{< /highlight >}}
+```
 
 Vous ne pourrez plus utiliser **Twig** dans vos templates **Vue**, mais vous aurez l'avantage d'avoir des composants complètement autonomes et réutilisables facilement. Je recommande cette méthode si vous devez inclure une importante partie réactive dans votre application Symfony.
 
@@ -339,7 +339,7 @@ Voici donc une petite astuce pour créer des props à partir des attributs de l'
 
 `assets/components/App.vue` :
 
-{{< highlight html >}}
+```html
 <template>
   <div>
     Hello {{ name }}
@@ -351,10 +351,10 @@ Voici donc une petite astuce pour créer des props à partir des attributs de l'
     props: ['name']
   }
 </script>
-{{< /highlight >}}
+```
 
 `assets/app.js`
-{{< highlight javascript >}}
+```javascript
 import Vue from 'vue'
 import App from './components/App.vue'
 
@@ -367,13 +367,13 @@ new Vue({
     })
   },
 }).$mount('#app')
-{{< /highlight >}}
+```
 
 `template/app.html.twig` :
 
-{{< highlight html >}}
+```html
 <div id="app" data-name="{{ app.user.username }}"></div>
-{{< /highlight >}}
+```
 
 ## Conclusion
 

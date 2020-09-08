@@ -32,9 +32,9 @@ En effet, au moment de la rédaction de ce billet, la version courante du plugin
 
 Installer le plugin de base (sfImageTransformPlugin) en ligne de commande en prenant soin de préciser la version souhaitée :
 
-{{< highlight bash >}}
+```bash
 ./symfony plugin:install --release=1.3.1 sfImageTransformPlugin
-{{< /highlight >}}
+```
 
 
 Pour le plugin "Extra", il faut l'installer manuellement. Pour cela :
@@ -49,10 +49,9 @@ Pour le plugin "Extra", il faut l'installer manuellement. Pour cela :
 
 Enfin, un article consacré à Symfony qui ne contient pas une instruction **symfony cc** n'est pas digne de ce nom ! Donc :
 
-{{< highlight bash >}}
+```bash
 ./symfony cc
-{{< /highlight >}}
-
+```
 
 > A ce stade des opérations, nous n'activons pas encore le plugin "Extra". La configuration du plugin se fera plus tard car pour l'heure, nous allons tester le plugin sfImageTransformPlugin. Nous nous soucierons du plugin "Extra" plus tard.
 
@@ -62,25 +61,25 @@ Nous allons nous assurer dans un premier temps que le plugin de base (sfImageTra
 
 Si elle n'existe pas encore, on crée l'application "Frontend" ...
 
-```
+```bash
 ./symfony generate:app frontend
 ```
 
 ... puis le module :
 
-```
+```bash
 ./symfony generate:module frontend image
 ```
 
 Pour notre démonstration, j'ai choisi cette image, partant du principe qu'un prosélytisme de bon aloi ne saurait nuire à la carrière d'un développeur :
 
-{{< figure src="/images/posts/2010/zf.jpg" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="Installation et premier pas avec le plugin sfImageTransformExtraPlugin">}}
+![Installation et premier pas avec le plugin sfImageTransformExtraPlugin](/images/posts/2010/zf.jpg)
 
 J'ai nommé cette image zf.jpg et je l'ai placée dans le répertoire web/images de notre projet.
 
 Nous allons dans un premier temps écrire le code de notre template pour y insérer le formulaire par lequel nous allons appeler la transformation de notre image :
 
-{{< highlight html >}}
+```html
 # apps/frontend/modules/image/templates/indexSuccess.php
 <h1>Image Transform & Extra plugin</h1>
 
@@ -90,16 +89,16 @@ Nous allons dans un premier temps écrire le code de notre template pour y insé
         <input type="submit" value="Transform image !"></input>
     </form>
 </div>
-{{< /highlight >}}
+```
 
 
-Comme nous venons juste de créer le module, pensez à supprimer le code par défaut de la méthode executeIndex du fichier apps/frontend/modules/actions/actions.class.php`. Affichons à présent la page dans notre navigateur : http://mon_hote_virtuel/frontend_dev.php/image. Le résultat est admirable ... je ne m'en lasse pas ...
+Comme nous venons juste de créer le module, pensez à supprimer le code par défaut de la méthode executeIndex du fichier `apps/frontend/modules/actions/actions.class.php`. Affichons à présent la page dans notre navigateur : http://mon_hote_virtuel/frontend_dev.php/image. Le résultat est admirable ... je ne m'en lasse pas ...
 
-{{< figure src="/images/posts/2010/sfImageTransformExtrePlugin.png" title="Installation et premier pas avec le plugin sfImageTransformExtraPlugin" alt="indexSuccess.php  Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin">}}
+![indexSuccess.php Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin](/images/posts/2010/sfImageTransformExtrePlugin.png)
 
 Cela étant, notre but étant d'utiliser dans un premier temps le plugin sfImageTransformPlugin, nous allons écrire une méthode sans prétention qui va appliquer un traitement à cette image lorsque nous soumettons le formulaire. Pour cela, nous allons modifier le fichier actions.class.php afin de mettre à jour la méthode executeIndex :
 
-{{< highlight php >}}
+```php
 <?php
 # apps/frontend/modules/image/actions/actions.class.php
 class imageActions extends sfActions
@@ -124,7 +123,7 @@ class imageActions extends sfActions
     }
   }
 }
-{{< /highlight >}}
+```
 
 
 Rien de très compliqué, à la soumission du formulaire, nous créons une miniature de notre image d'origine (dimension 100 px) et nous l'affichons dans le navigateur. Cette méthode n'est pas d'un grand intérêt, je l'avoue ; elle a pour seule but de s'assurer que nous avons correctement configuré le plugin de base. A présent, attaquons-nous au plat de résistance :
@@ -133,7 +132,7 @@ Rien de très compliqué, à la soumission du formulaire, nous créons une minia
 
 Nous allons commencer par activer le plugin :
 
-{{< highlight php >}}
+```php
 <?php
 // ...
 class ProjectConfiguration extends sfProjectConfiguration
@@ -145,24 +144,24 @@ class ProjectConfiguration extends sfProjectConfiguration
     $this->enablePlugins('sfImageTransformExtraPlugin');
   }
 }
-{{< /highlight >}}
+```
 
 
 Le point d'entrée du plugin "Extra" se trouve dans un module que nous allons activer :
 
-{{< highlight yaml >}}
+```yaml
 
 # apps/frontend/config/settings.yml
 all:
   .settings:
     # ....
    enabled_modules:        [ sfImageTransformator ]
-{{< /highlight >}}
+```
 
 
 Pour faire fonctionner le plugin, il est nécessaire d'activer la détection automatique du tyme MIME. Cela se fait dans le fichier app.yml de l'application :
 
-{{< highlight yaml >}}
+```yaml
 # apps/frontend/config/app.yml
 all:
   sfImageTransformPlugin:
@@ -170,7 +169,7 @@ all:
       auto_detect:  true
       library:      gd_mime_type #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)
    font_dir:       %SF_PLUGINS_DIR%/sfImageTransformExtraPlugin/data/example-resources/fonts
-{{< /highlight >}}
+```
 
 
 Les routes par défaut du plugin "Extra" sont configurées avec l'URL relative /thumbnails/.. pour générer et/ou afficher les miniatures générées. Pour qu'elles fonctionnent, nous devons créer un répertoire "thumbnails" dans le répertoire "web" et nous assurer que le serveur possède les droits en écriture sur ce répertoire. Dans la console, en nous plaçant sous la racine du projet, nous entrons donc les commandes suivantes :
@@ -188,16 +187,16 @@ Comme cela fait un long moment que nous n'avons pas tapé un **symfony cc**, il 
 
 Bon, nous avons passé un bon moment à préparer le terrain mais force est de constater que nous n'avons pas été très productifs jusqu'à présent. Il est donc temps d'exploiter ce plugin ! Mais avant toute chose, quelques remarques utiles. Je vous invite dans un premier temps à recharger la page où nous affichons le formulaire et à consulter les informations qui figurent dans la Web Debug Toolbar. Sélectionnez-y l'onglet "config" et affichez le contenu du sous-menu "Settings". Vous noterez tout en bas de la liste, après les constantes app_* et sf_*, la présence d'une constante nommée "thumbnailing_formats" :
 
-{{< highlight yaml >}}
+```yaml
 thumbnailing_formats:
   default: { quality: 25, mime_type: image/gif, transformations: ... }
   original: { quality: 100, mime_type: image/jpg, transformations: {  } }
-{{< /highlight >}}
+```
 
 
 Mais que sont ces "thumbnailing_formats" et où sont-ils définis exactement ? Pour répondre à la seconde question, ces formats sont définis dans le fichier plugins/sfImageTransformExtraPlugin/thumbnailing.yml et voici son contenu :
 
-{{< highlight yaml >}}
+```yaml
 
 # plugins/sfImageTransformExtraPlugin/thumbnailing.yml
 all:
@@ -218,7 +217,7 @@ all:
         quality:                    100
         mime_type:                  image/jpg
         transformations:            []
-{{< /highlight >}}
+```
 
 
 Comme je le disais en préambule, le plugin “Extra” va nous permettre d’appliquer plusieurs traitements successifs sur une image, sans que nous ayons à écrire du code PHP, grâce à des fichiers de configuration. Et c’est dans ce fichier qui occupe une place centrale dans le fonctionnement et l’exploitation du plugin que l’on détermine cette configuration. Noter au passage que la documentation du plugin y fait référence de manière extrêmement maladroite et ambigüe. Ainsi, en analysant ce fichier, nous constatons que le format “default” est prévu pour générer un format de sortie de type “image/gif” ; il crée (create) une nouvelle image de 250 * 200 pixels, lui ajoute le texte ‘404‘, puis le texte ‘Image could not be found‘. Ces transformations successives sont décrites dans l’entrée “transformations” du fichier yaml.
@@ -231,7 +230,7 @@ cp plugins/sfImageTransformExtraPlugin/thumbnailing.yml apps/frontend/config/thu
 
 Modifions le fichier que nous venons de copier afin d’appliquer à une image originale des transformations plus visibles. Pour cela, remplaçons le contenu du fichier :
 
-{{< highlight yaml >}}
+```yaml
 
 # apps/frontend/config/thumbnailing.yml
 all:
@@ -246,7 +245,7 @@ all:
           - { adapter: GD, transformation: crop, param: { left: 90, top: 72, width: 120, height: 120 }}
           - { adapter: GD, transformation: rotate, param: { angle: 20, background: "#FFFFFF" }}
           - { adapter: GD, transformation: crop, param: { left: 17, top: 17, width: 120, height: 120 }}
-{{< /highlight >}}
+```
 
 
 Si nous rechargeons notre page web et que nous consultons les “settings” de la Web Debug Toolbar, nous constatons que notre nouveau format est disponible. Nous allons donc appliquer ces transformations à notre image originale. Le plugin offre la possibilité de modifier une image située dans le répertoire public de l’application, une image distante disponible via le protocole http, ou bien une image située en base de données. Dans le cadre de notre exemple, nous allons transformer l’image de l’exemple précédent, que nous aurons placée dans le répertoire “web/uploads”.
@@ -261,7 +260,7 @@ cp web/images/zf.jpg web/uploads/zf.jpg
 
 Nous devons à présent déclarer une route pointant sur le module sfImageTransformator, chargé de transformer les images. Comme nous souhaitons modifier une image du répertoire public de l’application, nous précisons dans l’entrée “options” que l’image source est de type “File” :
 
-{{< highlight yaml >}}
+```yaml
 
 # apps/frontend/config/routing.yml
 sf_image_file:
@@ -275,16 +274,16 @@ sf_image_file:
     sf_method: [ get ]
   options:
     image_source: File
-{{< /highlight >}}
+```
 
 
 Et pour finir, nous allons ajouter dans la template indexSuccess.php le lien permettant d’invoquer la transformation de notre image et d’afficher le résultat.
 
-{{< highlight php >}}
+```php
 # apps/frontend/modules/image/templates/indexSuccess.php
 // ..... affichage du formulaire -- aucun changement
 <?php echo image_tag(url_for("sf_image_file", array("format" => "mon_format_1", "filepath" => "zf.jpg")));
-{{< /highlight >}}
+```
 
 
 > Le filepath est relatif au répertoire “uploads”. Ainsi, si l’image se trouvait par exemple dans le répertoire web/uploads/mes_fichiers, nous aurions indiqué le filepath de cette manière :

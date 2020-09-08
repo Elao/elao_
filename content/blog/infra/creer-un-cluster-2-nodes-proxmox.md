@@ -153,7 +153,7 @@ Une fois cela fait nous allons modifier l'entrée **cman** pour y ajouter les in
 
 Votre fichier doit donc à présent ressembler à ceci:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0"?>
 <cluster name="elao" config_version="5">
 
@@ -165,7 +165,7 @@ Votre fichier doit donc à présent ressembler à ceci:
   <clusternode name="bismuth" votes="1" nodeid="2"/></clusternodes>
 
 </cluster>
-{{< /highlight >}}
+```
 
 Redémarrer à présent votre cluster avec un  ```/etc/init.d/pve-cluster restart``` vous devriez avoir à présent comme résultat à ```pvecm status```
 

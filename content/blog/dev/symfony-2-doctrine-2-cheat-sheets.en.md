@@ -27,11 +27,11 @@ As nobody is perfect, keep them in sight and enjoy your development time with Sy
   <tr>
     <td align="center">
       <a href="/images/posts/2011/doctrine2-sheet-recto.pdf">
-        {{< figure src="/images/posts/2011/doctrine2-sheet-recto-preview.jpg" title="Doctrine 2 Cheat Sheet - Recto" alt="Doctrine 2 Cheat Sheet" width="300" height="424">}}
+        ![Doctrine 2 Cheat Sheet" width="300" height="424](/images/posts/2011/doctrine2-sheet-recto-preview.jpg)
     </a>
     </td>
     <td align="center">
-      <a href="/images/posts/2011/doctrine2-sheet-verso.pdf">{{< figure src="/images/posts/2011/doctrine2-sheet-verso-preview.jpg" title="Doctrine 2 Cheat Sheet - Verso" alt="Doctrine 2 Cheat Sheet" width="300" height="424">}}</a>
+      <a href="/images/posts/2011/doctrine2-sheet-verso.pdf">![Doctrine 2 Cheat Sheet" width="300" height="424](/images/posts/2011/doctrine2-sheet-verso-preview.jpg)</a>
     </td>
   </tr>
 </table>

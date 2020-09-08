@@ -30,5 +30,5 @@ Once I realized that my monitoring system was the problem (especially carbon), I
 **I won ~60%** on my server response time (both monitored by google analytics and newrelic).
 
 <div style="text-align:center;">
-{{< figure src="/en/images/posts/2012/memory_usage.png" title="Feedback : Monitor your Symfony2 application via Stats.d and Graphite" alt="response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite">}}
+![response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite](/en/images/posts/2012/memory_usage.png)
 </div>

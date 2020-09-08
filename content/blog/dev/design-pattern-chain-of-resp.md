@@ -75,7 +75,7 @@ Votre importeur doit donc supporter ces trois formats et pour cela, il va s'appu
 
 Voici à quoi ressemble un _extractor_ avant que nous n'appliquions le pattern _CoR_ :
 
-{{< highlight php >}}
+```php
     <?php
     class ProductXmlExtractor implements ProductExtractorInterface {
 
@@ -96,7 +96,7 @@ Voici à quoi ressemble un _extractor_ avant que nous n'appliquions le pattern _
             return $products;
         }
     }
-{{< /highlight >}}
+```
 
 Rien de compliqué, cette classe reçoit un fichier en entrée et en extrait une liste de produits.
 
@@ -114,7 +114,7 @@ Voici à présent ce que nous allons faire :
 
 Nous allons faire évoluer notre classe concrète `ProductXmlExtractor` : au lieu d'implémenter l'interface `ProductExtractorInterface`, elle va en effet étendre une classe abstraite chargée notamment de construire la chaîne des _handlers_ et d'exposer les méthodes métiers attendues par ses héritiers. Voici le code de cette classe abstraite `AbstractProductExtractor`, abondamment commentée pour expliquer le principe :
 
-{{< highlight php >}}
+```php
 <?php
 /**
  * This is the base class for any concrete handler.
@@ -213,7 +213,7 @@ abstract class AbstractProductExtractor
     abstract protected function parseContent($content): array;
 }
 
-{{< /highlight >}}
+```
 
 En résumé, la construction de la chaîne consiste à introduire dans chaque _extractor_ concret une propriété __`$nextHandler`__ de type `AbstractProductExtractor`.
 
@@ -227,7 +227,7 @@ La classe abstraite `AbstractProductExtractor` se chargeant de gérer la chaîne
 
 Voici les modifications à apporter à notre extracteur `ProductXmlExtractor` :
 
-{{< highlight php >}}
+```php
     <?php
     class ProductXmlExtractor extends AbstractProductExtractor {
         /**
@@ -246,7 +246,7 @@ Voici les modifications à apporter à notre extracteur `ProductXmlExtractor` :
             return $products;
         }
     }
-{{< /highlight >}}
+```
 
 Désormais, la classe `ProductXmlExtractor` étend la classe abstraite `AbstractProductExtractor` et implémente donc les deux méthodes attendues (`support` et `parseContent`).
 
@@ -254,7 +254,7 @@ Désormais, la classe `ProductXmlExtractor` étend la classe abstraite `Abstract
 
 Enfin (et ce n'est pas trop tôt, me direz-vous), voici le code qui permet d'instancier et consommer notre chaîne de _handlers_ :
 
-{{< highlight php >}}
+```php
     <?php
     // Firstly, build the chain of handlers:
     $handlerChain = new ProductCsvExtractor();
@@ -280,5 +280,5 @@ Enfin (et ce n'est pas trop tôt, me direz-vous), voici le code qui permet d'ins
     } catch (\InvalidArgumentException $e) {
         echo "Exception (as expected !) : {$e->getMessage()}\n";
     }
-{{< /highlight >}}
+```
 

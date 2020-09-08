@@ -24,10 +24,10 @@ Le web design responsive amène une solution pratique et économique à cette si
 * Préparer l'entête du modèle XHTML
 * Pour commencer, il faut fixer le viewport en insérant la balise meta suivante :
 
-{{< highlight html >}}
+```html
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0;" />
-{{< /highlight >}}
+```
 
 
 ### Les 3 grands principes
@@ -36,7 +36,7 @@ Le web design responsive amène une solution pratique et économique à cette si
 
 Adieu grille fixe en pixels, bonjour grille flexible ou fluide en pourcentage. Chaque élément de notre maquette doit ainsi s’exprimer en terme relatifs et proportionnels à son contenant d’où la formule :  `cible / contexte = résultat`.
 
-{{< figure src="/images/posts/2012/contruire-grid.jpg" title="Elao - Responsible Web Design" alt="contruire grid Responsive Web Design">}}
+![contruire grid Responsive Web Design](/images/posts/2012/contruire-grid.jpg)
 
 **Gagnez du temps**
 
@@ -48,23 +48,23 @@ Le framework <a title="Foundation " href="http://foundation.zurb.com/" target="_
 
 Pour empêcher les images de dépasser la largeur de leur contenant et les forcer à s’ajuster :
 
-{{< highlight scss >}}
+```scss
 max-width: 100%;/* pour limiter la taille à la largeur du parent */
 height: auto;/* pour conserver le ratio */
 width: auto;/* pour corriger un bug sur IE8  */
 box-sizing: border-box;/*pour limiter à 100% de la largeur, même si des paddings ou bordures sont appliquées à l’élément */
-{{< /highlight >}}
+```
 
 
 En ce qui concerne les background-images :
 
-{{< highlight scss >}}
+```scss
 
 -moz-background-size: 100%;
 -webkit-background-size: 100%;
 -o-background-size: 100%;
 background-size: 100%;
-{{< /highlight >}}
+```
 
 
 **Et parce que des fois ce n’est pas si simple ...**
@@ -81,13 +81,13 @@ Les medias queries vont permettre cela en modifiant l’apparence d’une page H
 
 Elles n’ont pas d’impact sur le code HTML. Ainsi, on reste dépendant de l’ordre dans lequel a été écrit le HTML. Impossible donc d’intervertir une boîte avec une autre ou d’associer dans un même ensemble deux informations séparées dans le code, à moins de tricher en CSS, mais cette technique est quasi incontrôlable sur tous les appareils… D’où la philosophie de design «Mobile First» conseillant de commencer la conception par le design mobile.
 
-{{< highlight scss >}}
+```scss
 
 /* Exemple d’utilisation */
 @media only screen and (max-width: 767px) { {   /* Smartphones */ }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {   /* Tablettes */ }
 @media only screen and (min-width: 1024px) {   /* Desktops */ }
-{{< /highlight >}}
+```
 
 
 **Pour notre ami IE  : **

@@ -27,31 +27,31 @@ Cet article est traduit de <a href="http://www.macshadows.com/kb/index.php?title
 
 Saisissez les commandes suivantes dans votre terminal pour générer le fichier de configuration et la clé secrète :
 
-{{< highlight bash >}}
+```bash
 > sudo -s
 rndc-confgen -b 256 > /etc/rndc.conf
 head -n5 /etc/rndc.conf | tail -n4 > /etc/rndc.key
-{{< /highlight >}}
+```
 
 
 Attention : La commande r**ndc-confgen** est extrêmement pratique pour générer les fichiers de configurations **rndc**, mais il se peut qu'il initialise un port par défaut différent de celui de **named**.
 Lancez les commandes suivantes, et assurez-vous que les ports sont identiques dans les deux fichiers de configurations /**etc/named.conf** et **/etc/rndc.conf**, si ce n'est pas le cas, éditez les fichiers et uniformisez les.
 
-{{< highlight bash >}}
+```bash
 
 cat /etc/named.conf | grep 'inet'
 cat /etc/rndc.conf | grep 'default-port'
-{{< /highlight >}}
+```
 
 
 ### Etape 2 : Activer BIND
 
 Nous devons maintenant configurer **Bind** pour qu'il se lance au démarrage. Pour se faire, on utilisera les commandes suivantes:
 
-{{< highlight bash >}}
+```bash
 launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
 echo "launchctl start org.isc.named" >> /etc/launchd.conf
-{{< /highlight >}}
+```
 
 
 Puis nous n'avons plus qu'à démarrer le démon.
@@ -82,7 +82,7 @@ vi /var/named/local.zone
 
 Passez en mode insertion (touche i) et copiez/collez la configuration suivante en remplaçant user.domain.com par votre adresse email (prenez garde à remplacer le "@" par un "." et suffixer également d'un ".").
 
-{{< highlight bash >}}
+```bash
 
 $TTL    86400
 $ORIGIN local.
@@ -98,7 +98,7 @@ $ORIGIN local.
 
 * IN A 127.0.0.1
 
-{{< /highlight >}}
+```
 
 
 Assurez vous que la dernière ligne est vide, sauvegardez et quittez (ESC puis ":wq" et ENTER to sauvegarder et quitter sous **VI**).
@@ -111,14 +111,14 @@ vi /etc/named.conf
 
 Puis nous ajoutons les lignes suivantes à la suite des configurations de zones présentes:
 
-{{< highlight bash >}}
+```bash
 
 zone "local" IN {
         type master;
         file "local.zone";
         allow-update { none; };
 };
-{{< /highlight >}}
+```
 
 
 Sauvegardez et le tour est joué !

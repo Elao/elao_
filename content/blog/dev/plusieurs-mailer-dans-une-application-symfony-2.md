@@ -38,7 +38,7 @@ La solution que je vous propose pour palier à cela est de créer 2 mailer utili
 
 Pour cela rien de plus simple, créez plusieurs mailers dans votre app/config/config.yml :
 
-{{< highlight yaml >}}
+```yaml
 # Swiftmailer Configuration
 swiftmailer:
     default_mailer: default
@@ -50,12 +50,12 @@ swiftmailer:
             password:  mypassword
         notifier:
             transport: mail
-{{< /highlight >}}
+```
 
 
 Vous remarquerez que cela aura pour effet de créer 2 services d'envoi d'e-mails que vous pourrez ensuite utiliser dans votre application :
 
-{{< highlight bash >}}
+```bash
 
 jlopes:/Volumes/Elao/workspace/myProject ./app/console container:debug | grep mailer
 mailer                                            n/a       alias for swiftmailer.mailer.default
@@ -67,7 +67,7 @@ swiftmailer.mailer.notifier                       container Swift_Mailer
 swiftmailer.mailer.notifier.plugin.messagelogger  container Swift_Plugins_MessageLogger
 swiftmailer.mailer.notifier.transport             container Swift_Transport_MailTransport
 ...
-{{< /highlight >}}
+```
 
 
 Cette astuce reste très simple mais je n'ai rien trouvé dans la documentation officielle de Symfony qui l'expliquait clairement. Elle peut se révéler très utile lorsque vous utilisez le bundle **[ErrorNotifierBundle][2]**

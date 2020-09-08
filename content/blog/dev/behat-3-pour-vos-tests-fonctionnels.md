@@ -25,7 +25,7 @@ Behat nous permet de réaliser les tests fonctionnels des applications que nous 
 ### Installation: ###
 Avant toute chose, nous devons ajouter Behat à notre projet.
 
-{{< highlight json >}}
+```json
 {
     "require-dev": {
         "behat/behat": "3.0.*",
@@ -36,7 +36,7 @@ Avant toute chose, nous devons ajouter Behat à notre projet.
         "behat/mink-goutte-driver": "~1.1"
     }
 }
-{{< /highlight >}}
+```
 
 Cela fait déjà un sacré paquet de dépendances. On ne va pas toutes les détailler mais pour faire simple, elles permettent d'ajouter des _steps_ par défaut qui nous serons bien utiles.
 
@@ -48,7 +48,7 @@ Ce qui va intialiser le répertoire `/features` et créer le répertoire `/boots
 ### Configuration: ###
 Ensuite, il faut créer un fichier `behat.yml.dist` à la racine de notre projet dans lequel on va placer la configuration de Behat.
 
-{{< highlight yaml >}}
+```yaml
 default:
     extensions:
         Behat\Symfony2Extension: ~
@@ -59,7 +59,7 @@ default:
                     symfony2: ~
                 javascript:
                     selenium2: ~
-{{< /highlight >}}
+```
 
 Afin de faire fonctionner Behat avec Symfony2, nous utilisons Behat\Symfony2Extension.
 
@@ -68,7 +68,7 @@ Concernant la configuration de MinkExtension, nous utilisons les élements par d
 ***We're all set***
 
 On peut maintenant commencer à écrire nos features et à tester notre application. Créer donc un fichier `hello.feature` dans le répertoire `/feature`
-{{< highlight gherkin >}}
+```gherkin
 Feature: Hello world
   I need to be able to see hello world
 
@@ -79,7 +79,7 @@ Feature: Hello world
   Scenario: I can't see hello world
     When I go to "/random"
     Then I should not see "Hello World!"
-{{< /highlight >}}
+```
 
 Il nous est possible d'écrire _de base_ toutes ces étapes grâce à l'ajout de Mink. Si ces étapes ne marchent pas, vérifier bien que votre FeatureContext étend bien MinkContext.
 
@@ -89,7 +89,7 @@ Il nous est possible d'écrire _de base_ toutes ces étapes grâce à l'ajout de
 ### Extra: ###
 Nous utilisons également d'autres extensions pour nous faciliter la vie, notamment Alice pour écrire nos fixtures en yaml et une extension Behat pour appeler nos fixtures au moment où elles sont nécessaires.
 
-{{< highlight json >}}
+```json
 {
     require: {
         "nelmio/alice": "2.1.*",
@@ -99,17 +99,17 @@ Nous utilisons également d'autres extensions pour nous faciliter la vie, notamm
         "theofidry/alice-bundle-extension": "v1.0.0"
     }
 }
-{{< /highlight >}}
+```
 
 Pour la configuration dans `behat.yml.dist`, on ajoute la configuration suivante pour utiliser l'extension Alice
-{{< highlight yaml >}}
+```yaml
     suites:
         default:
             contexts:
                 - Fidry\AliceBundleExtension\Context\Doctrine\AliceORMContext:
                     basePath: %paths.base%/features/fixtures
                 - FeatureContext: ~
-{{< /highlight >}}
+```
 
 Il est intéressant de noter également que l'on peut utiliser `fzaninotto/faker` avec l'extension Alice, ce qui permet de faire facilement et rapidement des fixtures de tests pour nos projets.
 
@@ -117,7 +117,7 @@ Nous avons pris l'habitude, lors de nos tests, de réinitialiser la base de donn
 
 Ce qui nous permet de faire des features comme cela:
 
-{{< highlight Gherkin >}}
+```gherkin
 Feature: Go to the second page
   I need to be able to go to the second page
 
@@ -132,10 +132,10 @@ Feature: Go to the second page
     Then I follow "Go to next page"
     And I should be on "/page2"
     And I should see "data"
-{{< /highlight >}}
+```
 
 Il faut donc modifier le FeatureContext pour qu'il comporte une implémentation du KernelAwareContext pour pouvoir jouer nos _steps_ :
-{{< highlight php >}}
+```php
 <?php
 
 use Behat\Behat\Context\SnippetAcceptingContext;
@@ -168,7 +168,7 @@ class FeatureContext extends MinkContext implements KernelAwareContext, SnippetA
         $this->kernel = $kernel;
     }
 }
-{{< /highlight >}}
+```
 
 
 ### En conclusion ###

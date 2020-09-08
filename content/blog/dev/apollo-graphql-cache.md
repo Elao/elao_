@@ -31,26 +31,26 @@ L'utilisation basique du client est très simple et dans la veine de ce qu'on re
 
 L'installation :
 
-{{< highlight bash >}}
+```bash
 # installing the preset package
 yarn add apollo-boost graphql-tag graphql
 # installing each piece independently
 yarn add apollo-client apollo-cache-inmemory apollo-link-http graphql-tag graphql
-{{< /highlight >}}
+```
 
 On instancie le client avec l'url du endpoint GraphQL :
 
-{{< highlight javascript >}}
+```javascript
 import ApolloClient from 'apollo-boost'
 
 const client = new ApolloClient({
   uri: 'https://graphql.example.com'
 })
-{{< /highlight >}}
+```
 
 Et c'est parti, on peut lancer nos requêtes GraphQL :
 
-{{< highlight javascript >}}
+```javascript
 import gql from 'graphql-tag'
 
 client
@@ -67,7 +67,7 @@ client
   })
   .then(data => console.log(data))
   .catch(error => console.error(error))
-{{< /highlight >}}
+```
 
 A partir de ce moment, cette requête est cachée en mémoire. Vous pouvez la relancer autant de fois que vous le souhaitez, aucun appel réseau ne sera fait.
 
@@ -75,7 +75,7 @@ A partir de ce moment, cette requête est cachée en mémoire. Vous pouvez la re
 
 Le client permet évidemment d'exécuter des mutations (modifications de données) :
 
-{{< highlight javascript >}}
+```javascript
 import gql from 'graphql-tag';
 
 client
@@ -94,7 +94,7 @@ client
   })
   .then(data => console.log(data))
   .catch(error => console.error(error))
-{{< /highlight >}}
+```
 
 Grâce à cette mutation, nos données on été mise à jour sur notre serveur. Par contre par la même notre cache n'est plus à jour, et comme dit précédement, Apollo ne refera pas l'appel à l'API pour la requête.
 
@@ -110,7 +110,7 @@ Pour cela nous allons utiliser les méthodes `readQuery` et `writeQuery`. Attent
 
 Pour cela nous allons utliser la méthode `readQuery` pour lire les données attaché à la requête :
 
-{{< highlight javascript >}}
+```javascript
 const TODOS = gql`
   query Todos {
     todos {
@@ -124,20 +124,20 @@ const TODOS = gql`
 const data = client.readQuery({
   query: TODOS
 })
-{{< /highlight >}}
+```
 
 Nous pouvons modifier ces données puis utiliser la méthode `writeQuery` pour les insérer dans le cache :
 
-{{< highlight javascript >}}
+```javascript
 client.writeQuery({
   query: TODOS
   data
 })
-{{< /highlight >}}
+```
 
 En combinant l'utilisation de ce deux methodes dans l'`update` de la mutation, nous pouvons ainsi mettre à jour notre cache :
 
-{{< highlight javascript >}}
+```javascript
 const ADD_TODO = gql`
   mutation AddTodo($text: String!) {
     addTodo(text: $text) {
@@ -167,7 +167,7 @@ client
       })
     }
   })
-{{< /highlight >}}
+```
 
 ## Fragments
 
@@ -175,7 +175,7 @@ De la même manière qu'avec `readQuery` et `writeQuery`, il est posible de mett
 
 Par exemple avec les requêtes suivantes :
 
-{{< highlight graphql >}}
+```graphql
 fragment TodoFields on Todo {
   id
   text
@@ -193,11 +193,11 @@ query Todos {
     ...TodoFields
   }
 }
-{{< /highlight >}}
+```
 
 Le même fragment est utilisé dans deux requêtes, il est possible de mettre à jour le fragment dans les deux requêtes en une fois à condition qu'il contienne l'identifiant d'un objet.
 
-{{< highlight javascript >}}
+```javascript
 const TodoFields = gql`
   fragment TodoFields on Todo {
     id
@@ -210,15 +210,15 @@ const todo = client.readFragment({
   id: 3, // identifiant de l'objet
   fragment: TodoFields
 })
-{{< /highlight >}}
+```
 
-{{< highlight javascript >}}
+```javascript
 client.writeFragment({
   id: 3, // identifiant de l'objet
   fragment: TodoFields
   data: { ...todo, completed: true }
 })
-{{< /highlight >}}
+```
 
 ## Mise à jour automatique
 
@@ -226,25 +226,25 @@ Heuresement, il n'est pas toujours obligatoire de mettre manuellement à jour le
 
 Lorsque vous réalisez une requête recupérant des données contenant un `id`, par exemple :
 
-{{< highlight graphql >}}
+```graphql
 query {
   Foobar(id: 3) {
     id
     name
   }
 }
-{{< /highlight >}}
+```
 
 Puis une mutation utilisante le même `id` :
 
-{{< highlight graphql >}}
+```graphql
 mutation {
   UpdateFoobar(id: 3, name: "Updated name") {
     id
     name
   }
 }
-{{< /highlight >}}
+```
 
 Apollo a compris que vous intevennez sur le même objet (même type et meme id). Le cache sera alors automatiquement mis à jour et la propriété `name` sera modifiée partout. Attention par contre, le cache sera mis à jour avec les données renvoyées par la mutation, il faut donc bien faire attention à selectionner les données que l'on souhaite modifier dans le cache.
 
@@ -254,7 +254,7 @@ Je vous parlais du côté *state manager* du cache, et bien c'est ce qui se pass
 
 Si vos objets n'ont pas de propriété `id` mais une propriété `uuid` par exemple, il est possible de configurer le cache pour l'utiliser et conserver la mise à jour automatique :
 
-{{< highlight javascript >}}
+```javascript
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 import { ApolloClient } from 'apollo-client';
@@ -266,11 +266,11 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({ link, cache });
-{{< /highlight >}}
+```
 
 Il est également possible de définir cet identifiant selon le type de l'objet :
 
-{{< highlight javascript >}}
+```javascript
 import { InMemoryCache, defaultDataIdFromObject } from 'apollo-cache-inmemory';
 
 const cache = new InMemoryCache({
@@ -282,7 +282,7 @@ const cache = new InMemoryCache({
     return defaultDataIdFromObject(ojbect)
   }
 });
-{{< /highlight >}}
+```
 
 D'autre configuration sont possibles, je vous encourage à lire [la documentation à ce sujet](https://www.apollographql.com/docs/react/caching/cache-configuration/) pour les découvrir.
 
@@ -292,7 +292,7 @@ Dans certains cas, les données que vous requêtez peuvent déjà être présent
 
 Par exemple pour la liste :
 
-{{< highlight graphql >}}
+```graphql
 query Todos {
   todos {
     id
@@ -300,11 +300,11 @@ query Todos {
     completed
   }
 }
-{{< /highlight >}}
+```
 
 Puis pour les détails :
 
-{{< highlight graphql >}}
+```graphql
 query Todo($id: ID!) {
   todo(id: $id) {
     id
@@ -312,13 +312,13 @@ query Todo($id: ID!) {
     completed
   }
 }
-{{< /highlight >}}
+```
 
 Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le case de la première car les données ne sont pas stockés avec la même clé de cache.
 
 La redirection de cache permettra d'aller chercher ces données dans le cache d'une autre requête.
 
-{{< highlight javascript >}}
+```javascript
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const cache = new InMemoryCache({
@@ -329,7 +329,7 @@ const cache = new InMemoryCache({
     },
   },
 })
-{{< /highlight >}}
+```
 
 ## Gérer la suppression de données
 
@@ -337,7 +337,7 @@ Si la mise à jour automatique est simple (un objet identifié par son ID peut �
 
 Comme pour l'ajout, vous allez devoir mettre à jour manuellement le cache de chaque requête retournant la donnée supprimée.
 
-{{< highlight javascript >}}
+```javascript
 const REMOVE_TODO = gql`
   mutation RemoveTodo($id: ID!) {
     RemoveTodo(id: $id) {
@@ -371,7 +371,7 @@ client
 
     }
   })
-{{< /highlight >}}
+```
 
 Avouons le, cela peut vite devenir long et fastidieux si une resource apparait dans beaucoup de requêtes différentes. Il existe actuellement [une *feature request*](https://github.com/apollographql/apollo-feature-requests/issues/4) pour palier à cela et proposer un moyen de supprimer simplement un objet dans l'ensemble du cache. La fonctionnalité semble prévue dans la *roadmap* de version 3.0 du client.
 
@@ -379,7 +379,7 @@ En attendant, plusieurs *workaround* temporaires sont proposés dans ce même po
 
 Dans le fichier instanciant votre cache, ajoutez la fonction suivante :
 
-{{< highlight javascript >}}
+```javascript
 /**
  * Recursively delete all properties matching with the given predicate function in the given value
  * @param {Object} value
@@ -425,18 +425,18 @@ InMemoryCache.prototype.delete = function(entry) {
   // delete entry from cache (and trigger UI refresh)
   this.data.delete(id)
 }
-{{< /highlight >}}
+```
 
 Ainsi, pour vous simplement appeler la méthode `cache.delete(entry)` dans l'`update` de votre mutation pour supprimer totalement l'objet du cache.
 
-{{< highlight javascript >}}
+```javascript
 client
   .mutate({
     mutation: REMOVE_TODO,
     variables: { id: todo.id },
     update: cache => cache.delete(todo),
   })
-{{< /highlight >}}
+```
 
 ## Fetch policy
 
@@ -456,7 +456,7 @@ Heureusement il est possible de [persister le cache](https://github.com/apollogr
 
 Par exemple avec du *local storage* :
 
-{{< highlight javascript >}}
+```javascript
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { persistCache } from 'apollo-cache-persist';
 
@@ -470,7 +470,7 @@ persistCache({
 const client = new ApolloClient({
   cache,
 })
-{{< /highlight >}}
+```
 
 ## Conclusion
 

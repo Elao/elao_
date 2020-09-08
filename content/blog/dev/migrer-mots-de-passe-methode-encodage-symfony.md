@@ -59,7 +59,7 @@ Ce service doit implémenter la classe [`SimpleFormAuthenticatorInterface`](http
 
 Dans l'exemple suivant, la méthode d'encodage "legacy" est la suivante : `HASH = MD5(PASSWORD + SALT)`. Si l'application à refondre est déjà une application Symfony utilisant un encodeur de Symfony, vous pouvez le reproduire dans votre refonte et l'injecter dans votre service.
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace App\Infrastructure;
@@ -122,22 +122,22 @@ class MigrationAuthenticator implements SimpleFormAuthenticatorInterface
         return new UsernamePasswordToken($username, $password, $providerKey);
     }
 }
-{{< /highlight >}}
+```
 
 Déclarez votre service :
 
-{{< highlight yaml >}}
+```yaml
 services:
     app.migration_authenticator:
         class: App\Infrastructure\MigrationAuthenticator
         arguments:
             - '@security.user_password_encoder.generic'
             - '@doctrine.orm.entity_manager'
-{{< /highlight >}}
+```
 
 Puis renseignez le dans la configuration de votre firewall :
 
-{{< highlight yaml >}}
+```yaml
 security:
     encoders:
         App\Domain\Model\User:
@@ -151,7 +151,7 @@ security:
                 authenticator: app.migration_authenticator
                 login_path: login
                 check_path: login_check
-{{< /highlight >}}
+```
 
 Si vous avez besoin de créer un `Authentication Provider` ou d'utiliser le composant `Guard`, reportez vous à la documentation de Symfony pour savoir où integrer le processus d'authentification, mais le principe reste le même.
 

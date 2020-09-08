@@ -54,12 +54,12 @@ Cela serait pas mal d'avoir la même chose dans notre application, n'est-ce pas 
 
 Symfony dispose des commandes *Console* mais cette interface est dédiée aux développeurs.
 L'idée est d'avoir un moteur de recherche dans le navigateur qui suggère des résultats qui irait piocher dans notre
-application sans forcément écrire complètement une API côté Backend. Et pourquoi pas exploiter le *Routing* de Symfony ? 
+application sans forcément écrire complètement une API côté Backend. Et pourquoi pas exploiter le *Routing* de Symfony ?
 Nous allons voir pas à pas comment nous avons exploité le *routing* pour répondre à notre besoin.
 
 ### Récupérer toutes les *routes* de l'application
 
-{{< highlight php >}}
+```php
 <?php
 
 use Symfony\Component\Routing\Route;
@@ -83,7 +83,7 @@ class AllRoutesResolver
         return $this->router->getRouteCollection()->all();
     }
 }
-{{< /highlight >}}
+```
 
 Cela donne comme résultat :
 
@@ -93,7 +93,7 @@ Cela donne comme résultat :
 
 Filtrons maintenant les *routes* en ne gardant que les *routes* avec méthode GET :
 
-{{< highlight php >}}
+```php
 <?php
     // ...
     return array_filter(
@@ -102,7 +102,7 @@ Filtrons maintenant les *routes* en ne gardant que les *routes* avec méthode GE
             return \in_array('GET', $route->getMethods(), true);
         }
     );
-{{< /highlight >}}
+```
 
 ### Humaniser les noms de route
 
@@ -121,11 +121,11 @@ majuscule.
 
 Pour générer l'url à partir d'une route, rien de plus trivial :
 
-{{< highlight php >}}
+```php
 <?php
     /** @var RouterInterface $router */
     return $router->generate($routeName, $parameters);
-{{< /highlight >}}
+```
 
 On créé des vues contenant le libellé et l'url et cela donne quelque chose comme ça :
 
@@ -169,7 +169,7 @@ les noms des utilisateurs.
 
 Considérons que l'on a cette *route* :
 
-{{< highlight yaml >}}
+```yaml
 # Routing
 admin_user_update:
     path: /user/update/{user}
@@ -177,43 +177,43 @@ admin_user_update:
     requirements:
         user: \d+
     defaults: { _controller: AdminBundle:User:update }
-{{< /highlight >}}
+```
 
 Notre *requirement* apparaît être un paramètre `user` qui est de type numérique.
 
 Dans notre *controller*, le paramètre `user` va être transformé grâce au `ParamConverter` de Symfony en objet
 de la classe `User` :
 
-{{< highlight php >}}
+```php
 <?php
 
 class UserController extends Controller
 {
     public function updateAction(Request $request, User $user): Response
     {
-{{< /highlight >}}
+```
 
 Ou ici avec un *invokable controller* (*Action Domain Response pattern*) :
 
-{{< highlight php >}}
+```php
 <?php
 
 class UpdateUserAction
 {
     public function __invoke(Request $request, User $user): Response
     {
-{{< /highlight >}}
+```
 
 Par le code, récupérer les *requirements* d'une *route* :
 
-{{< highlight php >}}
+```php
 <?php
 
 public function getRequirements(Route $route): array
 {
     return array_keys($route->getRequirements());
 }
-{{< /highlight >}}
+```
 
 On sait ainsi par le code que la *route* `admin_user_update` a pour *requirement*, un paramètre `user`.
 
@@ -226,23 +226,23 @@ On a besoin de deux choses :
 
 * 1. Récupérer le *controller* d'une *route* :
 
-{{< highlight php >}}
+```php
 <?php
 /** @var Symfony\Component\HttpKernel\Controller\ControllerResolverInterface $controllerResolver */
 $controllerResolver->getController($request);
-{{< /highlight >}}
+```
 
 * 2. Récupérer les metadata des arguments d'un *controller* :
 
-{{< highlight php >}}
+```php
 <?php
 /** @var Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactoryInterface $argumentMetadataFactory */
 $argumentMetadataFactory->createArgumentMetadata($controller);
-{{< /highlight >}}
+```
 
 Et le code complet donne cela :
 
-{{< highlight php >}}
+```php
 <?php
 
 use Symfony\Component\HttpFoundation\Request;
@@ -276,7 +276,7 @@ class RouteArgumentsMetadata
         return $this->argumentMetadataFactory->createArgumentMetadata($controller);
     }
 }
-{{< /highlight >}}
+```
 
 Résultat :
 
@@ -315,7 +315,7 @@ Ici on sait que notre classe `User` est une classe d'entité *Doctrine*. Nous al
 Doctrine* pour récupèrer une liste des utilisateurs depuis la base de données. On prend soin de retourner le résultat
 en précisant que la valeur du paramètre `user` prend pour valeur l'id de l'utilisateur :
 
-{{< highlight php >}}
+```php
 <?php
 
 class UserResolver implements ResolverInterface
@@ -340,7 +340,7 @@ class UserResolver implements ResolverInterface
         return $resultViews;
     }
 }
-{{< /highlight >}}
+```
 
 On obtient ce résultat :
 
@@ -384,7 +384,7 @@ L'idée est de tester si une classe donnée est une entité *Doctrine*, c'est à
 un éventuel `EntityManager`. Puis avec cet `EntityManager`, utiliser le bon `Repository`
 et la méthode générique de tout `Repository` *Doctrine*, `findAll()` :
 
-{{< highlight php >}}
+```php
 <?php
 
 use Doctrine\Common\Persistence\ManagerRegistry;
@@ -423,11 +423,11 @@ class DoctrineResolver
         return $resultViews;
     }
 }
-{{< /highlight >}}
+```
 
 Il faut aussi déclarer une méthode `__toString` dans nos classes d'entité *Doctrine* :
 
-{{< highlight php >}}
+```php
 <?php
 
 class User
@@ -436,7 +436,7 @@ class User
     {
         return $this->getDisplayName();
     }
-{{< /highlight >}}
+```
 
 Ceci afin que l'objet soit *transformé* en *string* lorsque le libellé de la *route* est créé ici :
 
@@ -459,7 +459,7 @@ de l'action. Quand on tappe "Produ..." on a par exemple "Produit Créer", "Produ
 
 Prenons les noms des *routes* :
 
-{{< highlight yaml >}}
+```yaml
 # Routing
 admin_user_list:
     path: /user/list/{user}
@@ -469,30 +469,30 @@ admin_user_create:
 
 admin_user_update:
     path: /user/update/{user}
-{{< /highlight >}}
+```
 
 et déposons les dans des fichiers de traductions de Symfony (*translations*) :
 
-{{< highlight yaml >}}
+```yaml
 # humanized_routes.en.yml
 admin_user_list: User List
 admin_user_create: User Create
 admin_user_update: User Update
-{{< /highlight >}}
+```
 
-{{< highlight yaml >}}
+```yaml
 # humanized_routes.fr.yml
 admin_user_list: Utilisateur Lister
 admin_user_create: Utilisateur Créer
 admin_user_update: Utilisateur Modifier
-{{< /highlight >}}
+```
 
 Comment utiliser ces fichiers de traduction ?
 
 Simplement, on regarde si on a la traduction pour un nom de *route* donné dans la *locale* de l'utilisateur de
 l'application :
 
-{{< highlight php >}}
+```php
 <?php
 
 use Symfony\Component\Translation\TranslatorBagInterface;
@@ -511,7 +511,7 @@ class TranslateRouteName
     public function handle(string $routeName, string $locale): string
     {
         $catalogue = $this->translatorBag->getCatalogue($locale);
-        
+
         return $catalogue->has($routeName, 'humanized_routes')
             ? $this->translator->trans($routeName, [], 'humanized_routes', $locale)
             : $this->humanizeRouteName($routeName);
@@ -522,17 +522,17 @@ class TranslateRouteName
         return ucfirst(str_replace(['admin_', '_'], ['', ' '], $routeName));
     }
 }
-{{< /highlight >}}
+```
 
 `TranslatorInterface` et `TranslatorBagInterface` sont implémentés par le même service, donc dans notre déclaration de
 service, on a :
 
-{{< highlight yaml >}}
+```yaml
 App\ActionsBot\Resolver\TranslateRouteName:
     arguments:
         - '@translator'
         - '@translator'
-{{< /highlight >}}
+```
 
 ### Démo
 
@@ -574,7 +574,7 @@ la synthèse vocale à partir d'un texte écrit
 - [Speech Recognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) :
 la reconnaissance automatique de la parole
 
-{{< highlight js >}}
+```js
 var recognition = new SpeechRecognition();
 recognition.continuous = true;
 recognition.lang = 'fr-FR';
@@ -587,7 +587,7 @@ recognition.onresult = function (event) {
 };
 
 recognition.start();
-{{< /highlight >}}
+```
 
 Le support de l'API SpeechRecognition est très limité pour l'instant :
 

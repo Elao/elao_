@@ -131,7 +131,7 @@ La première règle est de bien **découpler votre code métier de votre framewo
 
 Le mapping Doctrine se retrouvera dans des fichiers [`yml`](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/yaml-mapping.html) ou [`xml`](http://docs.doctrine-project.org/projects/doctrine-orm/en/latest/reference/xml-mapping.html). Pour cela, il y a une petite configuration à mettre en place dans votre fichier `config.yml` pour indiquer à Doctrine où se trouvent votre mapping et vos entitées.
 
-{{< highlight yaml >}}
+```yaml
 doctrine:
     orm:
         mappings:
@@ -141,19 +141,19 @@ doctrine:
                 dir: "%kernel.project_dir%/app/config/doctrine/entity"
                 alias: App
                 is_bundle: false
-{{< /highlight >}}
+```
 
 Vous pouvez indiquer le type `xml` si vous préférez ce format.
 
 Pour la validation, nous allons également utiliser des fichiers [`yml` ou `xml`](https://symfony.com/doc/current/validation.html#the-basics-of-validation). A partir de la version 3.3, Symfony permet d'indiquer dans sa configuration les répertoires qui contiennent des fichiers de validation :
 
-{{< highlight yaml >}}
+```yaml
 framework:
     validation:
         mapping:
             paths:
                 - '%kernel.project_dir%/app/config/validation'
-{{< /highlight >}}
+```
 
 mais avant 3.3, il vous faudra les mettre dans un bundle qui prendra place dans `src/Infrastructure`
 
@@ -171,10 +171,10 @@ src
 
 Une fois fait, vous pouvez désactiver le support des annotations de validation dans `config.yml` :
 
-{{< highlight yaml >}}
+```yaml
 framework:
     validation: { enable_annotations: false }
-{{< /highlight >}}
+```
 
 Deuxièmement, **vos contrôleurs ne doivent pas contenir de logique metier** qui doit être restreinte à vos seules couches Domain et Application. Vous devez uniquement faire appel à votre code métier. De fait, vos contrôleurs sont censés être relativement concis.
 

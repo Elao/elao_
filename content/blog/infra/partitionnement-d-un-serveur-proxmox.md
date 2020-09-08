@@ -41,7 +41,7 @@ Pour rappel le backup "à chaud" sous Proxmox fonctionne de la façon suivante:
 Nous préférerons donc définir un partitionnement comme ci-dessous (La machine utilisée disposait d'un espace total de 3 To):
 
 <p class="text-center">
-    {{< figure src="/images/posts/2014/proxmox_partition_elao_1000.png" title="Partitionnement personnalisé" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé">}}
+    ![Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé](/images/posts/2014/proxmox_partition_elao_1000.png)
 </p>
 
 - 500 Mo pour ```/boot``` (Devrait amplement suffire à couvrir les MAJ kernel)

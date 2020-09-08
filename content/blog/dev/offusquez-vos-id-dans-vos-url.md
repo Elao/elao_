@@ -60,12 +60,12 @@ En PHP il existe plusieurs bibliothèques permettant d'offusquer un ID numériqu
 
 J'ai utilisé [**optimus**](https://github.com/jenssegers/optimus) qui transforme votre ID en un autre entier. Néanmoins n'importe quelle autre bibliothèque fonctionnera pour la suite de cette article.
 
-{{< highlight php >}}
+```php
 <?php
 $optimus = new Optimus(1580030173, 59260789, 1163945558);
 $encoded = $optimus->encode(20); // 1535832388
 $original = $optimus->decode(1535832388); // 20
-{{< /highlight >}}
+```
 
 
 <style type="text/css">
@@ -88,7 +88,7 @@ figure {
 
 Tout d'abord créons un service pour offusquer nos IDs.
 
-{{< highlight php >}}
+```php
 <?php
 interface ObfuscatorInterface
 {
@@ -115,11 +115,11 @@ class OptimusObfuscator implements ObfuscatorInterface
         return $this->optimus->decode($id);
     }
 }
-{{< /highlight >}}
+```
 
 Configurons le service avec les générateurs.
 
-{{< highlight yaml >}}
+```yaml
 parameters:
     env(APP_OPTIMUS_PRIME): "1580030173"
     env(APP_OPTIMUS_INVERSE): "59260789"
@@ -136,7 +136,7 @@ services:
         $inverse: '%env(APP_OPTIMUS_INVERSE)%'
         $xor: '%env(APP_OPTIMUS_XOR)%'
         $size: '%env(APP_OPTIMUS_SIZE)%'
-{{< /highlight >}}
+```
 
 > La bibiothèque met à disposition une commande pour générer les paramètres à injecter à *Optimus* : `php vendor/bin/optimus spark`.
 > Plus d'informations sur ces paramètres dans la [documentation](https://github.com/jenssegers/optimus/blob/master/README.md).
@@ -145,7 +145,7 @@ Ensuite, afin de ne pas avoir à encoder nous-mêmes les IDs, créons un decorat
 
 Voici un exemple simple qui **offusque** tous les paramètres `id` des routes.
 
-{{< highlight php >}}
+```php
 <?php
 class ObfuscatorUrlGenerator implements RouterInterface
 {
@@ -197,26 +197,26 @@ class ObfuscatorUrlGenerator implements RouterInterface
         return $this->inner->getRouteCollection();
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight yaml >}}
+```yaml
 services:
     App\Routing\ObfuscatorUrlGenerator:
         decorates: router
         decoration_priority: 1
         arguments:
             $inner: "@App\Routing\ObfuscatorUrlGenerator.inner"
-{{< /highlight >}}
+```
 
 Ainsi, notre router offusque automatiquement nos `id` lors de la génération d'url :
 
-{{< highlight twig >}}
+```twig
 {{ path('ma_route', { id: 20 }) }} {# /ma/route/1535832388 #}
-{{< /highlight >}}
+```
 
 Et désoffusque nos `id` lors de la correspondance d'url nous permettant d'accéder à notre `id` en clair dans nos controller :
 
-{{< highlight php >}}
+```php
 <?php
 class MaRouteController
 {
@@ -227,7 +227,7 @@ class MaRouteController
         return new Response();
     }
 }
-{{< /highlight >}}
+```
 
 
 ## Rendre notre système configurable
@@ -236,7 +236,7 @@ Notre offuscation fonctionne mais uniquement sur les paramètres `id`. Nous auro
 
 Pour cela ajoutons une méthode `mustBeObfuscated` à notre `Obfuscator` et déportons y la logique utilisée dans le router et dans le resolver :
 
-{{< highlight diff >}}
+```diff
 <?php
 class Obfuscator
 {
@@ -278,13 +278,13 @@ class ObfuscatorUrlGenerator implements RouterInterface
         return $parameters;
     }
 }
-{{< /highlight >}}
+```
 
 Cette méthode peut alors être personnalisée pour savoir si un paramètre doit être offusqué selon son nom et sa route.
 
 Par exemple, en se basant sur un tableau contenant pour chaque route les paramètres à offusquer :
 
-{{< highlight php >}}
+```php
 <?php
 class Obfuscator
 {
@@ -301,6 +301,6 @@ class Obfuscator
             && in_array($argumentName, $this->routes[$routeName]);
     }
 }
-{{< /highlight >}}
+```
 
 Pour aller plus loin, nous pouvons baser ce tableau de routes sur un fichier de configuration, sur des attributs ou des options dans le fichier de routing, sur une convention de nommage ou implémenter toute autre logique dans la méthode `mustBeObfuscated`.

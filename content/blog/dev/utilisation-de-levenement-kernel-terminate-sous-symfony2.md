@@ -21,25 +21,25 @@ A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documenta
 Une question que vous vous posez surement si vous n'avez pas eu l'occasion de travailler avec cet évènement : "Quand est-ce que je peux utiliser l'évènement "kernel.terminate" pour effectuer mes traitements ?" La réponse en image :
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2013/1331.png" title="Utilisation de lévènement kernel.terminate sous Symfony2" alt="Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522">}}
+![Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522](/images/posts/2013/1331.png)
 </div>
 
 Concrètement, vous pouvez quasiment tout faire si vous utilisez cet évènement. A une chose près : votre traitement ne doit pas altérer la réponse. Pourquoi ? Parce qu'il est déclenché après que la réponse soit envoyé au client. Il n'y à donc plus moyen d'y rajouter des informations ou d'en altérer son contenu dans le but de l'envoyer au client. (Attention kernel.terminate a été rajouté en Symfony2.1, donc si vous êtes encore en 2.0, vous pouvez oublier).
 
-{{< highlight php >}}
+```php
 <?php
 // ...
 
 $response = $kernel->handle($request);
 $response->send();
 $kernel->terminate($request, $response);
-{{< /highlight >}}
+```
 
 
 Alors finalement comment le mettre en place ? Voilà un exemple de la classe *GuzzleExceptionListener* qui écoute 2 évènements.
 
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -89,17 +89,17 @@ class GuzzleExceptionListener
         $this->statsManager->addFail();
     }
 }
-{{< /highlight >}}
+```
 
 
-{{< highlight xml >}}
+```xml
 
 <service id="tristanbes_elophant.guzzle_exception_eventlistener" class="%tristanbes_elophant.guzzle.exception.class%">
     <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />;
     <tag name="kernel.event_listener" event="kernel.terminate" method="onKernelTerminate" />;
     <argument type="service" id="tristanbes_elophant.stats.manager" />;
 </service>;
-{{< /highlight >}}
+```
 
 
 ** Explications : **
@@ -116,7 +116,7 @@ Attention cependant à bien débugger votre code, car vous ne verrez aucun outpu
 
 A savoir que vous pouvez aussi ajoutez un listener directement depuis le dispatcher de Symfony2. Voilà un example avec l'utilisation d'une closure :
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -163,14 +163,14 @@ class GuzzleExceptionListener
         }
     }
 }
-{{< /highlight >}}
+```
 
 
-{{< highlight xml >}}
+```xml
 
 <service id="tristanbes_elophant.guzzle_exception_eventlistener" class="%tristanbes_elophant.guzzle.exception.class%">;
     <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />;
     <argument type="service" id="tristanbes_elophant.stats.manager" />;
     <argument type="service" id="event_dispatcher" />;
 </service>
-{{< /highlight >}}
+```

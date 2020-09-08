@@ -56,7 +56,7 @@ De cette façon nous forçons le pointage de notre domaine vers la nouvelle mach
 
 **Nous allons ensuite modifier le "virtual host" original en y ajoutant les lignes suivantes :**
 
-{{< highlight apache >}}
+```apacheconf
 ProxyRequests Off
 <Proxy *>
   Order deny,allow
@@ -65,7 +65,7 @@ ProxyRequests Off
 
 ProxyPass / http://www.my-domain.com/
 ProxyPassReverse / http://www.my-domain.com/
-{{< /highlight >}}
+```
 
 
 Il suffit, pour finir, de redémarrer Apache, le traffic est à présent redirigé vers le nouveau serveur de manière transparente pour l'internaute.

@@ -60,7 +60,7 @@ Votre application rencontre un franc succès mais des dérives ont été constat
 
 Voici le code de la classe responsable de la modération :
 
-{{< highlight php >}}
+```php
 <?php
 
 interface ModeratorInterface
@@ -83,11 +83,11 @@ class Moderator implements ModeratorInterface
     }
 }
 
-{{< /highlight >}}
+```
 
 Exemple d'utilisation :
 
-{{< highlight php >}}
+```php
 <?php
 
 $replacements = [
@@ -98,7 +98,7 @@ $replacements = [
 $moderator = new Moderator($replacements);
 echo $moderator->moderate("nique ta mère\n"); // Affiche 'poutou à ta maman'
 
-{{< /highlight >}}
+```
 
 Cependant, les administrateurs de l'application se sont aperçus que certains vendeurs profitaient de la messagerie privée pour communiquer leurs coordonnées aux acheteurs afin de traiter en direct et ainsi passer outre les commissions versées au site.
 
@@ -108,7 +108,7 @@ Il nous faut donc renforcer le système de modération pour empêcher les vendeu
 
 Nous allons rédiger une classe qui va ajouter des fonctionnalités de modération en décorant notre classe initiale `Moderator` :
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -133,33 +133,33 @@ class PhoneNumberModerator implements ModeratorInterface
         );
     }
 }
-{{< /highlight >}}
+```
 
 Cette classe `PhoneNumberModerator` permet d'obfusquer les numéros de téléphone. Elle accepte en argument de son constructeur une instance de ModeratorInterface qu'elle décore.
 
 Exemple d'utilisation :
 
-{{< highlight php >}}
+```php
     <?php
 
     $moderator = new PhoneNumberModerator(new Moderator($replacements));
     echo $moderator->moderate("nique ta mère ; appelez-nous au 0600000000.\n");
     // Affiche : "poutou à ta maman ; appelez-nous au **********."
 
-{{< /highlight >}}
+```
 
 Il nous faudra également obfusquer les adresses email et il convient donc de rédiger une classe `EmailAddressModerator` (assez similaire à `PhoneNumberModerator`).
 
 Le code pour instancier les services modérateurs devient donc :
 
-{{< highlight php >}}
+```php
     <?php
     $moderator = new EmailAddressModerator(
         new PhoneNumberModerator(
             new Moderator($replacements)
         )
     );
-{{< /highlight >}}
+```
 
 ## Avantages du pattern `Decorator` par rapport à l'héritage
 
@@ -183,12 +183,12 @@ Le design pattern `Decorator` est également très utilisé pour ajouter des fon
 
 C'est notamment le cas de la classe [`HttpCache`](https://github.com/symfony/symfony/blob/master/src/Symfony/Component/HttpKernel/HttpCache/HttpCache.php) de Symfony :
 
-{{< highlight php >}}
+```php
     <?php
         $kernel = new AppKernel('prod', false);
         // AppCache hérite de HttpCache:
         $kernel = new AppCache($kernel);
-{{< /highlight >}}
+```
 
 Source : http://symfony.com/doc/current/http_cache.html#symfony-reverse-proxy
 

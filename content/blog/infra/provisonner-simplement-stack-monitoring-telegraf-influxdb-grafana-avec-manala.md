@@ -61,16 +61,16 @@ A partir de la version 4, Grafana permet également de faire de l'alerting basiq
 
 Vous devez installer les rôles suivants grâce à [Ansible Galaxy](https://galaxy.ansible.com/intro) :
 
-{{< highlight yaml >}}
+```yaml
 - src: manala.apt
 - src: manala.telegraf
 - src: manala.influxdb
 - src: manala.grafana
-{{< /highlight >}}
+```
 
 puis les ajouter à votre playbook :
 
-{{< highlight yaml >}}
+```yaml
 ---
 
 - hosts: all
@@ -79,7 +79,7 @@ puis les ajouter à votre playbook :
     - role: manala.influxdb
     - role: manala.telegraf
     - role: manala.grafana
-{{< /highlight >}}
+```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
     Attention, jouez bien les rôles dans cet ordre là. Le rôle <code>manala.apt</code> doit être en premier car il va configurer les dépots. Telegraf doit être installé après InfluxDB car il va y créer sa base de données.
@@ -89,16 +89,16 @@ puis les ajouter à votre playbook :
 
 Dans ```group_vars```, la configuration suivante permet d'indiquer que nous souhaitons installer InfluxDB, Telegraf et Grafana via les dépôts ```influxdata``` et ```grafana```.
 
-{{< highlight yaml >}}
+```yaml
 manala_apt_preferences:
   - influxdb@influxdata
   - telegraf@influxdata
   - grafana@grafana
-{{< /highlight >}}
+```
 
 Il faut ensuite configurer le rôle [manala.telegraf](https://github.com/manala/ansible-role-telegraf) :
 
-{{< highlight yaml >}}
+```yaml
 manala_telegraf_configs_exclusive: true
 manala_telegraf_configs:
   - file:     output_influxdb.conf
@@ -126,7 +126,7 @@ manala_telegraf_configs:
 
   - file:     input_net.conf
     template: configs/input_net.conf.j2
-{{< /highlight >}}
+```
 
 La configuration du fichier ```output_influxdb.conf``` indique sur quel support de stockage **Telegraf** doit envoyer les données collectées. Ici on indique l'url de API d'**InfluxDB** ainsi que le nom et les identifiants de la base de données à utiliser.
 
@@ -151,7 +151,7 @@ Je vous encourage néanmoins à jeter un oeil à la configuration de ces deux r�
 
 InfluxDB dispose d'une interface en ligne de commandes à la manière de ```mysql``` pour exécuter des requêtes. Si vous vous connectez en SSH à la machine que vous avez provisonnée, vous devriez pouvoir l'interroger. Vous pouvez par exemple lister les métriques de la base de données "telegraf".
 
-{{< highlight bash >}}
+```bash
 $ influx -execute 'SHOW MEASUREMENTS' -database="telegraf"
 name: measurements
 name
@@ -165,7 +165,7 @@ net
 processes
 swap
 system
-{{< /highlight >}}
+```
 
 Vous devriez voir la liste des métriques que vous aviez configurées plus haut dans le rôle ```manala.telegraf```
 
@@ -188,11 +188,11 @@ Par defaut **Grafana** est accesible sur le port ```3000``` avec pour identifian
 
 ### Provisionner les datasources et les dashboards
 
-Une fois que vous avez configuré vos *datasources* et créé vos *dashboards* vous souhaiterez peut-être de les intégrer à votre provisonning afin d'automatiser leur configuration. Le rôle ```manala.grafana``` permet celà. 
+Une fois que vous avez configuré vos *datasources* et créé vos *dashboards* vous souhaiterez peut-être de les intégrer à votre provisonning afin d'automatiser leur configuration. Le rôle ```manala.grafana``` permet celà.
 
 Pour configurer une *datasource*, renseignez les mêmes informations que dans le formulaire de l'administration de **Grafana** :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_datasources_exclusive: true
 manala_grafana_datasources:
   - name:      telegraf
@@ -204,11 +204,11 @@ manala_grafana_datasources:
     database:  telegraf
     username:  ''
     password:  ''
-{{< /highlight >}}
+```
 
 Pour configurer un *dahsboard*, indiquez le chemin vers le fichier d'export JSON du dashboard et renseignez les ```intputs``` utilisés par celui-ci :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_dashboards_exclusive: true
 manala_grafana_dashboards:
     - template: "{{ playbook_dir }}/templates/grafana/dashboards/system.json"
@@ -218,7 +218,7 @@ manala_grafana_dashboards:
           type:     "datasource"
           value:    "telegraf"
       overwrite: true
-{{< /highlight >}}
+```
 
 Cette configuration va associer l'*input* "DS_TELEGRAF" du dashboard à la source `influxdb` de type `datasource` nommée `telegraf`, c'est à dire la source créée juste au dessus. Si vous importez d'autres dashboards, prenez bien soin de regarder les *inputs* requis et associez-les de la même manière à vos `datasources`.
 
@@ -226,11 +226,11 @@ Cette configuration va associer l'*input* "DS_TELEGRAF" du dashboard à la sourc
 
 Si vous destinez votre instance de **Grafana** à des utilisateurs par forcement technique, il peut être intéressant d'avoir une url une peu plus sexy qu'un numéro de port à la fin de votre domaine. Vous pouvez opter pour un sous-domaine ou un chemin dédié en [plaçant **Grafana** derrière un reverse proxy](http://docs.grafana.org/installation/behind_proxy/).
 
-Vous pouvez configurer un reverse proxy grâce au rôle [manala.nginx](https://github.com/manala/ansible-role-nginx). 
+Vous pouvez configurer un reverse proxy grâce au rôle [manala.nginx](https://github.com/manala/ansible-role-nginx).
 
 Par exemple pour exposer **Grafana** sur l'url ```http://grafana.foobar.com``` :
 
-{{< highlight yaml >}}
+```yaml
 manala_nginx_config_template: config/http.{{ _env }}.j2
 
 manala_nginx_configs_exclusive: true
@@ -242,28 +242,28 @@ manala_nginx_configs:
       - server_name: grafana.foobar.com
       - location /:
         - proxy_pass: http://localhost:3000
-{{< /highlight >}}
+```
 
 Il faut également indiquer le domaine à **Grafana** en ajoutant la configuration suivante :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_config:
   - server:
     - domain: grafana.foobar
-{{< /highlight >}}
+```
 
 ### Sécuriser Grafana
 
 Une première mesure consiste à changer l'identifiant et le mot de passe administrateur de **Grafana** et désactiver la création de compte. Dans votre fichier de configuration **Ansible** :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_config:
   - security:
     - admin_user: foobar
     - admin_password: foobar
   - users:
     - allow_sign_up: false
-{{< /highlight >}}
+```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
     Attention, l'utilisateur administrateur est créé au premier démarrage de <strong>Grafana</strong>, vous ne pourrez donc pas changer son identifiant ou son mot de passe via la configuration après le premier provisioning. Vous devrez alors passer par la page <em>profile</em> dans l'interface de <strong>Grafana</strong>.
@@ -273,11 +273,11 @@ Il est possible de mettre en place des systèmes d'authentification tiers comme 
 
 Vous pouvez également changer le port de l'interface web qui est à ```3000``` par defaut :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_config:
   - server:
     - http_port: 3000
-{{< /highlight >}}
+```
 
 Pour une configuration encore plus poussée, vous pouvez lire la [documentation de Grafana](http://docs.grafana.org/installation/configuration/).
 
@@ -287,7 +287,7 @@ Si vous laissez **Telegraf** créer sa propre base de données **InfluxDB**, cel
 
 Par exemple vous pouvez ajouter un utilisateur *telegraf* qui a les droit d'écriture/lecture et un utilisateur *grafana* qui n'a que le droit de lecture
 
-{{< highlight yaml >}}
+```yaml
 manala_influxdb_databases:
   - telegraf
 
@@ -306,11 +306,11 @@ manala_influxdb_privileges:
   - database: telegraf
     user:     grafana
     grant:    READ
-{{< /highlight >}}
+```
 
 N'oubliez pas ensuite de renseigner les *username* et *password* dans la configuration de **Telegraf** :
 
-{{< highlight yaml >}}
+```yaml
 manala_telegraf_configs:
   - file:     output_influxdb.conf
     template: configs/output_influxdb.conf.j2
@@ -319,11 +319,11 @@ manala_telegraf_configs:
       - database: telegraf
       - username: telegraf
       - password: nYhvEVsku
-{{< /highlight >}}
+```
 
 et dans la *datasource* de **Grafana** :
 
-{{< highlight yaml >}}
+```yaml
 manala_grafana_datasources:
   - name:      telegraf
     type:      influxdb
@@ -334,7 +334,7 @@ manala_grafana_datasources:
     database:  telegraf
     username:  grafana
     password:  fCCWkXemR
-{{< /highlight >}}
+```
 
 ## En production
 
@@ -352,7 +352,7 @@ Concernant l'installation, pas de grande différence, il suffit de reprendre le 
 
 On va également en profiter pour passer du protocole `HTTP` au protocole `UDP` plus léger :
 
-{{< highlight yaml >}}
+```yaml
 manala_influxdb_config:
   - reporting-disabled: true
   - udp:
@@ -363,11 +363,11 @@ manala_influxdb_config:
     - batch-timeout: 1s
     - batch-pending: 10
     - read-buffer: 0
-{{< /highlight >}}
+```
 
 puis renseigner l'ip (ou le domaine) du serveur **InfluxDB** dans la configuration de **Telegraf** :
 
-{{< highlight yaml >}}
+```yaml
 manala_telegraf_configs:
   - file:     output_influxdb.conf
     template: configs/output_influxdb.conf.j2
@@ -376,7 +376,7 @@ manala_telegraf_configs:
       - database: telegraf
       - username: telegraf
       - password: nYhvEVsku
-{{< /highlight >}}
+```
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
   Attention, il est recommandé de placer votre endpoint InfluxDB derrière un firewall si l'interface est publique et de le configurer pour accepter le traffic entrant pour le port 8086 uniquement depuis l'IP du serveur monitoré. Pour cela vous pouvez utiliser le role <a href="https://github.com/manala/ansible-role-shorewall">manala.shorewall</a>.

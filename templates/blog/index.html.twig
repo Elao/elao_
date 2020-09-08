@@ -1,5 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  Liste des articles
-{% endblock content %}
+    Liste des articles
+
+    <ul>
+    {% for article in articles %}
+        <li>
+            <a href="{{ path('blog_article', { slug: article.slug }) }}">
+                {#{ dump(article) }#}
+                {{ article.title|default('MISSING TITLE') }}
+            </a>
+        </li>
+    {% endfor %}
+    <ul>
+{% endblock %}

@@ -87,13 +87,13 @@ On va considérer que :
 On va uniquement se focaliser pour cet exemple sur un service qui va préparer les données souhaitées.
 
 Imaginer quelle est la plus petite entité logique à tester et faire cet effort de réflexion est finalement la
-premère étape en TDD. 
+premère étape en TDD.
 
 ### Entité
 
 Nous allons uniquement utiliser l'entité suivante `Post` représentant un article du blog :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Post;
@@ -112,7 +112,7 @@ class Post
         $this->publishedAt = $publishedAt;
     }
 }
-{{< /highlight >}}
+```
 
 ### Dépendances
 
@@ -121,7 +121,7 @@ et au nombre de commentaires par articles.
 
 `PostRepository`:
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Repository;
@@ -135,11 +135,11 @@ interface PostRepository
      */
     public function getAll(): array;
 }
-{{< /highlight >}}
+```
 
 `CommentRepository`:
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Repository;
@@ -150,14 +150,14 @@ interface CommentRepository
 {
     public function countByPost(Post $post): int;
 }
-{{< /highlight >}}
+```
 
 ### La plomberie
 
 Créons une classe `PostView` qu'on appelle communément un DTO (data transfer object), un objet de transfert de données
 qui ne contient aucun comportement, que des valeurs :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Post;
@@ -180,13 +180,13 @@ final class PostView
         $this->isNew = $isNew;
     }
 }
-{{< /highlight >}}
+```
 
 ## Le service à tester
 
 Créons notre service `GetPostsList` qui ne fait en réalité qu'une seule chose, une seule méthode publique, `_invoke` :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Post;
@@ -198,7 +198,7 @@ final class GetPostsList
         return [];
     }
 }
-{{< /highlight >}}
+```
 
 ### Les enfants et les tests d'abord !
 
@@ -207,7 +207,7 @@ Il est important de tester tous les cas. Cela tombe bien, notre besoin est simpl
 
 Dans : `tests/Post/GetPostsListTest.php` :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Tests\Post;
@@ -231,7 +231,7 @@ class GetPostsListTest extends TestCase
         );
     }
 }
-{{< /highlight >}}
+```
 
 Lançons les tests :
 
@@ -240,7 +240,7 @@ Lançons les tests :
 Bien sûr, cela échoue :
 
     There was 1 failure:
-    
+
     1) MyCompany\App\Tests\Post\GetPostsListTest::test_get_new_and_old_posts
     Failed asserting that two arrays are equal.
     --- Expected
@@ -257,7 +257,7 @@ Complétons le test en faisant un *mock* de chaque dépendance.
 Le *mock* nous permet de s'affranchir de l'implémentation de la dépendance et de décider ce que celle-ci renvoie comme
 données.
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Tests\Post;
@@ -296,13 +296,13 @@ class GetPostsListTest extends TestCase
         );
     }
 }
-{{< /highlight >}}
+```
 
 ### Enfin, l'implémentation
 
 Nous avons tout ce qu'il faut pour implémenter notre code :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace MyCompany\App\Post;
@@ -341,12 +341,12 @@ final class GetPostsList
         return $postViews;
     }
 }
-{{< /highlight >}}
+```
 
 Enfin, lançons les tests :
 
     $ ./vendor/bin/phpunit
-    
+
 > OK (1 test, 4 assertions)
 
 ### Le temps n'attend pas
@@ -356,10 +356,10 @@ Pourquoi ?
 Nous avons une comparaison avec la date "système" dans l'implémentation (`new \DateTime`)
 alors que les dates sont fixes dans les tests.
 
-La date courante est une... dépendance. Modifions notre test pour fixer la date courante pour qu'elle ne bouge plus et 
+La date courante est une... dépendance. Modifions notre test pour fixer la date courante pour qu'elle ne bouge plus et
 ne fasse plus échouer les tests dans quelques jours !
 
-{{< highlight php >}}
+```php
 <?php
 // ...
 class GetPostsListTest extends TestCase
@@ -370,11 +370,11 @@ class GetPostsListTest extends TestCase
         // ...
 
         $getPostsList = new GetPostsList($postRepository->reveal(), $commentRepository->reveal(), $now);
-{{< /highlight >}}
+```
 
 Supprimons maintenant le `new \DateTime` dans la class GetPostsList et utilisons la date en dépendance :
 
-{{< highlight php >}}
+```php
 <?php
 // ...
 final class GetPostsList
@@ -398,12 +398,12 @@ final class GetPostsList
         foreach ($this->postRepository->getAll() as $post) {
             $isLessThanAWeekOld = (clone $post->publishedAt)->add(new \DateInterval('P1W')) > $this->now;
             // ...
-{{< /highlight >}}
+```
 
 Vérifions :
 
     $ ./vendor/bin/phpunit
-    
+
 > OK (1 test, 4 assertions)
 
 Super !

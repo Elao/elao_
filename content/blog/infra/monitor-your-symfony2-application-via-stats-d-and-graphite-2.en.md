@@ -26,7 +26,7 @@ I wanted to display on my graphite dashboard, which looked like the screen on th
 
 So here's what I did :
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace SeekTeam\PremiumBundle\Controller;
@@ -97,9 +97,9 @@ class DefaultController extends Controller
         return $this->getDoctrine()->getEntityManager();
     }
 }
-{{< /highlight >}}
+```
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace SeekTeam\PremiumBundle\Event;
@@ -111,13 +111,13 @@ final class Events
     const PREMIUM_CANCEL  = 'gamercertified.premium.cancel';
     const PREMIUM_ERROR   = 'gamercertified.premium.error';
 }
-{{< /highlight >}}
+```
 
 The following code is pretty simple. In the Controller functions, we dispatch 2 events named ```Events::PREMIUM_CANCEL``` and ```Events::PREMIUM_SUCCESS``` using the <a href="http://symfony.com/doc/current/components/event_dispatcher/introduction.html" target="_blank">EventDispatcher</a> and a <a href="http://symfony.com/doc/master/components/event_dispatcher/generic_event.html" target="_blank">GenericEvent</a> whether the payment was complete or not.
 
 Next thing to do, is to create & plug our listener and tell him to listen to those events.
 
-{{< highlight php >}}
+```php
 <?php
 
 namespace SeekTeam\PremiumBundle\Event\Listener;
@@ -172,18 +172,18 @@ class StatsListener implements EventSubscriberInterface
         $this->statsdClient->send($data);
     }
 }
-{{< /highlight >}}
+```
 
 You have noticed in the constructor the presence of 2 services that we need in order to send to Stats.d the data. Each time you'll add a "." to your stats category (in the example I used *premium.success*, it'll create a subfolder in your graphite dashboard).
 
 So let's inject them via the <a href="http://symfony.com/doc/2.0/components/dependency_injection/introduction.html" target="_blank">DI</a>.
 
-{{< highlight xml >}}
+```xml
 <service id="seek_team_premium.contact.listener" class="SeekTeam\PremiumBundle\Event\Listener\StatsListener">
      <tag name="kernel.event_subscriber" />
      <argument type="service" id="liuggio_stats_d_client.factory" />
      <argument type="service" id="liuggio_stats_d_client.service" />
 </service>
-{{< /highlight >}}
+```
 
 And it's done, if you go on your graphite dashboard, you can now see the new category called "premium".

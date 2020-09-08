@@ -25,7 +25,7 @@ L'ensemble de ces manipulations ont été réalisées sur des serveurs Linux / D
 
 Nous allons commencer par créer une clé privée
 
-{{< highlight bash >}}
+```bash
 
 root@my_server:~# openssl genrsa -des3 -out elao-ca.key 2048
 Generating RSA private key, 2048 bit long modulus
@@ -33,7 +33,7 @@ Generating RSA private key, 2048 bit long modulus
 ..+++
 e is 65537 (0x10001)
 Enter pass phrase for elao-ca.key:
-{{< /highlight >}}
+```
 
 
 La protection par une "pass phrase" de votre clé est essentielle ici, en effet cette clé nous servira à signer **tous** les certificats de notre organisation, sa confidentialité doit donc être **primordiale**. Il va sans dire que le stockage de cette clé, dans l'idéal, doit être fait sur un support amovible  (type clé USB), et ne doit pas être conservée sur une machine accessible "publiquement" (j'entend ici directement connectée à internet).
@@ -90,7 +90,7 @@ openssl req -new -key elao-server.key -out elao-server.csr
 
 ... qui devrait aboutir sur:
 
-{{< highlight bash >}}
+```bash
 
 Enter pass phrase for elao-server.tld.key:
 You are about to be asked to enter information that will be incorporated into your certificate request.
@@ -117,7 +117,7 @@ Organization Name (eg, company) [Internet Widgits Pty Ltd]:ELAO
 Organizational Unit Name (eg, section) []:IT
 Common Name (eg, YOUR name) []:my-server.my-domain.tld
 Email Address []:my-adress.my-domain.tld
-{{< /highlight >}}
+```
 
 
 Attention lorsque vous générez cette requête le common name doit correspondre EXACTEMENT au FQDN de votre serveur !

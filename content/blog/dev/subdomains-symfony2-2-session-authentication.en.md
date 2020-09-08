@@ -36,7 +36,7 @@ Once you've deployed the fix on your dev-preprod-prod server (choose the right s
 
 There you are, with your subdomain ready application. Enjoy.
 
-{{< highlight yaml >}}
+```yaml
 
 framework:
     esi:             { enabled: true }
@@ -59,10 +59,10 @@ framework:
         cookie_domain: .my-domain.com
         name: SFSESSID
     fragments:       ~
-{{< /highlight >}}
+```
 
 
-{{< highlight yaml >}}
+```yaml
 
 main:
     remember_me:
@@ -70,4 +70,4 @@ main:
         lifetime: 31536000
         path:     /
         domain:   .my-domain.com # Defaults to the current domain from $_SERVER
-{{< /highlight >}}
+```

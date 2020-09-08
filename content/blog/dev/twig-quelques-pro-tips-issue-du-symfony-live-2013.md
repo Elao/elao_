@@ -21,7 +21,7 @@ Lors d'un `include`, le template appelé accède par défaut au context du templ
 
 Pour éviter ça, vous pouvez isoler le template enfant en passant le paramètre `only` lors de son appel. Le template appelé n'aura alors accès qu'aux variables que vous lui passez. C'est une bonne pratique en terme de performance et de stabilité :
 
-{{< highlight twig >}}
+```twig
 
 {# template.html.twig #}
 
@@ -39,7 +39,7 @@ Pour éviter ça, vous pouvez isoler le template enfant en passant le paramètre
 
 {# La variable title contient 'Jane Doe'.  #}
 {# La variable username n'existe pas.  #}
-{{< /highlight >}}
+```
 
 
 ### Embed : un include plus malléable
@@ -48,7 +48,7 @@ Le cas se présente souvent : vous avez un template qui est inclus dans plusieur
 
 Plutôt que de passer une variable dans l'include puis modifier le comportement du template en fonction de cette valeur, vous pouvez utiliser le tag `Embed` (et c'est beaucoup mieux !).
 
-{{< highlight twig >}}
+```twig
 
 {# template.html.twig #}
 
@@ -64,10 +64,10 @@ Plutôt que de passer une variable dans l'include puis modifier le comportement 
         <a href="#" title="Mon autre lien">Mon autre lien</a>
     {% endblock %}
 {% endembed %}
-{{< /highlight >}}
+```
 
 
-{{< highlight twig >}}
+```twig
 {# user.html.twig #}
 
 <div class="user">
@@ -83,7 +83,7 @@ Plutôt que de passer une variable dans l'include puis modifier le comportement 
         <a href="#" title="Mon lien">Mon lien</a>
     {% endblock %}
 </div>
-{{< /highlight >}}
+```
 
 
 Dans le template parent, à l'interieur du tag embed, vous pouvez redéfinir certain block du template appelé, exactement comme vous le feriez pour un extends. Notez qu'a l'interieur de ces blocks, vous pouvez donc utiliser des fonction comme `parent()` !
@@ -96,9 +96,9 @@ Plus de details dans [la documentation officielle][1].
 
 Vous pouvez déclarer un block en une ligne ! Utile notamment pour un bloc vide amené à être redéfini par un autre template lors d'un extend :
 
-{{< highlight twig >}}
+```twig
 {% block content "" %}
-{{< /highlight >}}
+```
 
 
 ### Sources

@@ -44,10 +44,10 @@ Also ensure that you agreed to Apple's latest terms and conditions (just launch 
 
 <span class="side-note">🔧</span> Configure your [Android Home environment variable](https://facebook.github.io/react-native/docs/getting-started.html#3-configure-the-android-home-environment-variable) by adding the following lines in your bash profile file:
 
-{{< highlight bash >}}
+```bash
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
-{{< /highlight >}}
+```
 
 ## Create your app
 
@@ -59,16 +59,16 @@ So instead, let's go to the [Building Projects with Native Code](https://faceboo
 
 <span class="side-note">🔧</span> Install the React Native cli tool:
 
-{{< highlight bash >}}
+```bash
 npm install -g react-native-cli
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Create your app and be careful to __choose a name that contains no dots, spaces or other special characters__.
 
-{{< highlight bash >}}
+```bash
 react-native init AcmeApp
 cd AcmeApp
-{{< /highlight >}}
+```
 
 ## Environments and variables
 
@@ -123,10 +123,10 @@ If you need to change that unique identifier, do it now as described below:
 
 <span class="side-note">🔧</span> Then change the directory structure with the following commands:
 
-{{< highlight bash >}}
+```bash
 mkdir android/app/src/main/java/com/acme
 mv android/app/src/main/java/com/acmeapp android/app/src/main/java/com/acme/app
-{{< /highlight >}}
+```
 <span class="side-note light">💡</span> _You need a folder level for each dot in the app identifier._
 
 ### React Native Config
@@ -135,40 +135,40 @@ For setting and accessing the variables described above wherever we need it, I r
 
 <span class="side-note">🔧</span> Install it with:
 
-{{< highlight bash >}}
+```bash
 yarn add react-native-config
 react-native link react-native-config
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Then create an Env file for each environment in the root folder of the project, with the following suggested variables:
 
 __.env.development__
 
-{{< highlight ini >}}
+```ini
 APP_ID=com.acme.app
 APP_ENV=development
 APP_VERSION=0.1.0
 APP_BUILD=1
 API_HOST=http://api.app.acme.local
-{{< /highlight >}}
+```
 __.env.staging__
 
-{{< highlight ini >}}
+```ini
 APP_ID=com.acme.app
 APP_ENV=staging
 APP_VERSION=0.1.0
 APP_BUILD=1
 API_HOST=http://api.app.acme.staging
-{{< /highlight >}}
+```
 __.env.production__
 
-{{< highlight ini >}}
+```ini
 APP_ID=com.acme.app
 APP_ENV=production
 APP_VERSION=0.1.0
 APP_BUILD=1
 API_HOST=http://api.app.acme.com
-{{< /highlight >}}
+```
 
 ## Configure the release
 
@@ -181,24 +181,24 @@ Edit your local gradle config file `~/.gradle/gradle.properties`:
 
 <span class="side-note">🔧</span> Fill it with the following lines:
 
-{{< highlight ini >}}
+```ini
 MY_RELEASE_STORE_FILE=my_release.keystore
 MY_RELEASE_KEY_ALIAS=my_release
 MY_RELEASE_STORE_PASSWORD={Generate a 32 characters password}
 MY_RELEASE_KEY_PASSWORD={Generate another 32 characters password}
-{{< /highlight >}}
+```
 
 <span class="side-note light">💡</span> _You'll need to [generate 2 passwords](https://passwordsgenerator.net/)_
 
 <span class="side-note">🔧</span> Now generate the keystore key file:
 
-{{< highlight bash >}}
+```bash
 keytool -genkey -v -keystore ~/.gradle/my_release.keystore -alias my_release -keyalg RSA -keysize 2048 -validity 10000
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Follow the instructions as below:
 
-{{< highlight bash >}}
+```bash
 Entrez le mot de passe du fichier de clés: {MY_RELEASE_STORE_PASSWORD}
 Ressaisissez le nouveau mot de passe: {MY_RELEASE_STORE_PASSWORD}
 Quels sont vos nom et prénom ? Jane Doe
@@ -210,13 +210,13 @@ Quel est le code pays à deux lettres pour cette unité ? FR
 Est-ce CN=Jane Doe, OU=Lyon, O=élao, L=Lyon, ST=Rhones-Alpes, C=FR ? oui
 Entrez le mot de passe de la clé pour <my_release> {MY_RELEASE_KEY_PASSWORD}
 Ressaisissez le nouveau mot de passe : {MY_RELEASE_KEY_PASSWORD}
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Finally, link the keystore to the project with a symbolic link:
 
-{{< highlight bash >}}
+```bash
 ln -s ~/.gradle/my_release.keystore android/app/my_release.keystore
-{{< /highlight >}}
+```
 
 ### Configure the gradle build
 
@@ -224,13 +224,13 @@ Edit the `android/app/build.gradle` file and apply the following changes:
 
 <span class="side-note">🔧</span> Insert the following line on _line 2:_
 
-{{< highlight groovy >}}
+```groovy
 apply from: project(':react-native-config').projectDir.getPath() + "/dotenv.gradle"
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> In the config block, replace the following lines:
 
-{{< highlight diff >}}
+```diff
 defaultConfig {
 -    versionCode 1
 +    versionCode project.env.get("APP_BUILD") as Integer
@@ -238,11 +238,11 @@ defaultConfig {
 +    versionName project.env.get("APP_VERSION")
   // ...
 }
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Between the `splits` and `buildTypes` blocks (should be line 118) add the following block :
 
-{{< highlight groovy >}}
+```groovy
 signingConfigs {
     release {
         storeFile file(MY_RELEASE_STORE_FILE)
@@ -251,18 +251,18 @@ signingConfigs {
         keyPassword MY_RELEASE_KEY_PASSWORD
     }
 }
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Then add the `signingConfig` property in the `buildTypes > release` section (should be line 131)
 
-{{< highlight groovy >}}
+```groovy
 buildTypes {
     release {
         // ...
         signingConfig signingConfigs.release
     }
 }
-{{< /highlight >}}
+```
 
 ### Configure the iOS build
 
@@ -310,7 +310,7 @@ To change the name that will be displayed to the public on the stores:
 Here's a simple homepage that displays the app version, build number, environment and platform.
 You can open your `./App.js` file and replace its content with the following code:
 
-{{< highlight javascript >}}
+```javascript
 import React, { Component } from 'react';
 import { Platform, Text, View, StyleSheet } from 'react-native';
 import Config from 'react-native-config';
@@ -346,7 +346,7 @@ export default class App extends Component {
     );
   }
 }
-{{< /highlight >}}
+```
 
 ### Quick launch commands
 
@@ -435,33 +435,33 @@ Open your project in XCode:
 
 <span class="side-note">🔧</span> Create a `android/app/src/main/res/drawable/splash_screen.xml` file:
 
-{{< highlight xml >}}
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <bitmap android:gravity="center" android:src="@drawable/screen"/>
     </item>
 </layer-list>
-{{< /highlight >}}
+```
 
 <span class="side-note">🔧</span> Create a `android/app/src/main/res/values/colors.xml` file:
 
-{{< highlight xml >}}
+```xml
 <resources>
     <color name="primary">#ffffff</color>
 </resources>
-{{< /highlight >}}
+```
 
 <span class="side-note light">💡</span> _Here `#ffffff` is there to set a white background to the app, feel free to replace it with the color of your choice._
 
 <span class="side-note">🔧</span> Then edit `android/app/src/main/res/values/styles.xml` to add the following node in the _style_ tag:
 
-{{< highlight diff >}}
+```diff
 <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <!-- Customize your theme here. -->
 +    <item name="android:windowBackground">@drawable/splash_screen</item>
 </style>
-{{< /highlight >}}
+```
 
 ## Build store release
 
@@ -469,14 +469,14 @@ Open your project in XCode:
 
 The following command will generate your iOS release:
 
-{{< highlight bash >}}
+```bash
 ENVFILE=.env.production xcodebuild \
     -workspace ./iOS/AcmeApp.xcodeproj/project.xcworkspace \
     -scheme AcmeApp \
     -sdk iphoneos \
     -configuration AppStoreDistribution archive \
     -archivePath ./iOS/release/AcmeApp.xcarchive
-{{< /highlight >}}
+```
 
 The archive will be available at `./iOS/release/AcmeApp.xcarchive` and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.
 
@@ -484,9 +484,9 @@ The archive will be available at `./iOS/release/AcmeApp.xcarchive` and you can o
 
 The following command will generate your Android release:
 
-{{< highlight bash >}}
+```bash
 . ./.env.production && cd android && ./gradlew assembleRelease
-{{< /highlight >}}
+```
 
 The APK will be available at `./android/app/build/outputs/apk/app-release.apk` and you can [upload it directly to the Play Store](https://play.google.com/apps/publish).
 

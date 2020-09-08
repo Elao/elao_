@@ -26,12 +26,12 @@ Le projet qui va nous servir de fil rouge tout au long de cet article (et ceux q
 
 Nous ouvrons donc une ligne de commande, nous nous plaçons dans le répertoire qui contient nos projets Django ("workspace-django" en ce qui me concerne), et nous lançons les commandes nécessaires pour initialiser le projet et créer l'application "shop" :
 
-{{< highlight bash >}}
+```bash
 cd ~/workspace-django
 django-admin.py startproject elao
 cd elao
 python manage.py startapp shop
-{{< /highlight >}}
+```
 
 Nous allons à présent configurer les accès à notre base de données et activer l'application que nous venons de créer. Pour cela, nous allons éditer le fichier *settings.py* qui se trouve à la racine de notre projet. Comme nous souhaitons nous initier à Django, nous opterons pour le moteur de base de données SQLite qui présente l'avantage d'être inclus dans les dernières distributions de Python et ne nécessite donc pas d'installation supplémentaire. Noter pour la petite histoire que les créateurs du Framework ne semblent pas être de fervents défenseurs de MySQL, auquel ils préfèrent Postgres ...
 
@@ -41,17 +41,17 @@ Nous allons à présent configurer les accès à notre base de données et activ
 
 Dans le fichier *settings.py*, nous allons mentionner les chemins absolus de notre base de données, du répertoire hébergeant les templates, celui contenant les fichiers statiques ... Aussi, pour rendre notre projet portable, nous allons dans un premier temps créer une constante ROOT_DIR correspondant à la racine de notre projet, et par la suite, tous les chemins absolus se baseront sur cette constante. Pour cela, ajoutez les deux lignes suivantes au début du fichier de configuration du projet :
 
-{{< highlight python >}}
+```python
 
 # settings.py
 import os
 ROOT_DIR = os.path.dirname(__file__) + '/'
-{{< /highlight >}}
+```
 
 
 Pour configurer les accès à notre base de données, nous allons modifier la constante *DATABASES* (qui correspond à la structure de données de type "<a href="http://docs.python.org/tutorial/datastructures.html#dictionaries" target="_blank">dictionnaire</a>" dans le langage Python) :
 
-{{< highlight python >}}
+```python
 
 # settings.py
 # ...
@@ -61,12 +61,12 @@ DATABASES = {
         'NAME': os.path.join(ROOT_DIR, 'elao.db'),
     }
 }
-{{< /highlight >}}
+```
 
 
 Enfin, activons l'application "shop" que nous venons de créer, et profitons-en au passage pour activer l'Admin de Django en décommentant la dernière ligne du fichier *settings.py* (*INSTALLED_APPS* correspond à une structure Python de type <a href="http://docs.python.org/tutorial/datastructures.html#tuples-and-sequences" target="_blank">tuple</a>) :
 
-{{< highlight python >}}
+```python
 # settings.py
 # ...
 INSTALLED_APPS = (
@@ -79,12 +79,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'shop',
 )
-{{< /highlight >}}
+```
 
 
 Nous allons à présent entamer la définition de notre modèle. Pour l'heure, nous nous contenterons de rédiger deux classes du Modèle, mais sachez que ce modèle s'enrichira à mesure que nous monterons en compétences. Nous créons donc dans le fichier *shop/models.py* une classe "Item" correspondant aux articles que nous mettrons en vente sur notre site et une classe "Sport" qui nous permettra de regrouper les articles par sport (un item appartient à un sport, un sport comporte plusieurs articles, nous sommes donc dans le cadre d'une relation one-to-many).
 
-{{< highlight python >}}
+```python
 # shop/models.py
 
 from django.db import models
@@ -119,7 +119,7 @@ class Item(models.Model):
   class Meta:
     db_table = 'elao_item'
     ordering = [ 'name' ]
-{{< /highlight >}}
+```
 
 
 Avant de commenter ce code, vérifions que notre modèle est valide :
@@ -177,7 +177,7 @@ python manage.py shell
 
 Saisissez dans cette console les instructions suivantes :
 
-{{< highlight python >}}
+```python
 
 >>> from elao.shop.models import Sport
 >>> sport = Sport(name="Football", slug="football")
@@ -196,7 +196,7 @@ Saisissez dans cette console les instructions suivantes :
 <Sport: Football>
 >>> Sport.objects.filter(name="Football")
 [<Sport: Football>]
-{{< /highlight >}}
+```
 
 
 Rien de très compliqué. Nous venons de créer deux objets de la classe "Sport", que nous avons sauvegardés en base de données. Ensuite, nous avons utilisé un gestionnaire de Modèle, *ModelManager*, en l'occurrence *sport.objects*, pour exécuter des requêtes sur la table *elao_sport*. Nous aurons l'occasion de revenir sur cette notion de *ModelManager* à l'occasion de futurs articles. Pour quitter le shell interactif, il suffit de saisir **CTL + D** au clavier.
@@ -207,21 +207,21 @@ Voilà, nous n'avons fait qu'effleurer le sujet du Modèle de Django, nous auron
 
 Pour accéder à l'interface d'administration de Django, il faut dans un premier temps activer l'admin en mettant à jour le tuple INSTALLED_APPS ; cela consiste à décommenter la ligne *django.contrib.admin* du fichier *settings.py* (si vous avez suivi les étapes depuis le début, nous l'avons déjà fait). Il faut également décommenter la route permettant d'accéder à l'Admin. Pour cela, il faut éditer le fichier *urls.py* et décommenter la ligne correspondante :
 
-{{< highlight python >}}
+```python
 
 # urls.py
 # ...
 # Uncomment the next line to enable the admin:
 (r'^admin/', include(admin.site.urls)),
-{{< /highlight >}}
+```
 
 Et également décommenter les lignes suivantes (toujours dans le fichier urls.py).
 
-{{< highlight python >}}
+```python
 
 from django.contrib import admin
 admin.autodiscover()
-{{< /highlight >}}
+```
 
 
 A présent, nous allons démarrer le serveur ...
@@ -233,18 +233,18 @@ python manage.py runserver
 ... et admirer le résultat en nous rendant à l'URL suivante : <a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a>. Nous sommes alors invités à nous loguer :
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/django-admin.gif" title="Django Admin Login Form" alt="django admin Django (2nde partie) : le Modèle et lAdmin">}}
+![django admin Django (2nde partie) : le Modèle et lAdmin](/images/posts/2010/django-admin.gif)
 </div>
 
 Saisissez les identifiants que vous aviez précisés lorsque nous avions lancé la commande *python manage.py syncdb*. Voici le résultat après login :
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png" title="Django Admin Home" alt="Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%">}}
+![Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%](/images/posts/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png)
 </div>
 
 A présent, nous allons éditer le fichier contenant la définition de nos deux classes du modèle, *Item* et *Sport*, afin qu'elles soient prises en compte par l'Admin de Django. Pour cela, nous allons éditer le fichier *shop/models.py* et y ajouter les lignes suivantes :
 
-{{< highlight python >}}
+```python
 
 # shop/models.py
 from django.contrib import admin
@@ -260,13 +260,13 @@ class ItemAdmin(admin.ModelAdmin):
 
 admin.site.register(Sport, SportAdmin)
 admin.site.register(Item, ItemAdmin)
-{{< /highlight >}}
+```
 
 
 Rendez-vous à présent sur la page <a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a> pour constater que l'Admin de Django a bien enregistré nos deux classes du modèle. Si tout s'est correctement déroulé, vous devriez voir la liste des entités gérées sur la page d'accueil :
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2010/Django-Admin-Model-Classes.png" title="Django Admin - Model classes" alt="django admin Django (2nde partie) : le Modèle et lAdmin" alt="Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin">}}
+![Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin](/images/posts/2010/Django-Admin-Model-Classes.png)
 </div>
 
 N'hésitez pas à naviguer dans l'interface d'Administration de Django pour découvrir les nombreuses fonctionnalités offertes, mais avant de créer des articles, nous devons préalablement déterminer le chemin du répertoire "*media*" où seront notamment placées les images liées aux articles. Pour cela, nous allons préciser la valeur de la constante *MEDIA_ROOT* dans le fichier *settings.py*, puis créer une nouvelle route destinée à servir les fichiers statiques contenus dans ce répertoire "*media*".
@@ -275,13 +275,13 @@ N'hésitez pas à naviguer dans l'interface d'Administration de Django pour déc
 
 Nous allons donc modifier le fichier *settings.py* pour préciser le nom du répertoire contenant les fichiers statiques ...
 
-{{< highlight python >}}
+```python
 
 # settings.py
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(ROOT_DIR, 'media')
-{{< /highlight >}}
+```
 
 
 ... puis créer ce répertoire ...
@@ -293,7 +293,7 @@ chmod -R 777 media
 
 ... et enfin, créer une route responsable des contenus statiques, en mentionnant dans le fichier *urls.py* la constante *MEDIA_ROOT* précédemment définie :
 
-{{< highlight python >}}
+```python
 
 # urls.py
 # ...
@@ -302,14 +302,14 @@ if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^site-media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT }),
     )
-{{< /highlight >}}
+```
 
 
 > Noter que nous avons choisi *site-media* pour URL : évitez d'utiliser l'URL *media*, car elle est déjà réservée par l'Admin de Django.<br />
 
 L'Admin de Django facilite notamment la saisie des champs de type "slug". Pour cela, nous allons ajouter une ligne dans chacune des classes *XXXAdmin* concernées par un champ de type "*slug*" :
 
-{{< highlight python >}}
+```python
 
 # shop/models.py
 # ...
@@ -320,14 +320,14 @@ class SportAdmin(admin.ModelAdmin):
 class ItemAdmin(admin.ModelAdmin):
   # ...
   prepopulated_fields = {"slug": ("name",)}
-{{< /highlight >}}
+```
 
 
 A présent, lorsque vous créez ou éditez un sport ou un article, à mesure que vous remplissez le champ "*name*", vous remarquerez que le champ "*slug*" se met à jour automatiquement. Sympa !
 
 Nous allons à présent mettre en oeuvre une fonctionnalité très intéressante de l'Admin Django : les formulaires *inline*. Cette fonctionnalité permet notamment de faciliter la saisie de plusieurs enregistrements dans le cadre d'une relation *one-to-many*. Ainsi, dans notre exemple, lorsque nous créons ou éditons un sport, nous allons également autoriser l'édition et l'ajout d'articles associés au sport courant. Pour cela, nous modifions comme suit le fichier *shop/models.py* :
 
-{{< highlight python >}}
+```python
 
 # shop/models.py
 # ...
@@ -342,7 +342,7 @@ class ItemInline(admin.TabularInline):
 class SportAdmin(admin.ModelAdmin):
   # ...
   inlines = [ItemInline]
-{{< /highlight >}}
+```
 
 
 Nous venons donc de créer une nouvelle classe *ItemInline* héritant de *admin.TabularInline*, puis nous avons ajouté un attribut *inlines* dans la classe *SportAdmin*, faisant référence à la classe *ItemInline*. A présent, si vous créez ou éditez un nouveau sport, vous remarquerez que le formulaire principal embarque désormais plusieurs formulaires associés à la classe "*Item*". Bon, là je dois admettre que cela donne un résultat assez chargé compte tenu du nombre d'attributs définis dans la classe *Item*. Cet exemple avait essentiellement pour but de vous faire connaître l'existence des formulaires *inlines* dans l'Admin de Django. Ce type de formulaires imbriqués est sans doute plus adapté dans le cas d'une relation one-to-many dans laquelle le modèle "enfant" est moins riche ... Cela étant, Django propose un système de formulaires orientés objets qui nous permettraient de définir une version "allégée" des formulaires "*ItemForm*" et donc davantage candidate à une imbrication dans un formulaire parent. Nous pourrions alors les utiliser dans notre exemple, mais comme nous n'avons pas encore étudié les formulaires orientés Objet de Django, nous remettons ces améliorations à plus tard ... Pour l'heure, soyez conscients de l'existence de ces formulaires *inlines*, qui peuvent s'avérer très pratiques.
@@ -352,7 +352,7 @@ Nous venons donc de créer une nouvelle classe *ItemInline* héritant de *admin.
 Et pour finir notre étude de l'Admin, nous allons rédiger une méthode qui va nous permettre de modifier le statut d'un article (attribut dénommé "*public*" de la classe *Item*) à partir de la liste des articles. Cela nous donne l'occasion de voir comment afficher des colonnes personnalisées dans la vue "*liste*" et d'ajouter des fonctionnalités supplémentaires dans l'Admin. Nous allons donc créer une nouvelle méthode permettant d'inverser le statut d'un article, puis ajouter une route pointant sur cette méthode, et enfin ajouter une colonne dans la liste des articles, affichant
 Nous ajoutons donc la méthode *toggle_public* dans le fichier *shop/views.py* ...
 
-{{< highlight python >}}
+```python
 # shop/views.py
 from shop.models import Item
 from django.http import HttpResponseRedirect
@@ -363,24 +363,24 @@ def toggle_public(request, id):
   item.public = not item.public
   item.save()
   return HttpResponseRedirect(reverse("admin:shop_item_changelist"))
-{{< /highlight >}}
+```
 
 
 ... puis créons une route pointant sur cette nouvelle méthode ...
 
-{{< highlight python >}}
+```python
 
 # urls.py
 # ...
 (r'^admin/item_toggle/(?P<id>\\d+)/$', 'shop.views.toggle_public'),
 (r'^admin/', include(admin.site.urls)),
 # ...
-{{< /highlight >}}
+```
 
 
 ... puis une méthode de la classe *Item* permettant d'afficher un lien pointant sur cette méthode ...
 
-{{< highlight python >}}
+```python
 
 # shop/models.py
 from django.core.urlresolvers import reverse
@@ -391,12 +391,12 @@ class Item(models.Model):
    return '<a href="%s">Toggle</a>' % reverse('shop.views.toggle_public', args=[self.pk])
  toggle_public.allow_tag = True
 # ...
-{{< /highlight >}}
+```
 
 
 ... et enfin, on affiche cette nouvelle colonne dans l'Admin :
 
-{{< highlight python >}}
+```python
 
 # models.py
 # ...
@@ -404,7 +404,7 @@ class ItemAdmin(admin.ModelAdmin):
   list_display = [ 'name', 'slug', 'description', 'picture', 'stock', 'price', 'public', 'toggle_public', 'sport' ]
 # ...
 
-{{< /highlight >}}
+```
 
 Voilà qui clôt le chapitre consacré à la découverte de l'Admin de Django. Sachez qu'il existe d'autres fonctionnalités que nous n'avons pas explorées (notamment la pagination) et sachez également que si vos besoins le justifient, vous avez la possibilité de rédéfinir les méthodes et les templates de l'Admin. Pour ceux qui souhaitent en savoir plus sur cette possibilité, il existe plusieurs ressources disponibles sur Internet. Je citerais notamment la documentation officielle de Django qui consacre un paragraphe à ce sujet : <a href="http://docs.djangoproject.com/en/dev/ref/contrib/admin/#overriding-admin-templates" target="_blank">Overriding Admin Templates</a>. Pour ce qui concerne plus généralement l'Admin, si vous souhaitez connaître l'ensemble des fonctionnalités disponibles, voici les deux chapitres de la documentation qui traitent de ce sujet : <a href="http://docs.djangoproject.com/en/1.2/ref/contrib/admin/" target="_blank">Admin Site</a> et <a href="http://docs.djangoproject.com/en/1.2/ref/contrib/admin/actions/" target="_blank">Admin Actions</a>.
 

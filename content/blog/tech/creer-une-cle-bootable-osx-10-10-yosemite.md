@@ -33,7 +33,7 @@ Avant de lancer la mise à jour, copier le fichier <strong>InstallESD.dmg</stron
 Attention pour cette partie il faut bien faire attention de sélectionner "GUID Partition Table" dans les options lors de la création de la partition comme ci-dessous:
 
 <p class="text-center">
-    {{< figure src="/images/posts/2014/OSX_Yosemite.png" title="OSX Yosemite options de partition." alt="Créer une clé bootable osx yosemite">}}
+    ![Créer une clé bootable osx yosemite](/images/posts/2014/OSX_Yosemite.png)
 </p>
 
 

@@ -32,7 +32,7 @@ We will not configure the *DoctrineExtensions* & the *StofDoctrineExtensionsBund
 
 **Before starting, let's configure the Bundle :**
 
-{{< highlight yaml >}}
+```yaml
 
 # Add the bundle to your composer
 
@@ -55,12 +55,12 @@ We will not configure the *DoctrineExtensions* & the *StofDoctrineExtensionsBund
         form:
             resources:
                 - 'A2lixTranslationFormBundle::form.html.twig'
-{{< /highlight >}}
+```
 
 
 **Let's begin with our `Category` entity :**
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -182,12 +182,12 @@ class Profile
     }
 
 }
-{{< /highlight >}}
+```
 
 
 **And our `CategoryTranslation` entity (to store translations)**
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -226,12 +226,12 @@ class ProfileTranslation extends AbstractPersonalTranslation
      */
     protected $object;
 }
-{{< /highlight >}}
+```
 
 
 **Finally, the `CategoryAdmin` class**
 
-{{< highlight php >}}
+```php
 
 <?php
 
@@ -274,7 +274,7 @@ class ProfileAdmin extends Admin
     }
 
 }
-{{< /highlight >}}
+```
 
 
 You wanna see the result ? Well, you are free to propose a gist in the comment section of this article if you want to add code to render more nicely the translations in `SonataAdminBundle` (display the locale of the field, split the fields in tab....)

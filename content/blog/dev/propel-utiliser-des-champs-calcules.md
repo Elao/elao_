@@ -20,7 +20,7 @@ Je vous propose donc aujourd'hui deux solutions pour le faire avec Propel :<!--m
 
 ### 1ère solution, les résultats sont accédés via des index numériques
 
-{{< highlight php >}}
+```php
 
 //QUERY
 $query = SELECT DISTINCT('.UserPeer::ID.'), '.UserPeer::FIRSTNAME.', '.UserPeer::LASTNAME.',
@@ -47,17 +47,17 @@ while ($rs->next())
   $questions[$rs->getInt(1)][(($level < 5) ? $level : 5)] = $rs->getInt(5);
   $users[$rs->getInt(1)]['questions']                     = $questions[$rs->getInt(1)];
 }
-{{< /highlight >}}
+```
 
 
 ### 2ème solution, les résultats sont accédés via les noms de champs renvoyés par la requête
 
 Il suffit pour cela de remplacer la méthode de récupération de executeQuery en utilisant cette fois:
 
-{{< highlight php >}}
+```php
 
 ResultSet::FETCHMODE_ASSOC
-{{< /highlight >}}
+```
 
 
 ```
@@ -88,7 +88,7 @@ doSelectRS()
 
 afin de récupérer des resultSet et non des objets.
 
-{{< highlight php >}}
+```php
 
 $c = new Criteria();
 
@@ -126,4 +126,4 @@ while ($rs->next())
           'nb_answers'          => $records['NB_ANSWERS'],
           );
 }
-{{< /highlight >}}
+```

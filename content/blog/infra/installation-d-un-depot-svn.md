@@ -82,7 +82,7 @@ htpasswd  users.pwd guewen
 
 La configuration Apache se fait comme suit:
 
-{{< highlight apache >}}
+```apacheconf
 ServerName              svn.domain.tld
 DocumentRoot            /mon_domaine/repositories/
 
@@ -97,7 +97,7 @@ AuthName                "ELAO Private Area"
 AuthUserFile            /etc/apache2/pwd/users.pwd
 AuthzSVNAccessFile      /etc/apache2/pwd/perms.acl
 Require                 valid-user
-{{< /highlight >}}
+```
 
 ### La gestion des droits:
 

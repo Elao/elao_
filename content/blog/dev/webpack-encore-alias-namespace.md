@@ -39,9 +39,9 @@ assets/
 
 Si on souhaite charger la classe `Loader` depuis `AudioPlayer`, on s'y prend comme ça :
 
-{{< highlight javascript >}}
+```javascript
 import Loader from '../../core/Loader.js';
-{{< /highlight >}}
+```
 
 Ce n'est pas toujours plaisant à écrire de tête et encore moins à refactorer.
 
@@ -51,13 +51,13 @@ En PHP, on est habitué aux __namespaces__, qui permettent de référencer une c
 
 On commence par définir un namespace pour un chemin donné dans notre `composer.json` :
 
-{{< highlight json >}}
+```json
 "autoload": {
     "psr-4": {
         "App\\": "src/"
     }
 },
-{{< /highlight >}}
+```
 
 Et on peut maintenant utiliser la classe `src/Kernel.php` via le namespace `App/Kernel` partout dans notre application.
 
@@ -67,7 +67,7 @@ C'est ce qu'on souhaite mettre en place côté client grâce aux alias webpack !
 
 Comme on configure l'autoload côté back, on peut configurer des alias côté front dans notre configuration Webpack Encore :
 
-{{< highlight javascript >}}
+```javascript
 //webpack.config.js
 Encore
     // ...
@@ -76,13 +76,13 @@ Encore
     .addAliases({
         'App': `${__dirname}/assets/js`,
     })
-{{< /highlight >}}
+```
 
 On peut maintenant, depuis n'importe quel fichier, importer la classe `Loader` via un chemin absolu utilisant l'alias :
 
-{{< highlight javascript >}}
+```javascript
 import Loader from 'App/core/Loader.js';
-{{< /highlight >}}
+```
 
 Et voila, on a des "namespaces" pour nos modules javascript ! 🎉
 
@@ -92,7 +92,7 @@ Vous intégrez votre CSS et vos images au build directement depuis votre code JS
 
 Déclarez des alias pour ceux-ci :
 
-{{< highlight javascript >}}
+```javascript
 //webpack.config.js
 Encore
     // ...
@@ -103,14 +103,14 @@ Encore
         'Style': `${__dirname}/assets/scss`,
         'Images': `${__dirname}/assets/images`,
     })
-{{< /highlight >}}
+```
 
 Et simplifiez-vous la vie :
 
-{{< highlight javascript >}}
+```javascript
 import 'Style/app.scss';
 import logoPath from 'Images/logo.png';
-{{< /highlight >}}
+```
 
 ---
 

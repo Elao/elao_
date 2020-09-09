@@ -5221,12 +5221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tom32i/content.git",
-                "reference": "2890613203e11a23aaaa960eecf53a62752977dd"
+                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tom32i/content/zipball/2890613203e11a23aaaa960eecf53a62752977dd",
-                "reference": "2890613203e11a23aaaa960eecf53a62752977dd",
+                "url": "https://api.github.com/repos/Tom32i/content/zipball/d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
+                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
                 "shasum": ""
             },
             "require": {
@@ -5297,7 +5297,7 @@
                 "source": "https://github.com/Tom32i/content/tree/master",
                 "issues": "https://github.com/Tom32i/content/issues"
             },
-            "time": "2020-09-10T07:45:45+00:00"
+            "time": "2020-09-11T06:14:17+00:00"
         },
         {
             "name": "twig/extra-bundle",

@@ -114,3 +114,9 @@
     }
   }
 }
+
+@media (max-width: $screen-sm) {
+  .btn {
+    font-size: 16px !important;
+  }
+}

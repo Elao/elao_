@@ -24,7 +24,7 @@
 }
 
 .brick--large {
-  padding: 100px 100px;
+  padding: 100px;
   min-width: calc(100% - 40px);
   width: calc(100% - 40px);
 }
@@ -63,8 +63,8 @@
     align-items: flex-start !important;
 
     .icon {
-      margin-right: 25px;
-      font-size: 25px;
+      margin-right: 20px;
+      font-size: 30px;
       line-height: 1;
     }
   }
@@ -82,14 +82,19 @@
 .brick--contact {
   background: #f4756d;
 
-  .title {
-    color: $secondary;
-  }
-
   p {
     margin: 0 0 15px;
     display: flex;
     align-items: center;
+  }
+
+  .title {
+    color: $secondary;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-right: 20px;
   }
 }
 
@@ -109,5 +114,24 @@
     font-family: antikor bold;
     font-size: 24px;
     color: #f4756d;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .bricks {
+    margin: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .brick {
+    margin: 5px 0;
+    padding: 25px !important;
+    width: 100% !important;
+
+    .title {
+      font-size: 16px;
+      line-height: 25px;
+    }
   }
 }

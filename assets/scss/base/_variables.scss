@@ -6,9 +6,7 @@ $tertiary: #fee3e4;
 $text: #390725;
 
 // breakpoints
-$screen-desktop: 1280px;
-$screen-tablet: 950px;
-$screen-phone: 450px;
-
-// layout
-$header-height: 120px;
+$screen-lg: 1280px; //$screen-desktop
+$screen-md: 1220px; //$screen-laptop
+$screen-sm: 995px; //$screen-tablet
+$screen-xs: 760px; //$screen-phone

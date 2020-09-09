@@ -43,3 +43,24 @@ h2, .h2 {
     background: $primary--light;
   }
 }
+
+@media (max-width: $screen-sm) {
+  h1, .h1 {
+    margin-left: 40px;
+    margin-bottom: 70px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  h1, .h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  h2, .h2 {
+    padding-top: 40px;
+    font-size: 18px;
+    line-height: 1.6 !important;
+  }
+}

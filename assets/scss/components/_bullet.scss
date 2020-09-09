@@ -1,0 +1,14 @@
+.bullet {
+  height: 17px;
+  min-width: 17px;
+  position: absolute;
+  top: -5px;
+  right: -18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: $primary;
+  background: $tertiary;
+  border-radius: 50px;
+}

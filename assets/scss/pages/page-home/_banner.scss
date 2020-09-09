@@ -1,0 +1,239 @@
+.banner {
+  margin-bottom: 320px;
+  position: relative;
+}
+
+.banner__content {
+  padding: 0 110px;
+  height: 310px;
+  width: 950px;
+  display: flex;
+  align-items: center;
+  font-family: antikor regular;
+  font-size: 32px;
+  color: #fff;
+  background: $primary;
+
+  p {
+    width: 510px;
+  }
+}
+
+.banner__image {
+  position: absolute;
+  top: -250px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  figure {
+    margin: 0 0 22px;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    .image {
+      height: 335px;
+      width: 510px;
+      background: url(https://as2.ftcdn.net/jpg/02/94/55/87/500_F_294558791_Hb7lQE8IHJiAC6nxiIAcAr7gVRkl4fzC.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    figcaption {
+      padding: 20px 25px;
+      height: 120px;
+      width: 220px;
+      position: absolute;
+      bottom: 20px;
+      left: 22px;
+      display: flex;
+      flex-direction: column;
+      font-family: faktum regular;
+      font-size: 18px;
+      color: $primary;
+      background: $tertiary;
+
+      span {
+        margin: 0 0 11px;
+        font-family: antikor bold;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.banner__list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: -220px;
+  left: 200px;
+  display: flex;
+  list-style: none;
+
+  .item {
+    margin: 0 20px;
+    padding: 45px 30px 25px;
+    height: 260px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    font-family: faktum regular;
+    font-size: 20px;
+    color: $primary;
+    text-decoration: none;
+    background: $tertiary;
+
+    .number {
+      font-family: antikor medium;
+      color: $secondary;
+      font-size: 76px;
+    }
+
+    small {
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .link {
+      margin-top: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      font-family: antikor bold;
+      font-size: 18px;
+      color: $secondary;
+
+      .icon {
+        margin-left: 12px;
+        font-size: 23px;
+        color: $primary;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .banner {
+    margin-bottom: 1160px;
+  }
+
+  .banner__content {
+    margin-left: auto;
+    padding: 0 70px;
+    width: 70%;
+    min-width: 250px;
+    height: 230px;
+    font-size: 24px;
+  }
+
+  .banner__image {
+    width: 100%;
+    top: 810px;
+    align-items: center;
+
+    figure {
+      margin: 0 0 90px;
+
+      .image {
+        width: 100%;
+        margin: 0 80px;
+      }
+
+      figcaption {
+        width: 280px;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .btn {
+      width: 280px;
+    }
+  }
+
+  .banner__list {
+    padding-left: 80px;
+    left: 0;
+    top: 200px;
+    width: 100%;
+    flex-direction: column;
+
+    .item {
+      margin: 5px 0;
+      padding: 15px 40px;
+      height: 185px;
+      width: 70%;
+      min-width: 250px;
+      font-size: 20px;
+
+      .link {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .banner {
+    margin-bottom: 1000px;
+  }
+
+  .banner__image {
+    top: 700px;
+
+    figure {
+      .image {
+        margin: 0;
+      }
+    }
+  }
+
+  .banner__list {
+    padding-left: 0;
+
+    .item {
+      height: 150px;
+
+      .number {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner {
+    margin-bottom: 930px;
+  }
+
+  .banner__content {
+    padding: 0 20px;
+    height: 160px;
+    font-size: 18px;
+  }
+
+  .banner__image {
+    top: 540px;
+  }
+
+  .banner__list {
+    top: 140px;
+
+    .item {
+      padding: 15px 20px;
+      height: 120px;
+      font-size: 18px;
+
+      .number {
+        font-size: 32px;
+      }
+
+      .link {
+        font-size: 14px;
+      }
+    }
+  }
+}

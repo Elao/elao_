@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: $screen-tablet) {
+@media (max-width: $screen-sm) {
   .nav-mobile {}
 
   .nav-mobile--open {
@@ -44,7 +44,6 @@
   }
 
   .nav-mobile__item {
-    //@extend .nav__item;
     margin: 15px 0;
 
     a {

@@ -11,6 +11,7 @@
   }
 
   a {
+    position: relative;
     color: #000;
     text-decoration: none;
     transition: color ease-in .15s;
@@ -76,5 +77,42 @@
   span,
   a {
     margin: 0 30px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .footer {
+    padding: 0 25px;
+  }
+
+  .footer__links {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .h1--small {
+      margin: 0 0 35px;
+    }
+
+    .links {
+      margin: 0 0 35px;
+
+      ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        li {
+          width: unset;
+        }
+      }
+    }
+  }
+
+  .footer__legals {
+    flex-direction: column;
+
+    span,
+    a {
+      margin: 0 0 10px;
+    }
   }
 }

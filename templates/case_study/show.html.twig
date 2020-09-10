@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title caseStudy.title ~ ' | ' ~ parent() %}
+{% block meta_description caseStudy.description|default(parent()) %}
+
 {% block content %}
-  Etude de cas
+  <h1>{{ caseStudy.title }}</h1>
+
+  {{ caseStudy.content|raw }}
 {% endblock content %}

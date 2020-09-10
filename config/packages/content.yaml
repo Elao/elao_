@@ -1,0 +1,3 @@
+content:
+  providers:
+    App\Model\CaseStudy: '%kernel.project_dir%/content/case-study'

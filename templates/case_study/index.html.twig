@@ -1,5 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  Etudes de cas
+    <h1>Etudes de cas</h1>
+
+    <ul>
+        {% for caseStudy in caseStudies %}
+            <li>
+                <a href="{{ path('case_study', { slug: caseStudy.slug }) }}">
+                    {{ caseStudy.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock content %}

@@ -10,6 +10,7 @@ namespace App\Content\Processor;
 
 use App\Model\Article;
 use Content\Behaviour\ProcessorInterface;
+use Content\Content;
 
 /**
  * Set "category" property from file path if not specified
@@ -22,12 +23,12 @@ class CategoryProcessor implements ProcessorInterface
             && is_null($value);
     }
 
-    public function __invoke(array &$data, array $context): void
+    public function __invoke(array &$data, string $type, Content $content): void
     {
-        if (!static::isSupported($context['type'], $data['category'] ?? null)) {
+        if (!static::isSupported($type, $data['category'] ?? null)) {
             return;
         }
 
-        $data['category'] = \basename($context['content']->getSlug());
+        $data['category'] = \basename($content->getSlug());
     }
 }

@@ -1,5 +1,5 @@
 .animated-block {
-  padding: 30px 30px 25px;
+  padding: 25px;
   height: 170px;
   display: flex;
   flex-direction: column;
@@ -7,13 +7,13 @@
   text-decoration: none;
   font-family: faktum bold;
   font-size: 18px;
-  color: $secondary;
-  border: solid 4px $tertiary;
+  color: $color-primary;
+  border: solid 4px $color-secondary;
   background: transparent;
   transition: background ease-in-out .2s;
 
   &:hover {
-    background: $tertiary;
+    background: $color-secondary;
 
     .animated-block__icon {
       svg.browser {
@@ -22,7 +22,7 @@
         }
 
         .mask {
-          fill: $tertiary;
+          fill: $color-secondary;
         }
       }
 
@@ -57,7 +57,7 @@
     rect,
     circle,
     path {
-      fill: $secondary;
+      fill: $color-primary;
     }
 
     .gear {
@@ -73,14 +73,14 @@
 
   svg.pen {
     path {
-      fill: $secondary;
+      fill: $color-primary;
       transition: transform ease-in .2s;
     }
 
     rect {
       transform-origin: 0 0;
       width: 0;
-      fill: $secondary;
+      fill: $color-primary;
       transition: width ease-in .2s;
     }
   }
@@ -94,13 +94,13 @@
     }
 
     polygon {
-      fill: $secondary;
+      fill: $color-primary;
     }
 
     path,
     line {
       fill: none;
-      stroke: $secondary;
+      stroke: $color-primary;
     }
   }
 }
@@ -116,7 +116,7 @@
 
   .icon {
     margin-left: 15px;
-    color: $primary;
+    color: $color-brand;
     font-size: 20px;
     transition: transform ease-in-out .2s;
   }
@@ -129,7 +129,7 @@
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .animated-block {
     padding: 20px 25px;
     height: 135px;

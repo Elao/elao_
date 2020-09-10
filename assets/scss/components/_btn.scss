@@ -14,39 +14,39 @@
   }
 }
 
-.btn--primary {
+.btn--brand {
   color: #fff;
-  background: $primary;
+  background: $color-brand;
 
   &:hover,
   &:active,
   &:focus {
-    color: $primary;
-    background: $tertiary;
+    color: $color-brand;
+    background: $color-secondary;
+  }
+}
+
+.btn--primary {
+  color: #fff;
+  background: $color-primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: darken($color-primary, 5%);
   }
 }
 
 .btn--secondary {
-  color: #fff;
-  background: $secondary;
+  color: $color-brand;
+  background: $color-secondary;
 
   &:hover,
   &:active,
   &:focus {
     color: #fff;
-    background: darken($secondary, 5%);
-  }
-}
-
-.btn--tertiary {
-  color: $primary;
-  background: $tertiary;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: #fff;
-    background: $primary;
+    background: $color-brand;
   }
 }
 
@@ -93,29 +93,29 @@
     }
   }
 
+  &.btn--brand {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-primary;
+    }
+  }
+
   &.btn--primary {
     .icon .base,
     .icon .tip {
-      stroke: $secondary;
+      stroke: $color-brand;
     }
   }
 
   &.btn--secondary {
     .icon .base,
     .icon .tip {
-      stroke: $primary;
-    }
-  }
-
-  &.btn--tertiary {
-    .icon .base,
-    .icon .tip {
-      stroke: $secondary;
+      stroke: $color-primary;
     }
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .btn {
     font-size: 16px !important;
   }

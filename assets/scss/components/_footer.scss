@@ -12,12 +12,12 @@
 
   a {
     position: relative;
-    color: #000;
+    color: $color-text;
     text-decoration: none;
     transition: color ease-in .15s;
 
     &:hover {
-      color: $primary;
+      color: $color-brand;
     }
   }
 }
@@ -61,7 +61,7 @@
       .icon {
         margin-right: 17px;
         font-size: 21px;
-        color: $primary;
+        color: $color-brand;
       }
     }
   }
@@ -72,7 +72,7 @@
   min-width: 100%;
   display: flex;
   justify-content: center;
-  border-top: solid 3px $tertiary;
+  border-top: solid 3px $color-secondary;
 
   span,
   a {

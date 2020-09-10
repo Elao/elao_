@@ -1,0 +1,12 @@
+.brick-conception {
+  @extend .brick;
+  @extend .brick--large;
+
+  color: $color-light;
+  background: $color-dark;
+
+  .title {
+    font-size: 46px;
+    color: #fff;
+  }
+}

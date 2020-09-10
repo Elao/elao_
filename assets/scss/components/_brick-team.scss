@@ -1,0 +1,20 @@
+.brick-team {
+  @extend .brick;
+  @extend .brick--large;
+
+  align-items: center;
+  text-decoration: none;
+  background: $color-secondary;
+
+  .title {
+    margin: 0;
+    font-size: 46px;
+    color: $color-dark;
+  }
+
+  .subtitle {
+    font-family: antikor bold;
+    font-size: 24px;
+    color: $color-tertiary;
+  }
+}

@@ -14,13 +14,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: $primary;
+    background: $color-brand;
 
     ul {
       margin: 0 auto;
       padding: 0 45px;
       height: 100%;
-      min-width: 230px;
+      min-width: 400px;
       display: flex;
       flex-direction: column;
       list-style: none;
@@ -47,8 +47,9 @@
     margin: 15px 0;
 
     a {
-      font-family: 'antikor regular';
+      font-family: 'antikor medium';
       color: #fff;
+      text-decoration: none;
     }
 
     a:hover,
@@ -74,14 +75,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: $primary;
-      background: $tertiary;
+      font-family: 'antikor bold';
+      color: $color-brand;
+      background: $color-secondary;
+
+      .icon {
+        margin-right: 20px;
+        font-size: 20px;
+      }
     }
 
     a:hover,
     a:focus,
     a:active {
-      color: $primary;
+      color: $color-brand;
 
       span {
         &:after {
@@ -92,3 +99,10 @@
   }
 }
 
+@media (max-width: $screen-xs) {
+  .nav-mobile--open {
+    ul {
+      min-width: 230px;
+    }
+  }
+}

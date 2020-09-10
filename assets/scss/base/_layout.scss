@@ -9,8 +9,8 @@ body {
 }
 
 ::selection {
-  color: $tertiary;
-  background-color: $secondary;
+  color: $color-secondary;
+  background-color: $color-primary;
 }
 
 .container {

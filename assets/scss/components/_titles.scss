@@ -5,14 +5,14 @@ h1, .h1 {
   align-items: flex-start;
   font-family: faktum bold;
   font-size: 58px;
-  color: $primary;
+  color: $color-brand;
 
   span {
-    color: $secondary;
+    color: $color-primary;
 
     &:last-of-type {
       &:after {
-        color: $primary;
+        color: $color-brand;
         content: '_';
       }
     }
@@ -30,7 +30,7 @@ h2, .h2 {
   position: relative;
   font-family: antikor bold;
   font-size: 32px;
-  color: $secondary;
+  color: $color-primary;
   line-height: 1.45 !important;
 
   &:before {
@@ -40,14 +40,24 @@ h2, .h2 {
     top: 0;
     left: 0;
     content: '';
-    background: $primary--light;
+    background: $color-tertiary;
+  }
+}
+
+@media (max-width: $screen-md) {
+  h1, .h1 {
+    margin-left: 70px;
+    margin-bottom: 70px;
+  }
+
+  h2, .h2 {
+    padding-top: 40px;
   }
 }
 
 @media (max-width: $screen-sm) {
   h1, .h1 {
     margin-left: 40px;
-    margin-bottom: 70px;
     font-size: 50px;
   }
 }
@@ -59,7 +69,6 @@ h2, .h2 {
   }
 
   h2, .h2 {
-    padding-top: 40px;
     font-size: 18px;
     line-height: 1.6 !important;
   }

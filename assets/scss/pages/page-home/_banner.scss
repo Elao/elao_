@@ -12,7 +12,7 @@
   font-family: antikor regular;
   font-size: 32px;
   color: #fff;
-  background: $primary;
+  background: $color-brand;
 
   p {
     width: 510px;
@@ -51,13 +51,13 @@
       flex-direction: column;
       font-family: faktum regular;
       font-size: 18px;
-      color: $primary;
-      background: $tertiary;
+      color: $color-brand;
+      background: $color-secondary;
 
       span {
         margin: 0 0 11px;
         font-family: antikor bold;
-        color: $secondary;
+        color: $color-primary;
       }
     }
   }
@@ -81,13 +81,13 @@
     flex-direction: column;
     font-family: faktum regular;
     font-size: 20px;
-    color: $primary;
+    color: $color-brand;
     text-decoration: none;
-    background: $tertiary;
+    background: $color-secondary;
 
     .number {
       font-family: antikor medium;
-      color: $secondary;
+      color: $color-primary;
       font-size: 76px;
     }
 
@@ -103,12 +103,12 @@
       align-items: center;
       font-family: antikor bold;
       font-size: 18px;
-      color: $secondary;
+      color: $color-primary;
 
       .icon {
         margin-left: 12px;
         font-size: 23px;
-        color: $primary;
+        color: $color-brand;
       }
     }
   }
@@ -116,7 +116,7 @@
 
 @media (max-width: $screen-md) {
   .banner {
-    margin-bottom: 1160px;
+    margin-bottom: 845px;
   }
 
   .banner__content {
@@ -126,47 +126,52 @@
     min-width: 250px;
     height: 230px;
     font-size: 24px;
+
+    p {
+      width: unset;
+    }
   }
 
   .banner__image {
     width: 100%;
-    top: 810px;
+    top: 500px;
     align-items: center;
 
     figure {
-      margin: 0 0 90px;
+      margin: 0;
 
       .image {
         width: 100%;
-        margin: 0 80px;
+        height: 500px;
       }
 
       figcaption {
-        width: 280px;
-        bottom: -80px;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 325px;
+        bottom: 102px;
+        left: unset;
+        transform: none;
+        right: 20px;
       }
     }
 
     .btn {
-      width: 280px;
+      z-index: 1;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
     }
   }
 
   .banner__list {
-    padding-left: 80px;
     left: 0;
     top: 200px;
     width: 100%;
-    flex-direction: column;
 
     .item {
-      margin: 5px 0;
+      margin: 0 15px;
       padding: 15px 40px;
-      height: 185px;
-      width: 70%;
-      min-width: 250px;
+      width: 300px;
+      height: 230px;
       font-size: 20px;
 
       .link {
@@ -178,24 +183,28 @@
 
 @media (max-width: $screen-sm) {
   .banner {
-    margin-bottom: 1000px;
+    margin-bottom: 1030px;
   }
 
   .banner__image {
-    top: 700px;
+    top: 820px;
 
     figure {
       .image {
         margin: 0;
+        height: 400px;
       }
     }
   }
 
   .banner__list {
-    padding-left: 0;
+    flex-direction: column;
 
     .item {
-      height: 150px;
+      margin: 5px 0;
+      height: 185px;
+      width: 70%;
+      min-width: 250px;
 
       .number {
         font-size: 50px;
@@ -206,7 +215,7 @@
 
 @media (max-width: $screen-xs) {
   .banner {
-    margin-bottom: 930px;
+    margin-bottom: 1000px;
   }
 
   .banner__content {
@@ -216,7 +225,24 @@
   }
 
   .banner__image {
-    top: 540px;
+    top: 560px;
+
+    figure {
+      margin: 0 0 90px;
+
+      figcaption {
+        width: 280px;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+      }
+    }
+
+    .btn {
+      width: 280px;
+      position: static;
+    }
   }
 
   .banner__list {

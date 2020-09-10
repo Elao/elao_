@@ -4,14 +4,14 @@ title:              "Plusieurs mailer dans une application Symfony 2"
 date:               "2013-10-11"
 publishdate:        "2013-10-11"
 draft:              false
-slug:               "plusieurs-mailer-dans-une-application-symfony-2"
+
 description:        "Plusieurs mailer dans une application Symfony 2"
 
 thumbnail:          "/images/posts/thumbnails/mailers.jpg"
 tags:               ["mailer", "PHP", "Symfony", "error-notifier-bundle", "swift-mailer", "Mailer transport"]
 categories:         ["Dev", "Mailer", "Symfony"]
 
-author_username:    "jlopes"
+author:    "jlopes"
 ---
 
 Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de partager !<!--more-->

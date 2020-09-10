@@ -4,7 +4,7 @@ title:              "Offusquez vos id dans vos url"
 date:               "2019-11-06"
 publishdate:        "2019-11-06"
 draft:              false
-slug:               "offusquez-vos-id-dans-vos-url"
+
 description:        "Découverte d'alternatives aux ID auto-incrémentés dans les urls et leur mise en place dans le framework Symfony."
 
 thumbnail:          "/images/posts/thumbnails/obfuscation.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/obfuscation.jpg"
 tags:               ["Securite","PHP","Symfony","Framework"]
 categories:         ["Dev", "Symfony"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 L'une des pratiques les plus courantes du web pour accéder à un contenu de base de données est d'inclure l'identifiant (`ID`) de celui-ci dans l'url. Cet identifiant est dans la grande majorité des cas un entier positif auto-incrémenté par la base de données. Cet identifiant se retrouve ainsi exposé dans les urls. Bien qu'elle pose un certain nombre de problèmes, cette pratique est très simple et très répandue.

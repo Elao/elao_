@@ -4,7 +4,7 @@ title:          "A la recherche d'un développeur ou d'une développeuse Fronten
 date:           "2018-02-14"
 publishdate:    "2018-02-27"
 draft:          false
-slug:           "job-frontend-developpeur-agence-lyon-2018"
+
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/Chatfocus.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
 categories:     ["jobs", "recrutement"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 <div class="disclaimer">

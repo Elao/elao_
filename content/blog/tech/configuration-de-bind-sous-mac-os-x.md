@@ -5,14 +5,14 @@ title:              "Configuration de Bind sous Mac OS X"
 date:               "2010-05-21"
 publishdate:        "2010-05-21"
 draft:              false
-slug:               "configuration-de-bind-sous-mac-os-x"
+
 description:        "Configuration de Bind sous Mac OS X."
 
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["Bind","Mac OSX", "OSX"]
 categories:         ["Tech", "OSX"]
 
-author_username:    "vbouzeran"
+author:    "vbouzeran"
 
 ---
 

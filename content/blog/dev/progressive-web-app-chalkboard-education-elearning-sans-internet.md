@@ -4,7 +4,7 @@ title:          "E-learning sans internet ou presque"
 date:           "2017-11-22"
 publishdate:    "2017-11-22"
 draft:          false
-slug:           "progressive-web-app-chalkboard-education-elearning-sans-internet"
+
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
 summary:        true
 
@@ -13,7 +13,7 @@ header_img:     "/images/posts/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline", "React", "Symfony", "GraphQL"]
 categories:     ["dev", "Symfony", "javascript"]
 
-author_username: "rhanna"
+author: "rhanna"
 
 ---
 

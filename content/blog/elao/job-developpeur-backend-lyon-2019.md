@@ -4,7 +4,7 @@ title:          "À la recherche d'une développeuse / un développeur Backend"
 date:           "2019-11-12"
 publishdate:    "2019-11-12"
 draft:          false
-slug:           "job-developpeur-backend-lyon-2019"
+
 description:    "élao recherche une développeuse / un développeur Backend à Lyon."
 
 thumbnail:      "/images/posts/2019/dev-back-nov-2019/image-full.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/2019/dev-back-nov-2019/image-banner.jpg"
 tags:           ["job", "web", "lyon", "backend", "symfony", "PHP", "Javascript"]
 categories:     ["elao", "recrutement", "Symfony"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 Elao recherche **une développeuse ou un développeur Backend expérimenté(e)** pour renforcer son équipe lyonnaise. N'hésitez pas à postuler, la démarche est totalement indolore !

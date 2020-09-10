@@ -4,7 +4,7 @@ title:              "Pourquoi devriez-vous utiliser Vue.js dans vos projets ?"
 date:               "2016-10-17"
 publishdate:        "2016-10-19"
 draft:              false
-slug:               "pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets"
+
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 A l'heure des frameworks front, et à contre-pied des désormais conventionnels Angular, Riot, Ember ou encore React, j'ai décidé de m'intéresser à [Vue.js](https://vuejs.org/). **Vue.js** est un framework javascript développé par Evan You qui se veut accessible, versatile et performant.

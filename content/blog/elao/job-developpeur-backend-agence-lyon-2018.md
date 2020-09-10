@@ -4,7 +4,7 @@ title:          "À la recherche d'un développeur ou d'une développeuse Back"
 date:           "2018-02-14"
 publishdate:    "2018-02-27"
 draft:          false
-slug:           "job-developpeur-backend-agence-lyon-2018"
+
 description:    "élao recherche un développeur ou une développeuse backend à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/back.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/back.jpg"
 tags:           ["job", "web", "mobile", "lyon", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 
-author_username: "elao"
+author: "elao"
 ---
 
 <div class="disclaimer">

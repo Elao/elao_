@@ -4,7 +4,7 @@ title:          "À la recherche d'un(e) «Sysadmin»"
 date:           "2018-05-29"
 publishdate:    "2018-05-29"
 draft:          false
-slug:           "job-adminsys-agence-lyon-2018"
+
 description:    "Élao recherche un ou une Sysadmin à Lyon"
 
 thumbnail:      "/images/posts/thumbnails/adminsys.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/adminsys.jpg"
 tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
 categories:     ["elao", "recrutement"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 Nous recherchons **un ou une sysadmin, ascendant Ops pour renforcer notre tribu lyonnaise**.

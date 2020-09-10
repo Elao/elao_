@@ -4,7 +4,7 @@ title:              "Responsive Web Design"
 date:               "2012-07-31"
 publishdate:        "2012-07-31"
 draft:              false
-slug:               "responsive-web-design"
+
 description:        "Responsive Web Design"
 
 thumbnail:          "/images/posts/thumbnails/html5.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
-author_username:    "fzannettacci"
+author:    "fzannettacci"
 ---
 
 Le web design responsive est né d'un constat simple, le web sort de nos bureaux pour prendre possession de nos mobiles, tablettes et télévisions. Notre conception web est ainsi contrainte à suivre cette multiplication des supports et dans certains cas, l’idée de créer différentes versions selon chaque appareil, serait simplement une perte de temps et d’énergie.<!--more-->

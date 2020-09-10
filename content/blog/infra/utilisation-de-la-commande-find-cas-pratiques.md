@@ -4,14 +4,14 @@ title:              "Utilisation de la commande find - cas pratiques"
 date:               "2010-04-23"
 publishdate:        "2010-04-23"
 draft:              false
-slug:               "utilisation-de-la-commande-find-cas-pratiques"
+
 description:        "Utilisation de la commande find - cas pratiques"
 
 thumbnail:          "/images/posts/thumbnails/homer-do-not-care.png"
 tags:               ["Linux", "Trucs et astuces", "Tips"]
 categories:         ["Infra", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

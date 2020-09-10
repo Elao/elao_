@@ -4,7 +4,7 @@ title:              "Retour sur la NodeSchool Paris"
 date:               "2015-05-27"
 publishdate:        "2015-05-27"
 draft:              false
-slug:               "nodeschool-paris"
+
 description:        "La NodeSchool permet de pratiquer Javascript et Node.js grâce à des ateliers interactifs."
 
 thumbnail:          "/images/posts/thumbnails/nodejs.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["Javascript", "Node.js", "Conférences"]
 categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 
-author_username:    "rhanna"
+author:    "rhanna"
 ---
 
 Ce samedi 23 mai 2015, j'étais à la NodeSchool Paris #3 chez Mozilla Paris, dans sa majestueuse salle des fêtes, pour pratiquer Node.js.

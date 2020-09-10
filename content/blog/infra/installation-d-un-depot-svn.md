@@ -4,14 +4,14 @@ title:              "Installation d'un dépôt SVN"
 date:               "2009-12-02"
 publishdate:        "2009-12-02"
 draft:              false
-slug:               "installation-d-un-depot-svn"
+
 description:        "Installation d'un dépôt SVN pour gérer et versioner le code source d'un projet"
 
 thumbnail:          "/images/posts/thumbnails/kenny.jpg"
 tags:               ["Linux", "SVN"]
 categories:         ["Infra", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

@@ -1,0 +1,21 @@
+en:
+  display_name: Jérémy James
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Symfony developer"
+
+fr:
+  display_name: Jérémy James
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Développeur Symfony"
+
+social:
+  website:         http://www.elao.com
+  twitter:         jamesjrmy
+  github:          JeremyJames
+  email:           jeremy.james@elao.com
+  avatar:          ~
+  google_plus_id:  ~
+  
+  

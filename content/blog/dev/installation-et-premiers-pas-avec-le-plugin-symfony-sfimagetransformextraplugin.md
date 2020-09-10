@@ -4,14 +4,14 @@ title:              "Installation et premiers pas avec le plugin Symfony sfImage
 date:               "2010-07-12"
 publishdate:        "2010-07-12"
 draft:              false
-slug:               "installation-et-premiers-pas-avec-le-plugin-symfony-sfimagetransformextraplugin"
+
 description:        "Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin."
 
 thumbnail:          "/images/posts/thumbnails/toad.jpg"
 tags:               ["Développement", "PHP", "Symfony"]
 categories:         ["PHP", "Symfony"]
 
-author_username:    "xroldo"
+author:    "xroldo"
 ---
 
 Bonjour,

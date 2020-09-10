@@ -4,14 +4,14 @@ title:              "Premiers pas avec le framework Python \"Django\""
 date:               "2010-09-15"
 publishdate:        "2010-09-15"
 draft:              false
-slug:               "premiers-pas-avec-le-framework-python-django"
+
 description:        "Premiers pas avec le framework Python \"Django\""
 
 thumbnail:          "/images/posts/thumbnails/first_step.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author_username:    "xroldo"
+author:    "xroldo"
 ---
 
 Bonjour à toutes et à tous,

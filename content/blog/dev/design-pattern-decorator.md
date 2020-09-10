@@ -4,7 +4,7 @@ title:          "Le Design Pattern 'Decorator'"
 date:           "2017-04-14"
 publishdate:    "2017-05-04"
 draft:          false
-slug:           "design-pattern-decorator"
+
 description:    "Présentation du pattern 'Decorator' dans le cadre d'une série consacrée aux Design Patterns"
 
 thumbnail:      "/images/posts/thumbnails/decorator_pattern.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/decorator_pattern.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
-author_username:    "xavierr"
+author:    "xavierr"
 
 ---
 

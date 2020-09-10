@@ -1,0 +1,19 @@
+en:
+  display_name: Guewen FAIVRE
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Dev Ops"
+
+fr:
+  display_name: Guewen FAIVRE
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Gérant @Elao. Développeur / SysAdmin
+
+social:
+  website:         http://www.elao.com
+  twitter:         guewen_faivre
+  github:          gfaivre
+  email:           guewen.faivre@elao.com
+  avatar:          /images/authors/gfaivre.jpg
+  google_plus_id:  "114395399957883396467"

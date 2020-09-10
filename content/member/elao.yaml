@@ -1,0 +1,19 @@
+en:
+  display_name: The Elao team
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Agence web experte Symfony"
+
+fr:
+  display_name: La team Elao
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Agence web experte Symfony"
+
+social:
+  website:         http://www.elao.com
+  twitter:         Elao
+  github:          Elao
+  email:           contact@elao.com
+  avatar:          ~
+  google_plus_id:  "118274493624974429462"

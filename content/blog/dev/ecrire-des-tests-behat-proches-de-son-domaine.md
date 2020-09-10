@@ -4,7 +4,7 @@ title:              "Ecrire des tests Behat proches de son domaine"
 date:               "2018-06-17"
 publishdate:        "2018-06-17"
 draft:              false
-slug:               "ecrire-des-tests-behat-proches-de-son-domaine"
+
 description:        ""
 
 thumbnail:          "/images/posts/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/ecrire-test-behat-proche-de-son-domai
 tags:               ["Behat","Symfony","DDD"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author_username:    "ndievart"
+author:    "ndievart"
 ---
 
 Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](/fr/dev/behat-3-test-fonctionnel-symfony/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.

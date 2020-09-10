@@ -4,7 +4,7 @@ title:          "Notre quotidien d'équipe projet auto-organisée"
 date:           "2016-12-01"
 publishdate:    "2016-12-01"
 draft:          false
-slug:           "notre-quotidien-equipe-projet-auto-organisee"
+
 description:    "Retour d'expérience sur la vie d'une équipe projet auto-organisée. Voici ce que nous avons mis en place progressivement, nos expérimentations, nos succès et nos échecs."
 
 thumbnail:      "/images/posts/thumbnails/equipe_projet.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/2016/equipe-projet/equipe.jpg"
 tags:           ["agile", "user stories"]
 categories:     ["methodo"]
 
-author_username: "rhanna"
+author: "rhanna"
 
 ---
 

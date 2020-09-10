@@ -4,7 +4,7 @@ title:              "Retour sur le Symfony Live 2015"
 date:               "2015-04-10"
 publishdate:        "2015-04-10"
 draft:              false
-slug:               "symfony-live-2015"
+
 description:        "La septième édition du SymfonyLive Paris s'est tenue le jeudi 9 avril à la Cité Internationale Universitaire de Paris. Retour sur cet évènement."
 
 thumbnail:          "/images/posts/thumbnails/SymfonyLive.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/php_forum_team_elao_2.jpg"
 tags:               ["Conférence", "Symfony Live", "Conférence"]
 categories:         ["conference", "Symfony Live"]
 
-author_username:    "rhanna"
+author:    "rhanna"
 ---
 
 La septième édition du SymfonyLive Paris s'est tenue le jeudi 9 avril à la Cité Internationale Universitaire de Paris. Retour sur cet évènement.

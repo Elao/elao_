@@ -4,7 +4,7 @@ title:              "Retour sur le Forum PHP 2015"
 date:               "2015-11-26"
 publishdate:        "2015-11-26"
 draft:              false
-slug:               "forum-php-2015"
+
 description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a retenu."
 
 thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
 categories:         ["conference"]
 
-author_username:    "rhanna"
+author:    "rhanna"
 ---
 
 ## PHP a 20 ans et s'offre une cure de jouvence avec la version 7

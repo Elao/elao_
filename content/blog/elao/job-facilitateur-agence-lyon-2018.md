@@ -4,7 +4,7 @@ title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
 date:           "2018-02-14"
 publishdate:    "2018-02-26"
 draft:          false
-slug:           "job-facilitateur-agence-lyon-2018"
+
 description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
 
 thumbnail:      "/images/posts/thumbnails/riccardo-chiarini-247364.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]
 categories:     ["elao", "recrutement"]
 
-author_username:    "xgorse"
+author:    "xgorse"
 ---
 
 <!--more-->

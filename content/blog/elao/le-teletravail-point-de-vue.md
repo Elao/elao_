@@ -4,7 +4,7 @@ title:              "Le télétravail, point de vue"
 date:               "2015-08-14"
 publishdate:        "2015-09-08"
 draft:              false
-slug:               "le-teletravail-point-de-vue"
+
 description:        "Pratique encore relativement marginale dans l'entreprise française, le télétravail s'imposera sans doute dans les années à venir comme une réelle alternative aux méthodes traditionnelles. Bilan sur ses avantages et ses inconvénients, de mon point de vue."
 
 thumbnail:          "/images/posts/thumbnails/RemoteMountain.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elao_babyfoot.jpg"
 tags:               ["teletravail", "vie au travail"]
 categories:         ["vie au bureau", "elao"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

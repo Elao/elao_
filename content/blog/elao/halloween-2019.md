@@ -5,7 +5,7 @@ date:               "2019-10-31"
 publishdate:        "2019-10-31"
 summary:            true
 draft:              false
-slug:               "halloween-2019"
+
 description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
 
 thumbnail:          "/images/posts/thumbnails/halloween-2019.jpg"
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 
-author_username: "elao"
+author: "elao"
 ---
 
 Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween. 🦇

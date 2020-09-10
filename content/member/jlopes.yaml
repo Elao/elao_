@@ -1,0 +1,21 @@
+en:
+  display_name: Johan LOPES
+  short_bio:    ""
+  long_bio:     ""
+  job_title":   "Symfony developer"
+
+fr:
+  display_name: Johan LOPES
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Développeur Symfony
+
+social:
+  website:         http://www.elao.com
+  twitter:         johan_lopes
+  github:          gfaivre
+  email:           johan.lopes@elao.com
+  avatar:          ~
+  google_plus_id:  ~
+
+  

@@ -4,14 +4,14 @@ title:              "Feedback : Monitor your Symfony2 application via Stats.d an
 date:               "2013-07-18"
 publishdate:        "2013-07-18"
 draft:              false
-slug:               "feedback-monitor-your-symfony2-application-via-stats-d-and-graphite"
+
 description:        "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
 categories:         ["Infra", "Monitoring", "PHP"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 Few times ago, I wrote two articles on how to monitor your Symfony2 application via Stats.d and Graphite (<a title="Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application (1/2)" href="/en/infra/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application" target="_blank">part 1</a> / <a title="Monitor your Symfony2 application via Stats.d and Graphite (2/2)" href="/en/infra/monitor-your-symfony2-application-via-stats-d-and-graphite-2" target="_blank">part 2</a>).

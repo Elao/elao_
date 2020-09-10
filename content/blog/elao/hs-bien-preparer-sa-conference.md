@@ -5,14 +5,14 @@ title:              "Comment bien préparer sa conférence ?"
 date:               "2014-06-03"
 publishdate:        "2014-06-03"
 draft:              false
-slug:               "hs-bien-preparer-sa-conference"
+
 description:        "Comment bien préparer sa conférence ?"
 
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
 categories:         ["Actualité", "Communication", "conference"]
 
-author_username:    "jjames"
+author:    "jjames"
 
 ---
 

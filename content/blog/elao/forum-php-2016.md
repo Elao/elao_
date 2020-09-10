@@ -4,14 +4,14 @@ title:              "Retour sur le Forum PHP 2016"
 date:               "2016-11-07"
 publishdate:        "2016-11-07"
 draft:              false
-slug:               "forum-php-2016"
+
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 
 thumbnail:          "/images/posts/thumbnails/forumphp2016-thumb.jpg"
 header_img:         "/images/posts/headers/forumphp2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
-author_username:    "elao"
+author:    "elao"
 co_authors:         ["tjarrand", "bleveque", "lhoizey", "rchalas", "mcolin", "bviguier", "rhanna", "xgorse", "ndievart"]
 ---
 

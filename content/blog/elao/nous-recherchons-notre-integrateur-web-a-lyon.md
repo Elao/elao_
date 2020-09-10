@@ -4,7 +4,7 @@ title:          "Intégrer... notre agence de Lyon"
 date:           "2017-01-20"
 publishdate:    "2017-01-20"
 draft:          false
-slug:           "nous-recherchons-notre-integrateur-web-a-lyon"
+
 description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
 
 thumbnail:      "/images/posts/thumbnails/boy.png"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/JobLyon.jpg"
 tags:           ["recrutement", "jobs", "integration", "lyon"]
 categories:     ["elao", "jobs", "recrutement"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 Nous recherchons pour notre tribu lyonnaise : **Un Intégrateur ou une Intégratrice Web**

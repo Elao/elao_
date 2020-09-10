@@ -4,14 +4,14 @@ title:              "Utilisation de l'évènement kernel.terminate sous Symfony2
 date:               "2013-07-18"
 publishdate:        "2013-07-18"
 draft:              false
-slug:               "utilisation-de-levenement-kernel-terminate-sous-symfony2"
+
 description:        "Utilisation de l'évènement kernel.terminate sous Symfony2"
 
 thumbnail:          "/images/posts/thumbnails/geekon.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documentation :

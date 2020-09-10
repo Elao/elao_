@@ -1,0 +1,20 @@
+en:
+  display_name: Xavier ROLDO
+  short_bio:    ""
+  long_bio:     ""
+  job_title":   "Symfony Developer"
+
+fr:
+  display_name: Xavier ROLDO
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Développeur Symfony
+
+social:
+  website:         http://www.elao.com
+  twitter:         ~
+  github:
+  email:           xavier.roldo@elao.com
+  avatar:          /images/authors/xroldo.jpeg
+  google_plus_id:  ~
+

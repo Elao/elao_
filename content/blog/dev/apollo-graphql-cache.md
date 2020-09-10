@@ -4,7 +4,7 @@ title:              "Comprendre le cache du client Graphql Apollo"
 date:               "2020-02-17"
 publishdate:        "2020-02-17"
 draft:              false
-slug:               "apollo-graphql-cache"
+
 description:        "Découverte du fonctionnement du cache du client GraphQL Apollo."
 
 thumbnail:          "/images/posts/thumbnails/graphql-apollo.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/graphql-apollo.jpg"
 tags:               ["GraphQL","Cache","Apollo","Javascript","API"]
 categories:         ["Dev", "Javascript"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 ## Introduction

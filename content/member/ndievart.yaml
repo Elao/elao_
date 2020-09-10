@@ -1,0 +1,19 @@
+en:
+  display_name: Nicolas DIEVART
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Symfony developer"
+
+fr:
+  display_name: Nicolas DIEVART
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    Développeur Symfony
+
+social:
+  website:         http://www.elao.com
+  twitter:         ""
+  github:          NicolasDievart
+  email:           nicolas.dievart@elao.com
+  avatar:          /images/authors/ndievart.jpg
+  google_plus_id:  ~

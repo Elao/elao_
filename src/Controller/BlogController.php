@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Model\Article;
+use App\Model\Member;
 use Content\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -33,12 +34,10 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}", name="blog_article")
+     * @Route("/{article}", name="blog_article", requirements={"article"=".+"})
      */
-    public function article(string $slug)
+    public function article(Article $article)
     {
-        $article = $this->manager->getContent(Article::class, $slug);
-
         return $this->render('blog/article.html.twig', [
             'article' => $article,
         ])->setLastModified($article->lastModified);

@@ -4,14 +4,14 @@ title:              "Django (2nde partie) : le Modèle et l’Admin"
 date:               "2010-10-06"
 publishdate:        "2010-10-06"
 draft:              false
-slug:               "django-2nde-partie-le-modele-et-ladmin"
+
 description:        "Django (2nde partie) : le Modèle et l’Admin"
 
 thumbnail:          "/images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author_username:    "xroldo"
+author:    "xroldo"
 ---
 
 Bonjour à toutes et à tous,

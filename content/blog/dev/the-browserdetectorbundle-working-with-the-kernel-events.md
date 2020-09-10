@@ -4,14 +4,14 @@ title:              "The BrowserDetectorBundle: working with the Kernel events"
 date:               "2013-08-02"
 publishdate:        "2013-08-02"
 draft:              false
-slug:               "the-browserdetectorbundle-working-with-the-kernel-events"
+
 description:        "The BrowserDetectorBundle: working with the Kernel events"
 
 thumbnail:          "/images/posts/thumbnails/homer.jpg"
 tags:               ["Symfony", "PHP", "Kernel", "Browser"]
 categories:         ["Dev", "Symfony", "PHP"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documentation :

@@ -4,7 +4,7 @@ title:              "Introduction à Vagrant"
 date:               "2017-04-24"
 publishdate:        "2017-04-23"
 draft:              false
-slug:               "introduction-a-vagrant"
+
 description:        "Le fonctionnement et les principes utilisés par Vagrant. Comment installer une VM contenant une version minimale d'Ubuntu et la provisionner avec nginx."
 
 thumbnail:          "/images/posts/thumbnails/vagrant.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/vagrant.png"
 tags:               ["Vagrant", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Vagrant"]
 
-author_username:    "mbernard"
+author:    "mbernard"
 
 ---
 
@@ -112,6 +112,6 @@ Si les sujets de l'automatisastion et de la virtualisation vous intéressent, je
 N'hésitez pas à poster vos questions ou remarques dans la section commentaires.
 
 
-sources:  
-https://www.vagrantup.com/docs/  
+sources:
+https://www.vagrantup.com/docs/
 http://blog.scottlowe.org/2014/09/12/a-quick-introduction-to-vagrant/

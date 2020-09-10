@@ -4,7 +4,7 @@ title:          "Améliorez la pertinence de vos résultats ElasticSearch grâce
 date:           "2017-04-24"
 publishdate:    "2017-04-27"
 draft:          false
-slug:           "ameliorez-pertinence-resultat-elastic-search-score"
+
 description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce au score."
 
 thumbnail:      "/images/posts/thumbnails/elasticsearch.png"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/elasticsearch.jpg"
 tags:           ["moteur de recherche", "recherche", "elasticsearch", "pertinence", "score", "ES", "elastica"]
 categories:     ["dev"]
 
-author_username: "mcolin"
+author: "mcolin"
 
 ---
 

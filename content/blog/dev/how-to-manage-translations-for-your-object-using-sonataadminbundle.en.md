@@ -4,14 +4,14 @@ title:              "How to manage translations for your object using SonataAdmi
 date:               "2012-07-27"
 publishdate:        "2012-07-27"
 draft:              false
-slug:               "how-to-manage-translations-for-your-object-using-sonataadminbundle"
+
 description:        "How to manage translations for your object using SonataAdminBundle"
 
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 

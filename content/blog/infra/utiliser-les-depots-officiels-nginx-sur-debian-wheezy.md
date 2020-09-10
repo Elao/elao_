@@ -5,14 +5,14 @@ title:              "Utiliser les dépôts officiels Nginx sur Debian Wheezy"
 date:               "2014-12-19"
 publishdate:        "2014-12-19"
 draft:              false
-slug:               "utiliser-les-depots-officiels-nginx-sur-debian-wheezy"
+
 description:        "Comment configurer et utiliser les dépôts Nginx sur Debian Wheezy."
 
 thumbnail:          "/images/posts/thumbnails/server.jpg"
 tags:               ["Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Linux", "Nginx"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

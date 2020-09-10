@@ -4,7 +4,7 @@ title:              "SSH-agent does not automatically load passphrases on the OS
 date:               "2016-10-14"
 publishdate:        "2016-10-14"
 draft:              false
-slug:               "ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain"
+
 description:        "SSH-agent does not automatically load passphrases on the OSX Sierra keychain during startup."
 
 thumbnail:          "/images/posts/thumbnails/badass_vader.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["SSH", "OSX"]
 categories:         ["Dev", "Tech", "OSX"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Some of us encountered an issue after upgrading to Mac OS Sierra.

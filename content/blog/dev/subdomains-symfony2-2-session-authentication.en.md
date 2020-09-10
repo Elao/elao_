@@ -4,7 +4,7 @@ title:              "Feedback on a side-effect with Symfony 2.2, subdomains and 
 date:               "2013-02-28"
 publishdate:        "2013-02-28"
 draft:              false
-slug:               "subdomains-symfony2-2-session-authentication"
+
 description:        "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 
 thumbnail:          "/images/posts/thumbnails/turtle.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/php_elao_code.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "Symfony", "PHP"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 This is a small feedback regarding the new Symfony 2.2 feature which makes the subdomains handling easier. By the way you can see the official documentation about <a style="text-align: justify;" href="http://symfony.com/doc/master/components/routing/hostname_pattern.html" target="_blank">routing & subdomains here</a>.

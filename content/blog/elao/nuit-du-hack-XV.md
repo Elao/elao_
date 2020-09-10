@@ -4,14 +4,14 @@ title:              "Nuit du Hack XV"
 date:               "2017-06-29"
 publishdate:        "2017-06-29"
 draft:              false
-slug:               "nuit-du-hack-XV"
+
 description:        "La quinzième édition de la Nuit Du Hack (#NDHXV) s'est tenue le Samedi 24 Juin 2017 en région parisienne."
 
 thumbnail:          "/images/posts/thumbnails/ndhxv.png"
 header_img:         "/images/posts/headers/ndhxv.jpg"
 tags:               ["SysAdmin", "Sécurité", "Conférence", "Hacking"]
 categories:         ["conference"]
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Une éternité.

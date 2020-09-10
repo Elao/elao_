@@ -4,14 +4,14 @@ title:              "Authentifications multiples à partir de clés SSH"
 date:               "2010-04-11"
 publishdate:        "2010-04-11"
 draft:              false
-slug:               "authentifications-multiples-a-partir-de-cles-ssh"
+
 description:        "Authentifications multiples à partir de clés SSH."
 
 thumbnail:          "/images/posts/thumbnails/keep-calm-and-connect-to-ssh.png"
 tags:               ["ssh", "Linux","Sécurité","Trucs et astuces","Tips"]
 categories:         ["Infra", "Linux", "SSH"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

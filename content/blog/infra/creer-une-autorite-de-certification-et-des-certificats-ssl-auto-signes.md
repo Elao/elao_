@@ -4,14 +4,14 @@ title:              "Créer une autorité de certification et des certificats SS
 date:               "2010-10-05"
 publishdate:        "2010-10-05"
 draft:              false
-slug:               "creer-une-autorite-de-certification-et-des-certificats-ssl-auto-signes"
+
 description:        "Créer une autorité de certification et des certificats SSL auto-signés"
 
 thumbnail:          "/images/posts/thumbnails/matryoshka.jpg"
 tags:               ["Linux", "Sécurité"]
 categories:         ["Linux", "Infra"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Bonjour à tous !

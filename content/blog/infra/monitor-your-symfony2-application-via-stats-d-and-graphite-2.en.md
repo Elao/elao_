@@ -4,7 +4,7 @@ title:              "Monitor your Symfony2 application via Stats.d and Graphite 
 date:               "2012-11-23"
 publishdate:        "2012-11-23"
 draft:              false
-slug:               "monitor-your-symfony2-application-via-stats-d-and-graphite-2"
+
 description:        "Monitor your Symfony2 application via Stats.d and Graphite Part. 2"
 
 thumbnail:          "/images/posts/thumbnails/rocket.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]
 categories:         ["Infra", "Monitoring"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 *This article is the last part of[ Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application ( 1/2 )](/en/infra/feedback-monitor-your-symfony2-application-via-stats-d-and-graphite/).*

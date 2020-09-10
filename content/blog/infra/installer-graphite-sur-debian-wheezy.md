@@ -5,14 +5,14 @@ title:              "Installer graphite sur Debian Wheezy"
 date:               "2014-12-20"
 publishdate:        "2014-12-20"
 draft:              false
-slug:               "installer-graphite-sur-debian-wheezy"
+
 description:        "Installation de graphite avec Gunicorn et Nginx sur debian Wheezy."
 
 thumbnail:          "/images/posts/thumbnails/dashboard.png"
 tags:               ["Monitoring", "Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Monitoring", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

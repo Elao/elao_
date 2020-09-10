@@ -4,14 +4,14 @@ title:              "Installation de FUSE et s3fs sur une Debian Lenny"
 date:               "2010-01-12"
 publishdate:        "2010-01-12"
 draft:              false
-slug:               "installation-de-fuse-et-s3fs-sur-une-debian-lenny"
+
 description:        "Installation de FUSE et s3fs sur une Debian Lenny"
 
 thumbnail:          "/images/posts/thumbnails/danbo_on_drops.jpg"
 tags:               ["Linux", "FUSE", "s3fs"]
 categories:         ["Infra", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Aujourd'hui nous allons installer s3fs sur nos serveurs.

@@ -4,7 +4,7 @@ title:              "Comment démarrer en TDD en PHP ?"
 date:               "2018-10-30"
 publishdate:        "2018-10-30"
 draft:              false
-slug:               "comment-demarrer-tdd-en-php"
+
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
 summary:            true
 
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/tdd.jpg"
 tags:               ["PHP", "Test", "TDD"]
 categories:         ["Dev", "PHP"]
 
-author_username:    "rhanna"
+author:    "rhanna"
 ---
 
 **Test Driven Development** ou le développement guidé par les tests, n'est clairement pas une méthode triviale.

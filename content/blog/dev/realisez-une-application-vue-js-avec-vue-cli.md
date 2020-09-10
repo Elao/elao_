@@ -4,7 +4,7 @@ title:              "Réalisez une application Vue.js avec vue-cli"
 date:               "2016-11-04"
 publishdate:        "2016-11-04"
 draft:              false
-slug:               "realisez-une-application-vue-js-avec-vue-cli"
+
 description:        "Introduction à la réalisation d'applications frontend avec Vue.js et vue-cli."
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 Dans mes précédents articles je vous présentais [pourquoi utiliser Vue.js dans vos projets](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) et [comment intégrer Vue.js à une application Symfony](/fr/dev/comment-integrer-vue-js-application-symfony/). Je vais maintenant vous présenter une autre facette du framework d'Evan You, la création d'applications frontend grâce à l'outil [vue-cli](https://github.com/vuejs/vue-cli).

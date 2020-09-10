@@ -4,7 +4,7 @@ title:              "Utiliser l'API Openstack OVH"
 date:               "2016-12-16"
 publishdate:        "2016-12-16"
 draft:              false
-slug:               "utiliser-l-api-openstack-ovh"
+
 description:        "Préparer son environnement pour utiliser l'API openstack d'OVH, pré-requis et installation du client"
 
 thumbnail:          "/images/posts/thumbnails/openstack.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/facade.jpg"
 tags:               ["ovh","openstack","docker","infra","api"]
 categories:         ["Infra", "openstack", "ovh"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 OVH propose depuis quelque temps déjà d'accéder à certaines ressources de votre infrastructure à travers l'API Openstack.

@@ -4,7 +4,7 @@ title:              "Conception et développement d'API : l'interview croisée d
 date:               "2017-11-27"
 publishdate:        "2017-11-27"
 draft:              false
-slug:               "api-design-elao-team-interview"
+
 description:        "Interview croisée des développeurs d'Élao à propos de leurs diverses expériences en conception et développement d'API"
 summary:            2
 
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
 categories:         ["Dev"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 Concevoir et développer une API n'est pas un exercice trivial. La littérature en la matière et les ressources sur Internet abondent, mais au moment d'implémenter une API, le développeur reste confronté à de nombreux choix.

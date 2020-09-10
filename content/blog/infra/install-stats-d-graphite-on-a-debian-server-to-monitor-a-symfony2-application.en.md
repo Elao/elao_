@@ -4,7 +4,7 @@ title:              "Install Stats.d / Graphite on a debian server in order to m
 date:               "2012-11-23"
 publishdate:        "2012-11-23"
 draft:              false
-slug:               "install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application"
+
 description:        "Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application."
 
 language:           "en"
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/minions.jpg"
 tags:               ["Linux","Monitoring","Symfony"]
 categories:         ["Infra", "Monitoring"]
 
-author_username:    "tbessoussa"
+author:    "tbessoussa"
 ---
 
 During this tutorial, we will install Stats.d and Graphite on the same server our application is running on. Don't forget that it's best if you monitor your application with graphite & stats.d using another server because that will not be the case in this tutorial.

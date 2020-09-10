@@ -3,14 +3,37 @@
 {% block content %}
     Liste des articles
 
-    <ul>
+    <div>
     {% for article in articles %}
-        <li>
-            <a href="{{ path('blog_article', { slug: article.slug }) }}">
-                {#{ dump(article) }#}
-                {{ article.title|default('MISSING TITLE') }}
-            </a>
-        </li>
+        {% if loop.first %}
+            <div>
+                <img src="{{ asset(article.thumbnail) }}" />
+                {{ article.publishdate|date("d/m/Y") }}
+                {{ article.author.name }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    {{ article.title }}
+                </a>
+                {{ article.description }}
+            </div>
+        {% elseif loop.index < 3 %}
+            <div>
+                <img src="{{ asset(article.thumbnail) }}" />
+                {{ article.publishdate|date("d/m/Y")  }}
+                {{ article.title }}
+                {{ article.description }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    Lire l'article_
+                </a>
+            </div>
+        {% else %}
+            <div>
+                {{ article.title }}
+                {{ article.description }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    Lire l'article_
+                </a>
+            </div>
+        {% endif %}
     {% endfor %}
-    <ul>
+    <div>
 {% endblock %}

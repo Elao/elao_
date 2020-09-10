@@ -4,7 +4,7 @@ title:              "Retour sur le Best Of Web 2015"
 date:               "2015-06-12"
 publishdate:        "2015-06-12"
 draft:              false
-slug:               "best-of-web-2015"
+
 description:        "La première édition du Best Of Web s'est tenue le Vendredi 5 Juin 2015 à Paris, et à rassembler le meilleurs des meetups de l'année. Retour sur cet évènement."
 
 thumbnail:          "/images/posts/thumbnails/geek_evolution.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/forum_php_elao.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 
-author_username:    "ndievart"
+author:    "ndievart"
 ---
 
 La première édition du Best of Web s’est tenue à Paris le vendredi 5 Juin 2015 à la Grande Crypte de Paris.
@@ -51,7 +51,7 @@ Pour commencer l’après midi, Jacopo Daeli nous a fait une démonstration de N
 La configuration est assez intéressante, on peut définir les paramètres qu’on veut assigner à la fenêtre de l’application. Jacopo Daeli nous a fait une [petite démonstration]( https://github.com/JacopoDaeli/bestof-web-paris-2015) avec une application qui prend des photos via sa webcam à un intervalle très court et les stream à une url local, ce qui simule une vidéo. Un exemple d’utilisation de NW.js ? La version desktop de Pop Corn Time l’utilisait, ce qui de se rendre compte de toutes les opportunités de NW.js.
 
 ## [CSS Grid]( http://fr.slideshare.net/matparisot/css-grid-layout-le-futur-de-vos-mises-en-page) avec Mathieu Parisot
-La suite est très intéressante malheureusement ce n’est pas utilisable immédiatement étant donné la compatibilité. Mathieu Parisot nous a présenté et fait une démonstration de CSS Grid, la spécification en cours de standardisation au W3C, qui permet enfin de s’affranchir de nombreuses contraintes connues du CSS.  
+La suite est très intéressante malheureusement ce n’est pas utilisable immédiatement étant donné la compatibilité. Mathieu Parisot nous a présenté et fait une démonstration de CSS Grid, la spécification en cours de standardisation au W3C, qui permet enfin de s’affranchir de nombreuses contraintes connues du CSS.
 Il nous a donc fait un petit récap de la situation actuelle et des solutions pour contourner le problème de faire des grilles en css (Bootstrap, 960 grid, Foundation, Flexbox) mais de la réalité de celles-ci qui ne sont pas encore optimale. On a pu ensuite assister à une démonstration de comment CSS Grid va régler tout cela (une fois supporté) grace à une syntaxe très simple sans avoir à faire appel à des librairies.
 
 ## La [« Winning Stack » et l’ES6]( http://fr.slideshare.net/SfeirGroup/es2015-ready-angular-web-stack-bestofweb-2015) par Douglas Duteil

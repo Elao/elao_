@@ -4,7 +4,7 @@ title:          "Comprendre l'héritage des instructions de configuration de Ngi
 date:           "2015-11-30"
 publishdate:    "2016-01-11"
 draft:          false
-slug:           "comprendre-lheritage-des-instructions-de-configuration-de-nginx"
+
 description:    "Nginx fonctionne avec une notion de contexte autorisant certaines instructions de configuration. Nous évoquons dans cet article comment Nginx traite et organise ces différents blocs."
 
 thumbnail:      "/images/posts/thumbnails/geek_love.jpg"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/headers/stickers.jpg"
 tags:           ["infra", "nginx", "linux"]
 categories:     ["infra", "nginx"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

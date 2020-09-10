@@ -4,14 +4,14 @@ title:              "Propel - Utiliser des champs calculés"
 date:               "2010-05-13"
 publishdate:        "2010-05-13"
 draft:              false
-slug:               "propel-utiliser-des-champs-calcules"
+
 description:        "Propel - Utiliser des champs calculés"
 
 thumbnail:          "/images/posts/thumbnails/mailers.jpg"
 tags:               ["Propel", "PHP", "ORM", "Symfony"]
 categories:         ["Dev", "PHP", "Propel", "ORM"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Il est parfois très utile de pouvoir récupérer directement des champs calculés depuis la base de données, soit parce que passer par un criteria s'avère très compliqué, voir impossible, soit pour confier les calculs à la base de données.

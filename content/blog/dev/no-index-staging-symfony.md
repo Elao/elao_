@@ -4,7 +4,7 @@ title:              "Comment empêcher les moteurs de recherche d'indexer votre 
 date:               "2019-07-10"
 publishdate:        "2019-07-10"
 draft:              false
-slug:               "no-index-staging-symfony"
+
 description:        "Les pages de votre application n'ont pas vocation à être présentes dans les moteurs de recherche ? Voici une courte explication pour vous aider à empêcher le crawl et l'indexation."
 
 thumbnail:          "/images/posts/thumbnails/judging-sardine-small.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/judging-sardine-large.jpg"
 tags:               ["Symfony", "seo", "no-index"]
 categories:         ["Dev", "Symfony", "seo"]
 
-author_username:    "elao"
+author:    "elao"
 co_authors:         ["mcolin", "aldeboissieu"]
 
 ---

@@ -5,7 +5,7 @@ date:           "2018-03-02"
 publishdate:    "2018-03-06"
 draft:          false
 summary:        true
-slug:           "react-native-font-icon"
+
 description:    "Comment intégrer des icônes vectorielles dans une app React Native grâce à une police de caractères personnalisée."
 
 thumbnail:      "/images/posts/thumbnails/harpal-singh-396280-unsplash.jpg"
@@ -13,7 +13,7 @@ header_img:     "/images/posts/headers/harpal-singh-396280-unsplash.jpg"
 tags:           ["react native", "react", "mobile", "font", "icon"]
 categories:     ["dev"]
 
-author_username:    "tjarrand"
+author:    "tjarrand"
 
 ---
 

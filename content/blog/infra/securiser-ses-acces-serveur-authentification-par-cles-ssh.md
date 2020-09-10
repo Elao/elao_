@@ -5,14 +5,14 @@ title:              "Sécuriser ses accès serveur: Authentification par clés S
 date:               "2010-03-05"
 publishdate:        "2010-03-05"
 draft:              false
-slug:               "securiser-ses-acces-serveur-authentification-par-cles-ssh"
+
 description:        "Sécuriser ses accès serveur: Authentification par clés SSH."
 
 thumbnail:          "/images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["ssh", "Sécurité"]
 categories:         ["Infra", "Linux", "SSH"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

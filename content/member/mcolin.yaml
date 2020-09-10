@@ -1,0 +1,19 @@
+en:
+  display_name: Maxime COLIN
+  short_bio:    "Développeur Symfony"
+  long_bio:     "Développeur Symfony, photographe, amateur de cinéma, de musique et d'art tout genre, adepte de la sérendipité."
+  job_title":   "Développeur Symfony"
+
+fr:
+  display_name: Maxime COLIN
+  short_bio:    "Développeur Symfony"
+  long_bio:     "Développeur Symfony, photographe, amateur de cinéma, de musique et d'art tout genre, adepte de la sérendipité."
+  job_title":   "Développeur Symfony"
+
+social:
+  website:         http://www.maximecolin.fr
+  twitter:         colin_maxime
+  github:          maximecolin
+  email:           maxime.colin@elao.com
+  avatar:          /images/authors/mcolin.jpg
+  google_plus_id:  "111597988258496308839"

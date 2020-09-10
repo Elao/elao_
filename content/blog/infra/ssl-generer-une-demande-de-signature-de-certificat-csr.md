@@ -5,7 +5,7 @@ title:              "SSL - Générer une demande de signature de certificat"
 date:               "2015-03-13"
 publishdate:        "2015-03-13"
 draft:              false
-slug:               "ssl-generer-une-demande-de-signature-de-certificat-csr"
+
 description:        "Comment générer une demande de signature d'un certificat SSL (CSR) à destination d'une autorité de certification."
 
 thumbnail:          "/images/posts/thumbnails/crypto.jpg"
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/elao_babyfoot.jpg"
 tags:               ["Infra", "Linux", "SSL", "Certicats", "Sécurité"]
 categories:         ["Infra", "Sécurité", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

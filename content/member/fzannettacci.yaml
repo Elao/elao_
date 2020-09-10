@@ -1,0 +1,19 @@
+en:
+  display_name: Faustine Zannettacci
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "WebDesigner Frontend"
+
+fr:
+  display_name: Faustine Zannettacci
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "WebDesigner / Intégrateur"
+
+social:
+  website:         http://www.elao.com
+  twitter:         faustine_z
+  github:          faustinez
+  email:           faustinezannettacci@gmail.com
+  avatar:          /images/authors/fzannettacci.jpg
+  google_plus_id:  ~

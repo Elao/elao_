@@ -4,7 +4,7 @@ title:              "Retour sur la SymfonyCon 2015"
 date:               "2015-12-04"
 publishdate:        "2015-12-17"
 draft:              false
-slug:               "symfonycon-2015"
+
 description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans de Symfony"
 
 thumbnail:          "/images/posts/thumbnails/symfonycon-2015.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
 categories:         ["conference"]
 
-author_username:    "rhanna"
+author:    "rhanna"
 ---
 
 ## Symfony a 10 ans

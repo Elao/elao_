@@ -4,7 +4,7 @@ title:              "Symfony 2 - Doctrine 2 - Cheat Sheets"
 date:               "2011-03-24"
 publishdate:        "2011-03-24"
 draft:              false
-slug:               "symfony-2-doctrine-2-cheat-sheets"
+
 description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"
 
 thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]
 categories:         ["Dev", "Symfony", Doctrine]
 
-author_username:    "vbouzeran"
+author:    "vbouzeran"
 ---
 
 

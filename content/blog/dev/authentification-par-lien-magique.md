@@ -4,7 +4,7 @@ title:              "Authentification par lien magique"
 date:               "2018-03-14"
 publishdate:        "2018-03-14"
 draft:              false
-slug:               "authentification-par-lien-magique"
+
 description:        "Retour d'expérience sur la mise en place d'authentification par lien de connexion."
 
 thumbnail:          "/images/posts/thumbnails/magic-link.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/magic-link.jpg"
 tags:               ["Authentification", "Email", "Sécurité", "MagicLink"]
 categories:         ["Dev"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 # Lien magique

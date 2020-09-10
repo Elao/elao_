@@ -4,7 +4,7 @@ title:              "Bonnes pratiques Symfony2 : notre condensé !"
 date:               "2013-04-19"
 publishdate:        "2013-04-19"
 draft:              false
-slug:               "bonnes-pratiques-symfony2-notre-condense"
+
 description:        "Bonnes pratiques Symfony2 : notre condensé !"
 
 thumbnail:          "/images/posts/thumbnails/kafeine.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
 categories:         ["Tips", "Symfony"]
 
-author_username:    "tjarrand"
+author:    "tjarrand"
 ---
 
 ## Après le Symfony Live 2013, pour tous ceux qui n'ont pas pu venir, voici notre condensé des bonnes pratiques à respecter avec Symfony2 :

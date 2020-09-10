@@ -4,14 +4,14 @@ title:              "Syntaxe des enregistrements SPF (Sender Privacy Framework)"
 date:               "2009-12-05"
 publishdate:        "2009-12-05"
 draft:              false
-slug:               "syntaxe-des-enregistrements-spf-sender-privacy-framework"
+
 description:        "Syntaxe des enregistrements SPF, cas d'utilisation et options de configuration."
 
 thumbnail:          "/images/posts/thumbnails/mail_bottle.jpeg"
 tags:               ["Linux", "Tips", "SPF"]
 categories:         ["Infra", "Linux"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

@@ -4,7 +4,7 @@ title:          "Planification de rendez-vous avec OptaPlanner"
 date:           "2017-10-10"
 publishdate:    "2017-10-10"
 draft:          false
-slug:           "planification-de-rdv-avec-optaplanner"
+
 description:    ""
 
 thumbnail:      "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
@@ -12,7 +12,7 @@ header_img:     "/images/posts/2017/planification-de-rdv-avec-optaplanner/optapl
 tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 
-author_username: "rhanna"
+author: "rhanna"
 
 ---
 

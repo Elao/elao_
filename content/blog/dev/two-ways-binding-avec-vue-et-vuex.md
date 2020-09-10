@@ -4,7 +4,7 @@ title:              "Two Way-Binding avec Vue et Vuex"
 date:               "2019-09-25"
 publishdate:        "2019-09-25"
 draft:              false
-slug:               "two-ways-binding-avec-vue-et-vuex"
+
 description:        "Mise en place d'un Two-Way Binding avec Vue et Vuex."
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le modèle change et vice et versa.

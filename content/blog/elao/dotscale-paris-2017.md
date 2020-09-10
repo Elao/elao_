@@ -4,14 +4,14 @@ title:              "DotScale Paris 2017"
 date:               "2017-04-24"
 publishdate:        "2017-04-24"
 draft:              false
-slug:               "dotscale-paris-2017"
+
 description:        "Aperçu du DotScale Paris 2017"
 
 thumbnail:          "/images/posts/thumbnails/dotscale.jpg"
 header_img:         "/images/posts/headers/dotscale.jpg"
 tags:               ["DevOps", "SysAdmin", "Infrastructure", "Conférence", "Scalabilité"]
 categories:         ["conference"]
-author_username:    "gfaivre"
+author:    "gfaivre"
 ---
 
 Le 24 Avril 2017 avait lieu à Paris le DotScale 2017 avec différentes têtes d'affiches plutôt alléchantes. On citera parmi elles Mitchell Hashimoto (HashiCorp) et James Cammarata (Ansible).

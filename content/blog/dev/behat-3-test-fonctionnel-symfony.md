@@ -4,7 +4,7 @@ title:              "Behat 3 pour vos tests fonctionnels Symfony2"
 date:               "2015-10-23"
 publishdate:        "2016-01-06"
 draft:              false
-slug:               "behat-3-test-fonctionnel-symfony"
+
 description:        "Installation et utilisation de Behat 3 pour vos tests fonctionnels Symfony2"
 
 thumbnail:          "/images/posts/thumbnails/behat.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/behat_cover.jpg"
 tags:               ["Bundle","Behat","Symfony","Mink","Alice"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author_username:    "ndievart"
+author:    "ndievart"
 ---
 
 Depuis peu, nous avons fait basculer notre [stack Symfony standard](https://github.com/Elao/symfony-standard) avec comme dépendance par défaut Behat 3.

@@ -1,17 +1,17 @@
+
 ---
 type:               "post"
 title:              "A nice way of handling form label translation"
 date:               "2013-09-13"
 publishdate:        "2013-09-13"
 draft:              false
-slug:               "a-nice-way-of-handing-form-label-translation"
+
 description:        "A nice way of handling form label translation"
 
 thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
 tags:               ["Symfony", "Form", "Theming", "Translation"]
 categories:         ["Dev", "Form", "Symfony"]
-
-author_username:    "tjarrand"
+author:             "tjarrand"
 ---
 
 ## The problem
@@ -243,14 +243,16 @@ When the children of this form want to get the parent key, we just return the pr
 
 We are now generating exactly the key we need, automatically:
 
-*   register.labels.firstname
-*   register.labels.lastname
-*   register.labels.email
-*   register.labels.phone
-*   register.labels.password.first
-*   register.labels.password.second
-*   register.labels.group.label
-*   register.labels.group.name
+```
+register.labels.firstname
+register.labels.lastname
+register.labels.email
+register.labels.phone
+register.labels.password.first
+register.labels.password.second
+register.labels.group.label
+register.labels.group.name
+```
 
 - All your label are now rendered with a generated translation key that **logically follows your forms structure**.
 

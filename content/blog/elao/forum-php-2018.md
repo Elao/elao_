@@ -4,14 +4,14 @@ title:              "Retour sur le Forum PHP 2018"
 date:               "2018-11-29"
 publishdate:        "2018-11-29"
 draft:              false
-slug:               "forum-php-2018"
+
 description:        "En attendant l'AFUP Day, voici notre retour sur le Forum PHP 2018."
 
 thumbnail:          "/images/posts/thumbnails/forumphp2018-team.jpeg"
 header_img:         "/images/posts/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
-author_username:    "elao"
+author:    "elao"
 co_authors:         ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]
 ---
 

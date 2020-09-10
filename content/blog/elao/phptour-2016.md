@@ -4,7 +4,7 @@ title:              "PHP Tour 2016, Merciiiiii"
 date:               "2016-05-27"
 publishdate:        "2016-05-27"
 draft:              false
-slug:               "phptour-2016"
+
 description:        "Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
 
 thumbnail:          "/images/posts/thumbnails/phptour-thumbnail.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "conférence", "afup", "clermont'ech"]
 categories:         ["Actualité", "Web", "conference"]
 
-author_username:    "elao"
+author:    "elao"
 co_authors:         ["tjarrand", "bleveque", "msteinhausser", "abenassy", "xroldo", "yheitz", "lhoizey", "rchalas"]
 
 ---
@@ -38,13 +38,13 @@ Il y a déjà quelques retours sur [joind.in](https://joind.in/event/php-tour-cl
 
 Quant à nous, voilà notre top 3 :
 
-1. **"Web Security Basics"** Alain Tiemblo - BlaBlaCar  
+1. **"Web Security Basics"** Alain Tiemblo - BlaBlaCar
 Le plein de bonnes astuces pour sécuriser ses applis web.
 
-1. **"PHP Meminfo ou la chasse aux memory leaks"** Benoit Jacquemont - Akeneo  
+1. **"PHP Meminfo ou la chasse aux memory leaks"** Benoit Jacquemont - Akeneo
 Un plaisir ! C’est un sujet plutôt rarement évoqué.
 
-1. **"Le jeu vidéo à la rescousse du web"** François Zaninotto - Marmelab sas  
+1. **"Le jeu vidéo à la rescousse du web"** François Zaninotto - Marmelab sas
 Ça appuie là où ça fait mal, une remise en question nécessaire.
 
   Comme on a eu quelques difficultés à choisir, on en rajoute une der :
@@ -56,7 +56,7 @@ Anecdotes et vision de PHPFig de l’intérieur...
 
 **Merci** à tous les [conférenciers/ères](http://event.afup.org/php-tour-2016/programme/) pour leur travail, leur temps ainsi que leur capacité à partager leurs expériences et leurs opinions sur scène.
 
-Rendez-vous très prochainement au **Forum PHP**,  
+Rendez-vous très prochainement au **Forum PHP**,
 La Team Elao (ThomasJ, BenjaminL, MaximeS, ArnaudB, XavierR, YvesH et LaurenceH)
 
 **Dédicaces :**
@@ -78,5 +78,5 @@ Quelques bémols qui n’ont pas entamé la bonne humeur :
 - Des sandwichs un peu courts le premier jour, un peu dégarnis le deuxième
 - Quelques conférences ainsi que les 2 ateliers programmés peut-être trop similaires
 
-**Crédit photos :**  
-© Fabien1309 - Vue depuis le parc Montjuzet - wikimedia commons - c.c  
+**Crédit photos :**
+© Fabien1309 - Vue depuis le parc Montjuzet - wikimedia commons - c.c

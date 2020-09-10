@@ -4,14 +4,14 @@ title:              "Symfony 2 – L’injection de dépendances"
 date:               "2010-06-03"
 publishdate:        "2010-06-03"
 draft:              false
-slug:               "symfony-2-linjection-de-dependances"
+
 description:        "Symfony 2 – L’injection de dépendances"
 
 thumbnail:          "/images/posts/thumbnails/event-dispatcher.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "PHP", "Symfony"]
 
-author_username:    "vbouzeran"
+author:    "vbouzeran"
 ---
 
 

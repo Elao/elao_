@@ -1,3 +1,5 @@
 content:
   providers:
     App\Model\CaseStudy: '%kernel.project_dir%/content/case-study'
+    App\Model\Article: '%kernel.project_dir%/content/blog'
+    App\Model\Member: '%kernel.project_dir%/content/member'

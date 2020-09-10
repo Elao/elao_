@@ -4,7 +4,7 @@ title:              "Retour sur le Mix-IT 2015 (Lyon)"
 date:               "2015-04-20"
 publishdate:        "2015-04-20"
 draft:              false
-slug:               "mix-it-2015-pt1"
+
 description:        "L'édition 2015 du Mix-IT s'est tenue les 16 et 17 avril au CPE de Lyon. Retour sur cet événement."
 
 thumbnail:          "/images/posts/thumbnails/unepetitemousse-mixit.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "Mix-IT 2015"]
 categories:         ["Dev", "Web", "conference", "Javascript", "NodeJS"]
 
-author_username:    "elao"
+author:    "elao"
 ---
 
 Élao avait l'immense plaisir d’être présent à l’édition 2015 du Mix-IT qui s’est déroulée les 16 et 17 avril derniers au CPE de Lyon (Ecole Supérieure de Chimie Physique Electronique). Outre notre présence parmi les sponsors, nous avons également tenu un stand proposant de s’initier à [Curvytron](http://www.curvytron.com/#/), le jeu vidéo développé par notre équipe.

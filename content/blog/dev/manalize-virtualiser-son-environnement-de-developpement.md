@@ -5,14 +5,14 @@ date:               "2019-01-29"
 publishdate:        "2019-01-29"
 draft:              false
 summary:            true
-slug:               "manalize-virtualiser-son-environnement-de-developpement"
+
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
 header_img:         "/images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
 thumbnail:          "/images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
 
-author_username:    "tjarrand"
+author:    "tjarrand"
 ---
 
 Il y a certains changements, dans notre manière de travailler, qui facilitent tellement la vie (coucou Git) qu'une fois adoptés, on ne se voit plus revenir en arrière.

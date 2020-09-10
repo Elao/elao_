@@ -4,14 +4,14 @@ title:              "Django (3ème partie) : les templates, et bien d'autres cho
 date:               "2010-10-15"
 publishdate:        "2010-10-15"
 draft:              false
-slug:               "django-3eme-partie-les-templates-et-bien-dautres-choses"
+
 description:        "Django (3ème partie) : les templates, et bien d'autres choses ..."
 
 thumbnail:          "/images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author_username:    "xroldo"
+author:    "xroldo"
 ---
 
 Bonjour à toutes et à tous,

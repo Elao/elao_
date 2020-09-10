@@ -1,23 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  {% block author %}
-    <p>
-      Auteurs :
-    <p>
-  {% endblock author %}
+  <img src="{{ asset(article.thumbnail) }}" />
 
-  {% block tags %}
-    <p>Tags :
-      {% for tag in tags|default([]) %}
-        <a href="{{ path('blog_tag', { tag: tag }) }}">{{ tag }}</a>
-      {% endfor %}
-    </p>
-  {% endblock tags %}
+  <div>
+    <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+    <p>Écrit par {{ article.author.name }}<p>
+    <p>Publication {{ article.publishdate|date("d/m/Y") }}<p>
+    <p>Modification {{ article.lastModified|date("d/m/Y") }}<p>
+  </div>
 
-  <p>Durée de lecture : {#{ readtime(article.content) }#} min</p>
+  <div>
+    {% for tag in article.tags %}
+      <a href="{{ path('blog_tag', { tag: tag }) }}">#{{ tag }}</a>
+    {% endfor %}
+  </div>
 
-  {{ article.content|raw }}
+  <div>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.description }}</p>
+  </div>
+
+  <div>
+    {{ article.content|raw }}
+  </div>
+
+  <div>
+    <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+
+    <p>Écrit par {{ article.author.name }}<p>
+
+    {% if article.author.twitter %}
+      <a href={{ article.author.twitter }}>Twitter</a>
+    {% endif %}
+    {% if article.author.github %}
+      <a href={{ article.author.github }}>Github</a>
+    {% endif %}
+    {% if article.author.website %}
+      <a href={{ article.author.website }}>Website</a>
+    {% endif %}
+  </div>
 
   <h4>Ces articles pourraient vous intéresser:</h4>
 

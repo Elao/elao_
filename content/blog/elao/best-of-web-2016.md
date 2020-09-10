@@ -4,7 +4,7 @@ title:              "Retour sur le Best Of Web 2016"
 date:               "2016-06-17"
 publishdate:        "2016-06-17"
 draft:              false
-slug:               "best-of-web-2016"
+
 description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet événement."
 
 thumbnail:          "/images/posts/thumbnails/best-of-web-2016.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/best-of-web-2016.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'événement. Le principe ne change pas, pendant une journée l'événement propose de revivre les meilleurs meetups parisiens orientés web.

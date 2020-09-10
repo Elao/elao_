@@ -14,9 +14,11 @@ class Article
     public bool $draft = true; // false
     public ?string $description; // "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
     public string $thumbnail;// "/images/posts/thumbnails/vuejs.jpg"
-    public string $header_img;// "/images/posts/headers/vuejs.jpg"
-    public array $tags;// ["Vuejs","Javascript","Front","Frontend","Framework"]
+    public string $header;// "/images/posts/headers/vuejs.jpg"
+    public array $tags = [];// ["Vuejs","Javascript","Front","Frontend","Framework"]
     public array $categories;// ["Dev", "Vuejs", "Javascript"]
-    public string $author_username; // "mcolin"
+    public Member $author; // "mcolin"
+    /** @var int|bool [description] */
     public $summary = null;
+    public string $category;
 }

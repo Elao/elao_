@@ -5,14 +5,14 @@ title:              "Créer une clé bootable OSX 10.10 Yosemite"
 date:               "2014-09-17"
 publishdate:        "2014-09-17"
 draft:              false
-slug:               "creer-une-cle-bootable-osx-10-10-yosemite"
+
 description:        "Créer une clé bootable OSX 10.10 Yosemite."
 
 thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
 tags:               ["OSX"]
 categories:         ["Tech", "OSX"]
 
-author_username:    "gfaivre"
+author:    "gfaivre"
 
 ---
 

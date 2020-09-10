@@ -1,0 +1,19 @@
+en:
+  display_name: Robin CHALAS
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Symfony Developer"
+
+fr:
+  display_name: Robin CHALAS
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Développeur Symfony"
+
+social:
+  website:         http://www.elao.com
+  twitter:         ~
+  github:          chalasr
+  email:           robin.chalas@elao.com
+  avatar:          /images/authors/rchalas.jpeg
+  google_plus_id:  ~

@@ -5,7 +5,7 @@ date:               "2016-10-21"
 publishdate:        "2016-10-21"
 modifieddate:       "2020-05-05"
 draft:              false
-slug:               "comment-integrer-vue-js-application-symfony"
+
 description:        "Guide d'intrégration de Vue.js dans une application Symfony"
 
 thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
@@ -13,7 +13,7 @@ header_img:         "/images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 Dans mon [précédent article](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et vous expliquais pourquoi vous devriez l'utiliser dans vos projets. Je disais que **Vue.js** était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment l'intégrer au framework **PHP**.

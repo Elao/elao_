@@ -4,7 +4,7 @@ title:              "Maintenabilité et performance avec Sass et Compass"
 date:               "2013-04-09"
 publishdate:        "2013-04-09"
 draft:              false
-slug:               "maintenabilite-et-performance-avec-sass-et-compass"
+
 description:        "Maintenabilité et performance avec Sass et Compass"
 
 thumbnail:          "/images/posts/thumbnails/sass.png"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign", "Développement"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
-author_username:    "fzannettacci"
+author:    "fzannettacci"
 ---
 
 L'augmentation croissante du nombre de règles et de fichiers, le souci de la compatibilité des navigateurs, l'utilisation de CSS3, le travail en équipe, ... sont autant de facteurs qui complexifient le code CSS et peuvent le rendre hors de contrôle. <!--more-->L’objectif de cet article est de vous présenter les différentes fonctionnalités du préprocesseur Sass et son utilisation avec Compass qui vous aideront à gagner du temps sur vos intégrations.

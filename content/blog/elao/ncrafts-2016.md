@@ -4,7 +4,7 @@ title:              "Retour sur la nCrafts 2016"
 date:               "2016-05-17"
 publishdate:        "2016-05-17"
 draft:              false
-slug:               "ncrafts-2016"
+
 description:        "Les 12 et 13 mai se déroulait à Paris la nCrafts, une conférence indépendante et internationale sur le développement logiciel."
 
 thumbnail:          "/images/posts/thumbnails/ncrafts-2016.jpg"
@@ -12,7 +12,7 @@ header_img:         "/images/posts/headers/ncrafts-2016.jpg"
 tags:               ["Développement", "Web","conference", "nCrafts", "craftsmanship"]
 categories:         ["Actualité", "Web", "conference"]
 
-author_username:    "mcolin"
+author:    "mcolin"
 ---
 
 Les 12 et 13 mai se déroulait à Paris la nCrafts, une conférence indépendante et internationale sur le développement logiciel.<!--more--> Créée par des développeurs pour des développeurs, nCraft se veut résolument orientée professionels, qualité et bonnes pratiques.

@@ -73,7 +73,7 @@ Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/
 <a href="#mapping-boost-yaml">yaml</a>
 </div>
 <div class="tab active" id="mapping-boost-json">
-```json
+<code highlight="json">
 {
   "mappings": {
     "article": {
@@ -89,10 +89,10 @@ Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/
     }
   }
 }
-```
+</code>
 </div>
 <div class="tab" id="mapping-boost-yaml">
-```yaml
+<code highlight="yaml">
 fos_elastica:
   indexes:
     app:
@@ -101,7 +101,7 @@ fos_elastica:
           mappings:
             title:   { analyzer: my_analyzer, boost: 3 }
             content: { analyzer: my_analyzer }
-```
+</code>
 </div>
 </div>
 
@@ -129,7 +129,7 @@ Les scores des résultats seront bien évidemment impactés par ces options.
 <a href="#query-analyzer-php">php</a>
 </div>
 <div class="tab active" id="query-analyzer-json">
-```json
+<code highlight="json">
 {
   "query": {
     "bool": {
@@ -146,10 +146,10 @@ Les scores des résultats seront bien évidemment impactés par ces options.
     }
   }
 }
-```
+</code>
 </div>
 <div class="tab" id="query-analyzer-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -160,7 +160,7 @@ $query = (new Query\Match())
     ->setFieldMinimumShouldMatch('title', '70%')
 );
 
-```
+</code>
 </div>
 </div>
 
@@ -176,7 +176,7 @@ Dans l'exemple suivant, nous faisons une recherche de la chaine `Foobar` sur un 
 <a href="#boost-php">php</a>
 </div>
 <div class="tab active" id="boost-json">
-```json
+<code highlight="json">
 {
   "query": {
     "bool": {
@@ -191,10 +191,10 @@ Dans l'exemple suivant, nous faisons une recherche de la chaine `Foobar` sur un 
     }
   }
 }
-```
+</code>
 </div>
 <div class="tab" id="boost-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -209,7 +209,7 @@ $query->addShould((new Query\Match())
     ->setFieldQuery('content', $search)
     ->setFieldBoost('content', 2)
 );
-```
+</code>
 </div>
 </div>
 
@@ -221,7 +221,7 @@ Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais 
 <a href="#boost-step-php">php</a>
 </div>
 <div class="tab active" id="boost-step-json">
-```json
+<code highlight="json">
 {
   "query" : {
     "bool" : {
@@ -239,10 +239,10 @@ Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais 
     }
   }
 }
-```
+</code>
 </div>
 <div class="tab" id="boost-step-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -262,7 +262,7 @@ $query->addShould((new Query\Range('publishedAt', [
     'boost' => 3,
     'gte'   => (new \DateTime('-3 months'))->format('c'),
 ])));
-```
+</code>
 </div>
 </div>
 
@@ -290,7 +290,7 @@ Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticse
 <a href="#script-functions-php">php</a>
 </div>
 <div class="tab active" id="script-functions-json">
-```json
+<code highlight="json">
 {
     "script_score" : {
         "script" : {
@@ -299,10 +299,10 @@ Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticse
         }
     }
 }
-```
+</code>
 </div>
 <div class="tab" id="script-functions-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -316,7 +316,7 @@ $score->addScriptScoreFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-```
+</code>
 </div>
 </div>
 
@@ -332,7 +332,7 @@ Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/
 <a href="#factor-functions-php">php</a>
 </div>
 <div class="tab active" id="factor-functions-json">
-```json
+<code highlight="json">
 {
     "field_value_factor": {
         "field": "rate",
@@ -341,10 +341,10 @@ Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/
         "missing": 1
     }
 }
-```
+</code>
 </div>
 <div class="tab" id="factor-functions-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -361,7 +361,7 @@ $score->addFieldValueFactorFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-```
+</code>
 </div>
 </div>
 
@@ -377,7 +377,7 @@ Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/
 <a href="#decay-functions-php">php</a>
 </div>
 <div class="tab active" id="decay-functions-json">
-```json
+<code highlight="json">
 {
     "DECAY_FUNCTION": {
         "FIELD_NAME": {
@@ -388,10 +388,10 @@ Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/
         }
     }
 }
-```
+</code>
 </div>
 <div class="tab" id="decay-functions-php">
-```php
+<code highlight="php">
 <?php
 use Elastica\Query;
 
@@ -410,7 +410,7 @@ $score->addDecayFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-```
+</code>
 </div>
 </div>
 
@@ -438,12 +438,12 @@ Avec toutes ces fonctionnalités, vous dévriez être capables de gérer la pert
 L'important est de ne pas se limiter à la configuration de base et d'adapter l'algorithme de score à vos données et vos besoins.
 
 <style type="text/css">
-    .detail article#article .tabs .nav { background: #ccc; }
-    .detail article#article .tabs .nav:before, .tabs .nav:after { content: ""; display: table; clear: both; }
-    .detail article#article .tabs .nav a { float: left; display: block; padding: 5px 10px; margin: 0; text-decoration: none; }
-    .detail article#article .tabs .nav a.active { background-color: #444; color: #fff; }
-    .detail article#article .tabs .tab { display: none; clear: both; }
-    .detail article#article .tabs .tab.active { display: block; }
+    .container .tabs .nav { background: #ccc; }
+    .container .tabs .nav:before, .tabs .nav:after { content: ""; display: table; clear: both; }
+    .container .tabs .nav a { float: left; display: block; padding: 5px 10px; margin: 0; text-decoration: none; }
+    .container .tabs .nav a.active { background-color: #444; color: #fff; }
+    .container .tabs .tab { display: none; clear: both; }
+    .container .tabs .tab.active { display: block; }
 </style>
 
 <script type="text/javascript">

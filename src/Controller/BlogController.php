@@ -34,6 +34,14 @@ class BlogController extends AbstractController
     }
 
     /**
+     * @Route("/tag/{tag}", name="blog_tag")
+     */
+    public function tag()
+    {
+        return $this->render('blog/tag.html.twig');
+    }
+
+    /**
      * @Route("/{article}", name="blog_article", requirements={"article"=".+"})
      */
     public function article(Article $article)
@@ -41,13 +49,5 @@ class BlogController extends AbstractController
         return $this->render('blog/article.html.twig', [
             'article' => $article,
         ])->setLastModified($article->lastModified);
-    }
-
-    /**
-     * @Route("/tag/{tag}", name="blog_tag")
-     */
-    public function tag()
-    {
-        return $this->render('blog/tag.html.twig');
     }
 }

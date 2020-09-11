@@ -63,7 +63,7 @@ En local (DEV), nous prenons le parti de lancer Mongo sur l'application *front* 
 
 Par défaut, Meteor lance l'**application** sur le port **3000** et **Mongo** est ouvert sur le port **3001**.
 
-```
+```shell
 ➜  front  meteor
 [...]
 => App running at: http://localhost:3000/
@@ -71,7 +71,7 @@ Par défaut, Meteor lance l'**application** sur le port **3000** et **Mongo** es
 
 Il reste à lancer l'application *back* en spécifiant l'host Mongo sur lequel se connecter et le port sur lequel l'application sera accessible (3000 étant déjà occupé par le *front*).
 
-```
+```shell
 ➜  back  MONGO_URL=mongodb://localhost:3001/meteor MONGO_OPLOG_URL=mongodb://localhost:3001/local meteor -p=3080
 [...]
 => App running at: http://localhost:3080/

@@ -1,17 +1,19 @@
-code {
-    padding: 0.4em 0.8em;
-    background: $code-background;
-    color: #fff;
+[class*="language-"] {
     display: block;
+    color: #ccc;
+    background: $code-background;
     font-family: $code-font;
+    padding: 0.4em 0.8em;
+    font-size: 1em;
+    text-align: left;
     white-space: pre;
     word-spacing: normal;
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
+    overflow: auto;
     tab-size: 4;
     hyphens: none;
-    overflow-x: auto;
 }
 
 .inline-code {
@@ -22,81 +24,66 @@ code {
     font-family: $code-font;
 }
 
-code.success {
-    color: $monokai-green;
-    margin-left: -0.5em;
-    border-left: 0.5em solid $monokai-green;
-}
-
-code.error {
-    color: $monokai-error;
-    border-left: 0.5em solid $monokai-error;
-    margin-left: -0.5em;
-}
-
-code[data-output] {
-    position: relative;
-}
-code[data-output]::before {
-    content: attr(data-output);
-    color: $monokai-mutted;
-    margin-right: 1em;
-}
-
 .token.comment,
 .token.block-comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: $monokai-mutted;
+    color: $code-mutted;
+}
+
+.token.property,
+.token.delimiter {
+    color:$code-white;
 }
 
 .token.punctuation {
-    color: $monokai-grey;
+    color: $code-grey;
 }
 
-.token.operator,
-.token.entity,
-.token.url,
 .token.tag,
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-    color: $monokai-red;
+    color: $code-red;
 }
 
-.token.inserted {
-    color: $monokai-green;
+.token.class-name,
+.token.function-name,
+.token.function {
+    color: $code-green;
 }
 
 .token.boolean,
 .token.number {
-    color: $monokai-purple;
+    color: $code-purple;
 }
 
-.token.property,
-.token.class-name,
 .token.constant,
-.token.symbol {
-    color: $monokai-orange;
+.token.symbol,
+.token.variable {
+    color: $code-orange;
 }
 
-.token.function-name,
-.token.function,
 .token.selector,
 .token.important,
 .token.atrule,
 .token.keyword,
 .token.builtin {
-    color: $monokai-blue;
+   color: $code-red;
 }
 
 .token.string,
 .token.char,
 .token.attr-value,
-.token.regex,
-.token.variable {
-    color: $monokai-yellow;
+.token.regex, {
+    color: $code-yellow;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: $code-blue;
 }
 
 .token.important,
@@ -109,4 +96,8 @@ code[data-output]::before {
 
 .token.entity {
     cursor: help;
+}
+
+.token.inserted {
+    color: $code-green;
 }

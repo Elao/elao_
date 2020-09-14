@@ -4,6 +4,9 @@
   background: $color-primary;
 
   .title {
+    margin: 0 0 40px;
+    font-family: 'faktum bold';
+    font-size: 36px;
     color: $color-tertiary;
   }
 
@@ -35,6 +38,21 @@
 
     > span {
       margin: 0 0 15px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .brick-visit {
+    .title {
+      margin: 10px 0 20px;
+      font-size: 22px;
+    }
+
+    .address__content {
+      > span {
+        margin: 0 0 7px;
+      }
     }
   }
 }

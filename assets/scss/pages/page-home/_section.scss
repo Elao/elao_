@@ -129,6 +129,8 @@
 
     .btn {
       margin: 20px auto 0;
+      width: 100%;
+      max-width: 400px;
       justify-content: center;
     }
   }
@@ -152,6 +154,7 @@
   .section__content {
     .btn {
       width: 100%;
+      max-width: unset;
     }
   }
 }

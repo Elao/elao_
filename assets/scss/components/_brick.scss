@@ -1,0 +1,56 @@
+.bricks {
+  margin-left: -20px;
+  margin-right: -20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.brick {
+  margin: 20px;
+  padding: 60px 100px;
+  min-width: calc(50% - 40px);
+  width: calc(50% - 40px);
+  display: flex;
+  flex-direction: column;
+  font-family: 'antikor regular';
+  font-size: 20px;
+  color: #fff;
+}
+
+.brick--large {
+  padding: 100px;
+  min-width: calc(100% - 40px);
+  width: calc(100% - 40px);
+}
+
+@media (max-width: $screen-sm) {
+  .bricks {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .brick {
+    margin: 10px;
+    padding: 25px !important;
+    min-width: calc(50% - 20px);
+    width: calc(50% - 20px);
+    font-size: 16px;
+  }
+
+  .brick--large {
+    min-width: calc(100% - 20px);
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .bricks {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .brick {
+    margin: 5px 0;
+    width: 100% !important;
+  }
+}

@@ -16,7 +16,7 @@
   a {
     display: flex;
     font-family: 'antikor medium';
-    color: $secondary;
+    color: $color-primary;
     text-decoration: none;
     transition: color ease-in .2s;
 
@@ -35,7 +35,7 @@
         bottom: 1px;
         right: -10px;
         content: '';
-        background-color: $primary;
+        background-color: $color-brand;
         opacity: 0;
         transform: translateY(2px);
         transition: transform ease-in .2s, opacity ease-in .2s;
@@ -46,7 +46,7 @@
   a:hover,
   a:focus,
   a:active {
-    color: darken($secondary, 10%);
+    color: darken($color-primary, 10%);
 
     span {
       &:after {
@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: $screen-tablet) {
+@media (max-width: $screen-sm) {
   .nav {
     display: none;
   }

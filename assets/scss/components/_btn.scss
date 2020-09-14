@@ -1,0 +1,122 @@
+.btn {
+  padding: 0 50px;
+  height: 67px;
+  display: flex;
+  align-items: center;
+  font-family: antikor bold;
+  font-size: 18px !important;
+  text-decoration: none;
+  transition: background ease-in .1s;
+
+  > span {
+    position: relative;
+    line-height: initial !important;
+  }
+}
+
+.btn--brand {
+  color: #fff;
+  background: $color-brand;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-brand;
+    background: $color-secondary;
+  }
+}
+
+.btn--primary {
+  color: #fff;
+  background: $color-primary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: darken($color-primary, 5%);
+  }
+}
+
+.btn--secondary {
+  color: $color-brand;
+  background: $color-secondary;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff;
+    background: $color-brand;
+  }
+}
+
+.btn--animated {
+  .icon {
+    width: 40px;
+    position: absolute;
+    bottom: -8px;
+    right: -42px;
+    transition: transform .3s;
+
+    .base,
+    .tip {
+      fill: none;
+      stroke-width: 3.5;
+    }
+
+    .base {
+      transform: scaleX(0.5);
+      transition: transform .3s;
+    }
+
+    .tip {
+      transform: rotate(-45deg) translate(-6px, 0);
+      transform-origin: bottom;
+      opacity: 0;
+      transition: transform .3s, opacity .3s;
+
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    .icon {
+      transform: translateX(40px);
+
+      .base { transform: scaleX(1); }
+
+      .tip {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &.btn--brand {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-primary;
+    }
+  }
+
+  &.btn--primary {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-brand;
+    }
+  }
+
+  &.btn--secondary {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-primary;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .btn {
+    font-size: 16px !important;
+  }
+}

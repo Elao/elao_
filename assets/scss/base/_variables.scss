@@ -1,12 +1,14 @@
-// colors
-$primary: #ff4345;
-$secondary: #7f1A55;
-$tertiary: #fee3e4;
+// Colors
+$color-brand: #ff4345;
+$color-primary: #7f1A55;
+$color-secondary: #fee3e4;
+$color-tertiary: #f4756d;
+$color-dark: #0d3a5a;
+$color-light: #2ecccb;
+$color-text: #390725;
 
-// breakpoints
-$screen-desktop: 1280px;
-$screen-tablet: 950px;
-$screen-phone: 450px;
-
-// layout
-$header-height: 120px;
+// Breakpoints
+$screen-lg: 1280px; // desktop
+$screen-md: 1220px; // laptop
+$screen-sm: 995px;  // tablet
+$screen-xs: 760px;  // phone

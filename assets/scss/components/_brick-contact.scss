@@ -1,0 +1,32 @@
+.brick-contact {
+  @extend .brick;
+
+  background: $color-tertiary;
+
+  p {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0 0 40px;
+    font-family: 'faktum bold';
+    font-size: 36px;
+    color: $color-primary;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .brick-contact {
+    .title {
+      margin: 10px 0 20px;
+      font-size: 22px;
+    }
+  }
+}

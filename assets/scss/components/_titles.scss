@@ -1,0 +1,75 @@
+h1, .h1 {
+  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: faktum bold;
+  font-size: 58px;
+  color: $color-brand;
+
+  span {
+    color: $color-primary;
+
+    &:last-of-type {
+      &:after {
+        color: $color-brand;
+        content: '_';
+      }
+    }
+  }
+}
+
+.h1--small {
+  margin: 0;
+  font-size: 36px;
+}
+
+h2, .h2 {
+  margin-top: 0;
+  padding-top: 65px;
+  position: relative;
+  font-family: antikor bold;
+  font-size: 32px;
+  color: $color-primary;
+  line-height: 1.45 !important;
+
+  &:before {
+    width: 50px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: $color-tertiary;
+  }
+}
+
+@media (max-width: $screen-md) {
+  h1, .h1 {
+    margin-left: 70px;
+    margin-bottom: 70px;
+  }
+
+  h2, .h2 {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  h1, .h1 {
+    margin-left: 40px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  h1, .h1 {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  h2, .h2 {
+    font-size: 18px;
+    line-height: 1.6 !important;
+  }
+}

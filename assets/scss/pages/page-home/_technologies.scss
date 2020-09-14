@@ -1,0 +1,41 @@
+.technologies {
+  margin: 40px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.technologies__item {
+  margin: 0 0 40px;
+  min-width: 190px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+
+  img {
+    margin-right: 20px;
+    width: 45px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .technologies__item {
+    margin: 0 0 25px;
+    min-width: 50%;
+    font-size: 20px;
+
+    img {
+      margin-right: 15px;
+      width: 35px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .technologies__item {
+    font-size: 16px;
+  }
+}

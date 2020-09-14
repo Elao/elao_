@@ -126,29 +126,76 @@
                 {% endblock %}
             </div>
         </header>
+        <div class="container">
         <main>
-            <div class="container">
-                {% block content %}{% endblock %}
-            </div>
+            {% block content %}{% endblock %}
         </main>
         {% block footer %}
             <footer class="footer">
-                <section>
-                    <h4>Nos liens</h4>
-                    {#% for entry in site.menus.main|sortByWeight %}
-                        <a class="{% if url(page) == url(entry.url) %} selected{% endif %}" href="{{ url(entry.url) }}">{{ entry.name }}</a>
-                        {%- if not loop.last %} - {% endif %}
-                    {% endfor %#}
+                <section class="footer__links">
+                    <p class="h1 h1--small">
+                        elao
+                        <span>développe</span>
+                         <span>du lien</span>
+                    </p>
+                    <div class="links">
+                        <ul>
+                            <li>
+                                <a href="#">Nos services</a>
+                            </li>
+                            <li>
+                                <a href="#">Nos études de cas</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">Notre méthodologie</a>
+                            </li>
+                            <li>
+                                <a href="#">La tribu</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Nos valeurs</a>
+                            </li>
+                            <li>
+                                <a href="#">Nous recrutons <span class="bullet">3</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon--github"></i>
+                                    Github
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon--twitter"></i>
+                                    Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon icon--instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </section>
-                <section>
-                    <h4>Nous suivre</h4>
-
-                    {#% for entry in site.menus.social|sortByWeight %}
-                        <a href="{{ url(entry.url) }}">{{ entry.name }}</a>
-                        {%- if not loop.last %} - {% endif %}
-                    {% endfor %#}
+                <section class="footer__legals">
+                    <span>© 2014/{{ 'now'|date('Y') }} - ELAO - Tous droits réservés</span>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Protection des données</a>
                 </section>
             </footer>
+        </div>
         {% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}

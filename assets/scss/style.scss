@@ -6,11 +6,20 @@
 @import "base/_layout";
 @import "base/_utilities";
 
-
 @import "components/_header";
 @import "components/_nav";
 @import "components/_nav-mobile";
 @import "components/_nav-toggle";
 @import "components/_logo";
+@import "components/_btn";
+@import "components/_brick";
+@import "components/_brick-visit";
+@import "components/_brick-contact";
+@import "components/_brick-team";
+@import "components/_footer";
+@import "components/_bullet";
+@import "components/_animated-block";
 
-// test3
+@import "components/_titles";
+
+@import "pages/_page-home";

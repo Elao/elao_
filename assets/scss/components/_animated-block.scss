@@ -1,0 +1,150 @@
+.animated-block {
+  padding: 25px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  font-family: faktum bold;
+  font-size: 18px;
+  color: $color-primary;
+  border: solid 4px $color-secondary;
+  background: transparent;
+  transition: background ease-in-out .2s;
+
+  &:hover {
+    background: $color-secondary;
+
+    .animated-block__icon {
+      svg.browser {
+        .gear {
+          transform: rotate(-90deg);
+        }
+
+        .mask {
+          fill: $color-secondary;
+        }
+      }
+
+      svg.pen {
+        path {
+          transform: translateX(5px);
+        }
+
+        rect {
+          width: 5px;
+        }
+      }
+
+      svg.bulb {
+        .light {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+
+    .animated-block__content {
+      .icon {
+        transform: translateX(10px);
+      }
+    }
+  }
+}
+
+.animated-block__icon {
+  svg.browser {
+    rect,
+    circle,
+    path {
+      fill: $color-primary;
+    }
+
+    .gear {
+      transform-origin: 37px 23px;
+      transition: transform ease-in .2s;
+    }
+
+    .mask {
+      fill: #fff;
+      transition: fill ease-in-out .2s;
+    }
+  }
+
+  svg.pen {
+    path {
+      fill: $color-primary;
+      transition: transform ease-in .2s;
+    }
+
+    rect {
+      transform-origin: 0 0;
+      width: 0;
+      fill: $color-primary;
+      transition: width ease-in .2s;
+    }
+  }
+
+  svg.bulb {
+    .light {
+      opacity: 0;
+      transform: scale(.9);
+      transform-origin: 11px 11px;
+      transition: transform ease-in .2s, opacity ease-in .2s;
+    }
+
+    polygon {
+      fill: $color-primary;
+    }
+
+    path,
+    line {
+      fill: none;
+      stroke: $color-primary;
+    }
+  }
+}
+
+.animated-block__content {
+  .title {
+    margin: 0 0 5px;
+    display: flex;
+    font-family: antikor regular;
+    font-size: 18px;
+    color: #f4756d;
+  }
+
+  .icon {
+    margin-left: 15px;
+    color: $color-brand;
+    font-size: 20px;
+    transition: transform ease-in-out .2s;
+  }
+
+  p {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .animated-block {
+    padding: 20px 25px;
+    height: 135px;
+    font-size: 16px;
+  }
+
+  .animated-block__icon {
+    svg {
+      width: 35px;
+    }
+  }
+
+  .animated-block__content {
+        .title {
+      font-size: 16px;
+    }
+  }
+}

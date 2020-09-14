@@ -1,0 +1,58 @@
+.brick-visit {
+  @extend .brick;
+
+  background: $color-primary;
+
+  .title {
+    margin: 0 0 40px;
+    font-family: 'faktum bold';
+    font-size: 36px;
+    color: $color-tertiary;
+  }
+
+  .icon {
+    margin-right: 25px;
+    font-size: 25px;
+  }
+
+  p {
+    margin: 0 0 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .address {
+    display: flex;
+    align-items: flex-start !important;
+
+    .icon {
+      margin-right: 20px;
+      font-size: 30px;
+      line-height: 1;
+    }
+  }
+
+  .address__content {
+    display: flex;
+    flex-direction: column;
+
+    > span {
+      margin: 0 0 15px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .brick-visit {
+    .title {
+      margin: 10px 0 20px;
+      font-size: 22px;
+    }
+
+    .address__content {
+      > span {
+        margin: 0 0 7px;
+      }
+    }
+  }
+}

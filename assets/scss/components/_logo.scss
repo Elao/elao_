@@ -3,7 +3,7 @@
 
   path,
   rect {
-    fill: $primary;
+    fill: $color-brand;
   }
 }
 
@@ -25,9 +25,9 @@
   }
 }
 
-@media (max-width: $screen-tablet) {
+@media (max-width: $screen-sm) {
   .logo {
-    width: 55px;
+    width: 75px;
   }
 }
 

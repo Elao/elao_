@@ -1,0 +1,265 @@
+.banner {
+  margin-bottom: 320px;
+  position: relative;
+}
+
+.banner__content {
+  padding: 0 110px;
+  height: 310px;
+  width: 950px;
+  display: flex;
+  align-items: center;
+  font-family: antikor regular;
+  font-size: 32px;
+  color: #fff;
+  background: $color-brand;
+
+  p {
+    width: 510px;
+  }
+}
+
+.banner__image {
+  position: absolute;
+  top: -250px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  figure {
+    margin: 0 0 22px;
+    width: 100%;
+    position: relative;
+    display: flex;
+
+    .image {
+      height: 335px;
+      width: 510px;
+      background: url(https://as2.ftcdn.net/jpg/02/94/55/87/500_F_294558791_Hb7lQE8IHJiAC6nxiIAcAr7gVRkl4fzC.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    figcaption {
+      padding: 20px 25px;
+      height: 120px;
+      width: 220px;
+      position: absolute;
+      bottom: 20px;
+      left: 22px;
+      display: flex;
+      flex-direction: column;
+      font-family: faktum regular;
+      font-size: 18px;
+      color: $color-brand;
+      background: $color-secondary;
+
+      span {
+        margin: 0 0 11px;
+        font-family: antikor bold;
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.banner__list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: -220px;
+  left: 200px;
+  display: flex;
+  list-style: none;
+
+  .item {
+    margin: 0 20px;
+    padding: 45px 30px 25px;
+    height: 260px;
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    font-family: faktum regular;
+    font-size: 20px;
+    color: $color-brand;
+    text-decoration: none;
+    background: $color-secondary;
+
+    .number {
+      font-family: antikor medium;
+      color: $color-primary;
+      font-size: 76px;
+    }
+
+    small {
+      font-size: 16px;
+      line-height: 2;
+    }
+
+    .link {
+      margin-top: auto;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      font-family: antikor bold;
+      font-size: 18px;
+      color: $color-primary;
+
+      .icon {
+        margin-left: 12px;
+        font-size: 23px;
+        color: $color-brand;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .banner {
+    margin-bottom: 845px;
+  }
+
+  .banner__content {
+    margin-left: auto;
+    padding: 0 70px;
+    width: 70%;
+    min-width: 250px;
+    height: 230px;
+    font-size: 24px;
+
+    p {
+      width: unset;
+    }
+  }
+
+  .banner__image {
+    width: 100%;
+    top: 500px;
+    align-items: center;
+
+    figure {
+      margin: 0;
+
+      .image {
+        width: 100%;
+        height: 500px;
+      }
+
+      figcaption {
+        width: 325px;
+        bottom: 102px;
+        left: unset;
+        transform: none;
+        right: 20px;
+      }
+    }
+
+    .btn {
+      z-index: 1;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+    }
+  }
+
+  .banner__list {
+    left: 0;
+    top: 200px;
+    width: 100%;
+
+    .item {
+      margin: 0 15px;
+      padding: 15px 40px;
+      width: 300px;
+      height: 230px;
+      font-size: 20px;
+
+      .link {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .banner {
+    margin-bottom: 1030px;
+  }
+
+  .banner__image {
+    top: 820px;
+
+    figure {
+      .image {
+        margin: 0;
+        height: 400px;
+      }
+    }
+  }
+
+  .banner__list {
+    flex-direction: column;
+
+    .item {
+      margin: 5px 0;
+      height: 185px;
+      width: 70%;
+      min-width: 250px;
+
+      .number {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner {
+    margin-bottom: 1000px;
+  }
+
+  .banner__content {
+    padding: 0 20px;
+    height: 160px;
+    font-size: 18px;
+  }
+
+  .banner__image {
+    top: 560px;
+
+    figure {
+      margin: 0 0 90px;
+
+      figcaption {
+        width: 280px;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+        right: unset;
+      }
+    }
+
+    .btn {
+      width: 280px;
+      position: static;
+    }
+  }
+
+  .banner__list {
+    top: 140px;
+
+    .item {
+      padding: 15px 20px;
+      height: 120px;
+      font-size: 18px;
+
+      .number {
+        font-size: 32px;
+      }
+
+      .link {
+        font-size: 14px;
+      }
+    }
+  }
+}

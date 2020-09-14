@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (max-width: $screen-tablet) {
+@media (max-width: $screen-sm) {
   .nav-toggle {
     margin: 0;
     padding: 3px;
@@ -12,13 +12,13 @@
     background: transparent;
 
     .icon {
-      font-size: 18px;
+      font-size: 20px;
     }
   }
 
   .nav-toggle--open {
     .icon {
-      color: $primary;
+      color: $color-brand;
     }
   }
 

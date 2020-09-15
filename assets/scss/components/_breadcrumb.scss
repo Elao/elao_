@@ -1,0 +1,39 @@
+.breadcrumb {
+  margin-left: 110px;
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+
+.breadcrumb__item {
+  padding-right: 20px;
+  position: relative;
+  font-family: 'antikor bold';
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color: $color-brand;
+    content: '/';
+    transform: translateY(-50%);
+  }
+
+  &:last-of-type {
+    &:after {
+      display: none;
+    }
+  }
+
+  a {
+    color: $color-text;
+    text-decoration: none;
+    transition: color ease-in .1s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-brand;
+    }
+  }
+}

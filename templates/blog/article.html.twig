@@ -1,13 +1,38 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+  <ul class="breadcrumb">
+    <li class="breadcrumb__item">
+      <a href="#">Blog</a>
+    </li>
+    <li class="breadcrumb__item">
+      <a href="#">Comprendre le cache du client Graphql Apollo</a>
+    </li>
+  </ul>
+
   <img src="{{ asset(article.thumbnail) }}" />
 
-  <div>
-    <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-    <p>Écrit par {{ article.author.name }}<p>
-    <p>Publication {{ article.publishdate|format_date('long') }}<p>
-    <p>Modification {{ article.lastModified|format_date('long') }}<p>
+  <div class="article-info">
+    <div class="article-info__author">
+      <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
+      <span class="name">Écrit par <strong>{{ article.author.name }}</strong></span>
+    </div>
+    <div class="article-info__author article-info__author--multiple">
+      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+      <span class="name">
+        Écrit par
+        <strong>{{ article.author.name }}</strong>
+        <strong>{{ article.author.name }}</strong>
+        <strong>{{ article.author.name }}</strong>
+        <strong>{{ article.author.name }}</strong>
+      </span>
+    </div>
+    <div class="article-info__date">
+      <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
+      <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+    </div>
   </div>
 
   <div>

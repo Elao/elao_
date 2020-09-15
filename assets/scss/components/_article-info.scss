@@ -1,0 +1,41 @@
+.article-info {
+  padding: 40px 60px;
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'antikor regular';
+  color: #fff;
+  background: $color-dark;
+
+  strong {
+    margin-top: 2px;
+    font-family: 'faktum bold';
+    color: $color-light;
+  }
+}
+
+.article-info__author {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 15px;
+    border-radius: 50%;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.article-info__date {
+  display: flex;
+
+  span {
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+}

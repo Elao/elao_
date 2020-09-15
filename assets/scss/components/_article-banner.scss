@@ -1,0 +1,14 @@
+.article-banner {
+  margin-bottom: 600px; // article-header height
+  height: 450px;
+  position: relative;
+}
+
+.article-banner__cover {
+  height: 100%;
+  width: 815px;
+  background: #f1f1f1;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}

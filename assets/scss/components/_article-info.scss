@@ -1,11 +1,15 @@
 .article-info {
   padding: 40px 60px;
   width: 390px;
+  position: absolute;
+  bottom: 10px;
+  right: 120px;
   display: flex;
   flex-direction: column;
   font-family: 'antikor regular';
   color: #fff;
   background: $color-dark;
+  z-index: 1;
 
   strong {
     margin-top: 2px;
@@ -21,12 +25,33 @@
 
   img {
     margin-right: 15px;
+    width: 60px;
+    border: solid 3px $color-dark;
     border-radius: 50%;
   }
 
   .name {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.article-info__author--multi {
+  flex-direction: column;
+  align-items: flex-start;
+
+  .image {
+    margin-bottom: 10px;
+    position: relative;
+    left: -45px;
+    height: 60px;
+
+    @for $i from 1 through 5 {
+      img:nth-child(#{$i}) {
+        position: absolute;
+        left: #{$i * 45}px;
+      }
+    }
   }
 }
 

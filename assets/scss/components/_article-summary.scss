@@ -1,0 +1,25 @@
+.article-summary {
+  margin: 50px 0 0;
+  padding-left: 45px;
+  font-family: 'antikor bold';
+  font-size: 16px;
+  color: $color-text;
+  list-style: upper-roman;
+}
+
+.article-summary__item {
+  margin-bottom: 20px;
+  padding: 0 30px;
+
+  a {
+    color: $color-secondary;
+    text-decoration: none;
+    transition: color ease-in .1s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+}

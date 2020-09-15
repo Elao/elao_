@@ -1,0 +1,20 @@
+.article-tag-list {
+  margin: 0;
+  padding: 60px 0 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  list-style: none;
+}
+
+.article-tag-list__item {
+  margin: 10px 0;
+
+  a {
+    font-family: 'antikor bold';
+    font-size: 18px;
+    color: $color-brand;
+    text-decoration: none;
+  }
+}

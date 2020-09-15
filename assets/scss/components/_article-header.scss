@@ -1,0 +1,18 @@
+.article-header {
+  padding: 35px 60px;
+  width: 900px;
+  position: absolute;
+  top: 410px;
+  right: 0;
+  font-family: 'faktum regular';
+  font-size: 20px;
+  color: #fff;
+  background: $color-brand;
+
+  h1 {
+    margin: 45px 0 20px;
+    font-family: 'antikor bold';
+    font-size: 32px;
+    color: #fff;
+  }
+}

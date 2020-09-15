@@ -10,43 +10,74 @@
     </li>
   </ul>
 
-  <img src="{{ asset(article.thumbnail) }}" />
+  <div class="article-banner">
+    <div class="article-banner__cover" style="background: url({{ asset(article.thumbnail) }})"></div>
 
-  <div class="article-info">
-    <div class="article-info__author">
-      <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-      <span class="name">Écrit par <strong>{{ article.author.name }}</strong></span>
+    <div class="article-info">
+      <!-- todo : this is if the article has a single author -->
+     {#  <div class="article-info__author">
+        <div class="image">
+          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
+        </div>
+        <span class="name">Écrit par <strong>{{ article.author.name }}</strong></span>
+      </div> #}
+      <!-- todo : this is if the article has multiple authors -->
+      <div class="article-info__author article-info__author--multi">
+        <div class="image">
+          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
+        </div>
+        <span class="name">
+          Écrit par
+          <strong>{{ article.author.name }}</strong>
+          <strong>{{ article.author.name }}</strong>
+          <strong>{{ article.author.name }}</strong>
+          <strong>{{ article.author.name }}</strong>
+          <strong>{{ article.author.name }}</strong>
+        </span>
+      </div>
+      <!-- todo : if the article has more than 5 co-authors (too long, won't fit) , "la team elao" is the author -->
+      {# <div class="article-info__author">
+        <div class="image">
+          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
+        </div>
+        <span class="name">Écrit par <strong>La team elao</strong></span>
+      </div> #}
+      <div class="article-info__date">
+        <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
+        <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+      </div>
     </div>
-    <div class="article-info__author article-info__author--multiple">
-      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      <span class="name">
-        Écrit par
-        <strong>{{ article.author.name }}</strong>
-        <strong>{{ article.author.name }}</strong>
-        <strong>{{ article.author.name }}</strong>
-        <strong>{{ article.author.name }}</strong>
-      </span>
-    </div>
-    <div class="article-info__date">
-      <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
-      <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+
+    <ul class="article-tag-list">
+      {% for tag in article.tags %}
+        <li class="article-tag-list__item">
+          <a href="{{ path('blog_tag', { tag: tag }) }}">#{{ tag }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="article-header">
+      <h1>{{ article.title }}</h1>
+      <p>{{ article.description }}</p>
+
+      <ul class="article-summary">
+        <li class="article-summary__item">
+          <a href="#">Introduction</a>
+        </li>
+        <li class="article-summary__item">
+          <a href="#">Contexte</a>
+        </li>
+        <li class="article-summary__item">
+          <a href="#">Intégrer la police au build React Native</a>
+        </li>
+        <li class="article-summary__item">
+          <a href="#">Temporibus eveniet est ut dolore</a>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <div>
-    {% for tag in article.tags %}
-      <a href="{{ path('blog_tag', { tag: tag }) }}">#{{ tag }}</a>
-    {% endfor %}
-  </div>
-
-  <div>
-    <h1>{{ article.title }}</h1>
-    <p>{{ article.description }}</p>
-  </div>
-
-  <div>
+  {# <div>
     {{ article.content|raw }}
   </div>
 
@@ -66,6 +97,6 @@
     {% endif %}
   </div>
 
-  <h4>Ces articles pourraient vous intéresser:</h4>
+  <h4>Ces articles pourraient vous intéresser:</h4> #}
 
 {% endblock content %}

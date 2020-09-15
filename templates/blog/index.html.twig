@@ -8,7 +8,7 @@
         {% if loop.first %}
             <div>
                 <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.publishdate|date("d/m/Y") }}
+                {{ article.publishdate|format_date('medium') }}
                 {{ article.author.name }}
                 <a href="{{ path('blog_article', { article: article.slug }) }}">
                     {{ article.title }}
@@ -18,7 +18,7 @@
         {% elseif loop.index < 3 %}
             <div>
                 <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.publishdate|date("d/m/Y")  }}
+                {{ article.publishdate|format_date('medium')  }}
                 {{ article.title }}
                 {{ article.description }}
                 <a href="{{ path('blog_article', { article: article.slug }) }}">

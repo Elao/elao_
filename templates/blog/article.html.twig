@@ -6,8 +6,8 @@
   <div>
     <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
     <p>Écrit par {{ article.author.name }}<p>
-    <p>Publication {{ article.publishdate|date("d/m/Y") }}<p>
-    <p>Modification {{ article.lastModified|date("d/m/Y") }}<p>
+    <p>Publication {{ article.publishdate|format_date('long') }}<p>
+    <p>Modification {{ article.lastModified|format_date('long') }}<p>
   </div>
 
   <div>

@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Model\Article;
 use Content\ContentManager;
+use Content\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,19 +29,27 @@ class BlogController extends AbstractController
     public function index(): Response
     {
         $articles = $this->manager->getContents(Article::class, ['date' => false]);
-        $lastModified = max(array_map(fn ($article) => $article->lastModified, $articles));
 
         return $this->render('blog/index.html.twig', [
             'articles' => $articles,
-        ])->setLastModified($lastModified);
+        ])->setLastModified(ContentUtils::max($articles, 'lastModified'));
     }
 
     /**
      * @Route("/tag/{tag}", name="blog_tag")
      */
-    public function tag(): Response
+    public function tag(string $tag): Response
     {
-        return $this->render('blog/tag.html.twig');
+        $articles = $this->manager->getContents(
+            Article::class,
+            ['date' => false],
+            fn ($article) => $article->hasTag($tag)
+        );
+
+        return $this->render('blog/tag.html.twig', [
+            'tag' => $tag,
+            'articles' => $articles,
+        ])->setLastModified(ContentUtils::max($articles, 'lastModified'));
     }
 
     /**

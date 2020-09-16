@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Model\CaseStudy;
 use Content\ContentManager;
+use Content\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,11 +29,10 @@ class CaseStudyController extends AbstractController
     public function index(): Response
     {
         $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false]);
-        $lastModified = max(array_map(fn (CaseStudy $caseStudy) => $caseStudy->lastModified, $caseStudies));
 
         return $this->render('case_study/index.html.twig', [
             'caseStudies' => $caseStudies,
-        ])->setLastModified($lastModified);
+        ])->setLastModified(ContentUtils::max($caseStudies, 'lastModified'));
     }
 
     /**

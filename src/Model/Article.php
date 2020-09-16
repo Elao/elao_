@@ -32,4 +32,9 @@ class Article
      * @var string[]
      */
     public ?array $tableOfContent = null;
+
+    public function hasTag(string $tag): bool
+    {
+        return \in_array($tag, $this->tags, true);
+    }
 }

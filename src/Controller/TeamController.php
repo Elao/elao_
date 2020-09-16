@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Model\Member;
 use Content\ContentManager;
+use Content\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,9 +28,11 @@ class TeamController extends AbstractController
      */
     public function team(): Response
     {
+        $members = $this->manager->getContents(Member::class, ['name' => true]);
+
         return $this->render('team/index.html.twig', [
-            'members' => $this->manager->getContents(Member::class, ['name' => true]),
-        ]);
+            'members' => $members,
+        ])->setLastModified(ContentUtils::max($members, 'lastModified'));
     }
 
     /**
@@ -39,6 +42,6 @@ class TeamController extends AbstractController
     {
         return $this->render('team/member.html.twig', [
             'member' => $member,
-        ]);
+        ])->setLastModified($member->lastModified);
     }
 }

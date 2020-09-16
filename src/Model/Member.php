@@ -21,6 +21,8 @@ class Member
     public ?string $email = null;
     public ?string $avatar = null;
 
+    public ?\DateTimeImmutable $lastModified = null;
+
     public function __construct(
         string $slug,
         string $name,

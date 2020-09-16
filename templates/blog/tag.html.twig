@@ -1,5 +1,7 @@
-{% extends 'base.html.twig' %}
+{% extends 'blog/index.html.twig' %}
 
 {% block content %}
-  Liste des articles taggés
+  Liste des articles taggés "{{ tag }}":
+
+  {{ block('articles') }}
 {% endblock content %}

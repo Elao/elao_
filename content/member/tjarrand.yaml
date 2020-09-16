@@ -1,0 +1,19 @@
+en:
+  display_name: Thomas JARRAND
+  short_bio:    "⚓️ French Web Developer ☕️"
+  long_bio:     ""
+  job_title:    "Lead Web developer"
+
+fr:
+  name:       "Thomas JARRAND"
+  short_bio:   "Lead Développeur Web"
+  long_bio:    "Développeur web depuis 10 ans, Thomas code des deux cotés de la requête HTTP. Poussé par sa curiosité et son enthousiasme, il explore les possibilités du web à travers des projets innovants chez élao ou en développant des jeux vidéo sur son temps libre."
+  job_title:   "Lead Développeur Web"
+
+social:
+  website:         https://thomas.jarrand.fr
+  twitter:         tom32i
+  github:          Tom32i
+  email:           thomas.jarrand@elao.com
+  avatar:          /images/authors/tjarrand.jpg
+  google_plus_id:  ~

@@ -8,17 +8,27 @@ install:
 	composer install
 	npm install
 
+## Start dev server
+start:
+	symfony server:start
+
 ## Watch assets
 watch:
 	npm run watch
 
+## Build static site with assets
+build: build-assets build-content
+
 ## Build assets
-build:
+build-assets:
 	npm run build
 
-## Build the site and serve the static version
-serve-static:
+## Build static site
+build-content:
 	bin/console c:c --env=prod
 	bin/console content:build --env=prod
+
+## Build the site and serve the static version
+serve-static: build-content
 	open http://localhost:8000
 	php -S localhost:8000 -t build

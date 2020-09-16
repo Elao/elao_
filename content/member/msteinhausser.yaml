@@ -1,0 +1,19 @@
+en:
+  display_name: Maxime Steinhausser
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Certified Symfony Developer"
+
+fr:
+  display_name: Maxime Steinhausser
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Développeur Symfony Certifié"
+
+social:
+  website:         http://www.elao.com
+  twitter:         ~
+  github:          ogizanagi
+  email:           maxime.steinhausser@elao.com
+  avatar:          /images/authors/msteinhausser.png
+  google_plus_id:  ~

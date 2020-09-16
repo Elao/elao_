@@ -1,5 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-  Liste des articles
-{% endblock content %}
+    Liste des articles
+
+    <div>
+    {% for article in articles %}
+        {% if loop.first %}
+            <div>
+                <img src="{{ asset(article.thumbnail) }}" />
+                {{ article.publishdate|format_date('medium') }}
+                {{ article.author.name }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    {{ article.title }}
+                </a>
+                {{ article.description }}
+            </div>
+        {% elseif loop.index < 3 %}
+            <div>
+                <img src="{{ asset(article.thumbnail) }}" />
+                {{ article.publishdate|format_date('medium')  }}
+                {{ article.title }}
+                {{ article.description }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    Lire l'article_
+                </a>
+            </div>
+        {% else %}
+            <div>
+                {{ article.title }}
+                {{ article.description }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    Lire l'article_
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div>
+{% endblock %}

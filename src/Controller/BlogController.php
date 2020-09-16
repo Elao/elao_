@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Model\Article;
+use App\Model\Member;
+use Content\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -10,20 +13,24 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class BlogController extends AbstractController
 {
+    private ContentManager $manager;
+
+    public function __construct(ContentManager $manager)
+    {
+        $this->manager = $manager;
+    }
+
     /**
      * @Route("/", name="blog")
      */
     public function index()
     {
-        return $this->render('blog/index.html.twig');
-    }
+        $articles = $this->manager->getContents(Article::class, ['date' => false]);
+        $lastModified = max(array_map(fn($article) => $article->lastModified, $articles));
 
-    /**
-     * @Route("/{slug}", name="blog_article")
-     */
-    public function article()
-    {
-        return $this->render('blog/article.html.twig');
+        return $this->render('blog/index.html.twig', [
+            'articles' => $articles,
+        ])->setLastModified($lastModified);
     }
 
     /**
@@ -32,5 +39,15 @@ class BlogController extends AbstractController
     public function tag()
     {
         return $this->render('blog/tag.html.twig');
+    }
+
+    /**
+     * @Route("/{article}", name="blog_article", requirements={"article"=".+"})
+     */
+    public function article(Article $article)
+    {
+        return $this->render('blog/article.html.twig', [
+            'article' => $article,
+        ])->setLastModified($article->lastModified);
     }
 }

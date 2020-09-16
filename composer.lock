@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf95aec3edf8c95fd382fe9b43237878",
+    "content-hash": "c1f2fc7b1d3c8311d72fbdf79c4af30c",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -5221,12 +5221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tom32i/content.git",
-                "reference": "2890613203e11a23aaaa960eecf53a62752977dd"
+                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tom32i/content/zipball/2890613203e11a23aaaa960eecf53a62752977dd",
-                "reference": "2890613203e11a23aaaa960eecf53a62752977dd",
+                "url": "https://api.github.com/repos/Tom32i/content/zipball/d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
+                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
                 "shasum": ""
             },
             "require": {
@@ -5297,7 +5297,7 @@
                 "source": "https://github.com/Tom32i/content/tree/master",
                 "issues": "https://github.com/Tom32i/content/issues"
             },
-            "time": "2020-09-10T07:45:45+00:00"
+            "time": "2020-09-11T06:14:17+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -5379,6 +5379,69 @@
                 }
             ],
             "time": "2020-05-21T09:56:39+00:00"
+        },
+        {
+            "name": "twig/intl-extra",
+            "version": "v3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twigphp/intl-extra.git",
+                "reference": "6f1889920753e6ffd72b06fc1d9b363ec2cec540"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twigphp/intl-extra/zipball/6f1889920753e6ffd72b06fc1d9b363ec2cec540",
+                "reference": "6f1889920753e6ffd72b06fc1d9b363ec2cec540",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3",
+                "symfony/intl": "^4.3|^5.0",
+                "twig/twig": "^2.4|^3.0"
+            },
+            "require-dev": {
+                "symfony/phpunit-bridge": "^4.4.9|^5.0.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Twig\\Extra\\Intl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com",
+                    "homepage": "http://fabien.potencier.org",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "A Twig extension for Intl",
+            "homepage": "https://twig.symfony.com",
+            "keywords": [
+                "intl",
+                "twig"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/twig/twig",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-06-22T06:17:05+00:00"
         },
         {
             "name": "twig/twig",

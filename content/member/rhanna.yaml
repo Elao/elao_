@@ -1,0 +1,19 @@
+en:
+  display_name: Richard HANNA
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Developer"
+
+fr:
+  display_name: Richard HANNA
+  short_bio:    ""
+  long_bio:     ""
+  job_title:    "Développeur"
+
+social:
+  website:         http://www.elao.com
+  twitter:         richardhanna
+  github:          supertanuki
+  email:           richard.hanna@elao.com
+  avatar:          "authors/rhanna.jpg"
+  google_plus_id:  ~

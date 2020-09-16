@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the "Tom32i/Content" bundle.
  *
@@ -22,16 +24,9 @@ class AuthorProcessor implements ProcessorInterface, ContentManagerAwareInterfac
 {
     use ContentManagerAwareTrait;
 
-    public static function isSupported(string $type, $value): bool
-    {
-        return is_a($type, Article::class, true)
-            && !is_null($value)
-            && is_string($value);
-    }
-
     public function __invoke(array &$data, string $type, Content $content): void
     {
-        if (!static::isSupported($type, $data['author'] ?? null)) {
+        if (!is_a($type, Article::class, true) || !isset($data['author'])) {
             return;
         }
 

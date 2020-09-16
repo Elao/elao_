@@ -1,0 +1,16 @@
+includes:
+    - vendor/phpstan/phpstan-strict-rules/rules.neon
+    - vendor/phpstan/phpstan-symfony/extension.neon
+    - vendor/phpstan/phpstan-symfony/rules.neon
+    - vendor/ekino/phpstan-banned-code/extension.neon
+
+parameters:
+    checkMissingIterableValueType: false
+
+    level: 'max'
+
+    paths:
+        - 'src'
+
+    symfony:
+        container_xml_path: '%rootDir%/../../../var/cache/test/App_KernelTestDebugContainer.xml'

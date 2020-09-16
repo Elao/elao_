@@ -12,8 +12,7 @@ header_img:         "images/posts/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:    "elao"
-co_authors:         ["lhoizey"]
+author:             "lhoizey"
 
 ---
 ## Blend runner \o/

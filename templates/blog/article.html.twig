@@ -3,10 +3,10 @@
 {% block content %}
   <ul class="breadcrumb">
     <li class="breadcrumb__item">
-      <a href="#">Blog</a>
+      <a href="{{ path('blog') }}">Blog</a>
     </li>
     <li class="breadcrumb__item">
-      <a href="#">Comprendre le cache du client Graphql Apollo</a>
+      {{ article.title }}
     </li>
   </ul>
 
@@ -14,34 +14,22 @@
     <div class="article-banner__cover" style="background: #f1f1f1 url({{ asset(article.thumbnail) }})"></div>
 
     <div class="article-info">
-      <!-- todo : this is if the article has a single author -->
-      <div class="article-author">
-        <div class="article-author__image">
-          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
+      {% set authors = article.authors|length > 5 ? [null] : article.authors %}
+      {% block author_header %}
+        <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
+          <div class="article-author__image">
+            {% for author in authors %}
+              <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}" />
+            {% endfor %}
+          </div>
+          <span class="article-author__info">
+            Écrit par
+            {% for author in authors %}
+              <strong>{{ author.name|default('La team élao') }}</strong>
+            {% endfor %}
+          </span>
         </div>
-        <span class="article-author__info">Écrit par <strong>{{ article.author.name }}</strong></span>
-      </div>
-      <!-- todo : this is if the article has multiple authors -->
-      <div class="article-author article-author--multi">
-        <div class="article-author__image">
-          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-        </div>
-        <span class="article-author__info">
-          Écrit par
-          <strong>Anne-Laure DE BOISSIEU</strong>
-          <strong>{{ article.author.name }}</strong>
-          <strong>{{ article.author.name }}</strong>
-        </span>
-      </div>
-      <!-- todo : if the article has more than 5 co-authors (too long, won't fit) , "la team elao" is the author -->
-      <div class="article-author">
-        <div class="article-author__image">
-          <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
-        </div>
-        <span class="article-author__info">Écrit par <strong>La team elao</strong></span>
-      </div>
+      {% endblock %}
       <div class="article-info__date">
         <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
         <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
@@ -61,17 +49,15 @@
     </div>
   </div>
 
-  <ul class="table-of-content">
-    <li class="table-of-content__item">
-      <a href="#intro">Introduction</a>
-    </li>
-    <li class="table-of-content__item">
-      <a href="#quas">Quas odio atque</a>
-    </li>
-    <li class="table-of-content__item">
-      <a href="voluptatem">Voluptatem et amet atque</a>
-    </li>
-  </ul>
+  {% if article.tableOfContent %}
+    <ul class="table-of-content">
+      {% for id, title in article.tableOfContent %}
+        <li class="table-of-content__item">
+          <a href="#{{ id }}">{{ title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
   <div class="article-content">
     <main class="article-content__main">
@@ -87,88 +73,38 @@
   </div>
 
   <div class="article-footer">
-    <!-- If the article has one single author -->
-    <div class="article-author">
-      <div class="article-author__image">
-        <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      </div>
-      <span class="article-author__info">Écrit par<strong>{{ article.author.name }}</strong></span>
-      <div class="article-author__social">
-        {% if article.author.twitter %}
-          <a href={{ article.author.twitter }} class="social social--small">
-            <i class="icon icon--twitter" aria-hidden="true"></i>
-            <span class="screen-reader">Compte twitter de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.github %}
-          <a href={{ article.author.github }} class="social social--small">
-            <i class="icon icon--github" aria-hidden="true"></i>
-            <span class="screen-reader">Compte github de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.website %}
-          <a href={{ article.author.website }} class="social social--small">
-            <i class="icon icon--website" aria-hidden="true"></i>
-            <span class="screen-reader">Site personnel de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-      </div>
-    </div>
-    <!-- If the article has mutltiple authors -->
-    <div class="article-author">
-      <div class="article-author__image">
-        <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      </div>
-      <span class="article-author__info">Co-auteur<strong>{{ article.author.name }}</strong></span>
-      <div class="article-author__social">
-        {% if article.author.twitter %}
-          <a href={{ article.author.twitter }} class="social social--small">
-            <i class="icon icon--twitter" aria-hidden="true"></i>
-            <span class="screen-reader">Compte twitter de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.github %}
-          <a href={{ article.author.github }} class="social social--small">
-            <i class="icon icon--github" aria-hidden="true"></i>
-            <span class="screen-reader">Compte github de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.website %}
-          <a href={{ article.author.website }} class="social social--small">
-            <i class="icon icon--website" aria-hidden="true"></i>
-            <span class="screen-reader">Site personnel de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-      </div>
-    </div>
-    <div class="article-author">
-      <div class="article-author__image">
-        <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
-      </div>
-      <span class="article-author__info">Co-auteur<strong>{{ article.author.name }}</strong></span>
-      <div class="article-author__social">
-        {% if article.author.twitter %}
-          <a href={{ article.author.twitter }} class="social social--small">
-            <i class="icon icon--twitter" aria-hidden="true"></i>
-            <span class="screen-reader">Compte twitter de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.github %}
-          <a href={{ article.author.github }} class="social social--small">
-            <i class="icon icon--github" aria-hidden="true"></i>
-            <span class="screen-reader">Compte github de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-        {% if article.author.website %}
-          <a href={{ article.author.website }} class="social social--small">
-            <i class="icon icon--website" aria-hidden="true"></i>
-            <span class="screen-reader">Site personnel de {{ article.author.name }}</span>
-          </a>
-        {% endif %}
-      </div>
-    </div>
+    {% block author_footer %}
+      {% for author in article.authors %}
+        <div class="article-author">
+          <div class="article-author__image">
+            <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}" />
+          </div>
+          <span class="article-author__info">
+            {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
+            <strong>{{ author.name }}</strong>
+          </span>
+          <div class="article-author__social">
+            {% if author.twitter %}
+              <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
+                <i class="icon icon--twitter" aria-hidden="true"></i>
+                <span class="screen-reader">Compte twitter de {{ author.name }}</span>
+              </a>
+            {% endif %}
+            {% if author.github %}
+              <a href="https://github.com/{{ author.github }} "class="social social--small">
+                <i class="icon icon--github" aria-hidden="true"></i>
+                <span class="screen-reader">Compte github de {{ author.name }}</span>
+              </a>
+            {% endif %}
+            {% if author.website %}
+              <a href="{{ author.website }}" class="social social--small">
+                <i class="icon icon--website" aria-hidden="true"></i>
+                <span class="screen-reader">Site personnel de {{ author.name }}</span>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    {% endblock %}
   </div>
-
-  {# <h4>Ces articles pourraient vous intéresser:</h4> #}
-
 {% endblock content %}

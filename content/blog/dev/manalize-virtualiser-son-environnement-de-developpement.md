@@ -4,7 +4,7 @@ title:              "Virtualiser son environnement de développement avec Manali
 date:               "2019-01-29"
 publishdate:        "2019-01-29"
 draft:              false
-summary:            true
+tableOfContent:            true
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
 header_img:         "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"

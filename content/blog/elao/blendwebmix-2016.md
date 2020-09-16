@@ -12,8 +12,7 @@ header_img:         "images/posts/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:    "elao"
-co_authors:         ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
+author:             ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 
 ---
 

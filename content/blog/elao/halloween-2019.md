@@ -3,7 +3,7 @@ type:               "post"
 title:              "🎃 Films d'Halloween : la sélection de l'équipe 🍿"
 date:               "2019-10-31"
 publishdate:        "2019-10-31"
-summary:            true
+tableOfContent:     2
 draft:              false
 
 description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
@@ -13,7 +13,7 @@ header_img:         "images/posts/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 
-author: "elao"
+authors:            ["aldeboissieu", "adefrance", "tjarrand", "frey", "gfaivre", "mcolin", "msteinhausser"]
 ---
 
 Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous ne pouvions pas passer à côté de l'occasion de vous faire profiter de nos listes de films préférés à regarder le soir d'Halloween. 🦇

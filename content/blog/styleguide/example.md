@@ -11,7 +11,7 @@ description:        "Tour d'horizon de ce qu'on a pour faire de beaux articles. 
 thumbnail:          "https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 tags:               ["Tag 1", "Tag 2"]
 categories:         ["Dev", "Symfony"]
-author:             "tjarrand"
+authors:            ["adefrance","tjarrand"]
 ---
 
 <h2 id="titles" class="anchor-title">

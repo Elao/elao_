@@ -6,7 +6,7 @@ publishdate:        "2018-10-30"
 draft:              false
 
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
-summary:            true
+tableOfContent:            true
 
 thumbnail:          "images/posts/thumbnails/tdd.jpg"
 header_img:         "images/posts/headers/tdd.jpg"

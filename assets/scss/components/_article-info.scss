@@ -1,6 +1,6 @@
 .article-info {
-  padding: 40px 60px;
-  width: 390px;
+  padding: 40px 60px 20px;
+  max-width: 390px;
   position: absolute;
   bottom: 10px;
   right: 120px;
@@ -11,6 +11,22 @@
   background: $color-dark;
   z-index: 1;
 
+  .article-author {
+    margin-bottom: 30px;
+  }
+}
+
+.article-info__date {
+  display: flex;
+  flex-wrap: wrap;
+
+  span {
+    margin-right: 35px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
   strong {
     margin-top: 2px;
     font-family: 'faktum bold';
@@ -18,49 +34,12 @@
   }
 }
 
-.article-info__author {
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
-
-  img {
-    margin-right: 15px;
-    width: 60px;
-    border: solid 3px $color-dark;
-    border-radius: 50%;
-  }
-
-  .name {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.article-info__author--multi {
-  flex-direction: column;
-  align-items: flex-start;
-
-  .image {
-    margin-bottom: 10px;
+@media (max-width: $screen-md) {
+  .article-info {
+    padding: 30px 30px 20px;
     position: relative;
-    left: -45px;
-    height: 60px;
-
-    @for $i from 1 through 5 {
-      img:nth-child(#{$i}) {
-        position: absolute;
-        left: #{$i * 45}px;
-      }
-    }
-  }
-}
-
-.article-info__date {
-  display: flex;
-
-  span {
-    margin-right: 35px;
-    display: flex;
-    flex-direction: column;
+    top: -30px;
+    right: 0;
+    flex: 1;
   }
 }

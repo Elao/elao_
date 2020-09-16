@@ -1,0 +1,40 @@
+.article-footer {
+  padding: 45px 75px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  background: $color-dark;
+
+  .article-author {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.article-footer__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .article-footer {
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .article-footer {
+    .article-author {
+      margin: 0 0 40px;
+    }
+  }
+}

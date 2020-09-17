@@ -2,9 +2,26 @@
 
 {% block toolbar %}
     {% set icon %}
-        🤖︎ <span class="sf-toolbar-value">SEO</span>
+        {# this is the content displayed as a panel in the toolbar #}
+        <svg xmlns="http://www.w3.org/2000/svg"> ... </svg>
+        <span class="sf-toolbar-value">Seo</span>
     {% endset %}
 
-    {% block head %}
+    {% set text %}
+        {# this is the content displayed when hovering the mouse over
+           the toolbar panel #}
+        <div class="sf-toolbar-info-piece">
+            <b>Method</b>
+            <span>{{ collector.method }}</span>
+        </div>
 
+        <div class="sf-toolbar-info-piece">
+            <b>Accepted content type</b>
+            <span>{{ collector.acceptableContentTypes|join(', ') }}</span>
+        </div>
+    {% endset %}
+
+    {# the 'link' value set to 'false' means that this panel doesn't
+       show a section in the web profiler #}
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
 {% endblock %}

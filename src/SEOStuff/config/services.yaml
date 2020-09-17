@@ -1,0 +1,10 @@
+services:
+  App\SEOStuff\DataCollector\RequestCollector:
+    tags:
+      -
+        name:     data_collector
+        template: 'templates/profiler/seo_stuff.html.twig'
+        # must match the value returned by the getName() method
+        id:       'app.request_collector'
+        # optional priority
+        # priority: 300

@@ -33,7 +33,7 @@ services:
         tags:
             -
                 name: data_collector
-                template: '../src/SEOStuff/templates/profiler/seo_stuff.html.twig'
+                template: '/profiler/seo_stuff.html.twig'
                 # must match the value returned by the getName() method
                 id: 'app.request_collector'
                 # optional priority

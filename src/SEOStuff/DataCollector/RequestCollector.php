@@ -11,8 +11,9 @@ class RequestCollector extends DataCollector
     public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         $this->data = [
-            'method' => $request->getMethod(),
+            'method' => $response,
             'acceptable_content_types' => $request->getAcceptableContentTypes(),
+            'X-Robots-Tag' => $response->headers->count()
         ];
     }
 
@@ -33,5 +34,11 @@ class RequestCollector extends DataCollector
     public function getAcceptableContentTypes()
     {
         return $this->data['acceptable_content_types'];
+    }
+    public function getXRobotsTag()
+    {
+        dump($this->data['X-Robots-Tag']);
+        die;
+        return $this->data['X-Robots-Tag'];
     }
 }

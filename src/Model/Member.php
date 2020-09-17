@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Model;
+declare(strict_types=1);
 
-use Symfony\Component\Serializer\Annotation\SerializedName;
+namespace App\Model;
 
 class Member
 {

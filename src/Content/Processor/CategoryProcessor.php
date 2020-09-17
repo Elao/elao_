@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /*
  * This file is part of the "Tom32i/Content" bundle.
  *
@@ -17,15 +19,9 @@ use Content\Content;
  */
 class CategoryProcessor implements ProcessorInterface
 {
-    public static function isSupported(string $type, $value): bool
-    {
-        return is_a($type, Article::class, true)
-            && is_null($value);
-    }
-
     public function __invoke(array &$data, string $type, Content $content): void
     {
-        if (!static::isSupported($type, $data['category'] ?? null)) {
+        if (!is_a($type, Article::class, true) || isset($data['category'])) {
             return;
         }
 

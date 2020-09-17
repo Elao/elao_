@@ -1,5 +1,5 @@
 function init() {
-    console.log('elao_ initialized, enjoy!');
+    //console.log('elao_ initialized, enjoy!');
 }
 
 window.addEventListener('load', init);

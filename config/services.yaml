@@ -29,6 +29,15 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\SEOStuff\DataCollector\RequestCollector:
+        tags:
+            -
+                name: data_collector
+                template: '../src/SEOStuff/templates/profiler/seo_stuff.html.twig'
+                # must match the value returned by the getName() method
+                id: 'app.request_collector'
+                # optional priority
+                # priority: 300
 
     App\Content\Processor\TableOfContentProcessor:
         tags: [{ name: content.processor, priority: -10 }]

@@ -24,6 +24,9 @@ start:
 watch:
 	npm run watch
 
+clear:
+	rm -rf build public/build
+
 #########
 # Build #
 #########
@@ -36,9 +39,9 @@ build-assets:
 	npm run build
 
 ## Build static site
-build-content:
-	bin/console c:c --env=prod
-	bin/console content:build --env=prod
+build-content: export APP_ENV = prod
+	bin/console cache:clear
+	bin/console content:build
 
 ## Build the site and serve the static version
 serve-static: build-content
@@ -47,6 +50,15 @@ serve-static: build-content
 
 	vendor/bin/php-cs-fixer fix --dry-run --diff
 
+## Simulates GH Pages deploy into a subdir / with base url
+build-subdir: export APP_ENV = prod
+build-subdir: export WEBPACK_PUBLIC_PATH = /elao_/build
+build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8000/elao_
+build-subdir: clear build-assets
+	bin/console cache:clear
+	bin/console content:build build/elao_
+	open http://localhost:8000/elao_
+	php -S localhost:8000 -t build
 ########
 # Lint #
 ########

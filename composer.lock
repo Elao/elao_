@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bf6adb3f39345e021469cf8f84bbb2d",
+    "content-hash": "790cd3e0f6f894e4283a68b946a6e344",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -5221,12 +5221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Tom32i/content.git",
-                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4"
+                "reference": "9da87bf241dbaf630084ffe73167a297b8a763aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Tom32i/content/zipball/d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
-                "reference": "d0a86e6307cd23d5605868f1c6e2c6013227c0d4",
+                "url": "https://api.github.com/repos/Tom32i/content/zipball/9da87bf241dbaf630084ffe73167a297b8a763aa",
+                "reference": "9da87bf241dbaf630084ffe73167a297b8a763aa",
                 "shasum": ""
             },
             "require": {
@@ -5255,6 +5255,7 @@
                 "ekino/phpstan-banned-code": "^0.3.1",
                 "friendsofphp/php-cs-fixer": "^2.16",
                 "phpstan/phpstan": "^0.12.32",
+                "symfony/browser-kit": "^5.1",
                 "symfony/framework-bundle": "^5.1",
                 "symfony/phpunit-bridge": "^5.1",
                 "symfony/twig-bridge": "^5.1",
@@ -5297,7 +5298,7 @@
                 "source": "https://github.com/Tom32i/content/tree/master",
                 "issues": "https://github.com/Tom32i/content/issues"
             },
-            "time": "2020-09-11T06:14:17+00:00"
+            "time": "2020-09-17T09:12:02+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -6690,11 +6691,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {
         "tom32i/content": 20
     },
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.2.5",

@@ -8,7 +8,7 @@ draft:              false
 
 description:        "Configuration de Bind sous Mac OS X."
 
-thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
+thumbnail:          "images/posts/thumbnails/yosemite.jpg"
 tags:               ["Bind","Mac OSX", "OSX"]
 categories:         ["Tech", "OSX"]
 

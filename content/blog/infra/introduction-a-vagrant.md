@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Le fonctionnement et les principes utilisés par Vagrant. Comment installer une VM contenant une version minimale d'Ubuntu et la provisionner avec nginx."
 
-thumbnail:          "/images/posts/thumbnails/vagrant.png"
-header_img:         "/images/posts/headers/vagrant.png"
+thumbnail:          "images/posts/thumbnails/vagrant.png"
+header_img:         "images/posts/headers/vagrant.png"
 tags:               ["Vagrant", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Vagrant"]
 

@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Abstract Factory"
 
-thumbnail:      "/images/posts/thumbnails/schema.jpg"
-header_img:     "/images/posts/headers/header_schema.jpg"
+thumbnail:      "images/posts/thumbnails/schema.jpg"
+header_img:     "images/posts/headers/header_schema.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

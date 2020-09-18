@@ -8,7 +8,7 @@ draft:              false
 
 description:        "Installation de graphite avec Gunicorn et Nginx sur debian Wheezy."
 
-thumbnail:          "/images/posts/thumbnails/dashboard.png"
+thumbnail:          "images/posts/thumbnails/dashboard.png"
 tags:               ["Monitoring", "Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Monitoring", "Linux"]
 

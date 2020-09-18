@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
 
-thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
-header_img:         "/images/posts/headers/vuejs.jpg"
+thumbnail:          "images/posts/thumbnails/vuejs.jpg"
+header_img:         "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript"]
 

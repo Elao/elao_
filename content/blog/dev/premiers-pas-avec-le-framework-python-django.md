@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Premiers pas avec le framework Python \"Django\""
 
-thumbnail:          "/images/posts/thumbnails/first_step.jpg"
+thumbnail:          "images/posts/thumbnails/first_step.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 

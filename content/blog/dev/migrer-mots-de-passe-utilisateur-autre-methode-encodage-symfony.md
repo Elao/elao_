@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Migration continue de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
 
-thumbnail:          "/images/posts/thumbnails/password.jpg"
-header_img:         "/images/posts/headers/password.jpg"
+thumbnail:          "images/posts/thumbnails/password.jpg"
+header_img:         "images/posts/headers/password.jpg"
 tags:               ["Sécurité", "Mot de passe", "Migration", "Encodage", "Symfony", "PHP"]
 categories:         ["Dev", "Symfony"]
 

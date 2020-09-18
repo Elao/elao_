@@ -7,8 +7,8 @@ draft:              false
 
 description:        ""
 
-thumbnail:          "/images/posts/thumbnails/blend2016.jpg"
-header_img:         "/images/posts/headers/blend2016.jpg"
+thumbnail:          "images/posts/thumbnails/blend2016.jpg"
+header_img:         "images/posts/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 

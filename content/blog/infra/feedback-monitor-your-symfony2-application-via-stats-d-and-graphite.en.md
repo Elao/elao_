@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 
-thumbnail:          "/images/posts/thumbnails/rocket.jpg"
+thumbnail:          "images/posts/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
 categories:         ["Infra", "Monitoring", "PHP"]
 

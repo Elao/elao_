@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
 
-thumbnail:      "/images/posts/thumbnails/riccardo-chiarini-247364.jpg"
-header_img:     "/images/posts/headers/riccardo-chiarini-247364.jpg"
+thumbnail:      "images/posts/thumbnails/riccardo-chiarini-247364.jpg"
+header_img:     "images/posts/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]
 categories:     ["elao", "recrutement"]
 

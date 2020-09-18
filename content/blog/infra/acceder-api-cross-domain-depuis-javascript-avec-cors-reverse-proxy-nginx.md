@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Configurer un reverse proxy avec nginx et CORS pour permettre à une application Javascript d'accéder à une API sur un autre domaine en contournant la Same Origin Policy."
 
-thumbnail:          "/images/posts/thumbnails/bridge.jpg"
-header_img:         "/images/posts/headers/bridge.jpg"
+thumbnail:          "images/posts/thumbnails/bridge.jpg"
+header_img:         "images/posts/headers/bridge.jpg"
 tags:               ["nginx","reverse","proxy","infra","cors","api", "javascript"]
 categories:         ["Infra", "nginx", "javascript"]
 

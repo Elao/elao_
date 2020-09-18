@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Utilisation de l'évènement kernel.terminate sous Symfony2"
 
-thumbnail:          "/images/posts/thumbnails/geekon.jpg"
+thumbnail:          "images/posts/thumbnails/geekon.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 

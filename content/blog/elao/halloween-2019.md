@@ -8,8 +8,8 @@ draft:              false
 
 description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
 
-thumbnail:          "/images/posts/thumbnails/halloween-2019.jpg"
-header_img:         "/images/posts/headers/halloween-2019.jpg"
+thumbnail:          "images/posts/thumbnails/halloween-2019.jpg"
+header_img:         "images/posts/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 

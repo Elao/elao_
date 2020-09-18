@@ -7,8 +7,8 @@ draft:              false
 
 description:        "La NodeSchool permet de pratiquer Javascript et Node.js grâce à des ateliers interactifs."
 
-thumbnail:          "/images/posts/thumbnails/nodejs.png"
-header_img:         "/images/posts/headers/php_elao_code.jpg"
+thumbnail:          "images/posts/thumbnails/nodejs.png"
+header_img:         "images/posts/headers/php_elao_code.jpg"
 tags:               ["Javascript", "Node.js", "Conférences"]
 categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 

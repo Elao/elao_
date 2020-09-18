@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Installation et utilisation de Behat 3 pour vos tests fonctionnels Symfony2"
 
-thumbnail:          "/images/posts/thumbnails/behat.png"
-header_img:         "/images/posts/headers/behat_cover.jpg"
+thumbnail:          "images/posts/thumbnails/behat.png"
+header_img:         "images/posts/headers/behat_cover.jpg"
 tags:               ["Bundle","Behat","Symfony","Mink","Alice"]
 categories:         ["Dev", Symfony", "PHP"]
 

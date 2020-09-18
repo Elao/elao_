@@ -8,7 +8,7 @@ draft:              false
 
 description:        "Comment bien préparer sa conférence ?"
 
-thumbnail:          "/images/posts/thumbnails/yosemite.jpg"
+thumbnail:          "images/posts/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
 categories:         ["Actualité", "Communication", "conference"]
 

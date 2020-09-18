@@ -7,8 +7,8 @@ draft:              false
 
 description:        ""
 
-thumbnail:          "/images/posts/thumbnails/pre-blend-2017.jpg"
-header_img:         "/images/posts/headers/pre-blend-2017.jpg"
+thumbnail:          "images/posts/thumbnails/pre-blend-2017.jpg"
+header_img:         "images/posts/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 

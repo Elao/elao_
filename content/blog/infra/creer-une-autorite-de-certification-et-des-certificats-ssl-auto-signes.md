@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Créer une autorité de certification et des certificats SSL auto-signés"
 
-thumbnail:          "/images/posts/thumbnails/matryoshka.jpg"
+thumbnail:          "images/posts/thumbnails/matryoshka.jpg"
 tags:               ["Linux", "Sécurité"]
 categories:         ["Linux", "Infra"]
 

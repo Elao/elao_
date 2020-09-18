@@ -7,8 +7,8 @@ draft:              false
 
 description:        "L'édition 2015 du Mix-IT s'est tenue les 16 et 17 avril au CPE de Lyon. Retour sur cet événement."
 
-thumbnail:          "/images/posts/thumbnails/unepetitemousse-mixit.jpg"
-header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "images/posts/thumbnails/unepetitemousse-mixit.jpg"
+header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "Mix-IT 2015"]
 categories:         ["Dev", "Web", "conference", "Javascript", "NodeJS"]
 

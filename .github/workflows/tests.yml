@@ -1,90 +1,90 @@
 name: Tests
 
 on:
-    push:
-        branches:
-            - master
-    pull_request:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
 
-    integration:
-        name: Tests
-        runs-on: ubuntu-latest
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
 
-        steps:
-            -   name: Checkout
-                uses: actions/checkout@v2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-            # https://github.com/actions/setup-node
-            -   name: Setup node
-                uses: actions/setup-node@v1
+      # https://github.com/actions/setup-node
+      - name: Setup node
+        uses: actions/setup-node@v1
 
-            -   name: Setup PHP
-                uses: shivammathur/setup-php@v2
-                with:
-                    coverage: "none"
-                    extensions: "json"
-                    ini-values: "memory_limit=-1"
-                    php-version: "7.4"
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: "none"
+          extensions: "json"
+          ini-values: "memory_limit=-1"
+          php-version: "7.4"
 
-            -   name: Determine composer cache directory
-                id: composer-cache
-                run: echo "::set-output name=directory::$(composer config cache-dir)"
+      - name: Determine composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=directory::$(composer config cache-dir)"
 
-            -   name: Cache composer dependencies
-                uses: actions/cache@v1
-                with:
-                    path: ${{ steps.composer-cache.outputs.directory }}
-                    key: composer-${{ hashFiles('**/composer.lock') }}
-                    restore-keys: composer-
+      - name: Cache composer dependencies
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.composer-cache.outputs.directory }}
+          key: composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: composer-
 
-            -   name: Install dependencies
-                run: |
-                    echo "::group::composer update"
-                    composer install --no-progress --no-suggest --ansi
-                    echo "::endgroup::"
-                    # echo "::group::install phpunit"
-                    # vendor/bin/simple-phpunit install
-                    # echo "::endgroup::"
-                    echo "::group::npm install"
-                    npm install --color=always --no-progress
-                    echo "::endgroup::"
+      - name: Install dependencies
+        run: |
+          echo "::group::composer update"
+          composer install --no-progress --no-suggest --ansi
+          echo "::endgroup::"
+          # echo "::group::install phpunit"
+          # vendor/bin/simple-phpunit install
+          # echo "::endgroup::"
+          echo "::group::npm install"
+          npm install --color=always --no-progress
+          echo "::endgroup::"
 
-            -   name: Warmup
-                run: |
-                    echo "::group::warmup test env"
-                    bin/console cache:clear --ansi
-                    bin/console cache:warmup --ansi
-                    echo "::endgroup::"
-                env:
-                    APP_ENV: test
+      - name: Warmup
+        run: |
+          echo "::group::warmup test env"
+          bin/console cache:clear --ansi
+          bin/console cache:warmup --ansi
+          echo "::endgroup::"
+        env:
+          APP_ENV: test
 
-            -   name: Lint
-                run: |
-                    echo "::group::PHP CS Fixer"
-                    make lint.php-cs-fixer@integration
+      - name: Lint
+        run: |
+          echo "::group::PHP CS Fixer"
+          make lint.php-cs-fixer@integration
 
-                    echo "::group::PhpStan"
-                    make lint.phpstan@integration
+          echo "::group::PhpStan"
+          make lint.phpstan@integration
 
-                    echo "::group::Lint twig"
-                    make lint.twig@integration
+          echo "::group::Lint twig"
+          make lint.twig@integration
 
-                    echo "::group::Lint yaml"
-                    make lint.yaml@integration
+          echo "::group::Lint yaml"
+          make lint.yaml@integration
 
-                    echo "::group::Lint JS"
-                    make lint.eslint@integration
-                env:
-                    APP_ENV: test
+          echo "::group::Lint JS"
+          make lint.eslint@integration
+        env:
+          APP_ENV: test
 
-#            -   name: Run tests
-#                run: vendor/bin/simple-phpunit --testdox
+      # - name: Run tests
+      #   run: vendor/bin/simple-phpunit --testdox
 
-            -   name: Check build static
-                run: |
-                    npx encore production --color=always --no-progress
-                    bin/console content:build --no-interaction -vv --ansi
-                env:
-                    APP_ENV: prod
+      - name: Check build static
+        run: |
+          npx encore production --color=always --no-progress
+          bin/console content:build --no-interaction -vv --ansi
+        env:
+          APP_ENV: prod

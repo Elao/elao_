@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Et si vous rendiez vos offres d'emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ? "
 
-thumbnail:          "/images/posts/thumbnails/arrows-square.jpg"
-header_img:         "/images/posts/headers/arrows.jpg"
+thumbnail:          "images/posts/thumbnails/arrows-square.jpg"
+header_img:         "images/posts/headers/arrows.jpg"
 tags:               ["Seo", "microdata", "rich snippets"]
 categories:         ["Dev", "Web"]
 

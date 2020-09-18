@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Notre compte-rendu de l'Afup Day à Lyon, du 17 mai 2019."
 
-thumbnail:          "/images/posts/thumbnails/afup-day-2019.jpg"
-header_img:         "/images/posts/headers/afup-day-2019.jpg"
+thumbnail:          "images/posts/thumbnails/afup-day-2019.jpg"
+header_img:         "images/posts/headers/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
 author:    "elao"

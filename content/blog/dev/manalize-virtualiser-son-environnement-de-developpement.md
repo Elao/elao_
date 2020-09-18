@@ -7,8 +7,8 @@ draft:              false
 summary:            true
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
-header_img:         "/images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
-thumbnail:          "/images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
+header_img:         "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
+thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
 

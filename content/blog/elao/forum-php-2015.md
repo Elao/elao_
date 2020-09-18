@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a retenu."
 
-thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
-header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "images/posts/thumbnails/haphpybirthday.jpg"
+header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
 categories:         ["conference"]
 

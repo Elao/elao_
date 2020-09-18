@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao à Paris, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
-thumbnail:          "/images/posts/thumbnails/haphpybirthday.jpg"
-header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "images/posts/thumbnails/haphpybirthday.jpg"
+header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
 categories:         ["elao", "methodo"]
 

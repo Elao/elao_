@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Installation de FUSE et s3fs sur une Debian Lenny"
 
-thumbnail:          "/images/posts/thumbnails/danbo_on_drops.jpg"
+thumbnail:          "images/posts/thumbnails/danbo_on_drops.jpg"
 tags:               ["Linux", "FUSE", "s3fs"]
 categories:         ["Infra", "Linux"]
 

@@ -8,8 +8,8 @@ draft:              false
 description:        "Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application."
 
 language:           "en"
-thumbnail:          "/images/posts/thumbnails/rocket.jpg"
-header_img:         "/images/posts/headers/minions.jpg"
+thumbnail:          "images/posts/thumbnails/rocket.jpg"
+header_img:         "images/posts/headers/minions.jpg"
 tags:               ["Linux","Monitoring","Symfony"]
 categories:         ["Infra", "Monitoring"]
 

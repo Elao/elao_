@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Responsive Web Design"
 
-thumbnail:          "/images/posts/thumbnails/html5.jpg"
-header_img:         "/images/posts/headers/elao_team_front.jpg"
+thumbnail:          "images/posts/thumbnails/html5.jpg"
+header_img:         "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 

@@ -7,7 +7,7 @@ draft:              false
 
 description:        "The BrowserDetectorBundle: working with the Kernel events"
 
-thumbnail:          "/images/posts/thumbnails/homer.jpg"
+thumbnail:          "images/posts/thumbnails/homer.jpg"
 tags:               ["Symfony", "PHP", "Kernel", "Browser"]
 categories:         ["Dev", "Symfony", "PHP"]
 

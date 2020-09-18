@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Introduction à la réalisation d'applications frontend avec Vue.js et vue-cli."
 
-thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
-header_img:         "/images/posts/headers/vuejs.jpg"
+thumbnail:          "images/posts/thumbnails/vuejs.jpg"
+header_img:         "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

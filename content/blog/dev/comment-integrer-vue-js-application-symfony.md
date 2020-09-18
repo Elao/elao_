@@ -8,8 +8,8 @@ draft:              false
 
 description:        "Guide d'intrégration de Vue.js dans une application Symfony"
 
-thumbnail:          "/images/posts/thumbnails/vuejs.jpg"
-header_img:         "/images/posts/headers/vuejs.jpg"
+thumbnail:          "images/posts/thumbnails/vuejs.jpg"
+header_img:         "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Frontend","Framework","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

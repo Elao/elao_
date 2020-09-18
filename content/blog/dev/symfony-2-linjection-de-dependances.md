@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Symfony 2 – L’injection de dépendances"
 
-thumbnail:          "/images/posts/thumbnails/event-dispatcher.jpg"
+thumbnail:          "images/posts/thumbnails/event-dispatcher.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "PHP", "Symfony"]
 

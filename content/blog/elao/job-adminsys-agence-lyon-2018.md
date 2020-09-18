@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Élao recherche un ou une Sysadmin à Lyon"
 
-thumbnail:      "/images/posts/thumbnails/adminsys.jpg"
-header_img:     "/images/posts/headers/adminsys.jpg"
+thumbnail:      "images/posts/thumbnails/adminsys.jpg"
+header_img:     "images/posts/headers/adminsys.jpg"
 tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
 categories:     ["elao", "recrutement"]
 

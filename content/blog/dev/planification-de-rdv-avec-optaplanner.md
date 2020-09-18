@@ -7,8 +7,8 @@ draft:          false
 
 description:    ""
 
-thumbnail:      "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
-header_img:     "/images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
+thumbnail:      "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
+header_img:     "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
 tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 

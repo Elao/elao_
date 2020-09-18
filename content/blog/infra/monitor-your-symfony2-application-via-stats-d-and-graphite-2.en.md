@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Monitor your Symfony2 application via Stats.d and Graphite Part. 2"
 
-thumbnail:          "/images/posts/thumbnails/rocket.jpg"
-header_img:         "/images/posts/headers/minions.jpg"
+thumbnail:          "images/posts/thumbnails/rocket.jpg"
+header_img:         "images/posts/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]
 categories:         ["Infra", "Monitoring"]
 

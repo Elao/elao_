@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Propel - Utiliser des champs calculés"
 
-thumbnail:          "/images/posts/thumbnails/mailers.jpg"
+thumbnail:          "images/posts/thumbnails/mailers.jpg"
 tags:               ["Propel", "PHP", "ORM", "Symfony"]
 categories:         ["Dev", "PHP", "Propel", "ORM"]
 

@@ -8,8 +8,8 @@ draft:              false
 description:        "Comment utiliser les roles Ansible de Manala pour provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana"
 
 language:           "fr"
-thumbnail:          "/images/posts/thumbnails/grafana.jpg"
-header_img:         "/images/posts/headers/grafana.jpg"
+thumbnail:          "images/posts/thumbnails/grafana.jpg"
+header_img:         "images/posts/headers/grafana.jpg"
 tags:               ["provisoning","manala","ansible","influxdb","grafana","telegraf","monitoring"]
 categories:         ["Infra", "manala", "ansible"]
 

@@ -40,6 +40,7 @@ build-assets:
 
 ## Build static site
 build-content: export APP_ENV = prod
+build-content:
 	bin/console cache:clear
 	bin/console content:build
 

@@ -3,8 +3,7 @@ name: Build static
 on:
   push:
     branches:
-      #            - master
-      - build-action
+      - master
 
 jobs:
 

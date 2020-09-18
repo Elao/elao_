@@ -7,8 +7,8 @@ draft:              false
 
 description:        "La première édition du Best Of Web s'est tenue le Vendredi 5 Juin 2015 à Paris, et à rassembler le meilleurs des meetups de l'année. Retour sur cet évènement."
 
-thumbnail:          "/images/posts/thumbnails/geek_evolution.jpg"
-header_img:         "/images/posts/headers/forum_php_elao.jpg"
+thumbnail:          "images/posts/thumbnails/geek_evolution.jpg"
+header_img:         "images/posts/headers/forum_php_elao.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 

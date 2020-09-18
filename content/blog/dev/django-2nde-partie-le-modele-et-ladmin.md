@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Django (2nde partie) : le Modèle et l’Admin"
 
-thumbnail:          "/images/posts/thumbnails/django.jpg"
+thumbnail:          "images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 

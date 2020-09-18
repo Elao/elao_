@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Bonnes pratiques Symfony2 : notre condensé !"
 
-thumbnail:          "/images/posts/thumbnails/kafeine.png"
-header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "images/posts/thumbnails/kafeine.png"
+header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
 categories:         ["Tips", "Symfony"]
 

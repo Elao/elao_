@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Les pages de votre application n'ont pas vocation à être présentes dans les moteurs de recherche ? Voici une courte explication pour vous aider à empêcher le crawl et l'indexation."
 
-thumbnail:          "/images/posts/thumbnails/judging-sardine-small.jpg"
-header_img:         "/images/posts/headers/judging-sardine-large.jpg"
+thumbnail:          "images/posts/thumbnails/judging-sardine-small.jpg"
+header_img:         "images/posts/headers/judging-sardine-large.jpg"
 tags:               ["Symfony", "seo", "no-index"]
 categories:         ["Dev", "Symfony", "seo"]
 

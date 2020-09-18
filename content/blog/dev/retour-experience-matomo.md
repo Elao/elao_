@@ -8,8 +8,8 @@ draft:              false
 
 description:        "Chez Elao, nous mesurons désormais l'audience de nos propres sites grâce à Matomo. Retour d'expérience. "
 
-thumbnail:          "/images/posts/thumbnails/matomo.jpg"
-header_img:         "/images/posts/headers/matomo.jpg"
+thumbnail:          "images/posts/thumbnails/matomo.jpg"
+header_img:         "images/posts/headers/matomo.jpg"
 tags:               ["Seo", "RGPD", "Matomo"]
 categories:         ["Dev", "Web"]
 

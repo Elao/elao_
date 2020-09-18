@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Maintenabilité et performance avec Sass et Compass"
 
-thumbnail:          "/images/posts/thumbnails/sass.png"
-header_img:         "/images/posts/headers/elao_team_front.jpg"
+thumbnail:          "images/posts/thumbnails/sass.png"
+header_img:         "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign", "Développement"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 

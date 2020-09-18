@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans de Symfony"
 
-thumbnail:          "/images/posts/thumbnails/symfonycon-2015.jpg"
-header_img:         "/images/posts/headers/foliesbergeres.jpg"
+thumbnail:          "images/posts/thumbnails/symfonycon-2015.jpg"
+header_img:         "images/posts/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
 categories:         ["conference"]
 

@@ -8,8 +8,8 @@ draft:          false
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
 summary:        true
 
-thumbnail:      "/images/posts/2017/chalkboard-education/woman-phone.jpg"
-header_img:     "/images/posts/2017/chalkboard-education/woman-phone.jpg"
+thumbnail:      "images/posts/2017/chalkboard-education/woman-phone.jpg"
+header_img:     "images/posts/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["progressive web app", "service worker", "web", "mobile", "offline", "React", "Symfony", "GraphQL"]
 categories:     ["dev", "Symfony", "javascript"]
 

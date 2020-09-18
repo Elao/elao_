@@ -7,7 +7,7 @@ draft:              false
 
 description:        "How to manage translations for your object using SonataAdminBundle"
 
-thumbnail:          "/images/posts/thumbnails/rocket.jpg"
+thumbnail:          "images/posts/thumbnails/rocket.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 

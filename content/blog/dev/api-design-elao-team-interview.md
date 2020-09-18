@@ -8,8 +8,8 @@ draft:              false
 description:        "Interview croisée des développeurs d'Élao à propos de leurs diverses expériences en conception et développement d'API"
 summary:            2
 
-thumbnail:          "/images/posts/thumbnails/api-interview-micro-phone.png"
-header_img:         "/images/posts/headers/api-interview-micro-phone.png"
+thumbnail:          "images/posts/thumbnails/api-interview-micro-phone.png"
+header_img:         "images/posts/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
 categories:         ["Dev"]
 

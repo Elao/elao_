@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Utilisation de la commande find - cas pratiques"
 
-thumbnail:          "/images/posts/thumbnails/homer-do-not-care.png"
+thumbnail:          "images/posts/thumbnails/homer-do-not-care.png"
 tags:               ["Linux", "Trucs et astuces", "Tips"]
 categories:         ["Infra", "Linux"]
 

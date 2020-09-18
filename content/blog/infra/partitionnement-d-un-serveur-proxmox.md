@@ -8,7 +8,7 @@ draft:              false
 
 description:        "Petit billet mémo aujourd'hui concernant le partitionnement d'un serveur Proxmox, rien de bien sorcier en soi mais il est toujours bon d'avoir un référentiel auquel se fier."
 
-thumbnail:          "/images/posts/thumbnails/hdd_partition.jpg"
+thumbnail:          "images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["proxmox", "openvz", "partitionnement", "linux"]
 categories:         ["Infra", "Proxmox", "Linux"]
 

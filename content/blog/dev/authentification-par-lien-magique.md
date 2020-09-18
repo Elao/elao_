@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Retour d'expérience sur la mise en place d'authentification par lien de connexion."
 
-thumbnail:          "/images/posts/thumbnails/magic-link.jpg"
-header_img:         "/images/posts/headers/magic-link.jpg"
+thumbnail:          "images/posts/thumbnails/magic-link.jpg"
+header_img:         "images/posts/headers/magic-link.jpg"
 tags:               ["Authentification", "Email", "Sécurité", "MagicLink"]
 categories:         ["Dev"]
 

@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Django (3ème partie) : les templates, et bien d'autres choses ..."
 
-thumbnail:          "/images/posts/thumbnails/django.jpg"
+thumbnail:          "images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 

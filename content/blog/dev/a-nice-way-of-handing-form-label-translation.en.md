@@ -8,7 +8,7 @@ draft:              false
 
 description:        "A nice way of handling form label translation"
 
-thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
+thumbnail:          "images/posts/thumbnails/cool_cat.jpg"
 tags:               ["Symfony", "Form", "Theming", "Translation"]
 categories:         ["Dev", "Form", "Symfony"]
 author:             "tjarrand"

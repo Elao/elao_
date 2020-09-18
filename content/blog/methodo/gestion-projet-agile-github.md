@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Retour d'expérience sur la gestion d'un projet avec GitHub."
 
-thumbnail:      "/images/posts/thumbnails/github-agile.jpg"
-header_img:     "/images/posts/headers/github-agile.jpg"
+thumbnail:      "images/posts/thumbnails/github-agile.jpg"
+header_img:     "images/posts/headers/github-agile.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github"]
 categories:     ["methodo"]
 

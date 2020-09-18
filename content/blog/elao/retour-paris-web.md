@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Paris Web, la conférence francophone des gens qui font le web !"
 
-thumbnail:          "/images/posts/thumbnails/unicorn.jpg"
-header_img:         "/images/posts/headers/unicorn.jpg"
+thumbnail:          "images/posts/thumbnails/unicorn.jpg"
+header_img:         "images/posts/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
 categories:         ["conference"]
 

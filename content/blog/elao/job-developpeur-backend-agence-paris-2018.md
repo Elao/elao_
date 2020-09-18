@@ -7,8 +7,8 @@ draft:          false
 
 description:    "élao recherche des développeuses/développeurs backend à Paris."
 
-thumbnail:      "/images/posts/thumbnails/back-2.jpg"
-header_img:     "/images/posts/headers/back-2.jpg"
+thumbnail:      "images/posts/thumbnails/back-2.jpg"
+header_img:     "images/posts/headers/back-2.jpg"
 tags:           ["job", "web", "mobile", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 

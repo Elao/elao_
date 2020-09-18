@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"
 
-thumbnail:          "/images/posts/thumbnails/cool_cat.jpg"
-header_img:         "/images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "images/posts/thumbnails/cool_cat.jpg"
+header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]
 categories:         ["Dev", "Symfony", Doctrine]
 

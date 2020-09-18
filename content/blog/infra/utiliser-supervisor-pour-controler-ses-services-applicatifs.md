@@ -8,7 +8,7 @@ draft:              false
 
 description:        "Supervisor est un système de contrôle des processus/services applicatifs destiné aux systèmes de types UNIX."
 
-thumbnail:          "/images/posts/thumbnails/ice_bulb.jpg"
+thumbnail:          "images/posts/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
 categories:         ["Infra", "Linux"]
 

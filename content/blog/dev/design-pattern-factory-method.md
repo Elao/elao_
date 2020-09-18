@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Premier article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Factory Method"
 
-thumbnail:      "/images/posts/thumbnails/scientist.jpg"
-header_img:     "/images/posts/headers/scientist.jpg"
+thumbnail:      "images/posts/thumbnails/scientist.jpg"
+header_img:     "images/posts/headers/scientist.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
 
-thumbnail:      "/images/posts/thumbnails/Chatfocus.jpg"
-header_img:     "/images/posts/headers/Chatfocus.jpg"
+thumbnail:      "images/posts/thumbnails/Chatfocus.jpg"
+header_img:     "images/posts/headers/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
 categories:     ["jobs", "recrutement"]
 

@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 
-thumbnail:          "/images/posts/thumbnails/forumphp2016-thumb.jpg"
-header_img:         "/images/posts/headers/forumphp2016.jpg"
+thumbnail:          "images/posts/thumbnails/forumphp2016-thumb.jpg"
+header_img:         "images/posts/headers/forumphp2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author:    "elao"

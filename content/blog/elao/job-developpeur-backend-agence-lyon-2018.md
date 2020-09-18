@@ -7,8 +7,8 @@ draft:          false
 
 description:    "élao recherche un développeur ou une développeuse backend à Lyon."
 
-thumbnail:      "/images/posts/thumbnails/back.jpg"
-header_img:     "/images/posts/headers/back.jpg"
+thumbnail:      "images/posts/thumbnails/back.jpg"
+header_img:     "images/posts/headers/back.jpg"
 tags:           ["job", "web", "mobile", "lyon", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 

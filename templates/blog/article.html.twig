@@ -4,7 +4,7 @@
   <img src="{{ asset(article.thumbnail) }}" />
 
   <div>
-    <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+    <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
     <p>Écrit par {{ article.author.name }}<p>
     <p>Publication {{ article.publishdate|format_date('long') }}<p>
     <p>Modification {{ article.lastModified|format_date('long') }}<p>
@@ -26,7 +26,7 @@
   </div>
 
   <div>
-    <img src="{{ asset(article.author.avatar|default('images/authors/default.png')) }}" />
+    <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
 
     <p>Écrit par {{ article.author.name }}<p>
 

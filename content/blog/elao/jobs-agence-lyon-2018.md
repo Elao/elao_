@@ -7,8 +7,8 @@ draft:          false
 
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
 
-thumbnail:      "/images/posts/thumbnails/stand-up.jpg"
-header_img:     "/images/posts/headers/stand-up.jpg"
+thumbnail:      "images/posts/thumbnails/stand-up.jpg"
+header_img:     "images/posts/headers/stand-up.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]
 categories:     ["recrutement", "elao"]
 

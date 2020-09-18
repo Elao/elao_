@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Plusieurs mailer dans une application Symfony 2"
 
-thumbnail:          "/images/posts/thumbnails/mailers.jpg"
+thumbnail:          "images/posts/thumbnails/mailers.jpg"
 tags:               ["mailer", "PHP", "Symfony", "error-notifier-bundle", "swift-mailer", "Mailer transport"]
 categories:         ["Dev", "Mailer", "Symfony"]
 

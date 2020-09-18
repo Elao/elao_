@@ -7,8 +7,8 @@ draft:              false
 
 description:        "Nos retours sur les conférences du MiXiT 2018."
 
-thumbnail:          "/images/posts/thumbnails/mixit-2018.png"
-header_img:         "/images/posts/headers/mixit-2018.jpg"
+thumbnail:          "images/posts/thumbnails/mixit-2018.png"
+header_img:         "images/posts/headers/mixit-2018.jpg"
 tags:               ["Javascript", "Web","Conférence"]
 categories:         ["Dev", "Actualité", "Web", "Conférence"]
 

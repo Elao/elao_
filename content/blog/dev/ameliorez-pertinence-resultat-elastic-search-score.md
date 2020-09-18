@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce au score."
 
-thumbnail:      "/images/posts/thumbnails/elasticsearch.png"
-header_img:     "/images/posts/headers/elasticsearch.jpg"
+thumbnail:      "images/posts/thumbnails/elasticsearch.png"
+header_img:     "images/posts/headers/elasticsearch.jpg"
 tags:           ["moteur de recherche", "recherche", "elasticsearch", "pertinence", "score", "ES", "elastica"]
 categories:     ["dev"]
 

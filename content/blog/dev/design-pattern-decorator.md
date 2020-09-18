@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Présentation du pattern 'Decorator' dans le cadre d'une série consacrée aux Design Patterns"
 
-thumbnail:      "/images/posts/thumbnails/decorator_pattern.jpg"
-header_img:     "/images/posts/headers/decorator_pattern.jpg"
+thumbnail:      "images/posts/thumbnails/decorator_pattern.jpg"
+header_img:     "images/posts/headers/decorator_pattern.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

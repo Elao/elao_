@@ -7,7 +7,7 @@ draft:              false
 
 description:        "Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin."
 
-thumbnail:          "/images/posts/thumbnails/toad.jpg"
+thumbnail:          "images/posts/thumbnails/toad.jpg"
 tags:               ["Développement", "PHP", "Symfony"]
 categories:         ["PHP", "Symfony"]
 

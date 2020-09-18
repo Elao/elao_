@@ -7,8 +7,8 @@ draft:          false
 
 description:    "Nouvel article consacré aux Design Patterns. Aujourd'hui : le pattern Chain of Responsibility"
 
-thumbnail:      "/images/posts/thumbnails/chaplin-assembly-line.jpeg"
-header_img:     "/images/posts/headers/chaplin-assembly-line.jpg"
+thumbnail:      "images/posts/thumbnails/chaplin-assembly-line.jpeg"
+header_img:     "images/posts/headers/chaplin-assembly-line.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

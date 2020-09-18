@@ -41,7 +41,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo "::group::composer update"
+          echo "::group::composer install"
           composer install --no-progress --no-suggest --ansi
           echo "::endgroup::"
           # echo "::group::install phpunit"

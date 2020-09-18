@@ -10,14 +10,15 @@
         {# this is the content displayed when hovering the mouse over
            the toolbar panel #}
         <div class="sf-toolbar-info-piece">
-            <b>Method</b>
+            <b>X-Robots-Tag :</b>
             <span>{{ collector.XRobotsTag }}</span>
         </div>
 
         <div class="sf-toolbar-info-piece">
-            <b>Accepted content type</b>
-            <span>{{ collector.acceptableContentTypes|join(', ') }}</span>
+            <b>H1</b>
+            <span>{{ collector.h1 }}</span>
         </div>
+
     {% endset %}
 
     {# the 'link' value set to 'false' means that this panel doesn't

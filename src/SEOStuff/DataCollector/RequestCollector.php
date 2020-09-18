@@ -2,19 +2,30 @@
 
 namespace App\SEOStuff\DataCollector;
 
+use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
+use Symfony\Component\HttpKernel\DataCollector\LateDataCollectorInterface;
 
-class RequestCollector extends DataCollector
+class RequestCollector extends DataCollector implements LateDataCollectorInterface
 {
+    public $crawler;
+
     public function collect(Request $request, Response $response, \Throwable $exception = null)
     {
         $this->data = [
-            'method' => $response,
-            'acceptable_content_types' => $request->getAcceptableContentTypes(),
-            'X-Robots-Tag' => $response->headers->count()
+            'response' => $response,
+            'crawler' => new Crawler($response->getContent())
         ];
+    }
+
+    public function lateCollect()
+    {
+        /** @var Response $response */
+        $response = $this->data['response'];
+
+        $this->data['X-Robots-Tag'] = $response->headers->get('X-Robots-Tag') ;
     }
 
     public function reset()
@@ -22,23 +33,30 @@ class RequestCollector extends DataCollector
         $this->data = [];
     }
 
+    public function getTitle()
+    {
+        return $this->data['crawler']->extract(['h1']);
+    }
+
     public function getName()
     {
         return 'app.request_collector';
     }
-    public function getMethod()
-    {
-        return $this->data['method'];
-    }
 
-    public function getAcceptableContentTypes()
-    {
-        return $this->data['acceptable_content_types'];
-    }
     public function getXRobotsTag()
     {
-        dump($this->data['X-Robots-Tag']);
-        die;
         return $this->data['X-Robots-Tag'];
+    }
+
+    public function getH1()
+    {
+
+        /** @var Response $response */
+        $response = $this->data['response'];
+        $html = $response->getContent();
+        $crawler = new Crawler($html);
+//        $p = $crawler->filter('body > p')->first();
+//        return $this->data['crawler']->extract(['h1']);
+
     }
 }

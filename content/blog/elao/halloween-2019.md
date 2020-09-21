@@ -22,10 +22,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure
 
-![Local](images/posts/2019/halloween/anne-laure.jpg)
-![Local with shash](/images/posts/2019/halloween/anne-laure.jpg)
-![Distant https](https://imageetinformation.files.wordpress.com/2014/09/lol-cat2.jpg)
-![Distant same scheme](//imageetinformation.files.wordpress.com/2014/09/lol-cat2.jpg)
+![](images/posts/2019/halloween/anne-laure.jpg)
 
 ### Films qui font plus ou moins peur :
 

@@ -37,11 +37,20 @@
     align-items: center;
     color: #fff;
     text-decoration: none;
-    background-color: $color-light;
+    background: $color-light;
+    border: none;
     border-radius: 50%;
+    transition: color ease-in .15s, background ease-in .15s;
 
     .icon {
       font-size: 23px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-light;
+      background: $color-dark;
     }
   }
 }

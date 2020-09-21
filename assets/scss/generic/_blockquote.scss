@@ -1,0 +1,45 @@
+blockquote {
+  margin: 65px 0;
+  padding: 0;
+  position: relative;
+  font-family: 'antikor regular';
+  font-size: 28px;
+  color: $color-text;
+  line-height: 1.4;
+
+  &:before {
+    position: absolute;
+    top: -15px;
+    left: -110px;
+    font-family: 'icomoon';
+    font-size: 60px;
+    color: $color-brand;
+    content: '\e911';
+  }
+
+  cite {
+    margin-top: 15px;
+    display: block;
+  }
+}
+
+blockquote:nth-of-type(even) {
+  padding: 70px 70px 40px;
+  background: $color-primary;
+  color: #fff;
+  font-family: 'faktum regular';
+  font-size: 20px;
+  line-height: 1.6;
+
+  &:before {
+    top: -55px;
+    left: 40px;
+  }
+
+  cite {
+    font-family: 'faktum bold';
+    font-size: 16px;
+    font-style: normal;
+    text-align: right;
+  }
+}

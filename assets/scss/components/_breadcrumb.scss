@@ -10,12 +10,21 @@
   position: relative;
   font-family: 'antikor bold';
 
+  &:before {
+    display: none;
+  }
+
   &:after {
+    width: unset;
+    height: unset;
     position: absolute;
     top: 1px;
     right: 5px;
+    left: unset;
     color: $color-brand;
     content: '/';
+    background: transparent;
+    border: none;
   }
 
   &:last-of-type {
@@ -33,6 +42,7 @@
   a {
     color: $color-text;
     text-decoration: none;
+    border: none;
     transition: color ease-in .1s;
 
     &:hover,

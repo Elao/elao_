@@ -9,13 +9,16 @@
   flex-direction: column;
   align-items: flex-end;
   list-style: none;
-
-  background: gold; // todo remove
 }
 
 .article-tag-list__item {
   margin: 10px 0;
   text-align: right;
+
+  &:before,
+  &:after {
+    display: none;
+  }
 
   a {
     font-family: 'antikor bold';
@@ -23,6 +26,7 @@
     color: $color-brand;
     text-decoration: none;
     hyphens: auto;
+    border: none;
   }
 }
 
@@ -41,7 +45,7 @@
 
 @media (max-width: $screen-xs) {
   .article-tag-list {
-    margin-top: 25px;
+    margin: 25px 0 10px;
     position: static;
     transform: none;
     width: 100%;

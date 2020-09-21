@@ -12,6 +12,11 @@
   margin-bottom: 20px;
   padding: 0 30px;
 
+  &:before,
+  &:after {
+    display: none;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -19,6 +24,7 @@
   a {
     color: $color-primary;
     text-decoration: none;
+    border: none;
     transition: color ease-in .1s;
 
     &:hover,
@@ -31,6 +37,10 @@
 
 @media (max-width: $screen-sm) {
   .table-of-content {
-    display: none;
+    padding: 25px 25px 25px 65px;
+  }
+
+  .table-of-content__item {
+    padding: 0 15px;
   }
 }

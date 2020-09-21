@@ -1,0 +1,20 @@
+.article-content {
+  display: flex;
+  font-family: 'faktum regular';
+  color: $color-text;
+  font-size: 20px;
+  line-height: 1.6;
+
+  p {
+    margin: 0 0 30px;
+  }
+
+  figure {
+    margin-left: -200px;
+    width: calc(100% + 200px);
+  }
+}
+
+.article-content__aside {
+  min-width: 200px;
+}

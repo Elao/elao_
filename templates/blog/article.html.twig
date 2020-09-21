@@ -15,12 +15,12 @@
 
     <div class="article-info">
       <!-- todo : this is if the article has a single author -->
-     {#  <div class="article-author">
+      <div class="article-author">
         <div class="article-author__image">
           <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
         </div>
         <span class="article-author__info">Écrit par <strong>{{ article.author.name }}</strong></span>
-      </div> #}
+      </div>
       <!-- todo : this is if the article has multiple authors -->
       <div class="article-author article-author--multi">
         <div class="article-author__image">
@@ -34,12 +34,12 @@
         </span>
       </div>
       <!-- todo : if the article has more than 5 co-authors (too long, won't fit) , "la team elao" is the author -->
-      {# <div class="article-author">
+      <div class="article-author">
         <div class="article-author__image">
           <img src="{{ asset(article.author.avatar ?? 'images/authors/default.png') }}" />
         </div>
         <span class="article-author__info">Écrit par <strong>La team elao</strong></span>
-      </div> #}
+      </div>
       <div class="article-info__date">
         <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
         <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
@@ -61,7 +61,7 @@
 
   <ul class="table-of-content">
     <li class="table-of-content__item">
-      <a href="#">Introduction</a>
+      <a href="#intro">Introduction</a>
     </li>
     <li class="table-of-content__item">
       <a href="#">Contexte</a>
@@ -77,6 +77,51 @@
   {# <div>
     {{ article.content|raw }}
   </div> #}
+
+  <div class="article-content">
+    <aside class="article-content__aside">
+      <button class="kudo">
+        {# <i class="icon icon--brackets"></i> #}
+      </button>
+    </aside>
+    <main>
+      <h2 id="intro" class="anchor-title">
+        <a href="#intro">Introduction</a>
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae, delectus. Possimus, delectus. Est fugiat placeat quas odio atque molestiae perspiciatis delectus, sit cupiditate dignissimos autem alias error quod. Corporis!</p>
+      <p>Quaerat, ipsa <a href="#">exercitationem</a> pariatur quia libero quo non aut ducimus voluptatum! Dolores nesciunt tenetur labore, quasi? Doloribus perferendis itaque, nemo. Tempora, ab! Nam quasi placeat voluptatem, et amet, atque laudantium ratione, ab quas, eum voluptates quisquam. Nisi quibusdam aliquam, omnis quia sit repellendus repellat.</p>
+      <blockquote>
+        Il y a seulement 2 problèmes compliqués en informatique : nommer les choses et l'invalidation du cache
+        <cite>- Phil Karlton</cite>
+      </blockquote>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1552071379-041b32707fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="vivamus bibendum">
+        <figcaption>
+          <span class="figure__legend">Légende vivamus bibendum</span>
+          <span class="figure__credits">Crédit photo : <a href="https://unsplash.com/@veverkolog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dušan Smetana</a></span>
+        </figcaption>
+      </figure>
+      <h2 id="intro" class="anchor-title">
+        <a href="#intro">Contexte</a>
+      </h2>
+      <h3>Est fugiat placeat quas odio</h3>
+      <h4>Cupiditate dignissimos autem</h4>
+      <h5>Cupiditate dignissimos autem</h5>
+      <h6>Cupiditate dignissimos autem</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae, delectus. Possimus, delectus. Est fugiat placeat quas odio atque molestiae perspiciatis delectus, sit cupiditate dignissimos autem alias error quod. Corporis!</p>
+      <ul>
+        <li>Est fugiat placeat quas odio atque molestiae quasi placeat voluptatem et amet atque laudantium ratione ab quas eum voluptates quisquam</li>
+        <li>Doloribus perferendis itaque</li>
+        <li>Totam beatae</li>
+        <li>Omnis quia sit repellendus repellat</li>
+      </ul>
+      <blockquote>
+        Les images sont exploitées par de nombreux chercheurs et médecins dans le cadre de la recherche médicale et de sa progression. L’application orientée « gaming » est attractive, ludique et ergonomique.
+        <cite>Maxime Colin</cite>
+      </blockquote>
+      <p>Quaerat, ipsa <a href="#">exercitationem</a> pariatur quia libero quo non aut ducimus voluptatum! Dolores nesciunt tenetur labore, quasi? Doloribus perferendis itaque, nemo. Tempora, ab! Nam quasi placeat voluptatem, et amet, atque laudantium ratione, ab quas, eum voluptates quisquam. Nisi quibusdam aliquam, omnis quia sit repellendus repellat.</p>
+    </main>
+  </div>
 
   <div class="article-footer">
     <!-- If the article has one single author -->

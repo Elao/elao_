@@ -41,7 +41,7 @@ L'objectif en 4 points : être performant, fonctionner offline, être accessible
 
 Le "cool kid" du moment, c'est bien sûr javascript en version "ES6" ou "ES2015", "ES2016", "ES2017"... et **[Christophe Porteneuve](https://twitter.com/porteneuve)** nous prouve que c'est **très bien supporté nativement** et que c'est prêt pour la prod grâce à Babel. _Protip_ : pour de meilleures perfs au runtime, ne transpilez que les presets nécessaires !
 
-![](/images/posts/2016/blend/ES2016.jpg)
+![](images/posts/2016/blend/ES2016.jpg)
 
 Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/omansour)** fait le point sur l'éco-système PHP en 2016 et le bilan est positif ! PHP a aujourd'hui atteint une vraie maturité et une légitimité. Simple, productif, performant et solide, il a rattrapé son retard face à des "concurrents" historiques comme Java et mérite d'être pris au sérieux. On dit oui ! 👍
 
@@ -55,7 +55,7 @@ Mais à Blend, on a aussi parlé PHP : **[Olivier Mansour](https://twitter.com/o
 
 **[Marie-Cécile Paccard](https://twitter.com/mcpaccard)** nous invite à réfléchir sur nous-mêmes : en tant que personnes, en tant que professionnels du web, en tant qu'entreprises. Qui sommes-nous ? Quelles sont nos valeurs ? Qu'est-ce qui nous fait vibrer ? Et ça, c'est des questions qui nous parlent : initiative, équipe, passion, bien-être, innovation, confiance, partage, ... et vous, c'est quoi vos valeurs ? 🤔
 
-![](/images/posts/2016/blend/mcpaccard.jpg)
+![](images/posts/2016/blend/mcpaccard.jpg)
 
 **[Laurent Victorino](https://twitter.com/on_code)** a une mission : ~~troller l'auditoire~~ nous donner envie de faire un jeu vidéo. Pourquoi ? D'abord parce qu'on peut. Avec nos compétences du web, aujourd'hui, on en est tous capable. Ensuite parce que c'est fun et c’est une très bonne manière de souder nos équipes. Et enfin parce que ça permet de se confronter à des problèmes nouveaux, y répondre avec des solutions inédites, pour nous rendre meilleurs dans notre travail. On approuve et on confirme ! ([Curvytron](http://www.curvytron.com/), [Lazerdrive](https://lazerdrive.io/), tout ça … 😉 )
 

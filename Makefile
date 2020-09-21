@@ -49,17 +49,18 @@ serve-static: build-content
 	open http://localhost:8000
 	php -S localhost:8000 -t build
 
-	vendor/bin/php-cs-fixer fix --dry-run --diff
-
 ## Simulates GH Pages deploy into a subdir / with base url
 build-subdir: export APP_ENV = prod
 build-subdir: export WEBPACK_PUBLIC_PATH = /elao_/build
-build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8000/elao_
+build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8001/elao_
 build-subdir: clear build-assets
 	bin/console cache:clear
 	bin/console content:build build/elao_
-	open http://localhost:8000/elao_
-	php -S localhost:8000 -t build
+
+serve-static-subdir: build-subdir
+	open http://localhost:8001/elao_
+	php -S localhost:8001 -t build
+
 ########
 # Lint #
 ########

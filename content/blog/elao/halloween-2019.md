@@ -22,7 +22,10 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure
 
-![](/images/posts/2019/halloween/anne-laure.jpg)
+![Local](images/posts/2019/halloween/anne-laure.jpg)
+![Local with shash](/images/posts/2019/halloween/anne-laure.jpg)
+![Distant https](https://imageetinformation.files.wordpress.com/2014/09/lol-cat2.jpg)
+![Distant same scheme](//imageetinformation.files.wordpress.com/2014/09/lol-cat2.jpg)
 
 ### Films qui font plus ou moins peur :
 
@@ -40,7 +43,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Amélie
 
-![](/images/posts/2019/halloween/amelie.jpg)
+![](images/posts/2019/halloween/amelie.jpg)
 
 ### Films pas assez connus / un peu expérimentaux / un peu weird :
 
@@ -57,7 +60,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Thomas
 
-![](/images/posts/2019/halloween/thomas.jpg)
+![](images/posts/2019/halloween/thomas.jpg)
 
 ###  "Horreur d'auteur"
 
@@ -81,7 +84,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Florian
 
-![](/images/posts/2019/halloween/flo.jpg)
+![](images/posts/2019/halloween/flo.jpg)
 
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
 - __Dead end__, Jean-Baptiste Andrea (2003)
@@ -91,7 +94,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Guewen
 
-![](/images/posts/2019/halloween/guewen.jpg)
+![](images/posts/2019/halloween/guewen.jpg)
 
 ### Les classiques
 
@@ -118,7 +121,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Maxime
 
-![](/images/posts/2019/halloween/maxime.jpg)
+![](images/posts/2019/halloween/maxime.jpg)
 
 Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pas (tros) peur mais quand même avec des fantômes, vampires, monstres et autres étrangetés dignes d'Halloween.
 
@@ -147,7 +150,7 @@ Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pa
 
 ## Ogi (Maxime.S)
 
-![](/images/posts/2019/halloween/ogi.jpg)
+![](images/posts/2019/halloween/ogi.jpg)
 
 Sans prétention aucune, surtout adepte de séries, voici ma liste pour une ambiance comfy Halloween.
 

@@ -1,4 +1,5 @@
 @import "normalize";
+@import "~prismjs/themes/prism-tomorrow.css";
 
 @import "base/_variables";
 @import "base/_fonts";
@@ -19,7 +20,6 @@
 @import "components/_footer";
 @import "components/_bullet";
 @import "components/_animated-block";
-@import "components/_code";
 @import "components/_titles";
 
 @import "pages/_page-home";

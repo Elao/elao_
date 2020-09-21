@@ -30,5 +30,8 @@
     "bugs": {
         "url": "https://github.com/Elao/elao_/issues"
     },
-    "homepage": "https://github.com/Elao/elao_#readme"
+    "homepage": "https://github.com/Elao/elao_#readme",
+    "dependencies": {
+        "prismjs": "^1.21.0"
+    }
 }

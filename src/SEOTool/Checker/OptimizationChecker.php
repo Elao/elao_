@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\SEOTool\Checker;
 
 use Symfony\Component\DomCrawler\Crawler;
@@ -47,8 +49,7 @@ class OptimizationChecker
     {
         $twitterProperties = [];
 
-        foreach(self::TWITTER_PROPERTIES as $property)
-        {
+        foreach (self::TWITTER_PROPERTIES as $property) {
             try {
                 $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
             } catch (\Exception $e) {
@@ -58,21 +59,20 @@ class OptimizationChecker
 
         $twitterProperties = array_filter($twitterProperties);
 
-        if(empty($twitterProperties)){
+        if (empty($twitterProperties)) {
             return 'missing';
         }
 
-        return count($twitterProperties) == 5 ? 'completed' : 'almost-completed';
+        return \count($twitterProperties) == 5 ? 'completed' : 'almost-completed';
     }
 
     public function getTwitterProperties()
     {
         $twitterProperties = [];
 
-        foreach(self::TWITTER_PROPERTIES as $property)
-        {
+        foreach (self::TWITTER_PROPERTIES as $property) {
             try {
-             $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
+                $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
             } catch (\Exception $e) {
                 $twitterProperties[$property] = null;
             }
@@ -85,8 +85,7 @@ class OptimizationChecker
     {
         $openGraphProperties = [];
 
-        foreach(self::OG_PROPERTIES as $property)
-        {
+        foreach (self::OG_PROPERTIES as $property) {
             try {
                 $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));
             } catch (\Exception $e) {
@@ -95,15 +94,13 @@ class OptimizationChecker
         }
 
         return array_filter($openGraphProperties);
-
     }
 
     public function getOpenGraphLevel()
     {
         $openGraphProperties = [];
 
-        foreach(self::OG_PROPERTIES as $property)
-        {
+        foreach (self::OG_PROPERTIES as $property) {
             try {
                 $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));
             } catch (\Exception $e) {
@@ -113,10 +110,11 @@ class OptimizationChecker
 
         $openGraphProperties = array_filter($openGraphProperties);
 
-        if(empty($openGraphProperties)){
+        if (empty($openGraphProperties)) {
             return 'missing';
         }
-        return count($openGraphProperties) == 5 ? 'completed' : 'almost-completed';
+
+        return \count($openGraphProperties) == 5 ? 'completed' : 'almost-completed';
     }
 
     public function getProperty($property)

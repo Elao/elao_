@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\tests\SeoTool\OptimizationChecker;
 
 use App\SEOTool\Checker\OptimizationChecker;
@@ -71,7 +73,6 @@ class OptimizationCheckerTest extends TestCase
         $this->assertIsArray($optimizationChecker->getTwitterProperties());
         $this->assertEquals($optimizationChecker->getTwitterProperties(), $twitterExpected);
         $this->assertEquals($optimizationChecker->getOpenGraphProperties(), $openGraphExpected);
-
     }
 
     public function testOgIsNotComplete()
@@ -105,7 +106,7 @@ class OptimizationCheckerTest extends TestCase
     {
         $html = file_get_contents(sprintf('tests/SeoTool/OptimizationChecker/%s', $filename));
         $crawler = new Crawler($html);
+
         return new OptimizationChecker($crawler);
     }
-
 }

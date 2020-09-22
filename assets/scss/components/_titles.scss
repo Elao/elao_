@@ -20,15 +20,6 @@ h1, .h1 {
   }
 }
 
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  position: relative;
-  line-height: 1.45 !important;
-}
-
 h2, .h2 {
   margin: 50px 0 25px;
   // padding: 0;
@@ -36,37 +27,7 @@ h2, .h2 {
   font-family: 'antikor bold';
   font-size: 32px;
   color: $color-primary;
-}
-
-h3, .h3 {
-  margin: 25px 0;
-  font-family: 'antikor bold';
-  font-size: 28px;
-  color: $color-text;
-}
-
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin: 10px 0;
-}
-
-h4, .h4 {
-  font-family: 'antikor bold';
-  font-size: 22px;
-  color: $color-text;
-}
-
-h5, .h5 {
-  font-family: 'antikor regular';
-  font-size: 20px;
-  color: $color-primary;
-}
-
-h6, .h6 {
-  font-family: 'antikor regular';
-  font-size: 20px;
-  color: $color-text;
+  line-height: 1.45 !important;
 }
 
 // Special titles
@@ -136,6 +97,14 @@ h6, .h6 {
   h1, .h1 {
     margin-left: 40px;
     font-size: 50px;
+  }
+
+  .anchor-title {
+    scroll-margin-top: 50px;
+
+    a {
+      font-size: 24px;
+    }
   }
 }
 

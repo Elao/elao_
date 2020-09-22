@@ -46,6 +46,11 @@
   .nav-mobile__item {
     margin: 15px 0;
 
+    &:before,
+    &:after {
+      display: none;
+    }
+
     a {
       font-family: 'antikor medium';
       color: #fff;

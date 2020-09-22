@@ -16,5 +16,24 @@
 }
 
 .article-content__aside {
+  padding-top: 50px;
   min-width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@media (max-width: $screen-md) {
+  .article-content {
+    figure {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .article-content__aside {
+    display: none;
+  }
 }

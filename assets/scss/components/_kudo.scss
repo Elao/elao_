@@ -1,22 +1,35 @@
 .kudo {
   margin: 30px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+.kudo__button {
+  margin-bottom: 10px;
   height: 75px;
   width: 75px;
-  border: none;
   border-radius: 50px;
   background: $color-secondary url('../../images/kudo.svg');
   background-position: left;
   background-repeat:no-repeat;
-  transition: transform ease-in .2s;
 
   &:hover,
   &:active,
   &:focus {
     box-shadow: none;
     outline: none;
-    transform: scale(1.05);
+    background-position: right;
   }
+}
+
+.kudo__label {
+  font-family: 'faktum regular';
+  font-size: 20px;
+  color: $color-text;
 }
 
 .kudo--animate {

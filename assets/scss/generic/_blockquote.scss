@@ -1,5 +1,5 @@
 blockquote {
-  margin: 65px 0;
+  margin: 60px 0;
   padding: 0;
   position: relative;
   font-family: 'antikor regular';
@@ -15,6 +15,7 @@ blockquote {
     font-size: 60px;
     color: $color-brand;
     content: '\e911';
+    line-height: 1;
   }
 
   cite {
@@ -41,5 +42,40 @@ blockquote:nth-of-type(even) {
     font-size: 16px;
     font-style: normal;
     text-align: right;
+  }
+}
+
+@media (max-width: $screen-md) {
+  blockquote {
+    margin: 100px 0;
+    padding: 40px 30px 0;
+
+    &:before {
+      top: -45px;
+      left: 0;
+      font-size: 45px;
+    }
+  }
+
+  blockquote:nth-of-type(even) {
+    margin: 100px 0 60px;
+    padding: 60px 30px 30px;
+
+    &:before {
+      top: -40px;
+      left: 30px;
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  blockquote {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  blockquote:nth-of-type(even) {
+    line-height: 1.6;
   }
 }

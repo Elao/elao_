@@ -1,6 +1,6 @@
 <?php
 
-namespace App\SEOStuff;
+namespace App\SEOTool;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

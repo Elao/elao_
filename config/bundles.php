@@ -11,5 +11,5 @@ return [
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Content\ContentBundle::class => ['all' => true],
-    App\SEOStuff\SeoStuffBundle::class => ['dev' => true]
+    App\SEOTool\SeoStuffBundle::class => ['dev' => true]
 ];

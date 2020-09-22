@@ -11,12 +11,31 @@
            the toolbar panel #}
         <div class="sf-toolbar-info-piece">
             <b>X-Robots-Tag :</b>
-            <span>{{ collector.XRobotsTag }}</span>
+            <span>{{ collector.RobotGuidelinesChecker.XRobotsTag }}</span>
         </div>
-
         <div class="sf-toolbar-info-piece">
-            <b>H1</b>
-            <span>{{ collector.h1 }}</span>
+            <b>Canonical :</b>
+            <span>{{ collector.RobotGuidelinesChecker.canonical }}</span>
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b>Title :</b>
+            <span>{{ collector.OptimizationChecker.title }}</span>
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b>Meta Description :</b>
+            <span>{{ collector.OptimizationChecker.metaDescription }}</span>
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b>H1 :</b>
+            <span>{{ collector.OptimizationChecker.h1 }}</span>
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b>Open Graph :</b>
+            <span>{{ collector.OptimizationChecker.OpenGraphLevel }}</span>
+        </div>
+        <div class="sf-toolbar-info-piece">
+            <b>Twitter :</b>
+            <span>{{ collector.OptimizationChecker.twitterPropertiesLevel }}</span>
         </div>
 
     {% endset %}

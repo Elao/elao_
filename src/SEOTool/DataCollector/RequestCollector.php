@@ -1,7 +1,9 @@
 <?php
 
-namespace App\SEOStuff\DataCollector;
+namespace App\SEOTool\DataCollector;
 
+use App\SEOTool\Checker\OptimizationChecker;
+use App\SEOTool\Checker\RobotGuidelinesChecker;
 use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -16,16 +18,11 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     {
         $this->data = [
             'response' => $response,
-            'crawler' => new Crawler($response->getContent())
         ];
     }
 
     public function lateCollect()
     {
-        /** @var Response $response */
-        $response = $this->data['response'];
-
-        $this->data['X-Robots-Tag'] = $response->headers->get('X-Robots-Tag') ;
     }
 
     public function reset()
@@ -33,30 +30,28 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $this->data = [];
     }
 
-    public function getTitle()
-    {
-        return $this->data['crawler']->extract(['h1']);
-    }
-
     public function getName()
     {
         return 'app.request_collector';
     }
 
-    public function getXRobotsTag()
+    public function getRobotGuidelinesChecker()
     {
-        return $this->data['X-Robots-Tag'];
+        return new RobotGuidelinesChecker($this->getCrawler(), $this->data['response']);
     }
 
-    public function getH1()
+    public function getCrawler()
     {
-
         /** @var Response $response */
         $response = $this->data['response'];
-        $html = $response->getContent();
-        $crawler = new Crawler($html);
-//        $p = $crawler->filter('body > p')->first();
-//        return $this->data['crawler']->extract(['h1']);
+        $crawler = new Crawler();
+        $crawler->addContent($response->getContent(), 'text/html');
 
+        return $crawler;
+    }
+
+    public function getOptimizationChecker()
+    {
+        return new OptimizationChecker($this->getCrawler());
     }
 }

@@ -21,7 +21,7 @@ Nous avons récemment pris le parti pour l'un de nos dernier projet de proposer 
 
 L'authentification par "lien magique" est notamment utilisée par Slack qui propose cette fonctionnalité dans son client et qui nous a grandement inspiré.
 
-[![](/images/posts/2018/magic-link-slack.png)](/images/posts/2018/magic-link-slack.png)
+[![](images/posts/2018/magic-link-slack.png)](/images/posts/2018/magic-link-slack.png)
 
 Pour ce projet, avons utilisé cette méthode d'authentification sur deux app mobile ainsi que sur une app backend.
 
@@ -29,7 +29,7 @@ Pour ce projet, avons utilisé cette méthode d'authentification sur deux app mo
 
 L'authentification par lien magique déporte toute la gestion des mots de passe sur la boîte mail de l'utilisateur. Celui-ci fournit son adresse email à l'application lorsqu'il souhaite s'y connecter, un lien d'authentification contenant un token lui est envoyé. L'utilisateur se connecte ensuite à sa boite mail puis clique sur le lien et est ensuite connecté sur l'application.
 
-[![](/images/posts/2018/magic-link.png)](/images/posts/2018/magic-link.png)
+[![](images/posts/2018/magic-link.png)](/images/posts/2018/magic-link.png)
 
 ## Un constat
 

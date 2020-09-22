@@ -44,17 +44,17 @@ Chez élao, nous travaillons généralement avec [IcoMoon](https://icomoon.io/ap
 
 1 . Créez votre suite d'icônes en sélectionnant parmi les polices proposées et/ou en uploadant vos propres pictogrammes au format SVG.
 
-![](/images/posts/2018/react-native-font-icon/compose_font.png)
+![](images/posts/2018/react-native-font-icon/compose_font.png)
 
 2 . Cliquez sur _Generate Font_ puis ouvrez les propriétés de la police (à côté du bouton _Download_) et saisissez un nom pour votre police qui ne contienne que des lettres standards [a-z], minuscules et/ou majuscules (ex : `acmeIcon`).
 
-![](/images/posts/2018/react-native-font-icon/customize_font_name.png)
+![](images/posts/2018/react-native-font-icon/customize_font_name.png)
 
 3 . Fermez la pop-in pour valider votre changement puis téléchargez votre police grâce au bouton _Download_. Enfin décompressez le fichier ZIP téléchargé.
 
 4 . Dans le dossier obtenu, récuperez la police au format `ttf` contenu dans le répertoire `fonts` et placez-la dans votre projet dans un répertoire de votre choix (ex: `./assets/fonts/acmeIcon.ttf`).
 
-![](/images/posts/2018/react-native-font-icon/icon.ttf.png)
+![](images/posts/2018/react-native-font-icon/icon.ttf.png)
 
 ⚠️ _Note :_ Attention, pour bien fonctionner sur iOS et Android, le nom du fichier `.ttf` doit correspondre __exactement__ au nom de la police choisie dans l'étape 2.
 
@@ -126,7 +126,7 @@ Côté React Native, l'équivalent de cette technique s'écrirait ainsi :
 💡 _Petite subtilité :_ si le caractère UTF-8 en CSS se note `"\e902"`, en Javascript c'est `'\u{e902}'`.
 La partie variable pour chaque icône ici est `e902`. IcoMoon vous fournit ce code unique pour chaque pictogramme, à vous de l'adapter au format Javascript.
 
-![](/images/posts/2018/react-native-font-icon/icon_code.png)
+![](images/posts/2018/react-native-font-icon/icon_code.png)
 
 Bien que cette notation fonctionne, je vous propose de créer un composant réutilisable et plus simple à utiliser !
 
@@ -209,7 +209,7 @@ _Note :_ Le composant `Icon` se comportera comme le composant `Text` de React Na
 
 Et le résultat !
 
-![](/images/posts/2018/react-native-font-icon/result.png)
+![](images/posts/2018/react-native-font-icon/result.png)
 
 ---
 

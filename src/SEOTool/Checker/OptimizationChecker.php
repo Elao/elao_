@@ -9,6 +9,10 @@ class OptimizationChecker
     /** @var Crawler */
     private $crawler;
 
+    const TWITTER_PROPERTIES = ['card', 'title', 'description', 'site', 'creator'];
+
+    const OG_PROPERTIES = ['title', 'locale', 'description', 'url', 'site_name'];
+
     public function __construct(Crawler $crawler)
     {
         $this->crawler = $crawler;
@@ -41,10 +45,9 @@ class OptimizationChecker
 
     public function getTwitterPropertiesLevel()
     {
-        $properties = ['card', 'title', 'description', 'site', 'creator'];
         $twitterProperties = [];
 
-        foreach($properties as $property)
+        foreach(self::TWITTER_PROPERTIES as $property)
         {
             try {
                 $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
@@ -64,10 +67,9 @@ class OptimizationChecker
 
     public function getTwitterProperties()
     {
-        $properties = ['title', 'description', 'card', 'site', 'creator'];
         $twitterProperties = [];
 
-        foreach($properties as $property)
+        foreach(self::TWITTER_PROPERTIES as $property)
         {
             try {
              $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
@@ -81,10 +83,9 @@ class OptimizationChecker
 
     public function getOpenGraphProperties()
     {
-        $properties = ['title', 'locale', 'description', 'url', 'site_name'];
         $openGraphProperties = [];
 
-        foreach($properties as $property)
+        foreach(self::OG_PROPERTIES as $property)
         {
             try {
                 $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));
@@ -99,10 +100,9 @@ class OptimizationChecker
 
     public function getOpenGraphLevel()
     {
-        $properties = ['title', 'locale', 'description', 'url', 'site_name'];
         $openGraphProperties = [];
 
-        foreach($properties as $property)
+        foreach(self::OG_PROPERTIES as $property)
         {
             try {
                 $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));

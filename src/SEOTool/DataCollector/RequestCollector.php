@@ -14,45 +14,41 @@ use Symfony\Component\HttpKernel\DataCollector\LateDataCollectorInterface;
 
 class RequestCollector extends DataCollector implements LateDataCollectorInterface
 {
-    public $crawler;
-
-    public function collect(Request $request, Response $response, \Throwable $exception = null)
+    public function collect(Request $request, Response $response, \Throwable $exception = null): void
     {
         $this->data = [
             'response' => $response,
         ];
     }
 
-    public function lateCollect()
+    public function lateCollect(): void
     {
     }
 
-    public function reset()
+    public function reset(): void
     {
         $this->data = [];
     }
 
-    public function getName()
+    public function getName(): string
     {
         return 'app.request_collector';
     }
 
-    public function getRobotGuidelinesChecker()
+    public function getRobotGuidelinesChecker(): RobotGuidelinesChecker
     {
         return new RobotGuidelinesChecker($this->getCrawler(), $this->data['response']);
     }
 
-    public function getCrawler()
+    public function getCrawler(): Crawler
     {
         /** @var Response $response */
         $response = $this->data['response'];
-        $crawler = new Crawler();
-        $crawler->addContent($response->getContent(), 'text/html');
 
-        return $crawler;
+        return new Crawler($response->getContent(), 'text/html');
     }
 
-    public function getOptimizationChecker()
+    public function getOptimizationChecker(): OptimizationChecker
     {
         return new OptimizationChecker($this->getCrawler());
     }

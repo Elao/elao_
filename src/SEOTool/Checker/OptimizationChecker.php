@@ -24,17 +24,17 @@ class OptimizationChecker
     {
         $title = $this->crawler->filter('head > title')->text();
 
-        return (empty($title)) ? null : $title;
+        return empty ($title) ? null : $title;
     }
 
-    public function getMetaDescription()
+    public function getMetaDescription(): ?string
     {
         $metaDescription = $this->crawler->filter('head > meta[name="description"]')->eq(0)->attr('content');
 
         return (empty($metaDescription)) ? null : $metaDescription;
     }
 
-    public function getH1()
+    public function getH1(): ?string
     {
         try {
             $h1 = $this->crawler->filter('h1')->first()->text();
@@ -45,7 +45,7 @@ class OptimizationChecker
         return (empty($h1)) ? null : $h1;
     }
 
-    public function getTwitterPropertiesLevel()
+    public function getTwitterPropertiesLevel(): ?string
     {
         $twitterProperties = [];
 
@@ -66,7 +66,7 @@ class OptimizationChecker
         return \count($twitterProperties) == 5 ? 'completed' : 'almost-completed';
     }
 
-    public function getTwitterProperties()
+    public function getTwitterProperties(): array
     {
         $twitterProperties = [];
 
@@ -81,7 +81,7 @@ class OptimizationChecker
         return array_filter($twitterProperties);
     }
 
-    public function getOpenGraphProperties()
+    public function getOpenGraphProperties(): array
     {
         $openGraphProperties = [];
 
@@ -96,7 +96,7 @@ class OptimizationChecker
         return array_filter($openGraphProperties);
     }
 
-    public function getOpenGraphLevel()
+    public function getOpenGraphLevel(): ?string
     {
         $openGraphProperties = [];
 
@@ -117,7 +117,7 @@ class OptimizationChecker
         return \count($openGraphProperties) == 5 ? 'completed' : 'almost-completed';
     }
 
-    public function getProperty($property)
+    public function getProperty(string $property): ?string
     {
         $meta = $this->crawler->filter(sprintf('head > meta[property="%s"]', $property))->eq(0)->attr('content');
 

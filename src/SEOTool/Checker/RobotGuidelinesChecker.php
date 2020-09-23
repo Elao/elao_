@@ -21,13 +21,21 @@ class RobotGuidelinesChecker
         $this->response = $response;
     }
 
-    public function getXRobotsTag()
+    public function getXRobotsTag(): ?string
     {
-        return $this->response->headers->get('X-Robots-Tag');
+        try {
+            return $this->response->headers->get('X-Robots-Tag');
+        } catch (\Exception $e) {
+            return null;
+        }
     }
 
-    public function getCanonical()
+    public function getCanonical(): ?string
     {
-        return $this->crawler->filter('head > link[rel="canonical"]')->attr('href');
+        try {
+            return $this->crawler->filter('head > link[rel="canonical"]')->attr('href');
+        } catch (\Exception $e) {
+            return null;
+        }
     }
 }

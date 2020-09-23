@@ -35,14 +35,14 @@ class OptimizationCheckerTest extends TestCase
     {
         $optimizationChecker = $this->getOptimizationChecker('no-open-graph.html');
 
-        static::assertEquals($optimizationChecker->getOpenGraphLevel(), 'missing');
+        static::assertEquals('missing', $optimizationChecker->getOpenGraphLevel());
     }
 
     public function testNoTwitterProperties()
     {
         $optimizationChecker = $this->getOptimizationChecker('no-twitter-properties.html');
 
-        static::assertEquals($optimizationChecker->getTwitterPropertiesLevel(), 'missing');
+        static::assertEquals('missing', $optimizationChecker->getTwitterPropertiesLevel());
     }
 
     public function testAllIsComplete()
@@ -65,14 +65,14 @@ class OptimizationCheckerTest extends TestCase
             'site_name' => 'name',
         ];
 
-        static::assertEquals($optimizationChecker->getTitle(), 'This is Title');
-        static::assertEquals($optimizationChecker->getMetaDescription(), 'This is meta description');
-        static::assertEquals($optimizationChecker->getH1(), 'This is H1');
-        static::assertEquals($optimizationChecker->getTwitterPropertiesLevel(), 'completed');
-        static::assertEquals($optimizationChecker->getOpenGraphLevel(), 'completed');
+        static::assertEquals('This is Title', $optimizationChecker->getTitle());
+        static::assertEquals('This is meta description', $optimizationChecker->getMetaDescription());
+        static::assertEquals('This is H1', $optimizationChecker->getH1());
+        static::assertEquals('completed', $optimizationChecker->getTwitterPropertiesLevel());
+        static::assertEquals('completed', $optimizationChecker->getOpenGraphLevel());
         static::assertIsArray($optimizationChecker->getTwitterProperties());
-        static::assertEquals($optimizationChecker->getTwitterProperties(), $twitterExpected);
-        static::assertEquals($optimizationChecker->getOpenGraphProperties(), $openGraphExpected);
+        static::assertEquals($twitterExpected, $optimizationChecker->getTwitterProperties());
+        static::assertEquals($openGraphExpected, $optimizationChecker->getOpenGraphProperties());
     }
 
     public function testOgIsNotComplete()
@@ -84,8 +84,8 @@ class OptimizationCheckerTest extends TestCase
             'site_name' => 'name',
         ];
 
-        static::assertEquals($optimizationChecker->getOpenGraphProperties(), $openGraphExpected);
-        static::assertEquals($optimizationChecker->getOpenGraphLevel(), 'almost-completed');
+        static::assertEquals($openGraphExpected, $optimizationChecker->getOpenGraphProperties());
+        static::assertEquals('almost-completed', $optimizationChecker->getOpenGraphLevel());
     }
 
     public function testTwitterPropertiesAreNotCompleted()
@@ -98,8 +98,8 @@ class OptimizationCheckerTest extends TestCase
             'creator' => 'Twitter Creator',
         ];
 
-        static::assertEquals($optimizationChecker->getTwitterProperties(), $propertiesExpected);
-        static::assertEquals($optimizationChecker->getTwitterPropertiesLevel(), 'almost-completed');
+        static::assertEquals($propertiesExpected, $optimizationChecker->getTwitterProperties());
+        static::assertEquals('almost-completed', $optimizationChecker->getTwitterPropertiesLevel());
     }
 
     public function getOptimizationChecker($filename): OptimizationChecker

@@ -45,7 +45,7 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         /** @var Response $response */
         $response = $this->data['response'];
 
-        return new Crawler($response->getContent(), 'text/html');
+        return new Crawler((string) $response->getContent(), 'text/html');
     }
 
     public function getOptimizationChecker(): OptimizationChecker

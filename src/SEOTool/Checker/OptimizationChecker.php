@@ -24,14 +24,22 @@ class OptimizationChecker
     {
         $title = $this->crawler->filter('head > title')->text();
 
-        return empty ($title) ? null : $title;
+        if ($title === '') {
+            return null;
+        }
+
+        return $title;
     }
 
     public function getMetaDescription(): ?string
     {
         $metaDescription = $this->crawler->filter('head > meta[name="description"]')->eq(0)->attr('content');
 
-        return (empty($metaDescription)) ? null : $metaDescription;
+        if ($metaDescription === '') {
+            return null;
+        }
+
+        return $metaDescription;
     }
 
     public function getH1(): ?string
@@ -42,7 +50,11 @@ class OptimizationChecker
             return null;
         }
 
-        return (empty($h1)) ? null : $h1;
+        if ($h1 === '') {
+            return null;
+        }
+
+        return $h1;
     }
 
     public function getTwitterPropertiesLevel(): ?string
@@ -59,7 +71,7 @@ class OptimizationChecker
 
         $twitterProperties = array_filter($twitterProperties);
 
-        if (empty($twitterProperties)) {
+        if (0 === \count($twitterProperties)) {
             return 'missing';
         }
 
@@ -110,7 +122,7 @@ class OptimizationChecker
 
         $openGraphProperties = array_filter($openGraphProperties);
 
-        if (empty($openGraphProperties)) {
+        if (0 === \count($openGraphProperties)) {
             return 'missing';
         }
 
@@ -121,6 +133,10 @@ class OptimizationChecker
     {
         $meta = $this->crawler->filter(sprintf('head > meta[property="%s"]', $property))->eq(0)->attr('content');
 
-        return (empty($meta)) ? null : $meta;
+        if ($meta === '') {
+            return null;
+        }
+
+        return $meta;
     }
 }

@@ -30,6 +30,31 @@ h2, .h2 {
   line-height: 1.45 !important;
 }
 
+h3 {
+  margin: 20px 0;
+  color: #1E7695;
+  font-family: 'antikor bold';
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+h4 {
+  margin: 20px 0;
+  color: $color-tertiary;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+h5,
+h6 {
+  margin: 20px 0;
+  color: $color-dark;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  line-height: 1.25;
+}
+
 // Special titles
 .h1--small {
   margin: 0;

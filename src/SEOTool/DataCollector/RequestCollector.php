@@ -36,9 +36,15 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         return 'app.request_collector';
     }
 
-    public function getRobotGuidelinesChecker(): RobotGuidelinesChecker
+    public function getCheckers(): array
     {
-        return new RobotGuidelinesChecker($this->getCrawler(), $this->data['response']);
+        $crawler = $this->getCrawler();
+
+        return [
+            'image' => new ImageChecker($crawler),
+            'optimization' => new OptimizationChecker($crawler),
+            'robotGuidelines' => new RobotGuidelinesChecker($crawler, $this->data['response']),
+        ];
     }
 
     public function getCrawler(): Crawler
@@ -47,15 +53,5 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $response = $this->data['response'];
 
         return new Crawler((string) $response->getContent(), 'text/html');
-    }
-
-    public function getOptimizationChecker(): OptimizationChecker
-    {
-        return new OptimizationChecker($this->getCrawler());
-    }
-
-    public function getImageChecker(): ImageChecker
-    {
-        return new ImageChecker($this->getCrawler());
     }
 }

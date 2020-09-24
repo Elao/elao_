@@ -34,4 +34,23 @@ class ImageChecker
 
         return \count($images);
     }
+
+    public function countIcons(): int
+    {
+        $images = $this->crawler
+            ->filter('i');
+
+        return \count($images);
+    }
+
+    public function countExplicitIcons(): int
+    {
+        $images = $this->crawler
+            ->filter('i')
+            ->extract(['aria-hidden']);
+
+        $images = array_filter($images);
+
+        return \count($images);
+    }
 }

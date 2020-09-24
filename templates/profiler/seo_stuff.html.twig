@@ -11,35 +11,35 @@
            the toolbar panel #}
         <div class="sf-toolbar-info-piece">
             <b>X-Robots-Tag :</b>
-            <span>{{ collector.RobotGuidelinesChecker.XRobotsTag }}</span>
+            <span>{{ collector.checkers.robotGuidelines.XRobotsTag }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Canonical :</b>
-            <span>{{ collector.RobotGuidelinesChecker.canonical }}</span>
+            <span>{{ collector.checkers.robotGuidelines.canonical }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Title :</b>
-            <span>{{ collector.OptimizationChecker.title }}</span>
+            <span>{{ collector.checkers.optimization.title }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Meta Description :</b>
-            <span>{{ collector.OptimizationChecker.metaDescription }}</span>
+            <span>{{ collector.checkers.optimization.metaDescription }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>H1 :</b>
-            <span>{{ collector.OptimizationChecker.h1 }}</span>
+            <span>{{ collector.checkers.optimization.h1 }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Open Graph :</b>
-            <span>{{ collector.OptimizationChecker.OpenGraphLevel }}</span>
+            <span>{{ collector.checkers.optimization.OpenGraphLevel }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Twitter :</b>
-            <span>{{ collector.OptimizationChecker.twitterPropertiesLevel }}</span>
+            <span>{{ collector.checkers.optimization.twitterPropertiesLevel }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>Total images / Missing Alt :</b>
-            <span>{{ collector.ImageChecker.countAllImages }} / {{ collector.ImageChecker.countAltFromImages }}</span>
+            <span>{{ collector.checkers.image.countAllImages }} / {{ collector.checkers.image.countAltFromImages }}</span>
         </div>
 
     {% endset %}

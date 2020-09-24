@@ -33,7 +33,7 @@ class OptimizationChecker
 
     public function getMetaDescription(): ?string
     {
-        $metaDescription = $this->crawler->filter('head > meta[name="description"]')->eq(0)->attr('content');
+        $metaDescription = $this->crawler->filter('head > meta[name="description"]')->first()->attr('content');
 
         if ($metaDescription === '') {
             return null;
@@ -59,17 +59,7 @@ class OptimizationChecker
 
     public function getTwitterPropertiesLevel(): ?string
     {
-        $twitterProperties = [];
-
-        foreach (self::TWITTER_PROPERTIES as $property) {
-            try {
-                $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
-            } catch (\Exception $e) {
-                $twitterProperties[$property] = null;
-            }
-        }
-
-        $twitterProperties = array_filter($twitterProperties);
+        $twitterProperties = $this->getProperties('twitter', self::TWITTER_PROPERTIES);
 
         if (0 === \count($twitterProperties)) {
             return 'missing';
@@ -80,47 +70,17 @@ class OptimizationChecker
 
     public function getTwitterProperties(): array
     {
-        $twitterProperties = [];
-
-        foreach (self::TWITTER_PROPERTIES as $property) {
-            try {
-                $twitterProperties[$property] = $this->getProperty(sprintf('twitter:%s', $property));
-            } catch (\Exception $e) {
-                $twitterProperties[$property] = null;
-            }
-        }
-
-        return array_filter($twitterProperties);
+        return $twitterProperties = $this->getProperties('twitter', self::TWITTER_PROPERTIES);
     }
 
     public function getOpenGraphProperties(): array
     {
-        $openGraphProperties = [];
-
-        foreach (self::OG_PROPERTIES as $property) {
-            try {
-                $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));
-            } catch (\Exception $e) {
-                $openGraphProperties[$property] = null;
-            }
-        }
-
-        return array_filter($openGraphProperties);
+        return $this->getProperties('og', self::OG_PROPERTIES);
     }
 
     public function getOpenGraphLevel(): ?string
     {
-        $openGraphProperties = [];
-
-        foreach (self::OG_PROPERTIES as $property) {
-            try {
-                $openGraphProperties[$property] = $this->getProperty(sprintf('og:%s', $property));
-            } catch (\Exception $e) {
-                $openGraphProperties[$property] = null;
-            }
-        }
-
-        $openGraphProperties = array_filter($openGraphProperties);
+        $openGraphProperties = $this->getProperties('og', self::OG_PROPERTIES);
 
         if (0 === \count($openGraphProperties)) {
             return 'missing';
@@ -138,5 +98,20 @@ class OptimizationChecker
         }
 
         return $meta;
+    }
+
+    public function getProperties(string $type, array $properties): array
+    {
+        $propertiesCompleted = [];
+
+        foreach ($properties as $property) {
+            try {
+                $propertiesCompleted[$property] = $this->getProperty(sprintf('%s:%s', $type, $property));
+            } catch (\Exception $e) {
+                $propertiesCompleted[$property] = null;
+            }
+        }
+
+        return array_filter($propertiesCompleted);
     }
 }

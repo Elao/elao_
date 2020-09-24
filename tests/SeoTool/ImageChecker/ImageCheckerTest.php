@@ -36,6 +36,18 @@ class ImageCheckerTest extends TestCase
         static::assertEquals(0, $imgChecker->countAltFromImages());
     }
 
+    public function testExplicitIcons()
+    {
+        $imgChecker = $this->getImageChecker('explicit-icons.html');
+        static::assertEquals(1, $imgChecker->countExplicitIcons());
+    }
+
+    public function testIcons()
+    {
+        $imgChecker = $this->getImageChecker('explicit-icons.html');
+        static::assertEquals(2, $imgChecker->countIcons());
+    }
+
     public function getImageChecker($filename): ImageChecker
     {
         $html = file_get_contents(sprintf('tests/SeoTool/ImageChecker/%s', $filename));

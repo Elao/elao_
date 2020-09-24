@@ -104,3 +104,10 @@ security.symfony@integration:
 
 security.npm@integration:
 	npm audit ; RC=$${?} ; [ $${RC} -gt 2 ] && exit $${RC} || exit 0
+
+############
+# Test #
+############
+
+test:
+	 ./bin/phpunit

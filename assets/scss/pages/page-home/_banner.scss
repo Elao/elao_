@@ -72,6 +72,13 @@
   display: flex;
   list-style: none;
 
+  li {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
   .item {
     margin: 0 20px;
     padding: 45px 30px 25px;

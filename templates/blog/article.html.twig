@@ -11,7 +11,7 @@
   </ul>
 
   <div class="article-banner">
-    <div class="article-banner__cover" style="background: url({{ asset(article.thumbnail) }})"></div>
+    <div class="article-banner__cover" style="background: #f1f1f1 url({{ asset(article.thumbnail) }})"></div>
 
     <div class="article-info">
       <!-- todo : this is if the article has a single author -->
@@ -66,61 +66,24 @@
       <a href="#intro">Introduction</a>
     </li>
     <li class="table-of-content__item">
-      <a href="#context">Contexte</a>
+      <a href="#quas">Quas odio atque</a>
     </li>
     <li class="table-of-content__item">
-      <a href="#">Intégrer la police au build React Native</a>
-    </li>
-    <li class="table-of-content__item">
-      <a href="#">Temporibus eveniet est ut dolore</a>
+      <a href="voluptatem">Voluptatem et amet atque</a>
     </li>
   </ul>
 
-  {# <div>
-    {{ article.content|raw }}
-  </div> #}
-
   <div class="article-content">
+    <main class="article-content__main">
+      {{ article.content|raw }}
+    </main>
     <aside class="article-content__aside">
       <button class="kudo">
-        <span class="kudo__button"></span>
+        <span class="kudo__button" aria-hidden="true"></span>
         <span class="screen-reader">Cet article m’a été utile</span>
-        <span class="kudo__label">Kudos</span>
+        <span class="kudo__label" aria-hidden="true">Kudos</span>
       </button>
     </aside>
-    <main>
-      <h2 id="intro" class="anchor-title">
-        <a href="#intro">Introduction</a>
-      </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae, delectus. Possimus, delectus. Est fugiat placeat quas odio atque molestiae perspiciatis delectus, sit cupiditate dignissimos autem alias error quod. Corporis!</p>
-      <p>Quaerat, ipsa <a href="#">exercitationem</a> pariatur quia libero quo non aut ducimus voluptatum! Dolores nesciunt tenetur labore, quasi? Doloribus perferendis itaque, nemo. Tempora, ab! Nam quasi placeat voluptatem, et amet, atque laudantium ratione, ab quas, eum voluptates quisquam. Nisi quibusdam aliquam, omnis quia sit repellendus repellat.</p>
-      <blockquote>
-        Il y a seulement 2 problèmes compliqués en informatique : nommer les choses et l'invalidation du cache
-        <cite>- Phil Karlton</cite>
-      </blockquote>
-      <figure>
-        <img src="https://images.unsplash.com/photo-1552071379-041b32707fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80" alt="vivamus bibendum">
-        <figcaption>
-          <span class="figure__legend">Légende vivamus bibendum</span>
-          <span class="figure__credits">Crédit photo : <a href="https://unsplash.com/@veverkolog?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dušan Smetana</a></span>
-        </figcaption>
-      </figure>
-      <h2 id="context" class="anchor-title">
-        <a href="#context">Contexte</a>
-      </h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam beatae, delectus. Possimus, delectus. Est fugiat placeat quas odio atque molestiae perspiciatis delectus, sit cupiditate dignissimos autem alias error quod. Corporis!</p>
-      <ul>
-        <li>Est fugiat placeat quas odio atque molestiae quasi placeat voluptatem et amet atque laudantium ratione ab quas eum voluptates quisquam</li>
-        <li>Doloribus perferendis itaque</li>
-        <li>Totam beatae</li>
-        <li>Omnis quia sit repellendus repellat</li>
-      </ul>
-      <blockquote>
-        Les images sont exploitées par de nombreux chercheurs et médecins dans le cadre de la recherche médicale et de sa progression. L’application orientée « gaming » est attractive, ludique et ergonomique.
-        <cite>Maxime Colin</cite>
-      </blockquote>
-      <p>Quaerat, ipsa <a href="#">exercitationem</a> pariatur quia libero quo non aut ducimus voluptatum! Dolores nesciunt tenetur labore, quasi? Doloribus perferendis itaque, nemo. Tempora, ab! Nam quasi placeat voluptatem, et amet, atque laudantium ratione, ab quas, eum voluptates quisquam. Nisi quibusdam aliquam, omnis quia sit repellendus repellat.</p>
-    </main>
   </div>
 
   <div class="article-footer">

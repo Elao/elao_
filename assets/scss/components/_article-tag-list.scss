@@ -27,6 +27,12 @@
     text-decoration: none;
     hyphens: auto;
     border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-brand;
+    }
   }
 }
 
@@ -50,17 +56,27 @@
     transform: none;
     width: 100%;
     padding: 0;
-    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .article-tag-list__item {
-    margin: 0 10px;
+    margin: 5px;
+    padding: 5px;
     text-align: left;
-    display: inline-block;
+    display: inline-flex;
+    border: solid 2px #fff;
 
     a {
-      text-decoration: underline;
       color: #fff;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+      }
     }
   }
 }

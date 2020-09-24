@@ -1,11 +1,21 @@
 .kudo {
-  margin: 30px;
   padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: transparent;
   border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none;
+    outline: none;
+
+    .kudo__button {
+      background-position: right;
+    }
+  }
 }
 
 .kudo__button {
@@ -16,14 +26,6 @@
   background: $color-secondary url('../../images/kudo.svg');
   background-position: left;
   background-repeat:no-repeat;
-
-  &:hover,
-  &:active,
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    background-position: right;
-  }
 }
 
 .kudo__label {
@@ -32,7 +34,7 @@
   color: $color-text;
 }
 
-.kudo--animate {
+.kudo--active {
   outline: none;
   box-shadow: none;
   animation: kudo 1s steps(20) forwards;

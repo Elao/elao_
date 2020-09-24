@@ -3,11 +3,11 @@ a {
   text-decoration: none;
   transition: color ease-in .1s;
   position: relative;
-  border-bottom: solid 3px $color-tertiary;
+  border-bottom: solid 3px $color-brand;
 
   &:hover,
   &:active,
   &:focus {
-    color: $color-tertiary;
+    color: $color-brand;
   }
 }

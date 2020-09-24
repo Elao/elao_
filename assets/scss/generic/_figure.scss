@@ -18,6 +18,12 @@ figcaption {
   a {
     border: none;
     color: $color-primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-primary;
+    }
   }
 }
 

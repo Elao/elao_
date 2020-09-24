@@ -1,5 +1,7 @@
 .article-content {
   display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
   font-family: 'faktum regular';
   color: $color-text;
   font-size: 20px;
@@ -23,6 +25,17 @@
   align-items: flex-start;
 }
 
+.article-content__main {
+  padding-top: 50px;
+  max-width: calc(100% - 200px);
+  flex: 1;
+
+  h2:first-of-type {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: $screen-md) {
   .article-content {
     figure {
@@ -33,7 +46,11 @@
 }
 
 @media (max-width: $screen-sm) {
+  .article-content {
+    flex-direction: column;
+  }
+
   .article-content__aside {
-    display: none;
+    padding: 20px 0 50px;
   }
 }

@@ -1,0 +1,16 @@
+.article-credits {
+  margin: 25px 0 50px;
+  padding: 25px 0;
+  border-top: solid 2px #7f1A55;
+
+  a {
+    color: #7f1A55;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+}

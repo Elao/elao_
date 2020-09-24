@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\SEOTool\DataCollector;
 
+use App\SEOTool\Checker\ImageChecker;
 use App\SEOTool\Checker\OptimizationChecker;
 use App\SEOTool\Checker\RobotGuidelinesChecker;
 use Symfony\Component\DomCrawler\Crawler;
@@ -51,5 +52,10 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     public function getOptimizationChecker(): OptimizationChecker
     {
         return new OptimizationChecker($this->getCrawler());
+    }
+
+    public function getImageChecker(): ImageChecker
+    {
+        return new ImageChecker($this->getCrawler());
     }
 }

@@ -37,6 +37,10 @@
             <b>Twitter :</b>
             <span>{{ collector.OptimizationChecker.twitterPropertiesLevel }}</span>
         </div>
+        <div class="sf-toolbar-info-piece">
+            <b>Total images / Missing Alt :</b>
+            <span>{{ collector.ImageChecker.countAllImages }} / {{ collector.ImageChecker.countAltFromImages }}</span>
+        </div>
 
     {% endset %}
 

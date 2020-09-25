@@ -49,14 +49,9 @@ class TableOfContentProcessor implements ProcessorInterface
 
         /** @var \DomElement $element * */
         foreach ($crawler->filter($titles) as $element) {
-            $this->register($tableOfContent, $element);
+            $tableOfContent[$element->getAttribute('id')] = $element->textContent;
         }
 
         $data[$this->tableOfContentProperty] = $tableOfContent;
-    }
-
-    private function register(array &$tableOfContent, \DOMElement $element): void
-    {
-        $tableOfContent[$element->getAttribute('id')] = $element->textContent;
     }
 }

@@ -4,7 +4,7 @@ title:          "Intégrer des icônes vectorielles dans React Native"
 date:           "2018-03-02"
 publishdate:    "2018-03-06"
 draft:          false
-summary:        true
+tableOfContent:        true
 
 description:    "Comment intégrer des icônes vectorielles dans une app React Native grâce à une police de caractères personnalisée."
 

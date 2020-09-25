@@ -15,7 +15,6 @@ class MemberNormalizer implements DenormalizerInterface
             return $data;
         }
 
-        //dump('couocu', $data);
         $fr = $data['fr'];
         $social = $data['social'] ?? [];
 

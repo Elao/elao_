@@ -6,7 +6,7 @@ publishdate:    "2017-11-22"
 draft:          false
 
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
-summary:        true
+tableOfContent:        true
 
 thumbnail:      "images/posts/2017/chalkboard-education/woman-phone.jpg"
 header_img:     "images/posts/2017/chalkboard-education/woman-phone.jpg"

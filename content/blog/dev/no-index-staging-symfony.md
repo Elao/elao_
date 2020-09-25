@@ -11,9 +11,7 @@ thumbnail:          "images/posts/thumbnails/judging-sardine-small.jpg"
 header_img:         "images/posts/headers/judging-sardine-large.jpg"
 tags:               ["Symfony", "seo", "no-index"]
 categories:         ["Dev", "Symfony", "seo"]
-
-author:    "elao"
-co_authors:         ["mcolin", "aldeboissieu"]
+author:             ["mcolin", "aldeboissieu"]
 
 ---
 L'indexation par les robots des moteurs de recherche des urls de staging ou de démonstration sont des cas classiques de [#SEOHorrorStories](https://www.webrankinfo.com/dossiers/conseils/horreurs-du-seo). En effet, cette situation est gênante, pour deux raisons :
@@ -41,7 +39,7 @@ Une des variantes est la balise meta robots noindex, [c'est une des solutions d�
 
 Depuis Symfony 4.3, [une configuration](https://symfony.com/blog/new-in-symfony-4-3-automatic-search-engine-protection) permet d'ajouter automatiquement le header `X-Robots-Tag: noindex` aux réponses de Symfony.
 
-```
+```yaml
 # config/packages/framework.yaml
 framework:
     disallow_search_engine_index: true
@@ -53,7 +51,7 @@ Malheureusement, **cette configuration ne peux pas être pilotée par une variab
 
 La solution est de passer par la configuration **nginx** ou **Apache** de votre serveur pour ajouter le header. Par exemple avec nginx:
 
-```
+```nginx
 server {
     ...
     add_header X-Robots-Tag "noindex";
@@ -63,7 +61,7 @@ server {
 
 Et avec Apache (sous réserve que le mod header soit activé) :
 
-```
+```apacheconf
 ...
 SetEnv X-Robots-Tag noindex
 ...

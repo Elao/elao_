@@ -9,7 +9,9 @@
             <div>
                 <img src="{{ asset(article.thumbnail) }}" />
                 {{ article.publishdate|format_date('medium') }}
-                {{ article.author.name }}
+                {% for author in article.authors %}
+                    {{ author.name }}
+                {% endfor %}
                 <a href="{{ path('blog_article', { article: article.slug }) }}">
                     {{ article.title }}
                 </a>

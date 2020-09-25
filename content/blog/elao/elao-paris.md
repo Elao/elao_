@@ -12,8 +12,7 @@ header_img:         "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
 categories:         ["elao", "methodo"]
 
-author:    "ssolere"
-co_authors:         []
+author:             "ssolere"
 
 ---
 

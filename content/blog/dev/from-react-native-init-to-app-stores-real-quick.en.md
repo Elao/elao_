@@ -6,7 +6,7 @@ publishdate:    "2017-11-09"
 draft:          false
 
 description:    "From react-native init to stores real quick"
-summary:        3
+tableOfContent:        3
 
 thumbnail:      "images/posts/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
 header_img:     "images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"

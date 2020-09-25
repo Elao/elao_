@@ -11,8 +11,7 @@ thumbnail:          "images/posts/thumbnails/afup-day-2019.jpg"
 header_img:         "images/posts/headers/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
-author:    "elao"
-co_authors:         ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]
+author:             ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]
 ---
 
 Le 17 mai 2019, nous avons été parmi quelques chanceux 🍀 (ou prévoyants ? 💪) à pouvoir profiter de [l'Afup Day](https://event.afup.org/afup-day-2019/afup-day-2019-lyon/),

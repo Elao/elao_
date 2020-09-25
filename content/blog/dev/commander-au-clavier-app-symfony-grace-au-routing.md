@@ -6,7 +6,7 @@ publishdate:    "2018-10-25"
 draft:          false
 
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
-summary:        true
+tableOfContent:        true
 
 thumbnail:      "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
 header_img:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"

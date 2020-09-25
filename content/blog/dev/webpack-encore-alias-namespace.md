@@ -9,6 +9,8 @@ description:        "Avec les alias Webpack Encore, adoptez la souplesse des nam
 
 thumbnail:          "images/posts/thumbnails/webpack-encore-alias.jpg"
 header_img:         "images/posts/headers/webpack-encore-alias.jpg"
+credits:            { name: "Jannes Glas" , url: "https://unsplash.com/@jannesglas" }
+
 tags:               ["Symfony", "JavaScript", "Webpack"]
 categories:         ["JavaScript", "Dev", "Symfony"]
 
@@ -113,5 +115,3 @@ import logoPath from 'Images/logo.png';
 ```
 
 ---
-
-<em>Illustration photo par <em><a href="https://unsplash.com/@jannesglas?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jannes Glas</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>

@@ -32,3 +32,8 @@ services:
 
     App\Content\Processor\TableOfContentProcessor:
         tags: [{ name: content.processor, priority: -10 }]
+
+    # Override default HTML Anchor processor:
+    Content\Processor\HtmlAnchorProcessor:
+        class: App\Content\Processor\HtmlAnchorProcessor
+        tags: [{ name: content.processor, priority: -20 }]

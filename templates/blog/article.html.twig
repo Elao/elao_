@@ -62,6 +62,20 @@
   <div class="article-content">
     <main class="article-content__main">
       {{ article.content|raw }}
+      {% block credits %}
+        {% if article.credits %}
+          <div class="article-credits">
+            Crédits: photo de couverture par
+            {% if article.credits.url %}
+              <a href="{{ article.credits.url }}">
+                {{ article.credits.name }}
+              </a>
+            {% else %}
+                {{ article.credits.name }}
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endblock %}
     </main>
     <aside class="article-content__aside">
       <button class="kudo">

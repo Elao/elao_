@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of the "Tom32i/Content" bundle.
- *
- * @author Thomas Jarrand <thomas.jarrand@gmail.com>
- */
-
 namespace App\Content\Processor;
 
 use App\Model\Article;

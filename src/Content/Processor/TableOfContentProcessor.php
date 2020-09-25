@@ -2,12 +2,6 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of the "Tom32i/Content" bundle.
- *
- * @author Thomas Jarrand <thomas.jarrand@gmail.com>
- */
-
 namespace App\Content\Processor;
 
 use App\Model\Article;
@@ -20,7 +14,7 @@ use Symfony\Component\DomCrawler\Crawler;
  */
 class TableOfContentProcessor implements ProcessorInterface
 {
-    public const MAX_DEPTH = 5;
+    public const MAX_DEPTH = 6;
 
     private string $tableOfContentProperty;
     private string $contentProperty;
@@ -53,6 +47,7 @@ class TableOfContentProcessor implements ProcessorInterface
         $titles = implode(', ', array_map(fn ($index) => 'h' . ($index + 1), array_keys(array_fill(0, $depth, null))));
         $tableOfContent = [];
 
+        /** @var \DomElement $element * */
         foreach ($crawler->filter($titles) as $element) {
             $this->register($tableOfContent, $element);
         }

@@ -24,6 +24,8 @@ class Article
     /** @var array<Member> */
     public array $authors = [];
 
+    public ?array $credits = null;
+
     /**
      * Automatically generated
      *

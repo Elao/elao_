@@ -14,9 +14,13 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  a {
+    border: none;
+  }
 }
 
-@media(max-width: $screen-md) {
+@media(max-width: $screen-sm) {
   .header {
     height: 60px;
   }

@@ -1,0 +1,13 @@
+a {
+  color: unset;
+  text-decoration: none;
+  transition: color ease-in .1s;
+  position: relative;
+  border-bottom: solid 3px $color-brand;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-brand;
+  }
+}

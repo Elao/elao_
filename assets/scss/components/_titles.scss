@@ -1,9 +1,10 @@
+// Basic titles
 h1, .h1 {
   margin-left: 110px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-family: faktum bold;
+  font-family: 'faktum bold';
   font-size: 58px;
   color: $color-brand;
 
@@ -19,19 +20,50 @@ h1, .h1 {
   }
 }
 
+h2, .h2 {
+  margin: 50px 0 25px;
+  // padding: 0;
+  position: relative;
+  font-family: 'antikor bold';
+  font-size: 32px;
+  color: $color-primary;
+  line-height: 1.45 !important;
+}
+
+h3 {
+  margin: 20px 0;
+  color: #1E7695;
+  font-family: 'antikor bold';
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+h4 {
+  margin: 20px 0;
+  color: $color-tertiary;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+h5,
+h6 {
+  margin: 20px 0;
+  color: $color-dark;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+// Special titles
 .h1--small {
   margin: 0;
   font-size: 36px;
 }
 
-h2, .h2 {
+.h2--dash {
   margin-top: 0;
   padding-top: 65px;
-  position: relative;
-  font-family: antikor bold;
-  font-size: 32px;
-  color: $color-primary;
-  line-height: 1.45 !important;
 
   &:before {
     width: 50px;
@@ -41,6 +73,37 @@ h2, .h2 {
     left: 0;
     content: '';
     background: $color-tertiary;
+  }
+}
+
+.anchor-title {
+  scroll-margin-top: 130px;
+
+  a {
+    position: relative;
+    color: $color-primary;
+    text-decoration: none;
+    border: none;
+
+    &:after {
+      position: relative;
+      left: 10px;
+      bottom: -10px;
+      color: $color-tertiary;
+      content: '#';
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: opacity ease-in .15s, bottom ease-in .15s;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      &:after {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -59,6 +122,14 @@ h2, .h2 {
   h1, .h1 {
     margin-left: 40px;
     font-size: 50px;
+  }
+
+  .anchor-title {
+    scroll-margin-top: 50px;
+
+    a {
+      font-size: 24px;
+    }
   }
 }
 

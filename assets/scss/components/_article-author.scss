@@ -1,0 +1,93 @@
+.article-author {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article-author__image {
+  img {
+    margin: 0;
+    margin-right: 15px;
+    width: 60px;
+    max-width: unset;
+    border: solid 3px $color-dark;
+    border-radius: 50%;
+  }
+}
+
+.article-author__info {
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    margin-top: 2px;
+    font-family: 'faktum bold';
+    color: $color-light;
+  }
+}
+
+.article-author__social {
+  margin-left: auto;
+  display: flex;
+
+  a {
+    margin: 0 6px;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    background: $color-light;
+    border: none;
+    border-radius: 50%;
+    transition: color ease-in .15s, background ease-in .15s;
+
+    .icon {
+      font-size: 23px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-light;
+      background: $color-dark;
+    }
+  }
+}
+
+.article-author--multi {
+  flex-direction: column;
+  align-items: flex-start;
+
+  .article-author__image {
+    margin-bottom: 10px;
+    position: relative;
+    left: -45px;
+    height: 60px;
+
+    @for $i from 1 through 5 {
+      img:nth-child(#{$i}) {
+        position: absolute;
+        left: #{$i * 45}px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .article-author__social {
+    width: 100%;
+    margin-top: 10px;
+
+    .social {
+      height: 40px;
+      width: 40px;
+
+      .icon {
+        font-size: 20px;
+      }
+    }
+  }
+}

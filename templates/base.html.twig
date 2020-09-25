@@ -68,7 +68,7 @@
                     { path: 'values', label: 'Nos valeurs' },
                     { path: 'team', label: 'La tribu' },
                     { path: 'blog', label: 'Blog' },
-                    { path: 'contact', label: 'Contact', icon: 'contact' },
+                    { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' },
                 ] %}
 
                 {% block desktop_nav %}
@@ -96,7 +96,7 @@
 
                 {% block mobile_nav %}
                     <!-- Mobile nav -->
-                    <nav class="nav-mobile">
+                    <nav class="nav-mobile">{# nav-mobile--open #}
                         <div class="nav-mobile__header">
                             <a href="{{ path('homepage') }}">
                                 {{ block('logo') }}
@@ -108,7 +108,7 @@
                         </div>
                         <ul>
                             {% for item in menu|filter(item => item.mobile ?? true) %}
-                                <li class="nav-mobile__item">
+                                <li class="nav-mobile__item {{ item.mobileClass|default('') }}">
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
                                             <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>

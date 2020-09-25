@@ -1,0 +1,27 @@
+.article-banner {
+  margin-bottom: 310px;
+  height: 450px;
+  position: relative;
+}
+
+.article-banner__cover {
+  height: 100%;
+  width: 815px;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+@media (max-width: $screen-md) {
+  .article-banner {
+    margin-bottom: 0;
+    height: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .article-banner__cover {
+    display: none;
+  }
+}

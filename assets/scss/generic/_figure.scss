@@ -1,0 +1,45 @@
+figure {
+  margin-bottom: 50px;
+
+  img {
+    margin: 0 auto 20px;
+    max-width: 100%;
+    display: block;
+  }
+}
+
+figcaption {
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  a {
+    border: none;
+    color: $color-primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-primary;
+    }
+  }
+}
+
+.figure__legend {
+  margin-right: 8px;
+  padding-right: 20px;
+  position: relative;
+
+  &:after {
+    width: 12px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    content: '';
+    background-color: $color-text;
+  }
+}

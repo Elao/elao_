@@ -72,11 +72,6 @@
                 ] %}
 
                 {% block desktop_nav %}
-                    <!--
-                        Todo :
-                        - open / close mobile nav on click on .nav-toggle buttons
-                        - when mobile nav is open, .body is .body.no-scroll to prevent background scroll
-                     -->
                     <!-- Desktop nav -->
                     <nav class="nav">
                         <ul>
@@ -96,7 +91,7 @@
 
                 {% block mobile_nav %}
                     <!-- Mobile nav -->
-                    <nav class="nav-mobile">{# nav-mobile--open #}
+                    <nav class="nav-mobile">
                         <div class="nav-mobile__header">
                             <a href="{{ path('homepage') }}">
                                 {{ block('logo') }}

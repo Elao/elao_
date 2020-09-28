@@ -55,8 +55,10 @@
 {% block menu %}
     {# This left-hand menu appears when using the full-screen profiler. #}
     <span class="label">
-        <span class="icon"><img src="..." alt=""/></span>
-        <strong>SEO & accessibility insights</strong>
+        <span class="icon">
+            {{ include('/profiler/179-accessibility.svg.twig') }}
+        </span>
+        <strong>Accessibility & SEO</strong>
     </span>
 {% endblock %}
 

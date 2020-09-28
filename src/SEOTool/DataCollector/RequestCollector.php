@@ -31,7 +31,7 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $this->data = [
             'response' => $response,
             'title' => $this->optimizationChecker->getTitle(),
-            'metaDescription' => $this->optimizationChecker->getTitle(),
+            'metaDescription' => $this->optimizationChecker->getMetaDescription(),
             'h1' => $this->optimizationChecker->getH1(),
             'oneH1' => $this->optimizationChecker->isOneH1(),
             'OpenGraphLevel' => $this->optimizationChecker->getOpenGraphLevel(),
@@ -156,7 +156,7 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         return $this->data['countAltFromImages'];
     }
 
-    public function getXRobotsTag(): string
+    public function getXRobotsTag(): ?string
     {
         return $this->data['XRobotsTag'];
     }

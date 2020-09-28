@@ -3,7 +3,9 @@
 {% block toolbar %}
     {% set icon %}
         {# this is the content displayed as a panel in the toolbar #}
-        🤖 <span class="sf-toolbar-value">SEO</span>
+        {{ include('/profiler/179-accessibility.svg.twig') }}
+        <span class="sf-toolbar-value">Accessibility & SEO</span>
+
     {% endset %}
 
     {% set text %}

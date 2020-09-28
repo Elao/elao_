@@ -55,6 +55,7 @@ class OptimizationCheckerTest extends TestCase
             'description' => 'Twitter Description',
             'site' => 'Twitter Site',
             'creator' => 'Twitter Creator',
+            'image' => 'https://where-your-image-is-hosted/name.jpg',
         ];
 
         $openGraphExpected = [
@@ -63,6 +64,7 @@ class OptimizationCheckerTest extends TestCase
             'description' => 'description',
             'url' => 'http://localhost:8080/',
             'site_name' => 'name',
+            'image' => 'https://upload.wikimedia.org/wikipedia/commons/8/87/Oliebollen.jpg',
         ];
 
         static::assertEquals('This is Title', $optimizationChecker->getTitle());
@@ -100,6 +102,52 @@ class OptimizationCheckerTest extends TestCase
 
         static::assertEquals($propertiesExpected, $optimizationChecker->getTwitterProperties());
         static::assertEquals('almost-completed', $optimizationChecker->getTwitterPropertiesLevel());
+    }
+
+    public function testTwitterMissingProperties()
+    {
+        $missing = ['title', 'description', 'image'];
+        $optimizationChecker = $this->getOptimizationChecker('twitter-properties-missing.html');
+        static::assertEquals($missing, $optimizationChecker->getMissingTwitterProperties());
+    }
+
+    public function testTwitterNoMissingProperties()
+    {
+        $missing = [];
+        $optimizationChecker = $this->getOptimizationChecker('all-is-complete.html');
+        static::assertEquals($missing, $optimizationChecker->getMissingTwitterProperties());
+    }
+
+    public function testOGMissingProperties()
+    {
+        $missing = ['title', 'locale', 'description', 'image'];
+        $optimizationChecker = $this->getOptimizationChecker('og-properties-missing.html');
+        static::assertEquals($missing, $optimizationChecker->getMissingOGProperties());
+    }
+
+    public function testOGNoMissingProperties()
+    {
+        $missing = [];
+        $optimizationChecker = $this->getOptimizationChecker('all-is-complete.html');
+        static::assertEquals($missing, $optimizationChecker->getMissingOGProperties());
+    }
+
+    public function test2H1()
+    {
+        $optimizationChecker = $this->getOptimizationChecker('2-h1.html');
+        static::assertEquals(false, $optimizationChecker->isOneH1());
+    }
+
+    public function testOneH1()
+    {
+        $optimizationChecker = $this->getOptimizationChecker('all-is-complete.html');
+        static::assertEquals(true, $optimizationChecker->isOneH1());
+    }
+
+    public function testOneH1Null()
+    {
+        $optimizationChecker = $this->getOptimizationChecker('no-title.html');
+        static::assertEquals(false, $optimizationChecker->isOneH1());
     }
 
     public function getOptimizationChecker($filename): OptimizationChecker

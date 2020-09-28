@@ -10,41 +10,187 @@
         {# this is the content displayed when hovering the mouse over
            the toolbar panel #}
         <div class="sf-toolbar-info-piece">
-            <b>X-Robots-Tag :</b>
-            <span>{{ collector.checkers.robotGuidelines.XRobotsTag }}</span>
+            <b>X-Robots-Tag:</b>
+            <span>{{ collector.XRobotsTag }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
-            <b>Canonical :</b>
-            <span>{{ collector.checkers.robotGuidelines.canonical }}</span>
+            <b>Canonical:</b>
+            <span>{{ collector.canonical }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
-            <b>Title :</b>
-            <span>{{ collector.checkers.optimization.title }}</span>
+            <b>Title:</b>
+            <span>{{ collector.title }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
-            <b>Meta Description :</b>
-            <span>{{ collector.checkers.optimization.metaDescription }}</span>
+            <b>Meta Description:</b>
+            <span>{{ collector.metaDescription }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
             <b>H1 :</b>
-            <span>{{ collector.checkers.optimization.h1 }}</span>
+            <span>{{ collector.h1 }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
-            <b>Open Graph :</b>
-            <span>{{ collector.checkers.optimization.OpenGraphLevel }}</span>
+            <b>Total images / Missing Alt:</b>
+            <span>{{ collector.countAllImages }} / {{ collector.countAltFromImages }}</span>
         </div>
         <div class="sf-toolbar-info-piece">
-            <b>Twitter :</b>
-            <span>{{ collector.checkers.optimization.twitterPropertiesLevel }}</span>
-        </div>
-        <div class="sf-toolbar-info-piece">
-            <b>Total images / Missing Alt :</b>
-            <span>{{ collector.checkers.image.countAllImages }} / {{ collector.checkers.image.countAltFromImages }}</span>
+            <b>Total icons / Missing aria:</b>
+            <span>{{ collector.countAllIcons }} / {{ collector.countAllExplicitIcons }}</span>
         </div>
 
     {% endset %}
 
     {# the 'link' value set to 'false' means that this panel doesn't
        show a section in the web profiler #}
-    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: false }) }}
+    {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: true }) }}
+{% endblock %}
+{% block head %}
+    {# Optional. Here you can link to or define your own CSS and JS contents. #}
+    {# Use {{ parent() }} to extend the default styles instead of overriding them. #}
+    {{ parent() }}
+{% endblock %}
+
+{% block menu %}
+    {# This left-hand menu appears when using the full-screen profiler. #}
+    <span class="label">
+        <span class="icon"><img src="..." alt=""/></span>
+        <strong>SEO & accessibility insights</strong>
+    </span>
+{% endblock %}
+
+{% block panel %}
+    {# Optional, for showing the most details. #}
+    <h2>Accessibility and SEO insights ✨</h2>
+        <h3>SEO main optimizations:</h3>
+            <table>
+                    <tr>
+                        <th>Title:</th>
+                        <td>{{ collector.title }}</td>
+                    </tr>
+                    <tr>
+                        <th>Meta description:</th>
+                        <td>{{ collector.metaDescription }}</td>
+                    </tr>
+                    <tr>
+                        <th>H1:</th>
+                        <td>{{ collector.h1 }}</td>
+                    </tr>
+                    <tr>
+                        <th>One H1:</th>
+                        {% if collector.oneH1 %}
+                            <td>✅</td>
+                        {% else %}
+                            <td>❌</td>
+                        {% endif %}
+                    </tr>
+            </table>
+
+        <h3>Directives for robots:</h3>
+            <table>
+                    <tr>
+                        <th>Canonical:</th>
+                        <td>{{ collector.canonical }}</td>
+                    <tr>
+                    <tr>
+                        <th>Language:</th>
+                        <td>{{ collector.language }}</td>
+                    <tr>
+                        <th>X-Robots-Tag:</th>
+                        <td>{{ collector.XRobotsTag }}</td>
+                    </tr>
+                    <tr>
+                        <th>Meta Robots:</th>
+                        <td>{{ collector.metaRobot }}</td>
+                    </tr>
+                    <tr>
+                        <th>Meta Googlebot:</th>
+                        <td>{{ collector.metaGooglebot }}</td>
+                    </tr>
+                    <tr>
+                        <th>Meta Googlebot-news:</th>
+                        <td>{{ collector.metaGooglebotNews }}</td>
+                    </tr>
+            </table>
+
+        <h3>Images:</h3>
+            <table>
+                    <tr>
+                        <th>Count all images:</th>
+                        <td>{{ collector.countAllImages }}</td>
+                    <tr>
+                        <th>Count all images with completed balise alt:</th>
+                        <td>{{ collector.countAltFromImages }}</td>
+                    </tr>
+                    <tr>
+                        <th>Images whithout alt:</th>
+                        <td>
+                        {% for image in collector.listMissingAltFromImages %}
+                            {{ image }}<br>
+                        {% endfor %}
+                        </td>
+                    </tr>
+            </table>
+
+        <h3>Icons:</h3>
+            <table>
+                    <tr>
+                        <th>Count all icons:</th>
+                        <td>{{ collector.countAllImages }}</td>
+                    <tr>
+                        <th>Count all explicit icons (aria-hidden):</th>
+                        <td>{{ collector.countAltFromImages }}</td>
+                    </tr>
+                    <tr>
+                        <th>Class of icons whithout aria-hidden attribute:</th>
+                        <td>
+                            {% for icons in collector.listNonExplicitIcons %}
+                                {{ icons }}<br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+            </table>
+
+        <h3>Share on Social Media:</h3>
+            <table>
+                <tr>
+                    <th>OpenGraph completed:</th>
+                    <td>{{ collector.OpenGraphLevel }}</td>
+                </tr>
+                <tr>
+                    <th>Properties:</th>
+                    <td>
+                        {% for key, content in collector.OpenGraphProperties %}
+                         {{ key }}: {{ content }} <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Missing properties:</th>
+                    <td>
+                        {% for key, content in collector.missingOpenGraphProperties %}
+                            {{ content }} <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Twitter card completed:</th>
+                    <td>{{ collector.twitterPropertiesLevel }}</td>
+                </tr>
+                <tr>
+                    <th>Properties:</th>
+                    <td>
+                        {% for key, content in collector.twitterProperties %}
+                         {{ key }}: {{ content }} <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Missing properties:</th>
+                    <td>
+                        {% for key, content in collector.missingTwitterProperties %}
+                            {{ content }} <br>
+                        {% endfor %}
+                    </td>
+                </tr>
+            </table>
 {% endblock %}

@@ -11,9 +11,9 @@ class OptimizationChecker
     /** @var Crawler */
     private $crawler;
 
-    const TWITTER_PROPERTIES = ['card', 'title', 'description', 'site', 'creator'];
+    const TWITTER_PROPERTIES = ['card', 'title', 'description', 'site', 'creator', 'image'];
 
-    const OG_PROPERTIES = ['title', 'locale', 'description', 'url', 'site_name'];
+    const OG_PROPERTIES = ['title', 'locale', 'description', 'url', 'site_name', 'image'];
 
     public function __construct(Crawler $crawler)
     {
@@ -57,6 +57,17 @@ class OptimizationChecker
         return $h1;
     }
 
+    public function isOneH1(): bool
+    {
+        try {
+            $elements = $this->crawler->filter('h1');
+
+            return 1 === \count($elements);
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
     public function getTwitterPropertiesLevel(): ?string
     {
         $twitterProperties = $this->getProperties('twitter', self::TWITTER_PROPERTIES);
@@ -65,7 +76,7 @@ class OptimizationChecker
             return 'missing';
         }
 
-        return \count($twitterProperties) == 5 ? 'completed' : 'almost-completed';
+        return \count($twitterProperties) == \count(self::TWITTER_PROPERTIES) ? 'completed' : 'almost-completed';
     }
 
     public function getTwitterProperties(): array
@@ -86,7 +97,37 @@ class OptimizationChecker
             return 'missing';
         }
 
-        return \count($openGraphProperties) == 5 ? 'completed' : 'almost-completed';
+        return \count($openGraphProperties) == \count(self::OG_PROPERTIES) ? 'completed' : 'almost-completed';
+    }
+
+    public function getMissingTwitterProperties(): array
+    {
+        return $this->getMissingPropertiesByType('twitter', self::TWITTER_PROPERTIES);
+    }
+
+    public function getMissingOGProperties(): array
+    {
+        return $this->getMissingPropertiesByType('og', self::OG_PROPERTIES);
+    }
+
+    public function getMissingPropertiesByType(string $type, array $properties): array
+    {
+        $propertiesCompleted = $this->getProperties($type, $properties);
+
+        if (0 < \count($propertiesCompleted)) {
+            $allProperties = $properties;
+            $missing = [];
+
+            foreach ($allProperties as $property) {
+                if (!\array_key_exists($property, $propertiesCompleted)) {
+                    $missing[] = $property;
+                }
+            }
+
+            return $missing;
+        }
+
+        return [];
     }
 
     public function getProperty(string $property): ?string

@@ -48,6 +48,18 @@ class ImageCheckerTest extends TestCase
         static::assertEquals(2, $imgChecker->countIcons());
     }
 
+    public function testListImagesWhithoutAlt()
+    {
+        $imgChecker = $this->getImageChecker('images.html');
+        static::assertEquals(['https://image.fr/image1.jpg'], $imgChecker->listImagesWhithoutAlt());
+    }
+
+    public function testListImagesWhithoutAriHidden()
+    {
+        $imgChecker = $this->getImageChecker('explicit-icons.html');
+        static::assertEquals(['icon icon--alert'], $imgChecker->listNonExplicitIcons());
+    }
+
     public function getImageChecker($filename): ImageChecker
     {
         $html = file_get_contents(sprintf('tests/SeoTool/ImageChecker/%s', $filename));

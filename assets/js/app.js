@@ -1,5 +1,8 @@
+import Toggle from './feature/Toggle';
+
 function init() {
-    //console.log('elao_ initialized, enjoy!');
+    // Mobile navigation
+    new Toggle('.nav-toggle', { '.nav-mobile': 'nav-mobile--open', 'body': 'no-scroll' });
 }
 
 window.addEventListener('load', init);

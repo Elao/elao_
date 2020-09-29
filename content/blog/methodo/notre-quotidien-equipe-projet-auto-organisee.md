@@ -37,7 +37,7 @@ Cela dure environ 5 minutes.
     - Un Burn Down Chart
 
 <div class="text-center">
-    <img src="/images/posts/2016/equipe-projet/board.jpg" alt="Board projet" width="300" />
+    <img src="images/posts/2016/equipe-projet/board.jpg" alt="Board projet" width="300" />
 </div>
 
 - Skype, avec le client, en direct et au quotidien, par échanges textes, par audio ou partage d'écran.
@@ -143,7 +143,7 @@ Le client nous dit quand cela ne va pas ou nous fait des retours utilisateurs d�
     - Le résultat peut être un dessin et une liste des tâches au tableau puis reportée sur la *PR* sur *Github*.
 
 <div class="text-center">
-    <img src="/images/posts/2016/equipe-projet/designreview.jpg" alt="Revue de design" width="300" />
+    <img src="images/posts/2016/equipe-projet/designreview.jpg" alt="Revue de design" width="300" />
 </div>
 
 - Revue de code (qu'on ne présente plus). Parfois, on explique à l'oral ce qu'on a reporté à l'écrit et ça passe mieux et beaucoup plus vite.
@@ -168,7 +168,7 @@ Nous faisons deux rétrospectives par sprint :
 - Une rétrospective avec l'équipe entière, c'est à dire avec le client lors de la cérémonie de début de sprint.
 
 <div class="text-center">
-    <img src="/images/posts/2016/equipe-projet/retrospective.jpg" alt="Rétrospective" width="300" />
+    <img src="images/posts/2016/equipe-projet/retrospective.jpg" alt="Rétrospective" width="300" />
 </div>
 
 Le résultat de ces rétrospectives sont des axes d'améliorations reportés sur des Post-it qui sont revérifiés au prochain sprint.
@@ -183,7 +183,7 @@ Quand le temps alloué au projet a fondu, il a bien fallu s'y mettre; un outil e
 Il est facile de réaliser un *Story Mapping* sous forme de Post-it pour avoir une vision long terme et faire une estimation macro pour l'atterrissage.
 
 <div class="text-center">
-    <img src="/images/posts/2016/equipe-projet/storymapping.jpg" alt="Revue de design" width="300" />
+    <img src="images/posts/2016/equipe-projet/storymapping.jpg" alt="Revue de design" width="300" />
 </div>
 
 ## Et maintenant ?

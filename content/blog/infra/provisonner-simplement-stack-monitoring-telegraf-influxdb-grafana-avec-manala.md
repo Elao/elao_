@@ -180,7 +180,7 @@ Par defaut **Grafana** est accesible sur le port ```3000``` avec pour identifian
 À partir de là vous pouvez créer votre premier *dashboard* (Menu > Dashboard > New). Pour avoir rapidement une base, vous pouvez également importer (Menu > Dashboard > Import) <a href="https://gist.github.com/maximecolin/ae5876ff844ce6a5dca95bc179bfa72d" target="_blank">cette configuration de dashboard</a> que j'ai initiée pour vous.
 
 <figure>
-    <img src="/images/posts/2016/monitoring-grafana.jpg" alt="Dashboard Grafana de monitoring système" />
+    <img src="images/posts/2016/monitoring-grafana.jpg" alt="Dashboard Grafana de monitoring système" />
     <figcaption style="text-align:center;font-style:italic;">Dashboard Grafana de monitoring système</figcaption>
 </figure>
 

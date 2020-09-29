@@ -25,7 +25,7 @@ Utilisant depuis un bon moment des solutions de virtualisation, nous avons pour 
 Nous prendrons pour l'exemple une des machines OVH, machines avec lesquelles nous avons l'habitude de travailler. Pour les moins exigeants le partitionnement par défaut proposé peut parfaitement faire l'affaire.
 
 <p class="text-center">
-    {{< figure src="/images/posts/2014/proxmox_default_partition_1000.png" title="Partitionnement par défaut OVH" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement par défaut OVH" >}}
+    {{< figure src="images/posts/2014/proxmox_default_partition_1000.png" title="Partitionnement par défaut OVH" alt="Partitionnement-d-un-serveur-proxmox - Partitionnement par défaut OVH" >}}
 </p>
 
 Il présente cependant un gros défaut qui est celui de ne pas laisser d'espace non partitionné à disposition de Proxmox dans le groupe LV, condition <i>sine qua non</i> pour pouvoir effectuer des sauvegardes de type "snapshot" de nos containers (ou de nos machines virtuelles).
@@ -41,7 +41,7 @@ Pour rappel le backup "à chaud" sous Proxmox fonctionne de la façon suivante:
 Nous préférerons donc définir un partitionnement comme ci-dessous (La machine utilisée disposait d'un espace total de 3 To):
 
 <p class="text-center">
-    ![Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé](/images/posts/2014/proxmox_partition_elao_1000.png)
+    ![Partitionnement-d-un-serveur-proxmox - Partitionnement personnalisé](images/posts/2014/proxmox_partition_elao_1000.png)
 </p>
 
 - 500 Mo pour ```/boot``` (Devrait amplement suffire à couvrir les MAJ kernel)

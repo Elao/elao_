@@ -35,8 +35,8 @@ Par exemple, pour une migration de mots de passe de `md5` vers `bcrypt`, lors d'
 Ainsi, chaque utilisateur migrera son mot de passe lors de sa première connexion à la nouvelle plateforme. Une fois que tous les utilisateurs auront été migrés, nous pourront effacer complètement les hashs `md5` de la base de données et n'utiliser que `bcrypt`.
 
 <figure style="text-align: center;">
-    <a href="/images/posts/2017/password-encoding-switch.png">
-        <img src="/images/posts/2017/password-encoding-switch.png" style="max-width: 600px;" alt="Logique de migration" />
+    <a href="images/posts/2017/password-encoding-switch.png">
+        <img src="images/posts/2017/password-encoding-switch.png" style="max-width: 600px;" alt="Logique de migration" />
     </a>
     <figcaption>Processus d'authentification</figcaption>
 </figure>

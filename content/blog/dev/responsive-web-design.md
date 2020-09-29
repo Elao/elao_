@@ -36,7 +36,7 @@ Le web design responsive amène une solution pratique et économique à cette si
 
 Adieu grille fixe en pixels, bonjour grille flexible ou fluide en pourcentage. Chaque élément de notre maquette doit ainsi s’exprimer en terme relatifs et proportionnels à son contenant d’où la formule :  `cible / contexte = résultat`.
 
-![contruire grid Responsive Web Design](/images/posts/2012/contruire-grid.jpg)
+![contruire grid Responsive Web Design](images/posts/2012/contruire-grid.jpg)
 
 **Gagnez du temps**
 

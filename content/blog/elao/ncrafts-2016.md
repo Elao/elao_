@@ -26,7 +26,7 @@ Le thème principal de l'événement était le [software craftsmanship / "l'arti
 Partagés en 5 tracks, les talks abordaient des sujets techniques comme le CQRS, l'Event Sourcing, ElasticSearch, le machine learning ou la programmation génétique, des sujets plus organisationnels comme le DDD, le mouvement No Estimates, l'architecture, la communication mais également des retours d'expériences sur la vie de développeur.
 
 <p class="text-center">
-    {{< figure src="/images/posts/2016/ncrafts-talk.jpg" alt="Conférence nCrafts">}}
+    {{< figure src="images/posts/2016/ncrafts-talk.jpg" alt="Conférence nCrafts">}}
 </p>
 
 ## Talks
@@ -40,12 +40,12 @@ Plusieurs talks, plus théoriques, avaient pour sujet des moyens d'améliorer co
 <div class=row>
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 		<p class="text-center">
-		    {{< figure src="/images/posts/2016/ncrafts-oculus.jpg" alt="Oculus">}}
+		    {{< figure src="images/posts/2016/ncrafts-oculus.jpg" alt="Oculus">}}
 		</p>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 		<p class="text-center">
-		    {{< figure src="/images/posts/2016/ncrafts-agile.jpg" alt="Agile">}}
+		    {{< figure src="images/posts/2016/ncrafts-agile.jpg" alt="Agile">}}
 		</p>
 	</div>
 </div>
@@ -57,12 +57,12 @@ Plusieurs tracks étaient consacrés à des lightning talks, des open spaces pri
 <div class=row>
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 		<p class="text-center">
-		    {{< figure src="/images/posts/2016/ncrafts-hands.jpg" alt="Mains levées">}}
+		    {{< figure src="images/posts/2016/ncrafts-hands.jpg" alt="Mains levées">}}
 		</p>
 	</div>
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
 		<p class="text-center">
-		    {{< figure src="/images/posts/2016/ncrafts-lego.jpg" alt="Atelier Lego">}}
+		    {{< figure src="images/posts/2016/ncrafts-lego.jpg" alt="Atelier Lego">}}
 		</p>
 	</div>
 </div>
@@ -74,5 +74,5 @@ Les différentes pauses entre les talks et pendant le déjeuner étaient autant 
 Enfin, en clôture du premier jour, un apéro était organisé sur place avec des bières spécialement brassées pour l'occasion, et c'était plutôt la classe !
 
 <p class="text-center">
-    {{< figure src="/images/posts/2016/ncrafts-beers.jpg" alt="The Old Craftsman beer">}}
+    {{< figure src="images/posts/2016/ncrafts-beers.jpg" alt="The Old Craftsman beer">}}
 </p>

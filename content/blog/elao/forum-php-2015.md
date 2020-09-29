@@ -23,7 +23,7 @@ Lerdorf.
 Et pour cause ! Nous fêtons les 15 ans de l'association et les 20 ans du langage. Cerise sur le gâteau, nous fêtons
 également la sortie de PHP7, une version majeure déjà plébiscitée pour les gains en performance par rapport à PHP5.
 
-<img src="/images/posts/2015/haphpybirthday.jpg" class="text-center">
+<img src="images/posts/2015/haphpybirthday.jpg" class="text-center">
 
 Point d'orgue de la keynote d'ouverture, diffusion en avant première mondiale de la vidéo
 ["Haphpy Birthday"](https://www.youtube.com/watch?v=tHlCsZf3nmA),

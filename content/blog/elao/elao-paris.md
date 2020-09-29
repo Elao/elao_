@@ -45,13 +45,13 @@ Nous sommes des **artisans passionnés** par ces écosystèmes qui avancent vite
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <a href="/images/posts/2016/tech-environment-1.jpg">
-            <img alt="Environnement technique 1" src="/images/posts/2016/tech-environment-1.jpg" />
+        <a href="images/posts/2016/tech-environment-1.jpg">
+            <img alt="Environnement technique 1" src="images/posts/2016/tech-environment-1.jpg" />
         </a>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <a href="/images/posts/2016/tech-environment-2.jpg">
-            <img alt="Environnement technique 2" src="/images/posts/2016/tech-environment-2.jpg" />
+        <a href="images/posts/2016/tech-environment-2.jpg">
+            <img alt="Environnement technique 2" src="images/posts/2016/tech-environment-2.jpg" />
         </a>
     </div>
 </div>
@@ -82,13 +82,13 @@ Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partage
 
 <div class=row>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <a href="/images/posts/2016/xgorse-talk.jpg">
-            <img alt="Environnement technique 1" src="/images/posts/2016/xgorse-talk.jpg" />
+        <a href="images/posts/2016/xgorse-talk.jpg">
+            <img alt="Environnement technique 1" src="images/posts/2016/xgorse-talk.jpg" />
         </a>
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        <a href="/images/posts/2016/lazerdrive-blend.jpg">
-            <img alt="Environnement technique 2" src="/images/posts/2016/lazerdrive-blend.jpg" />
+        <a href="images/posts/2016/lazerdrive-blend.jpg">
+            <img alt="Environnement technique 2" src="images/posts/2016/lazerdrive-blend.jpg" />
         </a>
     </div>
 </div>

@@ -57,6 +57,7 @@ build-subdir: clear build-assets
 	bin/console cache:clear
 	bin/console content:build build/elao_
 
+## Build & serve the static version of the site from a subdir / with base url
 serve-static-subdir: build-subdir
 	open http://localhost:8001/elao_
 	php -S localhost:8001 -t build

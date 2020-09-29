@@ -10,11 +10,11 @@ page_headline: "Etude de cas <small>EMS</small>"
 <section class="preview">
     <div class="col-lg-9 frame">
         <a href="http://example.com" target="_blank" class="frame__link disabled">
-          <img data-slideshow="illustration" src="/images/etudes-de-cas/ems_mockup1.png" alt="">
+          <img data-slideshow="illustration" src="images/etudes-de-cas/ems_mockup1.png" alt="">
         </a>
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/ems_mockup1.png" alt="" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/ems_mockup1.png" alt="" class="active">
     </div>
 </section>
 <div class="clearfix"></div>

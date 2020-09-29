@@ -21,7 +21,7 @@ A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documenta
 Une question que vous vous posez surement si vous n'avez pas eu l'occasion de travailler avec cet évènement : "Quand est-ce que je peux utiliser l'évènement "kernel.terminate" pour effectuer mes traitements ?" La réponse en image :
 
 <div style="text-align:center;">
-![Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522](/images/posts/2013/1331.png)
+![Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522](images/posts/2013/1331.png)
 </div>
 
 Concrètement, vous pouvez quasiment tout faire si vous utilisez cet évènement. A une chose près : votre traitement ne doit pas altérer la réponse. Pourquoi ? Parce qu'il est déclenché après que la réponse soit envoyé au client. Il n'y à donc plus moyen d'y rajouter des informations ou d'en altérer son contenu dans le but de l'envoyer au client. (Attention kernel.terminate a été rajouté en Symfony2.1, donc si vous êtes encore en 2.0, vous pouvez oublier).

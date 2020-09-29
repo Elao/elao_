@@ -44,7 +44,7 @@ Voici les différentes situations que référence le _GoF_ :
 ## Diagramme du Design pattern `Chain of Responsibility`
 
 <p class="text-center">
-    {{< figure class="text-center" src="/images/posts/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility'">}}
+    {{< figure class="text-center" src="images/posts/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility'">}}
     <figcaption style="text-align: center;font-style: italic;">Diagramme du Design Pattern 'Chain of Responsility'</figcaption>
 </p>
 

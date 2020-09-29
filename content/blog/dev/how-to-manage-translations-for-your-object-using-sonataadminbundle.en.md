@@ -282,7 +282,7 @@ You wanna see the result ? Well, you are free to propose a gist in the comment s
 **EDIT **The Bundle has been updated and now has a splitted view and tabbed view per locale.
 
 <div style="text-align:center;">
-{{< figure src="/images/posts/2012/translations.png"  alt="translations 285x300 How to manage translations for your object using SonataAdminBundle" width="285" height="300">}}
+{{< figure src="images/posts/2012/translations.png"  alt="translations 285x300 How to manage translations for your object using SonataAdminBundle" width="285" height="300">}}
 </div>
 
 **So what does the bundle <a href="https://github.com/a2lix/TranslationFormBundle" target="_blank">TranslationFormBundle</a> ?**

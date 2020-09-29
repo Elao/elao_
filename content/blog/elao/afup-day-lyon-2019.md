@@ -67,4 +67,4 @@ A travers également la conférence d’Alexandre Rock qui nous a parlé de la p
 
 Mention spéciale au restaurateur « Le Moulin » qui nous a offert un petit déjeuner, déjeuner et des collations de qualité !
 
-![L'équipe élao présente sur place](/images/posts/2019/afup-day-2019/equipe.jpg)
+![L'équipe élao présente sur place](images/posts/2019/afup-day-2019/equipe.jpg)

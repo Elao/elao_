@@ -21,13 +21,13 @@ C'est justement pour répondre à ce besoin que nous avons mis en place ce fameu
 ## Rich snippets : mais qu'est-ce que c'est ?
 
 Les internautes sont habitués à voir selon la thématique, pour un résultat proposé en plus de la meta description, un prix, une note sous forme d'étoile, une date de publication de l'article, ou encore un temps de cuisson s'il s'agit d'une recette de cuisine.
-![Vélo avec prix](/images/posts/2019/microdata-offers/produit-prix.png)
-![Recette de cuisine](/images/posts/2019/microdata-offers/rich-snippet-recipe.png)
+![Vélo avec prix](images/posts/2019/microdata-offers/produit-prix.png)
+![Recette de cuisine](images/posts/2019/microdata-offers/rich-snippet-recipe.png)
 
 C'est en encodant votre HTML que les crawlers de Google (ou d'autres moteurs de recherche) peuvent interpréter votre contenu, et ainsi peut-être l'utiliser pour alimenter ses pages de résultats. Et si vous avez la chance de figurer parmi les premières positions, **vous bénéficierez probablement de plus de clics sur votre page web, et ainsi plus de trafic**.
 
 En plus des contenus enrichis, Google propose de véritables features, comme par exemple ce planning des concerts à venir :
-![Evènements à venir](/images/posts/2019/microdata-offers/position-zero-concert.png)
+![Evènements à venir](images/posts/2019/microdata-offers/position-zero-concert.png)
 
 ### Les protocoles de données structurées
 
@@ -39,7 +39,7 @@ Il existe d'autres protocoles, comme par exemple l'[**Open Graph de Facebook**](
 
 Si l'internaute saisit des mots-clés relatifs à une recherche d'emploi (ici `pizzaiolo lyon`), **il voit apparaître une feature spéciale lui proposant une liste d'offres localisée**. Au clic sur "17 offres d'emploi" (voir ci-dessous), on est redirigé vers un outil de recherche d'emplois permettant de filtrer selon plusieurs types (date de publication, type d'emploi, lieu, employeur). Voir son ou ses offres d'emploi y paraître semble donc être un bon moyen de bénéficier de plus de visibilité.
 
-![job board Google](/images/posts/2019/microdata-offers/offer-rich-snippets.png)
+![job board Google](images/posts/2019/microdata-offers/offer-rich-snippets.png)
 
 ## Comment s'y prendre ?
 
@@ -106,10 +106,10 @@ Voici un petit résumé de ce qu'il a paru utile de connaître :
 Deux intérêts :
 
 - **Repérer les erreurs** (Google classe les erreurs distinctement des avertissements, qui sont les propriétés "bien à avoir" mais qui ne génèreront pas d'erreur), comme ci-dessous :
-![Liste des avertissements et erreurs](/images/posts/2019/microdata-offers/test-microdata.png)
+![Liste des avertissements et erreurs](images/posts/2019/microdata-offers/test-microdata.png)
 
 - **Prévisualiser son offre dans l'outil**, comme ci-dessous :
-![Prévisualisation](/images/posts/2019/microdata-offers/preview.png)
+![Prévisualisation](images/posts/2019/microdata-offers/preview.png)
 
 ### Se servir de la Search Console
 
@@ -134,4 +134,4 @@ Vous avez peut-être aperçu, au cours de vos recherches, du contenu affiché da
 Dans ce cas particulier, il n'est pas forcément nécessaire d'implémenter des données structurées dans votre HTML même si de nombreux types existent, seul l'adéquation entre une balise de titre (H1, H2...) et un contenu disposé dans une liste à puce semble suffire.
 
 Voici un exemple pour une question saisie par l'internaute dans un encart spécial, dont le html ne comporte qu'une liste, et non une structure de type ["How To"](https://developers.google.com/search/docs/data-types/how-to?hl=fr)) :
-![Exemple de position zéro](/images/posts/2019/microdata-offers/tuer-son-sim.png)
+![Exemple de position zéro](images/posts/2019/microdata-offers/tuer-son-sim.png)

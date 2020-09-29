@@ -29,7 +29,7 @@ En bref :
 
 Ça nous convient bien et GitHub nous fournit un aperçu de l'avancée de la milestone (et donc du sprint) en cours :
 
-![github-milestone](/images/posts/2017/github-agile-dashboard/github-milestone.png)
+![github-milestone](images/posts/2017/github-agile-dashboard/github-milestone.png)
 
 Le problème, c'est que GitHub ne connait pas notre convention décrivant la valeur en point des stories et ne peut donc pas l'exploiter.
 
@@ -51,17 +51,17 @@ Comme toutes ces données sont horodatées, on a même de quoi générer un peti
 
 Dans le répertoire de notre projet, si on tape `gad sprint`, on obtient :
 
-![gad sprint](/images/posts/2017/github-agile-dashboard/sprint.png)
+![gad sprint](images/posts/2017/github-agile-dashboard/sprint.png)
 
 Dès que nous avons identifié un besoin qui revenait souvent, on a rajouté une commande à GAD :
 
 > Combien de points reste-t-il dans le backlog ?
 
-![gad backlog](/images/posts/2017/github-agile-dashboard/backlog.png)
+![gad backlog](images/posts/2017/github-agile-dashboard/backlog.png)
 
 > Est-ce qu'il y a des PR que je n'ai pas encore review ?
 
-![gad review](/images/posts/2017/github-agile-dashboard/review.png)
+![gad review](images/posts/2017/github-agile-dashboard/review.png)
 
 ## Faire son propre CLI avec Node
 

@@ -47,7 +47,7 @@ On sent également la professionalisation du métier et l'intérêt, plus qu'ide
 
 J'ai malheureusement raté la keynote de Guillaume aka [free\_man\_](https://twitter.com/free_man_)), trop occupé à échanger avec l'ami Korben sur son projet «[Yes we hack](https://yeswehack.com)», mais j'ai réussi à suivre le reste des conférences malgré la diversité des ateliers, des exposants, des challenges et des personnes. Mention spéciale à Gael aka [RatZillaS](https://twitter.com/RatZillaS) qui a fait le show avec ses Tesla et [Virtualabs](https://twitter.com/virtualabs), drôle, utile et très pédagogue.
 
-![Benjamin Brown](/images/posts/2017/ndhxv/bbrown.jpg)
+![Benjamin Brown](images/posts/2017/ndhxv/bbrown.jpg)
 
 Après un rapide passage en revue de l'histoire du «Hacking» (Au sens large) et du «Darknet» par [Benjamin Brown](https://twitter.com/ajnachakra) qui faisait office de mise en bouche, les conférences s'enchainent à un rythme assez soutenu, laissant peu de place aux questions, mais les speakers étant très accessibles il est aisé d'approfondir le sujet hors scène.
 
@@ -57,27 +57,27 @@ Beaucoup de conférences plus ou moins techniques s'enchainent ensuite. Parmi el
 
 Présentation pleine d'entrain et d'humour qui fait un tour rapide de tout ce qu'il est possible de «hacker» chez soi, la télécommande, la clé média verrouillée de son FAI préféré, d'anciens objets électroniques jugés obsolètes mais qui peuvent trouver une seconde vie voire d'autre utilité au prix d'un petit effort de «reverse engineering» et de re-programmation.
 
-![Damien CAUQUIL](/images/posts/2017/ndhxv/virtualabs.jpg)
+![Damien CAUQUIL](images/posts/2017/ndhxv/virtualabs.jpg)
 
 ### NTFS, Forensics, malwares and vulnerabilities (Stéfan LE BERRE aka [HEURS](https://twitter.com/heurs))
 
 Point intéressant sur le fonctionnement du système de fichier NTFS, la façon dont il stocke les données et surtout comment exploiter sa structure de stockage pour corrompre, récupérer et/ou crypter les données présentes sur le disque. C'est à la fois surprenant et intéressant de voir que même un système de fichier dont la première version remonte à près de 25 ans est toujours exploitable et faillible (Souvent pour des raisons de rétro compatibilité). On y apprend notamment comment certains «malwares» s'y prennent pour corrompre les données.
 
-![NTFS, Forensics, malwares and vulnerabilities](/images/posts/2017/ndhxv/ntfs.jpg)
+![NTFS, Forensics, malwares and vulnerabilities](images/posts/2017/ndhxv/ntfs.jpg)
 
 ### The new sheriff in town is a machine ([Jennifer LYNCH](https://twitter.com/lynch_jen))
 
 Avocat de l'EFF et spécialiste de la vie privée et des problèmes de libertés civiles, Jennifer nous présente un sujet à la limite de l'anticipation... ou pas. Conférence intéressante sur l'exploitation du «big data» par les services de police et de renseignements pour notamment faire de l'analyse prédictive de crimes et d'actes terroristes. En effet certaines villes américaines ont déjà mis en place un système de reconnaissance faciale «à la volée» derrière le système de caméra de certaines villes et commencent à pousser le vice jusqu'à «estimer» à quelle point une personne est «susceptible» de commettre un crime.
 Amateurs de Minority Report bienvenus ;)
 
-![Jennifer LYNCH](/images/posts/2017/ndhxv/jlynch.jpg)
+![Jennifer LYNCH](images/posts/2017/ndhxv/jlynch.jpg)
 
 ### How to fool antivirus software? (Baptiste DAVID)
 
 Conférence d'assez haute volée technique, elle a pour but de présenter les différentes techniques permettant de passer outre les protections des antivirus (dans leur très grande majorité), le tout de manière élégante. On y apprend que les malwares ont encore de beaux jours devant eux, les techniques présentées permettant d'intervenir à quasiment tous les niveaux, kernel ou user-mode.
 L'exploitation présentée permettant de désactiver complètement les filtres des antivirus.
 
-![Baptiste DAVID](/images/posts/2017/ndhxv/howtofool.jpg)
+![Baptiste DAVID](images/posts/2017/ndhxv/howtofool.jpg)
 
 # Les exposants/sponsors - Le HackDating
 

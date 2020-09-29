@@ -427,7 +427,7 @@ Il existe 3 fonctions de décroissances, [linéaire](https://fr.wikipedia.org/wi
 
 La fonction linéaire est une droite, la décroissance est proportionelle à la distance. Avec la fonction exponentielle, la décroissance est très forte au début et diminue rapidement avec la distance jusqu'à tendre vers zero. Avec la fonction gaussienne, la décroissance est également très forte au début mais diminue moins rapidement.
 
-![Decay functions](/images/posts/2017/es-decay-graph.png)
+![Decay functions](images/posts/2017/es-decay-graph.png)
 
 Les fonctions de décroissance peuvent être appliquées sur des valeurs numériques, des dates (`offset` et `scale` sont alors exprimés en durée : 5h ou 1d par exemple) ou des géopoints (`offset` et `scale` sont alors exprimés en distance : 100m ou 5km par exemple).
 

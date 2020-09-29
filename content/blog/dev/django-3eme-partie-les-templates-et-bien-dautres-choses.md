@@ -23,7 +23,7 @@ En effet, nous allons enrichir le projet initié lors de notre <a href="/blog/dj
 Voici le résultat à atteindre :
 
 <div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](/images/posts/2010/elao_shop_index_vfinale.png)
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_index_vfinale.png)
 </div>
 
 
@@ -151,7 +151,7 @@ Si vous avez récupéré la feuille de style et les images que je vous proposais
 
 
 <div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](/images/posts/2010/elao_shop_index_v1.png)
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_index_v1.png)
 </div>
 
 Bon, tout cela commence à prendre forme, à présent, nous allons afficher nos articles dans notre template fraichement créée !
@@ -297,7 +297,7 @@ A présent, si vous soumettez le formulaire de recherche, Django vous gratifiera
 
 
 <div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](/images/posts/2010/elao_shop_csrf_403.png)
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_csrf_403.png)
 </div>
 
 Concernant les deux derniers points, nous sommes "**dans les clous**". En particulier, la classe **CsrfViewMiddleware** est bien déclarée par défaut dans notre fichier **settings.py**. En revanche, concernant le premier point, nous devons modifier notre méthode **index** pour passer à la méthode **render_to_response** un troisième paramètre de type **RequestContext**. Nous allons donc nous exécuter :

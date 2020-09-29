@@ -37,7 +37,7 @@ Qu'est ce qui nous a poussé à mettre en place ce système ? C'est d'abord une 
 
 En tant que développeurs et utilisateurs d'internet, nous sommes plusieurs à avoir fait le constat que beaucoup d'utilisateurs oublient très fréquemment leur mot de passe. En effet, une fois connecté à une application, grâce à des mécanismes comme le "Remember Me" ou les sessions longues, il peut se passer plusieurs semaines voir mois avant de devoir resaisir son mot de passe. Un grand nombre de connexions passent alors par une procédure d'oubli de mot de passe et donc par la boite email de l'utilisateur.
 
-[![You can't leak passwords if you don't store passwords.](/images/posts/2018/you-cant-leak-passwords-meme.png)](/images/posts/2018/you-cant-leak-passwords-meme.png)
+[![You can't leak passwords if you don't store passwords.](images/posts/2018/you-cant-leak-passwords-meme.png)](/images/posts/2018/you-cant-leak-passwords-meme.png)
 
 Ensuite nous y avons vu quelques avantages :
 

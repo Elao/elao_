@@ -39,7 +39,7 @@ J'ai représenté chaque **story** par une *issue* avec un titre et une descript
 
 Pour chaque **sprint** j'ai créé une *milestone* à laquelle j'ai assigné les *issues*. Il est possible de renseigner une *due date* pouvant correspondre à la date de fin du sprint ainsi qu'une description parfaite pour le *sprint goal*. A l'intérieur d'une *milestone* il est possible de réordonner les *issues* par *drag'n'drop*. Un pourcentage de complétion indique le ratio d'*issues* clôturées. Le filtre `no:milestone` dans la liste des *issues* permet d'afficher le backlog.
 
-![GitHub Project](/images/posts/2017/github-milestones.jpg)
+![GitHub Project](images/posts/2017/github-milestones.jpg)
 
 Pour la **qualification**, j'ai utilisé les *labels*. J'ai créé trois labels de priorité (prio haute rouge, prio normale jaune et prio faible vert), des labels *question*, *bug*, *feature*, *enhancement* pour indiquer la nature du ticket, des labels *dev*, *inte* et *infra* pour identifier les corps de métier impliqués ainsi que des labels de qualification métiers.
 
@@ -59,7 +59,7 @@ Une fois vos *issues* ajoutées au *board*, vous voyez leur titre, leur numéro,
 
 Cela manque encore un peu de fonctionnalités, comme le fait de pouvoir masquer les *issues* fermées ou bien de pouvoir assigner ou clore les *issues* directement depuis le *board*, mais je suis sûr que l'équipe de GitHub ajoutera ces fonctionnalités dans l'avenir.
 
-![GitHub Project](/images/posts/2017/github-project.jpg)
+![GitHub Project](images/posts/2017/github-project.jpg)
 
 ### Les spécifications
 

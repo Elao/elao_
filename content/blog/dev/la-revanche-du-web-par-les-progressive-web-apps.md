@@ -190,7 +190,7 @@ Ensuite, les données sont récupérées via des *fetch* d'API par exemple et vi
 Les requêtes à ces API peuvent elles-mêmes être mises en cache.
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/appshell.png" alt="Appshell" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/appshell.png" alt="Appshell" style="max-width:80%"/>
 </p>
 
 ### C'est réservé aux apps mobiles ?
@@ -207,7 +207,7 @@ offrant aux utilisateurs un accès plus rapide.
 L'ouverture du site dans le navigateur se présente comme une application native avec également un Splash Screen :
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/splashscreen.gif" alt="splashscreen" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/splashscreen.gif" alt="splashscreen" style="max-width:80%"/>
 </p>
 
 Ce Web App Manifest se présente sous forme d'un fichier json :
@@ -451,14 +451,14 @@ Le panel "Application" de Developer Tools de Chrome est déjà assez riche en fo
 Il permet de consulter le Cache Storage :
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/chrome-devtools-cachestorage.png" alt="Cache storage" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/chrome-devtools-cachestorage.png" alt="Cache storage" style="max-width:80%"/>
 </p>
 
 Vérifier le contenu du Web App Manifest et simuler l'ajout à l'écran d'accueil.
 Sous Chrome desktop, l'ajout sera effectivement fait dans les onglets Applications.
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/chrome-devtools-manifest.png" alt="service worker" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/chrome-devtools-manifest.png" alt="service worker" style="max-width:80%"/>
 </p>
 
 Consulter le Service Worker utilisé et avoir différentes options parmi lesquelles :
@@ -468,13 +468,13 @@ Consulter le Service Worker utilisé et avoir différentes options parmi lesquel
 - contourner le service worker pour obliger le navigateur à récupérer une ressource depuis le réseau (au lieu du cache) avec "Bypass for network".
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/chrome-devtools-serviceworker.png" alt="service worker" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/chrome-devtools-serviceworker.png" alt="service worker" style="max-width:80%"/>
 </p>
 
 Enfin, une fonction "Clear storage" permet de tout réinitialiser :
 
 <p class="text-center">
-    <img src="/images/posts/2016/pwa/chrome-devtools-clearstorage.png" alt="service worker" style="max-width:80%"/>
+    <img src="images/posts/2016/pwa/chrome-devtools-clearstorage.png" alt="service worker" style="max-width:80%"/>
 </p>
 
 Pour en savoir plus, voir cet article [Debug Progressive Web Apps](https://developers.google.com/web/tools/chrome-devtools/progressive-web-apps).

@@ -10,11 +10,11 @@ page_headline: "<small>Etude de cas </small> Chalkboard Education"
 ---
 <section class="preview">
     <div class="col-lg-9 frame">
-        <img data-slideshow="illustration" src="/images/etudes-de-cas/chalkboardeducation_mockup1.png" alt="Chalkboard Education">
+        <img data-slideshow="illustration" src="images/etudes-de-cas/chalkboardeducation_mockup1.png" alt="Chalkboard Education">
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/chalkboardeducation_mockup1.png" alt="" class="active">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/chalkboardeducation_mockup2.png" alt="">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/chalkboardeducation_mockup1.png" alt="" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/chalkboardeducation_mockup2.png" alt="">
     </div>
 </section>
 <div class="clearfix"></div>

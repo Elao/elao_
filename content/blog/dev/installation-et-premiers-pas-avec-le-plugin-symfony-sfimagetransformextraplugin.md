@@ -84,7 +84,7 @@ Nous allons dans un premier temps écrire le code de notre template pour y insé
 <h1>Image Transform & Extra plugin</h1>
 
 <div style="text-align:center; width: 400px; border: 1px solid lightgrey; padding:25px;">
-    <img src="/images/zf.jpg"></img><br/><br/>
+    <img src="images/zf.jpg"></img><br/><br/>
     <form method="post">
         <input type="submit" value="Transform image !"></input>
     </form>

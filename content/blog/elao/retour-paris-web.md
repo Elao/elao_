@@ -21,7 +21,7 @@ author:    "lhoizey"
 J'ai découvert [Paris Web](http://www.paris-web.fr/) pour la première fois dans le cadre de cette 10<sup>e</sup> édition 2015.
 Cela a été un réel plaisir tant en termes d'échanges et de belles rencontres que dans la découverte d'orateurs et d'oratrices aux messages riches, instructifs et très humains !
 
-<img src="/images/posts/2015/unicorn.png" class="pull-right">
+<img src="images/posts/2015/unicorn.png" class="pull-right">
 
 Je précise que je ne suis pas développeuse, je me suis donc plus naturellement orientée sur les conférences moins tech bien que Paris Web reste accessible à tous et c'est un vrai bonheur.
 

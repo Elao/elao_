@@ -37,15 +37,15 @@ Plusieurs templates sont disponibles, proposant différentes fonctionnalités et
 
 La commande vous invitera ensuite à rentrer les informations nécessaires à la configuration de votre projet puis générera une arborescence avec une base de projet type "Hello world".
 
-<img src="/images/posts/2016/vuecli-console.jpg" alt="Console" />
+<img src="images/posts/2016/vuecli-console.jpg" alt="Console" />
 
 Vous exécutez ensuite les commandes ```npm install``` et ```npm run dev```, votre application sera accessible sur l'url ```http://localhost:8080/```
 
-<img src="/images/posts/2016/vuecli-app.jpg" alt="Application" />
+<img src="images/posts/2016/vuecli-app.jpg" alt="Application" />
 
 ## Architecture
 
-<img src="/images/posts/2016/vuecli-tree.jpg" alt="Tree" style="float:right;max-width:30%;margin-left: 20px;margin-bottom: 20px;" />
+<img src="images/posts/2016/vuecli-tree.jpg" alt="Tree" style="float:right;max-width:30%;margin-left: 20px;margin-bottom: 20px;" />
 
 L'application est composée d'un fichier ```main.js``` servant de point d'entrée, d'un fichier ```index.html``` affichant votre application et de composants sous la forme de fichiers ```.vue```. De base vous aurez 2 composants, ```App.vue``` qui sera votre *root component* et ```Hello.vue``` qui est votre *Hello world*.
 
@@ -106,6 +106,6 @@ L'équipe de **Vue.js** a récemment partagé les sources d'un [clone d'Hackerne
 Je n'en avais pas encore parlé mais Vue.js propose un [dev tool](https://github.com/vuejs/vue-devtools) très pratique sous la forme d'une extension chrome. Cette extension se place dans un onglet du **dev tool** de Chrome et vous permet d'accéder à l'état de tous vos composants et de facilement débuguer votre application.
 
 <figure>
-	<img src="/images/posts/2016/vuecli-devtool.png" alt="Application" />
+	<img src="images/posts/2016/vuecli-devtool.png" alt="Application" />
 	<figcaption style="text-align: center;font-style: italic;">Devtools Vue.js</figcaption>
 </figure>

@@ -10,11 +10,11 @@ case_url: https://cirano.io/
 ---
 <section class="preview">
     <div class="col-lg-9 frame">
-        <img data-slideshow="illustration" src="/images/etudes-de-cas/cirano.png" alt="page d'accueil de cirano">
+        <img data-slideshow="illustration" src="images/etudes-de-cas/cirano.png" alt="page d'accueil de cirano">
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/cirano.png" alt="page d'accueil de cirano" class="active">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/cirano-test.png" alt="page de test d'éligibilité">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/cirano.png" alt="page d'accueil de cirano" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/cirano-test.png" alt="page de test d'éligibilité">
     </div>
 </section>
 <div class="clearfix"></div>

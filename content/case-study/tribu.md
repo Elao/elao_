@@ -9,11 +9,11 @@ page_headline: "<small>Etude de cas </small> Tribü"
 ---
 <section class="preview">
     <div class="col-lg-9 frame">
-        <img data-slideshow="illustration" src="/images/etudes-de-cas/tribu-reporting.png" alt="page de reporting de tribü">
+        <img data-slideshow="illustration" src="images/etudes-de-cas/tribu-reporting.png" alt="page de reporting de tribü">
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/tribu-reporting.png" alt="page de reporting de tribü" class="active">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/tribu-saisie.png" alt="page de saisie sur tablette">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/tribu-reporting.png" alt="page de reporting de tribü" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/tribu-saisie.png" alt="page de saisie sur tablette">
     </div>
 </section>
 <div class="clearfix"></div>

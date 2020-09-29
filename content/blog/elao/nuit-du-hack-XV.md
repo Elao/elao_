@@ -28,7 +28,7 @@ La convention s'étend sur près de 6000 m2 pour environ 2000 participants ce qu
 
 Divisé en plusieurs «zones», l'évènement offre la possibilité à chacun de découvrir l'ensemble des activités qui gravitent autour du milieu du hacking.
 
-{{< figure src="/images/posts/2017/ndhxv/map.png" alt="Carte de la conférence">}}
+{{< figure src="images/posts/2017/ndhxv/map.png" alt="Carte de la conférence">}}
 
 Le choix assumé de faire figurer conférences et sponsors dans la même salle surprend de prime abord car peu conventionnel mais l'on s'y fait rapidement.
 L'avantage immédiat de ce système est que l'on peut discuter avec les exposants pendant les confs (ceux-ci n'en étant eux-mêmes pas privés) ce qui renforce d'autant la proximité et qui permet en outre de garder la main jamais très loin des goodies, bonbons et boissons ( qui a dit bière ? ).
@@ -88,7 +88,7 @@ A noter également la visite du secrétaire d'État au numérique Mounir Mahjoub
 
 Énormément d'efforts sont consentis dans le recrutement chacun essayant de «draguer» au mieux et ce, sur beaucoup de domaines différents. Autant vous dire que l'on est pas en reste en termes de goodies ;)
 
-{{< figure src="/images/posts/2017/ndhxv/goodies.jpg" alt="Goodies NDH">}}
+{{< figure src="images/posts/2017/ndhxv/goodies.jpg" alt="Goodies NDH">}}
 
 # Les autres bonnes idées
 
@@ -103,7 +103,7 @@ Oui à la NDH les enfants ne sont pas oubliés, il est donc possible pour eux de
 
 Et enfin l'électrolab qui proposait également un stand en salle de conférence avec plein de matériel électronique à acheter. Les kids auront eu l'occasion de se faire les dents sur les bases de l'électronique, la conception de circuits, de badges...
 
-<img src="/images/posts/2017/ndhxv/ndh_kids.jpg" alt="NDH Kids">
+<img src="images/posts/2017/ndhxv/ndh_kids.jpg" alt="NDH Kids">
 
 # Les workshops
 
@@ -115,7 +115,7 @@ Divers et variés les workshops permettent de s'initier tranquillement (de 20h �
 
 La WarGame est un concours ouvert à tous, où chacun peut essayer de résoudre différents «challenges», chaque challenge rapportant un certain nombre de points permettant de progresser au classement général de l'épreuve.
 
-{{< figure src="/images/posts/2017/ndhxv/wargame.jpg" alt="wargame" title="Les participants à la WarGame" >}}
+{{< figure src="images/posts/2017/ndhxv/wargame.jpg" alt="wargame" title="Les participants à la WarGame" >}}
 
 # Le CTF et Le SpyingChallenge
 

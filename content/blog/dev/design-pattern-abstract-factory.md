@@ -21,11 +21,11 @@ Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui, le p
 <table width="100%">
     <tr>
         <td width="50%" align="center">
-            {{< figure style="text-align:center;" src="/images/posts/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine">}}
+            {{< figure style="text-align:center;" src="images/posts/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine">}}
     <figcaption style="text-align: center;font-style: italic;">Une gentille famille américaine</figcaption>
         </td>
         <td width="50%" align="center">
-            {{< figure src="/images/posts/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine">}}
+            {{< figure src="images/posts/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine">}}
 <figcaption style="text-align: center;font-style: italic;">Une <strike>gentille</strike> famille américaine</figcaption>
         </td>
     </tr>
@@ -50,7 +50,7 @@ En résumé, le pattern `Abstract Factory` va nous permettre d'instancier des fa
 ## Schéma du design pattern `Abstract Factory`
 
 <p class="text-center">
-    {{< figure class="text-center" src="/images/posts/design-pattern/creation-abstract-factory.png" alt="Le Design Pattern 'Abstract Factory'">}}
+    {{< figure class="text-center" src="images/posts/design-pattern/creation-abstract-factory.png" alt="Le Design Pattern 'Abstract Factory'">}}
 </p>
 
 Ne vous laissez pas impressionner par la densité du schéma et le nombre de participants. Le pattern n'a rien d'insurmontable et peut s'avérer utile dans de nombreuses situations.

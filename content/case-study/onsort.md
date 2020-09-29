@@ -11,13 +11,13 @@ case_url: http://sortir.orleans-metropole.fr/
 <section class="preview">
     <div class="col-lg-9 frame">
         <a href="http://sortir.orleans-metropole.fr/" target="_blank" class="frame__link">
-          <img data-slideshow="illustration" src="/images/etudes-de-cas/onsort_mockup1.jpg" alt="">
+          <img data-slideshow="illustration" src="images/etudes-de-cas/onsort_mockup1.jpg" alt="">
         </a>
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/onsort_mockup1.jpg" alt="" class="active">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/onsort_mockup2.jpg" alt="">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/onsort_mockup3.jpg" alt="">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/onsort_mockup1.jpg" alt="" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/onsort_mockup2.jpg" alt="">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/onsort_mockup3.jpg" alt="">
     </div>
 </section>
 <div class="clearfix"></div>

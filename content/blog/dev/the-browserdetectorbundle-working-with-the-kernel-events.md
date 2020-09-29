@@ -21,7 +21,7 @@ A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documenta
 Une question que vous vous posez surement si vous n'avez pas eu l'occasion de travailler avec cet évènement : "Quand est-ce que je peux utiliser l'évènement "kernel.terminate" pour effectuer mes traitements ?" La réponse en image :
 
 <p class="text-center">
-    {{< figure src="/images/posts/2014/kernel_terminate.png" title="Utilisation de lévènement kernel.terminate sous Symfony2" alt="Utilisation de lévènement kernel.terminate sous Symfony2" >}}
+    {{< figure src="images/posts/2014/kernel_terminate.png" title="Utilisation de lévènement kernel.terminate sous Symfony2" alt="Utilisation de lévènement kernel.terminate sous Symfony2" >}}
 </p>
 
 

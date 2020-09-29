@@ -32,7 +32,7 @@ Et c'est <strong><u>de ce point de vue là</u></strong> que j'aimerais plutôt a
 
 # Mon sentiment
 
-<img src="/images/posts/2015/homeoffice.gif" alt="teletravail" class="outside-right" />
+<img src="images/posts/2015/homeoffice.gif" alt="teletravail" class="outside-right" />
 
 A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simplement parce que c'est un modèle qui ne m'a jamais convenu pour différentes raisons. En particulier, si je travaille chez moi, je suis quasiment certain :
 
@@ -67,7 +67,7 @@ A ces réflexions personnelles, nous pouvons ajouter d'autres remarques de port�
 - La problématique des lignes téléphoniques et plus généralement des moyens de communication.
 
 <div class="text-center">
-{{< figure src="/images/posts/2015/love_hate_baby.jpg" alt="teletravail love hate">}}
+{{< figure src="images/posts/2015/love_hate_baby.jpg" alt="teletravail love hate">}}
 </div>
 
 # Les avantages
@@ -82,7 +82,7 @@ Il est tout aussi facile d'y trouver un grand nombre d'avantages. Parmi ceux qui
 - D'un point de vue plus terre-à-terre, restreindre les coûts de fonctionnement, notamment la location des bureaux.
 
 # La situation actuelle
-<img src="/images/posts/2015/valar_morghulis.gif" alt="teletravail" class="outside-left" />
+<img src="images/posts/2015/valar_morghulis.gif" alt="teletravail" class="outside-left" />
 
 <p>Certains parleront de productivité, de contrôle et de confiance. J'évoque souvent la frilosité du système français, mais pour le coup, sur ce sujet, les entreprises anglo-saxonnes, pourtant peu réputées pour leur immobilisme en termes de management, semblent adopter une position assez similaire. En effet certaines études menées au Canada, en Allemagne et aux États-Unis mettent en avant une certaine impopularité de la méthode.
 Selon ces études, on constate que les entreprises restent <u>très méfiantes</u> par rapport au télétravail, craignant une baisse de moral du salarié ainsi qu'une perte de productivité.

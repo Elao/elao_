@@ -27,7 +27,7 @@ Plan de l'article :
 Avant d'entrer dans le vif du sujet en abordant notre premier Design Pattern, permettez-moi de citer deux ouvrages incontournables lorsque l'on évoque ce sujet.
 
 <p class="text-center">
-    {{< figure class="text-center" src="/images/posts/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">}}
+    {{< figure class="text-center" src="images/posts/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">}}
     <figcaption style="text-align: center;font-style: italic;">Design Patterns: Elements of Reusable Object-Oriented Software</figcaption>
 </p>
 
@@ -48,7 +48,7 @@ On peut déplorer que la plupart des exemples du livre s'appuient sur le langage
 </div>
 
 <p class="text-center">
-    {{< figure class="text-center" src="/images/posts/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">}}
+    {{< figure class="text-center" src="images/posts/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">}}
     <figcaption style="text-align: center;font-style: italic;">Head First Design Patterns</figcaption>
 </p>
 
@@ -112,7 +112,7 @@ Cette définition peut paraître assez obscure à première vue, mais croyez-moi
 ### Schéma
 
 <p class="text-center">
-    {{< figure class="text-center" src="/images/posts/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">}}
+    {{< figure class="text-center" src="images/posts/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">}}
     <figcaption style="text-align: center;font-style: italic;">Schéma du Design Pattern 'Factory Method'</figcaption>
 </p>
 

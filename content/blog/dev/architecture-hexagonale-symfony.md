@@ -40,7 +40,7 @@ Le **code métier** c'est tout le code qui traduit le métier de votre client. I
 ## Une architecture en couches (ou en oignon)
 
 <p class=text-center>
-    <img src="/images/posts/2017/onionman.jpg" alt="Onion man" />
+    <img src="images/posts/2017/onionman.jpg" alt="Onion man" />
 </p>
 
 Afin d'aller encore un peu plus loin dans le découplage de mon code et de me donner un cadre facilitant la séparation du code technique et du code métier, je me suis également inspiré de deux autres architectures proches dans l'idée :
@@ -60,7 +60,7 @@ Pour ma part je suis partie sur les quatres couches suivantes qui représentes a
 L'idée est que chaque couche peut utiliser une couche inférieure mais jamais une couche supérieure, ou en tout cas pas directement.
 
 <p class=text-center>
-    <img src="/images/posts/2017/clean-architecture.png" alt="Clean architecture" />
+    <img src="images/posts/2017/clean-architecture.png" alt="Clean architecture" />
 </p>
 
 Les seules moyens de traverser une couche supérieure sont les **événements**, les **exceptions** et les **adapteurs**.
@@ -116,7 +116,7 @@ Certes cette architecture est plus complexe, implique un peu plus de code et dem
 Au final, l'investissement de départ est un peu plus grand, quoiqu'avec l'habitude pas tant, mais est largement amorti sur la durée de vie du projet tant les évolutions et la testabilité sont simplifiées.
 
 <p class="text-center">
-    <img src="/images/posts/2017/good-work-chuck-norris.jpg" alt="Good work" />
+    <img src="images/posts/2017/good-work-chuck-norris.jpg" alt="Good work" />
 </p>
 
 # Et Symfony dans tout ça ?

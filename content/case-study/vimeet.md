@@ -11,12 +11,12 @@ case_url: https://vimeet.events
 ---
 <section class="preview">
     <div class="col-lg-9 frame">
-          <img data-slideshow="illustration" src="/images/etudes-de-cas/vimeet_mockup1.png" alt="">
+          <img data-slideshow="illustration" src="images/etudes-de-cas/vimeet_mockup1.png" alt="">
     </div>
     <div class="col-lg-3 frame--side pull-right">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/vimeet_mockup1.png" alt="" class="active">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/vimeet_mockup2.png" alt="">
-        <img data-slideshow-thumb="illustration" src="/images/etudes-de-cas/vimeet_mockup3.png" alt="">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/vimeet_mockup1.png" alt="" class="active">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/vimeet_mockup2.png" alt="">
+        <img data-slideshow-thumb="illustration" src="images/etudes-de-cas/vimeet_mockup3.png" alt="">
     </div>
 </section>
 <div class="clearfix"></div>
@@ -37,7 +37,7 @@ case_url: https://vimeet.events
                 <li>gestion de rendez-vous en visio-conférence basé sur une technologie standard, le WebRTC.</li>
             </ul>
         </p>
-        <p style="text-align: center"><img src="/images/etudes-de-cas/vimeet_logo.png" alt="Vimeet" style="height: 200px"></p>
+        <p style="text-align: center"><img src="images/etudes-de-cas/vimeet_logo.png" alt="Vimeet" style="height: 200px"></p>
     </article>
     <article>
         <h2>Expertise développement</h2>

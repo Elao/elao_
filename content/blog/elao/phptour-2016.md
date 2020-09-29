@@ -20,7 +20,7 @@ Ces 23 et 24 mai derniers, l’équipe [Clermont'ech](http://clermontech.org/) e
 
 Destination :  Clermont-Ferrand
 
-{{< figure src="/images/posts/2016/phptour.jpg" alt="Début de la conférence">}}
+{{< figure src="images/posts/2016/phptour.jpg" alt="Début de la conférence">}}
 
 Cet évènement devenu un incontournable a proposé un cycle de conférences sur le thème de la **performance**.
 
@@ -65,10 +65,10 @@ La Team Elao (ThomasJ, BenjaminL, MaximeS, ArnaudB, XavierR, YvesH et LaurenceH)
 
 <div class="row" style="text-align: center">
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        {{< figure src="/images/posts/2016/phptour-arnaudb.jpg" alt="Arnaud & sa sucette Afup">}}
+        {{< figure src="images/posts/2016/phptour-arnaudb.jpg" alt="Arnaud & sa sucette Afup">}}
     </div>
     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        {{< figure src="/images/posts/2016/phptour-extra.gif" alt="\o/">}}
+        {{< figure src="images/posts/2016/phptour-extra.gif" alt="\o/">}}
     </div>
 </div>
 

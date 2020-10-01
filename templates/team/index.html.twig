@@ -2,4 +2,14 @@
 
 {% block content %}
     La tribu
+
+    <div>
+        {% for member in members %}
+            <a href="{{ path('team_member', { member: member.slug }) }}">
+                <img src="{{ asset(member.avatar) }}">
+                <h2>{{ member.name }}</h2>
+                <h4>{{ member.position }}</h4>
+            </a>
+        {% endfor %}
+    </div>
 {% endblock %}

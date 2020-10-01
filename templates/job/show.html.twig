@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>{{ job.title }}</h1>
+    <div>
+        {{ job.content|raw }}
+    </div>
+{% endblock %}

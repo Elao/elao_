@@ -21,6 +21,7 @@ class MemberNormalizer implements DenormalizerInterface
         return new Member(
             $data['slug'],
             $fr['name'] ?? $fr['display_name'],
+            $data['active'] ?? false,
             $fr['short_bio'],
             $fr['long_bio'],
             $fr['job_title'] ?? null,

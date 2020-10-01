@@ -3,3 +3,5 @@ content:
     App\Model\CaseStudy: '%kernel.project_dir%/content/case-study'
     App\Model\Article: '%kernel.project_dir%/content/blog'
     App\Model\Member: '%kernel.project_dir%/content/member'
+    App\Model\Technology: '%kernel.project_dir%/content/technologies'
+    App\Model\Job: '%kernel.project_dir%/content/job'

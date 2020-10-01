@@ -43,14 +43,6 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/nos-technos", name="technologies")
-     */
-    public function technologies(): Response
-    {
-        return $this->render('site/technologies.html.twig');
-    }
-
-    /**
      * @Route("/contact", name="contact")
      */
     public function contact(): Response

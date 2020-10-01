@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use App\Model\Article;
 use App\Model\Member;
 use Content\ContentManager;
 use Content\Service\ContentUtils;
@@ -28,7 +29,7 @@ class TeamController extends AbstractController
      */
     public function team(): Response
     {
-        $members = $this->manager->getContents(Member::class, ['name' => true]);
+        $members = $this->manager->getContents(Member::class, ['name' => true], ['active' => true]);
 
         return $this->render('team/index.html.twig', [
             'members' => $members,
@@ -40,8 +41,15 @@ class TeamController extends AbstractController
      */
     public function teamMember(Member $member): Response
     {
+        $articles = $this->manager->getContents(
+            Article::class,
+            ['date' => false],
+            fn ($article) => $article->hasAuthor($member, 1)
+        );
+
         return $this->render('team/member.html.twig', [
             'member' => $member,
+            'articles' => \array_slice($articles, 0, 3),
         ])->setLastModified($member->lastModified);
     }
 }

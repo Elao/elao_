@@ -24,7 +24,7 @@ class JobController extends AbstractController
     }
 
     /**
-     * @Route("/", name="job_list")
+     * @Route("/", name="jobs")
      */
     public function list(): Response
     {
@@ -36,7 +36,7 @@ class JobController extends AbstractController
     }
 
     /**
-     * @Route("/{job}", name="job_show")
+     * @Route("/{job}", name="job")
      */
     public function show(Job $job): Response
     {

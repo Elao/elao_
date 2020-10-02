@@ -36,13 +36,10 @@ class CaseStudyController extends AbstractController
     }
 
     /**
-     * @Route("/{slug}", name="case_study")
+     * @Route("/{caseStudy}", name="case_study")
      */
-    public function show(string $slug): Response
+    public function show(CaseStudy $caseStudy): Response
     {
-        /** @var CaseStudy $caseStudy */
-        $caseStudy = $this->manager->getContent(CaseStudy::class, $slug);
-
         return $this->render('case_study/show.html.twig', [
             'caseStudy' => $caseStudy,
         ])->setLastModified($caseStudy->lastModified);

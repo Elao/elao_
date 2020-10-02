@@ -136,47 +136,53 @@
                     <div class="links">
                         <ul>
                             <li>
-                                <a href="#">Nos services</a>
+                                <a href="{{ path('services') }}">Nos services</a>
                             </li>
                             <li>
-                                <a href="#">Nos études de cas</a>
+                                <a href="{{ path('case_studies') }}">Nos études de cas</a>
                             </li>
                             <li>
-                                <a href="#">Blog</a>
+                                <a href="{{ path('blog') }}">Blog</a>
                             </li>
                             <li>
-                                <a href="#">Notre méthodologie</a>
+                                <a href="{{ path('methodology') }}">Notre méthodologie</a>
                             </li>
                             <li>
-                                <a href="#">La tribu</a>
+                                <a href="{{ path('team') }}">La tribu</a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="{{ path('contact') }}">Contact</a>
                             </li>
                             <li>
-                                <a href="#">Nos valeurs</a>
+                                <a href="{{ path('values') }}">Nos valeurs</a>
                             </li>
                             <li>
-                                <a href="#">Nous recrutons <span class="bullet">3</span></a>
+                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
+                                <a href="{{ path('jobs') }}">
+                                    Nous recrutons
+                                    {% if count %}
+                                        <span class="bullet">{{ count }}</span>
+                                    {% endif %}
+                                </a>
                             </li>
                         </ul>
                     </div>
                     <div class="socials">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a href="https://github.com/elao">
                                     <i class="icon icon--github"></i>
                                     Github
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://twitter.com/elao">
                                     <i class="icon icon--twitter"></i>
                                     Twitter
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="https://www.instagram.com/elao_agency/">
                                     <i class="icon icon--instagram"></i>
                                     Instagram
                                 </a>
@@ -186,8 +192,8 @@
                 </section>
                 <section class="footer__legals">
                     <span>© 2014/{{ 'now'|date('Y') }} - ELAO - Tous droits réservés</span>
-                    <a href="#">Mentions légales</a>
-                    <a href="#">Protection des données</a>
+                    <a href="{{ path('legal') }}">Mentions légales</a>
+                    <a href="{{ path('privacy') }}">Protection des données</a>
                 </section>
             </footer>
         </div>

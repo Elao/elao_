@@ -49,4 +49,20 @@ class SiteController extends AbstractController
     {
         return $this->render('site/contact.html.twig');
     }
+
+    /**
+     * @Route("/legal", name="legal")
+     */
+    public function legal(): Response
+    {
+        return $this->render('site/legal.html.twig');
+    }
+
+    /**
+     * @Route("/privacy", name="privacy")
+     */
+    public function privacy(): Response
+    {
+        return $this->render('site/privacy.html.twig');
+    }
 }

@@ -27,7 +27,7 @@ class TeamController extends AbstractController
     /**
      * @Route("/", name="team")
      */
-    public function team(): Response
+    public function list(): Response
     {
         $members = $this->manager->getContents(Member::class, ['name' => true], ['active' => true]);
 
@@ -39,7 +39,7 @@ class TeamController extends AbstractController
     /**
      * @Route("/{member}", name="team_member")
      */
-    public function teamMember(Member $member): Response
+    public function show(Member $member): Response
     {
         $articles = $this->manager->getContents(
             Article::class,

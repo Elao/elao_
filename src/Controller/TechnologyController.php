@@ -26,7 +26,7 @@ class TechnologyController extends AbstractController
     /**
      * @Route("/{technology}", name="technology")
      */
-    public function teamMember(Technology $technology): Response
+    public function show(Technology $technology): Response
     {
         $articles = $this->manager->getContents(
             Article::class,

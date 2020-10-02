@@ -26,7 +26,7 @@ class CaseStudyController extends AbstractController
     /**
      * @Route("/", name="case_studies")
      */
-    public function index(): Response
+    public function list(): Response
     {
         $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false]);
 
@@ -38,7 +38,7 @@ class CaseStudyController extends AbstractController
     /**
      * @Route("/{slug}", name="case_study")
      */
-    public function caseStudy(string $slug): Response
+    public function show(string $slug): Response
     {
         /** @var CaseStudy $caseStudy */
         $caseStudy = $this->manager->getContent(CaseStudy::class, $slug);

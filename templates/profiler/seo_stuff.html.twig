@@ -87,6 +87,14 @@
                             <td>❌</td>
                         {% endif %}
                     </tr>
+                    <tr>
+                        <th>Headings:</th>
+                        <td>
+                            {% for key, content in collector.countHeadlines %}
+                                {{ key }}: {{ content }}<br>
+                            {% endfor %}
+                        </td>
+                    </tr>
             </table>
 
         <h3>Directives for robots:</h3>

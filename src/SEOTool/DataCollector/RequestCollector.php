@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\SEOTool\DataCollector;
 
+use App\SEOTool\Checker\AccessibilityChecker;
 use App\SEOTool\Checker\ImageChecker;
 use App\SEOTool\Checker\OptimizationChecker;
 use App\SEOTool\Checker\RobotDirectivesChecker;
@@ -21,6 +22,9 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     /** @var OptimizationChecker */
     public $optimizationChecker;
 
+    /** @var AccessibilityChecker */
+    public $accessbilityChecker;
+
     /** @var RobotDirectivesChecker */
     public $robotDirectivesChecker;
 
@@ -28,6 +32,8 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     {
         $this->imageChecker = new ImageChecker(new Crawler((string) $response->getContent(), 'text/html'));
         $this->optimizationChecker = new OptimizationChecker(new Crawler((string) $response->getContent(), 'text/html'));
+        $this->accessbilityChecker = new AccessibilityChecker(new Crawler((string) $response->getContent(), 'text/html'));
+
         $this->data = [
             'response' => $response,
             'title' => $this->optimizationChecker->getTitle(),
@@ -40,12 +46,20 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
             'OpenGraphProperties' => $this->optimizationChecker->getOpenGraphProperties(),
             'missingOpenGraphProperties' => $this->optimizationChecker->getMissingOGProperties(),
             'missingTwitterProperties' => $this->optimizationChecker->getMissingTwitterProperties(),
+            'countHeadlines' => $this->accessbilityChecker->countHeadlinesByHn(),
+            'isHeader' => $this->accessbilityChecker->isHeader(),
+            'isAside' => $this->accessbilityChecker->isAside(),
+            'isNavInHeader' => $this->accessbilityChecker->isNavInHeader(),
+            'isFooter' => $this->accessbilityChecker->isFooter(),
+            'isArticle' => $this->accessbilityChecker->isArticle(),
+            'isHeaderInArticle' => $this->accessbilityChecker->isHeaderInArticle(),
             'countAllImages' => $this->imageChecker->countAllImages(),
             'countAltFromImages' => $this->imageChecker->countAltFromImages(),
             'listMissingAltFromImages' => $this->imageChecker->listImagesWhithoutAlt(),
             'listNonExplicitIcons' => $this->imageChecker->listNonExplicitIcons(),
             'countAllIcons' => $this->imageChecker->countIcons(),
             'countAllExplicitIcons' => $this->imageChecker->countExplicitIcons(),
+            'headlinesTree' => $this->accessbilityChecker->getHeadlineTree(),
         ];
     }
 
@@ -66,6 +80,11 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $this->data = [];
     }
 
+    public function getHeadlinesTree()
+    {
+        return $this->data['headlinesTree'];
+    }
+
     public function getName(): string
     {
         return 'app.request_collector';
@@ -74,6 +93,11 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     public function getLanguage(): ?string
     {
         return $this->data['language'];
+    }
+
+    public function getCountHeadlines(): array
+    {
+        return $this->data['countHeadlines'];
     }
 
     public function listMissingAltFromImages(): array

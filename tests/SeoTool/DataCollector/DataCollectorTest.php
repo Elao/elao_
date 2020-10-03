@@ -40,5 +40,6 @@ class DataCollectorTest extends TestCase
         static::assertEquals(null, $datacollector->getMetaRobot());
         static::assertEquals(null, $datacollector->getMetaGooglebot());
         static::assertEquals(null, $datacollector->getMetaGooglebotNews());
+        static::assertEquals(['h1' => 1, 'h2' => 0, 'h3' => 0, 'h4' => 0, 'h5' => 0, 'h6' => 0], $datacollector->getCountHeadlines());
     }
 }

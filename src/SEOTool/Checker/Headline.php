@@ -69,4 +69,17 @@ class Headline
     {
         return $this->parent;
     }
+
+    public function getParentForLevel(int $level): ?Headline
+    {
+        if ($this->level < $level) {
+            return $this;
+        }
+
+        if ($this->parent === null) {
+            return null;
+        }
+
+        return $this->parent->getParentForLevel($level);
+    }
 }

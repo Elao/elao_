@@ -54,17 +54,12 @@ class AccessibilityCheckerTest extends TestCase
         $thirdHeadlineOfFirst->addChild($h3Somewhere);
         $firstHeadline->addChild($thirdHeadlineOfFirst);
 
-//        dump($optimizationChecker->getHeadlineTree());
-//        die;
-
         $treeExpected = [
             $h1Headline,
             $firstHeadline,
         ];
 
-//        dump($treeExpected);
-//        dump($optimizationChecker->getHeadlineTree());
-//        die;
+        dump($optimizationChecker->getHeadlineTree());
 
         static::assertEquals(\count($treeExpected), \count($optimizationChecker->getHeadlineTree()));
         static::assertEquals($treeExpected, $optimizationChecker->getHeadlineTree());

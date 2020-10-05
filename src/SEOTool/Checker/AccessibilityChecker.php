@@ -41,42 +41,22 @@ class AccessibilityChecker
         $headlines = $this->crawler->filter('h1, h2, h3, h4, h5, h6');
 
         $current = null;
+        $previous = null;
 
         foreach ($headlines as $element) {
             /* @var \DOMElement $element */
-            if (\is_null($current)) {
-                $tag = $element->tagName;
-                $current = new Headline((int) $tag[1], $element->textContent);
-                $treeHeadlines[] = $current;
-            } else {
-                $tag = $element->tagName;
-                $newHeadline = new Headline((int) $tag[1], $element->textContent);
+            $tag = $element->tagName;
+            $level = (int) $element->tagName[1];
+            $current = new Headline($level, $element->textContent);
+            $parent = $previous !== null ? $previous->getParentForLevel($level) : null;
 
-                if ($newHeadline->getLevel() > $current->getLevel()) {
-                    $current->addChild($newHeadline);
-                    $newHeadline->setParent($current);
-                    $current = $newHeadline;
-                } elseif (!$current->isParent()) {
-                    $treeHeadlines[] = $newHeadline;
-                    $current = $newHeadline;
-                } elseif ($current->getParent() !== null) {
-                    while ($current->getParent() !== null) {
-                        /** @var Headline $parentOfCurrent */
-                        $parentOfCurrent = $current->getParent();
-                        if ($newHeadline->getLevel() > $parentOfCurrent->getLevel()) {
-                            $parentOfCurrent->addChild($newHeadline);
-                            $newHeadline->setParent($parentOfCurrent);
-                            $current = $newHeadline;
-                            break;
-                        }
-                        $current = $current->parent;
-                    }
-                    if ($current !== $newHeadline) {
-                        $treeHeadlines[] = $newHeadline;
-                        $current = $newHeadline;
-                    }
-                }
+            if ($parent !== null) {
+                $parent->addChild($current);
+            } else {
+                $treeHeadlines[] = $current;
             }
+
+            $previous = $current;
         }
 
         return $treeHeadlines;

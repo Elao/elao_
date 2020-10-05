@@ -16,8 +16,9 @@ class BrokenLinksChecker
         $this->crawler = $crawler;
     }
 
-    public function getBrokenLinks()
-    {
-        $links = $this->crawler->filter('a')->links();
-    }
+//
+//    public function getBrokenLinks()
+//    {
+//        $links = $this->crawler->filter('a')->links();
+//    }
 }

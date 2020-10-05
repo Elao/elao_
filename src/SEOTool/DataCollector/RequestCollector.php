@@ -80,7 +80,7 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $this->data = [];
     }
 
-    public function getHeadlinesTree()
+    public function getHeadlinesTree(): array
     {
         return $this->data['headlinesTree'];
     }

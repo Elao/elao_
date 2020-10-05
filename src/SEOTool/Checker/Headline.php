@@ -15,36 +15,39 @@ class Headline
     /** @var array|null */
     public $children;
 
-    /** @var Headline */
+    /** @var Headline|null */
     public $parent;
 
     public function __construct(int $level, ?string $content)
     {
         $this->level = $level;
         $this->content = $content;
+        $this->parent = null;
     }
 
-    public function addChild(Headline $headline)
+    public function addChild(Headline $headline): void
     {
         $this->children[] = $headline;
         $headline->setParent($this);
     }
 
-    public function setParent(Headline $parent)
+    public function setParent(Headline $parent): void
     {
         $this->parent = $parent;
     }
 
-    public function hasChildren()
+    public function hasChildren(): bool
     {
-        return \count($this->children);
+        if ($this->children === null) {
+            return false;
+        }
+
+        return \count($this->children) > 0;
     }
 
     public function getContent(): ?string
     {
-//        return preg_replace( "/\r|\n/", "", $this->content );
-//        return str_replace(array("\r", "\n"), '', $this->content);
-        return str_replace(['  '], '', $this->content);
+        return $this->content;
     }
 
     public function getLevel(): int
@@ -55,5 +58,15 @@ class Headline
     public function getHn(): string
     {
         return sprintf('h%d', $this->level);
+    }
+
+    public function isParent(): bool
+    {
+        return $this->parent !== null;
+    }
+
+    public function getParent(): ?Headline
+    {
+        return $this->parent;
     }
 }

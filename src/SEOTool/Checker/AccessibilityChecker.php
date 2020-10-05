@@ -33,34 +33,39 @@ class AccessibilityChecker
         return $headings;
     }
 
-    public function getHeadlineTree()
+    public function getHeadlineTree(): array
     {
         $treeHeadlines = [];
+
+        /** @var \IteratorIterator $headlines */
         $headlines = $this->crawler->filter('h1, h2, h3, h4, h5, h6');
 
         $current = null;
 
         foreach ($headlines as $element) {
+            /* @var \DOMElement $element */
             if (\is_null($current)) {
                 $tag = $element->tagName;
-                $current = new Headline($tag[1], $element->textContent);
+                $current = new Headline((int) $tag[1], $element->textContent);
                 $treeHeadlines[] = $current;
             } else {
                 $tag = $element->tagName;
-                $newHeadline = new Headline($tag[1], $element->textContent);
+                $newHeadline = new Headline((int) $tag[1], $element->textContent);
 
                 if ($newHeadline->getLevel() > $current->getLevel()) {
                     $current->addChild($newHeadline);
                     $newHeadline->setParent($current);
                     $current = $newHeadline;
-                } elseif (empty($current->parent)) {
+                } elseif (!$current->isParent()) {
                     $treeHeadlines[] = $newHeadline;
                     $current = $newHeadline;
-                } else {
-                    while (!empty($current->parent)) {
-                        if ($newHeadline->getLevel() > $current->parent->getLevel()) {
-                            $current->parent->addChild($newHeadline);
-                            $newHeadline->setParent($current->parent);
+                } elseif ($current->getParent() !== null) {
+                    while ($current->getParent() !== null) {
+                        /** @var Headline $parentOfCurrent */
+                        $parentOfCurrent = $current->getParent();
+                        if ($newHeadline->getLevel() > $parentOfCurrent->getLevel()) {
+                            $parentOfCurrent->addChild($newHeadline);
+                            $newHeadline->setParent($parentOfCurrent);
                             $current = $newHeadline;
                             break;
                         }
@@ -75,17 +80,6 @@ class AccessibilityChecker
         }
 
         return $treeHeadlines;
-    }
-
-    public function countParents($current): int
-    {
-        $countParents = 0;
-        while ($current->parent instanceof Headline) {
-            ++$countParents;
-            $current = $current->parent;
-        }
-
-        return $countParents;
     }
 
     public function isHeader(): bool
@@ -113,7 +107,7 @@ class AccessibilityChecker
         return \count($this->crawler->filter('article')) >= 1;
     }
 
-    public function isHeaderInArticle()
+    public function isHeaderInArticle(): bool
     {
         return \count($this->crawler->filter('article > header')) >= 1;
     }

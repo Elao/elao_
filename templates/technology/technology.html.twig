@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    {{ technology.content|raw }}
+
+    <h2>Articles liés</h2>
+    <div>
+        {% for article in articles %}
+            <div>
+                <img src="{{ asset(article.thumbnail) }}" />
+                {{ article.title }}
+                <a href="{{ path('blog_article', { article: article.slug }) }}">
+                    Lire l'article_
+                </a>
+            </div>
+        {% endfor %}
+    <div>
+{% endblock content %}

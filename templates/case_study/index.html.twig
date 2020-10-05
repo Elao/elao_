@@ -6,7 +6,7 @@
     <ul>
         {% for caseStudy in caseStudies %}
             <li>
-                <a href="{{ path('case_study', { slug: caseStudy.slug }) }}">
+                <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}">
                     {{ caseStudy.title }}
                 </a>
             </li>

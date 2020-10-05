@@ -37,4 +37,13 @@ class Article
     {
         return \in_array($tag, $this->tags, true);
     }
+
+    public function hasAuthor(Member $author, int $maxAuthors = 0): bool
+    {
+        if ($maxAuthors > 0 && \count($this->authors) > $maxAuthors) {
+            return false;
+        }
+
+        return \in_array($author, $this->authors, true);
+    }
 }

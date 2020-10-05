@@ -1,3 +1,5 @@
+active: true
+
 en:
   display_name: Xavier ROLDO
   short_bio:    ""
@@ -13,7 +15,7 @@ fr:
 social:
   website:         http://www.elao.com
   twitter:         ~
-  github:
+  github:          xavier-rdo
   email:           xavier.roldo@elao.com
   avatar:          images/authors/xroldo.jpeg
   google_plus_id:  ~

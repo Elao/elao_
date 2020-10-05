@@ -7,6 +7,7 @@ namespace App\Model;
 class Member
 {
     public string $slug;
+    public bool $active;
 
     // Bio
     public string $name;
@@ -26,6 +27,7 @@ class Member
     public function __construct(
         string $slug,
         string $name,
+        bool $active = false,
         ?string $shortBio = null,
         ?string $longBio = null,
         ?string $position = null,
@@ -37,6 +39,7 @@ class Member
     ) {
         $this->slug = $slug;
         $this->name = $name;
+        $this->active = $active;
         $this->shortBio = $shortBio;
         $this->longBio = $longBio;
         $this->position = $position;

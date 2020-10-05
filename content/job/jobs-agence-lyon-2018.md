@@ -4,6 +4,7 @@ title:          "Session recrutements chez élao !"
 date:           "2018-02-19"
 publishdate:    "2018-02-28"
 draft:          false
+active:         true
 
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
 

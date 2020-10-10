@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/first_step.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author:    "xroldo"
+author:    "xavierr"
 ---
 
 Bonjour à toutes et à tous,
@@ -301,7 +301,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like &amp;quot;/home/html/django_templates&amp;quot; or &amp;quot;C:/www/django/templates&amp;quot;.
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/roldo/workspace-django/monprojet/templates/',
+    '/home/me/workspace-django/monprojet/templates/',
 )
 ...
 ```

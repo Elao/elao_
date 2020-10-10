@@ -12,7 +12,7 @@ header_img:         "images/posts/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "conférence", "afup", "clermont'ech"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:             ["tjarrand", "bleveque", "msteinhausser", "abenassy", "xroldo", "yheitz", "lhoizey", "rchalas"]
+author:             ["tjarrand", "bleveque", "msteinhausser", "abenassy", "xavierr", "yheitz", "lhoizey", "rchalas"]
 
 ---
 

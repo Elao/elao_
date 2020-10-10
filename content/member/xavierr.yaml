@@ -1,13 +1,13 @@
 active: true
 
 en:
-  display_name: Xavier ROLDO
+  display_name: Xavier R
   short_bio:    ""
   long_bio:     ""
   job_title":   "Symfony Developer"
 
 fr:
-  display_name: Xavier ROLDO
+  display_name: Xavier R
   short_bio:    ""
   long_bio:     ""
   job_title:    Développeur Symfony
@@ -17,6 +17,6 @@ social:
   twitter:         ~
   github:          xavier-rdo
   email:           xavier.roldo@elao.com
-  avatar:          images/authors/xroldo.jpeg
+  avatar:          images/authors/xavierr.jpg
   google_plus_id:  ~
 

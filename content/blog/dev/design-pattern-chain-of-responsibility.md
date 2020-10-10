@@ -12,7 +12,7 @@ header_img:     "images/posts/headers/chaplin-assembly-line.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
-author:    "xroldo"
+author:    "xavierr"
 
 ---
 

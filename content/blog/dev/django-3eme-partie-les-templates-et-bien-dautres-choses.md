@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author:    "xroldo"
+author:    "xavierr"
 ---
 
 Bonjour à toutes et à tous,

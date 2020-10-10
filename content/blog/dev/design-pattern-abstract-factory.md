@@ -12,7 +12,7 @@ header_img:     "images/posts/headers/header_schema.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
-author:    "xroldo"
+author:    "xavierr"
 
 ---
 

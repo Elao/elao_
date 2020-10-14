@@ -1,0 +1,76 @@
+.link {
+  padding-right: 30px;
+  position: relative;
+  border: none;
+  font-family: 'antikor bold';
+  font-size: 18px;
+
+  &:before,
+  &:after {
+    position: absolute;
+  }
+
+  &:before {
+    width: 15px;
+    height: 3px;
+    bottom: 0;
+    right: 13px;
+    content: '';
+    transition: ease-in .2s;
+  }
+
+  &:after {
+    bottom: 6px;
+    right: 10px;
+    font-family: 'icomoon';
+    font-size: 13px;
+    content: '\e912';
+    opacity: 0;
+    transition: right ease-in .15s, opacity ease-out .2s;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    &:before {
+      height: 25px;
+      width: 25px;
+      right: -5px;
+    }
+
+    &:after {
+      right: 1px;
+      opacity: 1;
+    }
+  }
+}
+
+.link--brand {
+  color: $color-brand;
+
+  &:before { background: $color-secondary; }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($color-brand, 15%);
+
+    &:before { background: $color-brand; }
+    &:after { color: $color-secondary; }
+  }
+}
+
+.link--primary {
+  color: $color-primary;
+
+  &:before { background: $color-brand; }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-brand;
+
+    &:before { background: $color-primary; }
+    &:after { color: $color-brand; }
+  }
+}

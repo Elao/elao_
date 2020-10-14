@@ -1,9 +1,293 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Liste des articles
-
     {% block articles %}
+        <div class="article-miniature article-miniature--highlight">
+            <a href="#" class="article-miniature__image">
+                <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+            </a>
+            <div class="article-miniature__content">
+                <div class="info">
+                    <div class="article-author">
+                        <div class="article-author__image">
+                            <img src="https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80"/>
+                        </div>
+                        <span class="article-author__info">
+                            Écrit par
+                            <strong>John Doe</strong>
+                        </span>
+                        <span class="article-author__info">
+                            Publication
+                            <strong>18 mars 2020</strong>
+                        </span>
+                    </div>
+                    <!--
+                        Multi author
+
+                        <div class="article-author article-author--multi">
+                            <div class="article-author__image">
+                                <img src="https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80"/>
+                                <img src="https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80"/>
+                                <img src="https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80"/>
+                            </div>
+                            <span class="article-author__info">
+                                Écrit par
+                                <strong>John Doe</strong>
+                                <strong>John Doe</strong>
+                                <strong>John Doe</strong>
+                            </span>
+                            <span class="article-author__info">
+                                Publication
+                                <strong>18 mars 2020</strong>
+                            </span>
+                        </div>
+                    -->
+                </div>
+                <a href="#" class="details">
+                    <h2 class="title">Des namespaces en JavaScript ? C’est possible avec les alias Webpack Encore !</h2>
+                    <p>Avec les alias Webpack Encore, adoptez la souplesse des namespaces PHP dans vos modules JavaScript avec des chemins absolus pour un code plus lisible et plus facile à refactorer.</p>
+                </a>
+            </div>
+        </div>
+        <ul class="article-list article-list--large">
+            <li class="article-miniature article-miniature--large">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <span class="date">17 fev 2020</span>
+                    <a href="" class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn--secondary btn--animated">
+                        <span>
+                            Lire l'article
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="article-miniature article-miniature--large">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <span class="date">17 fev 2020</span>
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="" class="btn btn--secondary btn--animated">
+                        <span>
+                            Lire l'article
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="article-list">
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            <li class="article-miniature">
+                <a href="#" class="article-miniature__image">
+                    <span class="image" style="background: url(https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)"></span>
+                </a>
+                <div class="article-miniature__content">
+                    <a class="h2 title">Comprendre le cache du client Apollo</a>
+                    <p class="description">Iste saepe quos id quam praesentium labore corporis modi nulla expedita. Iste saepe quos id quam praesentium labore corporis modi nulla expedita.</p>
+                    <ul class="tag-list">
+                        <li class="tag-list__item">
+                            <a href="#">#GraphQl</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Apollo</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Cache client</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Tempore</a>
+                        </li>
+                        <li class="tag-list__item">
+                            <a href="#">#Mollitia</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+        </ul>
+
         <div>
             {% for article in articles %}
                 {% if loop.first %}

@@ -18,12 +18,17 @@
 .article-author__info {
   display: flex;
   flex-direction: column;
+  color: #fff;
 
   strong {
     margin-top: 2px;
     font-family: 'faktum bold';
     color: $color-light;
   }
+}
+
+.article-author__info + .article-author__info {
+  margin-left: 40px;
 }
 
 .article-author__social {
@@ -73,6 +78,11 @@
         left: #{$i * 45}px;
       }
     }
+  }
+
+  .article-author__info + .article-author__info {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
 

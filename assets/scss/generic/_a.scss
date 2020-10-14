@@ -4,6 +4,7 @@ a {
   transition: color ease-in .1s;
   position: relative;
   border-bottom: solid 3px $color-brand;
+  cursor: pointer;
 
   &:hover,
   &:active,

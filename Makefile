@@ -110,4 +110,4 @@ security.npm@integration:
 ############
 
 test:
-	 ./bin/phpunit
+	./bin/phpunit

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\SEOTool\DataCollector;
 
 use App\SEOTool\Checker\AccessibilityChecker;
+use App\SEOTool\Checker\BrokenLinkChecker;
 use App\SEOTool\Checker\ImageChecker;
 use App\SEOTool\Checker\OptimizationChecker;
 use App\SEOTool\Checker\RobotDirectivesChecker;
@@ -14,7 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 use Symfony\Component\HttpKernel\DataCollector\LateDataCollectorInterface;
 
-class RequestCollector extends DataCollector implements LateDataCollectorInterface
+class SeoCollector extends DataCollector implements LateDataCollectorInterface
 {
     /** @var ImageChecker */
     public $imageChecker;
@@ -28,11 +29,15 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     /** @var RobotDirectivesChecker */
     public $robotDirectivesChecker;
 
+    /** @var BrokenLinkChecker */
+    public $brokenLinkChecker;
+
     public function collect(Request $request, Response $response, \Throwable $exception = null): void
     {
-        $this->imageChecker = new ImageChecker(new Crawler((string) $response->getContent(), 'text/html'));
-        $this->optimizationChecker = new OptimizationChecker(new Crawler((string) $response->getContent(), 'text/html'));
-        $this->accessbilityChecker = new AccessibilityChecker(new Crawler((string) $response->getContent(), 'text/html'));
+        $this->imageChecker = new ImageChecker(new Crawler((string) $response->getContent(), $request->getUri(), $request->getBaseUrl()));
+        $this->optimizationChecker = new OptimizationChecker(new Crawler((string) $response->getContent(), $request->getUri(), $request->getBaseUrl()));
+        $this->accessbilityChecker = new AccessibilityChecker(new Crawler((string) $response->getContent(), $request->getUri(), $request->getBaseUrl()));
+        $this->brokenLinkChecker = new BrokenLinkChecker(new Crawler((string) $response->getContent(), $request->getUri(), $request->getBaseUrl()), $request->getUri());
 
         $this->data = [
             'response' => $response,
@@ -47,19 +52,10 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
             'missingOpenGraphProperties' => $this->optimizationChecker->getMissingOGProperties(),
             'missingTwitterProperties' => $this->optimizationChecker->getMissingTwitterProperties(),
             'countHeadlines' => $this->accessbilityChecker->countHeadlinesByHn(),
-            'isHeader' => $this->accessbilityChecker->isHeader(),
-            'isAside' => $this->accessbilityChecker->isAside(),
-            'isNavInHeader' => $this->accessbilityChecker->isNavInHeader(),
-            'isFooter' => $this->accessbilityChecker->isFooter(),
-            'isArticle' => $this->accessbilityChecker->isArticle(),
-            'isHeaderInArticle' => $this->accessbilityChecker->isHeaderInArticle(),
-            'countAllImages' => $this->imageChecker->countAllImages(),
-            'countAltFromImages' => $this->imageChecker->countAltFromImages(),
-            'listMissingAltFromImages' => $this->imageChecker->listImagesWhithoutAlt(),
-            'listNonExplicitIcons' => $this->imageChecker->listNonExplicitIcons(),
-            'countAllIcons' => $this->imageChecker->countIcons(),
-            'countAllExplicitIcons' => $this->imageChecker->countExplicitIcons(),
             'headlinesTree' => $this->accessbilityChecker->getHeadlineTree(),
+            'externalBrokenLinks' => $this->brokenLinkChecker->getExternalBrokenLinks(),
+            'isHreflang' => $this->optimizationChecker->isHreflang(),
+            'hreflang' => $this->optimizationChecker->getHreflang(),
         ];
     }
 
@@ -80,6 +76,21 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         $this->data = [];
     }
 
+    public function getHreflang(): array
+    {
+        return $this->data['hreflang'];
+    }
+
+    public function isHreflang(): bool
+    {
+        return $this->data['isHreflang'];
+    }
+
+    public function getExternalBrokenLinks(): array
+    {
+        return $this->data['externalBrokenLinks'];
+    }
+
     public function getHeadlinesTree(): array
     {
         return $this->data['headlinesTree'];
@@ -87,7 +98,7 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
 
     public function getName(): string
     {
-        return 'app.request_collector';
+        return 'app.seo_collector';
     }
 
     public function getLanguage(): ?string
@@ -98,16 +109,6 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     public function getCountHeadlines(): array
     {
         return $this->data['countHeadlines'];
-    }
-
-    public function listMissingAltFromImages(): array
-    {
-        return $this->data['listMissingAltFromImages'];
-    }
-
-    public function listNonExplicitIcons(): array
-    {
-        return $this->data['listNonExplicitIcons'];
     }
 
     public function getMissingTwitterProperties(): array
@@ -135,16 +136,6 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
         return $this->data['twitterProperties'];
     }
 
-    public function getCountAllIcons(): int
-    {
-        return $this->data['countAllIcons'];
-    }
-
-    public function getCountAllExplicitIcons(): int
-    {
-        return $this->data['countAllExplicitIcons'];
-    }
-
     public function getTitle(): ?string
     {
         return $this->data['title'];
@@ -168,16 +159,6 @@ class RequestCollector extends DataCollector implements LateDataCollectorInterfa
     public function getTwitterPropertiesLevel(): string
     {
         return $this->data['twitterPropertiesLevel'];
-    }
-
-    public function getCountAllImages(): int
-    {
-        return $this->data['countAllImages'];
-    }
-
-    public function getCountAltFromImages(): int
-    {
-        return $this->data['countAltFromImages'];
     }
 
     public function getXRobotsTag(): ?string

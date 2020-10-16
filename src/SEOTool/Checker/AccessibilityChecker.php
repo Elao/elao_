@@ -91,4 +91,32 @@ class AccessibilityChecker
     {
         return \count($this->crawler->filter('article > header')) >= 1;
     }
+
+    public function countNonExplicitButtons(): int
+    {
+        $buttons = $this->crawler->filter('a');
+        $buttonsWithNoContent = [];
+
+        foreach ($buttons as $element) {
+            /* @var \DOMElement $element */
+            if ('' === trim($element->textContent)) {
+                $buttonsWithNoContent[] = $element;
+            }
+        }
+
+        return \count($buttonsWithNoContent);
+    }
+
+    public function isForm(): bool
+    {
+        return \count($this->crawler->filter('form')) > 0;
+    }
+
+    public function getListMissingForLabelsInForm(): array
+    {
+        $for = $this->crawler->filter('label')->extract(['for']);
+        $inputsName = $this->crawler->filter('input')->extract(['name']);
+
+        return array_diff($inputsName, $for);
+    }
 }

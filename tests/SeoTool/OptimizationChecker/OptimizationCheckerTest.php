@@ -150,6 +150,31 @@ class OptimizationCheckerTest extends TestCase
         static::assertEquals(false, $optimizationChecker->isOneH1());
     }
 
+    public function testGetHrefLang()
+    {
+        $expect = [
+          ['hreflang' => 'en-gb', 'href' => 'http://en-gb.example.com/page.html'],
+          ['hreflang' => 'en-us', 'href' => 'http://en-us.example.com/page.html'],
+          ['hreflang' => 'en', 'href' => 'http://en.example.com/page.html'],
+          ['hreflang' => 'de', 'href' => 'http://de.example.com/page.html'],
+          ['hreflang' => 'x-default', 'href' => 'http://www.example.com/'],
+        ];
+        $optimizationChecker = $this->getOptimizationChecker('hreflang.html');
+        static::assertEquals($expect, $optimizationChecker->getHrefLang());
+    }
+
+    public function testIsHrefLang()
+    {
+        $optimizationChecker = $this->getOptimizationChecker('hreflang.html');
+        static::assertEquals(true, $optimizationChecker->isHreflang());
+    }
+
+    public function testIsNoHrefLang()
+    {
+        $optimizationChecker = $this->getOptimizationChecker('no-title.html');
+        static::assertEquals(false, $optimizationChecker->isHreflang());
+    }
+
     public function getOptimizationChecker($filename): OptimizationChecker
     {
         $html = file_get_contents(sprintf('tests/SeoTool/OptimizationChecker/%s', $filename));

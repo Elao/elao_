@@ -12,7 +12,7 @@ class Headline
     /** @var string|null */
     public $content;
 
-    /** @var array|null */
+    /** @var array */
     public $children;
 
     /** @var Headline|null */
@@ -23,6 +23,7 @@ class Headline
         $this->level = $level;
         $this->content = $content;
         $this->parent = null;
+        $this->children = [];
     }
 
     public function addChild(Headline $headline): void
@@ -38,11 +39,12 @@ class Headline
 
     public function hasChildren(): bool
     {
-        if ($this->children === null) {
-            return false;
-        }
-
         return \count($this->children) > 0;
+    }
+
+    public function getChildren(): array
+    {
+        return $this->children;
     }
 
     public function getContent(): ?string

@@ -29,8 +29,6 @@ class AccessibilityCheckerTest extends TestCase
     {
         $optimizationChecker = $this->getAccessibilityChecker('headlines-1-6.html');
 
-        $treeExpected = [];
-
         $h1Headline = new Headline(1, 'This is one h1');
         $firstHeadline = new Headline(1, 'This is h1');
         $firstHeadline->addChild(new Headline(2, 'This is h2'));
@@ -59,8 +57,6 @@ class AccessibilityCheckerTest extends TestCase
             $firstHeadline,
         ];
 
-        dump($optimizationChecker->getHeadlineTree());
-
         static::assertEquals(\count($treeExpected), \count($optimizationChecker->getHeadlineTree()));
         static::assertEquals($treeExpected, $optimizationChecker->getHeadlineTree());
     }
@@ -87,6 +83,47 @@ class AccessibilityCheckerTest extends TestCase
         static::assertEquals(true, $accessibilityChecker->isAside());
         static::assertEquals(false, $accessibilityChecker->isNavInHeader());
         static::assertEquals(false, $accessibilityChecker->isHeaderInArticle());
+    }
+
+    public function testNoExplicitsButtons()
+    {
+        $accessibility = $this->getAccessibilityChecker('index.html');
+        static::assertEquals(2, $accessibility->countNonExplicitButtons());
+    }
+
+    public function testIsThereAForm()
+    {
+        $form = $this->getAccessibilityChecker('form-missing-for.html');
+        $alsoForm = $this->getAccessibilityChecker('form-missing-for.html');
+        $noForm = $this->getAccessibilityChecker('index.html');
+
+        static::assertEquals(true, $form->isForm());
+        static::assertEquals(true, $alsoForm->isForm());
+        static::assertEquals(false, $noForm->isForm());
+    }
+
+    public function testMissingForInForm()
+    {
+        $accessibilityChecker = $this->getAccessibilityChecker('form-missing-for.html');
+        static::assertEquals(['name', 'email'], $accessibilityChecker->getListMissingForLabelsInForm());
+    }
+
+    public function testNoMissingForInForm()
+    {
+        $accessibilityChecker = $this->getAccessibilityChecker('form-with-for.html');
+        static::assertEquals([2 => ''], $accessibilityChecker->getListMissingForLabelsInForm());
+    }
+
+    public function testNoForm()
+    {
+        $accessibilityChecker = $this->getAccessibilityChecker('headlines-1-6.html');
+        static::assertEquals([], $accessibilityChecker->getListMissingForLabelsInForm());
+    }
+
+    public function testIsForm()
+    {
+        $accessibilityChecker = $this->getAccessibilityChecker('form-with-for.html');
+        static::assertEquals(true, $accessibilityChecker->isForm());
     }
 
     public function getAccessibilityChecker($filename): AccessibilityChecker

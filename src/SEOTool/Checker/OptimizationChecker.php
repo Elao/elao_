@@ -33,13 +33,16 @@ class OptimizationChecker
 
     public function getMetaDescription(): ?string
     {
-        $metaDescription = $this->crawler->filter('head > meta[name="description"]')->first()->attr('content');
+        try {
+            $metaDescription = $this->crawler->filter('head > meta[name="description"]')->first()->attr('content');
+            if ($metaDescription === '') {
+                return null;
+            }
 
-        if ($metaDescription === '') {
-            return null;
+            return $metaDescription;
+        } catch (\Exception$e) {
+            return '';
         }
-
-        return $metaDescription;
     }
 
     public function getH1(): ?string
@@ -154,5 +157,28 @@ class OptimizationChecker
         }
 
         return array_filter($propertiesCompleted);
+    }
+
+    public function isHreflang(): bool
+    {
+        return \count($this->getHreflang()) > 1;
+    }
+
+    public function getHreflang(): array
+    {
+        $hreflang = [];
+
+        $links = $this->crawler->filter('link')->extract(['rel', 'hreflang', 'href']);
+
+        foreach ($links as $link) {
+            if ($link[0] === 'alternate') {
+                $hreflang[] = [
+                    'hreflang' => $link[1],
+                    'href' => $link[2],
+                ];
+            }
+        }
+
+        return $hreflang;
     }
 }

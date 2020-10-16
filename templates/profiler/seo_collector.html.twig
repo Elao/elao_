@@ -3,8 +3,8 @@
 {% block toolbar %}
     {% set icon %}
         {# this is the content displayed as a panel in the toolbar #}
-        {{ include('/profiler/179-accessibility.svg.twig') }}
-        <span class="sf-toolbar-value">Accessibility & SEO</span>
+        {{ include('/profiler/204-link.svg.twig') }}
+        <span class="sf-toolbar-value">SEO</span>
 
     {% endset %}
 
@@ -31,15 +31,6 @@
             <b>H1 :</b>
             <span>{{ collector.h1 }}</span>
         </div>
-        <div class="sf-toolbar-info-piece">
-            <b>Total images / Missing Alt:</b>
-            <span>{{ collector.countAllImages }} / {{ collector.countAltFromImages }}</span>
-        </div>
-        <div class="sf-toolbar-info-piece">
-            <b>Total icons / Missing aria:</b>
-            <span>{{ collector.countAllIcons }} / {{ collector.countAllExplicitIcons }}</span>
-        </div>
-
     {% endset %}
 
     {# the 'link' value set to 'false' means that this panel doesn't
@@ -56,15 +47,15 @@
     {# This left-hand menu appears when using the full-screen profiler. #}
     <span class="label">
         <span class="icon">
-            {{ include('/profiler/179-accessibility.svg.twig') }}
+            {{ include('/profiler/204-link.svg.twig') }}
         </span>
-        <strong>Accessibility & SEO</strong>
+        <strong>SEO</strong>
     </span>
 {% endblock %}
 
 {% block panel %}
     {# Optional, for showing the most details. #}
-    <h2>Accessibility and SEO insights ✨</h2>
+    <h2>SEO insights ✨</h2>
         <h3>SEO main optimizations:</h3>
             <table>
                     <tr>
@@ -90,26 +81,48 @@
                     <tr>
                         <th>Headings:</th>
                         <td>
-                            {% for key, content in collector.countHeadlines %}
-                                {{ key }}: {{ content }}<br>
-                            {% endfor %}
+                            {% set headings = collector.headlinesTree %}
+                            {% block treeHeading %}
+                                <div>
+                                    {% for heading in headings %}
+                                        {% for i in 1..heading.level %}&nbsp;&nbsp;{% endfor %}- H{{ heading.level }}: {{ heading.content }}
+
+                                        {% set headings = heading.children %}
+                                        {{ block ("treeHeading") }}
+                                    {% endfor %}
+                                </div>
+                            {% endblock %}
                         </td>
+
                     </tr>
             </table>
 
         <h3>Directives for robots:</h3>
+            <div class="metrics">
+                <div class="metric">
+                    <span class="value">{{ collector.canonical }}</span>
+                    <span class="label">Canonical</span>
+                </div>
+                <div class="metric">
+                    <span class="value">{{ collector.language }}</span>
+                    <span class="label">Language</span>
+                </div>
+                <div class="metric">
+                    <span class="value">{{ collector.XRobotsTag }}</span>
+                    <span class="label">X-Robots-Tag</span>
+                </div>
+                <div class="metric">
+                    <span class="value">
+                        {% if collector.isHreflang %}
+                        <td>✔️</td>
+                        {% else %}
+                        <td>➖</td>
+                        {% endif %}
+                    </span>
+                    <span class="label">Hreflang</span>
+                </div>
+            </div>
             <table>
-                    <tr>
-                        <th>Canonical:</th>
-                        <td>{{ collector.canonical }}</td>
-                    <tr>
-                    <tr>
-                        <th>Language:</th>
-                        <td>{{ collector.language }}</td>
-                    <tr>
-                        <th>X-Robots-Tag:</th>
-                        <td>{{ collector.XRobotsTag }}</td>
-                    </tr>
                     <tr>
                         <th>Meta Robots:</th>
                         <td>{{ collector.metaRobot }}</td>
@@ -123,45 +136,21 @@
                         <td>{{ collector.metaGooglebotNews }}</td>
                     </tr>
             </table>
-
-        <h3>Images:</h3>
+    <h3>Hreflang:</h3>
+    {% if collector.isHreflang %}
             <table>
-                    <tr>
-                        <th>Count all images:</th>
-                        <td>{{ collector.countAllImages }}</td>
-                    <tr>
-                        <th>Count all images with completed balise alt:</th>
-                        <td>{{ collector.countAltFromImages }}</td>
-                    </tr>
-                    <tr>
-                        <th>Images whithout alt:</th>
-                        <td>
-                        {% for image in collector.listMissingAltFromImages %}
-                            {{ image }}<br>
-                        {% endfor %}
-                        </td>
-                    </tr>
+            {% for href in collector.hreflang %}
+                <tr>
+                    <th>{{ href['hreflang'] }}</th>
+                    <td>
+                        {{ href['href'] }}
+                    </td>
+                </tr>
+            {% endfor %}
             </table>
-
-        <h3>Icons:</h3>
-            <table>
-                    <tr>
-                        <th>Count all icons:</th>
-                        <td>{{ collector.countAllImages }}</td>
-                    <tr>
-                        <th>Count all explicit icons (aria-hidden):</th>
-                        <td>{{ collector.countAltFromImages }}</td>
-                    </tr>
-                    <tr>
-                        <th>Class of icons whithout aria-hidden attribute:</th>
-                        <td>
-                            {% for icons in collector.listNonExplicitIcons %}
-                                {{ icons }}<br>
-                            {% endfor %}
-                        </td>
-                    </tr>
-            </table>
-
+    {% else %}
+        <p>No hreflang tags.</p>
+    {% endif %}
         <h3>Share on Social Media:</h3>
             <table>
                 <tr>
@@ -206,3 +195,5 @@
                 </tr>
             </table>
 {% endblock %}
+
+

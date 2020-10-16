@@ -29,13 +29,23 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\SEOTool\DataCollector\RequestCollector:
+    App\SEOTool\DataCollector\SEOCollector:
         tags:
             -
                 name: data_collector
-                template: '/profiler/seo_stuff.html.twig'
+                template: '/profiler/seo_collector.html.twig'
                 # must match the value returned by the getName() method
-                id: 'app.request_collector'
+                id: 'app.seo_collector'
+                # optional priority
+                # priority: 300
+
+    App\SEOTool\DataCollector\AccessibilityCollector:
+        tags:
+            -
+                name: data_collector
+                template: '/profiler/accessibility_collector.html.twig'
+                # must match the value returned by the getName() method
+                id: 'app.accessibility_collector'
                 # optional priority
                 # priority: 300
 

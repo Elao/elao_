@@ -42,7 +42,7 @@ build-assets:
 build-content: export APP_ENV = prod
 build-content:
 	bin/console cache:clear
-	bin/console content:build
+	bin/console stenope:build
 
 ## Build the site and serve the static version
 serve-static: build-content
@@ -55,7 +55,7 @@ build-subdir: export WEBPACK_PUBLIC_PATH = /elao_/build
 build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8001/elao_
 build-subdir: clear build-assets
 	bin/console cache:clear
-	bin/console content:build build/elao_
+	bin/console stenope:build build/elao_
 
 ## Build & serve the static version of the site from a subdir / with base url
 serve-static-subdir: build-subdir
@@ -66,7 +66,19 @@ serve-static-subdir: build-subdir
 # Lint #
 ########
 
-lint: lint.php-cs-fixer lint.phpstan lint.twig@integration lint.yaml@integration lint.eslint
+lint: lint.php-cs-fixer lint.phpstan lint.twig@integration lint.yaml@integration lint.eslint lint.container lint.composer
+
+lint.composer:
+	composer validate --no-check-publish
+
+lint.composer@integration:
+	composer validate --no-check-publish --ansi --no-interaction
+
+lint.container:
+	bin/console lint:container
+
+lint.container@integration:
+	bin/console lint:container --ansi --no-interaction
 
 lint.php-cs-fixer:
 	vendor/bin/php-cs-fixer fix

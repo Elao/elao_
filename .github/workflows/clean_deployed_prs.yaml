@@ -7,23 +7,24 @@ on:
 jobs:
 
   clear-deployed-prs:
-    name: 🧹 Clear
+    name: '🧹 Clear'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v2
         with:
           ref: gh-pages
 
-      - name: Remove PRs folder
+      - name: 'Remove PRs folder'
         run: rm -Rf pr
 
-      - name: Git status
+      - name: 'Git status'
         run: git status
 
       # https://github.com/EndBug/add-and-commit
-      - name: Commit & push changes
+      - name: 'Commit & push changes'
         uses: EndBug/add-and-commit@v4
         with:
           author_name: GitHub Actions Bot

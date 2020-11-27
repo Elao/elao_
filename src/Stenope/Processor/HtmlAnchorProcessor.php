@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Content\Processor;
+namespace App\Stenope\Processor;
 
-use Content\Behaviour\ProcessorInterface;
-use Content\Content;
-use Content\Service\HtmlUtils;
+use Stenope\Bundle\Behaviour\ProcessorInterface;
+use Stenope\Bundle\Content;
+use Stenope\Bundle\Service\HtmlUtils;
 use Symfony\Component\DomCrawler\Crawler;
 
 /**

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Content\Serializer;
+namespace App\Stenope\Serializer;
 
 use App\Model\Member;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;

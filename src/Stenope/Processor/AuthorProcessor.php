@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace App\Content\Processor;
+namespace App\Stenope\Processor;
 
 use App\Model\Article;
 use App\Model\Member;
-use Content\Behaviour\ContentManagerAwareInterface;
-use Content\Behaviour\ContentManagerAwareTrait;
-use Content\Behaviour\ProcessorInterface;
-use Content\Content;
+use Stenope\Bundle\Behaviour\ContentManagerAwareInterface;
+use Stenope\Bundle\Behaviour\ContentManagerAwareTrait;
+use Stenope\Bundle\Behaviour\ProcessorInterface;
+use Stenope\Bundle\Content;
 
 /**
  * Fetch author form Member list

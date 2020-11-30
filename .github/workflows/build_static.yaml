@@ -47,7 +47,7 @@ jobs:
       - name: 'Install dependencies'
         run: |
           echo "::group::composer install"
-            @composer install --no-progress --ansi
+            composer install --no-progress --ansi
           echo "::endgroup::"
 
           echo "::group::npm install"

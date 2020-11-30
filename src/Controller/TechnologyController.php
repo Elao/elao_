@@ -6,7 +6,7 @@ namespace App\Controller;
 
 use App\Model\Article;
 use App\Model\Technology;
-use Content\ContentManager;
+use Stenope\Bundle\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

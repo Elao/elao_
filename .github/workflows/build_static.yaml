@@ -8,18 +8,19 @@ on:
 jobs:
 
   build:
-    name: 🚧  Build
+    name: '🚧  Build'
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v2
 
       # https://github.com/actions/setup-node
-      - name: Setup node
+      - name: 'Setup node'
         uses: actions/setup-node@v1
 
-      - name: Setup PHP
+      - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
         with:
           coverage: "none"
@@ -27,73 +28,79 @@ jobs:
           ini-values: "memory_limit=-1"
           php-version: "7.4"
 
-      - name: Determine composer cache directory
+      - name: 'Determine composer cache directory'
         id: composer-cache
         run: echo "::set-output name=directory::$(composer config cache-dir)"
 
-      - name: Cache composer dependencies
-        uses: actions/cache@v1
+      - name: 'Cache composer dependencies'
+        uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.directory }}
-          key: composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: composer-
+          key: composer-${{ hashFiles('composer.lock') }}
 
-      - name: Install dependencies
+      - name: 'Cache NPM dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('package-lock.json') }}
+
+      - name: 'Install dependencies'
         run: |
           echo "::group::composer install"
-          composer install --no-progress --no-suggest --ansi
-          echo "::endgroup::"
-          echo "::group::npm install"
-          npm install --color=always --no-progress
+            @composer install --no-progress --ansi
           echo "::endgroup::"
 
-      - name: Warmup
+          echo "::group::npm install"
+            npm install --color=always --no-progress
+          echo "::endgroup::"
+
+      - name: 'Warmup'
         run: |
           echo "::group::warmup production env"
-          npx encore production --color=always --no-progress
-          bin/console cache:clear --ansi
-          bin/console cache:warmup --ansi
+            npx encore production --color=always --no-progress
+            bin/console cache:clear --ansi
+            bin/console cache:warmup --ansi
           echo "::endgroup::"
         env:
           APP_ENV: prod
           WEBPACK_PUBLIC_PATH: /elao_/build
 
-      - name: Build static site
-        run: bin/console content:build --no-interaction -vv --ansi
+      - name: 'Build static site'
+        run: bin/console stenope:build --no-interaction -vv --ansi
         env:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_
 
-      - name: Tar static site
+      - name: 'Tar static site'
         run: tar -czvf static-build.zip build
 
-      - name: Upload static site as artefact
+      - name: 'Upload static site as artefact'
         uses: actions/upload-artifact@v2
         with:
           name: static-build
           path: static-build.zip
 
   deploy:
-    name: 🚀  Deploy
+    name: '🚀  Deploy'
     runs-on: ubuntu-latest
     needs: build
 
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v2
 
-      - name: ⬇️ Download static site artefact
+      - name: '⬇️ Download static site artefact'
         uses: actions/download-artifact@v2
         with:
           # Zip is automatically unzip to current dir
           name: static-build
 
-      - name: Extract static site
+      - name: 'Extract static site'
         run: tar -xzvf static-build.zip
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
-      - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.1
+      - name: '🚀 Deploy'
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           COMMIT_MESSAGE: "[AUTO] Static site update"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

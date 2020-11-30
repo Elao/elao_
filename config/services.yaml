@@ -18,6 +18,7 @@ services:
         exclude:
             - '../src/DependencyInjection/'
             - '../src/Entity/'
+            - '../src/Model/'
             - '../src/Kernel.php'
             - '../src/Tests/'
 
@@ -30,10 +31,10 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    App\Content\Processor\TableOfContentProcessor:
+    App\Stenope\Processor\TableOfContentProcessor:
         tags: [{ name: content.processor, priority: -10 }]
 
     # Override default HTML Anchor processor:
-    Content\Processor\HtmlAnchorProcessor:
-        class: App\Content\Processor\HtmlAnchorProcessor
+    Stenope\Bundle\Processor\HtmlAnchorProcessor:
+        class: App\Stenope\Processor\HtmlAnchorProcessor
         tags: [{ name: content.processor, priority: -20 }]

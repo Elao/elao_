@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\Content\Processor;
+namespace App\Stenope\Processor;
 
 use App\Model\Article;
-use Content\Behaviour\ProcessorInterface;
-use Content\Content;
+use Stenope\Bundle\Behaviour\ProcessorInterface;
+use Stenope\Bundle\Content;
 
 /**
  * Set "category" property from file path if not specified

@@ -6,15 +6,15 @@ on:
 jobs:
 
   deploy-pr:
-    name: 🚧  Build & deploy 🚀
+    name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: 'Checkout'
         uses: actions/checkout@v2
 
-      - uses: chrnorm/deployment-action@releases/v1
-        name: Create GitHub deployment
+      - name: 'Create GitHub deployment'
+        uses: chrnorm/deployment-action@releases/v1
         id: deployment
         with:
           ref: ${{ github.head_ref }}
@@ -23,10 +23,10 @@ jobs:
           environment: staging
 
       # https://github.com/actions/setup-node
-      - name: Setup node
+      - name: 'Setup node'
         uses: actions/setup-node@v1
 
-      - name: Setup PHP
+      - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
         with:
           coverage: "none"
@@ -34,46 +34,52 @@ jobs:
           ini-values: "memory_limit=-1"
           php-version: "7.4"
 
-      - name: Determine composer cache directory
+      - name: 'Determine composer cache directory'
         id: composer-cache
         run: echo "::set-output name=directory::$(composer config cache-dir)"
 
-      - name: Cache composer dependencies
-        uses: actions/cache@v1
+      - name: 'Cache composer dependencies'
+        uses: actions/cache@v2
         with:
           path: ${{ steps.composer-cache.outputs.directory }}
-          key: composer-${{ hashFiles('**/composer.lock') }}
-          restore-keys: composer-
+          key: composer-${{ hashFiles('composer.lock') }}
 
-      - name: Install dependencies
+      - name: 'Cache NPM dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('package-lock.json') }}
+
+      - name: 'Install dependencies'
         run: |
           echo "::group::composer install"
-          composer install --no-progress --no-suggest --ansi
-          echo "::endgroup::"
-          echo "::group::npm install"
-          npm install --color=always --no-progress
+            composer install --no-progress --ansi
           echo "::endgroup::"
 
-      - name: Warmup
+          echo "::group::npm install"
+            npm install --color=always --no-progress
+          echo "::endgroup::"
+
+      - name: 'Warmup'
         run: |
           echo "::group::warmup production env"
-          npx encore production --color=always --no-progress
-          bin/console cache:clear --ansi
-          bin/console cache:warmup --ansi
+            npx encore production --color=always --no-progress
+            bin/console cache:clear --ansi
+            bin/console cache:warmup --ansi
           echo "::endgroup::"
         env:
           APP_ENV: prod
           WEBPACK_PUBLIC_PATH: /elao_/pr/${{ github.event.number }}/build
 
-      - name: Build static site
-        run: bin/console content:build --no-interaction -vv --ansi
+      - name: 'Build static site'
+        run: bin/console stenope:build --no-interaction -vv --ansi
         env:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
-      - name: 🚀 Deploy
-        uses: JamesIves/github-pages-deploy-action@3.6.1
+      - name: '🚀 Deploy'
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           COMMIT_MESSAGE: "[AUTO] Deploy PR ${{ github.event.number }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -82,7 +88,7 @@ jobs:
           TARGET_FOLDER: pr/${{ github.event.number }} # The folder where the action should deploy on the deployment branch.
           CLEAN: true # Automatically remove deleted files from the deploy branch
 
-      - name: Update deployment status (success)
+      - name: 'Update deployment status (success)'
         if: success()
         uses: chrnorm/deployment-status@releases/v1
         with:
@@ -93,7 +99,7 @@ jobs:
           state: "success"
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
 
-      - name: Update deployment status (failure)
+      - name: 'Update deployment status (failure)'
         if: failure()
         uses: chrnorm/deployment-status@releases/v1
         with:

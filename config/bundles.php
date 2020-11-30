@@ -10,5 +10,5 @@ return [
     Symfony\Bundle\DebugBundle\DebugBundle::class => ['dev' => true, 'test' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
-    Content\ContentBundle::class => ['all' => true],
+    Stenope\Bundle\StenopeBundle::class => ['all' => true],
 ];

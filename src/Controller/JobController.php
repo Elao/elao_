@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Job;
-use Content\ContentManager;
-use Content\Service\ContentUtils;
+use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;

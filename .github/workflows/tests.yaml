@@ -1,0 +1,100 @@
+name: Tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+
+  tests:
+    name: 'Tests'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+
+      # https://github.com/actions/setup-node
+      - name: 'Setup node'
+        uses: actions/setup-node@v1
+
+      - name: 'Setup PHP'
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: "none"
+          extensions: "json"
+          ini-values: "memory_limit=-1"
+          php-version: "7.4"
+
+      - name: 'Determine composer cache directory'
+        id: composer-cache
+        run: echo "::set-output name=directory::$(composer config cache-dir)"
+
+      - name: 'Cache composer dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.directory }}
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: 'Install dependencies'
+        id: deps
+        run: |
+          echo "::group::composer install"
+            composer install --no-progress --ansi
+          echo "::endgroup::"
+
+          # echo "::group::install phpunit"
+          #   vendor/bin/simple-phpunit install
+          # echo "::endgroup::"
+
+          echo "::group::npm install"
+            npm install --color=always --no-progress
+          echo "::endgroup::"
+
+      - name: 'Warmup'
+        run: |
+          bin/console cache:clear --ansi --no-warmup
+          bin/console cache:warmup --ansi
+        env:
+          APP_ENV: test
+
+      - name: 'Composer validate'
+        if: always() && steps.deps.outcome == 'success'
+        run: composer validate --no-check-publish
+
+      - name: 'Lint YAML'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.yaml@integration
+
+      - name: 'Lint Twig'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.yaml@integration
+
+      - name: 'Lint JS'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.eslint@integration
+
+      - name: 'Lint Parameters and Services'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.container@integration
+
+      - name: 'PHP CS Fixer'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.php-cs-fixer@integration
+
+      - name: 'PhpStan'
+        if: always() && steps.deps.outcome == 'success'
+        run: make lint.phpstan@integration
+
+      # - name: Run tests
+      #   run: vendor/bin/simple-phpunit --testdox
+
+      - name: 'Check build static'
+        run: |
+          npx encore production --color=always --no-progress
+          bin/console stenope:build --no-interaction -vv --ansi
+        env:
+          APP_ENV: prod

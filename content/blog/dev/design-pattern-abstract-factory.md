@@ -149,15 +149,15 @@ public function getParser();
 Voici à titre d'exemple le code de la fabrique `GithubFactory` (je vous épargne le code des deux autres fabriques):
 
 ```php
-    <?php
-    class GithubFactory implements SCMFactoryInterface {
-        public function getCrawler(): SCMCrawlerInterface {
-            return new GithubCrawler();
-        }
-        public function getParser(): SCMParserInterface {
-            return new GithubParser();
-        }
+<?php
+class GithubFactory implements SCMFactoryInterface {
+    public function getCrawler(): SCMCrawlerInterface {
+        return new GithubCrawler();
     }
+    public function getParser(): SCMParserInterface {
+        return new GithubParser();
+    }
+}
 ```
 
 A présent, en fonction du contexte dans lequel nous nous trouvons (Github, Gitlab ou Bitbucket), il suffit d'instancier la bonne fabrique et d'appeler respectivement ses méthodes `getCrawler` et `getParser` pour obtenir les bons services adaptés au contexte courant. C'est au final la fabrique qui est garante de la compatibilité des produits qui collaborent.

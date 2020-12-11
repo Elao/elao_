@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e147b0c92d8a93341225e66841be6c57",
+    "content-hash": "5380b9e97444ed98c4e4587bf2ca2b1f",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -301,6 +301,81 @@
                 }
             ],
             "time": "2020-11-14T15:56:27+00:00"
+        },
+        {
+            "name": "elao/seo-tool",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Elao/seo-tool.git",
+                "reference": "51ebc6df2775dc8adb95f74117b327dd5de9fdd7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Elao/seo-tool/zipball/51ebc6df2775dc8adb95f74117b327dd5de9fdd7",
+                "reference": "51ebc6df2775dc8adb95f74117b327dd5de9fdd7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "symfony/css-selector": "^4.4|^5.1",
+                "symfony/dependency-injection": "^4.4|^5.1",
+                "symfony/dom-crawler": "^4.4|^5.1",
+                "symfony/http-foundation": "^4.4|^5.1",
+                "symfony/http-kernel": "^4.4|^5.1",
+                "symfony/service-contracts": "^1.1|^2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "symfony/console": "^4.4|^5.1",
+                "symfony/filesystem": "^4.4|^5.1",
+                "symfony/phpunit-bridge": "^5.2",
+                "symfony/twig-bridge": "^4.4|^5.1"
+            },
+            "default-branch": true,
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Elao\\Bundle\\SeoTool\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Elao\\Bundle\\SeoTool\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elao",
+                    "email": "contact@elao.com"
+                },
+                {
+                    "name": "Anne-Laure de Boissieu",
+                    "email": "anne-laure@protonmail.com",
+                    "homepage": "https://github.com/al2b"
+                }
+            ],
+            "description": "Provide accessibility and SEO insights of your page in Symfony profiler",
+            "homepage": "https://github.com/Elao/seo-tool",
+            "keywords": [
+                "accessibility",
+                "seo",
+                "symfony",
+                "symfony-profiler"
+            ],
+            "support": {
+                "source": "https://github.com/Elao/seo-tool/tree/master",
+                "issues": "https://github.com/Elao/seo-tool/issues"
+            },
+            "time": "2020-12-11T08:33:11+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -6811,9 +6886,11 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
-    "prefer-stable": false,
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "elao/seo-tool": 20
+    },
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.2.5",

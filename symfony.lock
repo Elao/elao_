@@ -32,6 +32,9 @@
     "ekino/phpstan-banned-code": {
         "version": "v0.3.1"
     },
+    "elao/seo-tool": {
+        "version": "1.x-dev"
+    },
     "erusev/parsedown": {
         "version": "1.8.0-beta-7"
     },

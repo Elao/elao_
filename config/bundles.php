@@ -11,4 +11,5 @@ return [
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Stenope\Bundle\StenopeBundle::class => ['all' => true],
+    Elao\Bundle\SeoTool\ElaoSeoToolBundle::class => ['all' => true],
 ];

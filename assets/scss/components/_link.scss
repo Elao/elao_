@@ -49,13 +49,14 @@
   color: $color-brand;
 
   &:before { background: $color-secondary; }
+  &:after { color: $color-secondary; }
 
   &:hover,
   &:active,
   &:focus {
     color: darken($color-brand, 15%);
 
-    &:before { background: $color-brand; }
+    &:before { background: $color-primary; }
     &:after { color: $color-secondary; }
   }
 }

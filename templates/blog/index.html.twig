@@ -15,7 +15,7 @@
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                                     <div class="article-author__image">
                                         {% for author in article.authors %}
-                                            <img src="https://images.unsplash.com/photo-1578102487209-9229fa2b1cfb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2900&q=80"/>
+                                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}"/>
                                         {% endfor %}
                                     </div>
                                     <span class="article-author__info">

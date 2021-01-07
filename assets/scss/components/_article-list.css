@@ -8,7 +8,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-lg) {
   .article-list {
     margin: 0;
   }

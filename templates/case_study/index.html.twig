@@ -1,15 +1,37 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Etudes de cas</h1>
-
-    <ul>
-        {% for caseStudy in caseStudies %}
-            <li>
-                <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}">
-                    {{ caseStudy.title }}
-                </a>
+    <div class="page-study-cases">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item">
+              <a href="{{ path('homepage') }}">Accueil</a>
             </li>
-        {% endfor %}
-    </ul>
+            <li class="breadcrumb__item">
+              Nos études de cas
+            </li>
+        </ul>
+
+        <div class="banner">
+            <h1 class="banner__title">
+                Découvrez
+                <span>nos études de cas</span>
+            </h1>
+            <div class="banner__content">
+                <div>
+                    <p>Voici une sélection récente où nous avons pu voir se créer une émulation forte avec nos clients et leurs utilisateurs.</p>
+                </div>
+                <p class="highlight">Notre meilleur argument qualité, ce sont les <span>200+ projets</span> sur lesquels nous avons travaillé depuis plus de 15 ans.</p>
+            </div>
+        </div>
+
+        {# <ul>
+            {% for caseStudy in caseStudies %}
+                <li>
+                    <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}">
+                        {{ caseStudy.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul> #}
+    </div>
 {% endblock content %}

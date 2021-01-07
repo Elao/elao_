@@ -42,7 +42,7 @@
       <ul class="article-tag-list">
         {% for tag in article.tags %}
           <li class="article-tag-list__item">
-            <a href="{{ path('blog_tag', { tag: tag }) }}">#{{ tag }}</a>
+            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">#{{ tag }}</a>
           </li>
         {% endfor %}
       </ul>

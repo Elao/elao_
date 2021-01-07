@@ -30,6 +30,11 @@
             {% endif %}
         {% endblock %}
 
+        <!-- Optional no-index -->
+        {% if noindex is defined and noindex %}
+            <meta name="robots" content="noindex" />
+        {% endif %}
+
         {% block stylesheets %}
             {{ encore_entry_link_tags('style') }}
         {% endblock %}

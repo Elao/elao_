@@ -1,6 +1,6 @@
 // Basic titles
 h1, .h1 {
-  margin-left: 110px;
+  margin: 0 0 30px 110px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -22,7 +22,6 @@ h1, .h1 {
 
 h2, .h2 {
   margin: 50px 0 25px;
-  // padding: 0;
   position: relative;
   font-family: 'antikor bold';
   font-size: 32px;

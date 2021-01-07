@@ -91,6 +91,36 @@
                     </li>
                 {% endif %}
             {% endfor %}
-        <div>
+        </div>
     {% endblock %}
+
+    <ul class="pagination">
+        <li class="pagination__item pagination__item--nav">
+            <a href="#">
+                <i class="icon icon--chevron-left" aria-hidden="true"></i>
+                <span class="screen-reader">Page précédente</span>
+            </a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">1</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">2</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">3</a>
+        </li>
+        <li class="pagination__item pagination__item--active">
+            <a href="#">4</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">5</a>
+        </li>
+        <li class="pagination__item pagination__item--nav">
+            <a href="#">
+                <i class="icon icon--chevron-right" aria-hidden="true"></i>
+                <span class="screen-reader">Page suivante</span>
+            </a>
+        </li>
+    </ul>
 {% endblock %}

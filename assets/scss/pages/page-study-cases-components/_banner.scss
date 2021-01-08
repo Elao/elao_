@@ -1,0 +1,134 @@
+// Page study cases banner
+
+.banner {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.banner__title {
+  @extend .h1--small;
+
+  position: absolute;
+  top: -45px;
+  left: 110px;
+}
+
+.banner__content {
+  display: flex;
+
+  .info {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    p {
+      width: 400px;
+      font-family: 'faktum regular';
+      font-size: 20px;
+      color: $color-text;
+      line-height: 1.6;
+    }
+  }
+
+  .highlight {
+    padding: 45px 70px 60px;
+    max-width: 620px;
+    position: relative;
+    flex: 1;
+    font-family: "antikor regular";
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.6;
+    background: $color-brand;
+
+    &:after {
+      position: absolute;
+      right: 10px;
+      bottom: -45px;
+      font-family: 'icomoon';
+      font-size: 110px;
+      color: $color-secondary;
+      content: '\e915';
+      line-height: 1;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .banner__content {
+    .info {
+      padding: 110px 40px 0;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .banner {}
+
+  .banner__title {
+    margin-bottom: 25px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .banner__content {
+    .info {
+      margin: 0 0 30px;
+      padding: 0;
+      padding-right: 40px;
+      padding-top: 40px;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      p {
+        width: unset;
+      }
+    }
+
+    .highlight {
+      margin-left: auto;
+      padding: 25px 40px;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner__title {
+    margin: 0 45px 35px;
+    font-size: 32px;
+  }
+
+  .banner__content {
+    flex-direction: column;
+
+    .info {
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .highlight {
+      padding: 20px 30px 30px;
+      font-size: 16px;
+
+      &:after {
+        right: 10px;
+        bottom: -35px;
+        font-size: 65px;
+      }
+    }
+  }
+}

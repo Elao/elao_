@@ -1,33 +1,3 @@
 .page-study-cases {
-  .banner {
-    position: relative;
-  }
-
-  .banner__title {
-    @extend .h1--small;
-
-    display: none;
-  }
-
-  .banner__content {
-    height: 260px;
-    display: flex;
-
-    > div {
-      padding: 40px;
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-
-      p {
-        width: 400px;
-      }
-    }
-
-    .highlight {
-      flex: 1;
-      background: $color-brand;
-    }
-  }
+  @import "pages/page-study-cases-components/_banner";
 }

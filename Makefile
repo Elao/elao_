@@ -18,7 +18,7 @@ install:
 
 ## Start dev server
 start:
-	symfony server:start
+	symfony server:start --no-tls
 
 ## Watch assets
 watch:

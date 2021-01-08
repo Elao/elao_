@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "elao website",
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.30.0",
+        "@symfony/webpack-encore": "^0.33.0",
         "autoprefixer": "^9.8.6",
         "core-js": "^3.0.0",
         "eslint": "^7.9.0",

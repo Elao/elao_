@@ -2,7 +2,7 @@
 
 {% block content %}
     {% block articles %}
-        <div class="article-list">
+        <ul class="article-list">
             {% for article in articles %}
                 {% if loop.first %}
                     <li class="article-miniature article-miniature--highlight">
@@ -91,7 +91,7 @@
                     </li>
                 {% endif %}
             {% endfor %}
-        </div>
+        </ul>
     {% endblock %}
 
     <ul class="pagination">

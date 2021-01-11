@@ -1,0 +1,44 @@
+.brick-developpement {
+  @extend .brick;
+  @extend .brick--large;
+
+  min-height: 190px;
+  color: $color-light;
+  background: $color-dark;
+
+  .title {
+    margin: 40px 0;
+    font-family: 'faktum bold';
+    font-size: 46px;
+    color: #fff;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    font-family: 'antikor bold';
+    font-size: 28px;
+    border: none;
+
+    img {
+      margin: 0;
+      margin-right: 30px;
+      width: 90px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .brick-developpement {
+    .title {
+      margin: 20px 0;
+      max-width: 500px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    .contact-link {
+      font-size: 20px;
+    }
+  }
+}

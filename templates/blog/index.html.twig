@@ -36,7 +36,7 @@
                             </a>
                         </div>
                     </li>
-                {% elseif page == minPage and loop.index < 5%}
+                {% elseif page == minPage and loop.index < 5 %}
                     <li class="article-miniature article-miniature--large">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>

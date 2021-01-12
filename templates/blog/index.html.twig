@@ -4,7 +4,7 @@
     {% block articles %}
         <ul class="article-list">
             {% for article in articles %}
-                {% if loop.first %}
+                {% if page == minPage and loop.first %}
                     <li class="article-miniature article-miniature--highlight">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
@@ -36,7 +36,7 @@
                             </a>
                         </div>
                     </li>
-                {% elseif loop.index < 4 %}
+                {% elseif page == minPage and loop.index < 5%}
                     <li class="article-miniature article-miniature--large">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
@@ -84,30 +84,24 @@
         </ul>
     {% endblock %}
 
+    {% set previousPage = max(page - 1, minPage) %}
+    {% set nextPage = min(page + 1, maxPage) %}
     <ul class="pagination">
         <li class="pagination__item pagination__item--nav">
-            <a href="#">
+            <a href="{{ previousPage == minPage ? path('blog') : path('blog_page', { page: previousPage }) }}">
                 <i class="icon icon--chevron-left" aria-hidden="true"></i>
                 <span class="screen-reader">Page précédente</span>
             </a>
         </li>
-        <li class="pagination__item">
-            <a href="#">1</a>
+        {% for number in 1..maxPage %}
+        <li class="pagination__item {{ page == number ? 'pagination__item--active' }}">
+            <a href="{{ number == minPage ? path('blog') : path('blog_page', { page: number }) }}">
+                {{ number }}
+            </a>
         </li>
-        <li class="pagination__item">
-            <a href="#">2</a>
-        </li>
-        <li class="pagination__item">
-            <a href="#">3</a>
-        </li>
-        <li class="pagination__item pagination__item--active">
-            <a href="#">4</a>
-        </li>
-        <li class="pagination__item">
-            <a href="#">5</a>
-        </li>
+        {% endfor %}
         <li class="pagination__item pagination__item--nav">
-            <a href="#">
+            <a href="{{ path('blog_page', { page: nextPage }) }}">
                 <i class="icon icon--chevron-right" aria-hidden="true"></i>
                 <span class="screen-reader">Page suivante</span>
             </a>

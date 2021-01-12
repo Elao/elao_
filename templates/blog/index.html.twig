@@ -45,17 +45,17 @@
                             <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
                             <p class="description">{{ article.description }}</p>
-                            <ul class="tag-list">
-                                <li class="tag-list__item">
-                                    <a href="#">#GraphQl</a>
-                                </li>
-                                <li class="tag-list__item">
-                                    <a href="#">#Apollo</a>
-                                </li>
-                                <li class="tag-list__item">
-                                    <a href="#">#Cache client</a>
-                                </li>
-                            </ul>
+                            {% block tags %}
+                                <ul class="tag-list">
+                                    {% for tag in article.tags %}
+                                        <li class="tag-list__item">
+                                            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                #{{tag}}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endblock %}
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="btn btn--secondary btn--animated">
                                 <span>
                                     Lire l'article
@@ -75,17 +75,7 @@
                         <div class="article-miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
                             <p class="description">{{ article.description }}</p>
-                            <ul class="tag-list">
-                                <li class="tag-list__item">
-                                    <a href="#">#GraphQl</a>
-                                </li>
-                                <li class="tag-list__item">
-                                    <a href="#">#Apollo</a>
-                                </li>
-                                <li class="tag-list__item">
-                                    <a href="#">#Cache client</a>
-                                </li>
-                            </ul>
+                            {{ block('tags') }}
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
                         </div>
                     </li>

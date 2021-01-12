@@ -18,6 +18,7 @@ class Article
     public string $thumbnail;
     public string $header;
     public array $tags = [];
+    public string $lang = 'fr';
     public array $categories;
     //public string $category;
 

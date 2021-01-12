@@ -3,6 +3,7 @@ type:           "post"
 title:          "From react-native init to app stores real quick"
 date:           "2017-11-09"
 publishdate:    "2017-11-09"
+lang:           "en"
 draft:          false
 
 description:    "From react-native init to stores real quick"

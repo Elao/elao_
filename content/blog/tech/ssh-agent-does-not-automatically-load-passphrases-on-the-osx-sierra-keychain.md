@@ -4,6 +4,7 @@ title:              "SSH-agent does not automatically load passphrases on the OS
 date:               "2016-10-14"
 publishdate:        "2016-10-14"
 draft:              false
+lang:               "en"
 
 description:        "SSH-agent does not automatically load passphrases on the OSX Sierra keychain during startup."
 

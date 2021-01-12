@@ -3,6 +3,7 @@ type:               "post"
 title:              "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 date:               "2013-02-28"
 publishdate:        "2013-02-28"
+lang:               "en"
 draft:              false
 
 description:        "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"

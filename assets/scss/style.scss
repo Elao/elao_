@@ -32,14 +32,19 @@
 @import "components/_article-footer";
 @import "components/_article-content";
 @import "components/_article-credits";
+@import "components/_article-list";
+@import "components/_article-miniature";
 @import "components/_kudo";
+@import "components/_tag-list";
+@import "components/_link";
+@import "components/_pagination";
 
 @import "generic/_blockquote";
 @import "generic/_code";
 @import "generic/_figure";
 @import "generic/_iframe";
 @import "generic/_img";
-@import "generic/_link";
+@import "generic/_a";
 @import "generic/_ul";
 
 @import "pages/_page-home";

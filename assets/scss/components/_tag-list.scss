@@ -1,0 +1,36 @@
+.tag-list {
+  margin-top: 5px;
+  margin-bottom: 25px;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag-list__item {
+  margin: 5px;
+  display: flex;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  a {
+    padding: 7px 10px;
+    font-family: 'antikor bold';
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    hyphens: auto;
+    background-color: $color-tertiary;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.article-list {
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: $screen-lg) {
+  .article-list {
+    margin: 0;
+  }
+}

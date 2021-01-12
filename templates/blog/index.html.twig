@@ -1,43 +1,116 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Liste des articles
-
     {% block articles %}
-        <div>
+        <ul class="article-list">
             {% for article in articles %}
                 {% if loop.first %}
-                    <div>
-                        <img src="{{ asset(article.thumbnail) }}" />
-                        {{ article.publishdate|format_date('medium') }}
-                        {% for author in article.authors %}
-                            {{ author.name }}
-                        {% endfor %}
-                        <a href="{{ path('blog_article', { article: article.slug }) }}">
-                            {{ article.title }}
+                    <li class="article-miniature article-miniature--highlight">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                        {{ article.description }}
-                    </div>
-                {% elseif loop.index < 3 %}
-                    <div>
-                        <img src="{{ asset(article.thumbnail) }}" />
-                        {{ article.publishdate|format_date('medium')  }}
-                        {{ article.title }}
-                        {{ article.description }}
-                        <a href="{{ path('blog_article', { article: article.slug }) }}">
-                            Lire l'article_
+                        <div class="article-miniature__content">
+                            <div class="info">
+                                {% set authors = article.authors|length > 5 ? [null] : article.authors %}
+                                <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
+                                    <div class="article-author__image">
+                                        {% for author in article.authors %}
+                                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}"/>
+                                        {% endfor %}
+                                    </div>
+                                    <span class="article-author__info">
+                                        Écrit par
+                                        {% for author in article.authors %}
+                                            <strong>{{ author.name }}</strong>
+                                        {% endfor %}
+                                    </span>
+                                    <span class="article-author__info">
+                                        Publication
+                                        <strong>{{ article.publishdate|format_date('medium') }}</strong>
+                                    </span>
+                                </div>
+                            </div>
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="details">
+                                <h2 class="title">{{ article.title }}</h2>
+                                <p>{{ article.description }}</p>
+                            </a>
+                        </div>
+                    </li>
+                {% elseif loop.index < 4 %}
+                    <li class="article-miniature article-miniature--large">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                    </div>
+                        <div class="article-miniature__content">
+                            <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                            <p class="description">{{ article.description }}</p>
+                            {% block tags %}
+                                <ul class="tag-list">
+                                    {% for tag in article.tags %}
+                                        <li class="tag-list__item">
+                                            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                #{{tag}}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endblock %}
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Lire l'article
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                        <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                        <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
                 {% else %}
-                    <div>
-                        {{ article.title }}
-                        {{ article.description }}
-                        <a href="{{ path('blog_article', { article: article.slug }) }}">
-                            Lire l'article_
+                    <li class="article-miniature">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                    </div>
+                        <div class="article-miniature__content">
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                            <p class="description">{{ article.description }}</p>
+                            {{ block('tags') }}
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                        </div>
+                    </li>
                 {% endif %}
             {% endfor %}
-        <div>
+        </ul>
     {% endblock %}
+
+    <ul class="pagination">
+        <li class="pagination__item pagination__item--nav">
+            <a href="#">
+                <i class="icon icon--chevron-left" aria-hidden="true"></i>
+                <span class="screen-reader">Page précédente</span>
+            </a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">1</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">2</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">3</a>
+        </li>
+        <li class="pagination__item pagination__item--active">
+            <a href="#">4</a>
+        </li>
+        <li class="pagination__item">
+            <a href="#">5</a>
+        </li>
+        <li class="pagination__item pagination__item--nav">
+            <a href="#">
+                <i class="icon icon--chevron-right" aria-hidden="true"></i>
+                <span class="screen-reader">Page suivante</span>
+            </a>
+        </li>
+    </ul>
 {% endblock %}

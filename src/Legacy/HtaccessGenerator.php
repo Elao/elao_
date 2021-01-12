@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Legacy;
 
 use App\Model\Article;
@@ -59,7 +61,7 @@ class HtaccessGenerator
         return $this->contentManager->getContents(
             Article::class,
             ['date' => false],
-            fn($article) => $article->publishdate < $limit
+            fn ($article) => $article->publishdate < $limit
         );
     }
 }

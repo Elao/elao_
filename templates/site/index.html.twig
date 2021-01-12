@@ -265,7 +265,10 @@
             <a href="{{ path('jobs') }}" class="brick-team">
                 <img src="{{ asset('build/images/tipi.svg') }}" alt="">
                 <h3 class="title">Rejoindre la tribu</h3>
-                <span class="subtitle">3 offres</span>
+                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
+                {% if count %}
+                    <span class="subtitle">{{count}} offres</span>
+                {% endif %}
             </a>
         </section>
     </div>

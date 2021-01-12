@@ -25,7 +25,7 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/", name="blog")
-     * @Route("/page-{!page}", name="blog_page", requirements={"page"="\d+"})
+     * @Route("/page/{!page}", name="blog_page", requirements={"page"="\d+"})
      */
     public function index(int $page = 1, int $perPage = 20): Response
     {

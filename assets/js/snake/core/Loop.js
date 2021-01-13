@@ -1,5 +1,5 @@
 export default class Loop {
-    constructor(callback) {
+    constructor(callback = null) {
         this.callback = callback;
         this.frame = null;
         this.time = Date.now();

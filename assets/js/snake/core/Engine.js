@@ -1,21 +1,41 @@
+import FixedLoop from 'snake/core/FixedLoop';
+import Loop from 'snake/core/Loop';
 import SvgRenderer from 'snake/Rendering/SvgRenderer';
-import Listener from 'snake/Listener/ClickListener';
-import Background from 'snake/Model/Background';
-import Logo from 'snake/Model/Logo';
+import Listener from 'snake/Listener/LoadListener';
+import Background from 'snake/Assets/Background';
+import Logo from 'snake/Assets/Logo';
+import Game from 'snake/Model/Game';
+import Controls from 'snake/Model/Controls';
 
 export default class Engine {
     constructor() {
-        this.renderer = new SvgRenderer();
-        this.listener = new Listener(this.start);
-
-        this.background = new Background();
-        this.logo = new Logo();
-
-        this.renderer.setBackground(this.background);
-        this.renderer.setLogo(this.logo);
+        this.controls = new Controls(this.onInput.bind(this));
+        this.game = new Game();
+        this.renderer = new SvgRenderer(this.game);
+        this.gameLoop = new FixedLoop(this.game.speed, this.update.bind(this));
+        this.renderLoop = new Loop(this.render.bind(this));
+        this.listener = new Listener(this.start.bind(this));
     }
 
     start() {
         console.log('🐍');
+        this.renderLoop.start();
+        this.gameLoop.start();
+        this.controls.start();
+    }
+
+    onInput(type, active) {
+        console.log('onInput', type, active);
+        if (active) {
+            this.game.onInput(type);
+        }
+    }
+
+    update() {
+        this.game.update();
+    }
+
+    render(time) {
+        this.renderer.update();
     }
 }

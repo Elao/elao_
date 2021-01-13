@@ -18,10 +18,13 @@ export default class Logo {
     }
 
     constructor() {
-        this.element = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        this.element = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+
+        this.element.setAttribute('viewBox', '0 0 300 100');
 
         const { createPath, paths } = this.constructor;
 
         paths.forEach(content => this.element.appendChild(createPath(content)));
     }
 }
+

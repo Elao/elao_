@@ -5,11 +5,11 @@
         <ul class="article-list">
             {% for article in articles %}
                 {% if page == minPage and loop.first %}
-                    <li class="article-miniature article-miniature--highlight">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                    <li class="miniature-highlight">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-highlight__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                        <div class="article-miniature__content">
+                        <div class="miniature-highlight__content">
                             <div class="info">
                                 {% set authors = article.authors|length > 5 ? [null] : article.authors %}
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
@@ -37,11 +37,11 @@
                         </div>
                     </li>
                 {% elseif page == minPage and loop.index < 5 %}
-                    <li class="article-miniature article-miniature--large">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                    <li class="miniature-inline miniature-inline--large">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                        <div class="article-miniature__content">
+                        <div class="miniature-inline__content">
                             <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
                             <p class="description">{{ article.description }}</p>
@@ -68,11 +68,11 @@
                         </div>
                     </li>
                 {% else %}
-                    <li class="article-miniature">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="article-miniature__image">
+                    <li class="miniature">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                        <div class="article-miniature__content">
+                        <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
                             <p class="description">{{ article.description }}</p>
                             {{ block('tags') }}

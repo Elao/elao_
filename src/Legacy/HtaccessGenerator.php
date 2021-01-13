@@ -26,7 +26,7 @@ class HtaccessGenerator
         return implode(
             PHP_EOL,
             array_map(
-                fn($key) => $this->getHtaccessRule($key, $redirections[$key]),
+                fn ($key) => $this->getHtaccessRule($key, $redirections[$key]),
                 array_keys($redirections)
             )
         );
@@ -39,7 +39,7 @@ class HtaccessGenerator
         return implode(
             PHP_EOL,
             array_map(
-                fn($key) => $this->getNginxRule($key, $redirections[$key]),
+                fn ($key) => $this->getNginxRule($key, $redirections[$key]),
                 array_keys($redirections)
             )
         );

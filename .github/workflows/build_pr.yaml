@@ -8,6 +8,9 @@ jobs:
   deploy-pr:
     name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    # Do not run on WIP or Draft PRs
+    if: "!github.event.pull_request || (!contains(github.event.pull_request.labels.*.name, 'wip 🛠') && github.event.pull_request.draft == false)"
 
     steps:
       - name: 'Checkout'

@@ -78,12 +78,15 @@ class HtaccessGenerator
         return sprintf('rewrite ^%s$ %s permanent;', $legacyPath, $url);
     }
 
+    /**
+     * @return Article[]
+     */
     private function getArticlesBefore(\DateTimeInterface $limit): array
     {
         return $this->contentManager->getContents(
             Article::class,
             ['date' => false],
-            fn ($article) => $article->publishdate < $limit
+            fn (Article $article) => $article->publishdate < $limit
         );
     }
 }

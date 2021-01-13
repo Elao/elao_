@@ -3,6 +3,7 @@ type:               "post"
 title:              "Symfony 2 - Doctrine 2 - Cheat Sheets"
 date:               "2011-03-24"
 publishdate:        "2011-03-24"
+lang:               "en"
 draft:              false
 
 description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"

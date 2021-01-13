@@ -3,6 +3,7 @@ type:               "post"
 title:              "Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application (1/2)"
 date:               "2012-11-23"
 publishdate:        "2012-11-23"
+lang:               "en"
 draft:              false
 
 description:        "Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application."

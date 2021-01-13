@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2b6336705518ad221b7114298734392",
+    "content-hash": "1d5bb9b74fe06879a7bde2cb58f90f70",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1018,22 +1018,22 @@
         },
         {
             "name": "stenope/stenope",
-            "version": "v0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "a5b1a3d530bcbf31e3bcb6c734311ce3c4bf8dc6"
+                "reference": "4db8a31a684d513e3a57437f71d57e37dd38cd63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/a5b1a3d530bcbf31e3bcb6c734311ce3c4bf8dc6",
-                "reference": "a5b1a3d530bcbf31e3bcb6c734311ce3c4bf8dc6",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/4db8a31a684d513e3a57437f71d57e37dd38cd63",
+                "reference": "4db8a31a684d513e3a57437f71d57e37dd38cd63",
                 "shasum": ""
             },
             "require": {
                 "erusev/parsedown": "^1.7.4",
                 "ext-dom": "*",
-                "php": "^7.4",
+                "php": ">=7.4",
                 "symfony/asset": "^5.1",
                 "symfony/config": "^5.1",
                 "symfony/console": "^5.1",
@@ -1056,6 +1056,7 @@
             "require-dev": {
                 "ekino/phpstan-banned-code": "^0.3.1",
                 "friendsofphp/php-cs-fixer": "^2.16",
+                "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/phpstan": "^0.12.32",
                 "symfony/browser-kit": "^5.1",
                 "symfony/framework-bundle": "^5.1",
@@ -1063,6 +1064,7 @@
                 "symfony/twig-bridge": "^5.1",
                 "symfony/twig-bundle": "^5.1"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1099,9 +1101,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/v0.1.0"
+                "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2020-11-27T11:04:17+00:00"
+            "time": "2021-01-13T13:35:37+00:00"
         },
         {
             "name": "symfony/asset",
@@ -6904,7 +6906,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "elao/accesseo": 20
+        "elao/accesseo": 20,
+        "stenope/stenope": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

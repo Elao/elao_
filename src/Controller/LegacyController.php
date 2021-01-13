@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class LegacyController extends AbstractController
 {
     /**
-     * @Route("/.htaccess", name="htaccess", format="htaccess")
+     * @Route("/.htaccess", name="htaccess", format="htaccess", options={"stenope"={"ignore"=true}})
      */
     public function htaccess(HtaccessGenerator $generator): Response
     {

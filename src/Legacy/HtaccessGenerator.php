@@ -21,26 +21,33 @@ class HtaccessGenerator
 
     public function generateHtAccess(): string
     {
-        $rules = [];
+        $redirections = $this->getRedirections();
 
-        foreach ($this->getStaticPages() as $path => $route) {
-            $url = $this->router->generate($route);
-            $rules[] = $this->getRule($path, $url);
-        }
-
-        $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
-
-        foreach ($articles as $article) {
-            $url = $this->router->generate('blog_article', ['article' => $article->slug]);
-            $rules[] = $this->getRule(sprintf('/%s/%s', $article->lang, $article->slug), $url);
-        }
-
-        return implode(PHP_EOL, $rules);
+        return implode(
+            PHP_EOL,
+            array_map(
+                fn($key) => $this->getHtaccessRule($key, $redirections[$key]),
+                array_keys($redirections)
+            )
+        );
     }
 
-    private function getStaticPages(): array
+    public function generateNginxRewriteRules(): string
     {
-        return [
+        $redirections = $this->getRedirections();
+
+        return implode(
+            PHP_EOL,
+            array_map(
+                fn($key) => $this->getNginxRule($key, $redirections[$key]),
+                array_keys($redirections)
+            )
+        );
+    }
+
+    private function getRedirections(): array
+    {
+        $redirections = [
             '/fr' => 'homepage',
             '/fr/developpement' => 'services',
             '/fr/hebergement' => 'services',
@@ -49,11 +56,26 @@ class HtaccessGenerator
             '/fr/recrutement' => 'jobs',
             '/fr/nous-contacter' => 'contact',
         ];
+
+        $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
+
+        foreach ($articles as $article) {
+            $path = sprintf('/%s/%s', $article->lang, $article->slug);
+            $url = $this->router->generate('blog_article', ['article' => $article->slug]);
+            $redirections[$path] = $url;
+        }
+
+        return $redirections;
     }
 
-    private function getRule(string $legacyPath, string $url): string
+    private function getHtaccessRule(string $legacyPath, string $url): string
     {
         return sprintf('RedirectPermanent %s %s', $legacyPath, $url);
+    }
+
+    private function getNginxRule(string $legacyPath, string $url): string
+    {
+        return sprintf('rewrite ^%s$ %s permanent;', $legacyPath, $url);
     }
 
     private function getArticlesBefore(\DateTimeInterface $limit): array

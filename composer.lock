@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d5bb9b74fe06879a7bde2cb58f90f70",
+    "content-hash": "82af0beb04e81340eef0be83da8342cc",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -301,82 +301,6 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
-        },
-        {
-            "name": "elao/accesseo",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Elao/accesseo.git",
-                "reference": "9e9657a4aa5fdb23a40d59edbdbdd74010ca7d47"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Elao/accesseo/zipball/9e9657a4aa5fdb23a40d59edbdbdd74010ca7d47",
-                "reference": "9e9657a4aa5fdb23a40d59edbdbdd74010ca7d47",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1",
-                "symfony/css-selector": "^4.4|^5.1",
-                "symfony/dependency-injection": "^4.4|^5.1",
-                "symfony/dom-crawler": "^4.4|^5.1",
-                "symfony/http-foundation": "^4.4|^5.1",
-                "symfony/http-kernel": "^4.4|^5.1",
-                "symfony/service-contracts": "^1.1|^2.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.17",
-                "symfony/console": "^4.4|^5.1",
-                "symfony/filesystem": "^4.4|^5.1",
-                "symfony/phpunit-bridge": "^5.2",
-                "symfony/twig-bridge": "^4.4|^5.1",
-                "symfony/web-profiler-bundle": "^4.4|^5.1"
-            },
-            "default-branch": true,
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Elao\\Bundle\\Accesseo\\": "src"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Elao\\Bundle\\Accesseo\\Tests\\": "tests"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Elao",
-                    "email": "contact@elao.com"
-                },
-                {
-                    "name": "Anne-Laure de Boissieu",
-                    "email": "anne-laure@protonmail.com",
-                    "homepage": "https://github.com/al2b"
-                }
-            ],
-            "description": "Provide accessibility and SEO insights of your page in Symfony profiler",
-            "homepage": "https://github.com/Elao/accesseo",
-            "keywords": [
-                "accessibility",
-                "seo",
-                "symfony",
-                "symfony-profiler"
-            ],
-            "support": {
-                "source": "https://github.com/Elao/accesseo/tree/master",
-                "issues": "https://github.com/Elao/accesseo/issues"
-            },
-            "time": "2021-01-07T10:55:47+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -6049,6 +5973,84 @@
             "time": "2020-01-17T13:08:23+00:00"
         },
         {
+            "name": "elao/accesseo",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Elao/accesseo.git",
+                "reference": "fedf98d4d69cf0306afcedaae3995d8477eb214f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Elao/accesseo/zipball/fedf98d4d69cf0306afcedaae3995d8477eb214f",
+                "reference": "fedf98d4d69cf0306afcedaae3995d8477eb214f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "symfony/css-selector": "^4.4|^5.1",
+                "symfony/dependency-injection": "^4.4|^5.1",
+                "symfony/dom-crawler": "^4.4|^5.1",
+                "symfony/http-client-contracts": "^1.1|^2.0",
+                "symfony/http-foundation": "^4.4|^5.1",
+                "symfony/http-kernel": "^4.4|^5.1",
+                "symfony/service-contracts": "^1.1|^2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.17",
+                "symfony/console": "^4.4|^5.1",
+                "symfony/filesystem": "^4.4|^5.1",
+                "symfony/http-client": "^4.4|^5.1",
+                "symfony/phpunit-bridge": "^5.2",
+                "symfony/twig-bridge": "^4.4|^5.1",
+                "symfony/web-profiler-bundle": "^4.4|^5.1"
+            },
+            "default-branch": true,
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Elao\\Bundle\\Accesseo\\": "src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Elao\\Bundle\\Accesseo\\Tests\\": "tests"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elao",
+                    "email": "contact@elao.com"
+                },
+                {
+                    "name": "Anne-Laure de Boissieu",
+                    "email": "anne-laure@protonmail.com",
+                    "homepage": "https://github.com/al2b"
+                }
+            ],
+            "description": "Provide accessibility and SEO insights of your page in Symfony profiler",
+            "homepage": "https://github.com/Elao/accesseo",
+            "keywords": [
+                "accessibility",
+                "seo",
+                "symfony",
+                "symfony-profiler"
+            ],
+            "support": {
+                "source": "https://github.com/Elao/accesseo/tree/master",
+                "issues": "https://github.com/Elao/accesseo/issues"
+            },
+            "time": "2021-01-15T10:50:59+00:00"
+        },
+        {
             "name": "friendsofphp/php-cs-fixer",
             "version": "v2.17.3",
             "source": {
@@ -6906,8 +6908,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "elao/accesseo": 20,
-        "stenope/stenope": 20
+        "stenope/stenope": 20,
+        "elao/accesseo": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

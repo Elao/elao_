@@ -1,0 +1,3 @@
+web_profiler_profiler:
+  resource: '@ElaoAccesseoBundle/config/routing/accesseo.xml'
+  prefix: /_profiler

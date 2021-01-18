@@ -1,5 +1,11 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title 'Title TODO' %}
+{% block meta_description 'Meta description TODO' %}
+{% block meta %}
+    {{ parent() }}
+{% endblock %}
+
 {% block content %}
     <div class="page-home">
         <div class="banner-home">

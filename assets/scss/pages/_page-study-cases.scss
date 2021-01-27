@@ -13,3 +13,15 @@
     max-width: 1020px;
   }
 }
+
+@media (max-width: $screen-xs) {
+  .page-study-cases {
+    .banner__content {
+      .highlight {
+        .icon {
+          font-size: 65px;
+        }
+      }
+    }
+  }
+}

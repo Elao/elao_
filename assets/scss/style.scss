@@ -27,6 +27,7 @@
 @import "components/_article-info";
 @import "components/_article-list";
 @import "components/_article-tag-list";
+@import "components/_banner";
 @import "components/_breadcrumb";
 @import "components/_brick";
 @import "components/_brick-conception";
@@ -45,6 +46,7 @@
 @import "components/_pagination";
 @import "components/_table-of-content";
 @import "components/_tag-list";
+@import "components/_technologies";
 @import "components/_titles";
 
 // generic
@@ -59,3 +61,4 @@
 // pages
 @import "pages/_page-home";
 @import "pages/_page-study-cases";
+@import "pages/_page-study-case";

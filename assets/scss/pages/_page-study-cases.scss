@@ -1,5 +1,12 @@
 .page-study-cases {
-  @import "pages/page-study-cases-components/_banner";
+  .banner__content {
+    .highlight {
+      .icon {
+        font-size: 110px;
+        color: $color-secondary;
+      }
+    }
+  }
 
   .article-list {
     margin: 0 auto;

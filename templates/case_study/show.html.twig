@@ -4,7 +4,105 @@
 {% block meta_description caseStudy.description|default(parent()) %}
 
 {% block content %}
-  <h1>{{ caseStudy.title }}</h1>
+    <!--
+        Étude de cas type
+        - description brève dans le header
+        - 3 photos à la une maximum
+    -->
+    <div class="page-study-case">
+        <ul class="breadcrumb">
+            <li class="breadcrumb__item">
+                <a href="{{ path('homepage') }}">Accueil</a>
+            </li>
+            <li class="breadcrumb__item">
+                <a href="{{ path('case_studies') }}">Nos études de cas</a>
+            </li>
+            <li class="breadcrumb__item">
+                {{ caseStudy.title }}
+            </li>
+        </ul>
 
-  {{ caseStudy.content|raw }}
+        <div class="banner">
+            <h1 class="banner__title">Découvrez <span>{{ caseStudy.title }}</span></h1>
+            <div class="banner__content">
+                <div class="highlight">
+                    <p>Tribü est une entreprise de recyclage de déchets, qui propose de mettre en place un dispositif de tri des ordures chez ses clients.</p>
+                </div>
+                <div class="preview">
+                    <div class="preview__main">
+                        <img src="https://www.fillmurray.com/650/400">
+                    </div>
+                    <div class="preview__list">
+                        <ul>
+                            <li>
+                                <img src="https://www.fillmurray.com/240/190">
+                            </li>
+                            <li>
+                                <img src="https://www.fillmurray.com/240/190">
+                            </li>
+                        </ul>
+                        <!-- Si aucun lien vers le site possible, ajouter .hidden au bouton pour le cacher et ne pas casser le layout -->
+                        <a href="#" class="btn btn--secondary btn--animated">
+                            <span>
+                                Voir le site
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-list">
+            <ul>
+                <li class="block-list__item">
+                    <small>Clients</small>
+                    <p>CIRano</p>
+                </li>
+                <li class="block-list__item">
+                    <small>Utilisateurs</small>
+                    <p>Monteur·ses vidéo</p>
+                </li>
+                <li class="block-list__item">
+                    <small>Taille du projet</small>
+                    <p>3 mois</p>
+                </li>
+            </ul>
+            <ul>
+                <li class="block-list__item block-list__item--medium">
+                    <small>Services</small>
+                    <p>Accompagnement</p>
+                    <p>Développement</p>
+                </li>
+                <li class="block-list__item block-list__item--large">
+                    <small>Technologies</small>
+                    <ul class="technologies technologies--light">
+                        <li>
+                            <a href="" class="technologies__item">
+                                <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
+                                Symfony
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="technologies__item">
+                                <img src="{{ asset('build/images/technos/algolia.svg') }}" alt="logo Algolia">
+                                Algolia
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="technologies__item">
+                                <img src="{{ asset('build/images/technos/graphql.svg') }}" alt="logo GraphQL">
+                                GraphQL
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {{ caseStudy.content|raw }}
 {% endblock content %}

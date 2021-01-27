@@ -209,25 +209,29 @@
                 <h2>Faire des choix pérennes et pragmatiques</h2>
                 <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
                 <ul class="technologies">
-                    <li class="technologies__item">
-                        {# ajouter lien: {{ path('technology', { technology: 'symfony' })}} #}
-                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                        Symfony
+                    <li>
+                        <a href="{{ path('technology', { technology: 'symfony' })}}" class="technologies__item">
+                            <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
+                            Symfony
+                        </a>
                     </li>
-                    <li class="technologies__item">
-                        {# ajouter lien: {{ path('technology', { technology: 'vue-js' })}} #}
-                        <img src="{{ asset('build/images/technos/vue.svg') }}" alt="logo Vue.js">
-                        Vue.js
+                    <li>
+                        <a href="{{ path('technology', { technology: 'vue-js' })}}" class="technologies__item">
+                            <img src="{{ asset('build/images/technos/vue.svg') }}" alt="logo Vue.js">
+                            Vue.js
+                        </a>
                     </li>
-                    <li class="technologies__item">
-                        {# ajouter lien: {{ path('technology', { technology: 'react' })}} #}
-                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
-                        React
+                    <li>
+                        <a href="{{ path('technology', { technology: 'react' })}}" class="technologies__item">
+                            <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
+                            React
+                        </a>
                     </li>
-                    <li class="technologies__item">
-                        {# ajouter lien: {{ path('technology', { technology: 'react-native' })}} #}
-                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React Native">
-                        React native
+                    <li>
+                        <a href="{{ path('technology', { technology: 'react-native' })}}" class="technologies__item">
+                            <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React Native">
+                            React native
+                        </a>
                     </li>
                 </ul>
             </div>

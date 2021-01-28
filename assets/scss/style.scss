@@ -38,12 +38,15 @@
 @import "components/_btn";
 @import "components/_bullet";
 @import "components/_code";
+@import "components/_gallery";
 @import "components/_kudo";
 @import "components/_link";
 @import "components/_miniature";
 @import "components/_miniature-inline";
 @import "components/_miniature-highlight";
+@import "components/_modal";
 @import "components/_pagination";
+@import "components/_preview";
 @import "components/_table-of-content";
 @import "components/_tag-list";
 @import "components/_technologies";
@@ -60,5 +63,5 @@
 
 // pages
 @import "pages/_page-home";
-@import "pages/_page-study-cases";
-@import "pages/_page-study-case";
+@import "pages/_page-projects";
+@import "pages/_page-project";

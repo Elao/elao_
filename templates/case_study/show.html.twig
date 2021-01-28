@@ -4,12 +4,7 @@
 {% block meta_description caseStudy.description|default(parent()) %}
 
 {% block content %}
-    <!--
-        Étude de cas type
-        - description brève dans le header
-        - 3 photos à la une maximum
-    -->
-    <div class="page-study-case">
+    <div class="page-project">
         <ul class="breadcrumb">
             <li class="breadcrumb__item">
                 <a href="{{ path('homepage') }}">Accueil</a>
@@ -24,11 +19,20 @@
 
         <div class="banner">
             <h1 class="banner__title">Découvrez <span>{{ caseStudy.title }}</span></h1>
+
             <div class="banner__content">
                 <div class="highlight">
-                    <p>Tribü est une entreprise de recyclage de déchets, qui propose de mettre en place un dispositif de tri des ordures chez ses clients.</p>
+                    <!--
+                        Description brève du projet ou du client. Pas plus de quelques phrases pour ne pas casser le design.
+                        Recommandé : 50 à 150 caractères
+
+                        , eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate.
+                    -->
+                    <p>Nunc auctor est dolor</p>
                     <i class="icon icon--semicolon" aria-hidden="true"></i>
                 </div>
+
+                <!-- 3 photos à la une maximum -->
                 <div class="preview">
                     <div class="preview__main">
                         <img src="https://www.fillmurray.com/650/400">
@@ -54,31 +58,32 @@
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
 
-        <div class="block-list">
+        <div class="page-project__detail">
             <ul>
-                <li class="block-list__item">
+                <li class="item">
                     <small>Clients</small>
                     <p>CIRano</p>
                 </li>
-                <li class="block-list__item">
+                <li class="item">
                     <small>Utilisateurs</small>
                     <p>Monteur·ses vidéo</p>
                 </li>
-                <li class="block-list__item">
+                <li class="item">
                     <small>Taille du projet</small>
                     <p>3 mois</p>
                 </li>
             </ul>
             <ul>
-                <li class="block-list__item block-list__item--medium">
+                <li class="item item--medium">
                     <small>Services</small>
                     <p>Accompagnement</p>
                     <p>Développement</p>
                 </li>
-                <li class="block-list__item block-list__item--large">
+                <li class="item item--large">
                     <small>Technologies</small>
                     <ul class="technologies technologies--light">
                         <li>
@@ -103,7 +108,9 @@
                 </li>
             </ul>
         </div>
-    </div>
 
-    {{ caseStudy.content|raw }}
+        <div class="page-project__content">
+            {{ caseStudy.content|raw }}
+        </div>
+    </div>
 {% endblock content %}

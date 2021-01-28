@@ -9,7 +9,7 @@ page_headline: "<small>Etude de cas </small> CIRano"
 case_url: https://cirano.io/
 ---
 
-<!-- <section>
+<section>
     <article>
         <p class="description">
             <div>Durée du projet : 3 mois</div>
@@ -43,4 +43,4 @@ case_url: https://cirano.io/
         </p>
     </article>
 </section>
- -->
+

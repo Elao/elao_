@@ -1,5 +1,4 @@
 body {
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   font-family: 'faktum regular';
@@ -44,12 +43,5 @@ body {
       font-size: 20px;
       line-height: 26px;
     }
-  }
-}
-
-
-@media (max-width: $screen-sm) {
-  body {
-    padding-top: 90px;
   }
 }

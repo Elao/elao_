@@ -1,9 +1,8 @@
 .preview {
   position: absolute;
-  bottom: -250px;
+  bottom: -230px;
   left: 0;
   display: flex;
-  align-items: flex-end;
 
   img {
     margin: 0;
@@ -20,6 +19,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 105px;
 
   ul {
     margin: 0;
@@ -30,15 +30,11 @@
       &:before,
       &:after { display: none; }
 
-      &:first-of-type {
-        margin-left: 0;
-      }
-
-      &:last-of-type {
-        margin-right: 0;
-      }
+      &:first-of-type { margin-left: 0; }
+      &:last-of-type { margin-right: 0; }
 
       margin: 0 15px 30px;
+      min-height: 30px;
       width: 240px;
     }
   }
@@ -59,6 +55,8 @@
   }
 
   .preview__list {
+    padding-top: 0;
+
     ul {
       display: none;
     }

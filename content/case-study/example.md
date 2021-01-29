@@ -137,3 +137,5 @@ Chaque image est cliquable et peut-être agrandie dans une modal.
         </div>
     </li>
 </ul>
+
+Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Nihil distinctio repellendus ullam necessitatibus quaerat pariatur nam perspiciatis explicabo? Delectus nam quo vel consequuntur perferendis nulla, quis eos aliquid rerum suscipit.

@@ -58,6 +58,7 @@
 }
 
 .miniature__content {
+  padding-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -69,7 +70,7 @@
   .date { color: $color-tertiary; }
 
   .title {
-    margin: 30px 0 15px;
+    margin: 0 0 15px;
     padding: 0;
     border: none;
     font-family: 'antikor bold';
@@ -86,6 +87,27 @@
     font-size: 16px;
     line-height: 1.5;
     color: $color-text;
+  }
+}
+
+.miniature--large {
+  margin: 25px 20px 50px;
+  width: calc(50% - 40px);
+
+  .miniature__content {
+    .info {
+      margin: 0 0 20px;
+    }
+
+    .title {
+      margin: 0 0 30px;
+      font-size: 32px;
+    }
+
+    .description {
+      margin: 0 0 30px;
+      line-height: 1.6;
+    }
   }
 }
 
@@ -120,6 +142,12 @@
     .title {
       margin: 0 0 10px;
       font-size: 18px;
+    }
+  }
+
+  .miniature--large {
+    .miniature__image {
+      display: block;
     }
   }
 }

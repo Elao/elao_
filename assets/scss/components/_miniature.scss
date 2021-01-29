@@ -121,11 +121,6 @@
   .miniature {
     margin: 0 0 30px;
     width: 100%;
-
-    .btn,
-    .link {
-      display: none;
-    }
   }
 
   .miniature__image {
@@ -146,8 +141,25 @@
   }
 
   .miniature--large {
+    margin: 20px 0 40px;
+
     .miniature__image {
+      height: 290px;
       display: block;
     }
+
+    .miniature__content {
+      .description {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .btn,
+  .link {
+    width: 100%;
+    justify-content: center;
   }
 }

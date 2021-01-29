@@ -1,5 +1,5 @@
 export default class MapRenderer {
-    constructor(map) {
+    constructor(map, border = 1) {
         this.map = map;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
         this.border = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
@@ -14,10 +14,10 @@ export default class MapRenderer {
         this.element.setAttribute('height', this.map.size);
 
         this.border.setAttribute('fill', '#fff');
-        this.border.setAttribute('x', -1);
-        this.border.setAttribute('y', -1);
-        this.border.setAttribute('width', this.map.size + 2);
-        this.border.setAttribute('height', this.map.size + 2);
+        this.border.setAttribute('x', -border);
+        this.border.setAttribute('y', -border);
+        this.border.setAttribute('width', this.map.size + border * 2);
+        this.border.setAttribute('height', this.map.size + border * 2);
     }
 
     attach(container) {

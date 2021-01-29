@@ -67,6 +67,52 @@
   }
 }
 
+.page-projet__footer {
+  margin: 50px 0 100px;
+  padding: 0 110px 20px;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'antikor regular';
+  color: $color-light;
+  font-size: 18px;
+  background: $color-dark;
+  border: none;
+  transition: background ease-in .2s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-light;
+    background: darken($color-dark, 2%);
+  }
+
+  .title {
+    color: #fff;
+    font-family: 'faktum bold';
+    font-size: 46px;
+  }
+
+  .icon {
+    position: absolute;
+    bottom: -35px;
+    font-size: 125px;
+  }
+
+  .icon--bracket-left {
+    right: 500px;
+    color: $color-info;
+  }
+
+  .icon--chevrons-right {
+    right: 40px;
+    color: $color-light;
+  }
+}
+
 @media (max-width: $screen-lg) {
   .page-project {
     .banner {
@@ -102,6 +148,30 @@
     figure {
       margin-left: 0;
       width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .page-projet__footer {
+    padding: 0 30px 20px;
+    height: 200px;
+
+    .title {
+      font-size: 32px;
+    }
+
+    .icon {
+      bottom: -20px;
+      font-size: 64px;
+    }
+
+    .icon--chevrons-right {
+      right: 10px;
+    }
+
+    .icon--bracket-left {
+      right: 200px;
     }
   }
 }

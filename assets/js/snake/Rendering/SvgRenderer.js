@@ -2,7 +2,7 @@ import MapRenderer from 'snake/Rendering/MapRenderer';
 import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
 
 export default class SvgRenderer {
-    static createElement(size) {
+    static createElement(size, margin = 5) {
         const namespace = 'http://www.w3.org/2000/svg';
         const element = document.createElementNS(namespace, 'svg');
 
@@ -11,7 +11,7 @@ export default class SvgRenderer {
         element.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
-        element.setAttribute('viewBox', `-1 -1 ${size + 2} ${size + 2}`);
+        element.setAttribute('viewBox', `${-margin} ${-margin} ${size + margin * 2} ${size + margin * 2}`);
 
         // Style
         element.style.width = '100vw';

@@ -1,15 +1,26 @@
 export default class Snake {
     constructor() {
+        this.alive = true;
         this.horizontal = true;
         this.forward = true;
-        this.positions = [[0,0],[1,0],[2,0],[3,0]];
-        this.head = this.positions[this.positions.length - 1];
+        this.positions = [[6,0], [5,0], [4,0], [3,0], [2,0], [1,0], [0,0]];
     }
 
-    update() {
-        this.positions.shift();
-        this.head = this.getNextHead();
-        this.positions.push(this.head);
+    get head() {
+        return this.positions[0];
+    }
+
+    die() {
+        this.alive = false;
+    }
+
+    isHorizontal() {
+        return this.positions[0][1] === this.positions[1][1];
+    }
+
+    update(nextHead) {
+        this.positions.pop();
+        this.positions.unshift(nextHead);
     }
 
     getNextHead() {
@@ -19,8 +30,11 @@ export default class Snake {
         return this.horizontal ? [x + value, y] : [x, y + value];
     }
 
+    getNextTail() {
+        return this.positions.slice(0, -1);
+    }
+
     onInput(type) {
-        console.log('onInput', type);
         switch (type) {
             case 'left':
                 this.setDirection(true, false);
@@ -40,10 +54,9 @@ export default class Snake {
     }
 
     setDirection(horizontal, forward) {
-        if (horizontal !== this.horizontal) {
+        if (horizontal !== this.isHorizontal()) {
             this.horizontal = horizontal;
             this.forward = forward;
-            console.log('setDirection', this.horizontal, this.forward);
         }
     }
 }

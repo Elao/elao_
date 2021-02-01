@@ -38,3 +38,10 @@
     margin: 0;
   }
 }
+
+@media (max-width: $screen-sm) {
+  .modal__button {
+    top: 15px;
+    right: 20px;
+  }
+}

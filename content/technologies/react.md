@@ -1,4 +1,6 @@
 ---
+name: "React"
+logo: "build/images/technos/react.svg"
 title: "Des interfaces web interactives, fluides et dynamiques avec React"
 ---
 

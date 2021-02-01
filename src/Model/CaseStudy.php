@@ -12,4 +12,16 @@ class CaseStudy
     public string $content;
     public \DateTimeInterface $date;
     public \DateTimeInterface $lastModified;
+    public string $caseUrl;
+    public string $clients;
+    public string $users;
+    public string $size;
+    public array $services = [];
+    public array $images = [];
+
+    /** @var array<Technology> */
+    public array $technologies = [];
+
+    /** @var array<Member> */
+    public array $authors = [];
 }

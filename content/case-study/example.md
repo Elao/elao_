@@ -5,8 +5,15 @@ date: "2021-01-21"
 name: "Exemple"
 
 # Params
-page_headline: "<small>Etude de cas </small> Exemple"
-case_url: https://www.exemple.com/
+description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
+caseUrl: https://www.exemple.com/
+clients: Example Corp.
+users: Shrimps
+size: 3 months
+services: ["Accompagnement", "Développement"]
+technologies: ["symfony", "algolia", "vue-js"]
+authors: ["mcolin", "tjarrand"]
+images: ["https://www.fillmurray.com/630/380", "https://www.fillmurray.com/240/160", "https://www.fillmurray.com/240/160"]
 ---
 
 ## Les titres

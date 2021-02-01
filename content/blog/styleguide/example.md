@@ -51,7 +51,7 @@ Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une lég
 <figure>
     <img src="https://images.unsplash.com/photo-1530023868717-cdb5554aea96?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=788&q=80" alt="vivamus bibendum">
     <figcaption>
-      <span class="figure__legend">Michel-Ange sous l'eau 🐬</span>
+      <span class="figure__legend">David sous l'eau 🐬</span>
       <span class="figure__credits">Crédit photo : <a href="https://unsplash.com/@jbsinger1970">Jonathan Singer</a></span>
     </figcaption>
 </figure>

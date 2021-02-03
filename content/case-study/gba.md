@@ -4,7 +4,8 @@ lastmod: 2017-05-23
 date: "2016-05-23"
 
 # Params
-description: "Développement sur-mesure d'une plateforme e-commerce dédiée aux métiers de l'art. Multi-langue, Multi-boutique et Multi-supports."
+metaDescription: "Développement sur-mesure d'une plateforme e-commerce dédiée aux métiers de l'art. Multi-langue, Multi-boutique et Multi-supports."
+description: "LE GEANT DES BEAUX ARTS est une plate-forme e-commerce à destination des artistes et des écoles d'art. Par le biais de ses différentes boutiques en ligne (France, Belgique, Espagne et Royaume-Uni), elle met à disposition de ses clients tout le matériel nécessaire à la pratique de leur art : peintures, châssis, papiers, arts graphiques, impression, céramique, sculpture ..."
 caseUrl: https://www.geant-beaux-arts.fr/
 clients: Jetpulp
 users: Shrimps
@@ -14,7 +15,6 @@ technologies: ["symfony", "algolia", "vue-js"]
 authors: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/gba_mockup1.jpg", "images/etudes-de-cas/gba_mockup2.jpg", "images/etudes-de-cas/gba_mockup3.jpg"]
 ---
-LE GEANT DES BEAUX ARTS est une plate-forme e-commerce à destination des artistes et des écoles d'art. Par le biais de ses différentes boutiques en ligne (France, Belgique, Espagne et Royaume-Uni), elle met à disposition de ses clients tout le matériel nécessaire à la pratique de leur art : peintures, châssis, papiers, arts graphiques, impression, céramique, sculpture ...
 
 ## Expertise développement
 

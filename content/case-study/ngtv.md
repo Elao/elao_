@@ -4,7 +4,8 @@ lastmod: 2017-05-23
 date: "2014-05-23"
 
 # Params
-description: "Plateforme sur-mesure d'analyses et statistiques de matchs de foot en salle. Technologies employées : Php, Symfony, objets connectés"
+metaDescription: "Plateforme sur-mesure d'analyses et statistiques de matchs de foot en salle. Technologies employées : Php, Symfony, objets connectés"
+description: "NGTV filme des matchs de football en salle. A partir des images, NGTV génère des statistiques variées de performances individuelles et d'équipe. Ces stats ciblent l'attaque, la défense ou encore la performance physique. Grâce à un compte personnel, les joueurs peuvent ensuite consulter leurs données et celles de leur équipe."
 caseUrl: http://www.ngtvexperience.com/
 clients: Example Corp.
 users: Shrimps
@@ -14,8 +15,6 @@ technologies: ["symfony"]
 authors: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/ngtv_mockup1.jpg", "images/etudes-de-cas/ngtv_mockup2.jpg", "images/etudes-de-cas/ngtv_mockup3.jpg"]
 ---
-
-NGTV filme des matchs de football en salle. A partir des images, NGTV génère des statistiques variées de performances individuelles et d'équipe. Ces stats ciblent l'attaque, la défense ou encore la performance physique. Grâce à un compte personnel, les joueurs peuvent ensuite consulter leurs données et celles de leur équipe.
 
 ## Expertise développement
 

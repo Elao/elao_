@@ -6,6 +6,8 @@ namespace App\Model;
 
 class CaseStudy
 {
+    public ?string $metaTitle = null;
+    public ?string $metaDescription = null;
     public string $title;
     public ?string $description;
     public string $slug;

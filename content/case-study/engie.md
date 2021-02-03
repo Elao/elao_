@@ -4,7 +4,8 @@ lastmod: 2017-05-23
 date: "2012-01-21"
 
 # Params
-description: "Développement d'applications métiers pour Engie, portail pour les professionnels. Technologies employées : PHP, Symfony."
+medaDescription: "Développement d'applications métiers pour Engie, portail pour les professionnels. Technologies employées : PHP, Symfony."
+description: "Engie, portail pour les professionnels - fourniture de gaz naturel et d'électricité"
 caseUrl: https://particuliers.engie.fr/
 clients: Example Corp.
 users: Shrimps
@@ -14,9 +15,6 @@ technologies: ["symfony"]
 authors: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie.png"]
 ---
-
-
-Engie, portail pour les professionnels - fourniture de gaz naturel et d'électricité
 
 ## Expertise développement
 

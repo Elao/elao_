@@ -4,7 +4,8 @@ lastmod: 2017-05-29
 date: "2017-02-01"
 
 # Params
-description: "Développement sur-mesure de l'agenda culturel On Sort. Technologies : Vue.js, PHP, framework Symfony."
+metaDescription: "Développement sur-mesure de l'agenda culturel On Sort. Technologies : Vue.js, PHP, framework Symfony."
+description: "Le site On Sort ! vous propose des sorties dans la métropole orléanaise. Son fonctionnement collaboratif permet aux organisateurs de suggérer leurs événements en quelques clics."
 caseUrl: http://sortir.orleans-metropole.fr/
 clients: Example Corp.
 users: Shrimps
@@ -14,7 +15,6 @@ technologies: ["symfony", "vue-js"]
 authors: ["mcolin"]
 images: ["images/etudes-de-cas/onsort_mockup1.jpg", "images/etudes-de-cas/onsort_mockup2.jpg", "images/etudes-de-cas/onsort_mockup3.jpg"]
 ---
-Le site On Sort ! vous propose des sorties dans la métropole orléanaise. Son fonctionnement collaboratif permet aux organisateurs de suggérer leurs événements en quelques clics.
 
 Le site "On sort !" - pensé par la mairie d'Orléans - est une plateforme mettant en avant les événements culturels de la ville d'Orléans. Pour ce projet, le challenge réside dans une ergonomie dynamique et multi-plateforme (desktop, tablette et mobile) ainsi que l'affichage pertinent des événements proposés aux utilisateurs.
 

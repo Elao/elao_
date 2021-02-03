@@ -8,7 +8,7 @@
 
         {% block meta %}
             <!-- Open Graph / Facebook -->
-             <meta property="og:title" content="{{ block('meta_title') }}" />
+            <meta property="og:title" content="{{ block('meta_title') }}" />
             <meta property="og:locale" content="{{ block('meta_locale') }}" />
             <meta name="description" content="{% block meta_description site.description %}" />
             <meta property="og:description" content="{{ block('meta_description') }}" />
@@ -23,8 +23,8 @@
             <meta property="twitter:card" content="{% block twitter_card_type 'summary' %}">
             <meta property="twitter:title" content="{{ block('meta_title') }}">
             <meta property="twitter:description" content="{{ block('meta_description') }}">
-            <meta property="twitter:site" content="@tom32i">
-            <meta property="twitter:creator" content="@tom32i">
+            <meta property="twitter:site" content="@elao">
+            <meta property="twitter:creator" content="@elao">
             {% if meta_cover|default(false) %}
                 <meta property="twitter:image" content="{{ meta_cover }}">
             {% endif %}

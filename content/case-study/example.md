@@ -5,6 +5,7 @@ date: "2021-01-21"
 name: "Exemple"
 
 # Params
+metaDescription: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
 caseUrl: https://www.exemple.com/
 clients: Example Corp.

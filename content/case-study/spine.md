@@ -5,7 +5,8 @@ date: "2016-05-23"
 name: "spine"
 
 # Params
-description: "Développement sur-mesure d'une application tablette ludo-éducative qui permet au grand public d'annoter des IRM du cerveau pour faire avancer la recherche. Technologie : 3D WebGL"
+metaDescription: "Développement sur-mesure d'une application tablette ludo-éducative qui permet au grand public d'annoter des IRM du cerveau pour faire avancer la recherche. Technologie : 3D WebGL"
+description: "SPINE est une application pour tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche. A la fois ludique et éducative, elle vise à mettre la recherche en neurosciences entre toutes les mains. Elle familiarise les joueurs avec la démarche scientifique (de la formulation d’hypothèses à la récolte de données) et démultiplie la capacité des chercheurs, en faisant appel à la foule (\"crowdsourcing\")."
 caseUrl: http://game.spinevirtuallab.org/#/?_k=5ymhkg
 clients: Example Corp.
 users: Shrimps
@@ -15,7 +16,6 @@ technologies: ["symfony", "algolia", "vue-js"]
 authors: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/spine_mockup1.jpg", "images/etudes-de-cas/spine_mockup2.jpg", "images/etudes-de-cas/spine_mockup3.jpg"]
 ---
-SPINE est une application pour tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche. A la fois ludique et éducative, elle vise à mettre la recherche en neurosciences entre toutes les mains. Elle familiarise les joueurs avec la démarche scientifique (de la formulation d’hypothèses à la récolte de données) et démultiplie la capacité des chercheurs, en faisant appel à la foule ("crowdsourcing").
 
 ## Expertise développement
 

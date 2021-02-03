@@ -9,6 +9,7 @@
             {{ member.name }}
         </li>
     </ul>
+
     <div class="member">
         <div class="member__infos">
             <h1 class="h1--small">
@@ -34,14 +35,14 @@
 
             <div class="socials socials--inline">
                 <ul>
-                    {# {% if member.website %}
+                    {% if member.website %}
                         <li>
                             <a href="{{ member.website }}">
                                 <i class="icon icon--website" aria-hidden="true"></i>
                                 <span class="screen-reader">Site personnel de {{ member.name }}</span>
                             </a>
                         </li>
-                    {% endif %} #}
+                    {% endif %}
                     {% if member.twitter %}
                         <li>
                             <a href="https://twitter.com/{{ member.twitter }}">
@@ -58,16 +59,17 @@
                             </a>
                         </li>
                     {% endif %}
-                    {# <!-- Todo : possibilité d'ajouter un compte linkedin -->
+                    <!-- Todo : possibilité d'ajouter un compte linkedin -->
                     <li>
                         <a href="#">
                             <i class="icon icon--linkedin" aria-hidden="true"></i>
                             <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
                         </a>
-                    </li> #}
+                    </li>
                 </ul>
             </div>
 
+            <!-- Facultatif -->
             <div class="certifications">
                 <ul>
                     <li>
@@ -87,18 +89,67 @@
                 <li>📷</li>
             </ul>
         </div>
+
+        <div class="member__contributions">
+            <div class="article-list">
+                <h2 class="h2--dash">Ses derniers projets</h2>
+                <div class="miniature-inline miniature-inline--small">
+                    <a href="#" class="miniature-inline__image">
+                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
+                    </a>
+                    <div class="miniature-inline__content">
+                        <a href="#" class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="miniature-inline miniature-inline--small">
+                    <a href="#" class="miniature-inline__image">
+                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
+                    </a>
+                    <div class="miniature-inline__content">
+                        <a href="#" class="title">Tribü</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facultatif -->
+            <div class="article-list">
+                <h2 class="h2--dash">Ses derniers articles</h2>
+                {% for article in articles %}
+                    <div class="miniature-inline miniature-inline--small">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
+                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                        </a>
+                        <div class="miniature-inline__content">
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
-    {# <h2>Ses derniers articles</h2>
-    <div>
-        {% for article in articles %}
-            <div>
-                <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.title }}
-                <a href="{{ path('blog_article', { article: article.slug }) }}">
-                    Lire l'article_
-                </a>
-            </div>
-        {% endfor %}
-    <div> #}
+    <aside class="bricks">
+        <div class="brick-visit">
+            <h3 class="title">Venir nous voir</h3>
+            <p class="address">
+                <i class="icon icon--location"></i>
+                <span class="address__content">
+                    <span>34 rue Jean Broquin</span>
+                    <span>69006 Lyon</span>
+                </span>
+            </p>
+        </div>
+
+        <div class="brick-contact">
+            <h3 class="title">Nous contacter</h3>
+            <p>
+                <i class="icon icon--phone"></i>
+                +33 (0)4 82 53 37 19
+            </p>
+            <p>
+                <i class="icon icon--write"></i>
+                lyon@elao.com
+            </p>
+        </div>
+    </aside>
 {% endblock %}

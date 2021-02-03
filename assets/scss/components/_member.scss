@@ -1,5 +1,5 @@
 .member {
-  margin: 0 auto;
+  margin: 0 auto 70px;
   max-width: 1020px;
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +53,7 @@
 
 .member__image {
   padding-left: 50px;
-  margin-bottom: 75px;
+  margin-bottom: 95px;
   width: 550px;
   position: relative;
   z-index: 1;
@@ -104,7 +104,7 @@
   }
 
   .member__profile {
-    margin: 0 auto;
+    margin: 0 auto 20px;
     width: 100%;
     max-width: 380px;
   }
@@ -140,6 +140,8 @@
   }
 
   .member__profile {
+    max-width: unset;
+
     .job {
       margin: 0 0 25px;
     }

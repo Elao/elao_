@@ -53,25 +53,6 @@
 
   .socials {
     width: 270px;
-
-    h4 {
-      margin: 0 0 30px;
-    }
-
-    ul {
-      flex-direction: column;
-    }
-
-    a {
-      display: flex;
-      align-items: center;
-
-      .icon {
-        margin-right: 17px;
-        font-size: 21px;
-        color: $color-brand;
-      }
-    }
   }
 }
 

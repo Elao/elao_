@@ -2,13 +2,13 @@ en:
   display_name: Delphine Gauthier
   short_bio:    "Symfony developer, book and tv-shows lover, meme addict."
   long_bio:     "Symfony developer, book and tv-shows lover, meme addict."
-  job_title":   "Symfony developer"
+  job_title:    "Symfony developer"
 
 fr:
   display_name: Delphine Gauthier
   short_bio:    "Développeuse Symfony, amatrice de livres et séries, a développé une addiction aux memes."
   long_bio:     "Développeuse Symfony, amatrice de livres et séries, a développé une addiction aux memes"
-  job_title":   "Développeuse Symfony"
+  job_title:    "Développeuse Symfony"
 
 social:
   website:         http://www.elao.com

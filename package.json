@@ -2,19 +2,16 @@
     "name": "elao_",
     "version": "1.0.0",
     "description": "elao website",
-    "devDependencies": {
-        "@symfony/webpack-encore": "^0.33.0",
-        "autoprefixer": "^9.8.6",
-        "core-js": "^3.0.0",
-        "eslint": "^7.9.0",
-        "node-sass": "^4.14.1",
-        "postcss-loader": "^3.0.0",
-        "regenerator-runtime": "^0.13.2",
-        "sass-loader": "^8.0.0",
-        "webpack-notifier": "^1.6.0"
-    },
     "license": "UNLICENSED",
     "private": true,
+    "bugs": {
+        "url": "https://github.com/Elao/elao_/issues"
+    },
+    "homepage": "https://github.com/Elao/elao_#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Elao/elao_.git"
+    },
     "scripts": {
         "dev-server": "encore dev-server",
         "dev": "encore dev",
@@ -23,15 +20,19 @@
         "lint": "eslint assets/js --ext .js,.json",
         "fix": "eslint assets/js --ext .js,.json --fix"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Elao/elao_.git"
+    "engines": {
+        "node": ">=12"
     },
-    "bugs": {
-        "url": "https://github.com/Elao/elao_/issues"
-    },
-    "homepage": "https://github.com/Elao/elao_#readme",
-    "dependencies": {
-        "prismjs": "^1.21.0"
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.33.0",
+        "autoprefixer": "^9.8.6",
+        "core-js": "^3.8.3",
+        "eslint": "^7.19.0",
+        "node-sass": "^4.14.1",
+        "postcss-loader": "^3.0.0",
+        "prismjs": "^1.23.0",
+        "regenerator-runtime": "^0.13.2",
+        "sass-loader": "^8.0.0",
+        "webpack-notifier": "^1.13.0"
     }
 }

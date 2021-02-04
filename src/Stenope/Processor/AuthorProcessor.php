@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Stenope\Processor;
 
 use App\Model\Article;
-use App\Model\CaseStudy;
 use App\Model\Member;
 use Stenope\Bundle\Behaviour\ContentManagerAwareInterface;
 use Stenope\Bundle\Behaviour\ContentManagerAwareTrait;

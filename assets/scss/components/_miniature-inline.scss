@@ -80,7 +80,8 @@
 
   .description {
     margin: 0 0 15px;
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 1.5;
     color: $color-text;
   }
 
@@ -135,10 +136,6 @@
     .title {
       margin: 0 0 10px;
       font-size: 28px;
-    }
-
-    .description {
-      font-size: 18px;
     }
   }
 

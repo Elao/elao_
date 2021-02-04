@@ -12,7 +12,7 @@ users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-authors: ["mcolin", "tjarrand"]
+members: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie.png"]
 ---
 

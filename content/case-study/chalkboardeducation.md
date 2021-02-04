@@ -12,7 +12,7 @@ users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "graphql", "react"]
-authors: ["ndievart", "rhanna"]
+members: ["ndievart", "rhanna"]
 images: ["images/etudes-de-cas/chalkboardeducation_mockup1.png", "images/etudes-de-cas/chalkboardeducation_mockup1.png", "images/etudes-de-cas/chalkboardeducation_mockup2.png"]
 ---
 

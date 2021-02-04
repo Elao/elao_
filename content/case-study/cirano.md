@@ -12,7 +12,7 @@ users: Shrimps
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "bootstrap", "vue-js"]
-authors: ["xavierr", "mbernard"]
+members: ["xavierr", "mbernard"]
 images: ["https://www.fillmurray.com/630/380", "https://www.fillmurray.com/240/160", "https://www.fillmurray.com/240/160"]
 ---
 

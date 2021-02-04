@@ -20,10 +20,6 @@ class CaseStudy
     public string $size;
     public array $services = [];
     public array $images = [];
-
-    /** @var array<Technology> */
     public array $technologies = [];
-
-    /** @var array<Member> */
-    public array $authors = [];
+    public array $members = [];
 }

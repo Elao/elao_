@@ -12,7 +12,7 @@ users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-authors: ["mcolin", "tjarrand"]
+members: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/ems_mockup1.png"]
 ---
 

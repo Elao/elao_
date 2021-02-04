@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block meta_title caseStudy.title ~ ' | ' ~ parent() %}
-{% block meta_description caseStudy.description|default(parent()) %}
+{% block meta_title %}{{ caseStudy.metaTitle|default(caseStudy.title) }} | {{ parent() }}{% endblock %}
+{% block meta_description %}{{ caseStudy.metaDescription|default(caseStudy.description)|default(parent()) }}{% endblock %}
 
 {% block content %}
     <div class="page-project">
@@ -41,13 +41,13 @@
                 -->
                 <div class="preview">
                     <div class="preview__main">
-                        <img src="{{ caseStudy.images|first }}">
+                        <img src="{{ asset(caseStudy.images|first) }}">
                     </div>
                     <div class="preview__list">
                         <ul>
                             {% for image in caseStudy.images|slice(1, 2) %}
                                 <li>
-                                    <img src="{{ image }}">
+                                    <img src="{{ asset(image) }}">
                                 </li>
                             {% endfor %}
                         </ul>
@@ -92,7 +92,8 @@
                 <li class="item item--large">
                     <small>Technologies</small>
                     <ul class="technologies technologies--light">
-                        {% for technology in caseStudy.technologies %}
+                        {% for technologySlug in caseStudy.technologies %}
+                            {% set technology = content_get('App\\Model\\Technology', technologySlug) %}
                             <li>
                                 <a href="{{ path('technology', { technology: technology.slug }) }}" class="technologies__item">
                                     {% if technology.logo|default(false) %}
@@ -113,12 +114,13 @@
             <h2 class="h2--dash">La tribu</h2>
             <p>Voici les personnes de l'équipe qui ont contribué au projet.</p>
             <ul class="team">
-                {% for author in caseStudy.authors %}
+                {% for memberSlug in caseStudy.members %}
+                    {% set member = content_get('App\\Model\\Member', memberSlug) %}
                     <li class="team__profile">
                         <a href="#">
-                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}" alt="{{ author.name }}">
-                            <span class="name">{{ author.name }}</span>
-                            <span class="job">{{ author.shortBio }}</span>
+                            <img src="{{ asset(member.avatar ?? 'images/authors/default.png') }}" alt="{{ member.name }}">
+                            <span class="name">{{ member.name }}</span>
+                            <span class="job">{{ member.shortBio }}</span>
                         </a>
                     </li>
                 {% endfor %}

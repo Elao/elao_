@@ -13,7 +13,7 @@ users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
-authors: ["mcolin", "tjarrand"]
+members: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/tribu-reporting.png", "images/etudes-de-cas/tribu-saisie.png"]
 ---
 

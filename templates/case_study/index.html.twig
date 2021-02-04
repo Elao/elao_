@@ -1,8 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block meta_title %}{{ caseStudy.metaTitle|default(caseStudy.title) }} - {{ parent() }}{% endblock %}
-{% block meta_description %}{{ caseStudy.metaDescription|default(caseStudy.description) }}{% endblock %}
-
 {% block content %}
     <div class="page-projects">
         <ul class="breadcrumb">

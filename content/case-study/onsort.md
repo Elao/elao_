@@ -12,7 +12,7 @@ users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "vue-js"]
-authors: ["mcolin"]
+members: ["mcolin"]
 images: ["images/etudes-de-cas/onsort_mockup1.jpg", "images/etudes-de-cas/onsort_mockup2.jpg", "images/etudes-de-cas/onsort_mockup3.jpg"]
 ---
 

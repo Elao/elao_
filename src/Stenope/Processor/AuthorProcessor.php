@@ -21,7 +21,7 @@ class AuthorProcessor implements ProcessorInterface, ContentManagerAwareInterfac
 
     public function __invoke(array &$data, string $type, Content $content): void
     {
-        if (!is_a($type, Article::class, true) && !is_a($type, CaseStudy::class, true)) {
+        if (!is_a($type, Article::class, true)) {
             return;
         }
 

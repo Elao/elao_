@@ -78,7 +78,7 @@ jobs:
           WEBPACK_PUBLIC_PATH: /elao_/pr/${{ github.event.number }}/build
 
       - name: 'Build static site'
-        run: bin/console stenope:build --no-interaction -vv --ansi
+        run: bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
         env:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}

@@ -1,17 +1,14 @@
 .team {
   margin: 0;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 0;
+  padding: 50px 0 0;
   display: flex;
   flex-wrap: wrap;
 }
 
-.team__profile {
-  margin: 0 15px 30px;
+.team__member {
+  margin: 0 20px 70px;
   display: flex;
-  width: calc(25% - 30px);
-  max-width: calc(25% - 30px);
+  width: calc(33.33% - 40px);
 
   &:before,
   &:after {
@@ -19,74 +16,39 @@
   }
 
   a {
-    padding: 30px 35px;
     width: 100%;
-    font-family: 'faktum bold';
+    display: flex;
+    flex-direction: column;
+    font-family: 'antikor bold';
     font-size: 16px;
-    color: #fff;
     line-height: 1.5;
-    background: $color-dark;
     border: none;
-    transition: background ease-out .2s;
 
     &:hover,
     &:active,
-    &:focus {
-      color: #fff;
-      background: darken($color-dark, 3%);
-    }
+    &:focus {}
 
     img {
-      width: 100px;
-      margin: 0 auto 35px;
-      border-radius: 50%;
-    }
-
-    .name,
-    .job {
-      display: block;
+      margin: 0 0 15px;
+      // height: 280px;
+      // min-width: 290px;
     }
 
     .name {
-      margin: 0 0 10px
+      margin: 0 0 10px;
+      font-family: 'faktum bold';
+      font-size: 26px;
+      color: $color-primary;
     }
 
     .job {
-      font-family: 'antikor bold';
-      color: $color-light;
+      color: $color-tertiary;
     }
-  }
-}
 
-@media (max-width: $screen-sm) {
-  .team {
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-
-  .team__profile {
-    margin: 0 5px 10px;
-    width: calc(33.33% - 10px);
-    max-width: calc(33.33% - 10px);
-
-    a {
-      min-height: 250px;
-    }
-  }
-}
-
-@media (max-width: $screen-xs) {
-  .team__profile {
-    width: calc(50% - 10px);
-    max-width: calc(50% - 10px);
-
-    a {
-      padding: 20px;
-
-      img {
-        width: 60px;
-        margin: 0 auto 25px;
-      }
+    .certification {
+      position: absolute;
+      top: -25px;
+      right: 25px;
     }
   }
 }

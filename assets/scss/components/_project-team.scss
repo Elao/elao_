@@ -1,0 +1,92 @@
+.project-team {
+  margin: 0;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-team__member {
+  margin: 0 15px 30px;
+  display: flex;
+  width: calc(25% - 30px);
+  max-width: calc(25% - 30px);
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  a {
+    padding: 30px 35px;
+    width: 100%;
+    font-family: 'faktum bold';
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.5;
+    background: $color-dark;
+    border: none;
+    transition: background ease-out .2s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+      background: darken($color-dark, 3%);
+    }
+
+    img {
+      width: 100px;
+      margin: 0 auto 35px;
+      border-radius: 50%;
+    }
+
+    .name,
+    .job {
+      display: block;
+    }
+
+    .name {
+      margin: 0 0 10px
+    }
+
+    .job {
+      font-family: 'antikor bold';
+      color: $color-light;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .project-team {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .project-team__member {
+    margin: 0 5px 10px;
+    width: calc(33.33% - 10px);
+    max-width: calc(33.33% - 10px);
+
+    a {
+      min-height: 250px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .project-team__member {
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+
+    a {
+      padding: 20px;
+
+      img {
+        width: 60px;
+        margin: 0 auto 25px;
+      }
+    }
+  }
+}

@@ -1,40 +1,40 @@
-.certifications {
+.certification-list {
   ul {
     margin: 0;
     padding: 0;
   }
+}
 
-  li {
-    margin: 0 0 15px;
-    padding: 10px 20px;
-    max-width: 280px;
-    display: flex;
-    align-items: center;
-    font-family: 'antikor medium';
-    font-size: 14px;
-    color: #fff;
-    background: $color-brand;
+.certification {
+  margin: 0 0 15px;
+  padding: 10px 20px;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  font-family: 'antikor medium';
+  font-size: 12px;
+  color: #fff;
+  background: $color-brand;
 
-    &:before,
-    &:after {
-      display: none;
-    }
+  &:before,
+  &:after {
+    display: none;
+  }
 
-    &:last-of-type {
-      margin: 0;
-    }
-
-    p {
-      margin-left: 20px;
-
-      span {
-        display: block;
-      }
-    }
+  &:last-of-type {
+    margin: 0;
   }
 
   img {
-    margin: 0;
-    width: 35px;
+    margin: 0 !important;
+    width: 30px !important;
+  }
+
+  p {
+    margin-left: 20px;
+
+    span {
+      display: block;
+    }
   }
 }

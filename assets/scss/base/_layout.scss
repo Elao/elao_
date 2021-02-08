@@ -40,6 +40,12 @@ body {
   }
 }
 
+@media (max-width: $screen-md) {
+  .container--narrow {
+    padding: 0;
+  }
+}
+
 @media (max-width: $screen-sm) {
   .brick-conception {
     .title {

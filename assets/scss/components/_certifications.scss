@@ -38,3 +38,13 @@
     }
   }
 }
+
+@media (max-width: $screen-md) {
+  .certification {
+    padding: 5px 10px;
+
+    p {
+      margin-left: 10px;
+    }
+  }
+}

@@ -61,7 +61,7 @@ h6 {
 }
 
 .h2--dash {
-  margin-top: 0;
+  margin-top: 70px;
   padding-top: 65px;
 
   &:before {
@@ -121,6 +121,11 @@ h6 {
   h1, .h1 {
     margin-left: 40px;
     font-size: 50px;
+  }
+
+  .h2--dash {
+    padding-top: 35px;
+    font-size: 32px;
   }
 
   .anchor-title {

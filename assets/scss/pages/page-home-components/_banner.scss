@@ -1,5 +1,6 @@
 .banner {
   margin-bottom: 320px;
+  padding-bottom: 0;
   position: relative;
 }
 
@@ -36,8 +37,7 @@
     .image {
       height: 335px;
       width: 510px;
-      background: url(https://as2.ftcdn.net/jpg/02/94/55/87/500_F_294558791_Hb7lQE8IHJiAC6nxiIAcAr7gVRkl4fzC.jpg) no-repeat;
-      background-size: cover;
+      background-size: cover !important;
     }
 
     figcaption {
@@ -48,14 +48,14 @@
       bottom: 20px;
       left: 22px;
       display: flex;
-      flex-direction: column;
+      justify-content: flex-start;
       font-family: faktum regular;
       font-size: 18px;
       color: $color-brand;
       background: $color-secondary;
 
       span {
-        margin: 0 0 11px;
+        margin: 0 0 5px;
         font-family: antikor bold;
         color: $color-primary;
       }
@@ -104,9 +104,10 @@
       line-height: 2;
     }
 
-    .link {
+    .item__link {
       margin-top: auto;
       margin-left: auto;
+      padding-right: 0;
       display: flex;
       align-items: center;
       font-family: antikor bold;
@@ -133,6 +134,7 @@
     width: 70%;
     min-width: 250px;
     height: 230px;
+    justify-content: center;
     font-size: 24px;
 
     p {
@@ -182,7 +184,7 @@
       height: 230px;
       font-size: 20px;
 
-      .link {
+      .item__link {
         margin-left: 0;
       }
     }
@@ -265,7 +267,7 @@
         font-size: 32px;
       }
 
-      .link {
+      .item__link {
         font-size: 14px;
       }
     }

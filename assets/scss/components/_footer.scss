@@ -1,4 +1,6 @@
 .footer {
+  font-size: 16px;
+
   ul {
     margin: 0;
     padding: 0;
@@ -6,7 +8,7 @@
     list-style: none;
 
     li {
-      margin: 13px 0;
+      margin: 10px 0;
 
       &:before,
       &:after {

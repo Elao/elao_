@@ -1,9 +1,9 @@
 body {
-  padding-top: 120px;
   display: flex;
   flex-direction: column;
   font-family: 'faktum regular';
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,12 +44,5 @@ body {
       font-size: 20px;
       line-height: 26px;
     }
-  }
-}
-
-
-@media (max-width: $screen-sm) {
-  body {
-    padding-top: 90px;
   }
 }

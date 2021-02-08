@@ -1,5 +1,3 @@
-// Page study cases banner
-
 .banner {
   margin-top: 50px;
   padding-bottom: 70px;
@@ -15,6 +13,7 @@
 }
 
 .banner__content {
+  position: relative;
   display: flex;
 
   .info {
@@ -34,9 +33,14 @@
   }
 
   .highlight {
+    margin-left: auto;
     padding: 45px 70px 60px;
-    max-width: 620px;
+    min-height: 220px;
+    max-width: 680px;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex: 1;
     font-family: "antikor regular";
     font-size: 24px;
@@ -44,46 +48,38 @@
     line-height: 1.6;
     background: $color-brand;
 
-    &:after {
+    .icon {
       position: absolute;
       right: 10px;
       bottom: -45px;
-      font-family: 'icomoon';
-      font-size: 110px;
-      color: $color-secondary;
-      content: '\e915';
+      font-size: 80px;
+      color: $color-primary;
       line-height: 1;
     }
   }
 }
 
-@media (max-width: $screen-md) {
-  .banner__content {
-    .info {
-      padding: 110px 40px 0;
-      align-items: flex-start;
-    }
+@media (max-width: $screen-lg) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
-
-@media (max-width: $screen-sm) {
-  .banner {}
 
   .banner__title {
-    margin-bottom: 25px;
-    position: relative;
-    top: 0;
-    left: 0;
+    position: static;
   }
 
   .banner__content {
+    flex-direction: column;
+    align-items: flex-start;
+
     .info {
-      margin: 0 0 30px;
+      margin: 40px 0;
       padding: 0;
-      padding-right: 40px;
-      padding-top: 40px;
-      justify-content: flex-start;
+      width: 100%;
       align-items: flex-start;
+      justify-content: flex-start;
 
       p {
         width: unset;
@@ -91,42 +87,29 @@
     }
 
     .highlight {
-      margin-left: auto;
-      padding: 25px 40px;
-      max-width: 500px;
+      margin: 40px 0 0;
+      padding: 25px 40px 40px;
+      width: 100%;
+      max-width: unset;
+
+      .icon {
+        right: 35px;
+        bottom: -35px;
+      }
+    }
+
+    .info + .highlight {
+      margin: 0;
     }
   }
 }
 
 @media (max-width: $screen-xs) {
-  .banner {
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .banner__title {
-    margin: 0 45px 35px;
-    font-size: 32px;
-  }
-
   .banner__content {
-    flex-direction: column;
-
-    .info {
-      p {
-        font-size: 16px;
-      }
-    }
-
     .highlight {
-      padding: 20px 30px 30px;
-      font-size: 16px;
+      font-size: 18px;
 
-      &:after {
-        right: 10px;
-        bottom: -35px;
+      .icon {
         font-size: 65px;
       }
     }

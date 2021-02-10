@@ -1,5 +1,87 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Nous contacter
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+          <a href="{{ path('homepage') }}">Accueil</a>
+        </li>
+        <li class="breadcrumb__item">
+          Contact
+        </li>
+    </ul>
+
+    <div class="container--narrow">
+        <h1 class="h1--small">Écrire <span>un petit mot</span></h1>
+
+        <div class="contact">
+            <form class="contact__message">
+                <p class="title">Cher elao,</p>
+                <div class="form-group">
+                    <div contenteditable="true" placeholder="Je vous écris ce message car," class="form-group__message"></div>
+                    <!-- <span class="form-group__error">Erreur : quelque chose de terrible est arrivé.</span> -->
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-group__label">Mon email :</label>
+                    <input type="text" class="form-group__input">
+                    <!-- <span class="form-group__error">Erreur : quelque chose de terrible est arrivé.</span> -->
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-group__label">Signé :</label>
+                    <input type="text" class="form-group__input">
+                    <!-- <span class="form-group__error">Quelque chose de terrible est arrivé.</span> -->
+                </div>
+                <button class="btn btn--primary btn--animated btn--large">
+                    <span>
+                        Envoyer
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                            <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                            <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                        </svg>
+                    </span>
+                </button>
+            </form>
+
+            <!--
+                Todo :
+                À la validation du formulaire, remplacer le <form class="contact__message"> par la <div class="contact__message"> ci-dessous 👇
+
+                <div class="contact__message">
+                    <p class="title">Cher·ère Prénom,</p>
+                    <div class="form-group form-group--dark">
+                        <div class="form-group__message">
+                            <p>Merci pour votre message, nous avons hâte de vous lire.</p>
+                            <br>
+                            <p>À bientôt 👋</p>
+                        </div>
+                    </div>
+                    <div class="form-group form-group--dark">
+                        <label class="form-group__label">Signé :</label>
+                        <span type="text" class="form-group__input">élao</span>
+                    </div>
+                    <button class="btn btn--primary btn--animated">
+                        <span>
+                            Renvoyer un message
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            -->
+
+            <div class="contact__infos">
+                <img src="{{ asset('build/images/stamp.svg') }}" alt="">
+                <p class="name">elao</p>
+                <p>
+                    <span>34 rue Jean Broquin</span>
+                    <span>69006 Lyon</span>
+                </p>
+                <p>
+                    <a href="">+33 (0)4 82 53 37 19</a>
+                    <a href="mailto:lyon@elao.com">lyon@elao.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

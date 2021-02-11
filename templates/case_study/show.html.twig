@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block meta_title caseStudy.title ~ ' | ' ~ parent() %}
-{% block meta_description caseStudy.description|default(parent()) %}
+{% block meta_title %}{{ caseStudy.metaTitle|default(caseStudy.title) }} | {{ parent() }}{% endblock %}
+{% block meta_description %}{{ caseStudy.metaDescription|default(caseStudy.description)|default(parent()) }}{% endblock %}
 
 {% block content %}
     <div class="page-project">
@@ -26,7 +26,7 @@
                         Description brève du projet ou du client
                         Recommandé : 50 à 150 caractères
                     -->
-                    <p>Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate.</p>
+                    <p>{{ caseStudy.description }}</p>
                     <i class="icon icon--semicolon" aria-hidden="true"></i>
                 </div>
 
@@ -41,19 +41,18 @@
                 -->
                 <div class="preview">
                     <div class="preview__main">
-                        <img src="https://www.fillmurray.com/630/380">
+                        <img src="{{ asset(caseStudy.images|first) }}">
                     </div>
                     <div class="preview__list">
                         <ul>
-                            <li>
-                                <img src="https://www.fillmurray.com/240/160">
-                            </li>
-                            <li>
-                                <img src="https://www.fillmurray.com/240/160">
-                            </li>
+                            {% for image in caseStudy.images|slice(1, 2) %}
+                                <li>
+                                    <img src="{{ asset(image) }}">
+                                </li>
+                            {% endfor %}
                         </ul>
                         <!-- Si aucun lien vers le site possible, ajouter .hidden au bouton pour le cacher et ne pas casser le layout -->
-                        <a href="#" class="btn btn--secondary btn--animated">
+                        <a href="{{ caseStudy.caseUrl }}" class="btn btn--secondary btn--animated">
                             <span>
                                 Voir le site
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -72,44 +71,38 @@
             <ul>
                 <li class="item">
                     <small>Clients</small>
-                    <p>CIRano</p>
+                    <p>{{ caseStudy.clients }}</p>
                 </li>
                 <li class="item">
                     <small>Utilisateurs</small>
-                    <p>Monteur·ses vidéo</p>
+                    <p>{{ caseStudy.users }}</p>
                 </li>
                 <li class="item">
                     <small>Taille du projet</small>
-                    <p>3 mois</p>
+                    <p>{{ caseStudy.size }}</p>
                 </li>
             </ul>
             <ul>
                 <li class="item item--medium">
                     <small>Services</small>
-                    <p>Accompagnement</p>
-                    <p>Développement</p>
+                    {% for service in caseStudy.services %}
+                        <p>{{ service }}</p>
+                    {% endfor %}
                 </li>
                 <li class="item item--large">
                     <small>Technologies</small>
                     <ul class="technologies technologies--light">
-                        <li>
-                            <a href="" class="technologies__item">
-                                <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                                Symfony
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="technologies__item">
-                                <img src="{{ asset('build/images/technos/algolia.svg') }}" alt="logo Algolia">
-                                Algolia
-                            </a>
-                        </li>
-                        <li>
-                            <a href="" class="technologies__item">
-                                <img src="{{ asset('build/images/technos/graphql.svg') }}" alt="logo GraphQL">
-                                GraphQL
-                            </a>
-                        </li>
+                        {% for technologySlug in caseStudy.technologies %}
+                            {% set technology = content_get('App\\Model\\Technology', technologySlug) %}
+                            <li>
+                                <a href="{{ path('technology', { technology: technology.slug }) }}" class="technologies__item">
+                                    {% if technology.logo|default(false) %}
+                                        <img src="{{ asset(technology.logo) }}" alt="logo {{ technology.name }}">
+                                    {% endif %}
+                                    {{ technology.name }}
+                                </a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </li>
             </ul>
@@ -121,34 +114,16 @@
             <h2 class="h2--dash">La tribu</h2>
             <p>Voici les personnes de l'équipe qui ont contribué au projet.</p>
             <ul class="team">
-                <li class="team__profile">
-                    <a href="#">
-                        <img src="https://www.fillmurray.com/100/100" alt="Anne-Laure De Boissieu">
-                        <span class="name">Anne-Laure De Boissieu</span>
-                        <span class="job">Développeuse Backend</span>
-                    </a>
-                </li>
-                <li class="team__profile">
-                    <a href="#">
-                        <img src="https://www.fillmurray.com/100/100" alt="Benjamin Lévêque">
-                        <span class="name">Benjamin Lévêque</span>
-                        <span class="job">Développeur</span>
-                    </a>
-                </li>
-                <li class="team__profile">
-                    <a href="#">
-                        <img src="https://www.fillmurray.com/100/100" alt="Maxime Steinhausser">
-                        <span class="name">Maxime Steinhausser</span>
-                        <span class="job">Développeur</span>
-                    </a>
-                </li>
-                <li class="team__profile">
-                    <a href="#">
-                        <img src="https://www.fillmurray.com/100/100" alt="Maxime Colin">
-                        <span class="name">Maxime Colin</span>
-                        <span class="job">Développeur</span>
-                    </a>
-                </li>
+                {% for memberSlug in caseStudy.members %}
+                    {% set member = content_get('App\\Model\\Member', memberSlug) %}
+                    <li class="team__profile">
+                        <a href="#">
+                            <img src="{{ asset(member.avatar ?? 'images/authors/default.png') }}" alt="{{ member.name }}">
+                            <span class="name">{{ member.name }}</span>
+                            <span class="job">{{ member.shortBio }}</span>
+                        </a>
+                    </li>
+                {% endfor %}
             </ul>
 
             <h2 class="h2--dash">D'autres études de cas</h2>

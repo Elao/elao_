@@ -34,9 +34,13 @@
                         <span class="image" style="background: url('https://images.unsplash.com/photo-1530435460869-d13625c69bbf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')"></span>
                     </a>
                     <div class="miniature-inline__content">
-                        <span class="info">{{ caseStudy.title }}</span>
-                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="title">Plateforme de harum autem neque repudiandae</a>
-                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi sunt, harum autem neque repudiandae fuga.</p>
+                        <span class="info">{{ caseStudy.clients }}</span>
+                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="title">
+                            {{ caseStudy.title }}
+                        </a>
+                        <p class="description">
+                            {{ caseStudy.description }}
+                        </p>
                         <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="btn btn--secondary btn--animated">
                             <span>
                                 Voir l'étude de cas

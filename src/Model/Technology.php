@@ -6,6 +6,8 @@ namespace App\Model;
 
 class Technology
 {
+    public string $name;
+    public string $logo;
     public string $title;
     public string $slug;
     public string $content;

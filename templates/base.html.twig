@@ -7,26 +7,29 @@
         <title>{% block meta_title site.title %}</title>
 
         {% block meta %}
-            <!-- Open Graph / Facebook -->
-             <meta property="og:title" content="{{ block('meta_title') }}" />
-            <meta property="og:locale" content="{{ block('meta_locale') }}" />
             <meta name="description" content="{% block meta_description site.description %}" />
-            <meta property="og:description" content="{{ block('meta_description') }}" />
             <link rel="canonical" href="{{ app.request.uri }}" />
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:title" content="{% block og_title block('meta_title') %}" />
+            <meta property="og:locale" content="{% block og_locale block('meta_locale') %}" />
+            <meta property="og:description" content="{% block og_description block('meta_description') %}" />
             <meta property="og:url" content="{{ app.request.uri }}" />
             <meta property="og:site_name" content="elao_" />
-            {% if meta_cover|default(false) %}
-                <meta property="og:image" content="{{ meta_cover }}">
+            {% set og_image %}{% block og_image %}{% endblock %}{% endset %}
+            {% if og_image|default(false) %}
+                <meta property="og:image" content="{{ og_image }}">
             {% endif %}
 
             <!-- Twitter -->
             <meta property="twitter:card" content="{% block twitter_card_type 'summary' %}">
-            <meta property="twitter:title" content="{{ block('meta_title') }}">
-            <meta property="twitter:description" content="{{ block('meta_description') }}">
-            <meta property="twitter:site" content="@tom32i">
-            <meta property="twitter:creator" content="@tom32i">
-            {% if meta_cover|default(false) %}
-                <meta property="twitter:image" content="{{ meta_cover }}">
+            <meta property="twitter:title" content="{% block twitter_title block('meta_title') %}">
+            <meta property="twitter:description" content="{% block twitter_description block('meta_description') %}">
+            <meta property="twitter:site" content="@elao">
+            <meta property="twitter:creator" content="@elao">
+            {% set twitter_image %}{% block twitter_image %}{% endblock %}{% endset %}
+            {% if twitter_image|default(false) %}
+                <meta property="twitter:image" content="{{ twitter_image }}">
             {% endif %}
         {% endblock %}
 

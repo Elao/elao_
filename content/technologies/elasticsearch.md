@@ -1,5 +1,6 @@
 ---
-title: "Elastic Search : un moteur de recherche simple et efficace pour votre application web"
+name: "ElasticSearch"
+title: "ElasticSearch : un moteur de recherche simple et efficace pour votre application web"
 ---
 
 ElasticSearch est un logiciel open source assurant **une recherche rapide et pertinente dans vos bases de données**. Chez Elao, nous l'utilisons en grande majorité pour des recherches de géolocalisations, par exemple pour trouver une offre d'emploi près de son domicile ou dans un rayon d'un certain nombre de kilomètre, ou bien pour de la recherche plus classique de texte. 

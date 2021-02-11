@@ -1,10 +1,12 @@
 ---
+name: "Symfony"
+logo: "build/images/technos/symfony.svg"
 title: "Nous utilisons Symfony pour créer des applications robustes"
 ---
 
 Pour nos développements backend, nous nous appuyons sur Symfony, un framework PHP largement plébiscité par la communauté.
 
-## Pourquoi avons-nous fait le choix de Syfony ?
+## Pourquoi avons-nous fait le choix de Symfony ?
 
 - Symfony apporte un coeur et des composants solides, qui offrent aux équipes de développement la plupart des besoins génériques afin de se focaliser sur l’essentiel : le fonctionnel spécifique, qui répond aux besoins du projet. 
 

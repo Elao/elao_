@@ -1,41 +1,136 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <img src="{{ asset(member.avatar) }}">
-    <h2>{{ member.name }}</h2>
-    <h4>{{ member.position }}</h4>
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+            <a href="#">La tribu</a>
+         </li>
+        <li class="breadcrumb__item">
+            {{ member.name }}
+        </li>
+    </ul>
 
-    <div class="article-author__social">
-      {% if member.twitter %}
-        <a href="https://twitter.com/{{ member.twitter }}" class="social">
-          <i class="icon icon--twitter" aria-hidden="true"></i>
-          <span class="screen-reader">Compte twitter de {{ member.name }}</span>
-        </a>
-      {% endif %}
-      {% if member.github %}
-        <a href="https://github.com/{{ member.github }} "class="social">
-          <i class="icon icon--github" aria-hidden="true"></i>
-          <span class="screen-reader">Compte github de {{ member.name }}</span>
-        </a>
-      {% endif %}
-      {% if member.website %}
-        <a href="{{ member.website }}" class="social">
-          <i class="icon icon--website" aria-hidden="true"></i>
-          <span class="screen-reader">Site personnel de {{ member.name }}</span>
-        </a>
-      {% endif %}
+    <div class="member">
+        <div class="member__infos">
+            <h1 class="h1--small">
+                Découvrez
+                <span>{{ member.name }}</span>
+            </h1>
+        </div>
+
+        <div class="member__image">
+            <!-- image de profil : 500 x 680px -->
+            <img src="https://www.fillmurray.com/500/680" alt="Portrait de {{ member.name }}">
+            <div class="experience">
+                <span>3</span>
+                ans dans la tribu
+            </div>
+        </div>
+
+        <div class="member__profile">
+            <p class="job">{{ member.position }}</p>
+
+            <div class="description">
+                <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae nemo itaque culpa ducimus corrupti nesciunt.</p>
+            </div>
+
+            <div class="socials socials--inline">
+                <ul>
+                    {% if member.website %}
+                        <li>
+                            <a href="{{ member.website }}">
+                                <i class="icon icon--website" aria-hidden="true"></i>
+                                <span class="screen-reader">Site personnel de {{ member.name }}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if member.twitter %}
+                        <li>
+                            <a href="https://twitter.com/{{ member.twitter }}">
+                                <i class="icon icon--twitter" aria-hidden="true"></i>
+                                <span class="screen-reader">Compte Twitter de {{ member.name }}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    {% if member.github %}
+                        <li>
+                            <a href="https://github.com/{{ member.github }}">
+                                <i class="icon icon--github" aria-hidden="true"></i>
+                                <span class="screen-reader">Compte Github de {{ member.name }}</span>
+                            </a>
+                        </li>
+                    {% endif %}
+                    <!-- Todo : possibilité d'ajouter un compte linkedin -->
+                    <li>
+                        <a href="#">
+                            <i class="icon icon--linkedin" aria-hidden="true"></i>
+                            <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Facultatif -->
+            <div class="certifications">
+                <ul>
+                    <li>
+                        <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
+                        <p>Expert·e certifié·e <span>Symfony</span></p>
+                    </li>
+                    <li>
+                        <img src="{{ asset('build/images/certifications/opquast.svg') }}" alt="">
+                        <p>Expert·e certifié·e <span>Opquast</span></p>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="interests">
+                <li>🎲</li>
+                <li>🎮</li>
+                <li>📷</li>
+            </ul>
+        </div>
+
+        <div class="member__contributions">
+            <div class="article-list">
+                <h2 class="h2--dash">Ses derniers projets</h2>
+                <div class="miniature-inline miniature-inline--small">
+                    <a href="#" class="miniature-inline__image">
+                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
+                    </a>
+                    <div class="miniature-inline__content">
+                        <a href="#" class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="miniature-inline miniature-inline--small">
+                    <a href="#" class="miniature-inline__image">
+                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
+                    </a>
+                    <div class="miniature-inline__content">
+                        <a href="#" class="title">Tribü</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facultatif -->
+            <div class="article-list">
+                <h2 class="h2--dash">Ses derniers articles</h2>
+                {% for article in articles %}
+                    <div class="miniature-inline miniature-inline--small">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
+                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                        </a>
+                        <div class="miniature-inline__content">
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
 
-    <h2>Ses derniers articles</h2>
-    <div>
-        {% for article in articles %}
-            <div>
-                <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.title }}
-                <a href="{{ path('blog_article', { article: article.slug }) }}">
-                    Lire l'article_
-                </a>
-            </div>
-        {% endfor %}
-    <div>
+    <aside class="bricks">
+        {% include 'partials/brick-visit.html.twig' %}
+        {% include 'partials/brick-contact.html.twig' %}
+    </aside>
 {% endblock %}

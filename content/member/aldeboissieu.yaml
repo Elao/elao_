@@ -1,16 +1,16 @@
 active: true
 
 en:
-  display_name: Anne-Laure de Boissieu
+  display_name: Anne‑Laure De Boissieu
   short_bio:    "Développeuse Symfony, book and movie lover."
   long_bio:     "Développeuse Symfony, book and movie lover."
-  job_title":   "Développeuse Symfony"
+  job_title:    "Développeuse Symfony"
 
 fr:
-  display_name: Anne-Laure de Boissieu
+  display_name: Anne‑Laure De Boissieu
   short_bio:    "Développeuse Symfony."
   long_bio:     "Développeuse Symfony."
-  job_title":   "Développeuse Symfony"
+  job_title:    "Développeuse Symfony"
 
 social:
   website:         http://www.elao.com

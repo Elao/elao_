@@ -154,6 +154,12 @@
       }
     }
   }
+
+  .miniature--large {
+    .miniature__image {
+      display: block;
+    }
+  }
 }
 
 @media (max-width: $screen-xs) {

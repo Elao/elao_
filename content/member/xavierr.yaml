@@ -4,13 +4,13 @@ en:
   display_name: Xavier R
   short_bio:    ""
   long_bio:     ""
-  job_title":   "Symfony Developer"
+  job_title:   "Symfony Developer"
 
 fr:
   display_name: Xavier R
   short_bio:    ""
   long_bio:     ""
-  job_title:    Développeur Symfony
+  job_title:    "Développeur Symfony"
 
 social:
   website:         http://www.elao.com
@@ -19,4 +19,3 @@ social:
   email:           xavier.roldo@elao.com
   avatar:          images/authors/xavierr.jpg
   google_plus_id:  ~
-

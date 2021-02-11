@@ -2,13 +2,13 @@ en:
   display_name: Johan LOPES
   short_bio:    ""
   long_bio:     ""
-  job_title":   "Symfony developer"
+  job_title:   "Symfony developer"
 
 fr:
   display_name: Johan LOPES
   short_bio:    ""
   long_bio:     ""
-  job_title:    Développeur Symfony
+  job_title:    "Développeur Symfony"
 
 social:
   website:         http://www.elao.com
@@ -18,4 +18,3 @@ social:
   avatar:          ~
   google_plus_id:  ~
 
-  

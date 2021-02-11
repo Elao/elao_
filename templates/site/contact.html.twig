@@ -18,17 +18,14 @@
                 <p class="title">Cher elao,</p>
                 <div class="form-group">
                     <div contenteditable="true" placeholder="Je vous écris ce message car," class="form-group__message"></div>
-                    <!-- <span class="form-group__error">Erreur : quelque chose de terrible est arrivé.</span> -->
                 </div>
                 <div class="form-group">
                     <label for="" class="form-group__label">Mon email :</label>
                     <input type="text" class="form-group__input">
-                    <!-- <span class="form-group__error">Erreur : quelque chose de terrible est arrivé.</span> -->
                 </div>
                 <div class="form-group">
                     <label for="" class="form-group__label">Signé :</label>
                     <input type="text" class="form-group__input">
-                    <!-- <span class="form-group__error">Quelque chose de terrible est arrivé.</span> -->
                 </div>
                 <button class="btn btn--primary btn--animated btn--large">
                     <span>
@@ -70,16 +67,16 @@
                 </div>
             -->
 
-            <div class="contact__infos">
+            <div class="contact__infos" itemscope itemtype="https://schema.org/Organization">
                 <img src="{{ asset('build/images/stamp.svg') }}" alt="">
-                <p class="name">elao</p>
-                <p>
-                    <span>34 rue Jean Broquin</span>
-                    <span>69006 Lyon</span>
+                <p class="name" itemprop="name">elao</p>
+                <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <span itemprop="streetAddress">34 rue Jean Broquin</span>
+                    <span itemprop="addressLocality">69006 Lyon</span>
                 </p>
                 <p>
-                    <a href="">+33 (0)4 82 53 37 19</a>
-                    <a href="mailto:lyon@elao.com">lyon@elao.com</a>
+                    <a href="tel:+33482533719" itemprop="telephone">+33 (0)4 82 53 37 19</a>
+                    <a href="mailto:lyon@elao.com" itemprop="email">lyon@elao.com</a>
                 </p>
             </div>
         </div>

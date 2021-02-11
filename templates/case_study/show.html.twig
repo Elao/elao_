@@ -113,10 +113,10 @@
 
             <h2 class="h2--dash">La tribu</h2>
             <p>Voici les personnes de l'équipe qui ont contribué au projet.</p>
-            <ul class="team">
+            <ul class="project-team">
                 {% for memberSlug in caseStudy.members %}
                     {% set member = content_get('App\\Model\\Member', memberSlug) %}
-                    <li class="team__profile">
+                    <li class="project-team__member">
                         <a href="#">
                             <img src="{{ asset(member.avatar ?? 'images/authors/default.png') }}" alt="{{ member.name }}">
                             <span class="name">{{ member.name }}</span>

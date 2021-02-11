@@ -1,5 +1,5 @@
 .banner {
-  margin-top: 50px;
+  margin-top: 100px;
   padding-bottom: 70px;
   position: relative;
 }
@@ -101,6 +101,12 @@
     .info + .highlight {
       margin: 0;
     }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .banner {
+    margin-top: 0;
   }
 }
 

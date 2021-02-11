@@ -1,0 +1,43 @@
+.certification {
+  margin: 0 0 15px;
+  padding: 5px 15px;
+  max-width: 280px;
+  display: flex;
+  align-items: center;
+  font-family: 'antikor medium';
+  font-size: 14px;
+  color: #fff;
+  background: $color-brand;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &:last-of-type {
+    margin: 0;
+  }
+
+  img {
+    margin: 0 !important;
+    width: 30px !important;
+  }
+
+  p {
+    margin-left: 20px;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .certification {
+    padding: 5px 10px;
+
+    p {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.banner-team {}
+
+.banner-team__title {
+  margin-left: 110px;
+  margin-bottom: 45px;
+}
+
+.banner-team__content {
+  position: relative;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  .recruitment {
+    padding: 0 55px;
+    width: 550px;
+    height: 160px;
+    position: absolute;
+    top: -125px;
+    right: 70px;
+    display: flex;
+    align-items: center;
+    background: $color-secondary;
+    border: none;
+
+    img {
+      margin: 0;
+      margin-right: 60px;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: -45px;
+      line-height: 1;
+    }
+
+    .icon--square-bracket-right {
+      right: 80px;
+      font-size: 92px;
+      color: $color-primary;
+    }
+
+    .icon--semicolon {
+      right: 10px;
+      font-size: 80px;
+      color: $color-tertiary;
+    }
+  }
+
+  .recruitment__content {
+    font-family: 'antikor medium';
+    font-size: 16px;
+    color: $color-tertiary;
+
+    .title {
+      display: block;
+      font-family: 'faktum bold';
+      font-size: 26px;
+      color: $color-dark;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .banner-team {
+    padding-bottom: 100px;
+  }
+
+  .banner-team__title {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .banner-team__content {
+    .recruitment {
+      top: unset;
+      right: 0;
+      bottom: -100px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner-team {
+    padding-bottom: 80px;
+  }
+
+  .banner-team__content {
+    .recruitment {
+      padding: 0 25px;
+      height: 100px;
+      width: 260px;
+      top: unset;
+      right: 0;
+      bottom: -80px;
+
+      img {
+        margin-right: 30px;
+        width: 40px;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .recruitment__content {
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -20,6 +20,10 @@ body {
   max-width: 1280px;
 }
 
+.container--narrow {
+  padding: 0 110px;
+}
+
 .brick-conception {
   @extend .brick;
   @extend .brick--large;
@@ -33,6 +37,12 @@ body {
     font-family: 'faktum bold';
     font-size: 46px;
     color: #fff;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .container--narrow {
+    padding: 0;
   }
 }
 

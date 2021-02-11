@@ -130,27 +130,7 @@
     </div>
 
     <aside class="bricks">
-        <div class="brick-visit">
-            <h3 class="title">Venir nous voir</h3>
-            <p class="address">
-                <i class="icon icon--location"></i>
-                <span class="address__content">
-                    <span>34 rue Jean Broquin</span>
-                    <span>69006 Lyon</span>
-                </span>
-            </p>
-        </div>
-
-        <div class="brick-contact">
-            <h3 class="title">Nous contacter</h3>
-            <p>
-                <i class="icon icon--phone"></i>
-                +33 (0)4 82 53 37 19
-            </p>
-            <p>
-                <i class="icon icon--write"></i>
-                lyon@elao.com
-            </p>
-        </div>
+        {% include 'partials/brick-visit.html.twig' %}
+        {% include 'partials/brick-contact.html.twig' %}
     </aside>
 {% endblock %}

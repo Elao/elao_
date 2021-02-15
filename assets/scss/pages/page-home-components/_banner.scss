@@ -10,7 +10,7 @@
   width: 950px;
   display: flex;
   align-items: center;
-  font-family: antikor regular;
+  font-family: 'antikor regular';
   font-size: 32px;
   color: #fff;
   background: $color-brand;
@@ -49,14 +49,14 @@
       left: 22px;
       display: flex;
       justify-content: flex-start;
-      font-family: faktum regular;
+      font-family: 'faktum regular';
       font-size: 18px;
       color: $color-brand;
       background: $color-secondary;
 
       span {
         margin: 0 0 5px;
-        font-family: antikor bold;
+        font-family: 'antikor bold';
         color: $color-primary;
       }
     }
@@ -81,12 +81,12 @@
 
   .item {
     margin: 0 20px;
-    padding: 45px 30px 25px;
+    padding: 40px 30px 25px;
     height: 260px;
     width: 290px;
     display: flex;
     flex-direction: column;
-    font-family: faktum regular;
+    font-family: 'faktum regular';
     font-size: 20px;
     color: $color-brand;
     text-decoration: none;
@@ -94,9 +94,11 @@
     border: none;
 
     .number {
-      font-family: antikor medium;
+      margin: 0 0 10px;
+      font-family: 'antikor medium';
       color: $color-primary;
       font-size: 76px;
+      line-height: 1;
     }
 
     small {
@@ -110,7 +112,7 @@
       padding-right: 0;
       display: flex;
       align-items: center;
-      font-family: antikor bold;
+      font-family: 'antikor bold';
       font-size: 18px;
       color: $color-primary;
 
@@ -179,9 +181,8 @@
 
     .item {
       margin: 0 15px;
-      padding: 15px 40px;
+      padding: 40px;
       width: 300px;
-      height: 230px;
       font-size: 20px;
 
       .item__link {
@@ -264,6 +265,7 @@
       font-size: 18px;
 
       .number {
+        margin: 0;
         font-size: 32px;
       }
 

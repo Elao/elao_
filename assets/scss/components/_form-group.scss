@@ -1,0 +1,136 @@
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-group__label {
+  margin-right: 15px;
+  padding-bottom: 2px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  font-family: 'antikor bold';
+  font-size: 16px;
+  color: $color-tertiary;
+}
+
+.form-group__input {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  font-family: 'antikor bold';
+  font-size: 16px;
+  color: $color-tertiary;
+  background: transparent;
+  border: none;
+  border-bottom: dashed 2px $color-tertiary;
+
+  &::placeholder {
+    font-family: 'antikor bold';
+    font-size: 16px;
+    color: $color-tertiary;
+    transition: opacity ease-in .1s;
+  }
+
+  &:focus {
+    outline: none;
+
+    &::placeholder {
+      opacity: .4;
+    }
+  }
+}
+
+.form-group__message {
+  padding: 0 5px;
+  width: 100%;
+  min-height: 180px;
+  display: block;
+  background: url('../../images/textarea-lines.svg');
+
+  &,
+  * {
+    font-family: 'antikor bold' !important;
+    font-size: 16px !important;
+    color: $color-tertiary !important;
+    line-height: 45px;
+  }
+
+  * {
+    margin: 0 !important;
+    background-color: transparent !important;
+  }
+
+  &:empty {
+    &:before {
+      display: block;
+      color: $color-tertiary;
+      content: attr(placeholder);
+      transition: opacity ease-in .1s;
+      pointer-events: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    &:before {
+      opacity: .4;
+    }
+  }
+}
+
+.form-group__error {
+  margin: 10px 0;
+  width: 100%;
+  font-family: 'antikor bold';
+  font-size: 14px;
+  color: $color-primary;
+}
+
+.form-group--dark {
+  .form-group__label {
+    color: $color-primary;
+  }
+
+  .form-group__input {
+    color: $color-primary;
+    border-bottom: dashed 2px $color-primary;
+
+    &::placeholder {
+      color: $color-primary;
+    }
+  }
+
+  .form-group__message {
+    background: url('../../images/textarea-lines-dark.svg');
+
+    &,
+    * {
+      color: $color-primary !important;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .form-group__label,
+  .form-group__input,
+  .form-group__input::placeholder,
+  .form-group__message,
+  .form-group__message * {
+    font-size: 14px;
+  }
+
+  .form-group__error {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .form-group {
+    flex-direction: column;
+  }
+}

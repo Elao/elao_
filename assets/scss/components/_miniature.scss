@@ -163,9 +163,11 @@
 }
 
 @media (max-width: $screen-xs) {
-  .btn,
-  .link {
-    width: 100%;
-    justify-content: center;
+  .miniature {
+    .btn,
+    .link {
+      width: 100%;
+      justify-content: center;
+    }
   }
 }

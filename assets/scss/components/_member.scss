@@ -10,6 +10,14 @@
   width: calc(100% - 550px);
 }
 
+.member__infos {
+  margin: 0 0 30px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
 .member__profile {
   margin-top: -630px;
 
@@ -148,7 +156,7 @@
 
 @media (max-width: $screen-xs) {
   .member__infos {
-    .h1--small {
+    h1 {
       max-width: 280px;
     }
   }

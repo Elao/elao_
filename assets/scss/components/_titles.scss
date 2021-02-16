@@ -5,7 +5,7 @@ h1, .h1 {
   flex-direction: column;
   align-items: flex-start;
   font-family: 'faktum bold';
-  font-size: 58px;
+  font-size: 36px;
   color: $color-brand;
 
   span {
@@ -52,12 +52,6 @@ h6 {
   font-family: 'antikor bold';
   font-size: 18px;
   line-height: 1.25;
-}
-
-// Special titles
-.h1--small {
-  margin: 0;
-  font-size: 36px;
 }
 
 .h2--dash {
@@ -120,7 +114,6 @@ h6 {
 @media (max-width: $screen-sm) {
   h1, .h1 {
     margin-left: 40px;
-    font-size: 50px;
   }
 
   .h2--dash {

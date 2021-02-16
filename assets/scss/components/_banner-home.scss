@@ -1,10 +1,18 @@
-.banner {
+.banner-home {
   margin-bottom: 320px;
   padding-bottom: 0;
   position: relative;
 }
 
-.banner__content {
+.banner-home__title {
+  margin-left: 110px;
+  margin-bottom: 65px;
+  position: static;
+  font-size: 58px;
+  line-height: 1.3;
+}
+
+.banner-home__content {
   padding: 0 110px;
   height: 310px;
   width: 950px;
@@ -20,9 +28,9 @@
   }
 }
 
-.banner__image {
+.banner-home__image {
   position: absolute;
-  top: -250px;
+  top: 0;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -63,7 +71,7 @@
   }
 }
 
-.banner__list {
+.banner-home__list {
   margin: 0;
   padding: 0;
   position: absolute;
@@ -125,18 +133,27 @@
   }
 }
 
-@media (max-width: $screen-md) {
-  .banner {
-    margin-bottom: 845px;
+@media (max-width: $screen-lg) {
+  .banner-home {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
-  .banner__content {
-    margin-left: auto;
+  .banner-home__title {
+    margin-left: 0;
+    order: 1;
+    align-self: center;
+  }
+
+  .banner-home__content {
     padding: 0 70px;
     width: 70%;
     min-width: 250px;
     height: 230px;
+    order: 2;
     justify-content: center;
+    align-self: flex-end;
     font-size: 24px;
 
     p {
@@ -144,9 +161,11 @@
     }
   }
 
-  .banner__image {
+  .banner-home__image {
     width: 100%;
-    top: 500px;
+    position: relative;
+    top: unset;
+    order: 4;
     align-items: center;
 
     figure {
@@ -174,10 +193,13 @@
     }
   }
 
-  .banner__list {
-    left: 0;
-    top: 200px;
+  .banner-home__list {
     width: 100%;
+    position: relative;
+    left: 0;
+    top: -20px;
+    order: 3;
+    justify-content: center;
 
     .item {
       margin: 0 15px;
@@ -193,13 +215,7 @@
 }
 
 @media (max-width: $screen-sm) {
-  .banner {
-    margin-bottom: 1030px;
-  }
-
-  .banner__image {
-    top: 820px;
-
+  .banner-home__image {
     figure {
       .image {
         margin: 0;
@@ -208,7 +224,7 @@
     }
   }
 
-  .banner__list {
+  .banner-home__list {
     flex-direction: column;
 
     .item {
@@ -225,19 +241,18 @@
 }
 
 @media (max-width: $screen-xs) {
-  .banner {
-    margin-bottom: 1000px;
-  }
-
-  .banner__content {
+  .banner-home__content {
     padding: 0 20px;
     height: 160px;
     font-size: 18px;
   }
 
-  .banner__image {
-    top: 560px;
+  .banner-home__title {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
 
+  .banner-home__image {
     figure {
       margin: 0 0 90px;
 
@@ -256,9 +271,7 @@
     }
   }
 
-  .banner__list {
-    top: 140px;
-
+  .banner-home__list {
     .item {
       padding: 15px 20px;
       height: 120px;

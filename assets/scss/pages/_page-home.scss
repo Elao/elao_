@@ -2,4 +2,168 @@
   .h2--dash {
     margin-top: 0;
   }
+
+  .section {
+    margin: 0 0 100px;
+    display: flex;
+  }
+
+  .section__content {
+    margin-left: 110px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $color-text;
+    font-size: 20px;
+    line-height: 32px;
+
+    .btn {
+      margin-top: 40px;
+    }
+  }
+
+  .section__image {
+    min-width: 600px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      bottom: 40px;
+      right: -20px;
+      content: '';
+      height: 100px;
+      width: 300px;
+      background: $color-brand;
+    }
+
+    img {
+      margin: 0;
+      width: 100%;
+    }
+
+    .icon {
+      position: absolute;
+      bottom: -25px;
+      right: 40px;
+      font-size: 120px;
+      color: $color-secondary;
+    }
+  }
+
+  .section__links {
+    min-width: 600px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+    .animated-block {
+      margin: 15px;
+      width: calc(50% - 30px);
+    }
+  }
+
+  .section--reverse {
+    .section__content {
+      margin-right: 110px;
+      margin-left: 40px;
+    }
+
+    .section__image {
+      &:before {
+        right: unset;
+        left: -20px;
+      }
+
+      .icon {
+        right: unset;
+        left: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .section__content,
+  .section--reverse & {
+    margin-right: 80px;
+    margin-left: 40px;
+  }
+
+  .section__image,
+  .section__links {
+    min-width: 450px;
+  }
+
+  .section__links {
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    .animated-block {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .section {
+    margin: 0 0 60px;
+    flex-direction: column-reverse;
+  }
+
+  .section__image {
+    margin: 0 0 40px;
+    width: 100%;
+    min-width: unset;
+
+    &:before {
+      bottom: 30px;
+      height: 70px;
+      width: 170px;
+    }
+
+    .icon {
+      font-size: 95px;
+      right: 10px;
+    }
+  }
+
+  .section__content {
+    margin: 20px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+
+    .btn {
+      margin: 20px auto 0;
+      width: 100%;
+      max-width: 400px;
+      justify-content: center;
+    }
+  }
+
+  .section__links {
+    margin-top: 15px;
+    min-width: unset;
+  }
+
+  .section--reverse,
+  .section--mobile-reverse {
+    flex-direction: column;
+
+    .section__content {
+      margin: 20px 0 0;
+    }
+  }
+}
+
+@media(max-width: $screen-xs) {
+  .page-home {
+    .section__content {
+      .btn {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+  }
 }

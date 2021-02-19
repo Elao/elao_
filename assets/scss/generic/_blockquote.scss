@@ -24,8 +24,9 @@ blockquote {
   }
 }
 
-blockquote:nth-of-type(even) {
-  padding: 70px 70px 40px;
+blockquote:nth-of-type(even),
+.blockquote-secondary {
+  padding: 70px 70px 60px;
   background: $color-primary;
   color: #fff;
   font-family: 'faktum regular';
@@ -33,8 +34,9 @@ blockquote:nth-of-type(even) {
   line-height: 1.6;
 
   &:before {
-    top: -40px;
+    top: -45px;
     left: 40px;
+    font-size: 65px;
   }
 
   cite {

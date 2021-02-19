@@ -1,0 +1,134 @@
+.page-services {
+  .banner-engineering {
+    margin: 0 0 180px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      margin: 0;
+    }
+
+    blockquote {
+      margin: 0;
+      width: 840px;
+      position: absolute;
+      bottom: -120px;
+      left: 0;
+      font-family: 'antikor regular';
+      font-size: 28px;
+      line-height: 1.7;
+    }
+  }
+
+  .banner-support {
+    margin: 0 0 130px;
+    position: relative;
+
+    &:before,
+    &:after {
+      position: absolute;
+    }
+
+    &:before {
+      height: 110px;
+      width: 280px;
+      bottom: 35px;
+      left: -35px;
+      content: '';
+      background-color: $color-brand;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -50px;
+      left: 35px;
+      font-family: 'icomoon';
+      font-size: 130px;
+      color: $color-secondary;
+      line-height: 1;
+      content: '\e90c';
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+
+  .banner-tech-support {
+    margin: 40px 0 60px;
+    position: relative;
+    display: inline-flex;
+
+    &:before,
+    &:after {
+      position: absolute;
+    }
+
+    &:before {
+      height: 110px;
+      width: 280px;
+      bottom: 100px;
+      right: -35px;
+      content: '';
+      background-color: $color-brand;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 30px;
+      right: 35px;
+      font-family: 'icomoon';
+      font-size: 140px;
+      color: $color-secondary;
+      line-height: 1;
+      content: '\e914';
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+
+  .architecture {
+    margin: 100px 0 80px;
+    display: flex;
+
+    img {
+      margin: 0;
+      margin-right: 40px;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+  }
+
+  .tests {
+    margin: 0 0 80px;
+    display: flex;
+
+    img {
+      margin: 0;
+      margin-left: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .audit {
+    margin: 0 0 40px;
+    display: flex;
+
+    img {
+      margin: 0;
+      margin-right: 40px;
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+}

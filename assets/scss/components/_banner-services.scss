@@ -1,0 +1,39 @@
+.banner-services {
+  position: relative;
+}
+
+.banner-services__title {
+  margin-bottom: 60px;
+}
+
+.banner-services__content {
+  img {
+    margin: 0;
+  }
+
+  .highlight {
+    width: 620px;
+    height: 210px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "antikor regular";
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.6;
+    background: $color-brand;
+    z-index: -1;
+
+    .icon {
+      position: absolute;
+      right: 60px;
+      bottom: -45px;
+      font-size: 110px;
+      color: $color-secondary;
+      line-height: 1;
+    }
+  }
+}

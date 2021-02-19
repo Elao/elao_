@@ -1,0 +1,31 @@
+.list-inline {
+  margin: 0;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-inline__item {
+  margin: 40px 20px 60px;
+  width: calc(33.33% - 40px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  img {
+    margin: 0 0 35px;
+    width: 60px;
+  }
+
+  a {
+    margin-top: 30px;
+    font-size: 16px;
+  }
+}

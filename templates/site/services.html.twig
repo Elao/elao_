@@ -16,186 +16,214 @@
                 <h1>Découvrez <span>nos services</span></h1>
             </div>
             <div class="banner-services__content">
-                <img src="https://www.fillmurray.com/1000/400" alt="">
+                <div class="image" style="background: url('https://www.fillmurray.com/1000/400')"></div>
                 <span class="highlight">
                     Développement web et mobile
                     <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
                 </span>
             </div>
         </div>
-        <h2 class="h2--dash">Des applications web et mobile sur-mesure</h2>
 
-        <h3>Un projet pensé pour vos applications</h3>
-        <ul>
-            <li>Nous nous appuyons sur plus de 10 ans d'expérience pour faire les bons choix techniques</li>
-            <li>Nous surveillons la qualité de nos développements : revues de code, tests, outils de suivi et démonstrations au fil de l'eau</li>
-            <li>Nous construisons une architecture évolutive pour répondre à vos besoins actuels et ceux futurs</li>
-            <li>Nous nous concentrons sur vos enjeux métiers</li>
-        </ul>
+        <div class="page-services__content">
+            <h2 class="h2--dash">Des applications web et mobile <br> sur-mesure</h2>
 
-        <ul class="list-inline">
-            <li class="list-inline__item">
-                <h3>Sur-mesure</h3>
-                <p>Vous devez disposer d'un outil adapté à votre métier. Ce n'est pas votre métier qui doit s'adapter à l'outil.</p>
-            </li>
-            <li class="list-inline__item">
-                <h3>Fiable</h3>
-                <p>Vous devez avoir confiance dans votre outil au quotidien pour valoriser et rester focalisé sur votre métier.</p>
-            </li>
-            <li class="list-inline__item">
-                <h3>Évolutif</h3>
-                <p>Votre outil doit, sans barrière, évoluer conjointement avec votre métier.</p>
-            </li>
-        </ul>
-
-        <h2 class="h2--dash">Notre socle technique</h2>
-        <ul class="list-inline">
-            <li class="list-inline__item">
-                <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                <h3>Symfony</h3>
-                <p>C'est un choix et une expertise depuis 20 ans chez elao. Symfony est un framework parfaitement adapté aux applications métier spécifiques et nos équipes sont contributrices et aguerries à ses bonnes pratiques.</p>
-                <a href="#" class="link link--brand">À propos de Symfony</a>
-            </li>
-            <li class="list-inline__item">
-                <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
-                <h3>ReactJS & React Native</h3>
-                <p>Référence des framework JavaScript, nous utilisons React pour les besoins applicatifs frontend et mobile avec React Native.</p>
-                <a href="#" class="link link--brand">À propos de React</a>
-            </li>
-            <li class="list-inline__item">
-                <img src="{{ asset('build/images/technos/html5.svg') }}" alt="Logo HTML">
-                <h3>HTML & CSS</h3>
-                <p>Nous exploitons au maximum les standards HTML5 et CSS3 en faveur d'un code maintenable et modulaire en suivant les bonnes pratiques d'accessibilité.</p>
-                <a href="#" class="link link--brand">À propos de HTML & CSS</a>
-            </li>
-        </ul>
-
-        <h2 class="h2--dash">Ingénierie logicielle</h2>
-
-        <div class="banner-engineering">
-            <img src="https://www.fillmurray.com/1060/430" alt="">
-            <blockquote class="blockquote-secondary">Le coût de la qualité reste bien inférieur à celui de la non-qualité.</blockquote>
-        </div>
-
-        <p>Nous avons la culture du génie logiciel pointu. Certains de nos clients nous ont poussé à aller loin sur le terrain de la qualité au vu de la citicité de certaines de leurs applications. Ce niveau de qualité est devenu un standard chez elao et nous ne pouvons ni ne voulons y déroger.</p>
-        <p>Cette approche vertueuse du développement nous a systématiquement prouvé sa valeur ajoutée à moyen et long terme. Un investissement raisonnable au début du projet permet des gains importants en temps et en sérénité.</p>
-
-        <div class="architecture">
-            <img src="{{ asset('build/images/services/architecture.svg') }}" alt="">
-            <div>
-                <h3>Architecture applicative</h3>
-                <p>Notre approche centrée sur le produit impacte également la structure de notre code. Nous essayons de découpler au maximum le code métier, qui porte le plus de valeur ajoutée, du framework, qui sert juste à le mettre en œuvre.</p>
-                <p>Ce type d'architecture que l'on nomme DDD permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées en version du framework.</p>
-            </div>
-        </div>
-
-        <div class="tests">
-            <div>
-                <h3>Tests unitaires et fonctionnels</h3>
-                <p>Pour garantir la qualité dans le temps et la non-régression, nous mettons en place des tests automatiques de l'application eb même temps que le code est produit.</p>
-                <p>Ces tests sont lancés à chaque modification de code dans l'application et doivent tous passer avant de partir en production.</p>
-                <p>Nous nous focalisons sur les parties les plus critiques du projet. Une couvertue complète des tests n'est pas pertinente par rapport à l'investissement en temps.</p>
-                <h3>Environnement de développement</h3>
-                <p>Nous avons beaucoup investi sur l'optimisation des tâches techniques qui n'ont pas de valeur ajoutée directe pour votre projet. Couplé avec notre culture de la qualité, nous avons mis en place un écosystème complet répondant à ces problématiques.</p>
-                <p>Avec la virtualisation globale de l'environnement de développement, un nouveau développeur peut intervenir en moins d'une demi-heure sur un projet et la cohérence transverse des projets elao permet également un gain d'efficacité.</p>
-                <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture DevOps.</p>
-            </div>
-            <img src="{{ asset('build/images/services/tests.svg') }}" alt="">
-        </div>
-
-        <div class="audit">
-            <img src="{{ asset('build/images/services/audit.svg') }}" alt="">
-            <div>
-                <h3>Audit qualité</h3>
-                <p>Pour garantir et suivre les indicateurs qualité tout au long du projet, nous mettons en place systématiquement et dès le début, des outils de qualité.</p>
+            <div class="offset-content">
+                <h3>Un projet pensé pour vos utilisateurs</h3>
                 <ul>
-                    <li>
-                        <strong>SensioLabs Insight :</strong>
-                        Proposé par l'éditeur de framework Symfony, cet outil analyse le respect des bonnes pratiques au niveau du framework.
+                    <li>Nous nous appuyons sur plus de 10 ans d'expérience pour faire les bons choix techniques</li>
+                    <li>Nous surveillons la qualité de nos développements : revues de code, tests, outils de suivi et démonstrations au fil de l'eau</li>
+                    <li>Nous construisons une architecture évolutive pour répondre à vos besoins actuels et futurs</li>
+                    <li>Nous nous concentrons sur vos enjeux métier</li>
+                </ul>
+
+                <ul class="list-inline list-inline--simple">
+                    <li class="list-inline__item">
+                        <h3>Sur-mesure</h3>
+                        <p>Vous devez disposer d'un outil adapté à votre métier. Ce n'est pas votre métier qui doit s'adapter à l'outil.</p>
                     </li>
-                    <li>
-                        <strong>Scrutinizer :</strong>
-                        Cet outil est plus centré sur l'analyse du code PHP en tant que tel.
+                    <li class="list-inline__item">
+                        <h3>Fiable</h3>
+                        <p>Vous devez avoir confiance dans votre outil au quotidien pour valoriser et rester focalisé sur votre métier.</p>
+                    </li>
+                    <li class="list-inline__item">
+                        <h3>Évolutif</h3>
+                        <p>Votre outil doit, sans barrière, évoluer conjointement avec votre métier.</p>
                     </li>
                 </ul>
-                <p>Ces deux outils sont complémentaires et sont utilisés par beaucoup d'agences, le respect de ces standards vous garantit une prise en main facile du projet par des tiers.</p>
+            </div>
+
+            <h2 class="h2--dash">Notre socle technique</h2>
+
+            <div class="offset-content">
+                <ul class="list-inline">
+                    <li class="list-inline__item">
+                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
+                        <h3>Symfony</h3>
+                        <p>C'est un choix et une expertise depuis 20 ans chez elao. Symfony est un framework parfaitement adapté aux applications métier spécifiques et nos équipes sont contributrices et aguerries à ses bonnes pratiques.</p>
+                        <a href="#" class="link link--brand">À propos de Symfony</a>
+                    </li>
+                    <li class="list-inline__item">
+                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
+                        <h3>ReactJS & React Native</h3>
+                        <p>Référence des framework JavaScript, nous utilisons React pour les besoins applicatifs frontend et mobile avec React Native.</p>
+                        <a href="#" class="link link--brand">À propos de React</a>
+                    </li>
+                    <li class="list-inline__item">
+                        <img src="{{ asset('build/images/technos/html5.svg') }}" alt="Logo HTML">
+                        <h3>HTML & CSS</h3>
+                        <p>Nous exploitons au maximum les standards HTML5 et CSS3 en faveur d'un code maintenable et modulaire en suivant les bonnes pratiques d'accessibilité.</p>
+                        <a href="#" class="link link--brand">À propos de HTML & CSS</a>
+                    </li>
+                </ul>
+            </div>
+
+            <h2 class="h2--dash">Ingénierie logicielle</h2>
+
+            <div class="banner-engineering">
+                <img src="https://www.fillmurray.com/1060/430" alt="">
+                <blockquote class="blockquote-secondary">Le coût de la qualité reste bien inférieur à celui de la non-qualité.</blockquote>
+            </div>
+
+            <div class="offset-content">
+                <p>Nous avons la culture du génie logiciel pointu. Certains de nos clients nous ont poussé à aller loin sur le terrain de la qualité au vu de la criticité de certaines de leurs applications. Ce niveau de qualité est devenu un standard chez elao et nous ne pouvons ni ne voulons y déroger.</p>
+                <p>Cette approche vertueuse du développement nous a systématiquement prouvé sa valeur ajoutée à moyen et long terme. Un investissement raisonnable au début du projet permet des gains importants en temps et en sérénité.</p>
+            </div>
+
+
+            <div class="architecture">
+                <img src="{{ asset('build/images/services/architecture.svg') }}" alt="">
+                <div>
+                    <h3>Architecture applicative</h3>
+                    <p>Notre approche centrée sur le produit impacte également la structure de notre code. Nous essayons de découpler au maximum le code métier, qui porte le plus de valeur ajoutée, du framework, qui sert juste à le mettre en œuvre.</p>
+                    <p>Ce type d'architecture que l'on nomme DDD permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées en version du framework.</p>
+                </div>
+            </div>
+
+            <div class="tests">
+                <div>
+                    <div class="offset">
+                        <h3>Tests unitaires et fonctionnels</h3>
+                        <p>Pour garantir la qualité dans le temps et la non-régression, nous mettons en place des tests automatiques de l'application en même temps que le code est produit.</p>
+                        <p>Ces tests sont lancés à chaque modification de code dans l'application et doivent tous passer avant de partir en production.</p>
+                        <p>Nous nous focalisons sur les parties les plus critiques du projet. Une couvertue complète des tests n'est pas pertinente par rapport à l'investissement en temps.</p>
+                    </div>
+                    <h3>Environnement de développement</h3>
+                    <p>Nous avons beaucoup investi sur l'optimisation des tâches techniques qui n'ont pas de valeur ajoutée directe pour votre projet. Couplé avec notre culture de la qualité, nous avons mis en place un écosystème complet répondant à ces problématiques.</p>
+                    <p>Avec la virtualisation globale de l'environnement de développement, un nouveau développeur peut intervenir en moins d'une demi-heure sur un projet et la cohérence transverse des projets elao permet également un gain d'efficacité.</p>
+                    <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture DevOps.</p>
+                </div>
+                <img src="{{ asset('build/images/services/tests.svg') }}" alt="">
+            </div>
+
+            <div class="audit">
+                <img src="{{ asset('build/images/services/audit.svg') }}" alt="">
+                <div>
+                    <h3>Audit qualité</h3>
+                    <p>Pour garantir et suivre les indicateurs qualité tout au long du projet, nous mettons en place systématiquement et dès le début, des outils de qualité.</p>
+                    <ul>
+                        <li>
+                            <strong>SensioLabs Insight :</strong>
+                            Proposé par l'éditeur de framework Symfony, cet outil analyse le respect des bonnes pratiques au niveau du framework.
+                        </li>
+                        <li>
+                            <strong>Scrutinizer :</strong>
+                            Cet outil est plus centré sur l'analyse du code PHP en tant que tel.
+                        </li>
+                    </ul>
+                    <p>Ces deux outils sont complémentaires et sont utilisés par beaucoup d'agences, le respect de ces standards vous garantit une prise en main facile du projet par des tiers.</p>
+                </div>
+            </div>
+
+            <div class="review">
+                <h3>Revue de code</h3>
+                <p>Chaque nouveau développement est vérifié par un autre membre de l'équipe avant de partir en recette. Cette méthode permet une validation avec du recul pour éviter, au plus tôt, des effets de bord indésirables.</p>
+            </div>
+
+            <h2 class="h2--dash">Conseil et accompagnement</h2>
+
+            <div class="banner-support">
+                <img src="https://www.fillmurray.com/1170/400" alt="">
+            </div>
+
+            <div class="offset-content">
+                <div class="section">
+                    <h3>Notre expertise de concepteurs à votre service</h3>
+                    <p>Nous aimons notre métier, nous aimons le faire bien et le partage d'expérience est profondément ancré dans notre ADN. Aussi, nous proposons de vous accompagner à tous les niveaux de la conception de votre app, sans se limiter au développement.</p>
+                </div>
+                <div class="section">
+                    <h3>Un accompagnement global tout au long du projet, adapté à votre contexte</h3>
+                    <p>Ce qui nous fait vibrer, c'est de sortir le nez de notre écran et de construire avec vous le meilleur projet, qui corresponde à votre métier et à vos utilisateurs. Si nous n'aimons pas particulièrement les cahiers des charges trop fournis, c'est parce que notre équipe est efficace quand elle est actrice des choix techniques et fonctionnels et qu'elle les comprend.</p>
+                    <p>Ainsi, chez elao, nous devenons votre équipe produit : plus partenaires que prestataires, nous misons sur la transparence totale tout au long du projet. Nos 15 ans d'expérience nous aident dans la mise en place de méthodologies éprouvées pour vous garantir le meilleur accompagnement.</p>
+
+                    <a href="#" class="btn btn--secondary btn--animated">
+                        <span>
+                            Notre méthologie
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="section">
+                    <h3>Défricher ensemble votre projet</h3>
+                    <ul>
+                        <li>Définir ensemble l'essence et les subtilités de votre métier</li>
+                        <li>Connaître vos utilisateurs</li>
+                        <li>S'adapter à leurs contraintes (et aux vôtres)</li>
+                        <li>Comprendre le contexte et l'environnement dans lequel vous évoluez</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Construire une feuille de route pertinente</h3>
+                    <ul>
+                        <li>Permettre à chacun d'exprimer son besoin afin d'aboutir à un périmètre fonctionnel adapté</li>
+                        <li>Mettre en place une méthodologie qui fonctionne dans votre contexte</li>
+                        <li>Vous permettre de faire des choix techniques et stratégiques en tout connaissance de cause</li>
+                        <li>Construire un planning réaliste et serein</li>
+                        <li>Estimer finement le temps de développement de chaque fonctionnel pour prioriser en fonction de votre enveloppe budgétaire</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Mettre en place la bonne équipe pour contruire votre produit</h3>
+                    <ul>
+                        <li>Une équipe technique adaptée aux besoins de votre projet</li>
+                        <li>Un facilitateur pour fluidifier les échanges</li>
+                        <li>Vous aider à trouver les bons partenaires pour les étapes importantes (UX/UI, hébergement...) et vous accompagner pour les guider tout au long du projet</li>
+                    </ul>
+
+                    <a href="#" class="btn btn--secondary btn--animated">
+                        <span>
+                            Nos engagements
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="h2--dash">Un accompagnement technique <br> personnalisé selon vos besoins</h2>
+
+            <div class="banner-tech-support">
+                <img src="https://www.fillmurray.com/1170/400" alt="">
+            </div>
+
+            <div class="offset-content">
+                <div class="section">
+                    <p>Nous sommes régulièrement sollicités pour faire de l'accompagnement technique poussé auprès d'équipes techniques ou produit déjà en place, souvent dans le but d'offrir un regard extérieur bienveillant mais exigent. Cet accompagnement peut avoir divers objectifs :</p>
+                    <ul>
+                        <li>Vous aider à organiser et même recruter votre équipe tech</li>
+                        <li>Vous accompagner dans l'architecture technique de votre projet</li>
+                        <li>Construire avec vous un backlog de votre produit</li>
+                        <li>Vous aider à améliorer la qualité de vos développements à travers de la revue de code ou des audits techniques</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <div>
-            <h3>Revue de code</h3>
-            <p>Chaque nouveau développement est vérifié par un autre membre de l'équipe avant de partir en recette. Cette méthode permet une validation avec du recul pour éviter, au plus tôt, des effets de bord indésirables.</p>
-        </div>
-
-        <h2 class="h2--dash">Conseil et accompagnement</h2>
-
-        <div class="banner-support">
-            <img src="https://www.fillmurray.com/1170/400" alt="">
-        </div>
-
-        <h3>Notre expertise de concepteurs à votre service</h3>
-        <p>Nous aimons notre métier, nous aimons le faire bien et le partage d'expérience est profondément ancré dans notre ADN. Aussi, nous proposons de vous accompagner à tous les niveaux de la conception de votre app, sans se limiter au développement.</p>
-
-        <h3>Un accompagnement global tout au long du projet, adapté à votre contexte</h3>
-        <p>Ce qui nous fait vibrer, c'est de sortir le nez de notre écran et de construire avec vous le meilleur projet, qui corresponde à votre métier et à vos utilisateurs. Si nous n'aimons pas particulièrement les cahiers des charges trop fournis, c'est parce que notre équipe est efficace quand elle est actrice des choix techniques et fonctionnels et qu'elle les comprend.</p>
-        <p>Ainsi, chez elao, nous devenons votre équipe produit : plus partenaires que prestataires, nous misons sur la transparence totale tout au long du projet. Nos 15 ans d'expérience nous aident dans la mise en place de méthodologies éprouvées pour vous garantir le meilleur accompagnement.</p>
-
-        <a href="#" class="btn btn--secondary btn--animated">
-            <span>
-                Découvrir notre méthologie
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
-                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
-                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
-                </svg>
-            </span>
-        </a>
-
-        <h3>Défricher ensemble votre projet</h3>
-        <ul>
-            <li>Définir ensemble l'essence et les subtilités de votre métier</li>
-            <li>Connaître vos utilisateurs</li>
-            <li>S'adapter à leurs contraintes (et aux vôtres)</li>
-            <li>Comprendre le contexte et l'environnement dans lequel vous évoluez</li>
-        </ul>
-
-        <h3>Construire une feuille de route pertinente</h3>
-        <ul>
-            <li>Permettre à chacun d'exprimer son besoin afin d'aboutir à un périmètre fonctionnel adapté</li>
-            <li>Mettre en place une méthodologie qui fonctionne dans votre contexte</li>
-            <li>Vous permettre de faire des choix techniques et stratégiques en tout connaissance de cause</li>
-            <li>Construire un planning réaliste et serein</li>
-            <li>Estimer finement le temps de développement de chaque fonctionnel pour prioriser en fonction de votre enveloppe budgétaire</li>
-        </ul>
-
-        <h3>Mettre en place la bonne équipe pour contruire votre produit</h3>
-        <ul>
-            <li>Une équipe technique adaptée aux besoins de votre projet</li>
-            <li>Un facilitateur pour fluidifier les échanges</li>
-            <li>Vous aider à trouver les bons partenaires pour les étapes importantes (UX/UI, hébergement...) et vous accompagner pour les guider tout au long du projet</li>
-        </ul>
-
-        <a href="#" class="btn btn--secondary btn--animated">
-            <span>
-                Découvrir nos engagements
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
-                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
-                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
-                </svg>
-            </span>
-        </a>
-
-        <h2 class="h2--dash">Un accompagnement technique <br> personnalisé selon vos besoins</h2>
-
-        <div class="banner-tech-support">
-            <img src="https://www.fillmurray.com/1170/400" alt="">
-        </div>
-
-        <p>Nous sommes régulièrement sollicités pour faire de l'accompagnement technique poussé auprès d'équipes techniques ou produit déjà en place, souvent dans le but d'offrir un regard extérieur bienveillant mais exigent. Cet accompagnement peut avoir divers objectifs :</p>
-        <ul>
-            <li>Vous aider à organiser et même recruter votre équipe tech</li>
-            <li>Vous accompagner dans l'architecture technique de votre projet</li>
-            <li>Construire avec vous un backlog de votre produit</li>
-            <li>Vous aider à améliorer la qualité de vos développements à travers de la revue de code ou des audits techniques</li>
-        </ul>
     </div>
 {% endblock %}

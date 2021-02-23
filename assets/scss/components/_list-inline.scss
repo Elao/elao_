@@ -29,3 +29,33 @@
     font-size: 16px;
   }
 }
+
+@media (max-width: $screen-md) {
+  .list-inline {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .list-inline__item {
+    margin: 0 0 40px;
+    width: 100%;
+
+    h3 {
+      margin: 20px 0;
+    }
+
+    img {
+      margin: 40px 0 10px;
+    }
+
+    a {
+      margin-top: 10px;
+    }
+  }
+
+  .list-inline--simple {
+    .list-inline__item {
+      margin: 0 0 10px;
+    }
+  }
+}

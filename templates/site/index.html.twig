@@ -76,14 +76,24 @@
                 </a>
             </div>
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <img
+                    {{ stimulus_controller('symfony--ux-lazy-image--lazy-image') }}
+                    src="{{ data_uri_thumbnail(project_dir ~ '/public/images/placeholders/fillmurray640x490.jpg', 80, 60) }}"
+                    data-hd-src="https://www.fillmurray.com/640/490"
+                    alt=""
+                />
                 <i class="icon icon--chevrons-right" aria-hidden="true"></i>
             </div>
         </section>
 
         <section class="section-home section-home--reverse">
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <img
+                    {{ stimulus_controller('symfony--ux-lazy-image--lazy-image') }}
+                    src="{{ data_uri_thumbnail(project_dir ~ '/public/images/placeholders/fillmurray640x490.jpg', 80, 60) }}"
+                    data-hd-src="https://www.fillmurray.com/640/490"
+                    alt=""
+                />
                 <i class="icon icon--brackets-left" aria-hidden="true"></i>
             </div>
             <div class="section-home__content">
@@ -204,7 +214,12 @@
 
         <section class="section-home section-home--reverse">
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <img
+                    {{ stimulus_controller('symfony--ux-lazy-image--lazy-image') }}
+                    src="{{ data_uri_thumbnail(project_dir ~ '/public/images/placeholders/fillmurray640x490.jpg', 80, 60) }}"
+                    data-hd-src="https://www.fillmurray.com/640/490"
+                    alt=""
+                />
                 <i class="icon icon--square-brackets-left" aria-hidden="true"></i>
             </div>
             <div class="section-home__content">

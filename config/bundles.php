@@ -12,4 +12,5 @@ return [
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
     Stenope\Bundle\StenopeBundle::class => ['all' => true],
     Elao\Bundle\Accesseo\ElaoAccesseoBundle::class => ['dev' => true],
+    Symfony\UX\LazyImage\LazyImageBundle::class => ['all' => true],
 ];

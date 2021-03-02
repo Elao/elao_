@@ -1,3 +1,6 @@
+// start the Stimulus application
+import './bootstrap';
+
 import Toggle from './feature/Toggle';
 
 function init() {

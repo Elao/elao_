@@ -31,11 +31,8 @@ clear:
 # Build #
 #########
 
-## Build static site with assets
-build: build-assets build-content
-
 ## Build assets
-build-assets:
+build:
 	npm run build
 
 ## Build static site
@@ -44,8 +41,11 @@ build-content:
 	bin/console cache:clear
 	bin/console stenope:build
 
-## Build the site and serve the static version
-serve-static: build-content
+## Build static site with assets
+build-static: build build-content
+
+## Serve the static version
+serve-static:
 	open http://localhost:8000
 	php -S localhost:8000 -t build
 

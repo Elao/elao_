@@ -44,7 +44,7 @@ h2, .h2 {
 }
 
 h3 {
-  margin: 20px 0;
+  margin: 20px 0 30px;
   color: #1e7695;
   font-family: 'antikor bold';
   font-size: 20px;
@@ -133,5 +133,10 @@ h6 {
   h2, .h2 {
     font-size: 18px;
     line-height: 1.6 !important;
+  }
+
+  .h2--dash {
+    font-size: 32px;
+    line-height: 1.4 !important;
   }
 }

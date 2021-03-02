@@ -84,75 +84,79 @@
 }
 
 @media (max-width: $screen-md) {
-  .section__content,
-  .section--reverse & {
-    margin-right: 80px;
-    margin-left: 40px;
-  }
+  .page-home {
+    .section__content,
+    .section--reverse {
+      margin-right: 80px;
+      margin-left: 40px;
+    }
 
-  .section__image,
-  .section__links {
-    min-width: 450px;
-  }
+    .section__image,
+    .section__links {
+      min-width: 450px;
+    }
 
-  .section__links {
-    flex-wrap: nowrap;
-    flex-direction: column;
+    .section__links {
+      flex-wrap: nowrap;
+      flex-direction: column;
 
-    .animated-block {
-      margin: 5px 0;
-      width: 100%;
+      .animated-block {
+        margin: 5px 0;
+        width: 100%;
+      }
     }
   }
 }
 
 @media (max-width: $screen-sm) {
-  .section {
-    margin: 0 0 60px;
-    flex-direction: column-reverse;
-  }
-
-  .section__image {
-    margin: 0 0 40px;
-    width: 100%;
-    min-width: unset;
-
-    &:before {
-      bottom: 30px;
-      height: 70px;
-      width: 170px;
+  .page-home {
+    .section {
+      margin: 0 0 60px;
+      flex-direction: column-reverse;
     }
 
-    .icon {
-      font-size: 95px;
-      right: 10px;
-    }
-  }
-
-  .section__content {
-    margin: 20px 0 0;
-    font-size: 16px;
-    line-height: 1.5;
-
-    .btn {
-      margin: 20px auto 0;
+    .section__image {
+      margin: 0 0 40px;
       width: 100%;
-      max-width: 400px;
-      justify-content: center;
+      min-width: unset;
+
+      &:before {
+        bottom: 30px;
+        height: 70px;
+        width: 170px;
+      }
+
+      .icon {
+        font-size: 95px;
+        right: 10px;
+      }
     }
-  }
-
-  .section__links {
-    margin-top: 15px;
-    min-width: unset;
-  }
-
-  .section--reverse,
-  .section--mobile-reverse {
-    flex-direction: column;
 
     .section__content {
       margin: 20px 0 0;
+      font-size: 16px;
+      line-height: 1.5;
+
+      .btn {
+        margin: 20px auto 0;
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+      }
+    }
+
+    .section__links {
+      margin-top: 15px;
+      min-width: unset;
+    }
+
+    .section--reverse,
+    .section--mobile-reverse {
+      flex-direction: column;
+
+      .section__content {
+        margin: 20px 0 0;
+      }
     }
   }
 }

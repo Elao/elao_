@@ -47,7 +47,7 @@ The Symfony CLI exposes you the URL at which the site is available.
 
 ## Build assets
 
-    make build-assets
+    make build
 
 ### Start asset watcher
 

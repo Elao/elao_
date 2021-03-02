@@ -1,11 +1,12 @@
-.section {
-  margin: 0 0 100px;
+.section-home {
+  margin: 0 0 180px;
   display: flex;
 }
 
-.section__content {
+.section-home__content {
   margin-left: 110px;
   margin-right: 40px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -13,12 +14,25 @@
   font-size: 20px;
   line-height: 32px;
 
+  h2 {
+    margin-top: 0;
+  }
+
+  .dash {
+    width: 50px;
+    height: 12px;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    background: $color-tertiary;
+  }
+
   .btn {
     margin-top: 40px;
   }
 }
 
-.section__image {
+.section-home__image {
   min-width: 600px;
   position: relative;
 
@@ -46,7 +60,7 @@
   }
 }
 
-.section__links {
+.section-home__links {
   min-width: 600px;
   position: relative;
   display: flex;
@@ -58,13 +72,13 @@
   }
 }
 
-.section--reverse {
-  .section__content {
+.section-home--reverse {
+  .section-home__content {
     margin-right: 110px;
     margin-left: 40px;
   }
 
-  .section__image {
+  .section-home__image {
     &:before {
       right: unset;
       left: -20px;
@@ -78,18 +92,18 @@
 }
 
 @media (max-width: $screen-md) {
-  .section__content,
-  .section--reverse & {
+  .section-home__content,
+  .section-home--reverse {
     margin-right: 80px;
     margin-left: 40px;
   }
 
-  .section__image,
-  .section__links {
+  .section-home__image,
+  .section-home__links {
     min-width: 450px;
   }
 
-  .section__links {
+  .section-home__links {
     flex-wrap: nowrap;
     flex-direction: column;
 
@@ -101,12 +115,12 @@
 }
 
 @media (max-width: $screen-sm) {
-  .section {
+  .section-home {
     margin: 0 0 60px;
     flex-direction: column-reverse;
   }
 
-  .section__image {
+  .section-home__image {
     margin: 0 0 40px;
     width: 100%;
     min-width: unset;
@@ -123,7 +137,7 @@
     }
   }
 
-  .section__content {
+  .section-home__content {
     margin: 20px 0 0;
     font-size: 16px;
     line-height: 1.5;
@@ -136,23 +150,23 @@
     }
   }
 
-  .section__links {
+  .section-home__links {
     margin-top: 15px;
     min-width: unset;
   }
 
-  .section--reverse,
-  .section--mobile-reverse {
+  .section-home--reverse,
+  .section-home--mobile-reverse {
     flex-direction: column;
 
-    .section__content {
+    .section-home__content {
       margin: 20px 0 0;
     }
   }
 }
 
 @media(max-width: $screen-xs) {
-  .section__content {
+  .section-home__content {
     .btn {
       width: 100%;
       max-width: unset;

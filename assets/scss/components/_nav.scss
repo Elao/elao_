@@ -18,6 +18,14 @@
     display: none;
   }
 
+  &:last-of-type {
+    margin-right: 0;
+
+    a {
+      font-family: 'antikor bold';
+    }
+  }
+
   a {
     display: flex;
     font-family: 'antikor medium';

@@ -1,11 +1,10 @@
-// Basic titles
 h1, .h1 {
   margin: 0 0 30px 110px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-family: 'faktum bold';
-  font-size: 58px;
+  font-size: 36px;
   color: $color-brand;
 
   span {
@@ -29,9 +28,24 @@ h2, .h2 {
   line-height: 1.45 !important;
 }
 
+.h2--dash {
+  margin-top: 70px;
+  padding-top: 65px;
+
+  &:before {
+    width: 50px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: $color-tertiary;
+  }
+}
+
 h3 {
   margin: 20px 0;
-  color: #1E7695;
+  color: #1e7695;
   font-family: 'antikor bold';
   font-size: 20px;
   line-height: 1.25;
@@ -52,27 +66,6 @@ h6 {
   font-family: 'antikor bold';
   font-size: 18px;
   line-height: 1.25;
-}
-
-// Special titles
-.h1--small {
-  margin: 0;
-  font-size: 36px;
-}
-
-.h2--dash {
-  margin-top: 70px;
-  padding-top: 65px;
-
-  &:before {
-    width: 50px;
-    height: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    background: $color-tertiary;
-  }
 }
 
 .anchor-title {
@@ -120,12 +113,6 @@ h6 {
 @media (max-width: $screen-sm) {
   h1, .h1 {
     margin-left: 40px;
-    font-size: 50px;
-  }
-
-  .h2--dash {
-    padding-top: 35px;
-    font-size: 32px;
   }
 
   .anchor-title {

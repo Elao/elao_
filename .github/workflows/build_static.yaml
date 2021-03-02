@@ -59,7 +59,7 @@ jobs:
       - name: 'Warmup'
         run: |
           echo "::group::warmup production env"
-            npx encore production --color=always --no-progress
+            npx encore production --color
             bin/console cache:clear --ansi
             bin/console cache:warmup --ansi
           echo "::endgroup::"

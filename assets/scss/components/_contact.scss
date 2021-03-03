@@ -4,6 +4,10 @@
   background: $color-secondary;
 }
 
+.contact__main {
+  flex: 1;
+}
+
 .contact__message {
   display: flex;
   flex-direction: column;

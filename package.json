@@ -16,7 +16,7 @@
         "dev-server": "encore dev-server",
         "dev": "encore dev",
         "watch": "encore dev --watch",
-        "build": "encore production --progress",
+        "build": "encore production",
         "lint": "eslint assets/js --ext .js,.json",
         "fix": "eslint assets/js --ext .js,.json --fix"
     },
@@ -24,15 +24,20 @@
         "node": ">=12"
     },
     "devDependencies": {
-        "@symfony/webpack-encore": "^0.33.0",
+        "@symfony/stimulus-bridge": "^2.0.2",
+        "@symfony/webpack-encore": "^1.1.2",
         "autoprefixer": "^9.8.6",
+        "babel-eslint": "^10.1.0",
         "core-js": "^3.8.3",
-        "eslint": "^7.19.0",
+        "eslint": "^7.21.0",
+        "eslint-plugin-json": "^2.1.2",
+        "file-loader": "^6.2.0",
         "node-sass": "^4.14.1",
         "postcss-loader": "^3.0.0",
         "prismjs": "^1.23.0",
         "regenerator-runtime": "^0.13.2",
         "sass-loader": "^8.0.0",
+        "stimulus": "^2.0.0",
         "webpack-notifier": "^1.13.0"
     }
 }

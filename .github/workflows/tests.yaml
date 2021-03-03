@@ -94,7 +94,7 @@ jobs:
 
       - name: 'Check build static'
         run: |
-          npx encore production --color=always --no-progress
+          npx encore production --color
           bin/console stenope:build --no-interaction -vv --ansi
         env:
           APP_ENV: prod

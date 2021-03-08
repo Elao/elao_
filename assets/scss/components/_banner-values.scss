@@ -1,0 +1,35 @@
+.banner-values {
+  margin-bottom: 135px;
+  position: relative;
+}
+
+.banner-values__title {}
+
+.banner-values__content {
+  .image {
+    margin: 0;
+    width: 1170px;
+    width: 100%;
+    height: 400px;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .highlight {
+    width: 620px;
+    height: 210px;
+    position: absolute;
+    bottom: -90px;
+    right: 0;
+    background: $color-brand;
+
+    .icon {
+      position: absolute;
+      right: 75px;
+      bottom: -45px;
+      font-size: 125px;
+      color: $color-secondary;
+      line-height: 1;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.checklist {
+  margin-top: 45px;
+  padding: 75px 45px 75px 75px;
+  position: relative;
+  background: $color-info;
+
+  &:before {
+    position: absolute;
+    top: -45px;
+    left: 45px;
+    width: 85px;
+    height: 70px;
+    content: '';
+    background: url('../../images/check.svg');
+    background-size: contain;
+  }
+}
+
+.checklist__item {
+  margin-bottom: 35px;
+  color: #fff;
+
+  &:before {
+    border-color: rgba(254, 227, 228, .4);
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

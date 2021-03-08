@@ -1,0 +1,35 @@
+.statistics {
+  padding: 60px 70px;
+  min-height: 350px;
+  width: 400px;
+  font-family: 'faktum regular';
+  font-size: 20px;
+}
+
+.statistics__figure {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  width: 100%;
+  display: flex;
+  font-family: 'antikor medium';
+  font-size: 130px;
+  line-height: 1;
+  border-bottom: solid 23px;
+}
+
+$statistics: primary   $color-secondary $color-secondary $color-primary   $color-brand,
+             secondary $color-primary   $color-primary   $color-secondary $color-brand,
+             info      $color-secondary $color-secondary $color-info      $color-light,
+             dark      $color-secondary $color-secondary $color-dark      $color-primary;
+
+@each $style, $text-color, $figure-color, $background-color, $dash-color in $statistics {
+  .statistics--#{$style} {
+    color: $text-color;
+    background: $background-color;
+
+    .statistics__figure {
+      color: $figure-color;
+      border-bottom-color: $dash-color;
+    }
+  }
+}

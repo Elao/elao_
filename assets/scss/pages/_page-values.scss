@@ -1,0 +1,36 @@
+.page-values {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  h2 {
+    grid-column: 2 / 13;
+  }
+
+  .offset-content {
+    grid-column: 3 / 12;
+  }
+
+  .humility {
+    grid-column: 1 / 12;
+  }
+
+  .checklist {
+    grid-column: 1 / 10;
+  }
+
+  .diversity {
+    grid-column: 1 / 12;
+  }
+
+  .anchorage {
+    grid-column: 2 / 8;
+  }
+
+  .mosaic {
+    grid-column: 1 / 13;
+  }
+
+  .accessibility {
+    grid-column: 3 / 10;
+  }
+}

@@ -1,5 +1,5 @@
 .checklist {
-  margin-top: 45px;
+  margin: 0 0 50px;
   padding: 75px 45px 75px 75px;
   position: relative;
   background: $color-info;
@@ -13,6 +13,8 @@
     content: '';
     background: url('../../images/check.svg');
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 }
 
@@ -26,5 +28,17 @@
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .checklist {
+    padding: 75px 30px 75px 60px;
+
+    &:before {
+      width: 60px;
+      left: unset;
+      right: 30px;
+    }
   }
 }

@@ -1,7 +1,8 @@
 .statistics {
   padding: 60px 70px;
   min-height: 350px;
-  width: 400px;
+  min-width: 390px;
+  width: 390px;
   font-family: 'faktum regular';
   font-size: 20px;
 }
@@ -10,10 +11,11 @@
   margin-bottom: 30px;
   padding-bottom: 15px;
   width: 100%;
-  display: flex;
+  display: block;
   font-family: 'antikor medium';
   font-size: 130px;
   line-height: 1;
+  text-align: center;
   border-bottom: solid 23px;
 }
 
@@ -31,5 +33,24 @@ $statistics: primary   $color-secondary $color-secondary $color-primary   $color
       color: $figure-color;
       border-bottom-color: $dash-color;
     }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .statistics {
+    padding: 50px 30px;
+    width: 350px;
+    min-width: unset;
+  }
+
+  .statistics__figure {
+    font-size: 110px;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .statistics {
+    width: 100%;
+    min-width: unset;
   }
 }

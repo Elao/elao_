@@ -1,6 +1,4 @@
-.page-services {}
-
-.page-services__content {
+.page-services {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
@@ -175,7 +173,7 @@
 }
 
 @media (max-width: $screen-md) {
-  .page-services__content {
+  .page-services {
     h2 {
       grid-column: 1 / 13;
     }
@@ -228,7 +226,7 @@
 }
 
 @media (max-width: $screen-xs) {
-  .page-services__content {
+  .page-services {
     .banner-engineering {
       margin: 0 0 150px;
 
@@ -273,7 +271,7 @@
 }
 
 @media (max-width: $screen-sm) {
-  .page-services__content {
+  .page-services {
     .btn {
       width: 100%;
       justify-content: center;

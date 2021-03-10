@@ -88,7 +88,7 @@
   }
 
   .accessibility {
-    margin-top: 50px;
+    margin: 50px 0;
     display: flex;
     grid-column: 3 / 12;
 
@@ -159,12 +159,19 @@
     }
 
     .accessibility {
-      flex-direction: column-reverse;
       grid-column: 1 / 13;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .page-values {
+    .accessibility {
+      flex-direction: column-reverse;
 
       img {
-        margin: 40px 0 0;
-        width: 100%;
+        margin: 60px auto 0;
+        width: 350px;
       }
     }
   }
@@ -184,6 +191,13 @@
       .statistics {
         margin: 0 0 20px !important;
         max-width: unset;
+      }
+    }
+
+    .accessibility {
+      img {
+        margin: 40px 0 0;
+        width: 100%;
       }
     }
   }

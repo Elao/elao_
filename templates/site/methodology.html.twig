@@ -1,5 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Methodo
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+          <a href="{{ path('homepage') }}">Accueil</a>
+        </li>
+        <li class="breadcrumb__item">
+          Notre méthodologie
+        </li>
+    </ul>
+
+    <div class="banner-methodology">
+        <div class="banner-methodology__title">
+            <h1>Découvrez <span>notre méthodologie</span></h1>
+        </div>
+        <div class="banner-methodology__content">
+            <div class="info">
+                <p>Elao est avant tout une équipe de concepteurs / développeurs seniors. Un projet est généralement composé d’une équipe technique dédiée de 2 ou 3 personnes sur 3 à 6 mois.</p>
+                <p>Notre particularité : <strong>pas de chef de projet.</strong> Ce sont les développeurs qui seront vos contacts privilégiés et qui auront à cœur d’être réactifs et proactifs concernant vos besoins. Les facilitateurs de l’équipe sont là pour garantir une fluidité dans les échanges mais ne doivent jamais être un goulot d’étranglement dans le projet.</p>
+            </div>
+            <img src="{{ asset('build/images/methodology/typical-team.svg') }}" alt="Schéma d'une équipe type elao : développeur backend, développeur frontend, intégratrice, facilitateur">
+        </div>
+    </div>
 {% endblock %}

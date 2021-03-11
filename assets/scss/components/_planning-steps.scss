@@ -1,0 +1,43 @@
+.planning-steps {
+  padding: 0;
+  max-height: 950px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  z-index: 2;
+}
+
+.planning-steps__item {
+  margin: 0 20px 30px;
+  padding: 40px 45px 50px;
+  width: calc(50% - 40px);
+  color: #fff;
+  background: $color-dark;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &:nth-of-type(-n+3) {
+    position: relative;
+    top: -130px;
+  }
+
+  h4 {
+    margin: 0 0 25px;
+    display: flex;
+    align-items: center;
+    font-family: 'antikor bold';
+    font-size: 18px;
+    color: $color-light;
+
+    .icon {
+      margin-right: 20px;
+      font-size: 50px;
+      color: #fff;
+    }
+  }
+}

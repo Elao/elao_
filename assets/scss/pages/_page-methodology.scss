@@ -1,0 +1,27 @@
+.page-methodology {
+  .banner-planning {
+    margin: 60px 0 0;
+    position: relative;
+
+    img {
+      margin: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      height: 190px;
+      width: 500px;
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      content: '';
+      background: $color-secondary;
+    }
+  }
+
+  .planning-steps {
+    position: relative;
+    top: -35px;
+  }
+}

@@ -29,6 +29,7 @@ h2, .h2 {
 }
 
 .h2--dash {
+  @extend .h2;
   margin-top: 70px;
   padding-top: 65px;
 
@@ -43,9 +44,19 @@ h2, .h2 {
   }
 }
 
+.h2--ordered {
+  @extend .h2;
+  margin: 60px 0 40px;
+
+  span {
+    font-size: 24px;
+    color: $color-brand;
+  }
+}
+
 h3 {
   margin: 20px 0 30px;
-  color: #1e7695;
+  color: $color-info;
   font-family: 'antikor bold';
   font-size: 20px;
   line-height: 1.25;

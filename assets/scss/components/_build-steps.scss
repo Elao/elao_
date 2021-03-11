@@ -1,0 +1,17 @@
+.build-steps {}
+
+.build-steps__item {
+  color: #fff;
+  background: $color-dark;
+  display: flex;
+  align-items: center;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  color: $color-light;
+
+  .icon {
+    margin-right: 20px;
+    font-size: 50px;
+    color: #fff;
+  }
+}

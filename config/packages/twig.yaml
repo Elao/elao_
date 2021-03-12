@@ -10,17 +10,17 @@ twig:
 
             menu:
                 - { path: 'services', label: 'Nos services' }
-                - { path: 'methodology', label: 'Notre méthodologie' }
-                - { path: 'case_studies', label: 'Nos études de cas' }
+                - { path: 'methodology', label: 'Méthodologie' }
+                - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'values', label: 'Nos valeurs' }
                 - { path: 'team', label: 'La tribu' }
                 - { path: 'blog', label: 'Blog' }
                 - { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' }
             footer:
                 - { path: 'services', label: 'Nos services' }
-                - { path: 'case_studies', label: 'Nos études de cas' }
-                - { path: 'blog', label: 'Blog' }
-                - { path: 'methodology', label: 'Notre méthodologie' }
                 - { path: 'team', label: 'La tribu' }
+                - { path: 'methodology', label: 'Méthodologie' }
+                - { path: 'blog', label: 'Blog' }
+                - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'contact', label: 'Contact' }
                 - { path: 'values', label: 'Nos valeurs' }

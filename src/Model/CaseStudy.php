@@ -22,4 +22,5 @@ class CaseStudy
     public array $images = [];
     public array $technologies = [];
     public array $members = [];
+    public bool $enabled = true;
 }

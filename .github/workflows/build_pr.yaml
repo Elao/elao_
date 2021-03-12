@@ -100,8 +100,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           description: "Deployed PR #${{ github.event.number }}"
-          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}
-          environment_url: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
+          environment_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
           state: "success"
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
 

@@ -80,21 +80,11 @@
                     </a>
                 {% endblock %}
 
-                {% set menu = [
-                    { path: 'services', label: 'Nos services' },
-                    { path: 'methodology', label: 'Notre méthodologie' },
-                    { path: 'case_studies', label: 'Nos études de cas', desktop: false },
-                    { path: 'values', label: 'Nos valeurs' },
-                    { path: 'team', label: 'La tribu' },
-                    { path: 'blog', label: 'Blog' },
-                    { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' },
-                ] %}
-
                 {% block desktop_nav %}
                     <!-- Desktop nav -->
                     <nav class="nav">
                         <ul>
-                            {% for item in menu|filter(item => item.desktop ?? true) %}
+                            {% for item in site.menu|filter(item => item.desktop ?? true) %}
                                 <li class="nav__item">
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
@@ -121,7 +111,7 @@
                             </button>
                         </div>
                         <ul>
-                            {% for item in menu|filter(item => item.mobile ?? true) %}
+                            {% for item in site.menu|filter(item => item.mobile ?? true) %}
                                 <li class="nav-mobile__item {{ item.mobileClass|default('') }}">
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
@@ -154,36 +144,20 @@
                     </p>
                     <div class="links">
                         <ul>
-                            <li>
-                                <a href="{{ path('services') }}">Nos services</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('case_studies') }}">Nos études de cas</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('blog') }}">Blog</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('methodology') }}">Notre méthodologie</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('team') }}">La tribu</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('contact') }}">Contact</a>
-                            </li>
-                            <li>
-                                <a href="{{ path('values') }}">Nos valeurs</a>
-                            </li>
-                            <li>
-                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                                <a href="{{ path('jobs') }}">
-                                    Nous recrutons
-                                    {% if count %}
-                                        <span class="bullet">{{ count }}</span>
-                                    {% endif %}
-                                </a>
-                            </li>
+                            {% for item in site.footer %}
+                                <li>
+                                    <a href="{{ path(item.path) }}">{{ item.label }}</a>
+                                </li>
+                            {% endfor %}
+{#                            <li>#}
+{#                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}#}
+{#                                <a href="{{ path('jobs') }}">#}
+{#                                    Nous recrutons#}
+{#                                    {% if count %}#}
+{#                                        <span class="bullet">{{ count }}</span>#}
+{#                                    {% endif %}#}
+{#                                </a>#}
+{#                            </li>#}
                         </ul>
                     </div>
                     <div class="socials">

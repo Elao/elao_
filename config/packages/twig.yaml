@@ -1,9 +1,26 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
-      site:
-          title: "Elao_"
-          description: "Elao est un atelier de co-conception d'applications web et mobile sur mesure."
-          contact:
-            email: lyon@elao.com
-            phone: +33 (0)4 82 53 37 19
+        site:
+            title: "Elao_"
+            description: "Elao est un atelier de co-conception d'applications web et mobile sur mesure."
+            contact:
+                email: lyon@elao.com
+                phone: +33 (0)4 82 53 37 19
+
+            menu:
+                - { path: 'services', label: 'Nos services' }
+                - { path: 'methodology', label: 'Notre méthodologie' }
+                - { path: 'case_studies', label: 'Nos études de cas' }
+                - { path: 'values', label: 'Nos valeurs' }
+                - { path: 'team', label: 'La tribu' }
+                - { path: 'blog', label: 'Blog' }
+                - { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' }
+            footer:
+                - { path: 'services', label: 'Nos services' }
+                - { path: 'case_studies', label: 'Nos études de cas' }
+                - { path: 'blog', label: 'Blog' }
+                - { path: 'methodology', label: 'Notre méthodologie' }
+                - { path: 'team', label: 'La tribu' }
+                - { path: 'contact', label: 'Contact' }
+                - { path: 'values', label: 'Nos valeurs' }

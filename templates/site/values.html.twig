@@ -1,5 +1,124 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Nos valeurs
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+          <a href="{{ path('homepage') }}">Accueil</a>
+        </li>
+        <li class="breadcrumb__item">
+          Nos valeurs
+        </li>
+    </ul>
+
+    <div class="banner-values">
+        <div class="banner-values__title">
+            <h1>Découvrez <span>nos valeurs</span></h1>
+        </div>
+        <div class="banner-values__content">
+            <div class="image" style="background: url('https://www.fillmurray.com/1000/400')"></div>
+            <span class="highlight">
+                <i class="icon icon--brackets-left" aria-hidden="true"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="page-values">
+        <h2 class="h2--dash">L'humain avant tout</h2>
+
+        <div class="offset-content">
+            <ul class="list-inline list-inline--simple">
+                <li class="list-inline__item">
+                    <h3>Donner du sens</h3>
+                    <p>Nous nous engageons sur des projets avec des clients ayant des valeurs communes aux nôtres car l'expérience nous a appris qu'à trop en sortir, personne n'en sort gagnant.</p>
+                </li>
+                <li class="list-inline__item">
+                    <h3>S'engager</h3>
+                    <p>Quand on s'engage dans un projet avec un client, on y met toute l'énergie possible et ce, dès la première rencontre.</p>
+                </li>
+                <li class="list-inline__item">
+                    <h3>Prendre plaisir</h3>
+                    <p>Bien vivre et bien faire vivre les équipes, c'est ce qui motive au quotidien les cofondateurs d'elao. On ne se souvient plus de la date de notre dernière charrette et on est très fiers quand on peut fermer les bureaux à 17h30. Nous mettons un point d'honneur à garder notre équilibre pro-perso.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="humility">
+            <img src="https://www.fillmurray.com/400/550" alt="">
+            <div>
+                <h3>Rester humbles et apprendre de nos erreurs</h3>
+                <p>Nous ne prétendons pas tout savoir, on ne cherche pas ce que les autres ont déjà trouvé. Nous ne sommes rien sans l'écosystème qui nous entoure. Nos convictions évoluent, les technologies également, les clients nous en apprennent souvent plus que ce que l'on peut leur apporter. Notre seule conviction est dans le processus itératif pour rester résilient et apprendre de nos erreurs.</p>
+                <h3>S’ouvrir, partager, ne rien garder pour soi</h3>
+                <p>Nous avons une culture profonde de l’open source : on aimerait donner autant que ce que l’écosystème nous apporte (on n’y arrive pas toujours). Nous sommes convaincus qu’une bonne information est une information partagée, au-delà des murs d’elao.</p>
+            </div>
+        </div>
+
+        <h2 class="h2--dash">Notre manifeste</h2>
+        <div class="manifest offset-content">
+            <p>Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de 15 ans par des expert·e·s passionné·e·s.</p>
+            <p>Nous mettons en œuvre notre esprit créatif et pragmatique pour vous garantir les solutions les plus qualitatives, robustes et évolutives possibles.</p>
+            <p>Notre réussite ? La vôtre, pour vos utilisateurs. Car tout part de leurs besoins, leur usage et de vos ambitions.</p>
+            <p>Nous faisons notre métier avec une vision très claire : nous participons avec énergie à un écosystème de création et de partage de valeur, pour et avec nos clients, nos collaborateurs et notre écosystème web :</p>
+        </div>
+
+        <ul class="checklist">
+            <li class="checklist__item">Par une méthodologie de travail itérative, issue de notre expérimentation, garantissant la plus grande efficacité et pertinence lorsque chacun s’y implique.</li>
+            <li class="checklist__item">Par la relation de confiance avec nos talents, acteurs et responsables de leur quotidien, développant avec eux leur savoir-faire et leur savoir-être, donnant du sens à leur implication.</li>
+            <li class="checklist__item">En contribuant activement, personnellement et en équipe, à l’écosystème open source qui nous a aussi élevé à un très haut niveau d’expertise.</li>
+        </ul>
+
+        <div class="offset-content">
+            <p>Nous agissons avec notre cœur et avec conviction, pour atteindre un but plus élevé encore : <strong>contribuer à des projets utiles à notre société, c’est ce qui nous fait vibrer.</strong> Nous sommes là pour ça, à la disposition des entrepreneurs et projets vertueux.</p>
+        </div>
+
+        <h2 class="h2--dash">Ce qui nous fait vibrer, au-delà de notre métier</h2>
+        <div class="offset-content">
+            <p>Parce qu’une entreprise s’inscrit par-delà son métier et qu’elle doit, elle aussi, mettre en action les principes auxquels elle croit, voici quelques unes des autres valeurs qui nous animent :</p>
+        </div>
+
+        <div class="diversity">
+            <div class="statistics statistics--info">
+                <span class="statistics__figure">75%</span> de notre équipe est composée de personnes en reconversion
+            </div>
+            <div>
+                <h3>La diversité</h3>
+                <ul>
+                    <li>
+                        <strong>De la tribu :</strong>
+                        nous adorons les personnes qui viennent d'horizons différents.
+                    </li>
+                    <li>
+                        <strong>Des clients :</strong>
+                        start-ups, TPE, PME et même grands groupes, nous avons travaillé avec tous types de clients, équipes (techniques ou non) et même si nous avons une (forte) préférence pour les chaînes de décisions courtes par souci d’efficacité, nous prenons du plaisir avec chacun.
+                    </li>
+                    <li>
+                        <strong>Des projets et des secteurs d’activité :</strong>
+                        hier une plateforme de recrutement, aujourd’hui une app pour gérer ses déchets, demain une application mobile pour informer les citoyens des nouveautés de leur commune. Parce qu’on s’ennuie vite et qu’on a besoin d’apprendre de vous et de votre métier.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="anchorage">
+            <h3>L'ancrage local</h3>
+            <p>Nous nous engageons dans l’écosystème web lyonnais et ses milieux associatifs. Même pour nos achats matériels, nous privilégions les <strong>boutiques françaises et / ou locales.</strong></p>
+        </div>
+
+        <div class="statistics-list">
+            <div class="statistics statistics--primary">
+                <span class="statistics__figure">64%</span> de nos clients sont <strong>lyonnais.</strong>
+            </div>
+            <div class="statistics statistics--dark">
+                <span class="statistics__figure">56%</span> de l'équipe se déplace quotidiennement exclusivement à vélo.
+            </div>
+            <div class="statistics statistics--secondary">Nous ne cherchons pas à croître à tout prix, mais simplement à assurer à notre équipe une pérennité de leur emploi et du plaisir que chacun prend chaque jour à y venir.</div>
+        </div>
+
+        <div class="accessibility">
+            <img src="{{ asset('build/images/values/accessibility.svg') }}" alt="">
+            <div>
+                <h3>L'accessibilité</h3>
+                <p>Nos applications, comme nos locaux, sont accessibles aux personnes en situation de handicap, non pas par “opportunité business” mais parce que nous croyons profondément en l’égalité des chances et cela passe par un accès à l’information pour tou·te·s.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}

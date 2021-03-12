@@ -3,124 +3,139 @@
 {% block meta_locale article.lang %}
 
 {% block content %}
-  <ul class="breadcrumb">
-    <li class="breadcrumb__item">
-      <a href="{{ path('blog') }}">Blog</a>
-    </li>
-    <li class="breadcrumb__item">
-      {{ article.title }}
-    </li>
-  </ul>
+    <ul class="breadcrumb">
+        <li class="breadcrumb__item">
+            <a href="{{ path('blog') }}">Blog</a>
+        </li>
+        <li class="breadcrumb__item">
+            {{ article.title }}
+        </li>
+    </ul>
 
-  <div class="article-banner">
-    <div class="article-banner__cover" style="background: #f1f1f1 url({{ asset(article.thumbnail) }})"></div>
+    <div class="article-banner">
+        <div class="article-banner__cover" style="background: #f1f1f1 url({{ asset(article.thumbnail) }})"></div>
 
-    <div class="article-info">
-      {% set authors = article.authors|length > 5 ? [null] : article.authors %}
-      {% block author_header %}
-        <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
-          <div class="article-author__image">
-            {% for author in authors %}
-              <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}" />
-            {% endfor %}
-          </div>
-          <span class="article-author__info">
+        <div class="article-info">
+            {% set authors = article.authors|length > 5 ? [null] : article.authors %}
+            {% block author_header %}
+                <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
+                    <div class="article-author__image">
+                        {% for author in authors %}
+                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}"/>
+                        {% endfor %}
+                    </div>
+                    <span class="article-author__info">
             Écrit par
             {% for author in authors %}
-              <strong>{{ author.name|default('La team élao') }}</strong>
+                <strong>{{ author.name|default('La team élao') }}</strong>
             {% endfor %}
           </span>
+                </div>
+            {% endblock %}
+            <div class="article-info__date">
+                <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
+                <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+            </div>
         </div>
-      {% endblock %}
-      <div class="article-info__date">
-        <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
-        <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
-      </div>
+
+        <div class="article-header">
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.description }}</p>
+            <ul class="article-tag-list">
+                {% for tag in article.tags %}
+                    <li class="article-tag-list__item">
+                        <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">#{{ tag }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
-    <div class="article-header">
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <ul class="article-tag-list">
-        {% for tag in article.tags %}
-          <li class="article-tag-list__item">
-            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">#{{ tag }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
+    {% if article.tableOfContent %}
+        <ul class="table-of-content">
+            {% for id, title in article.tableOfContent %}
+                <li class="table-of-content__item">
+                    <a href="#{{ id }}">{{ title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
-  {% if article.tableOfContent %}
-    <ul class="table-of-content">
-      {% for id, title in article.tableOfContent %}
-        <li class="table-of-content__item">
-          <a href="#{{ id }}">{{ title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    <div class="article-content">
+        <main class="article-content__main">
 
-  <div class="article-content">
-    <main class="article-content__main">
-      {{ article.content|raw }}
-      {% block credits %}
-        {% if article.credits %}
-          <div class="article-credits">
-            Crédits: photo de couverture par
-            {% if article.credits.url %}
-              <a href="{{ article.credits.url }}">
-                {{ article.credits.name }}
-              </a>
-            {% else %}
-                {{ article.credits.name }}
+            {% if article.outdated %}
+                {# TODO: outdated styles and content #}
+                <div>
+                    <p>
+                        {% if article.outdated is same as true %}
+                            Cette article pourrait contenir des références et informations obsolètes
+                        {% else %}
+                            {{ article.outdated }}
+                        {% endif %}
+                    </p>
+                </div>
             {% endif %}
-          </div>
-        {% endif %}
-      {% endblock %}
-    </main>
-    <aside class="article-content__aside">
-      <button class="kudo">
-        <span class="kudo__button" aria-hidden="true"></span>
-        <span class="screen-reader">Cet article m’a été utile</span>
-        <span class="kudo__label" aria-hidden="true">Kudos</span>
-      </button>
-    </aside>
-  </div>
 
-  <div class="article-footer">
-    {% block author_footer %}
-      {% for author in article.authors %}
-        <div class="article-author">
-          <div class="article-author__image">
-            <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}" />
-          </div>
-          <span class="article-author__info">
+            {{ article.content|raw }}
+            {% block credits %}
+                {% if article.credits %}
+                    <div class="article-credits">
+                        Crédits: photo de couverture par
+                        {% if article.credits.url %}
+                            <a href="{{ article.credits.url }}">
+                                {{ article.credits.name }}
+                            </a>
+                        {% else %}
+                            {{ article.credits.name }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+        </main>
+        <aside class="article-content__aside">
+            {# TODO: wire something on the Kudos btn + display count #}
+{#            <button class="kudo">#}
+{#                <span class="kudo__button" aria-hidden="true"></span>#}
+{#                <span class="screen-reader">Cet article m’a été utile</span>#}
+{#                <span class="kudo__label" aria-hidden="true">Kudos</span>#}
+{#            </button>#}
+        </aside>
+    </div>
+
+    <div class="article-footer">
+        {% block author_footer %}
+            {% for author in article.authors %}
+                <div class="article-author">
+                    <div class="article-author__image">
+                        <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}"/>
+                    </div>
+                    <span class="article-author__info">
             {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
             <strong>{{ author.name }}</strong>
           </span>
-          <div class="article-author__social">
-            {% if author.twitter %}
-              <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
-                <i class="icon icon--twitter" aria-hidden="true"></i>
-                <span class="screen-reader">Compte twitter de {{ author.name }}</span>
-              </a>
-            {% endif %}
-            {% if author.github %}
-              <a href="https://github.com/{{ author.github }} "class="social social--small">
-                <i class="icon icon--github" aria-hidden="true"></i>
-                <span class="screen-reader">Compte github de {{ author.name }}</span>
-              </a>
-            {% endif %}
-            {% if author.website %}
-              <a href="{{ author.website }}" class="social social--small">
-                <i class="icon icon--website" aria-hidden="true"></i>
-                <span class="screen-reader">Site personnel de {{ author.name }}</span>
-              </a>
-            {% endif %}
-          </div>
-        </div>
-      {% endfor %}
-    {% endblock %}
-  </div>
+                    <div class="article-author__social">
+                        {% if author.twitter %}
+                            <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
+                                <i class="icon icon--twitter" aria-hidden="true"></i>
+                                <span class="screen-reader">Compte twitter de {{ author.name }}</span>
+                            </a>
+                        {% endif %}
+                        {% if author.github %}
+                            <a href="https://github.com/{{ author.github }} " class="social social--small">
+                                <i class="icon icon--github" aria-hidden="true"></i>
+                                <span class="screen-reader">Compte github de {{ author.name }}</span>
+                            </a>
+                        {% endif %}
+                        {% if author.website %}
+                            <a href="{{ author.website }}" class="social social--small">
+                                <i class="icon icon--website" aria-hidden="true"></i>
+                                <span class="screen-reader">Site personnel de {{ author.name }}</span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endblock %}
+    </div>
 {% endblock content %}

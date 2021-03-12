@@ -34,6 +34,14 @@ class Article
      */
     public ?array $tableOfContent = null;
 
+    /**
+     * True if the article is obsolete/outdated.
+     * A string to use a custom disclaimer.
+     *
+     * @var bool|string
+     */
+    public $outdated = false;
+
     public function hasTag(string $tag): bool
     {
         return \in_array($tag, $this->tags, true);

@@ -95,12 +95,15 @@
                         {% for technologySlug in caseStudy.technologies %}
                             {% set technology = content_get('App\\Model\\Technology', technologySlug) %}
                             <li>
-                                <a href="{{ path('technology', { technology: technology.slug }) }}" class="technologies__item">
+{#                                <a href="{{ path('technology', { technology: technology.slug }) }}" class="technologies__item">#}
+                                {# TODO: wire back technos once ready #}
+                                <div class="technologies__item">
                                     {% if technology.logo|default(false) %}
                                         <img src="{{ asset(technology.logo) }}" alt="logo {{ technology.name }}">
                                     {% endif %}
                                     {{ technology.name }}
-                                </a>
+                                </div>
+{#                                </a>#}
                             </li>
                         {% endfor %}
                     </ul>

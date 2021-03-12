@@ -28,7 +28,7 @@ class CaseStudyController extends AbstractController
      */
     public function list(): Response
     {
-        $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false]);
+        $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]);
 
         return $this->render('case_study/index.html.twig', [
             'caseStudies' => $caseStudies,

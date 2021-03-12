@@ -17,15 +17,16 @@
             </div>
             <div class="banner-team__content">
                 <img src="https://www.fillmurray.com/1280/600" alt="">
-                <a href="#" class="recruitment">
-                    <img src="{{ asset('build/images/tipi.svg') }}" alt="">
-                    <span class="recruitment__content">
-                        <span class="title">Rejoindre la tribu</span>
-                        3 offres
-                    </span>
-                    <i class="icon icon--square-bracket-right" aria-hidden="true"></i>
-                    <i class="icon icon--semicolon" aria-hidden="true"></i>
-                </a>
+                {# TODO: once jobs are ready, wire back#}
+{#                <a href="#" class="recruitment">#}
+{#                    <img src="{{ asset('build/images/tipi.svg') }}" alt="">#}
+{#                    <span class="recruitment__content">#}
+{#                        <span class="title">Rejoindre la tribu</span>#}
+{#                        3 offres#}
+{#                    </span>#}
+{#                    <i class="icon icon--square-bracket-right" aria-hidden="true"></i>#}
+{#                    <i class="icon icon--semicolon" aria-hidden="true"></i>#}
+{#                </a>#}
             </div>
         </div>
 
@@ -44,7 +45,7 @@
                     <i class="icon icon--quote" aria-hidden="true"></i>
                     S'ouvrir, partager, ne rien garder pour soi
                 </span>
-                <a href="#" class="btn btn--secondary btn--animated">
+                <a href="{{ path('values') }}" class="btn btn--secondary btn--animated">
                     <span>
                         Découvrir nos valeurs
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">

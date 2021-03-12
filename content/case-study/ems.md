@@ -14,6 +14,7 @@ services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/ems_mockup1.png"]
+enabled: false
 ---
 
 ## Expertise développement

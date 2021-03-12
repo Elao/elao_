@@ -47,7 +47,7 @@ class HtaccessGenerator
 
     private function getRedirections(): array
     {
-        $redirections = [
+        $redirections = array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
             '/fr/developpement' => 'services',
             '/fr/hebergement' => 'services',
@@ -55,7 +55,7 @@ class HtaccessGenerator
             '/fr/nos-experiences' => 'case_studies',
             '/fr/recrutement' => 'jobs',
             '/fr/nous-contacter' => 'contact',
-        ];
+        ]);
 
         $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
 

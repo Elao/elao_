@@ -97,6 +97,9 @@ jobs:
             --progress \
           ;
 
+      - name: 'Reload Nginx config'
+        run: ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} 'sudo /bin/systemctl reload nginx'
+
       - name: 'Update deployment status (success)'
         if: success()
         uses: chrnorm/deployment-status@releases/v1

@@ -13,3 +13,106 @@ jobs:
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
+
+      - name: 'Configure deployer SSH key'
+        uses: webfactory/ssh-agent@v0.4.1
+        with:
+          ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY_PRODUCTION }}
+
+      - name: 'Create GitHub deployment'
+        uses: chrnorm/deployment-action@releases/v1
+        id: deployment
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_url: ${{ secrets.WEBSITE_URL }}
+          environment: production
+
+      # https://github.com/actions/setup-node
+      - name: 'Setup node'
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+
+      - name: 'Setup PHP'
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: "none"
+          extensions: "json"
+          ini-values: "memory_limit=-1"
+          php-version: "7.4"
+
+      - name: 'Determine composer cache directory'
+        id: composer-cache
+        run: echo "::set-output name=directory::$(composer config cache-dir)"
+
+      - name: 'Cache composer dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.directory }}
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: 'Cache NPM dependencies'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('package-lock.json') }}
+
+      - name: 'Install dependencies'
+        run: |
+          echo "::group::composer install"
+            composer install --no-progress --ansi
+          echo "::endgroup::"
+
+          echo "::group::npm install"
+            npm install --color=always --no-progress
+          echo "::endgroup::"
+
+      - name: 'Warmup'
+        run: |
+          echo "::group::warmup production env"
+            npx encore production --color
+            bin/console cache:clear --ansi
+            bin/console cache:warmup --ansi
+          echo "::endgroup::"
+        env:
+          APP_ENV: prod
+
+      - name: 'Build static site'
+        run: |
+          bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
+          bin/console app:generate-redirections --no-interaction -vv --ansi > build/redirections.conf
+        env:
+          APP_ENV: prod
+          ROUTER_DEFAULT_URI: ${{ secrets.WEBSITE_URL }}
+
+      - name: '🚀 Deploy'
+        run: |
+          rsync build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }} \
+            --human-readable \
+            --compress \
+            --archive \
+            --delete \
+            --rsh "ssh -o StrictHostKeyChecking=no" \
+            --progress \
+          ;
+
+      - name: 'Update deployment status (success)'
+        if: success()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          description: "Deployed website (${{ github.ref }})"
+          target_url: ${{ secrets.WEBSITE_URL }}
+          environment_url: ${{ secrets.WEBSITE_URL }}
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - name: 'Update deployment status (failure)'
+        if: failure()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          description: "Failed to deploy ${{ github.ref }}"
+          state: "failure"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}

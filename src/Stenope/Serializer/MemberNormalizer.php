@@ -18,10 +18,19 @@ class MemberNormalizer implements DenormalizerInterface
         $fr = $data['fr'];
         $social = $data['social'] ?? [];
 
+        $integrationDate = null;
+        if (isset($data['integrationDate'])) {
+            $integrationDate = \DateTime::createFromFormat('d/m/Y', $data['integrationDate']);
+            if ($integrationDate === false) {
+                $integrationDate = null;
+            }
+        }
+
         return new Member(
             $data['slug'],
             $fr['name'] ?? $fr['display_name'],
             $data['active'] ?? false,
+            $fr['pseudo'] ?? null,
             $fr['short_bio'],
             $fr['long_bio'],
             $fr['job_title'] ?? null,
@@ -29,7 +38,11 @@ class MemberNormalizer implements DenormalizerInterface
             $social['twitter'] ?? null,
             $social['github'] ?? null,
             $social['email'] ?? null,
-            $social['avatar'] ?? null
+            $social['avatar'] ?? null,
+            $social['linkedIn'] ?? null,
+            $data['certifications'] ?? [],
+            $integrationDate,
+            $data['emojis'] ?? []
         );
     }
 

@@ -1,0 +1,32 @@
+active: true
+integrationDate: 06/04/2020
+
+en:
+    display_name: Arthur Farrugia
+    pseudo:       Arti
+    short_bio:    ""
+    long_bio:     ""
+    job_title:    "Dev Ops"
+
+fr:
+    display_name: Arthur Farrugia
+    pseudo:       Arti
+    short_bio:    ""
+    long_bio:     "Tu vois, je suis mon meilleur modèle car on vit dans une réalité qu'on a créée et que j'appelle illusion et c'est une sensation réelle qui se produit si on veut ! C'est cette année que j'ai eu la révélation !"
+    job_title:    "Développeur Back"
+
+social:
+    website:      ~
+    twitter:      ~
+    github:       ziarti
+    linkedIn:     arthur-farrugia-054481a8
+    email:        arthur.farrugia@elao.com
+    avatar:       ~
+
+certifications:
+    - symfony
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

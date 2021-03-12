@@ -23,4 +23,9 @@ class CaseStudy
     public array $technologies = [];
     public array $members = [];
     public bool $enabled = true;
+
+    public function hasMember(Member $member): bool
+    {
+        return \in_array($member->slug, $this->members, true);
+    }
 }

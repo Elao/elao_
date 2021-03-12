@@ -1,4 +1,5 @@
 active: true
+integrationDate: 28/01/2013
 
 fr:
   name:        "Thomas Jarrand"
@@ -10,6 +11,14 @@ social:
   website:         https://thomas.jarrand.fr
   twitter:         tom32i
   github:          Tom32i
+  linkedIn:        ~
   email:           thomas.jarrand@elao.com
   avatar:          images/authors/tjarrand.jpg
   google_plus_id:  ~
+
+certifications: ~
+
+emojis:
+  - 🎲
+  - 🎮
+  - 📷

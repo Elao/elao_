@@ -1,4 +1,5 @@
 active: true
+integrationDate: 22/12/2008
 
 en:
   display_name: Benjamin Lévêque
@@ -13,9 +14,16 @@ fr:
   job_title:    "Responsable Technique / Développeur Symfony Certifié"
 
 social:
-  website:         http://www.elao.com
-  twitter:         benji__07
-  github:          benji07
-  email:           benjamin.leveque@elao.com
-  avatar:          images/authors/bleveque.jpeg
-  google_plus_id:  ~
+  website:      http://www.elao.com
+  twitter:      benji__07
+  github:       benji07
+  linkedIn:     ~
+  email:        benjamin.leveque@elao.com
+  avatar:       images/authors/bleveque.jpeg
+
+certifications: ~
+
+emojis:
+  - 🎲
+  - 🎮
+  - 📷

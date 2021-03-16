@@ -1,14 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <ul class="breadcrumb">
-        <li class="breadcrumb__item">
-            <a href="#">La tribu</a>
-         </li>
-        <li class="breadcrumb__item">
-            {{ member.pseudo ?? member.name }}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
         </li>
-    </ul>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('team') }}">
+                <span itemprop="name">La tribu</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">{{ member.pseudo ?? member.name }}</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
 
     <div class="member">
         <div class="member__infos">

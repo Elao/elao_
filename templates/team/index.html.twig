@@ -3,7 +3,7 @@
 {% block content %}
     <ul class="breadcrumb">
         <li class="breadcrumb__item">
-            <a href="#">Accueil</a>
+            <a href="{{ path('homepage') }}">Accueil</a>
          </li>
         <li class="breadcrumb__item">
             La tribu
@@ -67,10 +67,12 @@
                             </span>
                             <span class="name">{{ member.name }}</span>
                             <span class="job">{{ member.position }}</span>
-                            <span class="certification">
-                                <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
-                                <p>Expert certifié <span>Symfony</span></p>
-                            </span>
+                            {% if member.certifications is not empty and 'symfony' in member.certifications %}
+                                <span class="certification">
+                                    <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
+                                    <p>Expert certifié <span>Symfony</span></p>
+                                </span>
+                            {% endif %}
                         </a>
                     </li>
                 {% endfor %}

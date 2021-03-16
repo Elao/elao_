@@ -63,8 +63,8 @@
         <section class="section-home">
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
-                <h2>Mettre ensemble l'énergie là où elle a le plus de valeur</h2>
-                <p>Nous ne croyons plus aux cahiers des charges figés de 200 pages, mais à l'émulation des ateliers et à l'implication des utilisateurs finaux pour itérer ensemble afin de trouver la meilleure solution.</p>
+                <h2>Contribuer à des projets vertueux, utiles à notre société</h2>
+                <p>Nous pensons que notre responsabilité est de faire émerger et grandir des projets ayant des valeurs communes aux nôtres.</p>
                 <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated">
                     <span>
                         Notre méthodologie
@@ -84,12 +84,40 @@
         <section class="section-home section-home--reverse">
             <div class="section-home__image">
                 <img src="https://www.fillmurray.com/640/490" alt="">
-                <i class="icon icon--brackets-left" aria-hidden="true"></i>
+                <i class="icon icon--square-brackets-left" aria-hidden="true"></i>
             </div>
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
-                <h2>Contribuer à des projets vertueux, utiles à notre société</h2>
-                <p>Nous pensons que notre responsabilité est de faire émerger et grandir en ayant des valeurs communes.</p>
+                <h2>Faire des choix pérennes et pragmatiques</h2>
+                <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
+                <ul class="technologies">
+                    {% set technos = [
+                        { id: 'symfony', alt: 'logo Symfony' },
+                        { id: 'vue-js', alt: 'logo Vue.js' },
+                        { id: 'react', alt: 'logo React' },
+                        { id: 'react-native', alt: 'logo React Native' },
+                    ] %}
+                    {% for item in technos %}
+                        {% set techno = content_get('App\\Model\\Technology', item.id) %}
+                        <li>
+                            {#<a href="{{ path('technology', { technology: 'symfony' })}}" class="technologies__item">#}
+                            {# TODO: wire back technos links once ready #}
+                            <div class="technologies__item">
+                                <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
+                                {{ techno.name }}
+                            </div>
+                            {#</a>#}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+
+        <section class="section-home">
+            <div class="section-home__content">
+                <div class="dash" aria-hidden="true"></div>
+                <h2>Mettre ensemble l'énergie là où elle a le plus de valeur</h2>
+                <p>Nous ne croyons plus aux cahiers des charges figés de 200 pages, mais à l'émulation des ateliers et à l'implication des utilisateurs finaux pour itérer ensemble afin de trouver la meilleure solution.</p>
                 <a href="{{ path('case_studies') }}" class="btn btn--secondary btn--animated">
                     <span>
                         Nos études de cas
@@ -100,9 +128,13 @@
                     </span>
                 </a>
             </div>
+            <div class="section-home__image">
+                <img src="https://www.fillmurray.com/640/490" alt="">
+                <i class="icon icon--brackets-left" aria-hidden="true"></i>
+            </div>
         </section>
 
-        <section class="section-home section-home--mobile-reverse">
+        <section class="section-home">
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Partager, redistribuer et faire vivre l'écosystème</h2>
@@ -199,38 +231,6 @@
                         <p>Comprendre le cache du client Graphql Apollo</p>
                     </div>
                 </a>
-            </div>
-        </section>
-
-        <section class="section-home section-home--reverse">
-            <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
-                <i class="icon icon--square-brackets-left" aria-hidden="true"></i>
-            </div>
-            <div class="section-home__content">
-                <div class="dash" aria-hidden="true"></div>
-                <h2>Faire des choix pérennes et pragmatiques</h2>
-                <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
-                <ul class="technologies">
-                    {% set technos = [
-                        { id: 'symfony', alt: 'logo Symfony' },
-                        { id: 'vue-js', alt: 'logo Vue.js' },
-                        { id: 'react', alt: 'logo React' },
-                        { id: 'react-native', alt: 'logo React Native' },
-                    ] %}
-                    {% for item in technos %}
-                        {% set techno = content_get('App\\Model\\Technology', item.id) %}
-                        <li>
-                            {#<a href="{{ path('technology', { technology: 'symfony' })}}" class="technologies__item">#}
-                            {# TODO: wire back technos links once ready #}
-                            <div class="technologies__item">
-                                <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
-                                {{ techno.name }}
-                            </div>
-                            {#</a>#}
-                        </li>
-                    {% endfor %}
-                </ul>
             </div>
         </section>
 

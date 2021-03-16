@@ -1,4 +1,5 @@
 active: true
+integrationDate: 20/02/2017
 
 fr:
   display_name: Amélie Defrance
@@ -7,6 +8,15 @@ fr:
   job_title:    "Intégratrice"
 
 social:
-  github:          ameliedefrance
-  email:           amelie.defrance@elao.com
-  avatar:          images/authors/adefrance.jpg
+  website:      ~
+  twitter:      ~
+  github:       ameliedefrance
+  email:        amelie.defrance@elao.com
+  avatar:       images/authors/adefrance.jpg
+
+certifications: ~
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

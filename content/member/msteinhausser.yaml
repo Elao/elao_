@@ -1,21 +1,36 @@
 active: true
+integrationDate: 4/01/2016
 
 en:
   display_name: Maxime Steinhausser
+  pseudo: Ogi
   short_bio:    ""
   long_bio:     ""
   job_title:    "Certified Symfony Developer"
 
 fr:
   display_name: Maxime Steinhausser
+  pseudo: Ogi
   short_bio:    ""
-  long_bio:     ""
+  long_bio:     "Développeur Symfony passionné. Membre de la Symfony Core Team. Développeur React, react-native & Vue.js occasionnel. Smash Ultimate & Zelda-addict & Ogitos"
   job_title:    "Développeur Symfony Certifié"
 
 social:
-  website:         http://www.elao.com
-  twitter:         ~
-  github:          ogizanagi
-  email:           maxime.steinhausser@elao.com
-  avatar:          images/authors/msteinhausser.png
-  google_plus_id:  ~
+  website:      http://www.elao.com
+  twitter:      ogizanagi
+  github:       ogizanagi
+  linkedIn:     maxime-steinhausser-3708a7107
+  email:        maxime.steinhausser@elao.com
+  avatar:       images/authors/msteinhausser.png
+
+certifications:
+    - symfony
+    - Ogito Master
+
+emojis:
+    - 🍹
+    - 🎮
+    - 🐱
+    - 👨‍💻
+    - 🍣
+    - 🕘

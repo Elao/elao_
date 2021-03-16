@@ -1,4 +1,5 @@
 active: true
+integrationDate: 05/01/2015
 
 en:
   display_name: Xavier R
@@ -13,9 +14,14 @@ fr:
   job_title:    "Développeur Symfony"
 
 social:
-  website:         http://www.elao.com
+  website:         ~
   twitter:         ~
   github:          xavier-rdo
   email:           xavier.roldo@elao.com
   avatar:          images/authors/xavierr.jpg
-  google_plus_id:  ~
+
+certifications: ~
+
+emojis:
+    - 🏃‍
+

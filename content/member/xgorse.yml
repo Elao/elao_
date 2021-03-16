@@ -1,4 +1,5 @@
 active: true
+integrationDate: 01/05/2005
 
 en:
   display_name: Xavier GORSE
@@ -16,6 +17,13 @@ social:
   website:         http://www.elao.com
   twitter:         xgorse
   github:          xgorse
+  linkedIn:        ~
   email:           xavier.gorse@elao.com
   avatar:          images/authors/xgorse.jpg
-  google_plus_id:  ~
+
+certifications: ~
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

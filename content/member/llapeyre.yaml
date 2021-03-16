@@ -1,0 +1,31 @@
+active: true
+integrationDate: 12/03/2019
+
+en:
+    display_name: Lod Lapeyre
+    pseudo:       ~
+    short_bio:    ""
+    long_bio:     ""
+    job_title:    "DevOps"
+
+fr:
+    display_name: Lod Lapeyre
+    pseudo:       ~
+    short_bio:    ""
+    long_bio:     "\"Have you tried turning it off and on again ?\" Gaming everyday, bicycling everywhere, cooking everything"
+    job_title:    "DevOps"
+
+social:
+    website:      ~
+    twitter:      ~
+    github:       ~
+    linkedIn:     lod-lapeyre-942083152
+    email:        laud.lapeyre@elao.com
+    avatar:       ~
+
+certification: ~
+
+emojis:
+    - 🎮
+    - 🚲
+    - 🍲

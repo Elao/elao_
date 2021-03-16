@@ -6,7 +6,7 @@
             <a href="#">La tribu</a>
          </li>
         <li class="breadcrumb__item">
-            {{ member.name }}
+            {{ member.pseudo ?? member.name }}
         </li>
     </ul>
 
@@ -22,8 +22,13 @@
             <!-- image de profil : 500 x 680px -->
             <img src="https://www.fillmurray.com/500/680" alt="Portrait de {{ member.name }}">
             <div class="experience">
-                <span>3</span>
-                ans dans la tribu
+                {% set interval = date('now').diff(member.integrationDate) %}
+                {% set numberYear = interval.y %}
+                {% set numberMonth= interval.m %}
+                {% set period = numberYear >= 1 ? 'an' : 'mois' %}
+                {% set plural = numberYear >= 1 ? 's' : '' %}
+                <span>{{ numberYear == 0 ? numberMonth : numberYear }}</span>
+                {{ period }}{{ plural }} dans la tribu
             </div>
         </div>
 
@@ -31,7 +36,7 @@
             <p class="job">{{ member.position }}</p>
 
             <div class="description">
-                <p>Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae nemo itaque culpa ducimus corrupti nesciunt.</p>
+                <p>{{ member.longBio }}</p>
             </div>
 
             <div class="socials socials--inline">
@@ -60,73 +65,77 @@
                             </a>
                         </li>
                     {% endif %}
-                    <!-- Todo : possibilité d'ajouter un compte linkedin -->
+                    {% if member.linkedIn %}
                     <li>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/{{ member.linkedIn }}">
                             <i class="icon icon--linkedin" aria-hidden="true"></i>
                             <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
                         </a>
                     </li>
+                    {% endif %}
                 </ul>
             </div>
 
             <!-- Facultatif -->
-            <div class="certification-list">
-                <ul>
-                    <li class="certification">
-                        <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
-                        <p>Expert·e certifié·e <span>Symfony</span></p>
-                    </li>
-                    <li class="certification">
-                        <img src="{{ asset('build/images/certifications/opquast.svg') }}" alt="">
-                        <p>Expert·e certifié·e <span>Opquast</span></p>
-                    </li>
+            {% if member.certifications %}
+                <div class="certification-list">
+                    <ul>
+                        {% for certification in member.certifications %}
+                            <li class="certification">
+                                <img src="{{ asset('build/images/certifications/'~certification~'.svg') }}" alt="">
+                                <p>Expert·e certifié·e <span>{{ certification }}</span></p>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if member.emojis is not empty %}
+                <ul class="interests">
+                    {% for emoji in member.emojis %}
+                        <li>{{ emoji }}</li>
+                    {% endfor %}
                 </ul>
-            </div>
-
-            <ul class="interests">
-                <li>🎲</li>
-                <li>🎮</li>
-                <li>📷</li>
-            </ul>
+            {% endif %}
         </div>
 
-        <div class="member__contributions">
-            <div class="article-list">
-                <h2 class="h2--dash">Ses derniers projets</h2>
-                <div class="miniature-inline miniature-inline--small">
-                    <a href="#" class="miniature-inline__image">
-                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
-                    </a>
-                    <div class="miniature-inline__content">
-                        <a href="#" class="title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+        {% if articles is not empty or projects is not empty%}
+            <div class="member__contributions">
+                {% if projects is not empty %}
+                    <div class="article-list">
+                        <h2 class="h2--dash">Ses derniers projets</h2>
+                        {% for project in projects %}
+                            <div class="miniature-inline miniature-inline--small">
+                                <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="miniature-inline__image">
+                                    <span class="image" style="background: url('https://images.unsplash.com/photo-1530435460869-d13625c69bbf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')"></span>
+                                </a>
+                                <div class="miniature-inline__content">
+                                    <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="title">{{ project.title }}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
-                </div>
-                <div class="miniature-inline miniature-inline--small">
-                    <a href="#" class="miniature-inline__image">
-                        <span class="image" style="background: url('https://www.fillmurray.com/500/680')"></span>
-                    </a>
-                    <div class="miniature-inline__content">
-                        <a href="#" class="title">Tribü</a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
 
-            <!-- Facultatif -->
-            <div class="article-list">
-                <h2 class="h2--dash">Ses derniers articles</h2>
-                {% for article in articles %}
-                    <div class="miniature-inline miniature-inline--small">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
-                        </a>
-                        <div class="miniature-inline__content">
-                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
-                        </div>
+                <!-- Facultatif -->
+                {% if articles is not empty %}
+                    <div class="article-list">
+                        <h2 class="h2--dash">Ses derniers articles</h2>
+                        {% for article in articles %}
+                            <div class="miniature-inline miniature-inline--small">
+                                <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
+                                    <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                                </a>
+                                <div class="miniature-inline__content">
+                                    <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                                </div>
+                            </div>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                {% endif %}
             </div>
-        </div>
+        {% endif %}
+
     </div>
 
     <aside class="bricks">

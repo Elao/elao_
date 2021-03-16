@@ -1,4 +1,5 @@
 active: true
+integrationDate: 01/12/2011
 
 fr:
   display_name: Florian Rey
@@ -7,9 +8,16 @@ fr:
   job_title:    "DevOps"
 
 social:
-  website:         http://www.elao.com
-  twitter:         FlorianReyElao
-  github:          nervo
-  email:           florian.rey@elao.com
-  avatar:          images/authors/frey.jpg
-  google_plus_id:  ~
+  website:      http://www.elao.com
+  twitter:      FlorianReyElao
+  github:       nervo
+  linkedIn:     ~
+  email:        florian.rey@elao.com
+  avatar:       images/authors/frey.jpg
+
+certifications: ~
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

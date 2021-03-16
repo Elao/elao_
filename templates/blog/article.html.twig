@@ -2,7 +2,11 @@
 
 {% block meta_locale article.lang %}
 
+{% block meta_title article.title %}
+{% block meta_description article.description %}
+
 {% block content %}
+
     <ul class="breadcrumb">
         <li class="breadcrumb__item">
             <a href="{{ path('blog') }}">Blog</a>

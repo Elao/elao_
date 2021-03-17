@@ -1,19 +1,9 @@
-en:
-  display_name: Tristan BESSOUSSA
-  short_bio:    ""
-  long_bio:     ""
-  job_title:   "Symfony developper"
+name: Tristan BESSOUSSA
+position: "Développeur Symfony"
+bio: ~
 
-fr:
-  display_name: Tristan BESSOUSSA
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur Symfony"
-
-social:
-  website:         http://www.elao.com
-  twitter:         sf_tristanb
-  github:          tristanbes
-  email:           contact@elao.com
-  avatar:          images/authors/tbessoussa.jpg
-  google_plus_id:  ~
+website: http://www.elao.com
+twitter: sf_tristanb
+github: tristanbes
+email: contact@elao.com
+avatar: images/authors/tbessoussa.jpg

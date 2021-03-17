@@ -1,31 +1,21 @@
 active: true
+🚲: true
+
+name: Xavier GORSE
+position: "Facilitateur du quotidien"
+bio: ~
 integrationDate: 01/05/2005
 
-en:
-  display_name: Xavier GORSE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    Co Founder
+website: http://www.elao.com
+twitter: xgorse
+github: xgorse
+linkedIn: ~
+email: xavier.gorse@elao.com
+avatar: images/authors/xgorse.jpg
 
-fr:
-  display_name: Xavier GORSE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Facilitateur du quotidien"
-
-social:
-  website:         http://www.elao.com
-  twitter:         xgorse
-  github:          xgorse
-  linkedIn:        ~
-  email:           xavier.gorse@elao.com
-  avatar:          images/authors/xgorse.jpg
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 🎲
     - 🎮
     - 📷
-
-🚲: true

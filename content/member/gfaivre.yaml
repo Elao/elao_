@@ -1,27 +1,20 @@
 active: true
+
+name: Guewen FAIVRE
+position: |
+    Gérant @Elao.
+    Développeur / SysAdmin
+bio: ~
 integrationDate: 01/05/2005
 
-en:
-  display_name: Guewen FAIVRE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Dev Ops"
+website: http://www.elao.com
+twitter: guewen_faivre
+github: gfaivre
+linkedIn: ~
+email: guewen.faivre@elao.com
+avatar: images/authors/gfaivre.jpg
 
-fr:
-  display_name: Guewen FAIVRE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Gérant @Elao. Développeur / SysAdmin"
-
-social:
-  website:      http://www.elao.com
-  twitter:      guewen_faivre
-  github:       gfaivre
-  linkedIn:     ~
-  email:        guewen.faivre@elao.com
-  avatar:       images/authors/gfaivre.jpg
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 🎲

@@ -1,21 +1,26 @@
 active: true
+
+name: Florian Rey
+position: "DevOps"
+bio: |
+    Florian est difficile à saisir.
+    Il a une bonne capacité d'adaptation, mais pourra vous sembler tantôt expansif, tantôt secret ou dispersé. Il vous faudra alors le canaliser !
+
+    De nature rêveuse, parfois complètement en marge de la réalité, son jardin secret est inaccessible et il s'y réfugie très souvent.
+    Cela ne l'empêche pas d'être sociable et de communiquer aisément avec les autres lorsqu'il se sent en sécurité.
+
+    Florian est en outre un garçon très émotif qui se laisse guider par ses sentiments et ne craint pas de les dévoiler.
+    En amitié, il saura être délicat et tendre. Florian est l'ami et le confident par excellence.
 integrationDate: 01/12/2011
 
-fr:
-  display_name: Florian Rey
-  short_bio:    "Le prénom Florian provient de Florianus, dérivé d'un terme latin dont le sens serait \"fleur\" ou \"fleuri\""
-  long_bio:     "Florian est difficile à saisir. Il a une bonne capacité d'adaptation, mais pourra vous sembler tantôt expansif, tantôt secret ou dispersé. Il vous faudra alors le canaliser ! De nature rêveuse, parfois complètement en marge de la réalité, son jardin secret est inaccessible et il s'y réfugie très souvent. Cela ne l'empêche pas d'être sociable et de communiquer aisément avec les autres lorsqu'il se sent en sécurité. Florian est en outre un garçon très émotif qui se laisse guider par ses sentiments et ne craint pas de les dévoiler. En amitié, il saura être délicat et tendre. Florian est l'ami et le confident par excellence."
-  job_title:    "DevOps"
+website: http://www.elao.com
+twitter: FlorianReyElao
+github: nervo
+linkedIn: ~
+email: florian.rey@elao.com
+avatar: images/authors/frey.jpg
 
-social:
-  website:      http://www.elao.com
-  twitter:      FlorianReyElao
-  github:       nervo
-  linkedIn:     ~
-  email:        florian.rey@elao.com
-  avatar:       images/authors/frey.jpg
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 🌰

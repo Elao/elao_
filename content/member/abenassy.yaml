@@ -1,19 +1,9 @@
-en:
-  display_name: Arnaud BENASSY
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Symfony Developer"
+name: Arnaud BENASSY
+position: "Développeur Symfony"
+bio: ~
 
-fr:
-  display_name: Arnaud BENASSY
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur Symfony"
-
-social:
-  website:         http://www.elao.com
-  twitter:         ~
-  github:          ArnaudBenassy
-  email:           arnaud.benassy@elao.com
-  avatar:          images/authors/abenassy.jpg
-  google_plus_id:  "114395399957883396467"
+website: http://www.elao.com
+twitter: ~
+github: ArnaudBenassy
+email: arnaud.benassy@elao.com
+avatar: images/authors/abenassy.jpg

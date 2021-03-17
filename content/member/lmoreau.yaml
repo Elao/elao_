@@ -1,18 +1,9 @@
-en:
-  display_name: Ludovic MOREAU
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Web developer"
+name: Ludovic MOREAU
+position: "Développeur web"
+bio: ~
 
-fr:
-  display_name: Ludovic MOREAU
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur web"
-
-social:
-  website:         http://www.elao.com
-  twitter:         moreau2144
-  github:          ludovicmoreau
-  email:           ludovic.moreau@elao.com
-  avatar:          images/authors/lmoreau.jpg
+website: http://www.elao.com
+twitter: moreau2144
+github: ludovicmoreau
+email: ludovic.moreau@elao.com
+avatar: images/authors/lmoreau.jpg

@@ -36,7 +36,7 @@ Les besoins étaient double : proposer une solution efficace pour les technicien
 Les développeurs Elao sont avant tout des concepteurs. L'UX/UI a été réalisée main dans la main avec Mathilde Vandier, designer freelance, avec laquelle nous avons itéré du début à la fin du projet. 
 
 ### Phase de build (développement du projet) 
-L'ensemble des flux d’échange de données entre le SI d’Unicil et l’application a été défini. Un POC technique a permis de valider le bon fonctionnement de la solution d’échange retenue.
+Anne-Laure, Thomas et Amélie ont mené de front toute la phase de développement, accompagnant l'équipe de Tribü dans la rédaction des spécifications fonctionnelles pour anticiper tous les cas nominaux du projet. Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons. La mise en production de la première version a permis à Tribü de tester très vite ses applicatifs et les proposer rapidement à leurs clients dans la foulée.
 
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
 Tribü fait toujours appel à Elao pour faire évoluer son produit régulièrement en fonction des besoins remontés par ses techniciens et ses clients.  

@@ -45,7 +45,7 @@ class TeamController extends AbstractController
         $articles = $this->manager->getContents(
             Article::class,
             ['date' => false],
-            fn ($article): bool => $article->hasAuthor($member, 1)
+            fn (Article $article): bool => $article->hasAuthor($member, 1)
         );
 
         $projects = $this->manager->getContents(
@@ -57,7 +57,7 @@ class TeamController extends AbstractController
         return $this->render('team/member.html.twig', [
             'member' => $member,
             'articles' => \array_slice($articles, 0, 3),
-            'projects' => $projects,
+            'projects' => \array_slice($projects, 0, 3),
         ])->setLastModified($member->lastModified);
     }
 }

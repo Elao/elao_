@@ -4,15 +4,15 @@ integrationDate: 4/01/2016
 en:
   display_name: Maxime Steinhausser
   pseudo: Ogi
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Certified Symfony Developer"
+  short_bio:    "Passionate web dev Symfony, also on his spare-time as Symfony Core Team. Loves react, react-native and Vue.js too, and also cooking and Zelda."
+  long_bio:     "Passionate web dev Symfony, also on his spare-time as Symfony Core Team. He loves also React, react-native & Vue.js. Talented cheesecake maker, bike & chorizo lover, Smash Ultimate & Zelda-addict. Inventor of Ogitos, amazing cocktail with rhum."
+  job_title:    "Magic Web Developper Symfony"
 
 fr:
   display_name: Maxime Steinhausser
   pseudo: Ogi
   short_bio:    ""
-  long_bio:     "Développeur Symfony passionné. Membre de la Symfony Core Team. Développeur React, react-native & Vue.js occasionnel. Smash Ultimate & Zelda-addict & Ogitos"
+  long_bio:     "Développeur-magicien Symfony, même le soir et le week-end comme membre de la Symfony Core Team. Développeur React, react-native & Vue.js occasionnel. Cuisinier époustouflant expert en cheesecake, il aime s'occuper de son vélo, trouver des recettes avec du chorizo et se promener à la montagne. Smash Ultimate & Zelda-addict. Inventeur de l'Ogito, un célèbre cocktail très recherché pour son sens de la fête."
   job_title:    "Développeur Symfony Certifié"
 
 social:

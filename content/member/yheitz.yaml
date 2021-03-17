@@ -5,13 +5,13 @@ en:
   display_name: Yves HEITZ
   short_bio:    ""
   long_bio:     ""
-  job_title:    "Dev Ops"
+  job_title:    "DevOps"
 
 fr:
   display_name: Yves HEITZ
   short_bio:    ""
   long_bio:     ""
-  job_title:    "Dev Ops"
+  job_title:    "DevOps"
 
 social:
   website:      http://www.elao.com
@@ -24,6 +24,3 @@ social:
 certifications: ~
 
 emojis:
-    - 🎲
-    - 🎮
-    - 📷

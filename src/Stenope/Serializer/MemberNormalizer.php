@@ -42,7 +42,8 @@ class MemberNormalizer implements DenormalizerInterface
             $social['linkedIn'] ?? null,
             $data['certifications'] ?? [],
             $integrationDate,
-            $data['emojis'] ?? []
+            $data['emojis'] ?? [],
+            $data['🚲'] ?? false,
         );
     }
 

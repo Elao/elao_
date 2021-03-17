@@ -45,13 +45,13 @@ class TeamController extends AbstractController
         $articles = $this->manager->getContents(
             Article::class,
             ['date' => false],
-            fn ($article) => $article->hasAuthor($member, 1)
+            fn ($article): bool => $article->hasAuthor($member, 1)
         );
 
         $projects = $this->manager->getContents(
             CaseStudy::class,
             ['date' => false],
-            fn (CaseStudy $project) => $project->hasMember($member) && $project->enabled
+            fn (CaseStudy $project): bool => $project->hasMember($member) && $project->enabled
         );
 
         return $this->render('team/member.html.twig', [

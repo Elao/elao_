@@ -38,7 +38,8 @@
             <ul class="banner-home__list">
                 <li>
                     <div class="item">
-                        <span class="number">15</span>
+                        {% set interval = date('now').diff(date(site.birthdate)) %} {# 1 august 2005 #}
+                        <span class="number">{{ interval.y }}</span>
                         ans d'expérience
                         <small>(et d'expérimentations)</small>
                     </div>

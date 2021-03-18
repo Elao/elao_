@@ -79,11 +79,7 @@
                             {% if member.certifications is not empty and 'symfony' in member.certifications %}
                                 <span class="certification">
                                     <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
-                                    {% if member.gender is defined and member.gender == 'female' %}
-                                        <p>Experte certifiée <span>Symfony</span></p>
-                                    {% else %}
-                                        <p>Expert certifié <span>Symfony</span></p>
-                                    {% endif %}
+                                        <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>Symfony</span></p>
                                 </span>
                             {% endif %}
                         </a>

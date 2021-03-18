@@ -1,0 +1,28 @@
+active: true
+integrationDate: 02/07/2018
+
+en:
+  display_name: Alena Yarkina
+  short_bio:    "Office Manager"
+  long_bio:     "Office Manager"
+  job_title:    "Office Manager"
+
+fr:
+  display_name: Alena Yarkina
+  short_bio:    "Office Manager"
+  long_bio:     "Office Manager"
+  job_title:    "Office Manager"
+
+social:
+  website:
+  github:
+  linkedIn:     alena-alyona-yarkina-173952195
+  email:        contact@elao.com
+  avatar:       images/authors/ayarkina.jpg
+
+certifications:
+
+emojis:
+  - 🌿
+  - 🐱
+  - 🍵

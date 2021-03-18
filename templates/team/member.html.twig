@@ -45,7 +45,7 @@
             <p class="job">{{ member.position }}</p>
 
             <div class="description">
-                <p>{{ member.longBio }}</p>
+                <p>{{ member.longBio|nl2br }}</p>
             </div>
 
             <div class="socials socials--inline">
@@ -91,8 +91,8 @@
                     <ul>
                         {% for certification in member.certifications %}
                             <li class="certification">
-                                <img src="{{ asset('build/images/certifications/'~certification~'.svg') }}" alt="">
-                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certification }}</span></p>
+                                <img src="{{ asset('build/images/certifications/'~certification|u.snake~'.svg') }}" alt="">
+                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certification|u.title }}</span></p>
                             </li>
                         {% endfor %}
                     </ul>

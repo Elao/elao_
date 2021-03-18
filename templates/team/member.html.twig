@@ -37,10 +37,7 @@
                 {% set interval = date('now').diff(member.integrationDate) %}
                 {% set numberYear = interval.y %}
                 {% set numberMonth= interval.m %}
-                {% set period = numberYear >= 1 ? 'an' : 'mois' %}
-                {% set plural = numberYear >= 1 ? 's' : '' %}
-                <span>{{ numberYear == 0 ? numberMonth : numberYear }}</span>
-                {{ period }}{{ plural }} dans la tribu
+                {{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }} dans la tribu
             </div>
         </div>
 
@@ -95,7 +92,7 @@
                         {% for certification in member.certifications %}
                             <li class="certification">
                                 <img src="{{ asset('build/images/certifications/'~certification~'.svg') }}" alt="">
-                                <p>Expert·e certifié·e <span>{{ certification }}</span></p>
+                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certification }}</span></p>
                             </li>
                         {% endfor %}
                     </ul>

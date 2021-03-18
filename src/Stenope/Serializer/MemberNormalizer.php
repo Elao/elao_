@@ -44,6 +44,7 @@ class MemberNormalizer implements DenormalizerInterface
             $integrationDate,
             $data['emojis'] ?? [],
             $data['🚲'] ?? false,
+            $data['gender'] ?? null
         );
     }
 

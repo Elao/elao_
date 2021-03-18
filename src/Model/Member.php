@@ -34,6 +34,8 @@ class Member
     /** @var bool Vélotafeur */
     public bool $🚲 = false;
 
+    public ?string $gender = null;
+
     public function __construct(
         string $slug,
         string $name,
@@ -51,7 +53,8 @@ class Member
         array $certifications = [],
         ?\DateTime $integrationDate = null,
         ?array $emojis = [],
-        bool $🚲 = false
+        bool $🚲 = false,
+        ?string $gender = null
     ) {
         $this->slug = $slug;
         $this->name = $name;
@@ -70,5 +73,6 @@ class Member
         $this->integrationDate = $integrationDate;
         $this->emojis = $emojis;
         $this->🚲 = $🚲;
+        $this->gender = $gender;
     }
 }

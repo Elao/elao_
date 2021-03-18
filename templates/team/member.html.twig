@@ -95,8 +95,12 @@
                         {% for certification in member.certifications %}
                             <li class="certification">
                                 <img src="{{ asset('build/images/certifications/'~certification~'.svg') }}" alt="">
-                                <p>Expert·e certifié·e <span>{{ certification }}</span></p>
-                            </li>
+                                {% if member.gender is defined and member.gender == 'female'%}
+                                    <p>Experte certifiée <span>{{ certification }}</span></p>
+                                {% else %}
+                                    <p>Expert certifié <span>{{ certification }}</span></p>
+                                {% endif %}
+                                    </li>
                         {% endfor %}
                     </ul>
                 </div>

@@ -117,7 +117,10 @@
                 <span class="statistics__figure">64%</span> de nos clients sont <strong>lyonnais.</strong>
             </div>
             <div class="statistics statistics--dark">
-                <span class="statistics__figure">56%</span> de l'équipe se déplace quotidiennement exclusivement à vélo.
+                <span class="statistics__figure">{{ velotafRatio|format_number({
+                    multiplier: 100,
+                    fraction_digit: 0,
+                }) }}%</span> de l'équipe se déplace quotidiennement exclusivement à vélo.
             </div>
             <div class="statistics statistics--secondary">Nous ne cherchons pas à croître à tout prix, mais simplement à assurer à notre équipe une pérennité de leur emploi et du plaisir que chacun prend chaque jour à y venir.</div>
         </div>

@@ -29,6 +29,11 @@ class Member
     public ?\DateTimeImmutable $lastModified = null;
     public ?array $emojis;
 
+    // Flags
+
+    /** @var bool Vélotafeur */
+    public bool $🚲 = false;
+
     public function __construct(
         string $slug,
         string $name,
@@ -45,7 +50,8 @@ class Member
         ?string $linkedIn = null,
         array $certifications = [],
         ?\DateTime $integrationDate = null,
-        ?array $emojis = []
+        ?array $emojis = [],
+        bool $🚲 = false
     ) {
         $this->slug = $slug;
         $this->name = $name;
@@ -63,5 +69,6 @@ class Member
         $this->certifications = $certifications;
         $this->integrationDate = $integrationDate;
         $this->emojis = $emojis;
+        $this->🚲 = $🚲;
     }
 }

@@ -129,7 +129,11 @@
                 {% for memberSlug in caseStudy.members %}
                     {% set member = content_get('App\\Model\\Member', memberSlug) %}
                     <li class="project-team__member">
-                        <a href="{{ path('team_member', { member: member.slug }) }}">
+                        <a
+                            {%- if member.active %}
+                                href="{{ path('team_member', { member: member.slug }) }}"
+                            {% endif -%}
+                        >
                             <img src="{{ asset(member.avatar ?? 'images/authors/default.png') }}" alt="{{ member.name }}">
                             <span class="name">{{ member.name }}</span>
                             <span class="job">{{ member.shortBio }}</span>

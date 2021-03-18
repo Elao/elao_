@@ -1,6 +1,16 @@
-.build-steps {}
+.build-steps {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 .build-steps__item {
+  margin: 0 0 15px;
+  padding: 30px 40px;
+  min-width: 400px;
+  max-width: 800px;
   color: #fff;
   background: $color-dark;
   display: flex;
@@ -8,6 +18,11 @@
   font-family: 'antikor bold';
   font-size: 18px;
   color: $color-light;
+
+  &:before,
+  &:after {
+    display: none;
+  }
 
   .icon {
     margin-right: 20px;

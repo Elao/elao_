@@ -16,11 +16,15 @@ social:
   avatar:          images/authors/tjarrand.jpg
   google_plus_id:  ~
 
-certifications: ~
+certifications:
+  - symfony
 
 emojis:
-  - 🎲
+  - 🏔
   - 🎮
-  - 📷
+  - 🛹
+  - 🚲
+  - 🍹
+  - 🏊‍♂️
 
 🚲: true

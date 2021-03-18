@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fbfe18c2b3c48fa8159d48a3dfa274c3",
+    "content-hash": "56e9c00ad4029781aedc1b48988d4515",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1027,7 +1027,7 @@
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
                 "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-02-04T15:24:18+00:00"
+            "time": "2021-03-17T10:30:10+00:00"
         },
         {
             "name": "symfony/asset",

@@ -3,9 +3,9 @@ integrationDate: 20/02/2017
 
 fr:
   display_name: Amélie Defrance
-  short_bio:    "Intégratrice"
-  long_bio:     "Intégratrice"
-  job_title:    "Intégratrice"
+  short_bio:    "Amélie rend les applications dynamiques et accessibles. Ses outils de prédilections sont le HTML, CSS et Sass."
+  long_bio:     "Amélie est la magicienne de l'équipe. Elle transforme les formulaires les plus mornes en interfaces dynamiques et accessibles. En amont du projet, elle conseille et élabore des choix UX/UI dont elle connaît les secrets. Le reste du temps, elle aime s'occuper de son chat Romulus, faire du tricot et fabriquer elle-même les objets dont elle a besoin dans une stratégie d'auto-suffisance."
+  job_title:    "Intégratrice HTML/CSS/Sass"
 
 social:
   website:      ~
@@ -17,8 +17,9 @@ social:
 certifications: ~
 
 emojis:
-    - 🎲
-    - 🎮
-    - 📷
+    - 🍵
+    - 🐱
+    - 🧶
+    - 🧙‍♀️
 
 🚲: true

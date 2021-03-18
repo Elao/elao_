@@ -222,7 +222,7 @@
                         <p>Elao Summer Talk #2</p>
                     </div>
                 </a>
-                <a href="#" class="animated-block">
+                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="pen">
                             <rect x="0.6" y="28.4" height="1"/>
@@ -235,7 +235,7 @@
                             Article de blog
                             <i class="icon icon--arrow"></i>
                         </p>
-                        <p>Comprendre le cache du client Graphql Apollo</p>
+                        <p>{{ lastArticle.title }}</p>
                     </div>
                 </a>
             </div>

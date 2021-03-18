@@ -28,7 +28,7 @@ class CaseStudyController extends AbstractController
      */
     public function list(): Response
     {
-        $caseStudies = $this->manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]);
+        $caseStudies = $this->getActiveCasesStudies();
 
         return $this->render('case_study/index.html.twig', [
             'caseStudies' => $caseStudies,
@@ -40,8 +40,20 @@ class CaseStudyController extends AbstractController
      */
     public function show(CaseStudy $caseStudy): Response
     {
+        $caseStudies = $this->getActiveCasesStudies();
+        shuffle($caseStudies);
+
         return $this->render('case_study/show.html.twig', [
             'caseStudy' => $caseStudy,
+            'randomStudies' => \array_slice($caseStudies, 0, 2),
         ])->setLastModified($caseStudy->lastModified);
+    }
+
+    /**
+     * @return CaseStudy[]
+     */
+    private function getActiveCasesStudies(): array
+    {
+        return $this->manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]);
     }
 }

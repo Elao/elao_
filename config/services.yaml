@@ -32,9 +32,9 @@ services:
     # please note that last definitions always *replace* previous ones
 
     App\Stenope\Processor\TableOfContentProcessor:
-        tags: [{ name: content.processor, priority: -10 }]
+        tags: [{ name: stenope.processor, priority: -10 }]
 
     # Override default HTML Anchor processor:
-    Stenope\Bundle\Processor\HtmlAnchorProcessor:
-        class: App\Stenope\Processor\HtmlAnchorProcessor
-        tags: [{ name: content.processor, priority: -20 }]
+    Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
+    App\Stenope\Processor\HtmlAnchorProcessor:
+        tags: [{ name: stenope.processor, priority: -20 }]

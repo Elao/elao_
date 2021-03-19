@@ -76,19 +76,13 @@
                             </span>
                             <span class="name">{{ member.name }}</span>
                             <span class="job">{{ member.position|nl2br }}</span>
-                            {% if member.certifications is not empty %}
-                                {% if 'symfony' in member.certifications %}
-                                    <span class="certification">
-                                        <img src="{{ asset('build/images/certifications/symfony.svg') }}" alt="">
-                                        <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>Symfony</span></p>
-                                    </span>
-                                {% elseif 'opquast' in member.certifications %}
-                                    <span class="certification">
-                                        <img src="{{ asset('build/images/certifications/opquast.svg') }}" alt="">
-                                        <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>Opquast</span></p>
-                                    </span>
-                                {% endif %}
-                            {% endif %}
+                            {% for c in member.certifications|filter(c => c in ['symfony', 'opquast'])[0:1] %}
+                                {% set certif = content_get('App\\Model\\Certification', c) %}
+                                <span class="certification">
+                                    <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+                                </span>
+                            {% endfor %}
                         </a>
                     </li>
                 {% endfor %}

@@ -86,13 +86,16 @@
             </div>
 
             <!-- Facultatif -->
-            {% if member.certifications %}
+            {% if member.certifications is not empty %}
                 <div class="certification-list">
                     <ul>
-                        {% for certification in member.certifications %}
+                        {% for c in member.certifications %}
+                            {% set certif = content_get('App\\Model\\Certification', c) %}
                             <li class="certification">
-                                <img src="{{ asset('build/images/certifications/'~certification|u.snake~'.svg') }}" alt="">
-                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certification|u.title }}</span></p>
+                                <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                <p>
+                                    {{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span>
+                                </p>
                             </li>
                         {% endfor %}
                     </ul>

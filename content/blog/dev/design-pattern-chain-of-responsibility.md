@@ -16,7 +16,9 @@ author:    "xavierr"
 
 ---
 
->"_Quelqu'un pourrait me passer le sel, s'il vous plaît ?_" (Martin Fowler, sept. 2015)
+>"_Quelqu'un pourrait me passer le sel, s'il vous plaît ?_"
+> <cite>Martin Fowler, sept. 2015</cite>
+
 
 Aujourd'hui, nous allons nous amuser à enfiler des objets comme des perles grâce au Design Pattern `Chain of Responsibility`.
 <!--more-->
@@ -43,10 +45,12 @@ Voici les différentes situations que référence le _GoF_ :
 
 ## Diagramme du Design pattern `Chain of Responsibility`
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility'">}}
-    <figcaption style="text-align: center;font-style: italic;">Diagramme du Design Pattern 'Chain of Responsility'</figcaption>
-</p>
+<figure>
+    <img src="images/posts/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility">
+    <figcaption>
+      <span class="figure__legend">Diagramme du Design Pattern 'Chain of Responsility'</span>
+    </figcaption>
+</figure>
 
 ## Participants
 
@@ -111,6 +115,7 @@ Voici à présent ce que nous allons faire :
 ## <a name="chain-construct"></a> Logique de construction de la chaîne
 
 > "Tu aimeras ton prochain comme toi-même"
+> <cite>Xavier R.</cite>
 
 Nous allons faire évoluer notre classe concrète `ProductXmlExtractor` : au lieu d'implémenter l'interface `ProductExtractorInterface`, elle va en effet étendre une classe abstraite chargée notamment de construire la chaîne des _handlers_ et d'exposer les méthodes métiers attendues par ses héritiers. Voici le code de cette classe abstraite `AbstractProductExtractor`, abondamment commentée pour expliquer le principe :
 

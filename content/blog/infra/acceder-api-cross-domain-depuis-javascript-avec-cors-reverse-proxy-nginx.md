@@ -9,7 +9,7 @@ description:        "Configurer un reverse proxy avec nginx et CORS pour permett
 
 thumbnail:          "images/posts/thumbnails/bridge.jpg"
 header_img:         "images/posts/headers/bridge.jpg"
-tags:               ["nginx","reverse","proxy","infra","cors","api", "javascript"]
+tags:               ["nginx","reverse","proxy","cors"]
 categories:         ["Infra", "nginx", "javascript"]
 
 author:    "mcolin"

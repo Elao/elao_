@@ -22,7 +22,7 @@ Aujourd'hui nous allons faire le tour d'une solution fort sympathique que nous u
 
 Son petit nom ? [**Supervisor**](http://supervisord.org/).
 
-# Introduction
+## Introduction
 
 Supervisor est un petit outil codé en Python et permettant d'assurer le suivi et le contrôle de services/processus applicatifs sur des systèmes de type UNIX.
 
@@ -32,7 +32,7 @@ On peut notamment penser à des services NodeJS ou autres.
 
 Supervisor est disponible en paquet Debian en version 3.0, l'installation est donc très facile :
 
-```
+```bash
 apt-get install supervisor
 ```
 
@@ -47,15 +47,15 @@ Il est configurable via le fichier ```/etc/supervisor/supervisord.conf```
 
 **Supervisorctl** est le client permettant d'administrer les services gérés par supervisor. Il est capable de se connecter à plusieurs démons **supervisord**  et permet de démarrer / arrêter des services. Il est possible de les faire fonctionner soit via une socket soit via TCP. Il est également possible de gérer une authentification lors de la connexion au démon.
 
-# Utiliser supervisor
+## Utiliser supervisor
 
-## Ajouter un service à Supervisor
+### Ajouter un service à Supervisor
 
 Pour ajouter un service à supervisor il suffit de le déclarer en ajoutant un fichier dans ```/etc/supervisor/conf.d```.
 
 Attention celui-ci doit se terminer par l'extension ```.conf``` pour être correctement pris en compte par le démon.
 
-```
+```bash
 [program:blogd]
 command=node node_modules/bin/blogd
 
@@ -70,7 +70,7 @@ redirect_stderr=true
 ```
 Après redémarrage de supervisor (```/etc/init.d/supervisor restart```) nous pouvons ensuite vérifier le bon fonctionnement du/des service(s) via le client :
 
-```
+```bash
 elao@bismuth:/etc/supervisor/conf.d|
 ⇒  supervisorctl
 mailcatcher                      RUNNING    pid 7840, uptime 2 days, 4:51:46
@@ -78,18 +78,18 @@ phantomjs                        RUNNING    pid 7842, uptime 2 days, 4:51:46
 blogd                            RUNNING    pid 11929, uptime 0:02:41
 ```
 
-## Redémarrer un service
+### Redémarrer un service
 
 La syntaxe pour redémarrer un service est on ne peut plus simple.
 
-```
+```bash
 supervisor> restart blogd
 blogd: stopped
 blogd: started
 ```
-## Parcourir les logs depuis le client
+### Parcourir les logs depuis le client
 
-```
+```bash
 supervisor> tail -f blogd
 ==> Press Ctrl-C to exit <==
 var/blog/content/posts/images/ => web/blog/medias
@@ -113,7 +113,7 @@ Listening on 127.0.0.1:5555
 
 ```
 
-## Activer l'interface web
+### Activer l'interface web
 
 Pour finir supervisor fournit également une interface web qui est activable via la section ``[inet_http_server]`` et qui permet de gérer les services de la même façon que le client en console.
 
@@ -123,7 +123,7 @@ Pour finir supervisor fournit également une interface web qui est activable via
 
 Il suffit de créer un nouveau fichier dans ```/etc/supervisor/conf.d``` s'appelant par exemple ```inet_http_server.conf``` et d'y recopier le contenu suivant :
 
-```
+```bash
 [inet_http_server]
 port      = :9001
 username  = elao

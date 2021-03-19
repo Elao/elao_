@@ -38,10 +38,12 @@ Noter que le terme `Wrapper` est un synonyme de `Decorator` (GoF).
 
 ## Diagramme du Design pattern `Decorator`
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/structural-decorator.jpg" alt="Le Design Pattern 'Decorator'">}}
-    <figcaption style="text-align: center;font-style: italic;">Diagramme du Design Pattern 'Decorator'</figcaption>
-</p>
+<figure>
+    <img src="images/posts/design-pattern/structural-decorator.jpg" alt="Le Design Pattern 'Decorator'">
+    <figcaption>
+      <span class="figure__legend">Le Design Pattern 'Decorator'</span>
+    </figcaption>
+</figure>
 
 ## Participants
 

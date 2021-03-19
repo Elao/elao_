@@ -47,14 +47,14 @@ En imaginant que nous ayont configuré un réseau local (privé) 172.16.0.0 nous
 Sous cette forme, une légère modification au niveau du fichier ```/etc/hosts``` de chacune de vos machines est nécessaire.
 Avec une configuration standard nous aurons donc dans ce fichier (pour tartanpion)
 
-```
+```bash
 127.0.0.1   localhost.localdomain localhost
 87.37.23.91 tartanpion.elao.local tartanpion
 ```
 
 que nous allons modifier pour avoir:
 
-```
+```bash
 127.0.0.1   localhost.localdomain localhost
 87.37.23.91 tartanpion.elao.local
 
@@ -73,13 +73,13 @@ La création d'un cluster et l'ajout d'un ou plusieurs noeuds ne posent en soit 
 
 Sur l'un des deux hyperviseurs (peu importe lequel), créons le cluster ayant pour nom "elao":
 
-```
+```bash
 pvecm create elao
 ```
 
 On peut consulter son bon fonctionnement avec la commande ```pvecm status```, qui devrait nous renvoyer les informations suivantes:
 
-```
+```bash
 Version: 6.2.0
 Config Version: 1
 Cluster Name: elao
@@ -103,9 +103,9 @@ Node addresses: 172.16.0.1
 
 A partir de notre deuxième noeud (bismuth) nous allons procéder à son ajout au cluster avec la commande ```pvecm add 172.16.0.1```
 
-Si tout s'est bien passé la commande ```pvecm nodes``` doit à présent renvoyer quelquechose semblable à ce qui suit:
+Si tout s'est bien passé la commande ```pvecm nodes``` doit à présent renvoyer quelque chose semblable à ce qui suit :
 
-```
+```bash
 Node  Sts   Inc   Joined               Name
    1   M     48   2015-01-16 14:25:27  tartanpion
    2   M     44   2015-01-16 14:25:27  bismuth
@@ -124,7 +124,7 @@ Dans notre cas avec 2 machines nous ne pouvons pas avoir de quorum lors d'un inc
 
 Pour l'instant un ```pvecm status``` doit retourner quelque chose comme:
 
-```
+```bash
 Version: 6.2.0
 Config Version: 2
 Cluster Name: elao
@@ -169,7 +169,7 @@ Votre fichier doit donc à présent ressembler à ceci:
 
 Redémarrer à présent votre cluster avec un  ```/etc/init.d/pve-cluster restart``` vous devriez avoir à présent comme résultat à ```pvecm status```
 
-```
+```bash
 Version: 6.2.0
 Config Version: 6
 Cluster Name: elao
@@ -196,7 +196,7 @@ On notera le flag ```2node```, nous voila avec un cluster à 2 noeuds fonctionne
 
 Il est possible qu'au cours du redémarrage du cluster vous rencontriez le message suivant:
 
-```
+```bash
 Starting pve cluster filesystem : pve-clusterfuse: failed to access mountpoint /etc/pve: Transport endpoint is not connected
 [main] crit: fuse_mount error: Transport endpoint is not connected
 [main] notice: exit proxmox configuration filesystem (-1)

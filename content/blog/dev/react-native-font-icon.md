@@ -10,7 +10,7 @@ description:    "Comment intégrer des icônes vectorielles dans une app React N
 
 thumbnail:      "images/posts/thumbnails/harpal-singh-396280-unsplash.jpg"
 header_img:     "images/posts/headers/harpal-singh-396280-unsplash.jpg"
-tags:           ["react native", "react", "mobile", "font", "icon"]
+tags:           ["React native", "Mobile", "Font", "Icon"]
 categories:     ["dev"]
 
 author:    "tjarrand"

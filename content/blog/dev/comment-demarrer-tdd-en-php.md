@@ -37,11 +37,12 @@ On trouve pléthore de littérature à ce sujet et voici selon nous les avantage
 
 Installons le framework de test PHPUnit :
 
+```bash
     $ composer require --dev phpunit/phpunit ^7
-
+```
 En considérant que notre namespace est `MyCompany\App` on devrait avoir ceci dans notre composer.json :
 
-```
+```json
 {
   "autoload": {
     "psr-4": {
@@ -60,13 +61,14 @@ En considérant que notre namespace est `MyCompany\App` on devrait avoir ceci da
 ```
 
 Vérifions que tout est en place en lançant :
-
-    $ ./vendor/bin/phpunit
-
+``` bash
+    ./vendor/bin/phpunit
+```
 Nous devrions avoir quelque chose comme ça :
 
+```
 > No tests executed!
-
+```
 ## Notre exemple
 
 Imaginons que nous intervenons sur un blog.
@@ -235,10 +237,13 @@ class GetPostsListTest extends TestCase
 
 Lançons les tests :
 
+```bash
     $ ./vendor/bin/phpunit
+```
 
 Bien sûr, cela échoue :
 
+```bash
     There was 1 failure:
 
     1) MyCompany\App\Tests\Post\GetPostsListTest::test_get_new_and_old_posts
@@ -250,6 +255,7 @@ Bien sûr, cela échoue :
     -    0 => MyCompany\App\Post\PostView Object (...)
     -    1 => MyCompany\App\Post\PostView Object (...)
      )
+```
 
 Mais pas de panique. Au contraire, faire échouer les tests est la 1ère étape en TDD !
 
@@ -345,9 +351,12 @@ final class GetPostsList
 
 Enfin, lançons les tests :
 
+```bash
     $ ./vendor/bin/phpunit
-
+```
+```
 > OK (1 test, 4 assertions)
+```
 
 ### Le temps n'attend pas
 
@@ -401,11 +410,12 @@ final class GetPostsList
 ```
 
 Vérifions :
-
+```
     $ ./vendor/bin/phpunit
-
+```
+```
 > OK (1 test, 4 assertions)
-
+```
 Super !
 
 Vous trouverez le code de cet exemple ici : https://github.com/supertanuki/TDD-en-PHP

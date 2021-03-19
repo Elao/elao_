@@ -10,38 +10,38 @@ description:        "Guide d'intrégration de Vue.js dans une application Symfon
 
 thumbnail:          "images/posts/thumbnails/vuejs.jpg"
 header_img:         "images/posts/headers/vuejs.jpg"
-tags:               ["Vuejs","Javascript","Front","Frontend","Framework","Symfony"]
+tags:               ["Vuejs","Javascript","Frontend","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
 author:    "mcolin"
 ---
 
-Dans mon [précédent article](/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et vous expliquais pourquoi vous devriez l'utiliser dans vos projets. Je disais que **Vue.js** était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment l'intégrer au framework **PHP**.
+Dans mon [précédent article](/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et vous expliquais pourquoi vous devriez l'utiliser dans vos projets. Je disais que **Vue.js** était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment l'intégrer au framework **PHP**.
 
 ## Installation
 
-Nous allons tout d'abbord installer **Vue.js** :
+Nous allons tout d'abord installer **Vue.js** :
 
-```
+```bash
 npm install vue vue-loader vue-template-compiler
 ```
 
 ou
 
-```
+```bash
 yarn add vue vue-loader vue-template-compiler
 ```
 
 Puis **Webpack Encore** :
 
-```
+```bash
 npm install @symfony/webpack-encore --save-dev
 composer require symfony/webpack-encore-bundle
 ```
 
 ou
 
-```
+```bash
 yarn add @symfony/webpack-encore --dev
 composer require symfony/webpack-encore-bundle
 ```
@@ -66,7 +66,7 @@ module.exports = webpackConfig;
 
 **Webpack Encore** est maintenant paré pour compiler vos composants **Vue.js**.
 
-```
+```bash
 yarn encore dev --watch --watch-poll
 ```
 

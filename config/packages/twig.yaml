@@ -7,7 +7,7 @@ twig:
             birthdate: 04/01/2005
             contact:
                 email: contact@elao.com
-                phone: +33 (0)4 82 53 37 19
+                phone: 04 82 53 37 19
 
             menu:
                 - { path: 'services', label: 'Nos services' }

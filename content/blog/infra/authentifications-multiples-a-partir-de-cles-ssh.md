@@ -8,7 +8,7 @@ draft:              false
 description:        "Authentifications multiples à partir de clés SSH."
 
 thumbnail:          "images/posts/thumbnails/keep-calm-and-connect-to-ssh.png"
-tags:               ["ssh", "Linux","Sécurité","Tips"]
+tags:               ["SSH", "Linux", "Sécurité", "Tips"]
 categories:         ["Infra", "Linux", "SSH"]
 
 author:    "gfaivre"

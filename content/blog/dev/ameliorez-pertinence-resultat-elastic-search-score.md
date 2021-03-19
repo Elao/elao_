@@ -9,7 +9,7 @@ description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce
 
 thumbnail:      "images/posts/thumbnails/elasticsearch.png"
 header_img:     "images/posts/headers/elasticsearch.jpg"
-tags:           ["moteur de recherche", "elasticsearch", "pertinence", "elastica"]
+tags:           ["Moteur de recherche", "ElasticSearch", "Pertinence", "Elastica"]
 categories:     ["dev"]
 
 author: "mcolin"

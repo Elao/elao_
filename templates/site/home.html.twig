@@ -15,17 +15,18 @@
                 <span>du lien</span>
             </h1>
             <div class="banner-home__content">
-                <p>Elao est un atelier de co-conception d'applications web et mobile sur mesure</p>
+                <p>{{ site.description }}</p>
             </div>
+            {% set highlightedCaseStudy = content_get('App\\Model\\CaseStudy', site.home.highlights.caseStudy) %}
             <div class="banner-home__image">
                 <figure>
                     <div class="image" style="background: url('https://www.fillmurray.com/510/330')"></div>
                     <figcaption>
-                        <span>Tribü</span>
-                        Solution de déchets en entreprise
+                        <span>{{ highlightedCaseStudy.title }}</span>
+                        {{ highlightedCaseStudy.shortDescription }}
                     </figcaption>
                 </figure>
-                <a href="{{ path('case_study', { caseStudy: 'tribu' }) }}" class="btn btn--primary btn--animated">
+                <a href="{{ path('case_study', { caseStudy: highlightedCaseStudy.slug }) }}" class="btn btn--primary btn--animated">
                     <span>
                         Découvrir le projet
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -157,7 +158,7 @@
                 </a>
             </div>
             <div class="section-home__links">
-                <a href="#" class="animated-block">
+                <a class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45px" height="30" viewBox="0 0 45 30" class="browser">
                             <rect x="3.3" y="6.8" width="37.8" height="1"/>
@@ -190,7 +191,7 @@
                     <div class="animated-block__content">
                         <p class="title">
                             Contribution
-                            <i class="icon icon--arrow"></i>
+                            <i class="icon"></i>
                         </p>
                         <p>Core team Symfony</p>
                     </div>
@@ -222,7 +223,7 @@
                         <p>Elao Summer Talk #2</p>
                     </div>
                 </a>
-                <a href="#" class="animated-block">
+                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="pen">
                             <rect x="0.6" y="28.4" height="1"/>
@@ -235,7 +236,7 @@
                             Article de blog
                             <i class="icon icon--arrow"></i>
                         </p>
-                        <p>Comprendre le cache du client Graphql Apollo</p>
+                        <p>{{ lastArticle.title }}</p>
                     </div>
                 </a>
             </div>

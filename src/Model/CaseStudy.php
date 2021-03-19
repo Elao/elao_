@@ -9,7 +9,8 @@ class CaseStudy
     use MetaTrait;
 
     public string $title;
-    public ?string $description;
+    public ?string $description = null;
+    public ?string $shortDescription = null;
     public string $slug;
     public string $content;
     public \DateTimeInterface $date;

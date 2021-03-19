@@ -6,6 +6,7 @@ name: "Tribü"
 
 # Params
 metaDescription: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
+shortDescription: "Solution de déchets en entreprise"
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
 caseUrl: https://www.exemple.com/
 clients: Example Corp.

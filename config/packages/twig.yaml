@@ -25,3 +25,7 @@ twig:
                 - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'contact', label: 'Contact' }
                 - { path: 'values', label: 'Nos valeurs' }
+
+            home:
+                highlights:
+                    caseStudy: tribu

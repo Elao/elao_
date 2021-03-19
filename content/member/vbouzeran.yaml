@@ -1,19 +1,9 @@
-en:
-  display_name: Vincent BOUZERAN
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Symfony developer - Certified Expert"
+name: Vincent BOUZERAN
+position: "Développeur Symfony - Expert certifié"
+bio: ~
 
-fr:
-  display_name: Vincent BOUZERAN
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur Symfony - Expert certifié"
-
-social:
-  website:         http://www.elao.com
-  twitter:         ~
-  github:          Vincz
-  email:           vincent.bouzeran@elao.com
-  avatar:          images/authors/vbouzeran.jpg
-  google_plus_id:  ~
+website: http://www.elao.com
+twitter: ~
+github: Vincz
+email: vincent.bouzeran@elao.com
+avatar: images/authors/vbouzeran.jpg

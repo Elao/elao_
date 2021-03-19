@@ -1,22 +1,12 @@
-en:
-  display_name: Chris Meiller
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Frontend developer"
-
-fr:
-  display_name: Chris Meiller
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur Frontend"
-
-social:
-  website:         http://www.elao.com
-  twitter:         chrismeiller
-  github:          cmeiller
-  linkedin:        ~
-  email:           christophe.meiller@elao.com
-  avatar:          "authors/cmeiller.jpg"
-  google_plus_id:  ~
-
 🚲: true
+
+name: Chris Meiller
+position: "Développeur Frontend"
+bio: ~
+
+website: http://www.elao.com
+twitter: chrismeiller
+github: cmeiller
+linkedin: ~
+email: christophe.meiller@elao.com
+avatar: "authors/cmeiller.jpg"

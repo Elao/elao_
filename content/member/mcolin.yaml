@@ -1,27 +1,19 @@
 active: true
+🚲: true
+
+name: Maxime COLIN
+position: "Développeur Symfony"
+bio: "Développeur curieux, Maxime aime découvrir de nouvelles technologies et releveler les défis. Depuis une dizaine d'années il construit des morceaux de web tel un artisan passionné. Sur son temps libre il aime voyager pour photographier de beaux paysages et des animaux sauvages."
 integrationDate: 16/05/2011
 
-en:
-  display_name: Maxime COLIN
-  short_bio:    "Lead Developer"
-  long_bio:     "Curious developer, Maxime likes to discover and take up challenges. For ten years he has been building pieces of the web like a passionate craftsman. In his spare time he enjoys traveling to photograph beautiful landscapes and wild animals."
-  job_title:    "Développeur Symfony"
+website:      https://www.maximecolin.fr/
+twitter:      colin_maxime
+github:       maximecolin
+linkedIn:     maxime-colin-27a12a20
+email:        maxime.colin@elao.com
+avatar:       images/authors/mcolin.jpg
 
-fr:
-  display_name: Maxime COLIN
-  short_bio:    "Développeur Lead"
-  long_bio:     "Développeur curieux, Maxime aime découvrir de nouvelles technologies et releveler les défis. Depuis une dizaine d'années il construit des morceaux de web tel un artisan passionné. Sur son temps libre il aime voyager pour photographier de beaux paysages et des animaux sauvages."
-  job_title:    "Développeur Lead"
-
-social:
-  website:      https://www.maximecolin.fr/
-  twitter:      colin_maxime
-  github:       maximecolin
-  linkedIn:     maxime-colin-27a12a20
-  email:        maxime.colin@elao.com
-  avatar:       images/authors/mcolin.jpg
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 📷
@@ -31,5 +23,3 @@ emojis:
     - 🥾
     - 🐧
     - 🧞‍♂️
-
-🚲: true

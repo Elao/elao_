@@ -1,19 +1,10 @@
-en:
-  display_name: Benoit Viguier
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    ""
+name: Benoit Viguier
+position: ~
+bio: ~
 
-fr:
-  display_name: Benoit Viguier
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    ""
+website: https://b-viguier.github.io/
+twitter: b_viguier
+github: b-viguier
+email: ~
+avatar: images/authors/bviguier.png
 
-social:
-  website:         https://b-viguier.github.io/
-  twitter:         b_viguier
-  github:          b-viguier
-  email:           ""
-  avatar:          images/authors/bviguier.png
-  google_plus_id:  ~

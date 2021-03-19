@@ -1,18 +1,17 @@
 active: true
+🚲: true
+
+name: Amélie Defrance
+gender: female
+position: "Intégratrice HTML/CSS"
+bio: "Amélie est la magicienne de l'équipe. Elle transforme les formulaires les plus mornes en interfaces ergonomiques et accessibles en HTML & Sass. En amont du projet, elle conseille et élabore des choix UX/UI dont elle connaît les secrets. Le reste du temps, elle aime s'occuper de son chat Romulus et bouturer ses plantes à l'infini."
 integrationDate: 20/02/2017
 
-fr:
-  display_name: Amélie Defrance
-  short_bio:    "Amélie rend les applications dynamiques et accessibles. Ses outils de prédilections sont le HTML, CSS et Sass."
-  long_bio:     "Amélie est la magicienne de l'équipe. Elle transforme les formulaires les plus mornes en interfaces ergonomiques et accessibles en HTML & Sass. En amont du projet, elle conseille et élabore des choix UX/UI dont elle connaît les secrets. Le reste du temps, elle aime s'occuper de son chat Romulus et bouturer ses plantes à l'infini."
-  job_title:    "Intégratrice HTML/CSS"
-
-social:
-  website:      ~
-  twitter:      ~
-  github:       ameliedefrance
-  email:        amelie.defrance@elao.com
-  avatar:       images/authors/adefrance.jpg
+website: ~
+twitter: ~
+github: ameliedefrance
+email: amelie.defrance@elao.com
+avatar: images/authors/adefrance.jpg
 
 certifications:
     - opquast
@@ -22,7 +21,3 @@ emojis:
     - 🐱
     - 🧶
     - 🧙‍♀️
-
-🚲: true
-
-gender: female

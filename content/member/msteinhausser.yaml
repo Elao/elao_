@@ -1,30 +1,25 @@
 active: true
-integrationDate: 4/01/2016
+🚲: true
 
-en:
-  display_name: Maxime Steinhausser
-  pseudo: Ogi
-  short_bio:    "Passionate web dev Symfony, also on his spare-time as Symfony Core Team. Loves react, react-native and Vue.js too, and also cooking and Zelda."
-  long_bio:     "Passionate web dev Symfony, also on his spare-time as Symfony Core Team. He loves also React, React Native & Vue.js. Talented cheesecake maker, bike & chorizo lover, Smash Ultimate & Zelda-addict. Inventor of Ogitos, amazing cocktail with vodka."
-  job_title:    "Magic Web Developper Symfony"
+name: Maxime Steinhausser
+pseudo: Ogi
+position: Développeur Web
+bio: |
+    Développeur-magicien Symfony, y compris le soir et le week-end en tant que membre de la Symfony Core Team.
+    Développeur React, React Native & Vue.js occasionnel.
 
-fr:
-  display_name: Maxime Steinhausser
-  pseudo: Ogi
-  short_bio:    ""
-  long_bio: |
-      Développeur-magicien Symfony, y compris le soir et le week-end en tant que membre de la Symfony Core Team. Développeur React, React Native & Vue.js occasionnel. Cuisinier époustouflant, expert en cheesecake.
-      Il aime s'occuper de son vélo, trouver des recettes avec du chorizo et se promener à la montagne.
-      Smash Ultimate & Zelda-addict. Inventeur de l'Ogito, un célèbre cocktail très recherché pour son sens de la fête.
-  job_title:    "Développeur Symfony Certifié"
+    Cuisinier époustouflant, expert en cheesecake. Il aime s'occuper de son vélo, trouver des recettes avec du chorizo et se promener à la montagne.
+
+    _Smash Ultimate_ & _Zelda_-addict. Inventeur de l'_Ogito™_, un célèbre cocktail très recherché pour son sens de la fête.
+integrationDate: 04/01/2016
 
 social:
-  website:      http://www.elao.com
-  twitter:      ogizanagi
-  github:       ogizanagi
-  linkedIn:     maxime-steinhausser-3708a7107
-  email:        maxime.steinhausser@elao.com
-  avatar:       images/authors/msteinhausser.png
+    website: http://www.elao.com
+    twitter: ogizanagi
+    github: ogizanagi
+    linkedIn: maxime-steinhausser-3708a7107
+    email: maxime.steinhausser@elao.com
+    avatar: images/authors/msteinhausser.png
 
 certifications:
     - symfony
@@ -37,5 +32,3 @@ emojis:
     - 👨‍💻
     - 🍣
     - 🕘
-
-🚲: true

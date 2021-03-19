@@ -1,19 +1,10 @@
-en:
-  display_name: Maximilien BERNARD
-  short_bio:    "Backend Developer"
-  long_bio:     "Backend Developer mostly using Symfony and DevOps adept"
-  job_title:    "Backend Developer"
+name: Maximilien BERNARD
+position: "Développeur Backend"
+bio: "Développeur Backend principalement avec Symfony et adepte DevOps"
 
-fr:
-  display_name: Maximilien BERNARD
-  short_bio:    "Développeur Backend"
-  long_bio:     "Développeur Backend principalement avec Symfony et adepte DevOps"
-  job_title:    "Développeur Backend"
-
-social:
-  website:         ""
-  twitter:         mb3rnard
-  github:          mb3rnard
-  email:           maximilien.bernard@elao.com
-  avatar:          images/authors/mbernard.jpg
-  google_plus_id:  ""
+website: ""
+twitter: mb3rnard
+github: mb3rnard
+email: maximilien.bernard@elao.com
+avatar: images/authors/mbernard.jpg
+google_plus_id: ""

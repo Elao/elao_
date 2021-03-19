@@ -1,26 +1,17 @@
 active: true
+
+name: Xavier R
+position: "Développeur Symfony"
+bio: ~
 integrationDate: 05/01/2015
 
-en:
-  display_name: Xavier R
-  short_bio:    ""
-  long_bio:     ""
-  job_title:   "Symfony Developer"
+website: ~
+twitter: ~
+github: xavier-rdo
+email: xavier.roldo@elao.com
+avatar: images/authors/xavierr.jpg
 
-fr:
-  display_name: Xavier R
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Développeur Symfony"
-
-social:
-  website:         ~
-  twitter:         ~
-  github:          xavier-rdo
-  email:           xavier.roldo@elao.com
-  avatar:          images/authors/xavierr.jpg
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 🏃‍

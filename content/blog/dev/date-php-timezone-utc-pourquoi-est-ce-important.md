@@ -17,8 +17,6 @@ author:    "mcolin"
 
 <!--more-->
 
-# Timezone UTC, pourquoi est-ce important ?
-
 ## La timezone c'est quoi ?
 
 La timezone est une information associée à une date permettant de connaître son fuseau horaire. Cette timezone est décrite par un nom de continent et un nom de ville.

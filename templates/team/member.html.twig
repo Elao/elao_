@@ -45,7 +45,7 @@
             <p class="job">{{ member.position }}</p>
 
             <div class="description">
-                <p>{{ member.bio|nl2br }}</p>
+                {{ member.bio|nl2br|markdownify|raw }}
             </div>
 
             <div class="socials socials--inline">

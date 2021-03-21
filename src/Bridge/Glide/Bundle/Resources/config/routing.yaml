@@ -1,0 +1,10 @@
+glide_image_resize:
+    path: '%glide_base_url%/{path}'
+    controller: 'App\Bridge\Glide\Bundle\Controller\ResizeImageController'
+    requirements:
+        path: ".+"
+
+glide_image_resized_url:
+    path: '%glide_public_cache_path%/{path}'
+    requirements:
+        path: ".+"

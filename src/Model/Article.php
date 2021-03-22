@@ -42,6 +42,8 @@ class Article
      */
     public $outdated = false;
 
+    public ?string $tweetId;
+
     public function hasTag(string $tag): bool
     {
         return \in_array($tag, $this->tags, true);

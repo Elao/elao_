@@ -146,5 +146,8 @@
                 </div>
             {% endfor %}
         {% endblock %}
+        {% if article.tweetId is not empty %}
+            <p>Des remarques ? Ou simplement envie d'en discuter ? <a href="https://twitter.com/Elao/status/{{ article.tweetId }} " target="_blank">Poursuivons sur twitter !</a></p>
+        {% endif %}
     </div>
 {% endblock content %}

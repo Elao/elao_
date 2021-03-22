@@ -1,7 +1,21 @@
 .page-methodology {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 40px;
+
+  .h2--dash,
+  .h2--ordered {
+    grid-column: 2 / 13;
+  }
+
+  .offset-content {
+    grid-column: 3 / 12;
+  }
+
   .banner-planning {
     margin: 60px 0 0;
     position: relative;
+    grid-column: 1 / 13;
 
     img {
       margin: 0;
@@ -21,7 +35,171 @@
   }
 
   .planning-steps {
+    margin-bottom: -135px;
     position: relative;
     top: -35px;
+    grid-column: 3 / 13;
+  }
+
+  .banner-steps {
+    margin: 80px 0 480px;
+    position: relative;
+    grid-column: 1 / 13;
+
+    img {
+      margin: 0;
+      position: absolute;
+      bottom: -400px;
+      left: 0;
+      z-index: -1;
+    }
+  }
+
+  .run {
+    margin: 40px 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    grid-column: 2 / 12;
+  }
+
+  .run__item {
+    margin: 0 20px;
+    padding: 40px 30px 40px;
+    width: calc(33.33% - 40px);
+    min-height: 485px;
+    color: #fff;
+    background: $color-dark;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 50px;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: 120px;
+      margin-right: 0;
+    }
+
+    h4 {
+      margin: 0 0 30px;
+      font-family: 'antikor bold';
+      font-size: 18px;
+      color: $color-light;
+      line-height: 1.7;
+    }
+  }
+
+  .prioritization {
+    grid-column: 2 / 9;
+
+    p {
+      margin: 0 0 50px;
+    }
+  }
+
+  .process {
+    padding: 35px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 2 / 12;
+    font-family: 'antikor regular';
+    color: $color-primary;
+    background: $color-secondary;
+  }
+
+  .process__item {
+    margin-right: 15px;
+    padding-right: 25px;
+    white-space: nowrap;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      top: 50%;
+      right: 0;
+      left: unset;
+      height: unset;
+      width: unset;
+      font-family: 'antikor bold';
+      color: $color-brand;
+      content: '>';
+      background: transparent;
+      transform: translateY(-50%);
+    }
+
+    &:last-of-type {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .estimate {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    grid-column: 1 / 12;
+
+    img {
+      margin: 0;
+      margin-right: 40px;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+  }
+
+  .tools {
+    margin: 60px 0;
+    display: flex;
+    align-items: center;
+    grid-column: 2 / 13;
+  }
+
+  .tools__image {
+    margin-left: 40px;
+    min-width: 620px;
+    position: relative;
+
+    &:before {
+      height: 60px;
+      width: 290px;
+      position: absolute;
+      top: -40px;
+      right: 40px;
+      content: '';
+      background: $color-secondary;
+      z-index: -1;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+
+  .list-inline {
+    grid-column: 3 / 12;
+  }
+
+  .our-commitments {
+    margin-top: 100px;
+    grid-column: 1 / 7;
+  }
+
+  .your-commitments {
+    margin-top: 180px;
+    grid-column: 7 / 13;
   }
 }

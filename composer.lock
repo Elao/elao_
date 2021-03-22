@@ -946,12 +946,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "2ba78ac91f95e8b56b388790ec436535d2242c03"
+                "reference": "567b4a5f413f8aa0dc8e63cb1842c1f1efcce3f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/2ba78ac91f95e8b56b388790ec436535d2242c03",
-                "reference": "2ba78ac91f95e8b56b388790ec436535d2242c03",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/567b4a5f413f8aa0dc8e63cb1842c1f1efcce3f8",
+                "reference": "567b4a5f413f8aa0dc8e63cb1842c1f1efcce3f8",
                 "shasum": ""
             },
             "require": {
@@ -1027,7 +1027,7 @@
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
                 "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-03-19T14:10:27+00:00"
+            "time": "2021-03-22T09:57:03+00:00"
         },
         {
             "name": "symfony/asset",

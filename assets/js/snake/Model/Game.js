@@ -63,7 +63,7 @@ export default class Game {
     }
 
     end() {
-        console.log('💀');
+        console.info('💀');
         this.snake.die();
     }
 }

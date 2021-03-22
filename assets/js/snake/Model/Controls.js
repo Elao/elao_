@@ -50,8 +50,6 @@ export default class Controls {
     }
 
     resolve() {
-        let changed = false;
-
         if (this.setLeft(this.x[0] && this.x[0] !== this.x[1])) {
             return this.onChange('left', this.left);
         }

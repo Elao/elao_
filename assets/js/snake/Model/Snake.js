@@ -57,7 +57,7 @@ export default class Snake {
                 this.setDirection(false, true);
                 break;
             default:
-                throw new Error(`Unsopported direction ${direction}`);
+                throw new Error(`Unsopported direction ${type}`);
         }
     }
 

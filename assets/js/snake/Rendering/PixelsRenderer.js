@@ -1,5 +1,5 @@
 export default class PixelsRenderer {
-    constructor(pixels, border = 1) {
+    constructor(pixels) {
         this.pixels = pixels;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
@@ -16,7 +16,7 @@ export default class PixelsRenderer {
     }
 
     getPath() {
-        return this.pixels.reduce((path, pixel, index) => {
+        return this.pixels.reduce((path, pixel) => {
             return `${path} M${pixel.x},${pixel.y} l0,0`;
         }, '');
     }

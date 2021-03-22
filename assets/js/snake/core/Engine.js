@@ -2,8 +2,7 @@ import FixedLoop from 'snake/core/FixedLoop';
 import Loop from 'snake/core/Loop';
 import SvgRenderer from 'snake/Rendering/SvgRenderer';
 import Listener from 'snake/Listener/LoadListener';
-import Background from 'snake/Assets/Background';
-import Logo from 'snake/Assets/Logo';
+//import Logo from 'snake/Assets/Logo';
 import Game from 'snake/Model/Game';
 import Controls from 'snake/Model/Controls';
 
@@ -18,7 +17,7 @@ export default class Engine {
     }
 
     start() {
-        console.log('🐍');
+        console.info('🐍');
         this.renderLoop.start();
         this.gameLoop.start();
         this.controls.start();
@@ -34,7 +33,7 @@ export default class Engine {
         this.game.update();
     }
 
-    render(time) {
+    render() {
         this.renderer.update();
     }
 }

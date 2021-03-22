@@ -52,3 +52,28 @@ The Symfony CLI exposes you the URL at which the site is available.
 ### Start asset watcher
 
     make watch
+
+## Assets
+
+Reference images & other assets in Twig templates using `asset()`:
+
+```twig
+{{ asset(article.thumbnail) }}
+```
+
+You can resize an image using a preset defined in `config/packages/glide.yaml`:
+
+```twig
+{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}
+```
+
+or with arbitrary options:
+
+```twig
+{{ asset(article.thumbnail|glide_image_resize({
+    w: 80,
+    h: 60,
+})) }}
+```
+
+See [Glide's documentation](https://glide.thephpleague.com/1.0/api/quick-reference/) for available options.

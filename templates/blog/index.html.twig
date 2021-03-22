@@ -42,7 +42,7 @@
                 {% elseif page == minPage and loop.index < 5 %}
                     <li class="miniature-inline miniature-inline--large">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}')"></span>
                         </a>
                         <div class="miniature-inline__content">
                             <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
@@ -73,7 +73,7 @@
                 {% else %}
                     <li class="miniature">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}')"></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

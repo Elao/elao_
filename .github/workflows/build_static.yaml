@@ -73,6 +73,9 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_
 
+      - name: 'Copy resized images'
+        run: cp -R public/resized build/resized
+
       - name: 'Tar static site'
         run: tar -czvf static-build.zip build
 

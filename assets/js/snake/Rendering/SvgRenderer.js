@@ -1,5 +1,6 @@
 import MapRenderer from 'snake/Rendering/MapRenderer';
 import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
+import PixelsRenderer from 'snake/Rendering/PixelsRenderer';
 
 export default class SvgRenderer {
     static createElement(size, margin = 5) {
@@ -30,8 +31,8 @@ export default class SvgRenderer {
     constructor(game) {
         this.map = new MapRenderer(game.map);
         this.snake = new SnakeRenderer(game.snake);
+        this.pixels = new PixelsRenderer(game.pixels);
         this.element = this.constructor.createElement(game.map.size);
-        //this.loop = new Loop(this.update);
 
         this.width = null;
         this.height = null;
@@ -44,6 +45,7 @@ export default class SvgRenderer {
 
         this.map.attach(this.element);
         this.snake.attach(this.element);
+        this.pixels.attach(this.element);
 
         document.body.appendChild(this.element);
     }
@@ -67,5 +69,6 @@ export default class SvgRenderer {
 
     update() {
         this.snake.update();
+        this.pixels.update();
     }
 }

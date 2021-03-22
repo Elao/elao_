@@ -1,5 +1,5 @@
 export default class GameMap {
-    constructor(size = 100) {
-        this.size = 100;
+    constructor(size) {
+        this.size = size;
     }
 }

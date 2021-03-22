@@ -42,7 +42,7 @@ export default class Controls {
                 break;
 
             default:
-                console.log(type, keyCode);
+                //console.info(type, keyCode);
                 break;
         }
 

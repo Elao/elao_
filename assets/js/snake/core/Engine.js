@@ -12,7 +12,7 @@ export default class Engine {
         this.controls = new Controls(this.onInput.bind(this));
         this.game = new Game();
         this.renderer = new SvgRenderer(this.game);
-        this.gameLoop = new FixedLoop(this.game.speed, this.update.bind(this));
+        this.gameLoop = new FixedLoop(this.game.period, this.update.bind(this));
         this.renderLoop = new Loop(this.render.bind(this));
         this.listener = new Listener(this.start.bind(this));
     }
@@ -25,7 +25,6 @@ export default class Engine {
     }
 
     onInput(type, active) {
-        console.log('onInput', type, active);
         if (active) {
             this.game.onInput(type);
         }

@@ -4,10 +4,18 @@ export default class Snake {
         this.horizontal = true;
         this.forward = true;
         this.positions = [[6,0], [5,0], [4,0], [3,0], [2,0], [1,0], [0,0]];
+        this.lastTail = null;
     }
 
     get head() {
         return this.positions[0];
+    }
+
+    eat() {
+        if (this.lastTail) {
+            this.positions.push(this.lastTail);
+            this.lastTail = null;
+        }
     }
 
     die() {
@@ -19,7 +27,7 @@ export default class Snake {
     }
 
     update(nextHead) {
-        this.positions.pop();
+        this.lastTail = this.positions.pop();
         this.positions.unshift(nextHead);
     }
 

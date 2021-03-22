@@ -73,7 +73,7 @@
                 {% else %}
                     <li class="miniature">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}')"></span>
+                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail.xs')) }}')"></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

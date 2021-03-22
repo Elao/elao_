@@ -1,6 +1,6 @@
-export default class SnakeRenderer {
-    constructor(snake) {
-        this.snake = snake;
+export default class PixelsRenderer {
+    constructor(pixels, border = 1) {
+        this.pixels = pixels;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
         // Style
@@ -16,12 +16,8 @@ export default class SnakeRenderer {
     }
 
     getPath() {
-        return this.snake.positions.reduce((path, point, index) => {
-            if (index === 0) {
-                return path + ` M ${point.join(' ')}`;
-            }
-
-            return path + ` L ${point.join(' ')}`;
+        return this.pixels.reduce((path, pixel, index) => {
+            return `${path} M${pixel.x},${pixel.y} l0,0`;
         }, '');
     }
 

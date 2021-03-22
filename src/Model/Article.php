@@ -42,7 +42,7 @@ class Article
      */
     public $outdated = false;
 
-    public ?string $tweetId;
+    public ?string $tweetId = null;
 
     public function hasTag(string $tag): bool
     {

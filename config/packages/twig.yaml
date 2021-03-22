@@ -1,4 +1,5 @@
 twig:
+    strict_variables: true
     default_path: '%kernel.project_dir%/templates'
     globals:
         site:

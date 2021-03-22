@@ -3,7 +3,28 @@
 {% set noindex = true %}
 
 {% block content %}
-  Liste des articles taggés "{{ tag }}":
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('blog') }}">
+                <span itemprop="name">Blog</span>
+            </a>
+            <meta itemprop="position" content="1"/>
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">#{{ tag|u.title }}</span>
+            </a>
+            <meta itemprop="position" content="2"/>
+        </li>
+    </ol>
 
-  {{ block('articles') }}
+    {{ block('articles') }}
+
+    {% include 'blog/pagination.html.twig' with {
+        route: 'blog_tag_page',
+        minPageRoute: 'blog_tag',
+        routeParams: {
+            tag: tag|lower,
+        }
+    } %}
 {% endblock content %}

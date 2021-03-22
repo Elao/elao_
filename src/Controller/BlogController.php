@@ -42,19 +42,25 @@ class BlogController extends AbstractController
 
     /**
      * @Route("/tag/{tag}", name="blog_tag")
+     * @Route("/tag/{tag}/{!page}", name="blog_tag_page", requirements={"page"="\d+"})
      */
-    public function tag(string $tag): Response
+    public function tag(string $tag, int $page = 1, int $perPage = 20): Response
     {
         $articles = $this->manager->getContents(
             Article::class,
             ['date' => false],
-            fn ($article) => $article->hasTag($tag)
+            fn (Article $article): bool => $article->hasTag($tag)
         );
+
+        $pageArticles = \array_slice($articles, $perPage * ($page - 1), $perPage);
 
         return $this->render('blog/tag.html.twig', [
             'tag' => $tag,
-            'articles' => $articles,
-        ])->setLastModified(ContentUtils::max($articles, 'lastModified'));
+            'articles' => $pageArticles,
+            'page' => $page,
+            'minPage' => 1,
+            'maxPage' => ceil(\count($articles) / $perPage),
+        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModified'));
     }
 
     /**

@@ -1,0 +1,34 @@
+{#
+Requires:
+    - `route` variable
+    - `minPageRoute` variable
+    - optional `routeParams` variable
+#}
+
+{% set previousPage = max(page - 1, minPage) %}
+{% set nextPage = min(page + 1, maxPage) %}
+{% set routeParams = routeParams ?? {} %}
+
+{% if maxPage != 1 %}
+    <ul class="pagination">
+        <li class="pagination__item pagination__item--nav">
+            <a href="{{ previousPage == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: previousPage })) }}">
+                <i class="icon icon--chevron-left" aria-hidden="true"></i>
+                <span class="screen-reader">Page précédente</span>
+            </a>
+        </li>
+        {% for number in 1..maxPage %}
+        <li class="pagination__item {{ page == number ? 'pagination__item--active' }}">
+            <a href="{{ number == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: number })) }}">
+                {{ number }}
+            </a>
+        </li>
+        {% endfor %}
+        <li class="pagination__item pagination__item--nav">
+            <a href="{{ path(route, routeParams|merge({ page: nextPage })) }}">
+                <i class="icon icon--chevron-right" aria-hidden="true"></i>
+                <span class="screen-reader">Page suivante</span>
+            </a>
+        </li>
+    </ul>
+{% endif %}

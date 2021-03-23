@@ -46,6 +46,7 @@
 
 @media (max-width: $screen-xs) {
   .bricks {
+    margin: 0;
     flex-direction: column;
     flex-wrap: nowrap;
   }

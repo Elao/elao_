@@ -208,6 +208,7 @@
     }
 
     .estimate {
+      margin-bottom: 0;
       flex-direction: column;
       grid-column: 1 / 13;
 
@@ -215,6 +216,37 @@
         margin: 0 0 40px;
         width: 100%;
       }
+    }
+
+    .tools {
+      flex-direction: column;
+      align-items: flex-start;
+      grid-column: 1 / 13;
+    }
+
+    .tools__image {
+      display: none;
+    }
+
+    .list-inline {
+      grid-column: 1 / 13;
+    }
+
+
+    .list-inline__item {
+      img {
+        margin: 0 0 20px;
+      }
+    }
+
+    .our-commitments {
+      margin-top: 40px;
+      grid-column: 1 / 13;
+    }
+
+    .your-commitments {
+      margin-top: 10px;
+      grid-column: 1 / 13;
     }
   }
 }

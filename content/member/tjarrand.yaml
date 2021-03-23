@@ -2,10 +2,11 @@ active: true
 🚲: true
 
 name: "Thomas Jarrand"
-position: "Lead Développeur Web"
+position: "Développeur Web"
 bio: |
     Développeur web depuis 10 ans, Thomas code des deux cotés de la requête HTTP.
-    Poussé par sa curiosité et son enthousiasme, il explore les possibilités du web à travers des projets innovants chez élao ou en développant des jeux vidéo sur son temps libre.
+    Poussé par sa curiosité et son enthousiasme, il explore les possibilités du web à travers des projets innovants et en développant des jeux vidéo dans le navigateur.
+    Fondateur du club vélo d'élao, vous pourrez aussi trouver par beau temps l'une de ses longboard contre un mur de l'open-space.
 integrationDate: 28/01/2013
 
 website: https://thomas.jarrand.fr
@@ -20,8 +21,8 @@ certifications:
 
 emojis:
     - 🏔
-    - 🎮
-    - 🛹
     - 🚲
+    - 🌊
+    - 🛹
     - 🍹
-    - 🏊‍♂️
+    - 🎮

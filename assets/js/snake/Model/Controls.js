@@ -1,3 +1,8 @@
+const LEFT = 37;
+const RIGHT = 39;
+const UP = 38;
+const DOWN = 40;
+
 export default class Controls {
     constructor(onChange) {
         this.onChange = onChange;
@@ -23,7 +28,6 @@ export default class Controls {
     }
 
     onKey(event) {
-        const { DOWN, UP, LEFT, RIGHT } = this.constructor;
         const { keyCode, type } = event;
         const active = type === 'keydown';
 
@@ -107,8 +111,3 @@ export default class Controls {
         return false;
     }
 }
-
-Controls.LEFT = 37;
-Controls.RIGHT = 39;
-Controls.UP = 38;
-Controls.DOWN = 40;

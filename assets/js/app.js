@@ -5,11 +5,21 @@ import './bootstrap';
 import AOS from 'aos';
 
 import Toggle from './feature/Toggle';
-import 'snake';
+import Launcher from './feature/Launcher';
 
 function init() {
     // Mobile navigation
     new Toggle('.nav-toggle', { '.nav-mobile': 'nav-mobile--open', 'body': 'no-scroll' });
+
+    // S.E.E
+    try {
+        new Launcher(
+            JSON.parse(document.head.querySelector('meta[name="see"]').content),
+            document.getElementById('see')
+        );
+    } catch {
+        // Fail silently.
+    }
 }
 
 window.addEventListener('load', init);

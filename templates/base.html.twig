@@ -58,24 +58,29 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {{ encore_entry_script_tags('app') }}
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
 
-        {% if site.trackers.matomo is not empty %}
-            <!-- Matomo -->
-            <script type="text/javascript">
-                var _paq = window._paq = window._paq || [];
-                _paq.push(['trackPageView']);
-                _paq.push(['enableLinkTracking']);
-                (function() {
-                    var u="//matomo.elao.com/";
-                    _paq.push(['setTrackerUrl', u+'matomo.php']);
-                    _paq.push(['setSiteId', '{{ site.trackers.matomo }}']);
-                    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                    g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-                })();
-            </script>
-            <!-- End Matomo Code -->
-        {% endif %}
+            <!-- S.E.E. -->
+            <meta name="see" content="{{ encore_entry_js_files('see')|json_encode|escape('html_attr') }}">
+
+            {% if site.trackers.matomo is not empty %}
+                <!-- Matomo -->
+                <script type="text/javascript">
+                    var _paq = window._paq = window._paq || [];
+                    _paq.push(['trackPageView']);
+                    _paq.push(['enableLinkTracking']);
+                    (function() {
+                        var u="//matomo.elao.com/";
+                        _paq.push(['setTrackerUrl', u+'matomo.php']);
+                        _paq.push(['setSiteId', '{{ site.trackers.matomo }}']);
+                        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                        g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                    })();
+                </script>
+                <!-- End Matomo Code -->
+            {% endif %}
+        {% endblock %}
     </head>
     <body>
         <header class="header">
@@ -162,6 +167,5 @@
                 {{ include('footer.html.twig') }}
             {% endblock %}
         </div>
-        {% block javascripts %}{% endblock %}
     </body>
 </html>

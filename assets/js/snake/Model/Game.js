@@ -1,28 +1,24 @@
-import GameMap from 'snake/Model/GameMap';
 import Snake from 'snake/Model/Snake';
 import Pixel from 'snake/Model/Pixel';
 
 export default class Game {
-    constructor(period = 160, size = 16) {
+    constructor(period = 200, size = 16) {
         this.period = period;
-        this.map = new GameMap(size);
+        this.size = size;
         this.snake = new Snake();
         this.pixels = [];
 
-        this.pixels.push(this.generatePixel());
-        this.pixels.push(this.generatePixel());
-        this.pixels.push(this.generatePixel());
+        this.reset();
     }
 
-    generatePixel() {
-        let x, y;
+    reset() {
+        this.pixels.length = 0;
 
-        while (this.getPixelAt(x, y) !== null || this.hasCollision(x, y)) {
-            x = Pixel.getRandomPoint(this.map.size);
-            y = Pixel.getRandomPoint(this.map.size);
-        }
+        this.snake.reset();
 
-        return new Pixel(x, y);
+        this.pixels.push(this.generatePixel());
+        this.pixels.push(this.generatePixel());
+        this.pixels.push(this.generatePixel());
     }
 
     update() {
@@ -44,14 +40,28 @@ export default class Game {
     }
 
     onInput(type) {
+        if (!this.snake.alive) {
+            return this.reset();
+        }
+
         this.snake.onInput(type);
     }
 
     hasCollision(x, y) {
-        const { size } = this.map;
         const tail = this.snake.getNextTail();
 
-        return x < 0 || x > size || y < 0 || y > size || tail.some(([tx, ty]) => tx === x && ty === y);
+        return x < 0 || x > this.size || y < 0 || y > this.size || tail.some(([tx, ty]) => tx === x && ty === y);
+    }
+
+    generatePixel() {
+        let x, y;
+
+        while (this.getPixelAt(x, y) !== null || this.hasCollision(x, y)) {
+            x = Pixel.getRandomPoint(this.size);
+            y = Pixel.getRandomPoint(this.size);
+        }
+
+        return new Pixel(x, y);
     }
 
     getPixelAt(x, y) {

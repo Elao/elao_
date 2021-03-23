@@ -1,10 +1,16 @@
 export default class Snake {
+    static get defaultPositions() {
+        return [[6,0], [5,0], [4,0], [3,0], [2,0], [1,0], [0,0]];
+    }
+
     constructor() {
-        this.alive = true;
+        this.alive = false;
         this.horizontal = true;
         this.forward = true;
-        this.positions = [[6,0], [5,0], [4,0], [3,0], [2,0], [1,0], [0,0]];
+        this.positions = [];
         this.lastTail = null;
+
+        this.reset();
     }
 
     get head() {
@@ -20,6 +26,14 @@ export default class Snake {
 
     die() {
         this.alive = false;
+    }
+
+    reset() {
+        this.positions.length = 0;
+        this.positions.push(...this.constructor.defaultPositions);
+        this.horizontal = true;
+        this.forward = true;
+        this.alive = true;
     }
 
     isHorizontal() {

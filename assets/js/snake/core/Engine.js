@@ -2,26 +2,28 @@ import FixedLoop from 'snake/core/FixedLoop';
 import Loop from 'snake/core/Loop';
 import SvgRenderer from 'snake/Rendering/SvgRenderer';
 import Listener from 'snake/Listener/LoadListener';
-//import Logo from 'snake/Assets/Logo';
 import Game from 'snake/Model/Game';
 import Controls from 'snake/Model/Controls';
 
 export default class Engine {
     constructor() {
-        this.controls = new Controls(this.onInput.bind(this));
+        this.start = this.start.bind(this);
+        this.update = this.update.bind(this);
+        this.onInput = this.onInput.bind(this);
+
         this.game = new Game();
+        this.controls = new Controls(this.onInput);
         this.renderer = new SvgRenderer(this.game);
-        this.gameLoop = new FixedLoop(this.game.period, this.update.bind(this));
-        this.renderLoop = new Loop(this.render.bind(this));
-        this.listener = new Listener(this.start.bind(this));
-        this.time = 0;
+        this.gameLoop = new FixedLoop(this.game.period, this.update);
+        this.renderLoop = new Loop(this.renderer.update);
+        this.listener = new Listener(this.start);
     }
 
     start() {
         console.info('🐍');
         this.renderLoop.start();
-        this.gameLoop.start();
         this.controls.start();
+        this.gameLoop.start();
     }
 
     onInput(type, active) {
@@ -32,13 +34,6 @@ export default class Engine {
 
     update() {
         this.game.update();
-        this.time = 0;
-    }
-
-    render(time) {
-        const { period } = this.game;
-
-        this.time += time;
-        this.renderer.update((this.time / period) % period);
+        this.renderer.onGameFrame();
     }
 }

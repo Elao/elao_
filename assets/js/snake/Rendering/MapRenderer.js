@@ -1,6 +1,6 @@
 export default class MapRenderer {
-    constructor(map, border = 1) {
-        this.map = map;
+    constructor(size, border = 1) {
+        this.size = size;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
 
         this.element.setAttribute('fill', '#FF4344');
@@ -9,8 +9,8 @@ export default class MapRenderer {
         this.element.setAttribute('stroke-linecap', 'square');
         this.element.setAttribute('x', -border);
         this.element.setAttribute('y', -border);
-        this.element.setAttribute('width', this.map.size + 2 * border);
-        this.element.setAttribute('height', this.map.size + 2 * border);
+        this.element.setAttribute('width', this.size + 2 * border);
+        this.element.setAttribute('height', this.size + 2 * border);
     }
 
     attach(container) {

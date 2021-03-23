@@ -15,17 +15,34 @@ export default class SnakeRenderer {
         container.appendChild(this.element);
     }
 
-    getPath() {
-        return this.snake.positions.reduce((path, point, index) => {
+    getPath(progress) {
+        const { positions } = this.snake;
+        const last = positions.length - 1;
+
+        return positions.reduce((path, point, index) => {
+            let method = 'L';
+            let [x, y] = point;
+
             if (index === 0) {
-                return path + ` M ${point.join(' ')}`;
+                const [nx, ny] = positions[index + 1];
+
+                method = 'M';
+                x = x + (1 - progress) * (nx - x);
+                y = y + (1 - progress) * (ny - y);
             }
 
-            return path + ` L ${point.join(' ')}`;
+            if (index === last) {
+                const [nx, ny] = positions[index - 1];
+
+                x = x + progress * (nx - x);
+                y = y + progress * (ny - y);
+            }
+
+            return `${path} ${method}${x},${y}`;
         }, '');
     }
 
-    update() {
-        this.element.setAttribute('d', this.getPath());
+    update(progress) {
+        this.element.setAttribute('d', this.getPath(this.snake.alive ? progress : 1));
     }
 }

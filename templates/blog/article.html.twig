@@ -74,16 +74,13 @@
         <main class="article-content__main">
 
             {% if article.outdated %}
-                {# TODO: outdated styles and content #}
-                <div>
-                    <p>
-                        {% if article.outdated is same as true %}
-                            Cet article date un peu, il est peut-être obsolète, gardez-le en tête lors de votre lecture !
-                        {% else %}
-                            {{ article.outdated }}
-                        {% endif %}
-                    </p>
-                </div>
+                <p class="alert">
+                    {% if article.outdated is same as true %}
+                        Cet article date un peu, il est peut-être obsolète, gardez-le en tête lors de votre lecture !
+                    {% else %}
+                        {{ article.outdated }}
+                    {% endif %}
+                </p>
             {% endif %}
 
             {{ article.content|raw }}

@@ -1,13 +1,16 @@
 .planning-steps {
   margin-left: -20px;
   margin-right: -20px;
+  margin-bottom: -135px;
   padding: 0;
   max-height: 1050px;
   position: relative;
+  top: -35px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   flex-wrap: wrap;
+  grid-column: 3 / 13;
   z-index: 2;
 }
 
@@ -41,5 +44,20 @@
       font-size: 50px;
       color: #fff;
     }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .planning-steps {
+    margin: 0;
+    max-height: unset;
+    position: static;
+    grid-column: 1 / 13;
+  }
+
+  .planning-steps__item {
+    margin: 0 0 10px;
+    width: 100%;
+    position: static !important;
   }
 }

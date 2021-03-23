@@ -34,13 +34,6 @@
     }
   }
 
-  .planning-steps {
-    margin-bottom: -135px;
-    position: relative;
-    top: -35px;
-    grid-column: 3 / 13;
-  }
-
   .banner-steps {
     margin: 80px 0 480px;
     position: relative;
@@ -229,54 +222,12 @@
       }
     }
 
-    .planning-steps {
-      margin: 0;
-      max-height: unset;
-      position: static;
-      grid-column: 1 / 13;
-    }
-
-    .planning-steps__item {
-      margin: 0 0 10px;
-      width: 100%;
-      position: static !important;
-    }
-
     .banner-steps {
       margin: 40px 0;
 
       img {
         position: static;
         width: 100%;
-      }
-    }
-
-    .build-steps__item {
-      width: 100%;
-      min-width: unset;
-      max-width: unset;
-      flex-direction: column;
-      align-items: flex-start;
-
-      .icon {
-        margin: 0 0 15px;
-        font-size: 30px;
-      }
-
-      &.integration {
-        margin-left: 0;
-
-        &:before,
-        &:after {
-          display: none;
-        }
-      }
-
-      &.validation {
-        &:before,
-        &:after {
-          display: none;
-        }
       }
     }
 

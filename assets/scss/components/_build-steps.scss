@@ -105,3 +105,34 @@
     }
   }
 }
+
+@media (max-width: $screen-md) {
+  .build-steps__item {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .icon {
+      margin: 0 0 15px;
+      font-size: 30px;
+    }
+
+    &.integration {
+      margin-left: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &.validation {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

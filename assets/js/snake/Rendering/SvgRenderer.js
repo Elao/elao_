@@ -3,7 +3,7 @@ import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
 import PixelsRenderer from 'snake/Rendering/PixelsRenderer';
 
 export default class SvgRenderer {
-    static createElement(size, margin = 5) {
+    static createElement(size, margin = 3) {
         const namespace = 'http://www.w3.org/2000/svg';
         const element = document.createElementNS(namespace, 'svg');
 
@@ -29,19 +29,17 @@ export default class SvgRenderer {
     }
 
     constructor(game) {
-        this.map = new MapRenderer(game.map);
+        this.map = new MapRenderer(game.size);
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PixelsRenderer(game.pixels);
-        this.element = this.constructor.createElement(game.map.size);
+        this.element = this.constructor.createElement(game.size);
 
+        this.period = game.period;
+        this.time = 0;
         this.width = null;
         this.height = null;
 
-        this.onResize = this.onResize.bind(this);
-
-        window.addEventListener('resize', this.onResize);
-
-        this.onResize();
+        this.update = this.update.bind(this);
 
         this.map.attach(this.element);
         this.snake.attach(this.element);
@@ -50,25 +48,13 @@ export default class SvgRenderer {
         document.body.appendChild(this.element);
     }
 
-    onResize() {
-        const { innerWidth, innerHeight } = window;
-
-        this.width = innerWidth;
-        this.height = innerHeight;
-
-        //this.element.setAttribute('viewBox', `0 0 ${this.width * 300/95} ${this.height * 300/95}`);
+    onGameFrame() {
+        this.time = 0;
     }
 
-    setLogo(logo) {
-        this.element.appendChild(logo.element);
-        logo.element.setAttribute('width', '300');
-        logo.element.setAttribute('height', '100');
-        logo.element.setAttribute('x', '0');
-        logo.element.setAttribute('y', '40');
-    }
-
-    update(progress) {
-        this.snake.update(progress);
+    update(time) {
+        this.time += time;
+        this.snake.update((this.time / this.period) % this.period);
         this.pixels.update();
     }
 }

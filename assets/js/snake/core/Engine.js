@@ -14,6 +14,7 @@ export default class Engine {
         this.gameLoop = new FixedLoop(this.game.period, this.update.bind(this));
         this.renderLoop = new Loop(this.render.bind(this));
         this.listener = new Listener(this.start.bind(this));
+        this.time = 0;
     }
 
     start() {
@@ -31,9 +32,13 @@ export default class Engine {
 
     update() {
         this.game.update();
+        this.time = 0;
     }
 
-    render() {
-        this.renderer.update();
+    render(time) {
+        const { period } = this.game;
+
+        this.time += time;
+        this.renderer.update((this.time / period) % period);
     }
 }

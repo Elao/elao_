@@ -67,8 +67,8 @@ export default class SvgRenderer {
         logo.element.setAttribute('y', '40');
     }
 
-    update() {
-        this.snake.update();
+    update(progress) {
+        this.snake.update(progress);
         this.pixels.update();
     }
 }

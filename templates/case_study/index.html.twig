@@ -40,7 +40,7 @@
             {% for caseStudy in caseStudies %}
                 <li class="miniature-inline">
                     <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature-inline__image">
-                        <span class="image" style="background: url('https://images.unsplash.com/photo-1530435460869-d13625c69bbf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')"></span>
+                        <span class="image" style="background: url({{ asset(caseStudy.images|first|glide_image_preset('case_study_thumbnail')) }})"></span>
                     </a>
                     <div class="miniature-inline__content">
                         <span class="info">{{ caseStudy.clients }}</span>

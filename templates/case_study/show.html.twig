@@ -50,7 +50,7 @@
                 -->
                 <div class="preview">
                     <div class="preview__main">
-                        <img src="{{ asset(caseStudy.images|first) }}">
+                        <img src="{{ asset(caseStudy.images|first|glide_image_preset('case_study_banner')) }}">
                     </div>
                     <div class="preview__list">
                         <ul>
@@ -105,7 +105,7 @@
                             {% set technology = content_get('App\\Model\\Technology', technologySlug) %}
                             <li>
 {#                                <a href="{{ path('technology', { technology: technology.slug }) }}" class="technologies__item">#}
-                                {# TODO: wire back technos once ready #}
+                                {# TODO: wire back technos once ready and if technology.show == true #}
                                 <div class="technologies__item">
                                     {% if technology.logo|default(false) %}
                                         <img src="{{ asset(technology.logo) }}" alt="logo {{ technology.name }}">

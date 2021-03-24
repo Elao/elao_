@@ -12,9 +12,9 @@ clients: Tribü
 users: Techniciens du tri et entreprises engagées dans le tri de leurs déchets
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html/css", "svg"]
+technologies: ["symfony", "react", "html", "css", "svg"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "xgorse"]
-images: ["images/casestudies/headers/tribu-banner.png"]
+images: ["images/casestudies/headers/tribu-banner.jpg"]
 ---
 
 ## Le contexte du projet

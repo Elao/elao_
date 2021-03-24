@@ -40,7 +40,7 @@ class CaseStudyController extends AbstractController
      */
     public function show(CaseStudy $caseStudy): Response
     {
-        $caseStudies = $this->getActiveCasesStudies();
+        $caseStudies = array_filter($this->getActiveCasesStudies(), static fn (CaseStudy $s): bool => $s !== $caseStudy);
         shuffle($caseStudies);
 
         return $this->render('case_study/show.html.twig', [

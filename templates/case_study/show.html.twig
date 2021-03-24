@@ -148,7 +148,7 @@
                     {% for caseStudy in randomStudies %}
                     <li class="miniature miniature--large">
                         <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url('https://www.fillmurray.com/460/300')"></span>
+                            <span class="image" style="background: url({{ asset(caseStudy.images|first|glide_image_preset('case_study_thumbnail.large')) }})"></span>
                         </a>
                         <div class="miniature__content">
                             <span class="info">{{ caseStudy.clients }}</span>

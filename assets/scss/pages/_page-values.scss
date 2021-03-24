@@ -10,22 +10,19 @@
     grid-column: 3 / 12;
   }
 
+  .list-inline__item {
+    margin: 0 20px;
+  }
+
   .humility {
-    margin-bottom: 70px;
-    display: flex;
-    grid-column: 1 / 12;
-
-    img {
-      margin: 0;
-      margin-right: 40px;
-    }
-
     p {
-      margin: 0 0 50px;
+      margin: 0 0 30px;
+    }
+  }
 
-      &:last-of-type {
-        margin: 0;
-      }
+  .generosity {
+    p {
+      margin: 0 0 30px;
     }
   }
 
@@ -38,13 +35,13 @@
   }
 
   .checklist {
-    grid-column: 1 / 10;
+    grid-column: 2 / 12;
   }
 
   .diversity {
-    margin-top: 50px;
+    margin: 70px 0 50px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     grid-column: 1 / 12;
 
     h3 {
@@ -54,21 +51,24 @@
     ul {
       li {
         margin: 0 0 30px;
+
+        &:last-of-type {
+          margin: 0;
+        }
       }
     }
 
     .statistics {
-      margin-top: 50px;
       margin-right: 40px;
     }
   }
 
   .anchorage {
-    margin-bottom: 70px;
-    grid-column: 2 / 8;
+    grid-column: 3 / 12;
   }
 
   .statistics-list {
+    margin: 120px 0 70px;
     display: flex;
     align-items: flex-start;
     grid-column: 1 / 13;
@@ -88,9 +88,8 @@
   }
 
   .accessibility {
-    margin: 50px 0;
     display: flex;
-    grid-column: 3 / 12;
+    grid-column: 1 / 12;
 
     img {
       margin: 0;
@@ -107,6 +106,10 @@
 
     .offset-content {
       grid-column: 1 / 13;
+    }
+
+    .list-inline__item {
+      margin: 0 0 20px;
     }
 
     .humility {
@@ -139,21 +142,23 @@
     }
 
     .anchorage {
-      margin-bottom: 50px;
       grid-column: 1 / 13;
     }
 
     .statistics-list {
+      margin-top: 50px;
+      margin-right: -20px;
+      margin-bottom: 50px;
+      margin-left: -20px;
       align-items: unset;
       flex-wrap: wrap;
 
       .statistics {
         margin: 0 20px 40px !important;
-        max-width: calc(50% - 40px);
-        flex: 1;
+        width: calc(50% - 40px);
 
         &:last-of-type {
-          margin-bottom: 0;
+          margin-bottom: 0 !important;
         }
       }
     }
@@ -186,11 +191,13 @@
     }
 
     .statistics-list {
+      margin-right: 0;
+      margin-left: 0;
       flex-direction: column;
 
       .statistics {
         margin: 0 0 20px !important;
-        max-width: unset;
+        width: unset;
       }
     }
 

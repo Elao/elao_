@@ -1,29 +1,22 @@
 active: true
+🚲: true
+
+
+name: Christelle Mozzati
+pseudo: ~
+gender: female
+position: "Facilitatrice"
+bio: "Avec 10 ans d’expérience au sein d’équipes produit, en tant que Designer puis Product Manager, ces deux casquettes permettent à Christelle d’être très complémentaire à l’équipe technique d’Elao. Son motto : faire de belles choses avec des gens bien."
 integrationDate: 14/04/2020
 
-en:
-    display_name: Christelle Mozzati
-    pseudo:       ~
-    short_bio:    ""
-    long_bio:     ""
-    job_title:    "Facilitatrice"
+website: ~
+twitter: ~
+github: ~
+linkedIn: christellemozzati
+email: christelle.mozzati@elao.com
+avatar: ~
 
-fr:
-    display_name: Christelle Mozzati
-    pseudo:       ~
-    short_bio:    ""
-    long_bio:     "Avec 10 ans d’expérience au sein d’équipes produit, en tant que Designer puis Product Manager, ces deux casquettes permettent à Christelle d’être très complémentaire à l’équipe technique d’Elao. Son motto : faire de belles choses avec des gens bien."
-    job_title:    "Facilitatrice"
-
-social:
-    website:      ~
-    twitter:      ~
-    github:       ~
-    linkedIn:     christellemozzati
-    email:        christelle.mozzati@elao.com
-    avatar:       ~
-
-certifications: ~
+certifications: [ ]
 
 emojis:
     - 🌱

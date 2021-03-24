@@ -15,17 +15,18 @@
                 <span>du lien</span>
             </h1>
             <div class="banner-home__content">
-                <p>Elao est un atelier de co-conception d'applications web et mobile sur mesure</p>
+                <p>{{ site.description }}</p>
             </div>
+            {% set highlightedCaseStudy = content_get('App\\Model\\CaseStudy', site.home.highlights.caseStudy) %}
             <div class="banner-home__image">
                 <figure>
                     <div class="image" style="background: url('https://www.fillmurray.com/510/330')"></div>
                     <figcaption>
-                        <span>Tribü</span>
-                        Solution de déchets en entreprise
+                        <span>{{ highlightedCaseStudy.title }}</span>
+                        {{ highlightedCaseStudy.shortDescription }}
                     </figcaption>
                 </figure>
-                <a href="{{ path('case_study', { caseStudy: 'tribu' }) }}" class="btn btn--primary btn--animated">
+                <a href="{{ path('case_study', { caseStudy: highlightedCaseStudy.slug }) }}" class="btn btn--primary btn--animated">
                     <span>
                         Découvrir le projet
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -38,7 +39,8 @@
             <ul class="banner-home__list">
                 <li>
                     <div class="item">
-                        <span class="number">15</span>
+                        {% set interval = date('now').diff(date(site.birthdate)) %}
+                        <span class="number">{{ interval.y }}</span>
                         ans d'expérience
                         <small>(et d'expérimentations)</small>
                     </div>
@@ -95,7 +97,7 @@
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Faire des choix pérennes et pragmatiques</h2>
-                <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
+                <p>Nous faisons le choix de <strong>technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles </strong>en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
                 <ul class="technologies">
                     {% set technos = [
                         { id: 'symfony', alt: 'logo Symfony' },
@@ -123,7 +125,7 @@
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Mettre ensemble l'énergie là où elle a le plus de valeur</h2>
-                <p>Nous ne croyons plus aux cahiers des charges figés de 200 pages, mais à l'émulation des ateliers et à l'implication des utilisateurs finaux pour itérer ensemble afin de trouver la meilleure solution.</p>
+                <p>Nous ne croyons plus aux cahiers des charges figés de 200 pages, mais à l'<strong>émulation des ateliers et à l'implication des utilisateurs finaux </strong>pour itérer ensemble afin de trouver la meilleure solution.</p>
                 <a href="{{ path('case_studies') }}" class="btn btn--secondary btn--animated">
                     <span>
                         Nos études de cas
@@ -144,7 +146,8 @@
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Partager, redistribuer et faire vivre l'écosystème</h2>
-                <p>Nos clients nous permettent de redonner un peu de ce que l'on prend chaque jour à l'écosystème web et open source, qui nous ont élevé à un très haut niveau d'expertise.</p>
+                <p>Nous mettons un point d’honneur à redonner un peu de ce que l’on prend chaque jour à l’écosystème web et open source, qui nous ont élevé à un très haut niveau d’expertise
+                </p>
                 <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
                     <span>
                         Nos billets de blog
@@ -156,7 +159,7 @@
                 </a>
             </div>
             <div class="section-home__links">
-                <a href="#" class="animated-block">
+                <a class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45px" height="30" viewBox="0 0 45 30" class="browser">
                             <rect x="3.3" y="6.8" width="37.8" height="1"/>
@@ -189,7 +192,7 @@
                     <div class="animated-block__content">
                         <p class="title">
                             Contribution
-                            <i class="icon icon--arrow"></i>
+                            <i class="icon"></i>
                         </p>
                         <p>Core team Symfony</p>
                     </div>
@@ -221,7 +224,7 @@
                         <p>Elao Summer Talk #2</p>
                     </div>
                 </a>
-                <a href="#" class="animated-block">
+                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="pen">
                             <rect x="0.6" y="28.4" height="1"/>
@@ -234,7 +237,7 @@
                             Article de blog
                             <i class="icon icon--arrow"></i>
                         </p>
-                        <p>Comprendre le cache du client Graphql Apollo</p>
+                        <p>{{ lastArticle.title }}</p>
                     </div>
                 </a>
             </div>

@@ -1,0 +1,14 @@
+glide:
+    base_url: /image/resize
+    source: '%kernel.project_dir%/public'
+    cache: '%kernel.project_dir%/public/resized'
+    pre_generate: '%env(bool:GLIDE_PRE_GENERATE_CACHE)%'
+
+    # https://glide.thephpleague.com/1.0/api/quick-reference/
+    presets:
+        article_thumbnail:
+            w: 620
+            h: 445
+        article_thumbnail.xs:
+            w: 280
+            h: 200

@@ -37,10 +37,7 @@
                 {% set interval = date('now').diff(member.integrationDate) %}
                 {% set numberYear = interval.y %}
                 {% set numberMonth= interval.m %}
-                {% set period = numberYear >= 1 ? 'an' : 'mois' %}
-                {% set plural = numberYear >= 1 ? 's' : '' %}
-                <span>{{ numberYear == 0 ? numberMonth : numberYear }}</span>
-                {{ period }}{{ plural }} dans la tribu
+                {{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }} dans la tribu
             </div>
         </div>
 
@@ -48,7 +45,7 @@
             <p class="job">{{ member.position }}</p>
 
             <div class="description">
-                <p>{{ member.longBio }}</p>
+                {{ member.bio|nl2br|markdownify|raw }}
             </div>
 
             <div class="socials socials--inline">
@@ -89,13 +86,16 @@
             </div>
 
             <!-- Facultatif -->
-            {% if member.certifications %}
+            {% if member.certifications is not empty %}
                 <div class="certification-list">
                     <ul>
-                        {% for certification in member.certifications %}
+                        {% for c in member.certifications %}
+                            {% set certif = content_get('App\\Model\\Certification', c) %}
                             <li class="certification">
-                                <img src="{{ asset('build/images/certifications/'~certification~'.svg') }}" alt="">
-                                <p>Expert·e certifié·e <span>{{ certification }}</span></p>
+                                <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                <p>
+                                    {{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span>
+                                </p>
                             </li>
                         {% endfor %}
                     </ul>

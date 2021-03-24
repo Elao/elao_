@@ -21,6 +21,7 @@ services:
             - '../src/Model/'
             - '../src/Kernel.php'
             - '../src/Tests/'
+            - '../src/Bridge/Glide/Bundle/'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -32,9 +33,9 @@ services:
     # please note that last definitions always *replace* previous ones
 
     App\Stenope\Processor\TableOfContentProcessor:
-        tags: [{ name: content.processor, priority: -10 }]
+        tags: [{ name: stenope.processor, priority: -10 }]
 
     # Override default HTML Anchor processor:
-    Stenope\Bundle\Processor\HtmlAnchorProcessor:
-        class: App\Stenope\Processor\HtmlAnchorProcessor
-        tags: [{ name: content.processor, priority: -20 }]
+    Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
+    App\Stenope\Processor\HtmlAnchorProcessor:
+        tags: [{ name: stenope.processor, priority: -20 }]

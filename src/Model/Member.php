@@ -7,14 +7,17 @@ namespace App\Model;
 class Member
 {
     public string $slug;
-    public bool $active;
-    public ?\DateTime $integrationDate;
 
     // Bio
     public string $name;
-    public ?string $pseudo;
-    public ?string $shortBio = null;
-    public ?string $longBio = null;
+    public ?string $gender = null;
+
+    /** Displayed rather than name in articles */
+    public ?string $pseudo = null;
+
+    public ?string $bio = null;
+
+    /** Position in the company / job title */
     public ?string $position = null;
 
     // Social
@@ -25,43 +28,27 @@ class Member
     public ?string $avatar = null;
     public ?string $linkedIn = null;
 
+    /** @var string[] */
     public array $certifications = [];
-    public ?\DateTimeImmutable $lastModified = null;
-    public ?array $emojis;
 
-    public function __construct(
-        string $slug,
-        string $name,
-        bool $active = false,
-        ?string $pseudo = null,
-        ?string $shortBio = null,
-        ?string $longBio = null,
-        ?string $position = null,
-        ?string $website = null,
-        ?string $twitter = null,
-        ?string $github = null,
-        ?string $email = null,
-        ?string $avatar = null,
-        ?string $linkedIn = null,
-        array $certifications = [],
-        ?\DateTime $integrationDate = null,
-        ?array $emojis = []
-    ) {
-        $this->slug = $slug;
+    public ?array $emojis = [];
+
+    // Flags
+
+    public bool $active = false;
+
+    /** Vélotafeur */
+    public bool $🚲 = false;
+
+    public ?\DateTime $integrationDate = null;
+    public ?\DateTimeImmutable $lastModified = null;
+
+    /**
+     * Fields that requires to be initialized (not nullable, no default value) go in the constructor.
+     */
+    public function __construct(string $slug, string $name)
+    {
         $this->name = $name;
-        $this->active = $active;
-        $this->pseudo = $pseudo;
-        $this->shortBio = $shortBio;
-        $this->longBio = $longBio;
-        $this->position = $position;
-        $this->website = $website;
-        $this->twitter = $twitter;
-        $this->github = $github;
-        $this->email = $email;
-        $this->avatar = $avatar;
-        $this->linkedIn = $linkedIn;
-        $this->certifications = $certifications;
-        $this->integrationDate = $integrationDate;
-        $this->emojis = $emojis;
+        $this->slug = $slug;
     }
 }

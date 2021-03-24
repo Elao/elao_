@@ -42,7 +42,7 @@
                 {% elseif page == minPage and loop.index < 5 %}
                     <li class="miniature-inline miniature-inline--large">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}')"></span>
                         </a>
                         <div class="miniature-inline__content">
                             <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
@@ -52,8 +52,8 @@
                                 <ul class="tag-list">
                                     {% for tag in article.tags %}
                                         <li class="tag-list__item">
-                                            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
-                                                #{{tag}}
+                                            <a href="{{ path('blog_tag', { tag: tag|lower }) }}" rel="nofollow">
+                                                #{{ tag|u.title }}
                                             </a>
                                         </li>
                                     {% endfor %}
@@ -73,7 +73,7 @@
                 {% else %}
                     <li class="miniature">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail.xs')) }}')"></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
@@ -87,27 +87,8 @@
         </ul>
     {% endblock %}
 
-    {% set previousPage = max(page - 1, minPage) %}
-    {% set nextPage = min(page + 1, maxPage) %}
-    <ul class="pagination">
-        <li class="pagination__item pagination__item--nav">
-            <a href="{{ previousPage == minPage ? path('blog') : path('blog_page', { page: previousPage }) }}">
-                <i class="icon icon--chevron-left" aria-hidden="true"></i>
-                <span class="screen-reader">Page précédente</span>
-            </a>
-        </li>
-        {% for number in 1..maxPage %}
-        <li class="pagination__item {{ page == number ? 'pagination__item--active' }}">
-            <a href="{{ number == minPage ? path('blog') : path('blog_page', { page: number }) }}">
-                {{ number }}
-            </a>
-        </li>
-        {% endfor %}
-        <li class="pagination__item pagination__item--nav">
-            <a href="{{ path('blog_page', { page: nextPage }) }}">
-                <i class="icon icon--chevron-right" aria-hidden="true"></i>
-                <span class="screen-reader">Page suivante</span>
-            </a>
-        </li>
-    </ul>
+    {% include 'blog/pagination.html.twig' with {
+        route: 'blog_page',
+        minPageRoute: 'blog',
+    } %}
 {% endblock %}

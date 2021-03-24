@@ -1,27 +1,20 @@
 active: true
+🚲: true
+
+name: Anne‑Laure de Boissieu
+gender: female
+position: "Développeuse Back Symfony"
+bio: "Développeuse (PHP/Symfony) depuis 2017, et auparavant spécialiste du SEO. Membre Duchess, Afup, et de l'équipe d'organisatrice de MiXiT. Très portée sur la lecture, les fanzines, le cinéma de genre et les canards."
 integrationDate: 02/07/2018
 
-en:
-  display_name: Anne‑Laure de Boissieu
-  short_bio:    "Dev Back Symfony."
-  long_bio:     "Dev Symfony, book, movie and duck lover."
-  job_title:    "Dev Back Symfony"
-
-fr:
-  display_name: Anne‑Laure de Boissieu
-  short_bio:    "Développeuse Back Symfony."
-  long_bio:     "Développeuse (PHP/Symfony) depuis 2017, et auparavant spécialiste du SEO. Membre Duchess, Afup, et de l'équipe d'organisatrice de MiXiT. J'aime la lecture, les fanzines, le cinéma de genre et les canards. \"I want to believe.\""
-  job_title:    "Développeuse Back Symfony"
-
-social:
-  website:      https://mixitconf.org/
-  github:       al2b
-  linkedIn:     anne-laure-de-boissieu
-  email:        contact@elao.com
-  avatar:       images/authors/aldeboissieu.jpg
+website:      https://mixitconf.org/
+github:       al2b
+linkedIn:     anne-laure-de-boissieu
+email:        contact@elao.com
+avatar:       images/authors/aldeboissieu.jpg
 
 certifications:
-  - opquast
+    - opquast
 
 emojis:
     - 🍺

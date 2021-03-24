@@ -38,8 +38,10 @@ build:
 ## Build static site
 build-content: export APP_ENV = prod
 build-content:
+	rm -rf public/resized
 	bin/console cache:clear
 	bin/console stenope:build
+	cp -R public/resized build/resized
 
 ## Build static site with assets
 build-static: build build-content
@@ -53,12 +55,14 @@ serve-static:
 build-subdir: export APP_ENV = prod
 build-subdir: export WEBPACK_PUBLIC_PATH = /elao_/build
 build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8001/elao_
-build-subdir: clear build-assets
+build-subdir: clear build
+	rm -rf public/resized
 	bin/console cache:clear
 	bin/console stenope:build build/elao_
+	cp -R public/resized build/elao_/resized
 
-## Build & serve the static version of the site from a subdir / with base url
-serve-static-subdir: build-subdir
+## Serve the static version of the site from a subdir / with base url
+serve-static-subdir:
 	open http://localhost:8001/elao_
 	php -S localhost:8001 -t build
 

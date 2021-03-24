@@ -1,20 +1,10 @@
-en:
-  display_name: Sébastien SOLERE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Web and Mobile consultant, Agile mentor"
+name: Sébastien SOLERE
+position: "Consultant Web et Mobile, Agile Mentor"
+bio: ~
 
-fr:
-  display_name: Sébastien SOLERE
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Consultant Web et Mobile, Agile Mentor"
-
-social:
-  website:         http://www.elao.com
-  twitter:         sebsolere
-  github:          sebsolere
-  linkedin:        sebastiensolere
-  email:           sebastien.solere@elao.com
-  avatar:          "authors/ssolere.jpg"
-  google_plus_id:  ~
+website: http://www.elao.com
+twitter: sebsolere
+github: sebsolere
+linkedin: sebastiensolere
+email: sebastien.solere@elao.com
+avatar: "authors/ssolere.jpg"

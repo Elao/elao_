@@ -83,11 +83,17 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
 
+      - name: 'Copy resized images'
+        run: cp -R public/resized build/resized
+
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          COMMIT_MESSAGE: "[AUTO] Deploy PR ${{ github.event.number }}"
+          COMMIT_MESSAGE: |
+            [AUTO] Deploy PR #${{ github.event.number }}
+
+            for commit ${{ github.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.

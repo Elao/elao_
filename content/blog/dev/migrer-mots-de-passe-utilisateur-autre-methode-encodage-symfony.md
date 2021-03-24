@@ -9,7 +9,7 @@ description:        "Migration continue de mots de passe legacy d'une méthode d
 
 thumbnail:          "images/posts/thumbnails/password.jpg"
 header_img:         "images/posts/headers/password.jpg"
-tags:               ["Sécurité", "Mot de passe", "Migration", "Encodage", "Symfony", "PHP"]
+tags:               ["Sécurité", "Migration", "Encodage", "Symfony"]
 categories:         ["Dev", "Symfony"]
 
 author:    "mcolin"

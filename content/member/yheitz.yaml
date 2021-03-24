@@ -1,29 +1,17 @@
 active: true
+
+name: Yves HEITZ
+position: "DevOps"
+bio: ~
 integrationDate: 24/05/2019
 
-en:
-  display_name: Yves HEITZ
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Dev Ops"
+website: http://www.elao.com
+twitter: ~
+github: hyvs
+linkedIn: ~
+email: yves.heitz@elao.com
+avatar: images/authors/yheitz.png
 
-fr:
-  display_name: Yves HEITZ
-  short_bio:    ""
-  long_bio:     ""
-  job_title:    "Dev Ops"
+certifications: [ ]
 
-social:
-  website:      http://www.elao.com
-  twitter:      ~
-  github:       hyvs
-  linkedIn:     ~
-  email:        yves.heitz@elao.com
-  avatar:       images/authors/yheitz.png
-
-certifications: ~
-
-emojis:
-    - 🎲
-    - 🎮
-    - 📷
+emojis: [ ]

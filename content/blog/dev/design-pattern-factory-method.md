@@ -16,20 +16,16 @@ author:    "xavierr"
 
 ---
 
-Plan de l'article :
-
-* [Repères bibliographiques](#biblio)
-* [Ceci n'est pas une pipe](#not-a-pipe)
-* [Le Design Pattern 'Factory Method'](#factory-method)
-
-## <a name="biblio"></a> Quelques repères bibliographiques en guise de préambule
+## Quelques repères bibliographiques en guise de préambule
 
 Avant d'entrer dans le vif du sujet en abordant notre premier Design Pattern, permettez-moi de citer deux ouvrages incontournables lorsque l'on évoque ce sujet.
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">}}
-    <figcaption style="text-align: center;font-style: italic;">Design Patterns: Elements of Reusable Object-Oriented Software</figcaption>
-</p>
+<figure>
+    <img src="images/posts/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">
+    <figcaption>
+      <span class="figure__legend">Design Patterns: Elements of Reusable Object-Oriented Software</span>
+    </figcaption>
+</figure>
 
 En effet, difficile d'entamer une série d'articles consacrés aux Design Patterns sans faire référence à la bible en la matière : _Design Patterns: Elements of Reusable Object-Oriented Software_. Ce livre publié en 1994 par quatre développeurs, Gamma, Helm, Johnson et Vlissides, plus connus sous le nom du _Gang of Four_, recense 23 Design Patterns classés en trois catégories :
 
@@ -43,24 +39,24 @@ Bien qu'écrit il y a plus de vingt ans, ce livre fait toujours autorité et c'e
 
 Je ne m'étendrai pas sur la définition exacte d'un Design Pattern, ni sur le formalisme à adopter pour présenter un pattern (le livre le fait très bien), ni sur les principes qui sous-tendent une bonne conception objet (comme l'acronyme SOLID par exemple) car nous aurons l'occasion d'y revenir au moment d'aborder certains patterns.
 
-<div class="aside-note">
 On peut déplorer que la plupart des exemples du livre s'appuient sur le langage <strong>Smalltalk</strong> qui est tombé en désuétude (mais notez tout de même que ce langage fut pionnier dans bien des domaines !) ... <strong>Java</strong> pourrait sembler aujourd'hui plus adapté et/ou fédérateur pour un ouvrage consacré à la conception objet, mais lors de la première édition du livre (1994), la première version de Java n'existait pas encore ...
-</div>
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">}}
-    <figcaption style="text-align: center;font-style: italic;">Head First Design Patterns</figcaption>
-</p>
+<figure>
+    <img src="images/posts/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">
+    <figcaption>
+      <span class="figure__legend">Head First Design Patterns</span>
+    </figcaption>
+</figure>
 
 Complément idéal à la bible des Design Patterns, _Head First Design Patterns_ (O'Reilly 2004) constitue une excellente introduction aux principaux design patterns. Par rapport au premier ouvrage, il adopte une démarche résolument pratique et recourt à un éventail remarquable de techniques pédagogiques pour aborder les design patterns (traits d'humour, schémas explicatifs, dialogues fictifs en situation autour des différents patterns, démarches didactiques, etc.). Apprendre les design patterns peut s'avérer fastidieux, mais rien de tout ça ici ! Je recommande particulièrement cet ouvrage si vous souhaitez vous initier aux design patterns sans drame ... Par ailleurs, la plupart des exemples s'appuient sur le langage Java, beaucoup plus abordable et actuel que Smalltalk.
 
 Enfin, je ne peux passer sous silence deux autres ouvrages qui me paraissent fondamentaux s'agissant de conception objet, à savoir _Domain-Driven Design: Tackling Complexity in the Heart of Software_ d'Eric Evans (livre pas forcément très digeste mais dont on ne peut pas ignorer l'influence) et _Catalog of Patterns of Enterprise Application Architecture_ de Martin Fowler : qu'est-ce qui définit exactement une entité ? un value object ? un repository ? etc. Nous avons tous une vague idée de ces concepts mais c'est dans cet ouvrage que se trouvent les réponses à ces questions.
 
-## <a name="not-a-pipe"></a> Ceci n'est pas une pipe
+## Ceci n'est pas une pipe
 
 Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous gratifier d'une remarque liminaire : cet article est avant tout destiné à présenter le Design Pattern _Factory Method_, alors précisons d'emblée que ce qui suit n'est pas un pattern (et encore moins une pipe, mais ça, c'est un autre débat ...) :
 
-```php
+```php 
     <?php
     class MyFactory {
         public static function getInstance($type = null) {
@@ -91,7 +87,7 @@ Noter que cette bonne pratique objet qui consiste à isoler ce qui varie est men
 
 Mais nous aurons l'occasion d'y revenir ...
 
-## <a name="factory-method"></a> Notre premier DP : la `Factory Method`
+## Notre premier DP : la `Factory Method`
 
 ### Introduction
 
@@ -111,10 +107,12 @@ Cette définition peut paraître assez obscure à première vue, mais croyez-moi
 
 ### Schéma
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">}}
-    <figcaption style="text-align: center;font-style: italic;">Schéma du Design Pattern 'Factory Method'</figcaption>
-</p>
+<figure>
+    <img src="images/posts/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">
+    <figcaption>
+      <span class="figure__legend">Schéma du Design Pattern 'Factory Method'</span>
+    </figcaption>
+</figure>
 
 ### Participants
 
@@ -190,11 +188,3 @@ En résumé, et comme son nom l'indique, le pattern `Factory Method` consiste to
 ### Design patterns voisins
 
 Il existe un autre Design pattern _Factory_, plus riche que le design pattern `Factory Method` car il implique plus de participants (mais il n'est pas nécessairement plus compliqué pour autant) : l'`Abstact Factory`. Il y a fort à parier qu'il fasse l'objet du prochain article de cette série consacrée aux Design Patterns.
-
-<style>
-    .aside-note {
-        border-left: 5px solid #ffa600;
-        padding: 20px;
-        margin: 20px 0;
-    }
-</style>

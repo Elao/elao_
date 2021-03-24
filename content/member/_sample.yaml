@@ -1,0 +1,29 @@
+active: false # make it true
+#🚲: true # velo-taffeur
+
+# Bio
+name: John Doe
+pseudo: J.D
+#gender: female
+bio: |
+    Lorem ipsum
+    Color sit amet
+    consectetur […]
+position: Sample
+integrationDate: 04/01/2005
+
+# Social
+website: ~
+twitter: your-username
+github: your-username
+email: ~
+avatar: path-to-avatar
+
+certifications:
+    - symfony
+    - opquast
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

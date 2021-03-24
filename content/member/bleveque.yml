@@ -1,33 +1,24 @@
 active: true
+
+name: Benjamin Lévêque
+position: "Responsable Technique"
+bio: "Benjamin est responsable technique d'Elao, mais avant tout développeur Symfony passionné par son métier. Il est également photographe argentique amateur de grand talent, féru de cuisine et randonneur chevronné. Bien qu'il vive à Lyon, son coeur est en Ardèche."
 integrationDate: 22/12/2008
 
-en:
-  display_name: Benjamin Lévêque
-  short_bio:    "Certified Symfony Developer"
-  long_bio:     "Certified Symfony Developer, love also take photos, hiking in Ardèche and cook."
-  job_title:    "Certified Symfony Developer"
-
-fr:
-  display_name: Benjamin Lévêque
-  short_bio:    "Développeur Symfony et photographe amateur"
-  long_bio:     "Benjamin est avant tout un développeur Symfony passionné par son métier. Mais il est également photographe argentique amateur, féru de cuisine et randonneur. Il vit à Lyon, mais son coeur est en Ardèche."
-  job_title:    "Responsable Technique"
-
-social:
-  website:      http://www.elao.com
-  twitter:      benji__07
-  github:       benji07
-  linkedIn:     ~
-  email:        benjamin.leveque@elao.com
-  avatar:       images/authors/bleveque.jpeg
+website: http://www.elao.com
+twitter: benji__07
+github: benji07
+linkedIn: ~
+email: benjamin.leveque@elao.com
+avatar: images/authors/bleveque.jpeg
 
 certifications:
-  - symfony
-  - lemon cake specialist
+    - symfony
+    - lemon-cake-specialist
 
 emojis:
-  - 🌰
-  - 🥾
-  - 👨‍🍳
-  - 📷
-  - 👨‍💻
+    - 🌰
+    - 🥾
+    - 👨‍🍳
+    - 📷
+    - 👨‍💻

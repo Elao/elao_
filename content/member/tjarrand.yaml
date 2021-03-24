@@ -1,24 +1,28 @@
 active: true
+🚲: true
+
+name: "Thomas Jarrand"
+position: "Développeur Web"
+bio: |
+    Développeur web depuis 10 ans, Thomas code des deux cotés de la requête HTTP.
+    Poussé par sa curiosité et son enthousiasme, il explore les possibilités du web à travers des projets innovants et en développant des jeux vidéo dans le navigateur.
+    Fondateur du club vélo d'élao, vous pourrez aussi trouver par beau temps l'une de ses longboard contre un mur de l'open-space.
 integrationDate: 28/01/2013
 
-fr:
-  name:        "Thomas Jarrand"
-  short_bio:   "Lead Développeur Web"
-  long_bio:    "Développeur web depuis 10 ans, Thomas code des deux cotés de la requête HTTP. Poussé par sa curiosité et son enthousiasme, il explore les possibilités du web à travers des projets innovants chez élao ou en développant des jeux vidéo sur son temps libre."
-  job_title:   "Lead Développeur Web"
+website: https://thomas.jarrand.fr
+twitter: tom32i
+github: Tom32i
+linkedIn: ~
+email: thomas.jarrand@elao.com
+avatar: images/authors/tjarrand.jpg
 
-social:
-  website:         https://thomas.jarrand.fr
-  twitter:         tom32i
-  github:          Tom32i
-  linkedIn:        ~
-  email:           thomas.jarrand@elao.com
-  avatar:          images/authors/tjarrand.jpg
-  google_plus_id:  ~
-
-certifications: ~
+certifications:
+    - symfony
 
 emojis:
-  - 🎲
-  - 🎮
-  - 📷
+    - 🏔
+    - 🚲
+    - 🌊
+    - 🛹
+    - 🍹
+    - 🎮

@@ -73,6 +73,9 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_
 
+      - name: 'Copy resized images'
+        run: cp -R public/resized build/resized
+
       - name: 'Tar static site'
         run: tar -czvf static-build.zip build
 
@@ -104,7 +107,7 @@ jobs:
       - name: '🚀 Deploy'
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          COMMIT_MESSAGE: "[AUTO] Static site update"
+          COMMIT_MESSAGE: "[AUTO] Static site update for ${{ github.sha }}"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.

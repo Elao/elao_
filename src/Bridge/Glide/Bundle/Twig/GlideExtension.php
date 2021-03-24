@@ -71,7 +71,7 @@ class GlideExtension extends AbstractExtension
                 'glide_options' => $options,
             ]);
 
-            return '';
+            return $filename;
         }
     }
 }

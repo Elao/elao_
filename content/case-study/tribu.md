@@ -14,7 +14,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "react", "html/css", "svg"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "xgorse"]
-images: ["images/etudes-de-cas/tribu-reporting.png", "images/etudes-de-cas/tribu-saisie.png"]
+images: ["images/casestudies/headers/tribu-banner.png"]
 ---
 
 ## Le contexte du projet
@@ -55,7 +55,7 @@ Les contraintes sont les suivantes :
 L’équipe, pour répondre à ces spécifications, a fait le choix d’utiliser React, un framework JavaScript, afin de répondre au besoin d’une interface dynamique et agréable à utiliser. De plus, les données se rafraîchissent sans avoir besoin de recharger la page, ce qui permet de collaborer à plusieurs sur la même page.
 
 <figure>
-    <img src="images/etudes-de-cas/tribu-saisie.png" alt="Application de saisie de tri de déchets">
+    <img src="images/casestudies/tribu-saisie.png" alt="Application de saisie de tri de déchets">
     <figcaption>
       <span class="figure__legend">L'interface de saisie côté technicien</span>
     </figcaption>
@@ -70,7 +70,7 @@ Pour  l’intégration du design, nous avons opté pour SVG, un format de donné
 Pour compléter l'interface, les entreprises clientes de Tribü ont également la possibilité d'exporter un PDF de leur rapport afin de l'afficher dans leurs locaux et sensibiliser leurs collaborateurs au bon tri. 
 
 <figure>
-    <img src="images/etudes-de-cas/tribu-reporting.png" alt="Rapport de tri de déchets">
+    <img src="images/casestudies/tribu-reporting.png" alt="Rapport de tri de déchets">
     <figcaption>
       <span class="figure__legend">L'interface de reporting côté client</span>
     </figcaption>

@@ -1,8 +1,5 @@
 .statistics {
   padding: 60px 70px;
-  min-height: 350px;
-  min-width: 390px;
-  width: 390px;
   font-family: 'faktum regular';
   font-size: 20px;
 }
@@ -36,21 +33,13 @@ $statistics: primary   $color-secondary $color-secondary $color-primary   $color
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .statistics {
-    padding: 50px 30px;
-    width: 350px;
-    min-width: unset;
+    padding: 35px 25px;
   }
 
   .statistics__figure {
-    font-size: 110px;
-  }
-}
-
-@media (max-width: $screen-xs) {
-  .statistics {
-    width: 100%;
-    min-width: unset;
+    font-size: 90px;
+    border-bottom: solid 18px;
   }
 }

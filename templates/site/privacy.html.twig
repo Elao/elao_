@@ -1,5 +1,55 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Protection des données
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Protection des données</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+
+
+    <h2>Quels sont les outils que nous utilisons ?</h2>
+    <ul>
+        <li><strong>Matomo (anciennement Piwik).</strong> Il est recommandé par la CNIL, permet de ne pas envoyer vos données à des tiers, il est hébergé chez nous et nous permet la collecte et l'analyse de quelques données du trafic que nous recevons. Celles-ci nous permettent par la suite d'avoir une idée des interactions avec le contenu proposé et de travailler à son amélioration.</li>
+        <li>Et ... <strong>c'est tout.</strong></li>
+    </ul>
+    <h2>Quelles sont les données que nous collectons ?</h2>
+    <h3>Avec Matomo</h3>
+    <p>Matomo dépose un cookie à l'aide de votre navigateur sur le disque de votre machine, et vous attribue plusieurs identifiants aléatoires et anonymes.</p>
+    <h3>La première fois que vous nous rendez visite</h3>
+    <ul>
+        <li>Les deux premiers chiffres de votre adresse IP, qui nous permettent de déterminer votre réseau de provenance et par la même votre origine géographie.</li>
+        <li>La date et l'heure de votre visite et sa durée</li>
+        <li>Les pages que vous avez consultées</li>
+        <li>L'appareil utilisé son système d'exploitation (version, modèle) ainsi que le type de navigateur (nom, langue, version) que vous utilisez</li>
+        <li>Éventuellement le site qui vous a amené jusqu'à nous</li>
+    </ul>
+    <h3>À chaque fois que vous consultez une page</h3>
+    <ul>
+        <li>L'URL de la page (titre, temps de chargement)</li>
+        <li>L'enchaînement des pages au cours de votre lecture</li>
+    </ul>
+    <h3>Correspondance électronique</h3>
+    <p>L'ensemble des documents transmis par nos correspondants sont conservés sur un stockage privé, hébergé par nos soins en France.</p>
+    <p>Il est possible de chiffrer les correspondances envoyée à <a href="mailto:contact@elao.com">contact@elao.com</a> à l'aide de notre clé publique.</p>
+    <h3>Où mes données sont-elles stockées ?</h3>
+    <p>Elles sont stockées sur nos serveurs, en France, qu'il sagisse de données collectées lors de votre passage sur nos sites, ou de données collectées lors de l'une de nos correspondance.</p>
+    <h3>Qui a accès à ces données ?</h3>
+    <p>Ces données ne sont accessibles que par les employé(e)s de Rix.</p>
+    <h3>Candidatures</h3>
+    <p>Lorsque vous nous envoyez votre candidature, vos coordonnées et les documents que vous nous avez transmis sont conservés le temps du traitement.</p>
+    <h3>Données de navigation</h3>
+    <p>Les données collectées par Matomo sont conservées 24 mois, à l'issue desquels elles sont supprimées.</p>
+    <h3>Qui contacter en cas de questions ou de requête de suppression ?</h3>
+    <p>Vous disposez bien évidemment du droit de demander la modification et la suppression de l'ensemble des données dont nous pourrions disposer en nous contactant: <a href="mailto:contact@elao.com">contact@elao.fr</a></p>
 {% endblock %}

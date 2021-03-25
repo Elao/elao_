@@ -1,5 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Mentions légales
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Mentions légales</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+    <h2>Informations légales</h2>
+    <h3>ELAO EURL</h3>
+    <h3 class="h4">Identité</h3>
+    <p>Capital de 36 000 €</p>
+    <p>RCS Lyon 481 528 529</p>
+    <h3 class="h4">Siège social</h3>
+    <p>34 rue Jean Broquin, 69006 Lyon</p>
+    <p>+33 (0)4 82 53 37 19</p>
+    <h3 class="h4">Gérant</h3>
+    <p>Guewen Faivre</p>
+
+    <h2>Droits d'auteur - copyright - liens</h2>
+    <h3>Reproduction sur support papier</h3>
+    <p>À l'exception de l'iconographie, la reproduction des pages de ce site sur un support papier est autorisée, sous réserve du respect des trois conditions suivantes :</p>
+    <ul>
+        <li>Gratuité de la diffusion</li>
+        <li>Respect de l'intégrité des documents reproduits (aucune modification, ni altération d'aucune sorte)</li>
+        <li>Citation explicite du site (http://www.elao.com) comme source et mention que les droits de reproduction sont réservés et strictement limités</li>
+    </ul>
+    <h3>Reproduction sur support électronique</h3>
+    <p>La reproduction de tout ou partie de ce site sur un support électronique est autorisée sous réserve de l'ajout de façon claire et lisible de la source (http://www.elao.com) et de la mention "Droits réservés". Les informations utilisées ne doivent l'être à des fins personnelles, associatives ou professionnelles; toute utilisation à des fins commerciales ou publicitaires est exclue.</p>
+    <h3>Liste de diffusion</h3>
+    <p>Les adresses électroniques recueillies dans le cadre du formulaire de contact ne sont utilisées que pour l'envoi d'informations ayant motivé l'inscription.</p>
 {% endblock %}

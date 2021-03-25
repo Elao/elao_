@@ -6,9 +6,8 @@ date: "2017-02-01"
 # Params
 metaDescription: "Développement sur-mesure de l'agenda culturel On Sort. Technologies : Vue.js, PHP, framework Symfony."
 description: "Le site On Sort ! vous propose des sorties dans la métropole orléanaise. Son fonctionnement collaboratif permet aux organisateurs de suggérer leurs événements en quelques clics."
-caseUrl: http://sortir.orleans-metropole.fr/
+websiteUrl: http://sortir.orleans-metropole.fr/
 clients: Example Corp.
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "vue-js"]

@@ -7,9 +7,8 @@ name: "curvytron"
 
 # Params
 description: "Curvytron et Lazerdrive sont deux jeux d'adresse sur navigateur. Curvytron est d'abord né d'un projet de veille interne et a par la suite été présenté au PHP tour en 2014 et au Blend Web Mix 2015. Il a été le point de départ du jeu Lazerdrive."
-caseUrl: http://www.curvytron.com
+websiteUrl: http://www.curvytron.com
 clients: Elao / BlendWebMix
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["nodejs", "javascript"]

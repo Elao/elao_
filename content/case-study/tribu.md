@@ -7,9 +7,8 @@ name: "Tribü"
 # Params
 metaDescription: "Tribü — recyclage intelligent de déchets."
 description: "Tribü propose un dispositif permettant aux entreprises un recyclage intelligent de leurs déchets."
-caseUrl: http://www.tribu-recyclage.fr/
+websiteUrl: http://www.tribu-recyclage.fr/
 clients: Tribü
-users: Techniciens Tribü et entreprises engagées dans le tri de leurs déchets
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "react", "html", "css", "svg"]

@@ -61,7 +61,7 @@
                             {% endfor %}
                         </ul>
                         <!-- Si aucun lien vers le site possible, ajouter .hidden au bouton pour le cacher et ne pas casser le layout -->
-                        <a href="{{ caseStudy.caseUrl }}" class="btn btn--secondary btn--animated" target="_blank">
+                        <a href="{{ caseStudy.websiteUrl }}" class="btn btn--secondary btn--animated {{ caseStudy.websiteUrl is empty ? 'hidden' }}" target="_blank">
                             <span>
                                 Voir le site
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -81,10 +81,6 @@
                 <li class="item">
                     <small>Client</small>
                     <p>{{ caseStudy.clients }}</p>
-                </li>
-                <li class="item">
-                    <small>Utilisateurs</small>
-                    <p>{{ caseStudy.users }}</p>
                 </li>
                 <li class="item">
                     <small>Taille du projet</small>

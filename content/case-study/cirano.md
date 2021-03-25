@@ -6,9 +6,8 @@ name: "CIRano"
 
 # Params
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
-caseUrl: https://cirano.io/
+websiteUrl: https://cirano.io/
 clients: Businove
-users: Shrimps
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "bootstrap", "vue-js"]

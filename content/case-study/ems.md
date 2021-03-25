@@ -6,9 +6,8 @@ date: "2016-05-23"
 # Params
 metaDescription: "Développement sur-mesure d'une solution pour EMS par Elao. Etude de cas."
 description: "Le besoin et ses spécificités ne pouvaient pas être pris en charge par un logiciel de marketing automation existant. Il a donc du faire l'objet d'un développement spécifique sur mesure from scratch. Nous avons fait le choix de partir sur Symfony et d'adapter comme il se doit l'outil au métier. Trois collaborateurs ont été sollicités pour prendre en charge le développement, puis nous avons recruté et formé pour le compte d'EMS leur futur lead technique."
-caseUrl: https://www.exemple.com/
+websiteUrl: https://www.exemple.com/
 clients: Example Corp.
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]

@@ -15,9 +15,8 @@ class CaseStudy
     public string $content;
     public \DateTimeInterface $date;
     public \DateTimeInterface $lastModified;
-    public string $caseUrl;
+    public ?string $websiteUrl = null;
     public string $clients;
-    public string $users;
     public string $size;
     public array $services = [];
     public array $images = [];

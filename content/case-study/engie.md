@@ -6,9 +6,8 @@ date: "2012-01-21"
 # Params
 medaDescription: "Développement d'applications métiers pour Engie, portail pour les professionnels. Technologies employées : PHP, Symfony."
 description: "Engie, portail pour les professionnels - fourniture de gaz naturel et d'électricité"
-caseUrl: https://particuliers.engie.fr/
+websiteUrl: https://particuliers.engie.fr/
 clients: Example Corp.
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]

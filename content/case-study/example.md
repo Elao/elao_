@@ -14,7 +14,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "tjarrand"]
-images: ["https://www.fillmurray.com/630/380", "https://www.fillmurray.com/240/160", "https://www.fillmurray.com/240/160"]
+images: ["images/casestudies/headers/example-banner.jpg"]
 ---
 
 ## Les titres

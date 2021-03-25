@@ -13,7 +13,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "tjarrand"]
-images: ["images/casestudies/headers/geantdesbeauxdesarts-banner.jpg"]
+images: ["images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
 ---
 
 ## Expertise développement

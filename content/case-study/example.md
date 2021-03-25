@@ -14,7 +14,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "tjarrand"]
-images: ["images/casestudies/headers/example-banner.jpg"]
+images: ["http://placekitten.com/630/380", "http://placekitten.com/240/160", "http://placekitten.com/240/160"]
 ---
 
 ## Les titres

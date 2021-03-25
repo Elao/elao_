@@ -13,7 +13,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "ndievart", "rhanna"]
-images: ["images/etudes-de-cas/vimeet_mockup1.png", "images/etudes-de-cas/vimeet_mockup2.png", "images/etudes-de-cas/vimeet_mockup3.png"]
+images: ["images/casestudies/headers/vimeet-banner.jpg"]
 ---
 ## Contexte projet
 

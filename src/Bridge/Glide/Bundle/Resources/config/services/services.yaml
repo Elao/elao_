@@ -11,6 +11,7 @@ services:
             - '@App\Bridge\Glide\Bundle\GlideUrlBuilder'
             - ~ # $presetsNames set by the extension
             - ~ # $preGenerate set by the extension
+            - '@logger'
         tags:
             - { name: twig.extension }
 

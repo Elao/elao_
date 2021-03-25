@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "bootstrap", "vue-js"]
 members: ["xavierr", "mbernard"]
-images: ["https://www.fillmurray.com/630/380", "https://www.fillmurray.com/240/160", "https://www.fillmurray.com/240/160"]
+images: ["images/casestudies/headers/cirano-banner.jpg"]
 ---
 
 ## Taille de l’équipe 

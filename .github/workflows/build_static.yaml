@@ -1,4 +1,4 @@
-name: Build static
+name: Deploy GH Pages
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
 
 jobs:
 
-  build:
-    name: '🚧  Build'
+  deploy-master:
+    name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -75,33 +75,6 @@ jobs:
 
       - name: 'Copy resized images'
         run: cp -R public/resized build/resized
-
-      - name: 'Tar static site'
-        run: tar -czvf static-build.zip build
-
-      - name: 'Upload static site as artefact'
-        uses: actions/upload-artifact@v2
-        with:
-          name: static-build
-          path: static-build.zip
-
-  deploy:
-    name: '🚀  Deploy'
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: 'Checkout'
-        uses: actions/checkout@v2
-
-      - name: '⬇️ Download static site artefact'
-        uses: actions/download-artifact@v2
-        with:
-          # Zip is automatically unzip to current dir
-          name: static-build
-
-      - name: 'Extract static site'
-        run: tar -xzvf static-build.zip
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'

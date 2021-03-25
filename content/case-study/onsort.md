@@ -13,7 +13,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "vue-js"]
 members: ["mcolin"]
-images: ["images/etudes-de-cas/onsort_mockup1.jpg", "images/etudes-de-cas/onsort_mockup2.jpg", "images/etudes-de-cas/onsort_mockup3.jpg"]
+images: ["images/casestudies/headers/onsort-banner.jpg"]
 ---
 
 Le site "On sort !" - pensé par la mairie d'Orléans - est une plateforme mettant en avant les événements culturels de la ville d'Orléans. Pour ce projet, le challenge réside dans une ergonomie dynamique et multi-plateforme (desktop, tablette et mobile) ainsi que l'affichage pertinent des événements proposés aux utilisateurs.

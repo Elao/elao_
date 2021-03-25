@@ -13,7 +13,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["mcolin", "tjarrand"]
-images: ["images/etudes-de-cas/ngtv_mockup1.jpg", "images/etudes-de-cas/ngtv_mockup2.jpg", "images/etudes-de-cas/ngtv_mockup3.jpg"]
+images: ["images/casestudies/headers/ngtv-banner.jpg"]
 ---
 
 ## Expertise développement

@@ -14,7 +14,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["nodejs", "javascript"]
 members: ["tjarrand"]
-images: ["images/etudes-de-cas/curvytron_lazerdrive_mockup1.jpg", "images/etudes-de-cas/curvytron_lazerdrive_mockup2.jpg", "images/etudes-de-cas/curvytron_lazerdrive_mockup3.jpg"]
+images: ["images/casestudies/headers/curvytron-banner.jpg"]
 ---
 
 ## Expertise développement

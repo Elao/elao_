@@ -183,15 +183,6 @@
       }
     }
 
-    .banner-steps {
-      margin: 40px 0;
-
-      img {
-        position: static;
-        width: 100%;
-      }
-    }
-
     .run {
       flex-direction: column;
       grid-column: 1 / 13;
@@ -247,6 +238,19 @@
     .your-commitments {
       margin-top: 10px;
       grid-column: 1 / 13;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .page-methodology {
+    .banner-steps {
+      margin: 40px 0;
+
+      img {
+        position: static;
+        width: 100%;
+      }
     }
   }
 }

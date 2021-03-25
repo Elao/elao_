@@ -8,8 +8,8 @@
 .build-steps__item {
   margin: 0 0 15px;
   padding: 30px 40px;
-  min-width: 400px;
-  max-width: 800px;
+  min-width: 380px;
+  max-width: 700px;
   color: #fff;
   background: $color-dark;
   display: flex;
@@ -71,6 +71,7 @@
 
   &.validation {
     margin-left: 200px;
+    margin-bottom: 0;
     align-self: flex-end;
 
     &:before,
@@ -85,6 +86,7 @@
     &:before {
       width: 180px;
       height: 100%;
+      top: 0;
       left: -200px;
       background: $color-secondary;
     }
@@ -106,7 +108,33 @@
   }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-sm) {
+  .build-steps {
+    margin: 0 0 40px;
+  }
+
+  .build-steps__item {
+    &.integration {
+      margin-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.validation {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .build-steps {
+    margin: 0 0 15px;
+  }
+
   .build-steps__item {
     width: 100%;
     min-width: unset;

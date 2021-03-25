@@ -1,14 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <ul class="breadcrumb">
-        <li class="breadcrumb__item">
-          <a href="{{ path('homepage') }}">Accueil</a>
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
         </li>
-        <li class="breadcrumb__item">
-          Notre méthodologie
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Notre méthodologie</span>
+            </a>
+            <meta itemprop="position" content="2" />
         </li>
-    </ul>
+    </ol>
 
     <div class="banner-methodology">
         <div class="banner-methodology__title">

@@ -6,9 +6,8 @@ name: "Chalkboard Education"
 
 # Params
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
-caseUrl: https://www.exemple.com/
+websiteUrl: https://www.exemple.com/
 clients: Chalkboard
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "graphql", "react"]

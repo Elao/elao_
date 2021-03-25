@@ -7,9 +7,8 @@ name: "spine"
 # Params
 metaDescription: "Développement sur-mesure d'une application tablette ludo-éducative qui permet au grand public d'annoter des IRM du cerveau pour faire avancer la recherche. Technologie : 3D WebGL"
 description: "SPINE est une application pour tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche. A la fois ludique et éducative, elle vise à mettre la recherche en neurosciences entre toutes les mains. Elle familiarise les joueurs avec la démarche scientifique (de la formulation d’hypothèses à la récolte de données) et démultiplie la capacité des chercheurs, en faisant appel à la foule (\"crowdsourcing\")."
-caseUrl: ''
+websiteUrl: ~
 clients: Example Corp.
-users: ''
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]

@@ -6,9 +6,8 @@ date: "2017-09-04"
 # Params
 metaDescription: "Développement sur-mesure d'une plateforme d'organisation de rendez-vous (Symfony, ElasticSearch, Vue.js, WebRTC, OptaPlanner...)"
 description: "Plateforme d’inscription et d’organisation de rendez-vous."
-caseUrl: https://vimeet.events
+websiteUrl: https://vimeet.events
 clients: Example Corp.
-users: Shrimps
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]

@@ -22,6 +22,7 @@ services:
             - '../src/Kernel.php'
             - '../src/Tests/'
             - '../src/Bridge/Glide/Bundle/'
+            - '../src/Stenope/Processor/ResizeImagesContentProcessor.php'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -39,3 +40,15 @@ services:
     Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
     App\Stenope\Processor\HtmlAnchorProcessor:
         tags: [{ name: stenope.processor, priority: -20 }]
+
+    resize_images_content_processor.case_study:
+        class: App\Stenope\Processor\ResizeImagesContentProcessor
+        arguments:
+            $type: App\Model\CaseStudy
+            $preset: case_study_content
+
+    resize_images_content_processor.article:
+        class: App\Stenope\Processor\ResizeImagesContentProcessor
+        arguments:
+            $type: App\Model\Article
+            $preset: article_content

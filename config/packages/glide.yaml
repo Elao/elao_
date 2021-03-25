@@ -6,17 +6,43 @@ glide:
 
     # https://glide.thephpleague.com/1.0/api/quick-reference/
     presets:
-        article_thumbnail:
+        article_thumbnail.lg:
+            w: 1170
+            h: 480
+        article_thumbnail.md:
             w: 620
             h: 445
-        article_thumbnail.xs:
+        article_thumbnail.sm:
             w: 280
             h: 200
+        article_thumbnail.xs:
+            w: 120
+            h: 100
+        article_banner:
+            w: 815
+            h: 450
 
-        case_study_thumbnail:
+        # Base format for images inside a blog article content.
+        # It's declined with dpr 2x automatically for retina screens.
+        article_content:
+            w: 1040
+            fit: max
+            dpr: 1
+
+        case_study_thumbnail.md:
             w: 500
             h: 370
-        case_study_thumbnail.large:
+        case_study_thumbnail.lg:
             h: 290
+        case_study_thumbnail.xs:
+            w: 120
+            h: 100
         case_study_banner:
             w: 600
+
+        # Base format for images inside case-studies' content.
+        # It's declined with dpr 2x automatically for retina screens.
+        case_study_content:
+            w: 1040
+            fit: max
+            dpr: 1

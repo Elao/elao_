@@ -5,13 +5,19 @@ services:
             - ~ # $route set by the extension
             - ~ # $signKey set by the extension
 
-    App\Bridge\Glide\Bundle\Twig\GlideExtension:
+    App\Bridge\Glide\Bundle\ResizedUrlGenerator:
         arguments:
             - '@League\Glide\Server'
             - '@App\Bridge\Glide\Bundle\GlideUrlBuilder'
             - ~ # $presetsNames set by the extension
             - ~ # $preGenerate set by the extension
             - '@logger'
+        tags:
+            - { name: monolog.logger, channel: glide }
+
+    App\Bridge\Glide\Bundle\Twig\GlideExtension:
+        arguments:
+            - '@App\Bridge\Glide\Bundle\ResizedUrlGenerator'
         tags:
             - { name: twig.extension }
 

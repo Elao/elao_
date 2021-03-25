@@ -6,7 +6,9 @@
     "require": {
         "php": ">=7.4.0",
         "ext-ctype": "*",
+        "ext-dom": "*",
         "ext-iconv": "*",
+        "ext-json": "*",
         "composer/package-versions-deprecated": "^1.11",
         "league/glide-symfony": "^1.0",
         "phpdocumentor/reflection-docblock": "^5.2",

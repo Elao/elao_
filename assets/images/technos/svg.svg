@@ -1,60 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="110px" height="110px" viewBox="0 0 110 110" style="enable-background:new 0 0 110 110;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FF9900;}
-	.st1{fill:#FFB13B;}
-	.st2{fill:#DE8500;}
-	.st3{fill:#FFFFFF;}
-	.st4{fill:#3F3F3F;}
-	.st5{fill:#FFFFFF;stroke:#000000;stroke-width:1.007;stroke-miterlimit:8;}
-</style>
-<a xlink:href="http://www.w3.org/Graphics/SVG/" >
-	<path id="background" class="st0" d="M4.4,0h101.2c2.4,0,4.4,2,4.4,4.4v101.2c0,2.4-2,4.4-4.4,4.4H4.4C2,110,0,108,0,105.6V4.4
-		C0,2,2,0,4.4,0z"/>
-	<path id="top-left" class="st1" d="M4.4,0h46.2C53,0,55,2,55,4.4v46.2c0,2.4-2,4.4-4.4,4.4H4.4C2,55,0,53,0,50.6V4.4C0,2,2,0,4.4,0
-		z"/>
-	<path id="bottom-right" class="st2" d="M59.4,55h46.2c2.4,0,4.4,2,4.4,4.4v46.2c0,2.4-2,4.4-4.4,4.4H59.4c-2.4,0-4.4-2-4.4-4.4
-		V59.4C55,57,57,55,59.4,55z"/>
-	<g id="circles">
-		<circle id="n" class="st0" cx="55" cy="20.2" r="20.2"/>
-		<circle id="ne" class="st0" cx="79.6" cy="30.4" r="20.2"/>
-		<circle id="e" class="st0" cx="89.8" cy="55" r="20.2"/>
-		<circle id="se" class="st0" cx="79.6" cy="79.6" r="20.2"/>
-		<circle id="s" class="st0" cx="55" cy="89.8" r="20.2"/>
-		<circle id="sw" class="st0" cx="30.4" cy="79.6" r="20.2"/>
-		<circle id="w" class="st0" cx="20.2" cy="55" r="20.2"/>
-		<circle id="nw" class="st0" cx="30.4" cy="30.4" r="20.2"/>
-	</g>
-	<g id="stars">
-		<path id="black-star" d="M69.4,20.2c0-7.9-6.4-14.4-14.4-14.4c-8,0-14.4,6.4-14.4,14.4c-5.6-5.6-14.7-5.6-20.3,0
-			c-5.6,5.6-5.6,14.7,0,20.4c-8,0-14.4,6.4-14.4,14.4c0,8,6.5,14.4,14.4,14.4c-5.6,5.6-5.6,14.7,0,20.4c5.6,5.6,14.7,5.6,20.3,0
-			c0,8,6.4,14.4,14.4,14.4c8,0,14.4-6.4,14.4-14.4c5.6,5.6,14.8,5.6,20.4,0c5.6-5.6,5.6-14.8,0-20.4c7.9,0,14.4-6.5,14.4-14.4
-			c0-7.9-6.5-14.4-14.4-14.4c5.6-5.6,5.6-14.7,0-20.4C84.2,14.6,75,14.6,69.4,20.2z"/>
-		<path id="white-star" class="st3" d="M60.5,25.7v15.9l11.3-11.3c0-2,0.8-4,2.3-5.5c3.1-3,8-3,11,0c3,3,3,8,0,11
-			c-1.5,1.5-3.5,2.3-5.5,2.3L68.3,49.5h15.9c1.4-1.4,3.4-2.3,5.5-2.3c4.3,0,7.8,3.5,7.8,7.8c0,4.3-3.5,7.8-7.8,7.8
-			c-2.2,0-4.1-0.9-5.5-2.3H68.3l11.3,11.3c2,0,4,0.8,5.5,2.3c3.1,3,3.1,8,0,11c-3,3.1-8,3.1-11,0c-1.5-1.5-2.3-3.5-2.3-5.5
-			L60.5,68.3v15.9c1.4,1.4,2.3,3.4,2.3,5.5c0,4.3-3.5,7.8-7.8,7.8c-4.3,0-7.8-3.5-7.8-7.8c0-2.2,0.9-4.1,2.3-5.5V68.3L38.2,79.6
-			c0,2-0.8,4-2.3,5.5c-3,3-8,3-11,0c-3.1-3-3.1-8,0-11c1.5-1.5,3.5-2.3,5.5-2.3l11.3-11.3H25.8c-1.4,1.4-3.4,2.3-5.5,2.3
-			c-4.3,0-7.8-3.5-7.8-7.8s3.5-7.8,7.8-7.8c2.1,0,4.1,0.9,5.5,2.3h15.9L30.4,38.2c-2,0-4-0.8-5.5-2.3c-3.1-3-3.1-8,0-11
-			c3.1-3,8-3,11,0c1.5,1.5,2.3,3.5,2.3,5.5l11.3,11.3V25.7c-1.4-1.4-2.3-3.4-2.3-5.5c0-4.3,3.5-7.8,7.8-7.8c4.3,0,7.8,3.5,7.8,7.8
-			C62.8,22.4,61.9,24.3,60.5,25.7z"/>
-	</g>
-	<g id="svg-textbox">
-		<path id="text-backdrop" d="M5.8,55h98.3v44c0,3.7-1.8,5.5-5.5,5.5H11.3c-3.7,0-5.5-1.8-5.5-5.5V55z"/>
-		<path id="shine" class="st4" d="M16.1,59.6h78.5c3.2,0,5.8,2.6,5.8,5.8v19.7c-30.3-3.7-60.4-8.9-90.2-8.5V65.5
-			C10.3,62.3,12.9,59.6,16.1,59.6L16.1,59.6z"/>
-		<g id="svg-text">
-			<path id="S" class="st5" d="M20.1,80.2c-2.3-2.3-3.7-5.5-3.7-9.1c0-7.1,5.7-12.8,12.8-12.8c7.1,0,12.8,5.7,12.8,12.8h-7.5
-				c0-2.9-2.4-5.3-5.3-5.3c-2.9,0-5.3,2.4-5.3,5.3c0,1.5,0.6,2.8,1.6,3.8l0,0c1,1,2.3,1.5,3.8,1.5v0c3.6,0,6.8,1.4,9.1,3.8l0,0
-				c2.3,2.3,3.8,5.5,3.8,9.1c0,7.1-5.7,12.8-12.8,12.8c-7.1,0-12.8-5.7-12.8-12.8h7.5c0,2.9,2.4,5.3,5.3,5.3c2.9,0,5.3-2.4,5.3-5.3
-				c0-1.5-0.6-2.8-1.6-3.7l0,0c-1-1-2.3-1.6-3.7-1.6l0,0C25.7,84,22.5,82.5,20.1,80.2L20.1,80.2L20.1,80.2z"/>
-			<polygon id="V" class="st5" points="67.7,58.3 58.7,102.1 51.1,102.1 42.1,58.3 49.6,58.3 54.9,84 60.2,58.3 			"/>
-			<path id="G" class="st5" d="M80.6,76.5h12.9v12.8l0,0c0,7.1-5.7,12.8-12.8,12.8c-7.1,0-12.8-5.7-12.8-12.8l0,0V71.1h0
-				c0-7.1,5.8-12.8,12.8-12.8c7.1,0,12.9,5.7,12.9,12.8h-7.5c0-2.9-2.4-5.3-5.3-5.3c-2.9,0-5.3,2.4-5.3,5.3v18.2l0,0
-				c0,2.9,2.4,5.3,5.3,5.3c3,0,5.3-2.4,5.3-5.3v0V84h-5.3L80.6,76.5L80.6,76.5z"/>
-		</g>
-	</g>
-</a>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 300 300">
+<title>SVG Logo</title>
+<desc>Designed for the SVG Logo Contest in 2006 by Harvey Rayner, and adopted by W3C in 2009. It is available under the Creative Commons license for those who have an SVG product or who are using SVG on their site.</desc>
+<metadata id="license">
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/">
+	<cc:Work rdf:about="">
+	<dc:title>SVG Logo</dc:title>
+	<dc:date>14-08-2009</dc:date>
+	<dc:creator>
+		<cc:Agent><dc:title>W3C</dc:title></cc:Agent>
+		<cc:Agent><dc:title>Harvey Rayner, designer</dc:title></cc:Agent>
+	</dc:creator>
+	<dc:description>See document description</dc:description>
+	<cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/2.5/"/>
+	<dc:format>image/svg+xml</dc:format>
+	<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+	</cc:Work>
+	<cc:License rdf:about="http://creativecommons.org/licenses/by-nc-sa/2.5/">
+	<cc:permits rdf:resource="http://web.resource.org/cc/Reproduction"/>
+	<cc:permits rdf:resource="http://web.resource.org/cc/Distribution"/>
+	<cc:requires rdf:resource="http://web.resource.org/cc/Notice"/>
+	<cc:requires rdf:resource="http://web.resource.org/cc/Attribution"/>
+	<cc:prohibits rdf:resource="http://web.resource.org/cc/CommercialUse"/>
+	<cc:permits rdf:resource="http://web.resource.org/cc/DerivativeWorks"/>
+	<cc:requires rdf:resource="http://web.resource.org/cc/ShareAlike"/>
+	</cc:License>
+</rdf:RDF>
+</metadata>
+<defs>
+<g id="SVG" fill="#fff" transform="scale(2) translate(20,79)">
+	<path id="S" d="M 5.482,31.319 C2.163,28.001 0.109,23.419 0.109,18.358 C0.109,8.232 8.322,0.024 18.443,0.024 C28.569,0.024 36.782,8.232 36.782,18.358 L26.042,18.358 C26.042,14.164 22.638,10.765 18.443,10.765 C14.249,10.765 10.850,14.164 10.850,18.358 C10.850,20.453 11.701,22.351 13.070,23.721 L13.075,23.721 C14.450,25.101 15.595,25.500 18.443,25.952 L18.443,25.952 C23.509,26.479 28.091,28.006 31.409,31.324 L31.409,31.324 C34.728,34.643 36.782,39.225 36.782,44.286 C36.782,54.412 28.569,62.625 18.443,62.625 C8.322,62.625 0.109,54.412 0.109,44.286 L10.850,44.286 C10.850,48.480 14.249,51.884 18.443,51.884 C22.638,51.884 26.042,48.480 26.042,44.286 C26.042,42.191 25.191,40.298 23.821,38.923 L23.816,38.923 C22.441,37.548 20.468,37.074 18.443,36.697 L18.443,36.692 C13.533,35.939 8.800,34.638 5.482,31.319 L5.482,31.319 L5.482,31.319 Z"/>
+	<path id="V" d="M 73.452,0.024 L60.482,62.625 L49.742,62.625 L36.782,0.024 L47.522,0.024 L55.122,36.687 L62.712,0.024 L73.452,0.024 Z"/>
+	<path id="G" d="M 91.792,25.952 L110.126,25.952 L110.126,44.286 L110.131,44.286 C110.131,54.413 101.918,62.626 91.792,62.626 C81.665,62.626 73.458,54.413 73.458,44.286 L73.458,44.286 L73.458,18.359 L73.453,18.359 C73.453,8.233 81.665,0.025 91.792,0.025 C101.913,0.025 110.126,8.233 110.126,18.359 L99.385,18.359 C99.385,14.169 95.981,10.765 91.792,10.765 C87.597,10.765 84.198,14.169 84.198,18.359 L84.198,44.286 L84.198,44.286 C84.198,48.481 87.597,51.880 91.792,51.880 C95.981,51.880 99.380,48.481 99.385,44.291 L99.385,44.286 L99.385,36.698 L91.792,36.698 L91.792,25.952 L91.792,25.952 Z"/>
+</g>
+</defs>
+<path id="base" fill="#000" d="M8.5,150 H291.5 V250 C291.5,273.5 273.5,291.5 250,291.5 H50 C26.5,291.5 8.5,273.5 8.5,250 Z"/>
+<g stroke-width="38" stroke="#000">
+ <g id="svgstar" transform="translate(150, 150)">
+	<path id="svgbar" fill="#ffb13b" d="M-84.1487,-15.8513 a22.4171,22.4171 0 1 0 0,31.7026 h168.2974 a22.4171,22.4171 0 1 0 0,-31.7026 Z"/>
+	<use xlink:href="#svgbar" transform="rotate(45)"/>
+	<use xlink:href="#svgbar" transform="rotate(90)"/>
+	<use xlink:href="#svgbar" transform="rotate(135)"/>
+ </g>
+</g>
+<use xlink:href="#svgstar"/>
+<use xlink:href="#base" opacity="0.85"/>
+<use xlink:href="#SVG"/>
 </svg>

@@ -1,0 +1,58 @@
+.banner-methodology {}
+
+.banner-methodology__title {
+  margin-bottom: 60px;
+}
+
+.banner-methodology__content {
+  padding: 0 110px;
+  position: relative;
+  display: flex;
+
+  .info {
+    padding-right: 40px;
+
+    p:not(:last-of-type) {
+      margin-bottom: 30px;
+    }
+  }
+
+  img {
+    margin: 0;
+    position: relative;
+    top: -110px;
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .banner-methodology__content {
+    padding: 0 70px;
+
+    img {
+      width: 350px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .banner-methodology__title {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .banner-methodology__content {
+    padding: 0;
+
+    .info {
+      padding: 0;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

@@ -8,8 +8,8 @@
 }
 
 .list-inline__item {
-  margin: 40px 20px 60px;
-  width: calc(33.33% - 40px);
+  margin: 40px 15px 60px;
+  width: calc(33.33% - 30px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,7 +21,6 @@
 
   img {
     margin: 0 0 35px;
-    width: 60px;
   }
 
   a {

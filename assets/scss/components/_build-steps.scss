@@ -1,0 +1,166 @@
+.build-steps {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.build-steps__item {
+  margin: 0 0 15px;
+  padding: 30px 40px;
+  min-width: 380px;
+  max-width: 700px;
+  color: #fff;
+  background: $color-dark;
+  display: flex;
+  align-items: center;
+  font-family: 'antikor bold';
+  font-size: 18px;
+  color: $color-light;
+
+  .icon {
+    margin-right: 20px;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  &.integration {
+    margin-left: 110px;
+    align-self: flex-start;
+
+    &:before,
+    &:after {
+      position: absolute;
+      top: 50%;
+      display: flex;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      border-radius: unset;
+    }
+
+    &:before {
+      height: unset;
+      width: unset;
+      left: -100px;
+      font-family: 'icomoon';
+      font-size: 90px;
+      color: $color-primary;
+      content: '\e91a';
+      line-height: 1;
+      background: transparent;
+    }
+
+    &:after {
+      width: 130px;
+      height: 100%;
+      left: unset;
+      right: -150px;
+      background: $color-secondary;
+    }
+  }
+
+  &.development {
+    align-self: center;
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &.validation {
+    margin-left: 200px;
+    margin-bottom: 0;
+    align-self: flex-end;
+
+    &:before,
+    &:after {
+      position: absolute;
+      display: flex;
+      border: none;
+      border-radius: unset;
+      background: transparent;
+    }
+
+    &:before {
+      width: 180px;
+      height: 100%;
+      top: 0;
+      left: -200px;
+      background: $color-secondary;
+    }
+
+    &:after {
+      height: unset;
+      width: unset;
+      top: unset;
+      bottom: -40px;
+      left: unset;
+      right: 0;
+      font-family: 'icomoon';
+      font-size: 70px;
+      color: $color-tertiary;
+      content: '\e917';
+      line-height: 1;
+      background: transparent;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .build-steps {
+    margin: 0 0 40px;
+  }
+
+  .build-steps__item {
+    &.integration {
+      margin-left: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &.validation {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .build-steps {
+    margin: 0 0 15px;
+  }
+
+  .build-steps__item {
+    width: 100%;
+    min-width: unset;
+    max-width: unset;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .icon {
+      margin: 0 0 15px;
+      font-size: 30px;
+    }
+
+    &.integration {
+      margin-left: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &.validation {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

@@ -30,6 +30,8 @@
 @import "components/_article-tag-list";
 @import "components/_banner";
 @import "components/_banner-home";
+@import "components/_banner-methodology";
+@import "components/_banner-team";
 @import "components/_banner-services";
 @import "components/_banner-team";
 @import "components/_banner-values";
@@ -41,6 +43,7 @@
 @import "components/_brick-team";
 @import "components/_brick-visit";
 @import "components/_btn";
+@import "components/_build-steps";
 @import "components/_bullet";
 @import "components/_certification-list";
 @import "components/_certification";
@@ -58,7 +61,9 @@
 @import "components/_miniature-highlight";
 @import "components/_modal";
 @import "components/_pagination";
+@import "components/_planning-steps";
 @import "components/_preview";
+@import "components/_process";
 @import "components/_project-team";
 @import "components/_section-home";
 @import "components/_socials";
@@ -82,6 +87,7 @@
 // pages
 @import "pages/_page-contact";
 @import "pages/_page-home";
+@import "pages/_page-methodology";
 @import "pages/_page-projects";
 @import "pages/_page-project";
 @import "pages/_page-services";

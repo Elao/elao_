@@ -10,10 +10,22 @@
     width: 85px;
     height: 70px;
     content: '';
-    background: url('../../images/check.svg');
+    background-image: url('../../images/check.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
+  }
+}
+
+.checklist__title {
+  margin-bottom: 65px;
+  font-family: 'antikor bold';
+  font-size: 32px;
+  color: $color-secondary;
+
+  &:before,
+  &:after {
+    display: none;
   }
 }
 
@@ -27,6 +39,35 @@
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+}
+
+.checklist--right {
+  &:before {
+    left: unset;
+    right: 45px;
+  }
+}
+
+.checklist--unchecked {
+  &:before {
+    background-image: url('../../images/uncheck.svg');
+  }
+}
+
+.checklist--secondary {
+  background: $color-secondary;
+
+  .checklist__title {
+    color: $color-primary;
+  }
+
+  .checklist__item {
+    color: $color-text;
+
+    &:before {
+      border-color: rgba(127, 26, 85, .3);
+    }
   }
 }
 

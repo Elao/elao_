@@ -8,6 +8,7 @@ name: "Tribü"
 metaDescription: "Tribü — recyclage intelligent de déchets."
 description: "Tribü propose un dispositif permettant aux entreprises un recyclage intelligent de leurs déchets."
 websiteUrl: http://www.tribu-recyclage.fr/
+shortDescription: "Solution de déchets en entreprise"
 clients: Tribü
 size: 3 mois
 services: ["Accompagnement", "Développement"]

@@ -1,7 +1,21 @@
 .alert {
   padding: 30px;
-  font-family: 'antikor medium';
+  display: flex;
+  font-family: 'antikor bold';
   font-size: 14px;
+
+  .icon {
+    margin-right: 25px;
+    font-size: 25px;
+  }
+}
+
+.alert--error {
   color: $color-brand;
   background: $color-secondary;
+}
+
+.alert--info {
+  color: transparentize(#fff, .1);
+  background: $color-info;
 }

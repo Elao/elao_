@@ -6,7 +6,7 @@ namespace App\Bridge\Glide\Bundle\DependencyInjection;
 
 use App\Bridge\Glide\Bundle\Controller\ResizeImageController;
 use App\Bridge\Glide\Bundle\GlideUrlBuilder;
-use App\Bridge\Glide\Bundle\Twig\GlideExtension as TwigGlideExtension;
+use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
 use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
 use League\Glide\Responses\SymfonyResponseFactory;
@@ -47,7 +47,7 @@ class GlideExtension extends Extension
             ->replaceArgument(2, $signKey)
         ;
         $container->getDefinition(ResizeImageController::class)->replaceArgument(1, $signKey);
-        $container->getDefinition(TwigGlideExtension::class)
+        $container->getDefinition(ResizedUrlGenerator::class)
             ->replaceArgument(2, array_keys($config['presets']))
             ->replaceArgument(3, $config['pre_generate'])
         ;

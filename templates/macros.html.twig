@@ -1,0 +1,21 @@
+{% macro backgroundImageSrcset(path, preset, bgColor = '#f1f1f1') -%}
+    background: {{ bgColor }} url('{{ asset(path|glide_image_preset(preset)) }}');
+    {% for prefix in ['webkit', 'moz', 'ms'] -%}
+    background: {{ bgColor }} -{{ prefix }}-image-set(
+        url('{{ asset(path|glide_image_preset(preset)) }}') 1x,
+        url('{{ asset(path|glide_image_preset(preset, { dpr: 2 })) }}') 2x
+    );
+    {% endfor -%}
+    background: {{ bgColor }} image-set(
+        url('{{ asset(path|glide_image_preset(preset)) }}') 1x,
+        url('{{ asset(path|glide_image_preset(preset, { dpr: 2 })) }}') 2x
+    );
+{%- endmacro %}
+
+{% macro imageSrcset(path, preset) %}
+    src="{{ asset(path|glide_image_preset(preset)) }}"
+    srcset="
+        {{ asset(path|glide_image_preset(preset)) }} 1x,
+        {{ asset(path|glide_image_preset(preset, { dpr: 2 })) }} 2x
+    "
+{% endmacro %}

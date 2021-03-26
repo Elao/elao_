@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_locale article.lang %}
@@ -22,7 +23,7 @@
     </ol>
 
     <div class="article-banner">
-        <div class="article-banner__cover" style="background: #f1f1f1 url({{ asset(article.thumbnail) }})"></div>
+        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}"></div>
 
         <div class="article-info">
             {% set authors = article.authors|length > 5 ? [null] : article.authors %}

@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title "Le blog de l'équipe d'Elao" %}
@@ -42,7 +43,7 @@
                 {% elseif page == minPage and loop.index < 5 %}
                     <li class="miniature-inline miniature-inline--large">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail')) }}')"></span>
+                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
                         </a>
                         <div class="miniature-inline__content">
                             <span class="date">{{ article.publishdate|format_date('medium')  }}</span>
@@ -73,7 +74,7 @@
                 {% else %}
                     <li class="miniature">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail|glide_image_preset('article_thumbnail.xs')) }}')"></span>
+                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

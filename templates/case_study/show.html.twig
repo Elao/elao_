@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title %}{{ caseStudy.metaTitle|default(caseStudy.title) }} | {{ parent() }}{% endblock %}
@@ -50,7 +51,7 @@
                 -->
                 <div class="preview">
                     <div class="preview__main">
-                        <img src="{{ asset(caseStudy.images|first|glide_image_preset('case_study_banner')) }}">
+                        <img {{ macros.imageSrcset(caseStudy.images|first, 'case_study_banner') }} />
                     </div>
                     <div class="preview__list">
                         <ul>
@@ -144,7 +145,7 @@
                     {% for caseStudy in randomStudies %}
                     <li class="miniature miniature--large">
                         <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
-                            <span class="image" style="background: url({{ asset(caseStudy.images|first|glide_image_preset('case_study_thumbnail.large')) }})"></span>
+                            <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.lg') }}"></span>
                         </a>
                         <div class="miniature__content">
                             <span class="info">{{ caseStudy.clients }}</span>

@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title "Réalisations web : revue de nos projets depuis 15 ans | Elao" %}
@@ -40,7 +41,7 @@
             {% for caseStudy in caseStudies %}
                 <li class="miniature-inline">
                     <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature-inline__image">
-                        <span class="image" style="background: url({{ asset(caseStudy.images|first|glide_image_preset('case_study_thumbnail')) }})"></span>
+                        <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
                     </a>
                     <div class="miniature-inline__content">
                         <span class="info">{{ caseStudy.clients }}</span>

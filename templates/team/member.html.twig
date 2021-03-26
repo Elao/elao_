@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
@@ -119,7 +120,7 @@
                         {% for project in projects %}
                             <div class="miniature-inline miniature-inline--small">
                                 <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="miniature-inline__image">
-                                    <span class="image" style="background: url('https://images.unsplash.com/photo-1530435460869-d13625c69bbf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')"></span>
+                                    <span class="image" style="{{ macros.backgroundImageSrcset(project.images|first, 'case_study_thumbnail.xs') }}"></span>
                                 </a>
                                 <div class="miniature-inline__content">
                                     <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="title">{{ project.title }}</a>
@@ -136,7 +137,7 @@
                         {% for article in articles %}
                             <div class="miniature-inline miniature-inline--small">
                                 <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                                    <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                                    <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs') }}"></span>
                                 </a>
                                 <div class="miniature-inline__content">
                                     <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

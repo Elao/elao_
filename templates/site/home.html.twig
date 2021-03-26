@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title "Création et développement d'applications web et mobile sur-mesure à Lyon" %}
@@ -9,18 +10,18 @@
 {% block content %}
     <div class="page-home">
         <div class="banner-home">
-            <h1 class="banner-home__title">
+            <h1 class="banner-home__title" data-aos="flip-down">
                 elao
                 <span>développe</span>
                 <span>du lien</span>
             </h1>
-            <div class="banner-home__content">
+            <div class="banner-home__content" data-aos="zoom-in">
                 <p>{{ site.description }}</p>
             </div>
             {% set highlightedCaseStudy = content_get('App\\Model\\CaseStudy', site.home.highlights.caseStudy) %}
-            <div class="banner-home__image">
+            <div class="banner-home__image" data-aos="fade-left">
                 <figure>
-                    <div class="image" style="background: url('https://www.fillmurray.com/510/330')"></div>
+                    <div class="image" style="{{ macros.backgroundImageSrcset(highlightedCaseStudy.images|first, 'case_study_thumbnail.md') }}"></div>
                     <figcaption>
                         <span>{{ highlightedCaseStudy.title }}</span>
                         {{ highlightedCaseStudy.shortDescription }}
@@ -37,7 +38,9 @@
                 </a>
             </div>
             <ul class="banner-home__list">
-                <li>
+                {% with { duration: 600, delayGap: 200} %}
+                {% set delay = 0 %}
+                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <div class="item">
                         {% set interval = date('now').diff(date(site.birthdate)) %}
                         <span class="number">{{ interval.y }}</span>
@@ -45,7 +48,8 @@
                         <small>(et d'expérimentations)</small>
                     </div>
                 </li>
-                <li>
+                {% set delay = delay + delayGap %}
+                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <a href="{{ path('team') }}" class="item">
                         <span class="number">15</span>
                         expert·e·s passionné·e·s
@@ -55,7 +59,8 @@
                         </span>
                     </a>
                 </li>
-                <li>
+                {% set delay = delay + delayGap %}
+                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <a href="{{ path('case_studies') }}" class="item">
                         <span class="number">200+</span>
                         projets
@@ -65,10 +70,11 @@
                         </span>
                     </a>
                 </li>
+                {% endwith %}
             </ul>
         </div>
 
-        <section class="section-home">
+        <section class="section-home" data-aos="fade-left">
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Contribuer à des projets vertueux, utiles à notre société</h2>
@@ -101,7 +107,7 @@
             </div>
         </section>
 
-        <section class="section-home section-home--reverse">
+        <section class="section-home section-home--reverse" data-aos="fade-right">
             <div class="section-home__image">
                 <picture>
                     <source
@@ -145,7 +151,7 @@
             </div>
         </section>
 
-        <section class="section-home">
+        <section class="section-home" data-aos="fade-left">
             <div class="section-home__content">
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Mettre ensemble l'énergie là où elle a le plus de valeur</h2>
@@ -194,7 +200,7 @@
                     </span>
                 </a>
             </div>
-            <div class="section-home__links">
+            <div class="section-home__links" data-aos="fade-in" data-aos-delay="200">
                 <a class="animated-block">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45px" height="30" viewBox="0 0 45 30" class="browser">
@@ -233,7 +239,7 @@
                         <p>Core team Symfony</p>
                     </div>
                 </a>
-                <a href="#" class="animated-block">
+                <a href="#" class="animated-block" data-aos="fade-in" data-aos-delay="400">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="bulb">
                             <path d="M20.4,12.4c0-4.4-3.6-8-8-8 c-4.4,0-8,3.6-8,8c0,2.7,2.8,5.8,3.3,7.3s0,4.8,0,4.8c0,1,0.8,1.8,1.8,1.8h6.2c1,0,1.8-0.8,1.8-1.8c0,0-0.6-3.3,0-4.8 C18,18.2,20.4,14.9,20.4,12.4z"/>
@@ -260,7 +266,7 @@
                         <p>Elao Summer Talk #2</p>
                     </div>
                 </a>
-                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block">
+                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block" data-aos="fade-in" data-aos-delay="600">
                     <div class="animated-block__icon">
                         <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="pen">
                             <rect x="0.6" y="28.4" height="1"/>
@@ -280,7 +286,7 @@
         </section>
 
         <aside class="bricks">
-            <div class="brick-conception">
+            <div class="brick-conception" data-aos="zoom-in-down">
                 <p>Et surtout...</p>
                 <h3 class="title">Prendre du plaisir à concevoir avec vous, pour vos utilisateurs et utilisatrices</h3>
             </div>

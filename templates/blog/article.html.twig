@@ -102,12 +102,13 @@
             {% endblock %}
         </main>
         <aside class="article-content__aside">
-            {# TODO: wire something on the Kudos btn + display count #}
-{#            <button class="kudo">#}
-{#                <span class="kudo__button" aria-hidden="true"></span>#}
-{#                <span class="screen-reader">Cet article m’a été utile</span>#}
-{#                <span class="kudo__label" aria-hidden="true">Kudos</span>#}
-{#            </button>#}
+            {% if article.tweetId is not empty %}
+                <a href="{{ external_url('twitter_like', { tweet_id: article.tweetId }) }}" class="kudo" target="_blank">
+                    <span class="kudo__button" aria-hidden="true"></span>
+                    <span class="screen-reader">Cet article m’a été utile</span>
+                    <span class="kudo__label" aria-hidden="true">Kudos</span>
+                </a>
+            {% endif %}
         </aside>
     </div>
 
@@ -119,9 +120,10 @@
                         <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}"/>
                     </div>
                     <span class="article-author__info">
-            {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
-            <strong>{{ author.name }}</strong>
-          </span>
+                        {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
+                        <strong>{{ author.name }}</strong>
+                    </span>
+
                     <div class="article-author__social">
                         {% if author.twitter %}
                             <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
@@ -145,8 +147,41 @@
                 </div>
             {% endfor %}
         {% endblock %}
-        {% if article.tweetId is not empty %}
-            <p>Des remarques ? Ou simplement envie d'en discuter ? <a href="https://twitter.com/Elao/status/{{ article.tweetId }} " target="_blank">Poursuivons sur twitter !</a></p>
-        {% endif %}
     </div>
+
+    {% if article.tweetId is not empty %}
+        <div class="article-twitter">
+            <p>
+                Des remarques ? Ou simplement envie d'en discuter ?
+                <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank">
+                    Poursuivons sur twitter !
+                </a>
+            </p>
+
+            <div id="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+        </div>
+    {% endif %}
 {% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% if article.tweetId is not empty %}
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <script>
+            window.onload = (function(){
+                var tweet = document.getElementById('tweet-container');
+                // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+                twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                    conversation: 'none',
+                    cards: 'visible',
+                    theme: 'light',
+                    lang: 'fr',
+                    align: 'center',
+                    width: 550, // default
+                    dnt: true,
+                })
+            });
+        </script>
+    {% endif %}
+{% endblock %}

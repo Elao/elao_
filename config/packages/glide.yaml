@@ -46,3 +46,12 @@ glide:
             w: 1040
             fit: max
             dpr: 1
+
+        tribe_picture.show:
+            w: 440
+            h: 590
+
+        tribe_picture.list:
+            w: 250
+            h: 250
+            fit: crop-50-25

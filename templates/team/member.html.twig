@@ -31,7 +31,7 @@
             </h1>
 
             <div class="member__image member__image--mobile">
-                <img src="https://www.fillmurray.com/440/590" alt="Portrait de {{ member.name }}">
+                <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
                 <div class="seniority">
                     {% set interval = date('now').diff(member.integrationDate) %}
                     {% set numberYear = interval.y %}
@@ -112,7 +112,7 @@
 
         <div class="member__image">
             <!-- image de profil : 440 x 590px -->
-            <img src="https://www.fillmurray.com/440/590" alt="Portrait de {{ member.name }}">
+            <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
             <div class="seniority">
                 {% set interval = date('now').diff(member.integrationDate) %}
                 {% set numberYear = interval.y %}

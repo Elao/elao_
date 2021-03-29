@@ -41,7 +41,6 @@ build-content:
 	rm -rf public/resized
 	bin/console cache:clear
 	bin/console stenope:build
-	cp -R public/resized build/resized
 
 ## Build static site with assets
 build-static: build build-content
@@ -59,7 +58,6 @@ build-subdir: clear build
 	rm -rf public/resized
 	bin/console cache:clear
 	bin/console stenope:build build/elao_
-	cp -R public/resized build/elao_/resized
 
 ## Serve the static version of the site from a subdir / with base url
 serve-static-subdir:

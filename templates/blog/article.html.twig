@@ -23,9 +23,9 @@
     </ol>
 
     <div class="article-banner">
-        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}"></div>
+        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>
 
-        <div class="article-info">
+        <div class="article-info" data-aos="zoom-in">
             {% set authors = article.authors|length > 5 ? [null] : article.authors %}
             {% block author_header %}
                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="article-header">
+        <div class="article-header" data-aos="zoom-in-up">
             <h1>{{ article.title }}</h1>
             <p>{{ article.description }}</p>
             <ul class="article-tag-list">
@@ -62,7 +62,7 @@
     </div>
 
     {% if article.tableOfContent %}
-        <ul class="table-of-content">
+        <ul class="table-of-content" data-aos="fade-up">
             {% for id, title in article.tableOfContent %}
                 <li class="table-of-content__item">
                     <a href="#{{ id }}">{{ title }}</a>
@@ -112,7 +112,7 @@
         </aside>
     </div>
 
-    <div class="article-footer">
+    <div class="article-footer" data-aos="fade-in">
         {% block author_footer %}
             {% for author in article.authors %}
                 <div class="article-author">

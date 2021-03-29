@@ -38,8 +38,7 @@
                 </a>
             </div>
             <ul class="banner-home__list">
-                {% with { duration: 600, delayGap: 200} %}
-                {% set delay = 0 %}
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <div class="item">
                         {% set interval = date('now').diff(date(site.birthdate)) %}

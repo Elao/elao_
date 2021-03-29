@@ -2,6 +2,12 @@
 @import "~prismjs/themes/prism-tomorrow.css";
 @import '~aos/dist/aos';
 
+// Prevents hiding elements for animations if js is not enabled:
+html.no-js [data-aos] {
+  opacity: 1;
+  transform: none;
+}
+
 // base
 @import "base/_variables";
 @import "base/_fonts";

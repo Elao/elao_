@@ -13,13 +13,12 @@ bio: |
     _Smash Ultimate_ & _Zelda_-addict. Inventeur de l'_Ogito™_, un célèbre cocktail très recherché pour son sens de la fête.
 integrationDate: 04/01/2016
 
-social:
-    website: http://www.elao.com
-    twitter: ogizanagi
-    github: ogizanagi
-    linkedIn: maxime-steinhausser-3708a7107
-    email: maxime.steinhausser@elao.com
-    avatar: images/authors/msteinhausser.png
+website: ~
+twitter: ogizanagi
+github: ogizanagi
+linkedIn: maxime-steinhausser-3708a7107
+email: maxime.steinhausser@elao.com
+avatar: images/authors/msteinhausser.png
 
 certifications:
     - symfony

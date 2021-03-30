@@ -47,6 +47,9 @@ glide:
             fit: max
             dpr: 1
 
+        tribe_banner:
+            w: 1280
+            h: 600
         tribe_picture.show:
             w: 440
             h: 590

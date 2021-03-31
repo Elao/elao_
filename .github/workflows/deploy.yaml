@@ -86,9 +86,6 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: ${{ secrets.WEBSITE_URL }}
 
-      - name: 'Copy resized images'
-        run: cp -R public/resized build/resized
-
       - name: '🚀 Deploy'
         run: |
           rsync build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }} \

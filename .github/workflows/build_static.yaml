@@ -73,9 +73,6 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_
 
-      - name: 'Copy resized images'
-        run: cp -R public/resized build/resized
-
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'
         uses: JamesIves/github-pages-deploy-action@3.7.1

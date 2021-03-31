@@ -1,8 +1,7 @@
 ---
 title: "CIRano"
-lastmod: 2019-01-09
+lastModified: "2019-01-09"
 date: "2019-01-09"
-name: "CIRano"
 
 # Params
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."

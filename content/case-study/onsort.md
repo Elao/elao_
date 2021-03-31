@@ -1,8 +1,7 @@
 ---
 title: "On sort !"
-lastmod: 2017-05-29
+lastModified: "2017-05-29"
 date: "2017-02-01"
-name: "On sort !"
 
 # Params
 metaDescription: "On Sort - l'agenda culturel de la métropole d'Orleans."

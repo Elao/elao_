@@ -1,8 +1,7 @@
 ---
 title: "Tribü"
-lastmod: 2021-01-17
+lastModified: "2021-01-17"
 date: "2019-01-09"
-name: "Tribü"
 
 # Params
 metaDescription: "Tribü — recyclage intelligent de déchets."

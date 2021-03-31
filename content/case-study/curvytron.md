@@ -1,9 +1,8 @@
 ---
 title: "Curvytron / Lazerdrive"
 keywords: [Javascript Vanilla, Angular JS, HTML5 Canvas, Websocket, Node JS, GulpJS]
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2015-06-23"
-name: "curvytron"
 
 # Params
 description: "Curvytron et Lazerdrive sont deux jeux d'adresse sur navigateur. Curvytron est d'abord né d'un projet de veille interne et a par la suite été présenté au PHP tour en 2014 et au Blend Web Mix 2015. Il a été le point de départ du jeu Lazerdrive."

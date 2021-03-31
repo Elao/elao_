@@ -1,6 +1,6 @@
 ---
 title: "NGTV Experience"
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2014-05-23"
 
 # Params

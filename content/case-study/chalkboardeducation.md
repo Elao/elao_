@@ -1,8 +1,7 @@
 ---
 title: "Chalkboard Education"
-lastmod: 2017-09-04
+lastModified: "2017-09-04"
 date: "2017-09-04"
-name: "Chalkboard Education"
 
 # Params
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."

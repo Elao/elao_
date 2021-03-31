@@ -17,12 +17,6 @@
     position: relative;
     grid-column: 1 / 13;
 
-    img {
-      margin: 0;
-      position: relative;
-      z-index: 1;
-    }
-
     &:after {
       height: 190px;
       width: 500px;
@@ -31,6 +25,13 @@
       right: 0;
       content: '';
       background: $color-secondary;
+      z-index: -1;
+    }
+
+    picture {
+      img {
+        margin: 0;
+      }
     }
   }
 
@@ -39,12 +40,15 @@
     position: relative;
     grid-column: 1 / 13;
 
-    img {
-      margin: 0;
+    picture {
       position: absolute;
       bottom: -400px;
       left: 0;
       z-index: -1;
+
+      img {
+        margin: 0;
+      }
     }
   }
 
@@ -127,9 +131,13 @@
     align-items: center;
     grid-column: 1 / 12;
 
-    img {
-      margin: 0;
+    picture {
       margin-right: 40px;
+      min-width: 400px;
+
+      img {
+        margin: 0;
+      }
     }
 
     p {
@@ -230,9 +238,13 @@
       flex-direction: column;
       grid-column: 1 / 13;
 
-      img {
+      picture {
         margin: 0 0 40px;
         width: 100%;
+
+        img {
+          width: 100%;
+        }
       }
     }
 
@@ -274,9 +286,13 @@
     .banner-steps {
       margin: 40px 0;
 
-      img {
+      picture {
         position: static;
         width: 100%;
+
+        img {
+          width: 100%;
+        }
       }
     }
   }

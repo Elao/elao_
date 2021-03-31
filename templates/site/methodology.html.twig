@@ -41,7 +41,19 @@
         </div>
 
         <div class="banner-planning">
-            <img src="https://www.fillmurray.com/1070/460" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/brainstorming.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/brainstorming@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/brainstorming.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/brainstorming@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/brainstorming.jpg') }}"/>
+            </picture>
         </div>
 
         <ul class="planning-steps">
@@ -112,7 +124,19 @@
                     La recette fonctionnelle sur des serveurs de recette (staging)
                 </li>
             </ul>
-            <img src="https://www.fillmurray.com/1070/460" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/pair-programming.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/pair-programming@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/pair-programming.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/pair-programming@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/pair-programming.jpg') }}"/>
+            </picture>
         </div>
 
         <h3 class="h2--ordered">
@@ -163,7 +187,19 @@
 
         <h2 class="h2--dash">Estimation et time tracking</h2>
         <div class="estimate">
-            <img src="https://www.fillmurray.com/400/670" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/time-tracking.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/time-tracking@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/time-tracking.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/time-tracking@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/time-tracking.jpg') }}"/>
+            </picture>
             <div>
                 <p>Parce que c’est plus juste pour tout le monde, nous facturons au temps passé. Avant la phase de développement, chaque fonctionnalité est estimée en jours afin que vous puissiez vous rendre compte de son coût et arbitrer sa priorisation. Ces éléments constituent une fourchette qui peut être un peu bousculée au gré des découvertes fonctionnelles et s’affine au fur et à mesure de la compréhension des enjeux et en fonction du niveau de détail des spécifications.</p>
                 <p>Chaque personne de l’équipe rentre le temps passé par projet de façon quotidienne. Par soucis de transparence, nous informons nos clients de ce temps passé le plus régulièrement possible en fonction de la phase dans laquelle nous sommes (sur la semaine ou le mois précédent) et nous proposons une facturation soit à l’itération (= lot de fonctionnalités livré), soit au mois.</p>
@@ -177,7 +213,23 @@
                 <p>Nous n’imposons aucune application à nos clients et nous adaptons à leurs habitudes et besoins. Cependant, nous recommandons fortement l’usage des outils suivants :</p>
             </div>
             <div class="tools__image">
-                <img src="https://www.fillmurray.com/620/345" alt="">
+                <!--
+                Todo : add tools picture
+
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="{{ asset('build/images/pages/methodology/tools.webp') }} 1x,
+                                {{ asset('build/images/pages/methodology/tools@2x.webp') }} 2x"
+                    >
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/methodology/tools.jpg') }} 1x,
+                                {{ asset('build/images/pages/methodology/tools@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/methodology/tools.jpg') }}"/>
+                </picture>
+                -->
             </div>
         </div>
 

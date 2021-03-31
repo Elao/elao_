@@ -1,0 +1,6 @@
+twitter_like:
+    # https://developer.twitter.com/en/docs/twitter-for-websites/web-intents/overview#like-a-tweet
+    path: /intent/like
+
+twitter_elao_tweet:
+    path: /Elao/status/{tweetId}

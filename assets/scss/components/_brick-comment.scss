@@ -1,0 +1,18 @@
+.brick-comment {
+  @extend .brick;
+  @extend .brick--large;
+
+  color: #fff;
+  background: $color-dark;
+
+  .title {
+    margin: 40px 0;
+    font-family: 'faktum bold';
+    font-size: 46px;
+    color: $color-light;
+  }
+
+  .tweet-container {
+    margin-top: 40px;
+  }
+}

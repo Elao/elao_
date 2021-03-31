@@ -10,7 +10,7 @@ websiteUrl: ~
 clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "algolia", "vue-js"]
+technologies: ["symfony"]
 members: ["mcolin", "tjarrand"]
 images: ["images/casestudies/headers/spine-banner.jpg"]
 ---

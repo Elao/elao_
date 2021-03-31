@@ -11,7 +11,7 @@ clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-members: ["mcolin", "tjarrand"]
+members: ["adefrance", "bleveque", "xavierr"]
 images: ["images/casestudies/headers/ngtv-banner.jpg"]
 ---
 

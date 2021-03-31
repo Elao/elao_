@@ -11,7 +11,7 @@ clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-members: ["mcolin", "tjarrand"]
+members: ["mcolin"]
 images: ["images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie.png"]
 ---
 

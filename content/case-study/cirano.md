@@ -10,7 +10,7 @@ clients: Businove
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "bootstrap", "vue-js"]
-members: ["xavierr", "mbernard"]
+members: ["xavierr", "mbernard", "adefrance"]
 images: ["images/casestudies/headers/cirano-banner.jpg"]
 ---
 

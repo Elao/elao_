@@ -11,7 +11,7 @@ clients: Jetpulp
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
-members: ["mcolin", "tjarrand"]
+members: ["msteinhausser", "xavierr", "bleveque", "yheitz"]
 images: ["images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
 ---
 

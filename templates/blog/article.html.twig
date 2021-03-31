@@ -150,15 +150,17 @@
     </div>
 
     {% if article.tweetId is not empty %}
-        <div class="article-twitter">
-            <p>
-                Des remarques ? Ou simplement envie d'en discuter ?
-                <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank">
-                    Poursuivons sur twitter !
-                </a>
-            </p>
-
-            <div id="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+        <div class="bricks">
+            <div class="brick-comment">
+                <p class="title">Commenter</p>
+                <p>
+                    Des commentaires ?
+                    <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
+                        Poursuivons la discussion sur twitter !
+                    </a>
+                </p>
+                <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+            </div>
         </div>
     {% endif %}
 {% endblock content %}
@@ -174,7 +176,7 @@
                 // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
                 twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
                     conversation: 'none',
-                    cards: 'visible',
+                    cards: 'hidden',
                     theme: 'light',
                     lang: 'fr',
                     align: 'center',

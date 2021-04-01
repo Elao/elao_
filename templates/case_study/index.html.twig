@@ -21,17 +21,17 @@
             </li>
         </ol>
 
-        <div class="banner">
-            <h1 class="banner__title">
+        <div class="banner-case-study">
+            <h1 class="banner-case-study__title" data-aos="flip-down">
                 Découvrez
                 <span>nos études de cas</span>
             </h1>
-            <div class="banner__content">
-                <div class="info">
+            <div class="banner-case-study__content">
+                <div class="info" data-aos="fade-in">
                     <p>Voici une sélection récente de projets dans lesquels nous avons pu voir se créer une émulation forte avec nos clients et leurs utilisateurs.</p>
                 </div>
-                <div class="highlight">
-                    <p class="">Notre meilleur argument qualité, ce sont les <strong>200+ projets</strong> sur lesquels nous avons travaillé depuis plus de 15 ans.</p>
+                <div class="highlight" data-aos="zoom-in-left">
+                    <p class="">Notre meilleur argument qualité, ce sont les <strong>200+ projets</strong> sur lesquels nous avons travaillé depuis plus de <strong>15 ans.</strong></p>
                     <i class="icon icon--brackets-right" aria-hidden="true"></i>
                 </div>
             </div>
@@ -39,7 +39,7 @@
 
         <ul class="article-list">
             {% for caseStudy in caseStudies %}
-                <li class="miniature-inline">
+                <li class="miniature-inline" data-aos="fade-up-left">
                     <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature-inline__image">
                         <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
                     </a>
@@ -66,7 +66,7 @@
         </ul>
 
         <aside class="bricks">
-            <div class="brick-developpement">
+            <div class="brick-developpement" data-aos="zoom-in-down">
                 <p>Un projet ?</p>
                 <h3 class="title">Vous avez une application web ou mobile à développer ?</h3>
                 <a class="contact-link" href="{{ path('contact') }}">

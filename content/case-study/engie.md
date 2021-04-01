@@ -1,6 +1,6 @@
 ---
 title: "Engie"
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2012-01-21"
 
 # Params
@@ -11,7 +11,7 @@ clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-members: ["mcolin", "tjarrand"]
+members: ["mcolin"]
 images: ["images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie.png"]
 ---
 

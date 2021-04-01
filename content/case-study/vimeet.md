@@ -1,6 +1,6 @@
 ---
 title: "Vimeet"
-lastmod: 2017-09-04
+lastModified: "2017-09-04"
 date: "2017-09-04"
 
 # Params
@@ -10,7 +10,7 @@ websiteUrl: https://vimeet.events
 clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "algolia", "vue-js"]
+technologies: ["symfony", "elasticsearch", "vue-js"]
 members: ["mcolin", "ndievart", "rhanna"]
 images: ["images/casestudies/headers/vimeet-banner.jpg"]
 ---

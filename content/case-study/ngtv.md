@@ -1,6 +1,6 @@
 ---
 title: "NGTV Experience"
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2014-05-23"
 
 # Params
@@ -11,7 +11,7 @@ clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
-members: ["mcolin", "tjarrand"]
+members: ["adefrance", "bleveque", "xavierr"]
 images: ["images/casestudies/headers/ngtv-banner.jpg"]
 ---
 

@@ -1,5 +1,6 @@
 active: false # make it true
 #🚲: true # velo-taffeur
+#anonymousTribePicture: true # To protect your image privacy
 
 # Bio
 name: John Doe
@@ -10,7 +11,7 @@ bio: |
     Color sit amet
     consectetur […]
 position: Sample
-integrationDate: 04/01/2005
+integrationDate: 04-01-2005
 
 # Social
 website: ~

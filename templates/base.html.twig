@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{% block meta_locale app.request.locale %}">
+<html lang="{% block meta_locale app.request.locale %}" class="no-js">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,6 +48,11 @@
         {% if noindex is defined and noindex %}
             <meta name="robots" content="noindex" />
         {% endif %}
+
+        <script>
+            // Detect as soon as possible if JS is available
+            document.querySelector('html').classList.remove('no-js');
+        </script>
 
         {% block stylesheets %}
             {{ encore_entry_link_tags('style') }}
@@ -143,22 +148,24 @@
                          <span>du lien</span>
                     </p>
                     <div class="links">
-                        <ul>
-                            {% for item in site.footer %}
+                        {% for col in site.footer %}
+                            <ul>
+                            {% for item in col %}
                                 <li>
                                     <a href="{{ path(item.path) }}">{{ item.label }}</a>
                                 </li>
                             {% endfor %}
-{#                            <li>#}
-{#                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}#}
-{#                                <a href="{{ path('jobs') }}">#}
-{#                                    Nous recrutons#}
-{#                                    {% if count %}#}
-{#                                        <span class="bullet">{{ count }}</span>#}
-{#                                    {% endif %}#}
-{#                                </a>#}
-{#                            </li>#}
-                        </ul>
+                            </ul>
+                        {% endfor %}
+{#                      <li>#}
+{#                          {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}#}
+{#                          <a href="{{ path('jobs') }}">#}
+{#                              Nous recrutons#}
+{#                              {% if count %}#}
+{#                                  <span class="bullet">{{ count }}</span>#}
+{#                              {% endif %}#}
+{#                          </a>#}
+{#                      </li>#}
                     </div>
                     <div class="socials">
                         <ul>

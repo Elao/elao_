@@ -1,8 +1,7 @@
 ---
 title: "Spine"
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2016-05-23"
-name: "spine"
 
 # Params
 metaDescription: "Développement sur-mesure d'une application tablette ludo-éducative qui permet au grand public d'annoter des IRM du cerveau pour faire avancer la recherche. Technologie : 3D WebGL"
@@ -11,7 +10,7 @@ websiteUrl: ~
 clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "algolia", "vue-js"]
+technologies: ["symfony"]
 members: ["mcolin", "tjarrand"]
 images: ["images/casestudies/headers/spine-banner.jpg"]
 ---

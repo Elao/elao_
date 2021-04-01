@@ -1,8 +1,7 @@
 ---
 title: "CIRano"
-lastmod: 2019-01-09
+lastModified: "2019-01-09"
 date: "2019-01-09"
-name: "CIRano"
 
 # Params
 description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
@@ -11,7 +10,7 @@ clients: Businove
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "bootstrap", "vue-js"]
-members: ["xavierr", "mbernard"]
+members: ["xavierr", "mbernard", "adefrance"]
 images: ["images/casestudies/headers/cirano-banner.jpg"]
 ---
 

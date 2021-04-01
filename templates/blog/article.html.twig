@@ -23,9 +23,9 @@
     </ol>
 
     <div class="article-banner">
-        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}"></div>
+        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>
 
-        <div class="article-info">
+        <div class="article-info" data-aos="zoom-in">
             {% set authors = article.authors|length > 5 ? [null] : article.authors %}
             {% block author_header %}
                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div class="article-header">
+        <div class="article-header" data-aos="zoom-in-up">
             <h1>{{ article.title }}</h1>
             <p>{{ article.description }}</p>
             <ul class="article-tag-list">
@@ -62,7 +62,7 @@
     </div>
 
     {% if article.tableOfContent %}
-        <ul class="table-of-content">
+        <ul class="table-of-content" data-aos="fade-up">
             {% for id, title in article.tableOfContent %}
                 <li class="table-of-content__item">
                     <a href="#{{ id }}">{{ title }}</a>
@@ -77,7 +77,7 @@
             {% if article.outdated %}
                 <p class="alert alert--info">
                     {% if article.outdated is same as true %}
-                        <i class="icon icon--contact" aria-hidden="true"></i>
+                        <i class="icon icon--info" aria-hidden="true"></i>
                         Attention, cet article date un peu, il est peut-être obsolète, gardez cela en tête lors de votre lecture !
                     {% else %}
                         {{ article.outdated }}
@@ -102,16 +102,17 @@
             {% endblock %}
         </main>
         <aside class="article-content__aside">
-            {# TODO: wire something on the Kudos btn + display count #}
-{#            <button class="kudo">#}
-{#                <span class="kudo__button" aria-hidden="true"></span>#}
-{#                <span class="screen-reader">Cet article m’a été utile</span>#}
-{#                <span class="kudo__label" aria-hidden="true">Kudos</span>#}
-{#            </button>#}
+            {% if article.tweetId is not empty %}
+                <a href="{{ external_url('twitter_like', { tweet_id: article.tweetId }) }}" class="kudo" target="_blank">
+                    <span class="kudo__button" aria-hidden="true"></span>
+                    <span class="screen-reader">Cet article m’a été utile</span>
+                    <span class="kudo__label" aria-hidden="true">Kudos</span>
+                </a>
+            {% endif %}
         </aside>
     </div>
 
-    <div class="article-footer">
+    <div class="article-footer" data-aos="fade-in">
         {% block author_footer %}
             {% for author in article.authors %}
                 <div class="article-author">
@@ -119,9 +120,10 @@
                         <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}"/>
                     </div>
                     <span class="article-author__info">
-            {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
-            <strong>{{ author.name }}</strong>
-          </span>
+                        {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
+                        <strong>{{ author.name }}</strong>
+                    </span>
+
                     <div class="article-author__social">
                         {% if author.twitter %}
                             <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
@@ -145,8 +147,43 @@
                 </div>
             {% endfor %}
         {% endblock %}
-        {% if article.tweetId is not empty %}
-            <p>Des remarques ? Ou simplement envie d'en discuter ? <a href="https://twitter.com/Elao/status/{{ article.tweetId }} " target="_blank">Poursuivons sur twitter !</a></p>
-        {% endif %}
     </div>
+
+    {% if article.tweetId is not empty %}
+        <div class="bricks">
+            <div class="brick-comment">
+                <p class="title">Commenter</p>
+                <p>
+                    Des commentaires ?
+                    <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
+                        Poursuivons la discussion sur twitter !
+                    </a>
+                </p>
+                <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+            </div>
+        </div>
+    {% endif %}
 {% endblock content %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    {% if article.tweetId is not empty %}
+        <script src="https://platform.twitter.com/widgets.js"></script>
+        <script>
+            window.onload = (function(){
+                var tweet = document.getElementById('tweet-container');
+                // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+                twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                    conversation: 'none',
+                    cards: 'hidden',
+                    theme: 'light',
+                    lang: 'fr',
+                    align: 'center',
+                    width: 550, // default
+                    dnt: true,
+                })
+            });
+        </script>
+    {% endif %}
+{% endblock %}

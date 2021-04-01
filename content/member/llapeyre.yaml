@@ -1,4 +1,5 @@
 active: true
+anonymousTribePicture: true # until we have a picture
 
 name: Lod Lapeyre
 pseudo: ~
@@ -6,7 +7,7 @@ position: "DevOps"
 bio: |
     "Have you tried turning it off and on again ?"
     "Gaming everyday, bicycling everywhere, cooking everything"
-integrationDate: 12/03/2019
+integrationDate: 12-03-2019
 
 website: ~
 twitter: ~

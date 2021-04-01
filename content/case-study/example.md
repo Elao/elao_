@@ -1,8 +1,7 @@
 ---
 title: "Exemple"
-lastmod: 2021-01-21
+lastModified: "2021-01-21"
 date: "2021-01-21"
-name: "Exemple"
 
 # Params
 metaDescription: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."

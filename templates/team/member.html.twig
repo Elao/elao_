@@ -25,31 +25,32 @@
 
     <div class="member">
         <div class="member__infos">
-            <h1>
+            <h1 data-aos="flip-down">
                 Découvrez
                 <span>{{ member.name }}</span>
             </h1>
-        </div>
 
-        <div class="member__image">
-            <!-- image de profil : 500 x 680px -->
-            <img src="https://www.fillmurray.com/500/680" alt="Portrait de {{ member.name }}">
-            <div class="experience">
-                {% set interval = date('now').diff(member.integrationDate) %}
-                {% set numberYear = interval.y %}
-                {% set numberMonth= interval.m %}
-                {{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }} dans la tribu
+            <div class="member__image member__image--mobile">
+                {% block memberImage %}
+                <!-- image de profil : 500 x 680px -->
+                <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
+                <div class="seniority" data-aos="zoom-in">
+                    {% set interval = date('now').diff(member.integrationDate) %}
+                    {% set numberYear = interval.y %}
+                    {% set numberMonth= interval.m %}
+                    <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
+                    dans la tribu
+                </div>
+                {% endblock %}
             </div>
-        </div>
 
-        <div class="member__profile">
             <p class="job">{{ member.position }}</p>
 
-            <div class="description">
+            <div class="description" data-aos="fade-in">
                 {{ member.bio|nl2br|markdownify|raw }}
             </div>
 
-            <div class="socials socials--inline">
+            <div class="socials socials--inline" data-aos="fade-in">
                 <ul>
                     {% if member.website %}
                         <li>
@@ -88,7 +89,7 @@
 
             <!-- Facultatif -->
             {% if member.certifications is not empty %}
-                <div class="certification-list">
+                <div class="certification-list" data-aos="zoom-in">
                     <ul>
                         {% for c in member.certifications %}
                             {% set certif = content_get('App\\Model\\Certification', c) %}
@@ -104,12 +105,16 @@
             {% endif %}
 
             {% if member.emojis is not empty %}
-                <ul class="interests">
+                <ul class="interests" data-aos="fade-in">
                     {% for emoji in member.emojis %}
                         <li>{{ emoji }}</li>
                     {% endfor %}
                 </ul>
             {% endif %}
+        </div>
+
+        <div class="member__image" data-aos="fade-left">
+            {{ block('memberImage') }}
         </div>
 
         {% if articles is not empty or projects is not empty%}
@@ -118,7 +123,7 @@
                     <div class="article-list">
                         <h2 class="h2--dash">Ses derniers projets</h2>
                         {% for project in projects %}
-                            <div class="miniature-inline miniature-inline--small">
+                            <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
                                 <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="miniature-inline__image">
                                     <span class="image" style="{{ macros.backgroundImageSrcset(project.images|first, 'case_study_thumbnail.xs') }}"></span>
                                 </a>
@@ -135,7 +140,7 @@
                     <div class="article-list">
                         <h2 class="h2--dash">Ses derniers articles</h2>
                         {% for article in articles %}
-                            <div class="miniature-inline miniature-inline--small">
+                            <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
                                 <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
                                     <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs') }}"></span>
                                 </a>

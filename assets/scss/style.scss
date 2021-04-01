@@ -1,5 +1,12 @@
 @import "normalize";
 @import "~prismjs/themes/prism-tomorrow.css";
+@import '~aos/dist/aos';
+
+// Prevents hiding elements for animations if js is not enabled:
+html.no-js [data-aos] {
+  opacity: 1;
+  transform: none;
+}
 
 // base
 @import "base/_variables";
@@ -28,7 +35,7 @@
 @import "components/_article-info";
 @import "components/_article-list";
 @import "components/_article-tag-list";
-@import "components/_banner";
+@import "components/_banner-case-study";
 @import "components/_banner-home";
 @import "components/_banner-methodology";
 @import "components/_banner-team";
@@ -74,6 +81,8 @@
 @import "components/_technologies";
 @import "components/_titles";
 @import "components/_values";
+@import "components/_brick-comment";
+@import "components/_animated-link";
 
 // generic
 @import "generic/_a";

@@ -55,15 +55,15 @@ h2, .h2 {
   }
 }
 
-h3 {
-  margin: 20px 0 30px;
+h3, .h3 {
+  margin: 30px 0 20px;
   color: $color-info;
   font-family: 'antikor bold';
   font-size: 24px;
   line-height: 1.25;
 }
 
-h4 {
+h4, .h4 {
   margin: 20px 0;
   color: $color-tertiary;
   font-family: 'antikor bold';
@@ -71,8 +71,8 @@ h4 {
   line-height: 1.25;
 }
 
-h5,
-h6 {
+h5, .h5,
+h6, .h6 {
   margin: 20px 0;
   color: $color-dark;
   font-family: 'antikor bold';

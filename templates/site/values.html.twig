@@ -21,11 +21,11 @@
 
     <div class="banner-values">
         <div class="banner-values__title">
-            <h1>Découvrez <span>nos valeurs</span></h1>
+            <h1 data-aos="flip-down">Découvrez <span>nos valeurs</span></h1>
         </div>
         <div class="banner-values__content">
-            <div class="image" style="background: url('https://www.fillmurray.com/1000/400')"></div>
-            <span class="highlight">
+            <div class="image" data-aos="fade-left"></div>
+            <span class="highlight" data-aos="zoom-in">
                 <i class="icon icon--brackets-left" aria-hidden="true"></i>
             </span>
         </div>
@@ -35,39 +35,43 @@
         <h2 class="h2--dash">L'humain avant tout</h2>
         <div class="offset-content">
             <ul class="list-inline list-inline--simple">
-                <li class="list-inline__item">
-                    <h3>Donner du sens</h3>
-                    <p>Nous aimons <strong>nous engager sur des projets avec des clients ayant des valeurs communes aux nôtres</strong> car l'expérience nous a appris que c'est encore plus enthousiasmant de travailler dans ces conditions.</p>
-                </li>
-                <li class="list-inline__item">
-                    <h3>S'engager</h3>
-                    <p>Quand on s'engage dans un projet avec un client, on y met toute l'énergie possible et ce, dès la première rencontre.</p>
-                </li>
-                <li class="list-inline__item">
-                    <h3>Prendre plaisir</h3>
-                    <p><strong>Bien vivre et bien faire vivre les équipes, c'est ce qui motive au quotidien </strong>les cofondateurs d'Elao. On ne se souvient plus de la date de notre dernière charrette et on est très fiers quand on peut fermer les bureaux à 17h30. Nous mettons un point d'honneur à garder notre équilibre pro-perso.</p>
-                </li>
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Donner du sens</h3>
+                        <p>Nous aimons <strong>nous engager sur des projets avec des clients ayant des valeurs communes aux nôtres</strong> car l'expérience nous a appris que c'est encore plus enthousiasmant de travailler dans ces conditions.</p>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>S'engager</h3>
+                        <p>Quand on s'engage dans un projet avec un client, on y met toute l'énergie possible et ce, dès la première rencontre.</p>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Prendre plaisir</h3>
+                        <p><strong>Bien vivre et bien faire vivre les équipes, c'est ce qui motive au quotidien </strong>les cofondateurs d'Elao. On ne se souvient plus de la date de notre dernière charrette et on est très fiers quand on peut fermer les bureaux à 17h30. Nous mettons un point d'honneur à garder notre équilibre pro-perso.</p>
+                    </li>
+                {% endwith %}
             </ul>
         </div>
 
-        <blockquote class="blockquote-secondary">
+        <blockquote class="blockquote-secondary" data-aos="zoom-in-up">
             <p>Nous ne cherchons pas à croître à tout prix, mais simplement à assurer à notre équipe une pérennité de leur emploi et du plaisir que chacun prend chaque jour à y venir.</p>
         </blockquote>
 
-        <h2 class="h2--dash">Rester humbles et apprendre de nos erreurs</h2>
-        <div class="humility offset-content">
+        <h2 class="h2--dash" data-aos="fade-up">Rester humbles et apprendre de nos erreurs</h2>
+        <div class="humility offset-content" data-aos="fade-up">
             <p>Nous ne prétendons pas tout savoir, on ne cherche pas ce que les autres ont déjà trouvé. Nous ne sommes rien sans l'écosystème qui nous entoure.</p>
             <p>Nos convictions évoluent, les technologies également, les clients nous en apprennent souvent plus que ce que l'on peut leur apporter. <strong>Notre seule conviction est dans le processus itératif pour rester résilient et apprendre de nos erreurs.</strong></p>
         </div>
 
-        <h2 class="h2--dash">S’ouvrir, partager, ne rien garder pour soi</h2>
-        <div class="generosity offset-content">
+        <h2 class="h2--dash" data-aos="fade-up">S’ouvrir, partager, ne rien garder pour soi</h2>
+        <div class="generosity offset-content" data-aos="fade-up">
             <p>Nous avons une culture profonde de l’open source : <strong>on aimerait donner autant que ce que l’écosystème nous apporte.</strong></p>
             <p> Nous sommes convaincus qu’une bonne information est une information partagée, au-delà des murs d’Elao.</p>
         </div>
 
-        <h2 class="h2--dash">Notre manifeste</h2>
-        <div class="manifest offset-content">
+        <h2 class="h2--dash" data-aos="fade-up">Notre manifeste</h2>
+        <div class="manifest offset-content" data-aos="fade-up">
             <p>Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de 15 ans par des expert·e·s passionné·e·s.</p>
             <p>Nous mettons en œuvre <strong>notre esprit créatif et pragmatique pour vous garantir les solutions les plus qualitatives, robustes et évolutives possibles.</strong></p>
             <p>Notre réussite ? La vôtre, pour vos utilisateurs. Car tout part de leurs besoins, leur usage et de vos ambitions.</p>
@@ -75,24 +79,24 @@
             <p>Nous agissons avec notre cœur et avec conviction, pour atteindre un but plus élevé encore : <strong>contribuer à des projets utiles à notre société, c’est ce qui nous fait vibrer.</strong> Nous sommes là pour ça, à la disposition des entrepreneurs et projets vertueux.</p>
         </div>
 
-        <ul class="checklist">
+        <ul class="checklist" data-aos="zoom-in">
             <li class="checklist__item">Par une méthodologie de travail itérative, issue de notre expérimentation, garantissant la plus grande efficacité et pertinence lorsque chacun s’y implique.</li>
             <li class="checklist__item">Par la relation de confiance avec nos talents, acteurs et responsables de leur quotidien, développant avec eux leur savoir-faire et leur savoir-être, donnant du sens à leur implication.</li>
             <li class="checklist__item">En contribuant activement, personnellement et en équipe, à l’écosystème open source qui nous a aussi élevé à un très haut niveau d’expertise.</li>
         </ul>
 
-        <h2 class="h2--dash">Ce qui nous fait vibrer, au-delà de notre métier</h2>
-        <div class="offset-content">
+        <h2 class="h2--dash" data-aos="fade-up">Ce qui nous fait vibrer, au-delà de notre métier</h2>
+        <div class="offset-content" data-aos="fade-up">
             <p>Parce qu’une entreprise s’inscrit par-delà son métier et qu’elle doit, elle aussi, mettre en action les principes auxquels elle croit, voici quelques unes des autres valeurs qui nous animent :</p>
         </div>
 
         <div class="value-item">
-            <div class="value-item__image">
+            <div class="value-item__image" data-aos="zoom-in-right">
                 <div class="statistics statistics--info">
                     <span class="statistics__figure">1/3</span> de notre équipe est composée de personnes en reconversion
                 </div>
             </div>
-            <div class="value-item__content">
+            <div class="value-item__content" data-aos="zoom-in-left">
                 <h3>La diversité</h3>
                 <ul>
                     <li>
@@ -112,19 +116,19 @@
         </div>
 
         <div class="value-item">
-            <div class="value-item__image">
+            <div class="value-item__image" data-aos="zoom-in-right">
                 <div class="statistics statistics--primary">
                     <span class="statistics__figure">64%</span> de nos clients sont <strong>lyonnais.</strong>
                 </div>
             </div>
-            <div class="value-item__content">
+            <div class="value-item__content" data-aos="zoom-in-left">
                 <h3>L'ancrage local</h3>
                 <p>Nous nous engageons dans l’écosystème web lyonnais et ses milieux associatifs. Même pour nos achats matériels, nous privilégions les <strong>boutiques françaises et / ou locales.</strong></p>
             </div>
         </div>
 
         <div class="value-item">
-            <div class="value-item__image">
+            <div class="value-item__image" data-aos="zoom-in-right">
                 <div class="statistics statistics--dark">
                     <span class="statistics__figure">{{ velotafRatio|format_number({
                         multiplier: 100,
@@ -132,15 +136,15 @@
                     }) }}%</span> de l'équipe se déplace quotidiennement exclusivement à vélo.
                 </div>
             </div>
-            <div class="value-item__content">
+            <div class="value-item__content" data-aos="zoom-in-left">
                 <h3>L'écologie</h3>
                 <p>Nous sommes conscient·e·s de notre impact sur l'environnement et veillons chaque jour à le minimiser. À travers des applications performantes d'abord, et dans toutes nos actions individuelles et collectives ensuite.</p>
             </div>
         </div>
 
         <div class="value-item">
-            <img src="{{ asset('build/images/values/accessibility.svg') }}" alt="" class="value-item__image">
-            <div class="value-item__content">
+            <img src="{{ asset('build/images/pages/values/accessibility.svg') }}" alt="" class="value-item__image" data-aos="zoom-in-right">
+            <div class="value-item__content" data-aos="zoom-in-left">
                 <h3>L'accessibilité</h3>
                 <p>Nos applications, comme nos locaux, sont accessibles aux personnes en situation de handicap, non pas par “opportunité business” mais parce que nous croyons profondément en l’égalité des chances et cela passe par un accès à l’information pour tou·te·s.</p>
             </div>

@@ -17,9 +17,9 @@
     </ol>
 
     <div class="page-contact container--narrow">
-        <h1 class="h1--small">Écrire <span>un petit mot</span></h1>
+        <h1 class="h1--small" data-aos="flip-down">Écrire <span>un petit mot</span></h1>
 
-        <div class="contact" {{ stimulus_controller('contact') }}>
+        <div class="contact" {{ stimulus_controller('contact') }} data-aos="flip-right">
 
             <div class="contact__main" data-contact-target="main"></div>
 
@@ -86,7 +86,7 @@
             </template>
 
             <div class="contact__infos" itemscope itemtype="https://schema.org/Organization">
-                <img src="{{ asset('build/images/stamp.svg') }}" alt="">
+                <img src="{{ asset('build/images/pages/contact/stamp.svg') }}" alt="">
                 <p class="name" itemprop="name">elao</p>
                 <p itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
                     <span itemprop="streetAddress">34 rue Jean Broquin</span>

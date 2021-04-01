@@ -1,6 +1,6 @@
 ---
 title: "Géant des Beaux-Arts"
-lastmod: 2017-05-23
+lastModified: "2017-05-23"
 date: "2016-05-23"
 
 # Params
@@ -11,7 +11,7 @@ clients: Jetpulp
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
-members: ["mcolin", "tjarrand"]
+members: ["msteinhausser", "xavierr", "bleveque", "yheitz"]
 images: ["images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
 ---
 

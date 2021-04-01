@@ -18,7 +18,7 @@ images: ["images/casestudies/headers/climapp-banner.png"]
 ## Le contexte du projet
 
 **Climalife est un leader européen des fluides frigorifiques pour la
-réfrigération et la climatisation** et fourni une gamme de produits
+réfrigération et la climatisation** et fournit une gamme de produits
 amenés à être manipulés par des professionnels. Le suivi des déchets dangereux
 en résultant
 étant [encadré](https://www.service-public.fr/professionnels-entreprises/vosdroits/R43122)
@@ -92,8 +92,8 @@ fois pour iOS et Android.
     </figcaption>
 </figure>
 
-A l'issue d'une intervention, après synchronisation une fois la connexion réseau
-rétabli, Clim'app génère automatiquement les **fiches d'intervention et autres
+À l'issue d'une intervention, après synchronisation une fois la connexion réseau
+rétablie, Clim'app génère automatiquement les **fiches d'intervention et autres
 documents règlementaires**, lesquels sont alors disponibles depuis
 l'application.
 

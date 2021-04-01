@@ -75,7 +75,7 @@ dans le but de pouvoir générer automatiquement les documents règlementaires.
 
 * Une ergonomie pensée pour des professionnels du froid, devant accompagner
   ceux-ci durant leurs interventions.
-* Supprimer la nécéssité de saisir des informations redondantes et rébarbative
+* Se dispenser de la saisie rébarbative d'informations redondantes
   en centralisant ces informations dans une base de données.
 * La gestion du mode hors-ligne : un enjeu majeur pour les techniciens pouvant
   être amenés à intervenir sur des sites sans aucune connexion disponible.

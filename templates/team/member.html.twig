@@ -30,7 +30,8 @@
                 <span>{{ member.name }}</span>
             </h1>
 
-            <div class="member__image member__image--mobile" data-aos="fade-left">
+            <div class="member__image member__image--mobile">
+                {% block memberImage %}
                 <!-- image de profil : 500 x 680px -->
                 <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
                 <div class="seniority" data-aos="zoom-in">
@@ -40,16 +41,16 @@
                     <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
                     dans la tribu
                 </div>
+                {% endblock %}
             </div>
 
-        <div class="member__profile" data-aos="fade-in">
             <p class="job">{{ member.position }}</p>
 
-            <div class="description">
+            <div class="description" data-aos="fade-in">
                 {{ member.bio|nl2br|markdownify|raw }}
             </div>
 
-            <div class="socials socials--inline">
+            <div class="socials socials--inline" data-aos="fade-in">
                 <ul>
                     {% if member.website %}
                         <li>
@@ -112,16 +113,8 @@
             {% endif %}
         </div>
 
-        <div class="member__image">
-            <!-- image de profil : 440 x 590px -->
-            <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
-            <div class="seniority">
-                {% set interval = date('now').diff(member.integrationDate) %}
-                {% set numberYear = interval.y %}
-                {% set numberMonth= interval.m %}
-                <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
-                dans la tribu
-            </div>
+        <div class="member__image" data-aos="fade-left">
+            {{ block('memberImage') }}
         </div>
 
         {% if articles is not empty or projects is not empty%}

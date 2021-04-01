@@ -49,10 +49,9 @@
 
     ul {
       flex-wrap: wrap;
-
-      li {
-        width: 33.33%;
-      }
+      flex: 1;
+      flex-direction: column;
+      max-width: calc(475px / 3);
     }
   }
 
@@ -85,7 +84,12 @@
     }
 
     .links {
-      justify-content: flex-start;
+      display: block;
+      margin: 0 0 35px;
+    }
+
+    .socials {
+      width: 100%;
     }
   }
 }
@@ -100,15 +104,10 @@
     }
 
     .links {
-      margin: 0 0 35px;
-
       ul {
+        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-
-        li {
-          width: unset;
-        }
       }
     }
   }

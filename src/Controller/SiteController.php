@@ -35,7 +35,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/methodo", name="methodology")
+     * @Route("/methodologie", name="methodology")
      */
     public function methodology(): Response
     {
@@ -73,7 +73,7 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/privacy", name="privacy")
+     * @Route("/confidentialite", name="privacy")
      */
     public function privacy(): Response
     {

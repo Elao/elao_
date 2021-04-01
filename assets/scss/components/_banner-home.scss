@@ -52,8 +52,10 @@
 
     figcaption {
       padding: 20px 25px;
-      height: 120px;
-      width: 220px;
+      min-height: 120px;
+      max-height: 150px;
+      min-width: 220px;
+      max-width: 240px;
       position: absolute;
       bottom: 20px;
       left: 22px;

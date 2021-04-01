@@ -23,7 +23,7 @@ amenés à être manipulés par des professionnels. Le suivi des déchets danger
 en résultant
 étant [encadré](https://www.service-public.fr/professionnels-entreprises/vosdroits/R43122)
 par la génération de documents spécifiques, les techniciens sur site sont en
-charge de remplir au fur et à mesure de leurs interventions toutes les infos
+charge de remplir au fur et à mesure de leurs interventions toutes les informations
 nécessaires.
 
 C'est dans ce contexte que Climalife a souhaité proposer une application mobile

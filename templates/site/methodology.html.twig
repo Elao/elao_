@@ -25,7 +25,7 @@
                 <p>Elao est avant tout une équipe de concepteurs / développeurs seniors. Un projet est généralement composé d’une équipe technique dédiée de 2 ou 3 personnes sur 3 à 6 mois.</p>
                 <p>Notre particularité : <strong>pas de chef de projet.</strong> Ce sont les développeurs qui seront vos contacts privilégiés et qui auront à cœur d’être réactifs et proactifs concernant vos besoins. Les facilitateurs de l’équipe sont là pour garantir une fluidité dans les échanges mais ne doivent jamais être un goulot d’étranglement dans le projet.</p>
             </div>
-            <img src="{{ asset('build/images/methodology/typical-team.svg') }}" alt="Schéma d'une équipe type elao : développeur backend, développeur frontend, intégratrice, facilitateur">
+            <img src="{{ asset('build/images/pages/methodology/typical-team.svg') }}" alt="Schéma d'une équipe type elao : développeur backend, développeur frontend, intégratrice, facilitateur">
         </div>
     </div>
 
@@ -41,7 +41,19 @@
         </div>
 
         <div class="banner-planning">
-            <img src="https://www.fillmurray.com/1070/460" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/brainstorming.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/brainstorming@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/brainstorming.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/brainstorming@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/brainstorming.jpg') }}" alt=""/>
+            </picture>
         </div>
 
         <ul class="planning-steps">
@@ -112,7 +124,19 @@
                     La recette fonctionnelle sur des serveurs de recette (staging)
                 </li>
             </ul>
-            <img src="https://www.fillmurray.com/1070/460" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/pair-programming.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/pair-programming@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/pair-programming.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/pair-programming@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/pair-programming.jpg') }}" alt=""/>
+            </picture>
         </div>
 
         <h3 class="h2--ordered">
@@ -163,7 +187,19 @@
 
         <h2 class="h2--dash">Estimation et time tracking</h2>
         <div class="estimate">
-            <img src="https://www.fillmurray.com/400/670" alt="">
+            <picture>
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/methodology/time-tracking.webp') }} 1x,
+                            {{ asset('build/images/pages/methodology/time-tracking@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/methodology/time-tracking.jpg') }} 1x,
+                            {{ asset('build/images/pages/methodology/time-tracking@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/methodology/time-tracking.jpg') }}" alt=""/>
+            </picture>
             <div>
                 <p>Parce que c’est plus juste pour tout le monde, nous facturons au temps passé. Avant la phase de développement, chaque fonctionnalité est estimée en jours afin que vous puissiez vous rendre compte de son coût et arbitrer sa priorisation. Ces éléments constituent une fourchette qui peut être un peu bousculée au gré des découvertes fonctionnelles et s’affine au fur et à mesure de la compréhension des enjeux et en fonction du niveau de détail des spécifications.</p>
                 <p>Chaque personne de l’équipe rentre le temps passé par projet de façon quotidienne. Par soucis de transparence, nous informons nos clients de ce temps passé le plus régulièrement possible en fonction de la phase dans laquelle nous sommes (sur la semaine ou le mois précédent) et nous proposons une facturation soit à l’itération (= lot de fonctionnalités livré), soit au mois.</p>
@@ -177,33 +213,49 @@
                 <p>Nous n’imposons aucune application à nos clients et nous adaptons à leurs habitudes et besoins. Cependant, nous recommandons fortement l’usage des outils suivants :</p>
             </div>
             <div class="tools__image">
-                <img src="https://www.fillmurray.com/620/345" alt="">
+                <!--
+                Todo : add tools picture
+
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="{{ asset('build/images/pages/methodology/tools.webp') }} 1x,
+                                {{ asset('build/images/pages/methodology/tools@2x.webp') }} 2x"
+                    >
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/methodology/tools.jpg') }} 1x,
+                                {{ asset('build/images/pages/methodology/tools@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/methodology/tools.jpg') }}" alt="" />
+                </picture>
+                -->
             </div>
         </div>
 
         <ul class="list-inline">
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/monday-trello.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/monday-trello.svg') }}" alt="logo de Monday et Trello">
                 Monday ou Trello pour la gestion du projet (backlog, priorisation)
             </li>
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/googledrive.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/googledrive.svg') }}" alt="logo de Google Drive">
                 Google Drive pour la rédaction des spécifications et tous les échanges de documents
             </li>
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/slack.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/slack.svg') }}" alt="logo de Slack">
                 Slack pour une communication plus fluide que par mail
             </li>
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/github.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/github.svg') }}" alt="logo de Github">
                 Github pour le développement et le versionning
             </li>
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/sentry.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/sentry.svg') }}" alt="logo de Sentry">
                 Sentry pour le suivi des bugs
             </li>
             <li class="list-inline__item">
-                <img src="{{ asset('build/images/tools/grafana.svg') }}" alt="">
+                <img src="{{ asset('build/images/tools/grafana.svg') }}" alt="logo de Grafana">
                 Grafana pour le monitoring de la performance de vos bases de données
             </li>
         </ul>

@@ -84,14 +84,38 @@
                 </a>
             </div>
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="{{ asset('build/images/pages/home/code.webp') }} 1x,
+                                {{ asset('build/images/pages/home/code@2x.webp') }} 2x"
+                    >
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/home/code.jpg') }} 1x,
+                                {{ asset('build/images/pages/home/code@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/home/code.jpg') }}" alt="" />
+                </picture>
                 <i class="icon icon--chevrons-right" aria-hidden="true"></i>
             </div>
         </section>
 
         <section class="section-home section-home--reverse">
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="{{ asset('build/images/pages/home/workshop-team.webp') }} 1x,
+                                {{ asset('build/images/pages/home/workshop-team@2x.webp') }} 2x"
+                    >
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/home/workshop-team.jpg') }} 1x,
+                                {{ asset('build/images/pages/home/workshop-team@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/home/workshop-team.jpg') }}" alt=""/>
+                </picture>
                 <i class="icon icon--square-brackets-left" aria-hidden="true"></i>
             </div>
             <div class="section-home__content">
@@ -137,7 +161,19 @@
                 </a>
             </div>
             <div class="section-home__image">
-                <img src="https://www.fillmurray.com/640/490" alt="">
+                <picture>
+                    <source
+                        type="image/webp"
+                        srcset="{{ asset('build/images/pages/home/workshop-talk.webp') }} 1x,
+                                {{ asset('build/images/pages/home/workshop-talk@2x.webp') }} 2x"
+                    >
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/home/workshop-talk.jpg') }} 1x,
+                                {{ asset('build/images/pages/home/workshop-talk@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/home/workshop-talk.jpg') }}" alt=""/>
+                </picture>
                 <i class="icon icon--brackets-left" aria-hidden="true"></i>
             </div>
         </section>

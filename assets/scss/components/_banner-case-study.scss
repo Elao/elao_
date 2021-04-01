@@ -1,16 +1,16 @@
-.banner {
+.banner-case-study {
   margin-top: 100px;
   padding-bottom: 70px;
   position: relative;
 }
 
-.banner__title {
+.banner-case-study__title {
   position: absolute;
   top: -45px;
-  left: 110px;
+  left: 0;
 }
 
-.banner__content {
+.banner-case-study__content {
   position: relative;
   display: flex;
 
@@ -50,25 +50,25 @@
       position: absolute;
       right: 10px;
       bottom: -45px;
-      font-size: 80px;
-      color: $color-primary;
+      font-size: 110px;
+      color: $color-secondary;
       line-height: 1;
     }
   }
 }
 
 @media (max-width: $screen-lg) {
-  .banner {
+  .banner-case-study {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .banner__title {
+  .banner-case-study__title {
     position: static;
   }
 
-  .banner__content {
+  .banner-case-study__content {
     flex-direction: column;
     align-items: flex-start;
 
@@ -103,13 +103,13 @@
 }
 
 @media (max-width: $screen-md) {
-  .banner {
+  .banner-case-study {
     margin-top: 0;
   }
 }
 
 @media (max-width: $screen-xs) {
-  .banner__content {
+  .banner-case-study__content {
     .highlight {
       font-size: 18px;
 

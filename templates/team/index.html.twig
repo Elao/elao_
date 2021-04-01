@@ -22,11 +22,11 @@
 
     <div class="page-team">
         <div class="banner-team">
-            <div class="banner-team__title">
+            <div class="banner-team__title" data-aos="flip-down">
                 <h1>Ce qui fait notre force : <span>notre tribu</span></h1>
             </div>
             <div class="banner-team__content">
-                <img {{ macros.imageSrcset('/images/members/elao-team-banner.jpg', 'tribe_banner') }} alt="">
+                <img {{ macros.imageSrcset('/images/members/elao-team-banner.jpg', 'tribe_banner') }} alt="" data-aos="fade-in">
                 {# TODO: once jobs are ready, wire back#}
 {#                <a href="#" class="recruitment">#}
 {#                    <img src="{{ asset('build/images/tipi.svg') }}" alt="">#}
@@ -43,19 +43,35 @@
         <div class="container--narrow">
             <h2 class="h2--dash">Nos valeurs</h2>
             <div class="values">
-                <span class="values__item values__item--info">
-                    <i class="icon icon--quote" aria-hidden="true"></i>
-                    L'humain avant tout
-                </span>
-                <span class="values__item values__item--tertiary">
-                    <i class="icon icon--quote" aria-hidden="true"></i>
-                    Rester humble et apprendre de ses erreurs
-                </span>
-                <span class="values__item values__item--primary">
-                    <i class="icon icon--quote" aria-hidden="true"></i>
-                    S'ouvrir, partager, ne rien garder pour soi
-                </span>
-                <a href="{{ path('values') }}" class="btn btn--secondary btn--animated">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <span class="values__item values__item--info"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        L'humain avant tout
+                    </span>
+                    {% set delay = delay + delayGap %}
+                    <span class="values__item values__item--tertiary"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        Rester humble et apprendre de ses erreurs
+                    </span>
+                    {% set delay = delay + delayGap %}
+                    <span class="values__item values__item--primary"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        S'ouvrir, partager, ne rien garder pour soi
+                    </span>
+                {% endwith %}
+                <a href="{{ path('values') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                     <span>
                         Découvrir nos valeurs
                         <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -69,7 +85,7 @@
             <h2 class="h2--dash">L'équipe</h2>
             <ul class="team">
                 {% for member in members %}
-                    <li class="team__member">
+                    <li class="team__member" data-aos="fade-in">
                         <a href="{{ path('team_member', { member: member.slug }) }}">
                             <span class="image">
                                  <span style=" {{ macros.backgroundImageSrcset(member.tribePicture, 'tribe_picture.list') }}"></span>

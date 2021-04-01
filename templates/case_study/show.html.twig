@@ -28,10 +28,10 @@
         </ol>
 
         <div class="banner-case-study">
-            <h1 class="banner-case-study__title">Découvrez <span>{{ caseStudy.title }}</span></h1>
+            <h1 class="banner-case-study__title" data-aos="flip-down">Découvrez <span>{{ caseStudy.title }}</span></h1>
 
             <div class="banner-case-study__content">
-                <div class="highlight">
+                <div class="highlight" data-aos="zoom-in-left">
                     <!--
                         Description brève du projet ou du client
                         Recommandé : 50 à 150 caractères
@@ -50,19 +50,19 @@
                             - dimensions 240x160px
                 -->
                 <div class="preview">
-                    <div class="preview__main">
+                    <div class="preview__main" data-aos="fade-left">
                         <img {{ macros.imageSrcset(caseStudy.images|first, 'case_study_banner') }} />
                     </div>
                     <div class="preview__list">
                         <ul>
                             {% for image in caseStudy.images|slice(1, 2) %}
-                                <li>
+                                <li data-aos="fade-up" data-aos-delay="{{ loop.index * 200 }}">
                                     <img src="{{ asset(image) }}">
                                 </li>
                             {% endfor %}
                         </ul>
                         <!-- Si aucun lien vers le site possible, ajouter .hidden au bouton pour le cacher et ne pas casser le layout -->
-                        <a href="{{ caseStudy.websiteUrl }}" class="btn btn--secondary btn--animated {{ caseStudy.websiteUrl is empty ? 'hidden' }}" target="_blank">
+                        <a href="{{ caseStudy.websiteUrl }}" class="btn btn--secondary btn--animated {{ caseStudy.websiteUrl is empty ? 'hidden' }}" target="_blank" data-aos="fade-left">
                             <span>
                                 Voir le site
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -79,23 +79,23 @@
 
         <div class="page-project__detail">
             <ul>
-                <li class="item">
+                <li class="item" data-aos="zoom-in-down">
                     <small>Client</small>
                     <p>{{ caseStudy.clients }}</p>
                 </li>
-                <li class="item">
+                <li class="item" data-aos="zoom-in-down">
                     <small>Taille du projet</small>
                     <p>{{ caseStudy.size }}</p>
                 </li>
             </ul>
             <ul>
-                <li class="item item--medium">
+                <li class="item item--medium" data-aos="zoom-in-down">
                     <small>Services Elao</small>
                     {% for service in caseStudy.services %}
                         <p>{{ service }}</p>
                     {% endfor %}
                 </li>
-                <li class="item item--large">
+                <li class="item item--large" data-aos="zoom-in-down">
                     <small>Technologies</small>
                     <ul class="technologies technologies--light">
                         {% for technologySlug in caseStudy.technologies %}
@@ -125,7 +125,7 @@
             <ul class="project-team">
                 {% for memberSlug in caseStudy.members %}
                     {% set member = content_get('App\\Model\\Member', memberSlug) %}
-                    <li class="project-team__member">
+                    <li class="project-team__member" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
                         <a
                             {%- if member.active %}
                                 href="{{ path('team_member', { member: member.slug }) }}"
@@ -143,7 +143,7 @@
             <ul class="article-list">
                 {% with %}
                     {% for caseStudy in randomStudies %}
-                    <li class="miniature miniature--large">
+                    <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
                         <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.lg') }}"></span>
                         </a>
@@ -167,7 +167,7 @@
             </ul>
         </div>
 
-        <a href="" class="page-projet__footer">
+        <a href="" class="page-projet__footer" data-aos="zoom-in-up">
             <span>Open source</span>
             <span class="title">Contributions</span>
             <i class="icon icon--bracket-left" aria-hidden="true"></i>

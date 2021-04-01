@@ -10,10 +10,10 @@
             {% for article in articles %}
                 {% if page == minPage and loop.first %}
                     <li class="miniature-highlight">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-highlight__image">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-highlight__image" data-aos="fade-down">
                             <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
                         </a>
-                        <div class="miniature-highlight__content">
+                        <div class="miniature-highlight__content" data-aos="zoom-in">
                             <div class="info">
                                 {% set authors = article.authors|length > 5 ? [null] : article.authors %}
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
@@ -41,7 +41,7 @@
                         </div>
                     </li>
                 {% elseif page == minPage and loop.index < 5 %}
-                    <li class="miniature-inline miniature-inline--large">
+                    <li class="miniature-inline miniature-inline--large" data-aos="fade-left">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
                         </a>
@@ -72,7 +72,7 @@
                         </div>
                     </li>
                 {% else %}
-                    <li class="miniature">
+                    <li class="miniature" data-aos="fade-in">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
                         </a>

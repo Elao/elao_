@@ -31,18 +31,18 @@ userlist ELAO
   user vincent insecure-password MyAwesomePassword
 ```
 
-On remarquera qu'il est possible de définir des groupes pour les différents utilisateurs et de choisir de stocker le mot de passe en clair ou de manière cryptée.
+On remarquera qu'il est possible de définir des groupes pour les différents utilisateurs et de choisir de stocker le mot de passe en clair ou de manière chiffrée.
 
-Pour information haproxy utilise la fonction `crypt` pour évaluer les "hash" de mot de passe, les algorithmes de cryptage supportés dépendent donc directement du système utilisé.
+Pour information haproxy utilise la fonction `crypt` pour évaluer les "hash" de mot de passe, les fonctions de hachage supportées dépendent donc directement du système utilisé.
 
-Sur des systèmes basés sur Linux les algos de cryptage suivants sont donc supportés:
+Sur des systèmes basés sur Linux les fonctions de hachage suivantes sont donc supportées:
 
 - MD5
 - SHA-256
 - SHA-512
 - DES
 
-Il ne reste ensuite plus qu'a rajouter un ACL basé sur l'authentification du client.
+Il ne reste ensuite plus qu'a rajouter une ACL basée sur l'authentification du client.
 
 ```
 backend HttpElaoServers

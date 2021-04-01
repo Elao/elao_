@@ -56,7 +56,7 @@ besoin exprimé grâce à la **recette et validation fonctionnelle** par Climali
 
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
 
-Depuis la mise en production de Clim'app, Cliamlife fait appel à Elao de façon
+Depuis la mise en production de Clim'app, Climalife fait appel à Elao de façon
 récurrente pour faire évoluer son produit en fonction des besoins remontés par
 ses clients.
 

@@ -5,7 +5,6 @@ date: "2019-01-09"
 
 # Params
 metaDescription: "Tribü — recyclage intelligent de déchets."
-shortDescription: "Solution de déchets d'entreprise"
 description: "Tribü propose un dispositif permettant aux entreprises un recyclage intelligent de leurs déchets."
 websiteUrl: http://www.tribu-recyclage.fr/
 shortDescription: "Solution de gestion de déchets en entreprise"

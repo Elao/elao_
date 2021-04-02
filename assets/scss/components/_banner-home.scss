@@ -246,8 +246,8 @@
 
 @media (max-width: $screen-xs) {
   .banner-home__content {
-    padding: 0 20px;
-    height: 160px;
+    padding: 20px 20px 30px;
+    height: unset;
     font-size: 18px;
   }
 

@@ -38,7 +38,8 @@
         <div class="offset-content">
             <h3 data-aos="fade-up">Un projet pensé pour vos utilisateurs</h3>
             <ul data-aos="fade-up">
-                <li>Nous nous appuyons sur <strong>plus de 15 ans d'expérience </strong>pour faire les bons choix techniques</li>
+                {% set interval = date('now').diff(date(site.birthdate)) %}
+                <li>Nous nous appuyons sur <strong>plus de {{ interval.y }} ans d'expérience </strong>pour faire les bons choix techniques</li>
                 <li><strong>Nous surveillons la qualité de nos développements </strong>: revues de code, tests, outils de suivi et démonstrations au fil de l'eau</li>
                 <li>Nous construisons <strong>une architecture évolutive pour répondre à vos besoins actuels et futurs</strong></li>
                 <li>Nous nous concentrons sur <strong>vos enjeux métier</strong></li>

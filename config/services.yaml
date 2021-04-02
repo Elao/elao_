@@ -23,6 +23,7 @@ services:
             - '../src/Tests/'
             - '../src/Bridge/Glide/Bundle/'
             - '../src/Stenope/Processor/ResizeImagesContentProcessor.php'
+            - '../src/Stenope/Provider/SampleRemovalProvider.php'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -52,3 +53,19 @@ services:
         arguments:
             $type: App\Model\Article
             $preset: article_content
+
+    App\Stenope\Provider\SampleRemovalProvider.Article:
+        class: App\Stenope\Provider\SampleRemovalProvider
+        decorates: stenope.provider.files.App\Model\Article
+        arguments:
+            $provider: '@.inner'
+            $disabled: '%env(bool:INCLUDE_SAMPLES)%'
+            $ignored: ['styleguide/example']
+
+    App\Stenope\Provider\SampleRemovalProvider.CaseStudy:
+        class: App\Stenope\Provider\SampleRemovalProvider
+        decorates: stenope.provider.files.App\Model\CaseStudy
+        arguments:
+            $provider: '@.inner'
+            $disabled: '%env(bool:INCLUDE_SAMPLES)%'
+            $ignored: ['example']

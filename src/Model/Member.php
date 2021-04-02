@@ -57,6 +57,11 @@ class Member
 
     public function getTribePicture(): string
     {
-        return sprintf('/images/members/%s.jpg', $this->anonymousTribePicture ? 'default' : $this->slug);
+        return sprintf('images/members/%s.jpg', $this->anonymousTribePicture ? 'default' : $this->slug);
+    }
+
+    public function getAvatar(): ?string
+    {
+        return $this->avatar ?? 'images/authors/default.png';
     }
 }

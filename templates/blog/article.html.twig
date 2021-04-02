@@ -31,7 +31,11 @@
                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                     <div class="article-author__image">
                         {% for author in authors %}
-                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}"/>
+                            {% if author is same as(null) %}
+                                <img {{ macros.imageSrcset('images/authors/elao-team.png', 'author_avatar') }} />
+                            {% else %}
+                                <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
+                            {% endif %}
                         {% endfor %}
                     </div>
                     <span class="article-author__info">
@@ -117,7 +121,7 @@
             {% for author in article.authors %}
                 <div class="article-author">
                     <div class="article-author__image">
-                        <img src="{{ asset(author.avatar|default('images/authors/default.png')) }}"/>
+                        <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                     </div>
                     <span class="article-author__info">
                         {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}

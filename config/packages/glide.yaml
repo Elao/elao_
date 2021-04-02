@@ -58,3 +58,8 @@ glide:
             w: 250
             h: 250
             fit: crop-50-25
+
+        author_avatar:
+            w: 100
+            h: 100
+            fit: crop

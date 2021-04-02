@@ -131,7 +131,7 @@
                                 href="{{ path('team_member', { member: member.slug }) }}"
                             {% endif -%}
                         >
-                            <img src="{{ asset(member.avatar ?? 'images/authors/default.png') }}" alt="{{ member.name }}">
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} />
                             <span class="name">{{ member.name }}</span>
                             <span class="job">{{ member.position }}</span>
                         </a>

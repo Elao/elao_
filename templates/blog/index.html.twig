@@ -18,8 +18,12 @@
                                 {% set authors = article.authors|length > 5 ? [null] : article.authors %}
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                                     <div class="article-author__image">
-                                        {% for author in article.authors %}
-                                            <img src="{{ asset(author.avatar ?? 'images/authors/default.png') }}"/>
+                                        {% for author in authors %}
+                                            {% if author is same as(null) %}
+                                                <img {{ macros.imageSrcset('images/authors/elao-team.png', 'author_avatar') }} />
+                                            {% else %}
+                                                <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
+                                            {% endif %}
                                         {% endfor %}
                                     </div>
                                     <span class="article-author__info">

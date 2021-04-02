@@ -18,7 +18,7 @@ website: ~
 twitter: your-username
 github: your-username
 email: ~
-avatar: path-to-avatar
+avatar: images/authors/path-to-avatar.jpg
 
 certifications:
     - symfony

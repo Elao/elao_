@@ -270,12 +270,12 @@
     }
 
     .our-commitments {
-      margin-top: 40px;
+      margin-top: 0;
       grid-column: 1 / 13;
     }
 
     .your-commitments {
-      margin-top: 10px;
+      margin-top: 0;
       grid-column: 1 / 13;
     }
   }
@@ -294,6 +294,16 @@
           width: 100%;
         }
       }
+    }
+
+    .your-commitments {
+      .check-block {
+        margin-bottom: 40px;
+      }
+    }
+
+    .brick-developpement {
+      margin: 0;
     }
   }
 }

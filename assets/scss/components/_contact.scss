@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: center;
   flex: 1;
 
   .title {
@@ -44,13 +45,15 @@
   color: $color-primary;
 
   img {
-    margin: 0 0 85px;
+    margin: 0 0 65px;
+    height: 100px;
   }
 
-  p {
+  p, address {
     margin: 0 0 25px;
     display: flex;
     flex-direction: column;
+    font-style: normal;
   }
 
   a {

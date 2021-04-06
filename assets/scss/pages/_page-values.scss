@@ -22,15 +22,8 @@
   }
 
   .manifest {
-    margin: 0 0 70px;
-
-    p {
-      margin: 0 0 30px;
-    }
-  }
-
-  .checklist {
-    grid-column: 2 / 12;
+    margin: 70px 0 20px;
+    grid-column: 1 / 13;
   }
 
   .value-item {
@@ -84,14 +77,6 @@
       grid-column: 1 / 13;
     }
 
-    .manifest {
-      margin: 0 0 30px;
-    }
-
-    .checklist {
-      grid-column: 1 / 13;
-    }
-
     .value-item {
       grid-column: 1 / 13;
     }
@@ -100,6 +85,14 @@
       margin-right: 40px;
       min-width: 280px;
       width: 280px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .page-values {
+    .manifest {
+      margin: 20px 0;
     }
   }
 }

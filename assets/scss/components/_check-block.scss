@@ -1,6 +1,7 @@
-.checklist {
+.check-block {
   padding: 75px 45px 75px 75px;
   position: relative;
+  color: #fff;
   background: $color-info;
 
   &:before {
@@ -15,64 +16,69 @@
     background-repeat: no-repeat;
     background-position: center bottom;
   }
+
+  p {
+    margin: 0 0 30px;
+  }
 }
 
-.checklist__title {
-  margin-bottom: 65px;
+.check-block__title {
+  margin-bottom: 55px;
+  display: block;
   font-family: 'antikor bold';
   font-size: 32px;
   color: $color-secondary;
+}
 
-  &:before,
-  &:after {
-    display: none;
+.check-block__list {
+  li {
+    margin-bottom: 35px;
+
+    &:before {
+      border-color: rgba(254, 227, 228, .4);
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
-.checklist__item {
-  margin-bottom: 35px;
-  color: #fff;
-
-  &:before {
-    border-color: rgba(254, 227, 228, .4);
-  }
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-.checklist--right {
+.check-block--right {
   &:before {
     left: unset;
     right: 45px;
   }
 }
 
-.checklist--unchecked {
+.check-block--unchecked {
   &:before {
     background-image: url('../../images/uncheck.svg');
   }
 }
 
-.checklist--secondary {
+.check-block--secondary {
+  color: $color-text;
   background: $color-secondary;
 
-  .checklist__title {
+  .check-block__title {
     color: $color-primary;
   }
 
-  .checklist__item {
-    color: $color-text;
+  .check-block__list {
+    li {
+      color: $color-text;
 
-    &:before {
-      border-color: rgba(127, 26, 85, .3);
+      &:before {
+        border-color: rgba(127, 26, 85, .3);
+      }
     }
   }
 }
 
 @media (max-width: $screen-sm) {
-  .checklist {
+  .check-block {
+    margin-top: 40px;
     padding: 75px 30px 75px 60px;
 
     &:before {
@@ -80,5 +86,11 @@
       left: unset;
       right: 30px;
     }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .check-block {
+    padding: 45px 20px 20px;
   }
 }

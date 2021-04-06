@@ -20,6 +20,16 @@
     font-size: 30px;
     margin-right: 20px;
   }
+
+  a {
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
+  }
 }
 
 @media (max-width: $screen-sm) {

@@ -13,6 +13,7 @@
   transition: background ease-in-out .2s;
 
   &:hover {
+    color: $color-primary;
     background: $color-secondary;
 
     .animated-block__icon {

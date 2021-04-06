@@ -12,3 +12,7 @@ a {
     color: $color-brand;
   }
 }
+
+a:not([href]) {
+  cursor: initial;
+}

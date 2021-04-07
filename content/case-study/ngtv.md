@@ -8,7 +8,7 @@ metaDescription: "Plateforme sur-mesure d'analyses et statistiques de matchs de 
 description: "NGTV filme des matchs de football et de padel en salle et génère des statistiques variées de performances individuelles et d'équipe"
 websiteUrl: http://www.ngtvexperience.com/
 clients: NGTV
-size: 3 months
+size: 6 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["adefrance", "bleveque", "xavierr"]

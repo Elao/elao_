@@ -7,7 +7,7 @@ date: "2012-01-21"
 medaDescription: "Développement d'applications métiers pour Engie, portail pour les professionnels. Technologies employées : PHP, Symfony."
 description: "Portail de visualisation de consommation électrique pour les professionnels (commerçants, collectivités…)"
 websiteUrl: https://particuliers.engie.fr/
-clients: EDG
+clients: EDF
 size: 2 ans
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]

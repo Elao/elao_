@@ -53,9 +53,11 @@ class GlideExtension extends Extension
         ;
 
         $this->configureServer(
+            $container,
             $config['source'],
             $config['cache'],
-            $container,
+            $config['cache_with_file_extensions'],
+            $config['group_cache_in_folders'],
             $config['presets'],
         );
 
@@ -66,8 +68,14 @@ class GlideExtension extends Extension
         $container->setParameter('glide_public_cache_path', trim($publicCacheDir, '/'));
     }
 
-    public function configureServer(string $source, string $cache, ContainerBuilder $container, array $presets = []): void
-    {
+    public function configureServer(
+        ContainerBuilder $container,
+        string $source,
+        string $cache,
+        bool $cacheWithExtensions,
+        bool $groupCacheInFolders,
+        array $presets = []
+    ): void {
         $container->register('glide_source', Local::class)->setArguments([$source]);
         $container->register('glide_cache', Local::class)->setArguments([$cache]);
 
@@ -80,6 +88,8 @@ class GlideExtension extends Extension
             'response' => new Reference(SymfonyResponseFactory::class),
             'defaults' => [],
             'presets' => $presets,
+            'cache_with_file_extensions' => $cacheWithExtensions,
+            'group_cache_in_folders' => $groupCacheInFolders,
         ])
         ->setPublic(true);
     }

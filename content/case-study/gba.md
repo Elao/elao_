@@ -8,7 +8,7 @@ metaDescription: "Développement sur-mesure d'une plateforme e-commerce dédiée
 description: "Plateforme e-commerce européenne à destination des artistes et des écoles d'art, développé en collaboration avec Jetpulp, agence de stratégie lyonnaise."
 websiteUrl: https://www.geant-beaux-arts.fr/
 clients: Jetpulp
-size: 3 months
+size: 8 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["msteinhausser", "xavierr", "bleveque", "yheitz"]

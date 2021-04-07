@@ -4,9 +4,9 @@ lastModified: "2017-09-04"
 date: "2017-09-04"
 
 # Params
-description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
-websiteUrl: https://www.exemple.com/
-clients: Chalkboard
+description: "Chaklboard Education veut donner accès à l'éducation à travers une application mobile dans des pays d'Afrique où l'accès à l'université est encore trop limité."
+websiteUrl: https://www.chalkboard.education/
+clients: Chaklboard Education
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "graphql", "react"]

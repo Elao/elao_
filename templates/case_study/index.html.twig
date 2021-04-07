@@ -31,7 +31,8 @@
                     <p>Voici une sélection récente de projets dans lesquels nous avons pu voir se créer une émulation forte avec nos clients et leurs utilisateurs.</p>
                 </div>
                 <div class="highlight" data-aos="zoom-in-left">
-                    <p class="">Notre meilleur argument qualité, ce sont les <strong>200+ projets</strong> sur lesquels nous avons travaillé depuis plus de <strong>15 ans.</strong></p>
+                    {% set interval = date('now').diff(date(site.birthdate)) %}
+                    <p class="">Notre meilleur argument qualité, ce sont les <strong>200+ projets</strong> sur lesquels nous avons travaillé depuis plus de <strong>{{ interval.y }} ans.</strong></p>
                     <i class="icon icon--brackets-right" aria-hidden="true"></i>
                 </div>
             </div>

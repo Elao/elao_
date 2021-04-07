@@ -7,7 +7,7 @@ date: "2014-05-23"
 metaDescription: "Plateforme sur-mesure d'analyses et statistiques de matchs de foot en salle. Technologies employées : Php, Symfony, objets connectés"
 description: "NGTV filme des matchs de football et de paddle en salle et génère des statistiques variées de performances individuelles et d'équipe"
 websiteUrl: http://www.ngtvexperience.com/
-clients: NGTV.
+clients: NGTV
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]

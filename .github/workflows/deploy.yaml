@@ -95,6 +95,7 @@ jobs:
             --archive \
             --delete \
             --rsh "ssh -o StrictHostKeyChecking=no" \
+            --itemize-changes \
           ;
 
       - name: 'Reload Nginx config'

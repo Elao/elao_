@@ -13,6 +13,7 @@ services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "tjarrand"]
 images: ["http://placekitten.com/630/380", "http://placekitten.com/240/160", "http://placekitten.com/240/160"]
+enabled: false
 ---
 
 ## Les titres

@@ -17,7 +17,7 @@ author:    "mcolin"
 
 Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le modèle change et vice et versa.
 
-```
+```html
 <script>
 export default {
   data() {
@@ -39,7 +39,7 @@ Dans ce composant par exemple, lorsque la variable `foobar` est modifié, le con
 
 Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable par les composants, nous ne pouvons faire que du One-Way Binding (lorsque le modèle change, l'interface est mise à jour, l'inverse n'est pas possible).
 
-```
+```html
 <template>
   <form>
     <input type="text" v-model="$store.state.foobar" />
@@ -51,7 +51,7 @@ Un composant comme celui-ci par exemple violerait le principe selon lequel les v
 
 La solution pour faire du Two-Way Binding est donc d'utiliser un computed avec un getter et un setter. Le getter renvoie la valeur stockée dans le store et le setter met à jour le store grâce à une mutation.
 
-```
+```html
 <script>
 export default {
   computed: {
@@ -78,7 +78,7 @@ On va s'inspirer des helpers `mapState`, `mapGetters` et `mapActions` de Vuex.
 
 Par exemple :
 
-```
+```html
 <script>
 export default {
   computed: {
@@ -90,7 +90,7 @@ export default {
 
 Permet d'obtenir le même résultat que :
 
-```
+```html
 <script>
 export default {
   computed: {
@@ -107,7 +107,7 @@ export default {
 
 Cela permet de réduire considérablement la quantité de code lorsque l'on a un grand nombre de variables à mapper. On va donc créer une fonction similaire à `mapState` qui ne va pas seulement créer de simples `computed` mais également les getters et setters nécessaires au Two-Way Binding.
 
-```
+```js
 function mapFields(fields) {
   let computeds = {}
 
@@ -128,7 +128,7 @@ function mapFields(fields) {
 
 Vous pouvez désormais utiliser cette fonction avec le [spread operator](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition) pour générer vos computed properties.
 
-```
+```html
 <script>
 export default {
   computed: {
@@ -147,7 +147,7 @@ export default {
 
 Ici, cela nécessite évidemment que vous disposiez des mutations pour chacune de vos variables nommées de la même façon (`UPDATE_FOOBAR` et `UPDATE_BARFOO`).
 
-```
+```js
 new Vuex.Store({
   state: {
     foobar: null,
@@ -162,7 +162,7 @@ new Vuex.Store({
 
 Vous pouvez bien entendu complexifier cette fonction selon vos besoins et vos habitudes ou en créer plusieurs correspondant à vos différents use-cases. L'idée peut être même appliquée à d'autres cas que les computed et le **two-way binding**. On peut par exemple imaginer des fonctions pour générer des méthodes ou watchers.
 
-```
+```js
 function mapWatcher(fields) {
   let watchers = {}
 
@@ -178,7 +178,7 @@ function mapWatcher(fields) {
 
 Cette fonction permet de créer un watcher qui émettra un événement à la modification pour chaque propriété passée en argument.
 
-```
+```js
 export default {
   watch: {
     ...mapWatcher(['foobar', 'barfoo'])

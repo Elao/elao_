@@ -86,7 +86,7 @@ JavaScript basé sur React permettant de construire des applications mobiles à 
 fois pour iOS et Android.
 
 <figure>
-    <img src="images/casestudies/climapp/phone-intervention.png" alt="Application Clim'app">
+    <img src="images/casestudies/climapp/climapp-app.png" alt="Application Clim'app">
     <figcaption>
       <span class="figure__legend">L'application Clim'app</span>
     </figcaption>
@@ -98,7 +98,7 @@ documents règlementaires**, lesquels sont alors disponibles depuis
 l'application.
 
 <figure>
-    <img src="images/casestudies/climapp/phone-fi-bsd.png" alt="Gestion des documents règlementaires">
+    <img src="images/casestudies/climapp/climapp-pdf-cerfa.png" alt="Gestion des documents règlementaires">
     <figcaption>
       <span class="figure__legend">Gestion des documents règlementaires</span>
     </figcaption>
@@ -110,12 +110,22 @@ l'application.
 suivi des interventions réalisées ainsi que de leur parc d'installations et
 matériels (détecteurs, contenants, ...).**
 
+
+<figure>
+    <img src="images/casestudies/climapp/climapp-admin01.png" alt="Interface d'administration et de suivi">
+    <figcaption>
+      <span class="figure__legend">L'interface d'administration et de suivi</span>
+    </figcaption>
+</figure>
+
+
 Il est par exemple possible de suivre l'utilisation de leurs contenants, accéder
 aux documents réglementaires générés suite aux interventions, visualiser les 
 déplacements de contenants ou consulter la liste des matériels nécessitant un contrôle.
 
+
 <figure>
-    <img src="images/casestudies/climapp/desktop-dashboard.png" alt="Interface d'administration et de suivi">
+    <img src="images/casestudies/climapp/climapp-admin02.png" alt="Interface d'administration et de suivi">
     <figcaption>
       <span class="figure__legend">L'interface d'administration et de suivi</span>
     </figcaption>

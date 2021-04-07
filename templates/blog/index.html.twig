@@ -20,7 +20,7 @@
                                     <div class="article-author__image">
                                         {% for author in authors %}
                                             {% if author is same as(null) %}
-                                                <img {{ macros.imageSrcset('images/authors/elao-team.png', 'author_avatar') }} />
+                                                <img {{ macros.imageSrcset('images/members/avatars/elao-team.jpg', 'author_avatar') }} />
                                             {% else %}
                                                 <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                                             {% endif %}

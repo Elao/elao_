@@ -269,14 +269,22 @@
       }
     }
 
-    .our-commitments {
+    .our-commitments,
+    .your-commitments {
       margin-top: 0;
       grid-column: 1 / 13;
     }
 
+    .our-commitments {
+      .check-block {
+        margin-bottom: 20px;
+      }
+    }
+
     .your-commitments {
-      margin-top: 0;
-      grid-column: 1 / 13;
+      .check-block {
+        margin-bottom: 40px;
+      }
     }
   }
 }
@@ -293,12 +301,6 @@
         img {
           width: 100%;
         }
-      }
-    }
-
-    .your-commitments {
-      .check-block {
-        margin-bottom: 40px;
       }
     }
 

@@ -76,9 +76,18 @@
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .check-block {
     margin-top: 40px;
+
+    &:before {
+      top: -38px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .check-block {
     padding: 75px 30px 75px 60px;
 
     &:before {

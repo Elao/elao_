@@ -4,7 +4,7 @@ lastModified: "2019-01-09"
 date: "2019-01-09"
 
 # Params
-description: "Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate."
+description: "Plateforme de calcul pour les entreprises pouvant prétendre au Crédit Impôt Recherche (CIR) ou au Crédit Impôt Innovation (CII)"
 websiteUrl: https://cirano.io/
 clients: Businove
 size: 3 mois

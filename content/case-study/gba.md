@@ -5,7 +5,7 @@ date: "2016-05-23"
 
 # Params
 metaDescription: "Développement sur-mesure d'une plateforme e-commerce dédiée aux métiers de l'art. Multi-langue, Multi-boutique et Multi-supports."
-description: "LE GEANT DES BEAUX ARTS est une plate-forme e-commerce à destination des artistes et des écoles d'art. Par le biais de ses différentes boutiques en ligne (France, Belgique, Espagne et Royaume-Uni), elle met à disposition de ses clients tout le matériel nécessaire à la pratique de leur art : peintures, châssis, papiers, arts graphiques, impression, céramique, sculpture ..."
+description: "Plateforme e-commerce européenne à destination des artistes et des écoles d'art, développé en collaboration avec Jetpulp, agence de stratégie lyonnaise."
 websiteUrl: https://www.geant-beaux-arts.fr/
 clients: Jetpulp
 size: 3 months

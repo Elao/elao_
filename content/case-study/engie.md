@@ -7,12 +7,12 @@ date: "2012-01-21"
 medaDescription: "Développement d'applications métiers pour Engie, portail pour les professionnels. Technologies employées : PHP, Symfony."
 description: "Engie, portail pour les professionnels - fourniture de gaz naturel et d'électricité"
 websiteUrl: https://particuliers.engie.fr/
-clients: Example Corp.
+clients: Engie
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["mcolin"]
-images: ["images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie_mockup1.jpg", "images/etudes-de-cas/engie.png"]
+images: ["images/casestudies/headers/engie-banner.png"]
 ---
 
 ## Expertise développement

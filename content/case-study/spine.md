@@ -5,9 +5,9 @@ date: "2016-05-23"
 
 # Params
 metaDescription: "Développement sur-mesure d'une application tablette ludo-éducative qui permet au grand public d'annoter des IRM du cerveau pour faire avancer la recherche. Technologie : 3D WebGL"
-description: "SPINE est une application pour tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche. A la fois ludique et éducative, elle vise à mettre la recherche en neurosciences entre toutes les mains. Elle familiarise les joueurs avec la démarche scientifique (de la formulation d’hypothèses à la récolte de données) et démultiplie la capacité des chercheurs, en faisant appel à la foule (\"crowdsourcing\")."
+description: "Une application tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche."
 websiteUrl: ~
-clients: Example Corp.
+clients: Université de Bordeaux
 size: 3 months
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
@@ -32,6 +32,8 @@ images: ["images/casestudies/headers/spine-banner.jpg"]
 ## Contexte projet
 
 Ce projet est porté par Charles Guttmann, Directeur du Centre d’Imagerie Neurologique de Brigham & Women’s Hospital et Associate Professor de Radiologie à Harvard Medical School (Boston), en partenariat avec l’université de Bordeaux, grâce au soutien financier de l’Initiative d’excellence de l’université de Bordeaux (IdEx Bordeaux).
+
+SPINE est une application pour tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche. À la fois ludique et éducative, elle vise à mettre la recherche en neurosciences entre toutes les mains. Elle familiarise les joueurs avec la démarche scientifique (de la formulation d’hypothèses à la récolte de données) et démultiplie la capacité des chercheurs, en faisant appel à la foule (\"crowdsourcing\")
 
 L'utilisateur se connecte à la plateforme et fait avancer la recherche en analysant des images médicales et en participant à des expériences depuis son application.
 

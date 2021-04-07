@@ -3,6 +3,8 @@ glide:
     source: '%kernel.project_dir%/public'
     cache: '%kernel.project_dir%/public/resized'
     pre_generate: '%env(bool:GLIDE_PRE_GENERATE_CACHE)%'
+    cache_with_file_extensions: true
+    group_cache_in_folders: true
 
     # https://glide.thephpleague.com/1.0/api/quick-reference/
     presets:

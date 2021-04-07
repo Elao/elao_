@@ -8,7 +8,7 @@ date: "2015-06-23"
 description: "Lazerdrive est un jeu massivement multi-joueurs, né de Curvytron, jeu d'adresse dans le navigateur, développé en interne pour le plaisir par l'équipe puis présenté au PHP tour en 2014 et au Blend Web Mix 2015."
 websiteUrl: http://www.curvytron.com
 clients: Elao + BlendWebMix
-size: 3 months
+size: 2 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["nodejs", "javascript"]
 members: ["tjarrand"]

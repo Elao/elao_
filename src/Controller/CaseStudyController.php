@@ -24,7 +24,7 @@ class CaseStudyController extends AbstractController
     }
 
     /**
-     * @Route("/", name="case_studies")
+     * @Route(name="case_studies")
      */
     public function list(): Response
     {

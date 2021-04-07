@@ -26,7 +26,7 @@ class TeamController extends AbstractController
     }
 
     /**
-     * @Route("/", name="team")
+     * @Route(name="team")
      */
     public function list(): Response
     {

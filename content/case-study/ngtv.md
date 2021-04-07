@@ -38,7 +38,7 @@ Nous avons accompagné l'équipe NGTV tout au long de ce projet en prenant en co
 * Tests unitaires et fonctionnels
 * Méthode agile
 
-Le process qualité appliqué à ce projet correspond aux standards Élao. Ces exigences passent par plusieurs étapes :
+Le process qualité appliqué à ce projet correspond aux standards Elao. Ces exigences passent par plusieurs étapes :
 
 * des code reviews
 * des tests unitaires et fonctionnels

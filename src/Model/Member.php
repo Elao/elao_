@@ -62,6 +62,6 @@ class Member
 
     public function getAvatar(): ?string
     {
-        return $this->avatar ?? 'images/authors/default.png';
+        return $this->avatar ?? 'images/authors/avatars/default.png';
     }
 }

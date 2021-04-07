@@ -81,7 +81,11 @@ class SiteController extends AbstractController
     }
 
     /**
-     * @Route("/404", name="not-found")
+     * @Route("/404", name="not_found", options={
+     *   "stenope": {
+     *     "sitemap": false
+     *   }
+     * })
      */
     public function notFound(): Response
     {

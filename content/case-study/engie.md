@@ -8,7 +8,7 @@ medaDescription: "Développement d'applications métiers pour Engie, portail pou
 description: "Engie, portail pour les professionnels - fourniture de gaz naturel et d'électricité"
 websiteUrl: https://particuliers.engie.fr/
 clients: Engie
-size: 3 months
+size: 2 ans
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["mcolin"]

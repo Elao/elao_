@@ -12,7 +12,11 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/recrutement",)
+ * @Route("/recrutement", options={
+ *   "stenope": {
+ *     "ignore": true
+ *    }
+ * })
  */
 class JobController extends AbstractController
 {
@@ -24,7 +28,7 @@ class JobController extends AbstractController
     }
 
     /**
-     * @Route("/", name="jobs")
+     * @Route(name="jobs")
      */
     public function list(): Response
     {

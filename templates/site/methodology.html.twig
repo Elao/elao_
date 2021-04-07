@@ -316,14 +316,7 @@
             </div>
 
             <div class="bricks" data-aos="zoom-in-left">
-                <div class="brick-developpement">
-                    <p>Un projet ?</p>
-                    <h3 class="title">Vous avez une application web ou mobile à développer ?</h3>
-                    <a class="contact-link" href="{{ path('contact') }}">
-                        <img src="{{ asset('build/images/card.svg') }}" alt="">
-                        <span>Nous envoyer un message</span>
-                    </a>
-                </div>
+                {% include 'partials/brick-development.html.twig' %}
             </div>
         </div>
     </div>

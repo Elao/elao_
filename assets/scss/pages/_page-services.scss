@@ -176,6 +176,10 @@
     margin: 0 0 100px;
     grid-column: 2 / 8;
   }
+
+  .bricks {
+    grid-column: 1 / 13;
+  }
 }
 
 @media (max-width: $screen-md) {

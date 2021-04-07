@@ -88,6 +88,13 @@ Une fois inscrits, les participants devaient avoir accès, avant l'événement, 
 * Moteur de recherche à facettes.
 * Gestion de prise de rendez-vous avec des créneaux, des indisponibilités et des annulations.
 
+<figure>
+    <img src="images/casestudies/vimeet-catalogue.png" alt="Liste des rendez-vous">
+    <figcaption>
+      <span class="figure__legend">La liste des rendez-vous possibles dans un événement géré par Vimeet</span>
+    </figcaption>
+</figure>
+
 ### Génération des rendez-vous
 
 Quelques jours avant l'événement, les rendez-vous devaient être créés et planifiés à partir des différentes demandes réalisées par les participants afin de générer des plannings optimisés et équitables.
@@ -101,6 +108,13 @@ Quelques jours avant l'événement, les rendez-vous devaient être créés et pl
 Nous avons choisi de développer cette application à partir de la solution Open-Source [OptaPlanner](https://www.optaplanner.org/), un moteur de résolution de problèmes à satisfaction de contraintes.
 
 [Notre article sur OptaPlanner](../blog/dev/planification-de-rdv-avec-optaplanner.md)
+
+<figure>
+    <img src="images/casestudies/vimeet-gdr.png" alt="Gestion des rendez-vous">
+    <figcaption>
+      <span class="figure__legend">Proposition de rendez-vous dans un événement géré par Vimeet</span>
+    </figcaption>
+</figure>
 
 ### Contrôle d'accès
 
@@ -138,3 +152,10 @@ Pendant le déroulement de l'événement, chaque participant dispose d'un emploi
 
 * Une application mobile simple pour le jour-J
 * Afficher les rendez-vous de chaque participant
+
+<figure>
+    <img src="images/casestudies/vimeet-mobile.png" alt="Agenda">
+    <figcaption>
+      <span class="figure__legend">L'agenda d'un participant</span>
+    </figcaption>
+</figure>

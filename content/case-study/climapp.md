@@ -12,7 +12,7 @@ size: "8 mois"
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "react", "react-native"]
 members: ["msteinhausser", "abenassy", "tjarrand", "cmeiller"]
-images: ["images/casestudies/headers/climapp-banner.png"]
+images: ["images/casestudies/headers/climapp-banner.jpg"]
 ---
 
 ## Le contexte du projet

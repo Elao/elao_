@@ -8,7 +8,7 @@ metaDescription: "Développement sur-mesure d'une application tablette ludo-édu
 description: "Une application tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche."
 websiteUrl: ~
 clients: Université de Bordeaux
-size: 3 months
+size: 4 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony"]
 members: ["mcolin", "tjarrand"]

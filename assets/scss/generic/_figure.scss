@@ -27,17 +27,18 @@ figcaption {
   }
 }
 
-.figure__legend {
-  margin-right: 8px;
-  padding-right: 20px;
+.figure__legend {}
+
+.figure__credits {
+  padding-left: 30px;
   position: relative;
 
-  &:after {
+  &:before {
     width: 12px;
     height: 1px;
     position: absolute;
     top: 50%;
-    right: 0;
+    left: 8px;
     transform: translateY(-50%);
     content: '';
     background-color: $color-text;

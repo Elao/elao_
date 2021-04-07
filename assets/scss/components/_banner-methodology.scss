@@ -19,8 +19,9 @@
 
   img {
     margin: 0;
+    min-width: 500px;
     position: relative;
-    top: -110px;
+    top: -130px;
   }
 }
 
@@ -30,7 +31,6 @@
 
     img {
       min-width: 350px;
-      width: 350px;
     }
   }
 }

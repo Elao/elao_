@@ -100,8 +100,10 @@
                 <img src="{{ asset('build/images/pages/contact/stamp.svg') }}" alt="">
                 <p class="name" itemprop="name">elao</p>
                 <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">34 rue Jean Broquin</span>
-                    <span itemprop="addressLocality">69006 Lyon</span>
+                    <a href="{{ site.contact.address.google_maps }}" target="_blank">
+                        <span itemprop="streetAddress">{{ site.contact.address.street_address }}</span><br/>
+                        <span itemprop="addressLocality">{{ site.contact.address.address_locality }}</span>
+                    </a>
                 </address>
                 <address>
                     <a href="tel:+33482533719" itemprop="telephone">{{ site.contact.phone }}</a>

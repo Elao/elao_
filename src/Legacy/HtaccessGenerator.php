@@ -49,12 +49,19 @@ class HtaccessGenerator
     {
         $redirections = array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
+            '/fr/' => 'homepage',
             '/fr/developpement' => 'services',
+            '/fr/developpement/' => 'services',
             '/fr/hebergement' => 'services',
+            '/fr/hebergement/' => 'services',
             '/fr/conseil' => 'services',
+            '/fr/conseil/' => 'services',
             '/fr/nos-experiences' => 'case_studies',
+            '/fr/nos-experiences/' => 'case_studies',
             '/fr/recrutement' => 'jobs',
+            '/fr/recrutement/' => 'jobs',
             '/fr/nous-contacter' => 'contact',
+            '/fr/nous-contacter/' => 'contact',
         ]);
 
         $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));

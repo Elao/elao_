@@ -84,21 +84,21 @@ RUN \
         -o /etc/apt/trusted.gpg.d/php.gpg \
     && apt-get update \
     && apt-get install --yes --no-install-recommends \
-        php7.4-cli \
-        php7.4-fpm \
-        php7.4-opcache \
-        php7.4-xdebug \
+        php8.0-cli \
+        php8.0-fpm \
+        php8.0-opcache \
+        php8.0-xdebug \
         # Symfony
-        php7.4-intl \
-        php7.4-curl \
-        php7.4-mbstring \
-        php7.4-xml \
+        php8.0-intl \
+        php8.0-curl \
+        php8.0-mbstring \
+        php8.0-xml \
         # Project
-        php7.4-gd \
+        php8.0-gd \
     && phpdismod xdebug \
     && mkdir /run/php \
-    && update-alternatives --install /usr/sbin/php-fpm php-fpm /usr/sbin/php-fpm7.4 1 \
-    && update-alternatives --install /etc/php/default php-config-default /etc/php/7.4 1 \
+    && update-alternatives --install /usr/sbin/php-fpm php-fpm /usr/sbin/php-fpm8.0 1 \
+    && update-alternatives --install /etc/php/default php-config-default /etc/php/8.0 1 \
     # Composer
     && curl -sSL https://getcomposer.org/installer \
         | php -- --install-dir /usr/local/bin --filename composer \

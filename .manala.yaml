@@ -22,7 +22,7 @@ system:
         version: 1.18
         port: 8000
     php:
-        version: 7.4
+        version: "8.0"
         extensions:
           - gd
     nodejs:

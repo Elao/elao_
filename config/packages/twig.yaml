@@ -10,6 +10,11 @@ twig:
                 email: contact@elao.com
                 phone: 04 82 53 37 19
 
+            social:
+                github: https://github.com/elao
+                twitter: https://twitter.com/elao
+                instagram: https://www.instagram.com/hello_elao_/
+
             menu:
                 - { path: 'services', label: 'Services' }
                 - { path: 'methodology', label: 'Méthodologie' }

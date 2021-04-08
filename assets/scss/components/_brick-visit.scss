@@ -39,6 +39,14 @@
     > span {
       margin: 0 0 15px;
     }
+
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: #fff;
+    }
   }
 }
 

@@ -15,6 +15,9 @@ twig:
                 twitter: https://twitter.com/elao
                 instagram: https://www.instagram.com/hello_elao_/
 
+            trackers:
+                matomo: '%env(MATOMO_ID)%'
+
             menu:
                 - { path: 'services', label: 'Services' }
                 - { path: 'methodology', label: 'Méthodologie' }

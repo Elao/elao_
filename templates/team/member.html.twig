@@ -54,7 +54,7 @@
                 <ul>
                     {% if member.website %}
                         <li>
-                            <a href="{{ member.website }}">
+                            <a href="{{ member.website }}" target="_blank">
                                 <i class="icon icon--website" aria-hidden="true"></i>
                                 <span class="screen-reader">Site personnel de {{ member.name }}</span>
                             </a>
@@ -62,7 +62,7 @@
                     {% endif %}
                     {% if member.twitter %}
                         <li>
-                            <a href="https://twitter.com/{{ member.twitter }}">
+                            <a href="https://twitter.com/{{ member.twitter }}" target="_blank">
                                 <i class="icon icon--twitter" aria-hidden="true"></i>
                                 <span class="screen-reader">Compte Twitter de {{ member.name }}</span>
                             </a>
@@ -70,7 +70,7 @@
                     {% endif %}
                     {% if member.github %}
                         <li>
-                            <a href="https://github.com/{{ member.github }}">
+                            <a href="https://github.com/{{ member.github }}" target="_blank">
                                 <i class="icon icon--github" aria-hidden="true"></i>
                                 <span class="screen-reader">Compte Github de {{ member.name }}</span>
                             </a>
@@ -78,7 +78,7 @@
                     {% endif %}
                     {% if member.linkedIn %}
                     <li>
-                        <a href="https://www.linkedin.com/in/{{ member.linkedIn }}">
+                        <a href="https://www.linkedin.com/in/{{ member.linkedIn }}" target="_blank">
                             <i class="icon icon--linkedin" aria-hidden="true"></i>
                             <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
                         </a>

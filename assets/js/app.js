@@ -13,7 +13,7 @@ window.addEventListener('load', init);
 
 // https://github.com/michalsnik/aos#1-initialize-aos
 AOS.init({
-    disabled: 'mobile',
+    disable: () => matchMedia('(max-width: 760px)').matches,
     useClassNames: true, // if true, will add content of `data-aos` as classes on scroll
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 50, // offset (in px) from the original trigger point

@@ -89,7 +89,7 @@ lint.php-cs-fixer@integration:
 	vendor/bin/php-cs-fixer fix --dry-run --diff
 
 lint.twig@integration:
-	bin/console lint:twig templates --ansi --no-interaction
+	bin/console lint:twig templates --show-deprecations --ansi --no-interaction
 
 lint.yaml@integration:
 	bin/console lint:yaml config translations --parse-tags --ansi --no-interaction

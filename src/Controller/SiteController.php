@@ -79,16 +79,4 @@ class SiteController extends AbstractController
     {
         return $this->render('site/privacy.html.twig');
     }
-
-    /**
-     * @Route("/404", name="not_found", options={
-     *   "stenope": {
-     *     "sitemap": false
-     *   }
-     * })
-     */
-    public function notFound(): Response
-    {
-        return $this->render('errors/404.html.twig');
-    }
 }

@@ -20,9 +20,11 @@ class SiteController extends AbstractController
     {
         /** @var Article[] $articles */
         $articles = $manager->getContents(Article::class, ['date' => false]);
+        $members = $manager->getContents(Member::class, [], ['active' => true]);
 
         return $this->render('site/home.html.twig', [
             'lastArticle' => current($articles),
+            'membersCount' => \count($members),
         ]);
     }
 

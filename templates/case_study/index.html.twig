@@ -1,8 +1,9 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% block meta_title "Réalisations web : revue de nos projets depuis 15 ans | Elao" %}
-{% block meta_description "Découvrez quelques unes des applications web et mobile réalisées depuis 15 ans chez Elao" %}
+{% set interval = date('now').diff(date(site.birthdate)) %}
+{% block meta_title "Réalisations web : revue de nos projets depuis %d ans | Elao"|format(interval.y) %}
+{% block meta_description "Découvrez quelques unes des applications web et mobile réalisées depuis %d ans chez Elao"|format(interval.y) %}
 
 {% block content %}
     <div class="page-projects">

@@ -73,7 +73,8 @@
                     <li class="list-inline__item" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                         <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
                         <h3>Symfony</h3>
-                        <p>C'est un choix et <strong>une expertise depuis 20 ans chez Elao</strong>. Symfony est un framework parfaitement adapté aux applications métier spécifiques et nos équipes sont contributrices et aguerries à ses bonnes pratiques.</p>
+                        {% set interval = date('now').diff(date(site.birthdate)) %}
+                        <p>C'est un choix et <strong>une expertise depuis {{ interval.y }} ans chez Elao</strong>. Symfony est un framework parfaitement adapté aux applications métier spécifiques et nos équipes sont contributrices et aguerries à ses bonnes pratiques.</p>
     {#                    <a href="#" class="link link--brand">À propos de Symfony</a>#}
                     </li>
                     {% set delay = delay + delayGap %}

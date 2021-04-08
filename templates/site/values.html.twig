@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% set interval = date('now').diff(date(site.birthdate)) %}
 {% block meta_title "L'humain avant tout : donner du sens, s'engager, prendre plaisir | Elao" %}
-{% block meta_description "Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de 15 ans par des expert·e·s passionné·e·s. | Elao" %}
+{% block meta_description "Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de %d ans par des expert·e·s passionné·e·s. | Elao"|format(interval.y) %}
 
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -73,7 +74,8 @@
         <h2 class="h2--dash" data-aos="fade-up">Notre manifeste</h2>
         <div class="manifest" data-aos="fade-up">
             <div class="check-block">
-                <p>Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de 15 ans par des expert·e·s passionné·e·s.</p>
+                {% set interval = date('now').diff(date(site.birthdate)) %}
+                <p>Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de {{ interval.y }} ans par des expert·e·s passionné·e·s.</p>
                 <p>Nous mettons en œuvre <strong>notre esprit créatif et pragmatique pour vous garantir les solutions les plus qualitatives, robustes et évolutives possibles.</strong></p>
                 <p>Notre réussite ? La vôtre, pour vos utilisateurs. Car tout part de leurs besoins, leur usage et de vos ambitions.</p>
                 <p>Nous faisons notre métier avec une vision très claire : <strong>nous participons avec énergie à un écosystème de création et de partage de valeur</strong>, pour et avec nos clients, nos collaborateurs et notre écosystème web :</p>

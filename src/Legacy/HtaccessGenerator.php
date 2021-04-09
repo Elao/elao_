@@ -67,6 +67,8 @@ class HtaccessGenerator
             $path = sprintf('/%s/%s', $article->lang, $article->slug);
             $url = $this->router->generate('blog_article', ['article' => $article->slug], UrlGeneratorInterface::ABSOLUTE_URL);
             $redirections[$path] = $url;
+            // Add with trailing slash path:
+            $redirections[$path . '/'] = $url;
         }
 
         return $redirections;

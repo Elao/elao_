@@ -93,6 +93,10 @@ class HtaccessGenerator
             '/fr/recrutement/' => 'jobs',
             '/fr/nous-contacter' => 'contact',
             '/fr/nous-contacter/' => 'contact',
+            '/fr/legal' => 'legal',
+            '/fr/legal/' => 'legal',
+            '/fr/a-propos' => 'contact',
+            '/fr/a-propos/' => 'contact',
         ]);
     }
 

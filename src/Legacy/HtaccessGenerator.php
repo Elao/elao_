@@ -10,6 +10,9 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class HtaccessGenerator
 {
+    public const TARGET_SITE = 'site';
+    public const TARGET_BLOG = 'blog';
+
     private UrlGeneratorInterface $router;
     private ContentManager $contentManager;
 
@@ -19,9 +22,9 @@ class HtaccessGenerator
         $this->contentManager = $contentManager;
     }
 
-    public function generateHtAccess(): string
+    public function generateHtAccess(string $target): string
     {
-        $redirections = $this->getRedirections();
+        $redirections = $this->getRedirections($target);
 
         return implode(
             PHP_EOL,
@@ -32,9 +35,9 @@ class HtaccessGenerator
         );
     }
 
-    public function generateNginxRewriteRules(): string
+    public function generateNginxRewriteRules(string $target): string
     {
-        $redirections = $this->getRedirections();
+        $redirections = $this->getRedirections($target);
 
         return implode(
             PHP_EOL,
@@ -45,9 +48,35 @@ class HtaccessGenerator
         );
     }
 
-    private function getRedirections(): array
+    private function getRedirections(string $target): array
     {
-        $redirections = array_map(fn (string $route) => $this->router->generate($route), [
+        return $target === self::TARGET_SITE ? $this->getSiteRedirections() : $this->getBlogRedirections();
+    }
+
+    private function getBlogRedirections(): array
+    {
+        $redirections = array_map(fn (string $route) => $this->router->generate($route, [], UrlGeneratorInterface::ABSOLUTE_URL), [
+            '/' => 'blog',
+            '/fr' => 'blog',
+            '/fr/' => 'blog',
+        ]);
+
+        $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
+
+        foreach ($articles as $article) {
+            $path = sprintf('/%s/%s', $article->lang, $article->slug);
+            $url = $this->router->generate('blog_article', ['article' => $article->slug], UrlGeneratorInterface::ABSOLUTE_URL);
+            $redirections[$path] = $url;
+            // Add with trailing slash path:
+            $redirections[$path . '/'] = $url;
+        }
+
+        return $redirections;
+    }
+
+    private function getSiteRedirections(): array
+    {
+        return array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
             '/fr/' => 'homepage',
             '/fr/la-tribu' => 'team',
@@ -64,17 +93,11 @@ class HtaccessGenerator
             '/fr/recrutement/' => 'jobs',
             '/fr/nous-contacter' => 'contact',
             '/fr/nous-contacter/' => 'contact',
+            '/fr/legal' => 'legal',
+            '/fr/legal/' => 'legal',
+            '/fr/a-propos' => 'contact',
+            '/fr/a-propos/' => 'contact',
         ]);
-
-        $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
-
-        foreach ($articles as $article) {
-            $path = sprintf('/%s/%s', $article->lang, $article->slug);
-            $url = $this->router->generate('blog_article', ['article' => $article->slug], UrlGeneratorInterface::ABSOLUTE_URL);
-            $redirections[$path] = $url;
-        }
-
-        return $redirections;
     }
 
     private function getHtaccessRule(string $legacyPath, string $url): string

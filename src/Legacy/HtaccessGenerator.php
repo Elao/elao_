@@ -50,6 +50,8 @@ class HtaccessGenerator
         $redirections = array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
             '/fr/' => 'homepage',
+            '/fr/la-tribu' => 'team',
+            '/fr/la-tribu/' => 'team',
             '/fr/developpement' => 'services',
             '/fr/developpement/' => 'services',
             '/fr/hebergement' => 'services',
@@ -68,7 +70,7 @@ class HtaccessGenerator
 
         foreach ($articles as $article) {
             $path = sprintf('/%s/%s', $article->lang, $article->slug);
-            $url = $this->router->generate('blog_article', ['article' => $article->slug]);
+            $url = $this->router->generate('blog_article', ['article' => $article->slug], UrlGeneratorInterface::ABSOLUTE_URL);
             $redirections[$path] = $url;
         }
 

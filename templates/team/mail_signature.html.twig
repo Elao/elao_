@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% set noindex = true %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .email_signature * {
+            all: revert
+        }
+
+        textarea {
+            padding: 10px;
+            font-size: 12px;
+            font-family: monospace;
+            min-width: 400px;
+            background-color: #f4756d;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            width: 100%;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <h1 data-aos="fade-right">
+        {{ member.name }}
+        <span>ta signature</span>
+        <span>sur-mesure</span>
+    </h1>
+
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center;">
+        <div style="flex: 1; padding: 0 20px 20px 0">
+            <div class="email_signature" style="width: 400px;margin: auto">
+                {{ _self.signatureHtml(member) }}
+            </div>
+        </div>
+
+        <div style="flex: 1;">
+            <h4>Copie ce code HTML pour créer ta signature mail</h4>
+            <textarea readonly="readonly" rows="15" onclick="this.focus();this.select()">
+                {%- apply spaceless -%}
+                    {{- _self.signatureHtml(member) -}}
+                {%- endapply -%}
+            </textarea>
+        </div>
+    </div>
+{% endblock %}
+
+{% macro signatureHtml(member) %}
+<div style="margin-top: 20px;padding-top: 20px; border-top: 1px dashed #ddd;background-color: white">
+    <div style="float: left; margin: -1px 5px 5px 0px; padding-right: 5px;">
+        <img src="{{ absolute_url(asset('images/corpo/logo_red_small.png')) }}" width="50" height="22" style="width:50px; height: 22px">
+    </div>
+    <div style="margin-top:0px; margin-left: 60px; font-family: Courier, sans-serif; font-size: 12px; line-height: 20px; color: #7f1a55;">
+        <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">
+            <strong style="color: #ff4344;  font-size: 14px;">{{ member.name|split(' ', 2)[0] }}
+                <span style="color: #7f1a55;">{{ member.name|split(' ', 2)[1] }}</span>
+            </strong>
+        </p>
+        <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">//{{ member.position }}</p>
+        <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">
+            <a href="mailto:{{ member.email }}" style="color: #7f1a55; text-decoration: none;">
+                //{{ member.email -}}
+            </a>
+        </p>
+        {%- if member.phone is not empty -%}
+            <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">//{{ member.phone}}</p>
+        {%- endif -%}
+        <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">//{{ site.contact.phone }}</p>
+        <p style="margin-bottom: 0; margin-top:0; margin-left:0; padding-left:0;">
+            <a href="{{ url('homepage') }}" style="color: #ff4344; text-decoration: none;">elao.com</a>
+        </p>
+    </div>
+</div>
+{% endmacro %}

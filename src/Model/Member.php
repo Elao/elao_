@@ -28,6 +28,8 @@ class Member
     public ?string $avatar = null;
     public ?string $linkedIn = null;
 
+    public ?string $phone = null;
+
     /** @var string[] */
     public array $certifications = [];
 

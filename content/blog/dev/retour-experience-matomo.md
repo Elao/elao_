@@ -42,8 +42,8 @@ Faites vos choix :
 
 - installation [par archive](https://matomo.org/docs/installation/);
 - installation [par package](https://debian.matomo.org/) : ```apt-get install matomo```;
-- installation par [docker](<https://docs.docker.com/samples/library/matomo/>);
-- solution [hébergée par matomo](<https://matomo.org/pricing/>).
+- installation par [docker](https://docs.docker.com/samples/library/matomo/);
+- solution [hébergée par matomo](https://matomo.org/pricing/).
 
 Matomo indique quelques conseils pour [optimiser son infrastructure](https://matomo.org/docs/optimize/) pour les sites à très fort trafic / volumétrie. Bref, cette solution semble s'appliquer à toutes sortes de besoins.
 
@@ -123,7 +123,7 @@ A noter :
 
 Utiliser les outils Google habitue à la "gratuité", mais n'oublions pas que Google tire profit des données qu'il stocke pour nous, relatives à la fréquentation de nos sites. Matomo se rémunère grâce aux dons et aux fonctionnalités vendues à ses utilisateurs.
 
-[Des fonctionnalités supplémentaires pour les sites e-commerce](<https://matomo.org/docs/ecommerce-analytics/>), que nous n'avons pas eu l'occasion de tester pour l'instant, existent et proposent des features telles que l'analyse du panier, des produits cliqués, etc.);
+[Des fonctionnalités supplémentaires pour les sites e-commerce](https://matomo.org/docs/ecommerce-analytics/), que nous n'avons pas eu l'occasion de tester pour l'instant, existent et proposent des features telles que l'analyse du panier, des produits cliqués, etc.);
 
 Un panel de fonctionnalités payantes couvre un scope intéressant, comme par exemple la possibilité de faire de l'A/B testing, les Heat Maps ou encore les conversions multi-channels (pour une attribution plus fine des ventes selon les visites).
 

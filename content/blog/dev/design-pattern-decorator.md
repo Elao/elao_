@@ -17,7 +17,7 @@ author:    "xavierr"
 
 Le _Gang of Four_ a classé les design patterns dans trois catégories : les DP de création, les DP structurels et les DP comportementaux (_behavior_).
 
-Au début de cette série, nous avons abordé deux design patterns de création : la [`Factory Method`](/fr/dev/design-pattern-factory-method) et le pattern [`Abstract Factory`](/fr/dev/design-pattern-abstract-factory). Je vous propose aujourd'hui de nous pencher sur notre premier design pattern structurel : le `Decorator`.
+Au début de cette série, nous avons abordé deux design patterns de création : la [`Factory Method`](/blog/dev/design-pattern-factory-method) et le pattern [`Abstract Factory`](/fr/dev/design-pattern-abstract-factory). Je vous propose aujourd'hui de nous pencher sur notre premier design pattern structurel : le `Decorator`.
 
 Il y sera notamment question de modération, de sexe et de grossièretés. Autant de bonnes raisons de poursuivre votre lecture.
 

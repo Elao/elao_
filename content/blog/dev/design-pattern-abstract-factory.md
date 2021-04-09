@@ -31,7 +31,7 @@ Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui, le p
 </table>
 
 <div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Le livre <strong><i>Head First Design Patterns</i></strong> (<a href="/fr/dev/design-pattern-factory-method">dont j'ai déjà vanté les mérites</a>) regroupe les deux patterns <code>Factory Method</code> et <code>AbstractFactory</code> dans un même chapitre consultable en ligne et intitulé <a href="https://www.safaribooksonline.com/library/view/head-first-design/0596007124/ch04.html" target="_blank">The Factory Pattern: Baking with OO Goodness</a>. Je ne saurais trop vous encourager à le consulter !
+    Le livre <strong><i>Head First Design Patterns</i></strong> (<a href="/blog/dev/design-pattern-factory-method">dont j'ai déjà vanté les mérites</a>) regroupe les deux patterns <code>Factory Method</code> et <code>AbstractFactory</code> dans un même chapitre consultable en ligne et intitulé <a href="https://www.safaribooksonline.com/library/view/head-first-design/0596007124/ch04.html" target="_blank">The Factory Pattern: Baking with OO Goodness</a>. Je ne saurais trop vous encourager à le consulter !
 </div>
 
 ## Classification

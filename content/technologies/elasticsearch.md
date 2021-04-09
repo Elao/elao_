@@ -37,4 +37,4 @@ Nous pouvons intervenir à la fois pour mettre en réfléchir à une solution et
 
 ##Les articles de blog à propos d'ElasticSearch
 
-- [Améliorer la pertinence de vos résultats ElasticSearch grâce au score.](https://blog.elao.com/fr/dev/ameliorez-pertinence-resultat-elastic-search-score/)
+- [Améliorer la pertinence de vos résultats ElasticSearch grâce au score.](https://blog.elao.com/blog/dev/ameliorez-pertinence-resultat-elastic-search-score/)

@@ -14,7 +14,7 @@ categories:         ["Dev", Symfony", "PHP"]
 author:    "ndievart"
 ---
 
-Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](/fr/dev/behat-3-test-fonctionnel-symfony/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.
+Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](blog/dev/behat-3-test-fonctionnel-symfony/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.
 Dans cet article nous allons voir comment nous écrivons désormais nos tests en partant d'une approche Domaine.
 
 ## Cheminement 📖
@@ -23,7 +23,7 @@ L'ajout et le maintien des tests fonctionnels se sont avérés de plus en plus c
 
 Dans de nombreux cas, nous en arrivions à faire une fixture particulière pour chaque test plutôt que de réutiliser certaines d'entre elles pour être totalement maître du contexte. A chaque modification du _model_, la mise à jour de toutes les fixtures étaient une réelle perte de temps.
 
-La plupart des projets chez [Elao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaires pour créer des entités pour les contextes qui nous intéressent.
+La plupart des projets chez [élao](https://www.elao.com) ont [une architecture hexagonale](/blog/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaires pour créer des entités pour les contextes qui nous intéressent.
 
 Par exemple, nous avons dans notre classe métier «Produit» des méthodes nous permettant de créer directement des produits de différent _types_ comme des formules. Ces méthodes permettent d'abstraire certaines informations inutiles à faire figurer à chaque endroit du code et simplifient la création de ces produits.
 Nos _commands_ utilisent donc déjà ces méthodes pour créer des formules, et sont très flexibles pour chaque besoin différent.

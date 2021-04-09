@@ -432,5 +432,5 @@ ledit service.
 À vos marques, prêts, **testez** !
 
 PS : si vous souhaitez vous éclater en faisant du TDD et du code de qualité,
-<a href="/fr/elao/job-developpeur-backend-agence-paris-2018/">rejoignez-nous !</a>
+<a href="/contact">rejoignez-nous !</a>
 

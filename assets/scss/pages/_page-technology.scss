@@ -2,12 +2,12 @@
   padding: 0 110px;
 
   .article-list {
-    .miniature:first-of-type {
-      margin-left: 110px;
-    }
-
     .miniature-inline {
-      margin-left: 110px;
+      max-width: 930px;
+
+      &:first-of-type {
+        margin-left: 110px;
+      }
     }
   }
 }

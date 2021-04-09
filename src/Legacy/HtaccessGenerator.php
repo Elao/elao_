@@ -50,6 +50,8 @@ class HtaccessGenerator
         $redirections = array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
             '/fr/' => 'homepage',
+            '/fr/la-tribu' => 'team',
+            '/fr/la-tribu/' => 'team',
             '/fr/developpement' => 'services',
             '/fr/developpement/' => 'services',
             '/fr/hebergement' => 'services',

@@ -31,7 +31,7 @@ class GenerateRedirectionsCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $output->write($this->generator->generateNginxRewriteRules());
+        $output->writeln($this->generator->generateNginxRewriteRules());
 
         return Command::SUCCESS;
     }

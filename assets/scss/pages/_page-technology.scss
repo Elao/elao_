@@ -1,0 +1,29 @@
+.page-technology {
+  padding: 0 110px;
+
+  .article-list {
+    .miniature:first-of-type {
+      margin-left: 110px;
+    }
+
+    .miniature-inline {
+      margin-left: 110px;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-technology {
+    padding: 0;
+
+    .article-list {
+      .miniature:first-of-type {
+        margin-left: 0;
+      }
+
+      .miniature-inline {
+        margin-left: 0;
+      }
+    }
+  }
+}

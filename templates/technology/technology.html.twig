@@ -1,18 +1,131 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    {{ technology.content|raw }}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">{{ technology.name }}</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
 
-    <h2>Articles liés</h2>
-    <div>
-        {% for article in articles %}
-            <div>
-                <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.title }}
-                <a href="{{ path('blog_article', { article: article.slug }) }}">
-                    Lire l'article_
+    {# Todo :
+        - permettre de couper le titre en 2 parties (Exemple : Nous utilisons Symfony pour créer <span>des applications robustes</span>)
+        - trouver une image de bannière générique pour les technos
+        - câbler le logo de la techno (parfois on a pas de logo, ne pas afficher l'image)
+    #}
+    <div class="banner-technology">
+        <h1 class="banner-technology__title">
+            {{ technology.title }}
+            <span>fin du titre</span>
+        </h1>
+        <div class="banner-technology__image">
+            <img src="https://stevensegallery.com/510/270" alt="">
+            <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo de Symfony" class="logo">
+        </div>
+    </div>
+
+    <div class="page-technology">
+        {{ technology.content|raw }}
+
+        {#
+            Todo :
+            - câbler les études de cas liées à la techno (actuellement dans le contenu de chaque techno)
+            - ne pas afficher ce bloc si aucune étude de cas n'est liée
+        #}
+        <h2 class="h2--dash">Projets créés avec Symfony</h2>
+        <ul class="article-list">
+            <li class="miniature-inline" data-aos="fade-up-left">
+                <a href="#" class="miniature-inline__image">
+                    <span class="image" style="background-image: url(https://stevensegallery.com/510/270)"></span>
                 </a>
-            </div>
-        {% endfor %}
-    <div>
+                <div class="miniature-inline__content">
+                    <span class="info">Client</span>
+                    <a href="#" class="title">
+                        Titre
+                    </a>
+                    <p class="description">Pour les besoins d’une solution globale d’administration et de gestion de transport de déchets, nous avons opté pour Symfony afin de gérer un back-office solide.</p>
+                    <a href="#" class="btn btn--secondary btn--animated">
+                        <span>
+                            Voir l'étude de cas
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="miniature-inline" data-aos="fade-up-left">
+                <a href="#" class="miniature-inline__image">
+                    <span class="image" style="background-image: url(https://stevensegallery.com/510/270)"></span>
+                </a>
+                <div class="miniature-inline__content">
+                    <span class="info">Client</span>
+                    <a href="#" class="title">
+                        Titre
+                    </a>
+                    <p class="description">Pour les besoins d’une solution globale d’administration et de gestion de transport de déchets, nous avons opté pour Symfony afin de gérer un back-office solide.</p>
+                    <a href="#" class="btn btn--secondary btn--animated">
+                        <span>
+                            Voir l'étude de cas
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li class="miniature-inline" data-aos="fade-up-left">
+                <a href="#" class="miniature-inline__image">
+                    <span class="image" style="background-image: url(https://stevensegallery.com/510/270)"></span>
+                </a>
+                <div class="miniature-inline__content">
+                    <span class="info">Client</span>
+                    <a href="#" class="title">
+                        Titre
+                    </a>
+                    <p class="description">Pour les besoins d’une solution globale d’administration et de gestion de transport de déchets, nous avons opté pour Symfony afin de gérer un back-office solide.</p>
+                    <a href="#" class="btn btn--secondary btn--animated">
+                        <span>
+                            Voir l'étude de cas
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        {#
+            Todo :
+            - câbler les articles liés à la techno (actuellement dans le contenu de chaque techno)
+            - ne pas afficher ce bloc si aucun article n'est lié
+        #}
+        <h2 class="h2--dash">Articles liés</h2>
+        <ul class="article-list">
+            {% for article in articles %}
+            <li class="miniature" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
+                <a href="#" class="miniature__image">
+                    <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
+                </a>
+                <div class="miniature__content">
+                    <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                    <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock content %}

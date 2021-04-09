@@ -16,6 +16,6 @@ class LegacyController extends AbstractController
      */
     public function htaccess(HtaccessGenerator $generator): Response
     {
-        return new Response($generator->generateHtAccess());
+        return new Response($generator->generateHtAccess(HtaccessGenerator::TARGET_SITE));
     }
 }

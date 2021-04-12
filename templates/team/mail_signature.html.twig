@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% set noindex = true %}
+
+{% block content %}
+    <h1 data-aos="fade-right">
+        Signature de
+        <span>{{ member.name }}</span>
+    </h1>
+
+    <div class="page-signature">
+        <div class="page-signature__preview">
+            {{ _self.signatureHtml(member) }}
+        </div>
+
+        <div class="page-signature__tutorial">
+            <h2 class="h4">Copie ce code HTML pour créer ta signature mail.</h2>
+            <textarea readonly="readonly" onclick="this.focus();this.select()">
+                {%- apply spaceless -%}
+                    {{- _self.signatureHtml(member) -}}
+                {%- endapply -%}
+            </textarea>
+        </div>
+    </div>
+{% endblock %}
+
+{% macro signatureHtml(member) %}
+<style type="text/css">
+    a { color: #fff; <!-- prevents default link color on Outlook --> }
+</style>
+
+<table style="margin-top: 20px; padding: 20px 50px 10px 0; font-family: Courier, sans-serif; font-size: 12px; background-color: #fff; border-top: 1px dashed #ddd;">
+    <tbody>
+        <tr>
+            <td style="padding-right: 10px; vertical-align: top;">
+                <img src="https://ci3.googleusercontent.com/proxy/wWcaMkX1ZCFxHJc4AZ9ZULFlSjo2mdBUbue0c3DlCEvy57fryn_v4OicxkwsHJPZKltVkss77c6dS1wLg5wN3bAV2siGoQ=s0-d-e1-ft#http://www.elao.com/images/corpo/logo_red_small.png" alt="logo elao" width="50" height="22" style="width: 50px; height: 22px">
+            </td>
+            <td>
+                <strong style="font-family: Courier, sans-serif; font-size: 14px; font-weight: bold; color: #ff4344; line-height: 20px;">{{ member.name|split(' ', 2)[0] }} <span style="color: #7f1a55;">{{ member.name|split(' ', 2)[1] }}</span></strong>
+                <div style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55; line-height: 20px; white-space: nowrap;">// <span style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55 !important; line-height: 20px;white-space: normal; hyphens: auto;">{{ member.position }}</span></div>
+                <div style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55 !important; line-height: 20px; white-space: nowrap;">// <a href="mailto:{{ member.email }}" target="_blank" style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55 !important; line-height: 20px; text-decoration: none; white-space: normal; word-break: break-all;">{{ member.email -}}</a></div>
+                {%- if member.phone is not empty -%}
+                    <div style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55; line-height: 20px; white-space: nowrap;">// <span style="font-family: Courier, sans-serif; font-size: 12px; color: #7f1a55 !important; line-height: 20px;white-space: normal; word-break: break-all;">{{ member.phone }}</span></div>
+                {%- endif -%}
+                <div>
+                    <a href="{{ url('homepage') }}" target="_blank" style="font-family: Courier, sans-serif; font-size: 12px; color: #ff4344; line-height: 20px; text-decoration: none;">elao.com</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+{% endmacro %}

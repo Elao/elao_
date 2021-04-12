@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/la-tribu",)
+ * @Route("/la-tribu")
  */
 class TeamController extends AbstractController
 {
@@ -58,6 +58,16 @@ class TeamController extends AbstractController
             'member' => $member,
             'articles' => \array_slice($articles, 0, 3),
             'projects' => \array_slice($projects, 0, 3),
+        ])->setLastModified($member->lastModified);
+    }
+
+    /**
+     * @Route("/{member}/signature", name="team_member_mail_signature", options={ "stenope": { "sitemap": false }})
+     */
+    public function emailSignature(Member $member): Response
+    {
+        return $this->render('team/mail_signature.html.twig', [
+            'member' => $member,
         ])->setLastModified($member->lastModified);
     }
 }

@@ -30,9 +30,7 @@ Un projet dont l'utilité n'est plus à démontrer : les volumes de notification
 
 ### Ateliers de recueil du besoin
 PanneauPocket est né dans la tête de Christophe Such, ancien directeur des Projets Innovants chez Orange. Il a fait appel à Elao pour l'aider à structurer une première version de l'application en mode MVP. Il fallait alors trouver le bon équilibre entre l'offre (les mairies) et la demande (les habitants) et développer le fonctionnel nécessaire à chacun des groupes d'utilisateurs pour répondre à leur besoin dès la première version.
-
-### Ateliers UX/UI
-Pour aller vite, les développeurs Elao ont conçu le back-office et l'application de la première version de l'application main dans la main avec PanneauPocket.
+Les développeurs Elao ont conçu le back-office et l'application de la première version de l'application main dans la main avec PanneauPocket.
 
 ### Phase de build (développement)
 Thomas, Anne-Laure et Christophe ont mené de front toute la phase de développement, **accompagnant l'équipe de PanneauPocket dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle.** La mise en production de la première version a permis à PanneauPocket d'aller rencontrer rapidement ses utilisateurs et clients afin de tester son marché.
@@ -80,7 +78,7 @@ Le partage de panneaux étant aussi un élément central de visibilité des info
     </figcaption>
 </figure>
 
-L'application mobile a été développée en JS avec ReactNative.
+L'application mobile a été développée en JS avec ReactNative et est donc accessible sur iOS et Android sans coût de développement supplémentaire.
 
 #### L'application web
 

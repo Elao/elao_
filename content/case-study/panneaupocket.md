@@ -11,14 +11,14 @@ shortDescription: "Les panneaux municipaux dans la poche"
 clients: PanneauPocket
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html", "css", "svg"]
+technologies: ["symfony", "reactnative"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "cmeiller", "xgorse"]
 images: ["images/casestudies/headers/panneaupocket-banner.jpg"]
 ---
 
 ## Le contexte du projet
 
-**PanneauPocket a pour mission de fluidifier la communication entre les municipalités et les habitants des communes partout en France, peu importe leur taille. PanneauPocket transpose les panneaux d'informations lumineux que vous rencontrez dans les rues principales en application mobile. L'intérêt réside dans le système de notification qui permet à chacun d'être informé et alerté, encore plus pertinent dans une période où il est nécessaire de rester chez soi. Une coupure de courant ou de l'eau ? Une fête de village ? Des informations sur la situation sanitaire ? Les habitants ayant téléchargé l'application sont notifiés dès que la mairie le souhaite.
+**PanneauPocket a pour mission de fluidifier la communication entre les municipalités et les habitants des communes partout en France, peu importe leur taille. PanneauPocket transpose les panneaux d'informations lumineux que vous rencontrez dans les rues principales en application mobile.** L'intérêt réside dans le système de notification qui permet à chacun d'être informé et alerté, encore plus pertinent dans une période où il est nécessaire de rester chez soi. Une coupure de courant ou de l'eau ? Une fête de village ? Des informations sur la situation sanitaire ? Les habitants ayant téléchargé l'application sont notifiés dès que la mairie le souhaite.
 
 En plus d'une application mobile développée avec React, PanneauPocket s'est dotée d'une application web lui permettant d'être encore plus accessible.
 

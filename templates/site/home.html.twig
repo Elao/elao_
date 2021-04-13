@@ -11,13 +11,13 @@
 {% block content %}
     <div class="page-home">
         <div class="banner-home">
-            <h1 class="banner-home__title" data-aos="fade-right">
+            <span class="h1 banner-home__title" data-aos="fade-right">
                 elao
                 <span>développe</span>
                 <span>du lien</span>
-            </h1>
+            </span>
             <div class="banner-home__content" data-aos="zoom-in">
-                <p>{{ site.description }}</p>
+                <h1>{{ site.description }}</h1>
             </div>
             {% set highlightedCaseStudy = content_get('App\\Model\\CaseStudy', site.home.highlights.caseStudy) %}
             <div class="banner-home__image" data-aos="fade-left">

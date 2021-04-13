@@ -37,7 +37,7 @@ Cet underscore (que vous pouvez aussi appeler sous-tiret, blanc souligné, carac
 <figure>
     <img src="images/posts/2021/elao-loop.gif">
     <figcaption>
-      <span class="figure__legend">Merci à Magic [Gweno](https://gweno.tv/) pour l'animation ✨</span>
+      <span class="figure__legend">Merci à Magic <a href="https://gweno.tv/">Gweno</a> pour l'animation ✨</span>
     </figcaption>
 </figure>
 

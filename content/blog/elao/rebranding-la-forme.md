@@ -82,7 +82,7 @@ C'était finalement un travail facile puisque nous rédigeons déjà beaucoup : 
 
 L'arborescence du site est défini, les pages sont listées, les contenus rédigés. Place au design.
 
-C’est [Adrien Gervaix](https://adriengervaix.com/) qui a eu la mission de rendre lisible et intelligible ce nouveau positionnement. Comme on croit énormément au pouvoir de l'itératif et de l'intelligence collective, on a eu quelques phases de ping-pong pour arriver à ce rendu qui reste malgré tout très proche de sa première version. Il a très vite, très bien cerné la charte, la volonté et surtout, proposer quelque chose dont on a eu envie très vite de mettre en ligne. 
+C’est [Adrien Gervaix](https://adriengervaix.com/) qui a eu la mission de rendre lisible et intelligible ce nouveau positionnement. Comme on croit énormément au pouvoir de l'itératif et de l'intelligence collective, on a eu quelques phases de ping-pong pour arriver à ce rendu qui reste malgré tout très proche de sa première version. Il a très vite, très bien cerné la charte, la volonté et surtout, proposé quelque chose dont que l'on a eu envie de mettre en ligne, sans compromis, sans "logo plus gros". 
 Et comme il n'y a pas de bon design sans bonne intégration, je profite de cet article pour faire un gros big up à notre intégratrice de choc, Amélie. 
 
 <figure>

@@ -10,7 +10,6 @@ tableOfContent:     true
 description:        "Après le fond, la forme."
 
 thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
-credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Rebranding", "Logo"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
@@ -18,10 +17,10 @@ tweetId:            ""
 ---
 
 ## Un nouveau logo, une nouvelle charte graphique
-Le socle est posé <!-- #TODO insérer lien vers l'autre article -->, et il nous paraît solide. Maintenant, comment est-ce que l'on donne vie à tout ça ? 
+Xavier en a parlé, le socle est posé <!-- #TODO insérer lien vers l'autre article --> et il nous paraît plus que solide. Maintenant, comment est-ce que l'on donne vie à tout ça ? 
 
-Après un travail remarquable à 4 mains sur notre plateforme de marque réalisé avec [Oriane](https://galanga-inside.fr/), [Estelle](https://www.heystelle.fr/) a la lourde mission de réaliser la charte graphique qui va faire prendre corps à tous les mots que nous avons réussi à poser sur Elao.
-À travers un travail itératif, qui a nécessité plusieurs ateliers, des discussions mais surtout beaucoup d'écoute de toutes parts, Estelle parvient à la version qui semble être la plus proche de nous. Une charte qui nous ressemble et qui nous parle. 
+Après un travail remarquable à 4 mains sur notre plateforme de marque réalisé avec [Oriane](https://galanga-inside.fr/), [Estelle](https://www.heystelle.fr/) a la lourde mission de réaliser la charte graphique qui va donner corps à tous les mots que nous avons réussi à poser sur Elao.
+À travers un travail itératif, qui a nécessité plusieurs ateliers, des discussions mais surtout beaucoup d'écoute de toutes parts, Estelle parvient à la version qui fait tilt. Celle qui nous ressemble et qui nous parle.
 
 ### Le logo, comme un signe qui nous rapproche
 Côté logo, on s’amuse d’un signe simple mais fondateur : un underscore qui vient compléter le nom d'Elao.  

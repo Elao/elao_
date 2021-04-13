@@ -66,11 +66,10 @@ En typographie de labeur, on s'amuse avec les codes du… code : Antikor text, u
 ### Des déclinaisons dans tous les sens
 Une charte graphique n'est pas complète si elle n'est pas accompagnée de possibilités de mises en application, de pictos, illustrations, photographie… c'est tout l'objet de la direction artistique : on choisit une direction, et on s'y tient. Estelle s'est montrée très généreuse et créative dans la mise en application de la charte, pour notre plus grand plaisir. 
 
-<!-- #TODO -->
 <figure>
-    <img src="images/posts/2021/elao-rebranding03.jpg">
+    <img src="images/posts/2021/elao-rebranding04.jpg">
     <figcaption>
-      <span class="figure__legend">Les typographies dans la charte graphique</span>
+      <span class="figure__legend">L'application de la charte</span>
     </figcaption>
 </figure>
 
@@ -86,11 +85,10 @@ L'arborescence du site est défini, les pages sont listées, les contenus rédig
 C’est [Adrien Gervaix](https://adriengervaix.com/) qui a eu la mission de rendre lisible et intelligible ce nouveau positionnement. Comme on croit énormément au pouvoir de l'itératif et de l'intelligence collective, on a eu quelques phases de ping-pong pour arriver à ce rendu qui reste malgré tout très proche de sa première version. Il a très vite, très bien cerné la charte, la volonté et surtout, proposer quelque chose dont on a eu envie très vite de mettre en ligne. 
 Et comme il n'y a pas de bon design sans bonne intégration, je profite de cet article pour faire un gros big up à notre intégratrice de choc, Amélie. 
 
-<!-- #TODO -->
 <figure>
-    <img src="images/posts/2021/elao-rebranding03.jpg">
+    <img src="images/posts/2021/elao-webdesign.jpg">
     <figcaption>
-      <span class="figure__legend">Les typographies dans la charte graphique</span>
+      <span class="figure__legend">Hello Elao_</span>
     </figcaption>
 </figure>
 

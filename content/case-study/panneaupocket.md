@@ -5,7 +5,7 @@ date: "2021-04-12"
 
 # Params
 metaDescription: "PanneauPocket - informer et alerter les habitants partout en France."
-description: "PanneauPocket est une solution web et mobile permettant aux mairies et associations de communiquer des informations essentielles aux habitants."
+description: "PanneauPocket est une solution mobile et web permettant aux mairies et associations de communiquer des informations essentielles aux habitants."
 websiteUrl: https://www.panneaupocket.com/
 shortDescription: "Les panneaux municipaux dans la poche"
 clients: PanneauPocket

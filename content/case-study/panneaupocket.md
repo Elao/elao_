@@ -5,7 +5,7 @@ date: "2021-04-12"
 
 # Params
 metaDescription: "PanneauPocket - informer et alerter les habitants partout en France."
-description: "PanneauPocket est une solution mobile et web permettant aux mairies et acteurs essentiels à la vie municipale de communiquer des informations essentielles aux habitants."
+description: "PanneauPocket est une solution mobile et web permettant aux mairies et acteurs de la vie municipale de communiquer des informations essentielles aux habitants."
 websiteUrl: https://www.panneaupocket.com/
 shortDescription: "Les panneaux municipaux dans la poche"
 clients: PanneauPocket
@@ -29,7 +29,7 @@ Un projet dont l'utilité n'est plus à démontrer : les volumes de notification
 ## L'expertise Elao déployée pour les applications PanneauPocket
 
 ### Ateliers de recueil du besoin
-PanneauPocket est né dans la tête de Christophe Such, ancien directeur des Projets Innovants chez Orange. Il a fait appel à Elao pour l'aider à structurer une première version de l'application en mode MVP. Il fallait alors trouver le bon équilibre entre l'offre (les collectivités) et la demande (les habitants) et développer le fonctionnel nécessaire à chacun des groupes d'utilisateurs pour répondre à leur besoin dès la première version.
+PanneauPocket est né dans la tête de Christophe Such, ancien directeur des Projets Innovants chez Orange. Il a fait appel à Elao pour l'aider à structurer une première version de l'application en mode MVP. Il fallait alors trouver le bon équilibre entre l'offre (les collectivités) et la demande (les habitants) et développer le fonctionnel nécessaire à chacun des groupes d'utilisateurs pour répondre à leurs besoins dès la première version.
 Les développeurs Elao ont fait évoluer le back-office et l'application de la première version de l'application main dans la main avec PanneauPocket.
 
 ### Phase de build (développement)

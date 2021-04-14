@@ -23,6 +23,15 @@ Xavier en a parlé, le socle est posé <!-- #TODO insérer lien vers l'autre art
 Après un travail remarquable à 4 mains sur notre plateforme de marque réalisé avec [Oriane](https://galanga-inside.fr/), [Estelle](https://www.heystelle.fr/) a la lourde mission de réaliser la charte graphique qui va donner corps à tous les mots que nous avons réussi à poser sur Elao.
 À travers un travail itératif, qui a nécessité plusieurs ateliers, des discussions mais surtout beaucoup d'écoute de toutes parts, Estelle parvient à la version qui fait tilt. Celle qui nous ressemble et qui nous parle.
 
+<iframe width="1040" height="585" src="https://www.youtube.com/embed/A0YMzofaD-g?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <figcaption>
+    <span class="figure__legend">Merci à Magic <a href="https://gweno.tv/">Gweno</a> pour l'animation ✨</span>
+  </figcaption>
+
+### Le logo, comme un signe qui nous rapproche
+Côté logo, on s’amuse d’un signe simple mais fondateur : un underscore qui vient compléter le nom d'Elao.  
+Cet underscore (que vous pouvez aussi appeler sous-tiret, blanc souligné, caractère de soulignement ou plus communément “tiret du 8”) est le symbole que tout reste à écrire, comme un curseur, comme si Elao n’était finalement qu’un point de départ, celui des projets de nos clients, tout en étant également un tout, celui de l’équipe de choc qui le compose. 
+
 <figure>
     <img src="images/posts/2021/elao-rebranding02.jpg">
     <figcaption>
@@ -30,15 +39,9 @@ Après un travail remarquable à 4 mains sur notre plateforme de marque réalis�
     </figcaption>
 </figure>
 
-### Le logo, comme un signe qui nous rapproche
-Côté logo, on s’amuse d’un signe simple mais fondateur : un underscore qui vient compléter le nom d'Elao.  
-Cet underscore (que vous pouvez aussi appeler sous-tiret, blanc souligné, caractère de soulignement ou plus communément “tiret du 8”) est le symbole que tout reste à écrire, comme un curseur, comme si Elao n’était finalement qu’un point de départ, celui des projets de nos clients, tout en étant également un tout, celui de l’équipe de choc qui le compose. 
 
 <figure>
     <img src="images/posts/2021/elao-loop.gif">
-    <figcaption>
-      <span class="figure__legend">Merci à Magic <a href="https://gweno.tv/">Gweno</a> pour l'animation ✨</span>
-    </figcaption>
 </figure>
 
 ### Dans la palette, prendre le parti de la nuance

@@ -24,7 +24,7 @@ En plus d'une application mobile développée avec React Native, PanneauPocket s
 
 **PanneauPocket a confié à Elao le développement de son application mobile à destination des habitants, de son application de back-office à destination des municipalités et de son application web.**
 
-Un projet dont l'utilité n'est plus à démontrer : les volumes de notifications envoyées (plus de 260 000 en 2020), les métriques des visites quotidiennes et panneaux créés ont obligé PanneauPocket à muscler encore plus leur infrastructure. 
+Un projet dont l'utilité n'est plus à démontrer : les volumes de notifications envoyées (plus de 260 000 en 2020), les métriques des visites quotidiennes et panneaux créés ont obligé PanneauPocket à muscler encore plus leur infrastructure avec [Rix](https://rix.fr). 
 
 ## L'expertise Elao déployée pour les applications PanneauPocket
 

@@ -114,9 +114,8 @@ fos_elastica:
 
 Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calcul de pertinence.
 
-<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article.
-</div>
+!!! Attention
+    Les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article.
 
 ## Requêter
 

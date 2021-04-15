@@ -2,7 +2,7 @@
 {% extends 'base.html.twig' %}
 
 {% block og_image asset('social/Elao-home-og2.jpg')  %}
-{% block twitter_image absolute_url(asset('social/Elao-home-og2.jpg'))  %}
+{% block twitter_image absolute_url(asset('social/elao-ogimage-twitter.jpg'))  %}
 {% set interval = date('now').diff(date(site.birthdate)) %}
 {% block meta_title "Réalisations web : revue de nos projets depuis %d ans | Elao"|format(interval.y) %}
 {% block meta_description "Découvrez quelques unes des applications web et mobile réalisées depuis %d ans chez Elao"|format(interval.y) %}

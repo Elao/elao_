@@ -5,7 +5,7 @@ date: "2021-04-12"
 
 # Params
 metaDescription: "PanneauPocket - informer et alerter les habitants partout en France."
-description: "PanneauPocket est une solution mobile et web permettant aux mairies et acteurs de la vie municipale de communiquer des informations essentielles aux habitants."
+description: "PanneauPocket est une solution mobile et web permettant aux mairies et acteurs de la vie publique de communiquer des informations essentielles et des alertes aux habitants."
 websiteUrl: https://www.panneaupocket.com/
 shortDescription: "Les panneaux municipaux dans la poche"
 clients: PanneauPocket
@@ -18,7 +18,9 @@ images: ["images/casestudies/headers/panneaupocket-banner.jpg"]
 
 ## Le contexte du projet
 
-**PanneauPocket a pour mission de fluidifier la communication entre les municipalités et les habitants des communes partout en France, peu importe leur taille. PanneauPocket transpose les panneaux d'informations lumineux que vous rencontrez dans les rues principales dans une application mobile.** L'intérêt réside dans le système de notification qui permet à chacun d'être informé et alerté, encore plus pertinent dans une période où il est nécessaire de rester chez soi. Une coupure de courant ou de l'eau ? Une fête de village ? Des informations sur la situation sanitaire ? Les habitants ayant téléchargé l'application sont notifiés dès que la mairie le souhaite.
+**N°1 dans son domaine en France, PanneauPocket a pour mission de fluidifier la communication entre les municipalités, les intercommunalités, et les habitants de leurs territoires. La solution a été également choisie pour équiper toutes les forces de Gendarmerie partout en France.** 
+
+L'intérêt réside dans le système de notification push qui permet à chacun d'être informé et alerté, encore plus pertinent dans une période où il est nécessaire de rester chez soi. Une coupure de courant ou de l'eau ? Une fête de village ? Des informations sur la situation sanitaire ? Les habitants ayant téléchargé l'application sont notifiés dès que la mairie le souhaite.
 
 En plus d'une application mobile développée avec React Native, PanneauPocket s'est dotée d'une application web lui permettant d'être encore plus accessible.
 
@@ -29,8 +31,7 @@ Un projet dont l'utilité n'est plus à démontrer : les volumes de notification
 ## L'expertise Elao déployée pour les applications PanneauPocket
 
 ### Ateliers de recueil du besoin
-PanneauPocket est né dans la tête de Christophe Such, ancien directeur des Projets Innovants chez Orange. Il a fait appel à Elao pour l'aider à structurer une première version de l'application en mode MVP. Il fallait alors trouver le bon équilibre entre l'offre (les collectivités) et la demande (les habitants) et développer le fonctionnel nécessaire à chacun des groupes d'utilisateurs pour répondre à leurs besoins dès la première version.
-Les développeurs Elao ont fait évoluer le back-office et l'application de la première version de l'application main dans la main avec PanneauPocket.
+Le fondateur de PanneauPocket a fait appel à Elao pour l'aider à re-structurer une seconde version de l'application en mode MVP. Il fallait alors trouver le bon équilibre entre l'offre (les collectivités) et la demande (les habitants) et développer le fonctionnel nécessaire à chacun des groupes d'utilisateurs pour répondre à leurs besoins dès la première version. Les développeurs Elao ont fait évoluer le back-office et l'application de la première version de l'application main dans la main avec PanneauPocket.
 
 ### Phase de build (développement)
 Thomas, Anne-Laure et Christophe ont mené de front toute la phase de développement, **accompagnant l'équipe de PanneauPocket dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle.** La mise en production de la première version a permis à PanneauPocket d’avoir un socle solide pour toutes ses futures évolutions fonctionnelles..
@@ -38,18 +39,17 @@ Thomas, Anne-Laure et Christophe ont mené de front toute la phase de développe
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
 Depuis la mise en production de ses applications, PanneauPocket fait encore appel de manière très régulière à Elao pour les évolutions de ses applications, qui ont chacune une feuille de route très fournie. Par ailleurs, PanneauPocket a ouvert son application non plus seulement aux mairies mais également aux gendarmeries et aux communautés de communes, ce qui représente de nouveaux challenges fonctionnels.
 
-
 ## Les applications
 
-### Pour les municipalités clientes et les gendarmeries : une interface de gestion des panneaux et un widget à intégrer
+### Pour les collectivités clientes et les gendarmeries : une interface de gestion des panneaux et un widget à intégrer
 
-PanneauPocket a depuis le début une volonté de simplification de ses interfaces, tout en proposant un maximum de fonctionnalités. Un défi à relever à chaque nouvelle page !
+PanneauPocket a depuis le début une volonté réelle de simplification de ses interfaces, tout en proposant un maximum de fonctionnalités. Un défi à relever à chaque nouvelle page !
 
 **Quelques fonctionnalités clés**
 
 * Des types de panneaux différents (alertes et informations) ;
-* Un système d'envoi et de fréquence de notification personnalisé par panneau ;
-* L'ajout de contenu riche aux panneaux : couleurs, taille, emojis, images, PDF, etc. pour répondre aux besoins exprimés par les créateurs de panneaux ;
+* Un système d'envoi et de fréquence de notification personnalisés par panneau ;
+* L'ajout de contenu riche pour répondre aux besoins exprimés par les créateurs de panneaux : couleurs, taille, emojis, images, PDF, etc. ;
 * L'affichage de statistiques pertinentes (nombre de mises en favoris, d'affichages des panneaux, etc.).
 
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit PanneauPocket, l'équipe technique d'Elao a réalisé les applications web avec Symfony et l'intégration a été réalisée avec Bootstrap dans une logique de MVP.

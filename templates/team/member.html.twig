@@ -1,7 +1,7 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 {% block og_image asset('social/Elao-home-og2.jpg')  %}
-{% block twitter_image asset('social/Elao-home-og2.jpg')  %}
+{% block twitter_image absolute_url(asset('social/Elao-home-og2.jpg'))  %}
 
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">

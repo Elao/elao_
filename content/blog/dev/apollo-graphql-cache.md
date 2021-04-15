@@ -246,7 +246,7 @@ mutation {
 }
 ```
 
-Apollo a compris que vous intevenez sur le même objet (même type et meme id). Le cache sera alors automatiquement mis à jour et la propriété `name` sera modifiée partout. Attention par contre, le cache sera mis à jour avec les données renvoyées par la mutation, il faut donc bien faire attention à sélectionner les données que l'on souhaite modifier dans le cache.
+Apollo a compris que vous intervenez sur le même objet (même type et meme id). Le cache sera alors automatiquement mis à jour et la propriété `name` sera modifiée partout. Attention par contre, le cache sera mis à jour avec les données renvoyées par la mutation, il faut donc bien faire attention à sélectionner les données que l'on souhaite modifier dans le cache.
 
 Je vous parlais du côté *state manager* du cache, et bien c'est ce qui se passe ici. Les objets y sont stockés avec une clé de cache de façon à pouvoir mettre à jour tous les résultats de requête concernés en une fois lorsque que l'un d'eux est modifié (sous couvert qu'ils soient identifiables par un `id` évidemment).
 

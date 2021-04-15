@@ -2,12 +2,12 @@
 ---
 type:               "post"
 title:              "Rebranding 1/3 : le fond"
-date:               "2021-04-15"
-publishdate:        "2021-04-15"
+date:               "2021-04-20"
+publishdate:        "2021-04-20"
 draft:              false
 tableOfContent:     2
 
-description:        "Après le fond, la forme."
+description:        "On pose les bases."
 
 thumbnail:          "images/posts/headers/hello-elao.jpg"
 header_img:         "images/posts/headers/hello-elao.jpg"

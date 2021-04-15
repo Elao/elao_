@@ -1,0 +1,51 @@
+.tabs {
+  margin: 40px 0;
+}
+
+.tabs__nav {
+  display: flex;
+
+  a {
+    padding: 10px 20px;
+    font-family: 'antikor bold';
+    font-size: 16px;
+    color: $color-primary;
+    background: #fff;
+    border: solid 3px $color-secondary;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 0;
+
+    &:first-of-type {
+      border-radius: 5px 0 0 0;
+    }
+
+    &:last-of-type {
+      border-right: solid 3px $color-secondary;
+      border-radius: 0 5px 0 0;
+    }
+
+    &.active {
+      color: $color-primary;
+      background: $color-secondary;
+    }
+  }
+}
+
+.tabs__content {
+  padding: 15px 20px 20px;
+  background: $color-secondary;
+  border-radius: 0 5px 5px 5px;
+
+  .item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    pre {
+      margin: 0;
+    }
+  }
+}

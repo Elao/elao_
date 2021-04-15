@@ -35,15 +35,13 @@ L'une des plus connues est l'**[UUID](https://fr.wikipedia.org/wiki/Universal_Un
 
 L'url suivante est quand même beaucoup moins lisible et pratique que la même utilisant des IDs entiers :
 
-<figure>
-  <pre>https://www.example.com/shop/category/b441a884-5d46-423b-8317-ddb6f7e3f2fb/product/f0283088-5bd3-4acc-bc42-e6d173d33dd8?filter=165779fc-171d-4f3c-8c60-a2351d6468d3</pre>
-  <figcaption>Une url avec des UUIDs</figcaption>
-</figure>
+```
+URL avec des UUIDs :
+https://www.example.com/shop/category/b441a884-5d46-423b-8317-ddb6f7e3f2fb/product/f0283088-5bd3-4acc-bc42-e6d173d33dd8?filter=165779fc-171d-4f3c-8c60-a2351d6468d3
 
-<figure>
-  <pre>https://www.example.com/shop/category/3/product/56?filter=33</pre>
-  <figcaption>Une url avec des IDs</figcaption>
-</figure>
+URL avec des IDs
+https://www.example.com/shop/category/3/product/56?filter=33
+```
 
 Une autre solution pourrait être d'utiliser des **identifiants entiers non auto-incrémentés**. Cela nécessite néanmoins la mise en place d'un algorithme permettant de générer de manière unique ces identifiants. C'est une solution qui peut être viable, mais pas forcement simple à mettre en place et la perte d'auto-increment côté base de données peut être handicapant.
 

@@ -9,8 +9,8 @@ tableOfContent:     true
 
 description:        "Après le fond, la forme."
 
-thumbnail:          "images/posts/headers/hello-elao.jpg"
-header_img:         "images/posts/headers/hello-elao.jpg"
+thumbnail:          "images/posts/headers/elao-rebrand-header-forme.jpg"
+header_img:         "images/posts/headers/elao-rebrand-header-forme.jpg"
 tags:               ["Rebranding", "Logo"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]

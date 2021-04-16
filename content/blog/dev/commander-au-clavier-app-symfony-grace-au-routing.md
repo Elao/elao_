@@ -6,7 +6,7 @@ publishdate:    "2018-10-25"
 draft:          false
 
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
-tableOfContent:        true
+tableOfContent: 2
 
 thumbnail:      "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
 header_img:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
@@ -27,9 +27,7 @@ une interface de commande par texte avec autocompletion.
 
 ## Le contexte
 
-<p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/backoffice.png" alt="Backoffice" />
-</p>
+<img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/backoffice.png" alt="Interface d'administration" />
 
 Ceci est une capture d'écran d'interface d'administration d'une application classique.
 Il y a des listes, des boutons, des menus...
@@ -50,14 +48,14 @@ Exemple lorsqu'on tape "Modifier document" sur Google :
 
 Cela serait pas mal d'avoir la même chose dans notre application, n'est-ce pas ?
 
-## Exploiter le *routing* de Symfony ?
+## Exploiter le routing de Symfony ?
 
 Symfony dispose des commandes *Console* mais cette interface est dédiée aux développeurs.
 L'idée est d'avoir un moteur de recherche dans le navigateur qui suggère des résultats qui irait piocher dans notre
 application sans forcément écrire complètement une API côté Backend. Et pourquoi pas exploiter le *Routing* de Symfony ?
 Nous allons voir pas à pas comment nous avons exploité le *routing* pour répondre à notre besoin.
 
-### Récupérer toutes les *routes* de l'application
+### Récupérer toutes les routes de l'application
 
 ```php
 <?php
@@ -165,7 +163,7 @@ Cela signifie que côté frontend, lorsqu'on aura tapé "User update" + un espac
 une requête XMLHttpRequest (Ajax pour les intimes) sera déclenchée afin de récupérer les *routes* contenant
 les noms des utilisateurs.
 
-### Récupérer les *requirements* d'une *route*
+### Récupérer les requirements d'une route
 
 Considérons que l'on a cette *route* :
 
@@ -224,7 +222,7 @@ il s'agit.
 
 On a besoin de deux choses :
 
-* 1. Récupérer le *controller* d'une *route* :
+1. Récupérer le *controller* d'une *route* :
 
 ```php
 <?php
@@ -232,7 +230,7 @@ On a besoin de deux choses :
 $controllerResolver->getController($request);
 ```
 
-* 2. Récupérer les metadata des arguments d'un *controller* :
+2. Récupérer les metadata des arguments d'un *controller* :
 
 ```php
 <?php
@@ -307,7 +305,7 @@ Cela devient intéressant !
 
 Voyons voir ce que l'on peut en faire...
 
-### *Resolver* dédié
+### Resolver dédié
 
 Nous allons coder un *Resolver* dédié pour un paramètre dès lors qu'il est de type `App\Domain\Model\User`.
 
@@ -376,7 +374,7 @@ On peut donc maintenant proposer à l'utilisateur d'accéder à des *routes* aya
 
 ## Améliorations
 
-### *Resolver Doctrine* ?
+### Resolver Doctrine ?
 
 Pourrait-on avoir un *resolver* générique dédié à nos classes d'entité *Doctrine* ?
 
@@ -597,7 +595,7 @@ Le support de l'API SpeechRecognition est très limité pour l'instant :
 
 [Démo ici](https://www.google.com/intl/en/chrome/demos/speech.html) (à tester avec Chrome seulement au jour où cet article a été écrit).
 
-C'est une technologie assez promoteuse. A suivre donc !
+C'est une technologie assez promoteuse. À suivre donc !
 
 ---
 

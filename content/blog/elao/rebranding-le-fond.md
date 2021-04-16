@@ -40,7 +40,7 @@ Alors, allons-y, existons.
 
 On le prouve depuis des années, au gré des projets, des clients qui nous font confiance, des conférences, de nos contributions open-source : nous sommes des expert·e·s du développement d’applications et de produits numériques. Notre expertise est autant à la conception qu’à la réalisation. Nous sommes capables de challenger les clients tantôt sur leurs solutions techniques, tantôt sur leurs solutions fonctionnelles et nous allons même parfois jusqu’à questionner les fondements de leur business. 
 
-Ce n’est pas facile à écrire, “nous sommes des experts” : on peut ne pas se sentir légitime et penser manquer d’humilité. Mais assez de fausse modestie. Elao et son équipe murit, on sait ce que l’on fait bien tout autant que ce l’on ne sait pas faire. 
+Ce n’est pas facile à écrire, “nous sommes des experts” : on peut ne pas se sentir légitime et penser manquer d’humilité. Mais assez de fausse modestie. Elao et son équipe mûrit : on sait ce que l’on fait bien tout autant que ce l’on ne sait pas faire. 
 
 Le développement applicatif, c’est notre métier depuis 16 ans. L’équipe technique (développement et infra) est composée à 75 % de seniors. On a la chance de s’appuyer sur une équipe qui est non seulement expérimentée, mais aussi là depuis longtemps, avec de nouvelles têtes qui arrivent de temps en temps, mais un socle solide composé de personnes aguerries et impliquées. Après plus de 200 projets, on a essuyé notre lot de projets compliqués ou en désaccord avec nos valeurs. On commence à savoir de quoi on parle. On sait aujourd’hui que nous ne sommes pas en recherche de croissance à tout prix : on veut surtout préserver l’équilibre de l’équipe avec des projets qui résonnent en nous. 
 

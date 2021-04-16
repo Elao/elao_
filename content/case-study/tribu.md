@@ -32,7 +32,7 @@ L'équipe Elao s'est déplacée dans les ateliers de Tribü afin de comprendre l
 **Les besoins étaient double : proposer une solution efficace pour les techniciens et un rapport pour les entreprises qui soit le plus clair possible.**
 
 ### Ateliers UX/UI
-Les développeurs Elao sont avant tout des concepteurs et est capable d'être force de proposition d'un point de vue fonctionnel.
+Les développeurs Elao sont avant tout des concepteurs et n'hésitent pas à être force de proposition d'un point de vue fonctionnel.
 Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'interface utilisateurs (UI) ont été réalisées main dans la main avec Mathilde Vandier, designer freelance, avec laquelle nous avons itéré du début à la fin du projet.
 
 ### Phase de build (développement)

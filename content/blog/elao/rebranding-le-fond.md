@@ -91,7 +91,7 @@ Chaque projet, chaque client, chaque contexte client est spécifique. Nous devon
 
 Tout cela demande une énergie et une empathie folle ; c'est la passion de toute l'équipe qui en est le moteur et quand les valeurs du projet résonnent avec celle de l'équipe la valeur pour les utilisateurs de l'application n'en est que décuplée. 
 
-Nous sommes des artisans, nous co-construisons des applications web et mobile sur mesure.
+Nous sommes des artisans, nous co-construisons des applications web et mobiles sur mesure.
 
 ### Le manifeste
 

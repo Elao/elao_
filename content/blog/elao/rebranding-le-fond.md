@@ -74,7 +74,7 @@ C'était evident avec le recul quand on vu l'engament remarquable des équipes s
 
 **S’inscrire dans un système vertueux de création de valeur**
 
-Là on touche à notre quotidien et nos interactions avec nos clients et leur utilisateur, nous essayons de mettre toujours la création de valeur au centre des discussions même si le plus souvent ça nous amène à simplifier et à réduire le budget des premières versions. 
+Là on touche à notre quotidien et nos interactions avec nos clients et leurs utilisateurs, nous essayons de mettre toujours la création de valeur au centre des discussions même si le plus souvent ça nous amène à simplifier et à réduire le budget des premières versions. 
 
 Ce système vertueux va au-delà de nos interactions sur les projets de nos clients, elle doit prendre en compte la valeur de l’écosystème opensource dans lequel nous baignons depuis 16 ans. Les fondations d'Elao reposent sur les fondamentaux du mouvement opensource. Nous n'en serions pas là sans ce dernier, nous essayons au quotidien de lui rendre un peu de ce qu'il nous a apporté. Nous encourageons l’équipe à contribuer à des projets, nous ouvrons régulièrement du code, nous partageons nos expériences dans notre blog, nous donnons des conférences et nous nous impliquons dans l’écosystème associatif lyonnais (AFUP, Mixit, Cuisine du web, Digital League) 
 

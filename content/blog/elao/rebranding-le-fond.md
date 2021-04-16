@@ -67,7 +67,7 @@ Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagn�
 
 Cela a été le plus dur à formaliser : pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utiles à notre niveau dans le métier que l’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal, en apportant notre pierre à l'édifice.
 
-Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme Tribü, une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté quand on se dit qu'on a envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
+Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme Tribü, une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté lorsque l'on affirme notre envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
 
 
 ### How
@@ -81,7 +81,7 @@ Ce système vertueux va au-delà de nos interactions sur les projets de nos clie
 
 ### What
 
-**Conseil et conception d’applications web sur mesure, animé par des experts passionnés**
+**Conseil et conception d’applications web sur mesure, animés par des experts passionnés**
 
 Le «Why» et le «How» sont posés, comment allons-nous les mettre en œuvre ? C'est la que le «What» intervient, ce dernier pouvant évoluer, voire pivoter radicalement sans remettre en cause les autres parties. 
 
@@ -107,7 +107,7 @@ Nous nous retrouvons dans cette plateforme du haut de nos 16 années d'expérien
 
 Une fois tout cela exprimé, comment le traduire en mots ?  
 Quels sont les concepts, les notions que l’on veut appuyer lorsqu’on parle de notre métier ? 
-C'est là que le manifeste entre en jeu, des phrases concrètes, précises, dont chaque mot est attentivement choisi et qui sont l'inspiration directe qui nous a servi à refaire le site sur lequel vous êtes actuellement.
+C'est là que le manifeste entre en jeu, des phrases concrètes, précises, dont chaque mot est attentivement choisi et qui sont l'inspiration directe qui nous a servi à refaire le site que vous visitez actuellement.
 
 Notre manifeste :  
 
@@ -123,7 +123,7 @@ Notre manifeste :
 
 ## Conclusion
 
-La base est là, il nous a fallu du temps pour exprimer et formaliser pour enfin assimiler et assumer tout ça. Nous n'aurions jamais pu le faire nous-mêmes sans l'aide d'Oriane et d'Estelle. 
+La base est là, il nous a fallu du temps pour exprimer, formaliser, assimiler et enfin assumer tout ça. Nous n'aurions jamais pu le faire nous-mêmes sans l'aide d'Oriane et d'Estelle. 
 Résumer ces 16 ans d'expérience(s) et d'expérimentation(s) en une page n'est pas donné à tout le monde. 
 
 Ces concepts n'étaient pas nouveaux, ils étaient là, distillés au quotidien dans nos échanges avec les clients et notre implication dans leurs projets.

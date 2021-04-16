@@ -19,7 +19,7 @@ tweetId:            ""
 
 ## Un petit peu de contexte
 
-Elao est né en 2005 à Lyon, créée par des développeurs qui ne trouvaient pas de structure correspondant à leurs attentes.
+Elao est née en 2005 à Lyon, créée par des développeurs qui ne trouvaient pas de structure correspondant à leurs attentes.
 
 À l’époque, Symfony n'était pas encore sortie en version stable, mais on l’utilisait déjà, ReactJS n’existait pas, l’iPhone était encore en phase de R&D. Les agences web fleurissaient à grands coups de développement de sites vitrines et de boutiques e-commerces. Le développement d’applications métiers (de produits numériques, comme on le dit aujourd’hui), c’était de gros clients lourds en Java voire en Flash et on ne parlait pas encore de «solutions SaaS» hébergées dans «le cloud». Les «GAFAM» ne contrôlaient pas encore le monde. 
 
@@ -49,15 +49,15 @@ Alors, n’est-ce pas le moment d’affirmer ? N’est-ce pas le propre de la ma
 Mais surtout, comment s’y prendre ? On vous le disait plus haut, la comm’, ce n’est pas notre fort. On est bien meilleur·e·s pour concevoir des architectures techniques que pour trouver le bon mot. Savoir dire, c’est un métier, et ce n’est définitivement pas le nôtre. 
 Nous étions sûr·e·s d’une chose, c’est qu’on ne voulait pas d'un simple rafraîchissement de charte graphique. L’objectif était d’avoir une image cohérente avec le discours que nous portons au quotidien, en atelier avec nos clients et prospects. Fini le fourre-tout de «l'agence web». Fini le tout-venant. Finis les projets qui ne font vibrer personne. 
 
-On a donc décidé de bien faire les choses bien et de s’accompagner de vrai·e·s professionnel·le·s pour notre rebranding et surtout : de prendre le temps. 
+On a donc décidé de faire les choses correctement et de s’entourer de vrai·e·s professionnel·le·s pour notre repositionnement et de prendre le temps de le faire bien.
 
 Qu’est-ce qui nous fait nous lever tous les matins pour travailler sur des projets qui ne sont finalement… pas les nôtres ?
 
 ## Notre plateforme de marque
 
-Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagnés d’Oriane Audeoud (Galanga) et Estelle Gironde (Heystelle), nous avons travaillé sur notre plateforme de marque. L’objectif de la plateforme était de nous aligner sur ce que l’on voulait dire d’Elao et des valeurs qui nous rassemblent en tant que collectif et pas uniquement dans un but de communication.
+Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagnés d’Oriane Audeoud (Galanga) et Estelle Gironde (Heystelle), nous avons travaillé sur notre plateforme de marque. L’objectif de celle-ci était de nous aligner sur ce que l’on voulait dire d’Elao et des valeurs qui nous rassemblent en tant que collectif et pas uniquement dans un but de communication.
 
-À travers de longs entretiens avec l’équipe, Oriane et Estelle ont su tirer l’essence d’Elao pour le formaliser à travers le concept du [Golden Circle](https://www.youtube.com/watch?v=qp0HIF3SfI4) développé et présenté par Simon Sinek.
+À travers de longs entretiens avec l’équipe, Oriane et Estelle ont su prendre le temps de tirer l’essence d’Elao pour le formaliser à travers le concept du [Golden Circle](https://www.youtube.com/watch?v=qp0HIF3SfI4) développé et présenté par Simon Sinek.
  
 ![](http://www.moonseven-editing.com/wp-content/uploads/2017/09/golden-circle-simon-sinek.png)
 
@@ -65,9 +65,9 @@ Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagn�
 
 **L’expertise numérique citoyenne**
 
-Cela a été le plus dur à formaliser : pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utiles à notre niveau dans le métier que l’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal en apportant notre pierre à l'édifice.
+Cela a été le plus dur à formaliser : pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utiles à notre niveau dans le métier que l’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal, en apportant notre pierre à l'édifice.
 
-Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme Tribü par exemple, une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté quand on se dit qu'on a envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
+Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme Tribü, une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté quand on se dit qu'on a envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
 
 
 ### How
@@ -76,28 +76,28 @@ Avec le recul, c'était évident. Quand on voit l'engagement remarquable des éq
 
 Là, on touche d'abord à notre quotidien et nos interactions avec nos clients et leurs utilisateurs : nous essayons de toujours mettre la création de valeur au centre des discussions, même si le plus souvent, cela nous amène à simplifier et à réduire le budget des premières versions. On aime beaucoup simplifier. 
 
-Ce système vertueux va au-delà de nos interactions sur les projets de nos clients, elle doit prendre en compte la valeur de l’écosystème open source dans lequel nous baignons depuis 16 ans. Les fondations d'Elao reposent sur les fondamentaux du mouvement open source. Sans lui, nous n'en serions pas là, et nous essayons au quotidien de lui rendre un peu de ce qu'il nous a apporté. Nous encourageons l’équipe à contribuer à des projets, nous ouvrons régulièrement du code, nous partageons nos expériences dans notre blog, nous donnons des conférences et nous nous impliquons dans l’écosystème associatif lyonnais (AFUP, Mixit, Cuisine du web, Digital League). 
+Ce système vertueux va au-delà de nos interactions sur les projets de nos clients, elle doit prendre en compte la valeur de l’écosystème  dans lequel nous baignons depuis 16 ans. Les fondations d'Elao reposent sur les fondamentaux du mouvement open source. Sans lui, nous n'en serions pas là, et nous essayons au quotidien de lui rendre un peu de ce qu'il nous a apporté. Nous encourageons l’équipe à contribuer à des projets, nous ouvrons régulièrement du code, nous partageons nos expériences dans notre blog, nous donnons des conférences et nous nous impliquons dans l’écosystème associatif lyonnais (AFUP, Mixit, Cuisine du web, Digital League). 
 
 
 ### What
 
 **Conseil et conception d’applications web sur mesure, animé par des experts passionnés**
 
-Le Why et le How sont posés, comment allons-nous les mettre en œuvre ? C'est la que le What intervient, ce dernier pouvant évoluer, voire pivoter radicalement sans remettre en cause les autres parties. 
+Le «Why» et le «How» sont posés, comment allons-nous les mettre en œuvre ? C'est la que le «What» intervient, ce dernier pouvant évoluer, voire pivoter radicalement sans remettre en cause les autres parties. 
 
 Nous sommes donc des concepteurs d'applications web et mobiles sur mesure. C'est moins clinquant que le terme agence web 360 Digitale (avec les doigts 👆) certes, mais c'est ce que l'on aime et ce que l'on sait faire. 
 
 Chaque projet, chaque client, chaque contexte est spécifique. Nous devons assimiler sa vision, son histoire, son organisation et comprendre sa cible afin de proposer les solutions les plus pertinentes en fonction de ses besoins tout au long du projet. 
 
-Tout cela demande une énergie et une empathie folles ; c'est la passion de toute l'équipe qui en est le moteur et quand les valeurs du projet résonnent avec celles de l'équipe, la valeur créée pour les utilisateurs de l'application n'en est que décuplée. 
+Tout cela demande une énergie et une empathie importantes, un investissement de tous les instants ; c'est la passion de toute l'équipe qui en est le moteur et quand les valeurs du projet s'alignent avec celles de l'équipe, la valeur créée pour les utilisateurs de l'application n'en est que décuplée. 
 
 Nous sommes des artisans, nous construisons avec nos clients des applications web et mobiles sur mesure.
 
 ### Le manifeste
 
-Ça y est, on a la colonne vertébrale. En y ajoutant nos valeurs et notre personnalité, on arrive à la synthèse suivante qui tient sur un slide. C'était si évident ou pourtant si compliqué à formaliser ! 
+Ça y est, on a la colonne vertébrale. En y ajoutant nos valeurs et notre personnalité, on arrive à la synthèse suivante qui tient sur un «slide». C'était si évident et pourtant si compliqué à formaliser ! 
 
-Nous nous retrouvons dans cette plateforme en regardant nos 16 ans d'expérience et d'expérimentation, mais surtout, nous nous projetons pour les 16 prochaines.
+Nous nous retrouvons dans cette plateforme du haut de nos 16 années d'expérience et d'expérimentation et surtout nous nous projetons celles à venir
 
 ![](images/posts/2021/rebranding-le-fond/recap.jpg)
 
@@ -105,7 +105,9 @@ Nous nous retrouvons dans cette plateforme en regardant nos 16 ans d'expérience
 
 
 
-Une fois que l’on a dit tout ça, comment ça se traduit en mots ? Quels sont les concepts, les notions que l’on veut appuyer lorsqu’on parle de notre métier ? C'est là que le manifeste rentre en jeu, des phrases concrètes qui sont les éléments fondateurs du site lequel vous êtes actuellement. 
+Une fois tout cela exprimé, comment le traduire en mots ?  
+Quels sont les concepts, les notions que l’on veut appuyer lorsqu’on parle de notre métier ? 
+C'est là que le manifeste entre en jeu, des phrases concrètes, précises, dont chaque mot est attentivement choisi et qui sont l'inspiration directe qui nous a servi à refaire le site sur lequel vous êtes actuellement.
 
 Notre manifeste :  
 
@@ -126,7 +128,7 @@ Résumer ces 16 ans d'expérience(s) et d'expérimentation(s) en une page n'est 
 
 Ces concepts n'étaient pas nouveaux, ils étaient là, distillés au quotidien dans nos échanges avec les clients et notre implication dans leurs projets.
 
-Maintenant, un autre challenge nous attendait : mettre en forme tout ça et arriver à faire passer tout ça à travers notre site pour les personnes qui ne nous connaissent pas, mais cela est une autre histoire que Christelle vous racontera bientôt.
+Maintenant, un autre challenge nous attendait : mettre en forme et arriver à transmettre tout ça à travers notre site pour les personnes qui ne nous connaissent pas encore, mais il s'agit d'une autre histoire que Christelle vous racontera bientôt.
 
 Ci-dessous la plateforme de marque telle que l'on nous l'avons présentée à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous contactant directement. 
 

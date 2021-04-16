@@ -125,7 +125,7 @@ Voilà on a la base, il nous a fallu du temps pour exprimer, formaliser pour ens
 
 Ces concepts n'étaient pas nouveaux, ils étaient là, distillés au quotidien dans nos échanges avec les clients et notre implication dans leurs projets.
 
-Maintenant, un autre challenge nous attendait : mettre en forme tout ça et arriver à faire passer distiller tout ça à travers notre site pour les personnes qui ne nous connaissent pas, mais cela et une autre histoire que Christelle vous racontera bientôt 
+Maintenant, un autre challenge nous attendait : mettre en forme tout ça et arriver à faire passer distiller tout ça à travers notre site pour les personnes qui ne nous connaissent pas, mais cela est une autre histoire que Christelle vous racontera bientôt 
 
 Ci-dessous la plateforme de marque tel que l'on nous l'avons présenté à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous contactant directement. 
 

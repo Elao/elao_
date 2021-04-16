@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Mettez en valeur vos offres d'emploi grâce aux données structurées"
 date:               "2019-08-26"
-tableOfContent:            true
+tableOfContent:     2
 draft:              false
 
 description:        "Et si vous rendiez vos offres d'emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ? "

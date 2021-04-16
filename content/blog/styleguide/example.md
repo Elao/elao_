@@ -4,7 +4,7 @@ title:              "Petit guide de style du blog"
 date:               "2020-09-23"
 publishdate:        "2020-09-23"
 draft:              true
-tableOfContent:     true
+tableOfContent:     2
 
 description:        "Tour d'horizon de ce qu'on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction."
 

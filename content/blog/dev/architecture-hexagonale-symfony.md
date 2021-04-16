@@ -6,7 +6,7 @@ publishdate:        "2017-06-21"
 draft:              false
 
 description:        "Présentation de l'architecture hexagonale et de son implémentation avec le framework Symfony."
-tableOfContent:            true
+tableOfContent:     2
 
 thumbnail:          "images/posts/thumbnails/hexagons.jpg"
 header_img:         "images/posts/headers/hexagons.jpg"
@@ -16,7 +16,7 @@ categories:         ["Dev", "Symfony"]
 author:    "mcolin"
 ---
 
-# Introduction
+## Introduction
 
 L'architecture hexagonale, également appelée *Ports & Adapters*, présente deux caratéristiques lorsqu'on la schématise : une forme **hexagonale** (d'où son nom) et une séparation entre l'**application**, l'**extérieur** et une partie contenant des **adapteurs** permettant aux deux de communiquer.
 
@@ -24,7 +24,7 @@ Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagona
 
 ![Architecture hexagonale](images/posts/2017/hexagonal-architecture.png)
 
-## Une architecture hexagonale
+### Une architecture hexagonale
 
 Les deux grands principes de base de l'architecture hexagonale sont :
 
@@ -37,7 +37,7 @@ Le **code technique** c'est tout l'environnement nécessaire à votre applicatio
 
 Le **code métier** c'est tout le code qui traduit le métier de votre client. Il s'agit des règles métier, de la logique métier, du code purement applicatif, ... Ce code est irremplaçable et constitue le coeur de votre application.
 
-## Une architecture en couches (ou en oignon)
+### Une architecture en couches (ou en oignon)
 
 <figure>
     <img src="images/posts/2017/onionman.jpg" alt="Onion man">
@@ -75,7 +75,7 @@ Les **événements** et les **exceptions** peuvent être lancés dans une couche
 
 Cette séparation en couches n'est pas indispensable à l'architecture hexagonale mais offre un cadre strict permettant de bien séparer votre code applicatif de votre infrastructure ainsi que les différentes parties de votre code. Vous pouvez vous contenter de séparer Domain/Application (code métier) de Infrastructure/UI (code technique).
 
-## Qu'est ce qu'on met dedans ?
+### Qu'est ce qu'on met dedans ?
 
 Dans la couche **Domain** je mets le coeur métier de mon code. Sans être exhaustif, cela comprend mes modèles, tout ce qui concerne les règles métiers (pour lesquelles vous pouvez utiliser le [pattern specification](https://github.com/maximecolin/satisfaction)), les événéments et exceptions métier.
 
@@ -101,7 +101,7 @@ src
 |  |- Form
 ```
 
-## Pourquoi ?
+### Pourquoi ?
 
 Généralement lorsque je présente cette architecture on me fait souvent les remarques suivantes : "C'est compliqué !", "Faut écrire beaucoup plus de code !" (cf. les adapteurs), "Ça prend trop de temps !", ...
 
@@ -128,13 +128,13 @@ Au final, l'investissement de départ est un peu plus grand, quoiqu'avec l'habit
     </figcaption>
 </figure>
 
-# Et Symfony dans tout ça ?
+## Et Symfony dans tout ça ?
 
 Tout d'abord j'essaie de créer le moins possible de bundles, voire pas du tout. Cette fonctionnalité de Symfony n'est d'aucune utilité pour cette architecture, elle reste néanmoins indispensable sur certaines fonctions selon la version du framework.
 
 Symfony tend d'ailleurs vers le *no bundle* dans ses versions les plus récentes (3.3 sortie dernièrement et 4.0 à venir).
 
-## Framework agnostique
+### Framework agnostique
 
 La première règle est de bien **découpler votre code métier de votre framework**, il faut donc bannir les annotations du code que vous placez dans les couches Domain et Application.
 
@@ -191,7 +191,7 @@ Troisièmement, faites bien attention à **ne jamais utiliser de code provenant 
 
 Enfin, **utilisez l'injection de dépendance** de Symfony pour injecter vos adapteurs dans votre code métier.
 
-# Conclusion
+## Conclusion
 
 Pour conclure, je dirai que l'architecture hexagonale n'est pas une fin en soi ni l'architecture ultime. Je la vois davantage comme un cadre permettant de se contraindre à respecter le principe de séparation entre le code métier et code technique.
 

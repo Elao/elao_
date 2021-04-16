@@ -4,11 +4,12 @@ title:              "Virtualiser son environnement de développement avec Manali
 date:               "2019-01-29"
 publishdate:        "2019-01-29"
 draft:              false
-tableOfContent:            true
+tableOfContent:     2
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
 header_img:         "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
 thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
+credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
 
@@ -152,6 +153,3 @@ Pourquoi ne pas tester un petit `manalize setup .` dès maintenant et voir votre
 En 2019, une nouvelle mouture de `manalize` devrait pointer le bout de son nez, encore plus cool !
 Mais ça fera l'objet d'un prochain article. 😉
 
----
-
-<span>Photo par <a href="https://unsplash.com/photos/zen35Y3B834">Mark Mühlberger</a> sur <a href="https://unsplash.com">Unsplash</a></span>

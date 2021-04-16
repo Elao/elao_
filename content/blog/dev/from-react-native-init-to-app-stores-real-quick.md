@@ -7,7 +7,7 @@ lang:           "en"
 draft:          false
 
 description:    "From react-native init to stores real quick"
-tableOfContent:        3
+tableOfContent: 2
 
 thumbnail:      "images/posts/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
 header_img:     "images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"

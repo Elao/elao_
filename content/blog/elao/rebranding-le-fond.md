@@ -85,7 +85,7 @@ Ce système vertueux va au-delà de nos interactions sur les projets de nos clie
 
 Le Why et le How sont posés, mais maintenant comment on les mets en oeuvre, c'est la que le What intervient, ce dernier peut évoluer voir pivoter radicalement sans remettre en cause les autres parties. 
 
-Nous sommes donc des concepteurs d'application web et mobile sur mesure, ça tape moins que le terme agence web 360 Digitale (avec les doigts 👆), mais c'est ce que l'on aime et sait faire. 
+Nous sommes donc des concepteurs d'application web et mobiles sur mesure. Ça tape moins que le terme agence web 360 Digitale (avec les doigts 👆), mais c'est ce que l'on aime et sait faire. 
 
 Chaque projet, chaque client, chaque contexte client est spécifique. Nous devons assimiler sa vision, son histoire, son organisation et ses clients pour lui proposer les meilleures solutions à ses besoins tout au long du projet. 
 

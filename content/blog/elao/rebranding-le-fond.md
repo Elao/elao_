@@ -65,7 +65,7 @@ Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagn�
 
 **L’expertise numérique citoyenne**
 
-Cela a été le plus dur à formaliser, pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utile à notre niveau dans le métier qu’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal en apportant notre piètre à l'édifice.
+Cela a été le plus dur à formaliser, pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utile à notre niveau dans le métier qu’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal en apportant notre pierre à l'édifice.
 
 C'était evident avec le recul quand on vu l'engament remarquable des équipes sur des projets comme Tribü par exemple, une plateforme de gestion de déchets, ou Ferme Directe qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s.
 
@@ -130,4 +130,3 @@ Maintenant, un autre challenge nous attendait : mettre en forme tout ça et arri
 Ci-dessous la plateforme de marque tel que l'on nous l'avons présenté à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous contactant directement. 
 
 <iframe src="https://www.slideshare.net/xgorse/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
-

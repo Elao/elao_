@@ -28,6 +28,13 @@ Dans le blog, le `h1` est le titre de l'article. Dans le corps de l'article, on 
 #####h5 laceat quas odio atque molestiae
 ######h6 laceat quas odio atque molestiae
 
+## Le sommaire
+Pour plus de clarté et selon notre design, seuls les `h2` doivent figurer au sommaire. Pour cela, dans le header de l'article :
+
+```yaml
+tableOfContent:     2
+```
+
 ## Les éléments typographiques
 
 Nous avons des paragraphes, [des liens](https://www.elao.com/fr/), parfois du `code inline`.

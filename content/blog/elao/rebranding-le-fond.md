@@ -21,7 +21,7 @@ tweetId:            ""
 
 Elao est né en 2005 à Lyon, créée par des développeurs qui ne trouvaient pas de structure correspondant à leurs attentes.
 
-À l’époque, Symfony n'était pas encore sortie en version stable, mais on l’utilisait déjà , ReactJS n’existait pas, l’iPhone était encore en phase de R&D. Les agences web fleurissaient, à grands coups de développement de sites vitrines et de e-commerces. Le développement d’applications métiers (de produits numériques, comme on le dit aujourd’hui), c’était de gros clients lours en Java voir en Flash et on ne parlait pas encore “solutions SaaS” hébergés dans “le cloud”. Les GAFAM ne contrôlaient pas encore le monde. 
+À l’époque, Symfony n'était pas encore sortie en version stable, mais on l’utilisait déjà, ReactJS n’existait pas, l’iPhone était encore en phase de R&D. Les agences web fleurissaient, à grands coups de développement de sites vitrines et de e-commerces. Le développement d’applications métiers (de produits numériques, comme on le dit aujourd’hui), c’était de gros clients lourds en Java voire en Flash et on ne parlait pas encore “solutions SaaS” hébergées dans “le cloud”. Les GAFAM ne contrôlaient pas encore le monde. 
 
 En 16 ans, le monde du web et plus spécifiquement, du développement a bien changé. Il s’est professionnalisé, industrialisé, en 16 ans, l'organisation même d'Elao a évolué nourrie par les projets et surtout par son équipe. 
 
@@ -130,5 +130,4 @@ Maintenant, un autre challenge nous attendait : mettre en forme tout ça et arri
 Ci-dessous la plateforme de marque tel que l'on nous l'avons présenté à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous contactant directement. 
 
 <iframe src="https://www.slideshare.net/xgorse/slideshelf" width="760px" height="570px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
-
 

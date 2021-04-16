@@ -25,7 +25,7 @@ Elao est né en 2005 à Lyon, créée par des développeurs qui ne trouvaient pa
 
 En 16 ans, le monde du web et plus spécifiquement, du développement a bien changé. Il s’est professionnalisé, industrialisé, en 16 ans, l'organisation même d'Elao a évolué nourrie par les projets et surtout par son équipe. 
 
-Par passion, Elao a pris la balle au vol et a non seulement suivis, mais surtout pris part au mouvement. 
+Par passion, Elao a pris la balle au vol et a non seulement suivi, mais surtout pris part au mouvement. 
 
 
 ## 16 ans, l’âge de la maturité

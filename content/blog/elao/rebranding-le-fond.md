@@ -1,7 +1,7 @@
 
 ---
 type:               "post"
-title:              "Rebranding 1/3 : le fond"
+title:              "Rebranding 1/4 : le fond"
 date:               "2021-04-20"
 publishdate:        "2021-04-20"
 draft:              false
@@ -13,7 +13,7 @@ thumbnail:          "images/posts/headers/elao-rebrand-banner-fond.jpg "
 header_img:         "images/posts/headers/elao-rebrand-banner-fond.jpg "
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
-authors:            ["xgorse"]
+authors:            ["xgorse","cmozzati"]
 tweetId:            ""
 ---
 

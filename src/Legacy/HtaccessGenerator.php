@@ -84,7 +84,7 @@ class HtaccessGenerator
 
             foreach ($article->tags as $tag) {
                 $tagPath = sprintf('/fr/tags/%s', $tag);
-                $tagUrl =  $this->router->generate('blog_tag', ['tag' => $tag], UrlGeneratorInterface::ABSOLUTE_URL);
+                $tagUrl = $this->router->generate('blog_tag', ['tag' => $tag], UrlGeneratorInterface::ABSOLUTE_URL);
                 $redirections[$tagPath] = $tagUrl;
             }
         }

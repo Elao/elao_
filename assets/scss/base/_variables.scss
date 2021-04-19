@@ -14,15 +14,10 @@ $screen-md: 1220px; // laptop
 $screen-sm: 995px;  // tablet
 $screen-xs: 760px;  // phone
 
-// Code highlighting
-$code-font: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-$code-background: #333;
-$code-red: #ff6188;
-$code-green: #a9dc76;
-$code-yellow: #ffd866;
-$code-orange: #fc9867;
-$code-purple: #ab9df2;
-$code-blue: #78dce8;
-$code-white: #eee;
-$code-grey: #ccc;
-$code-mutted: #888;
+// Code theme
+$code-font: 'antikor medium', monospace;
+$code-background: #fee3e4;
+$code-primary: #7f1A55;
+$code-tertiary: #f4756d;
+$code-info: #1e7695;
+$code-mute: #616161;

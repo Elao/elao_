@@ -1,35 +1,97 @@
 code,
 pre {
-  font-family: 'antikor regular';
-  color: rgba(255, 255, 255, .8);
-  white-space: break-spaces;
-  background: #272822;
-
+  &,
+  &[class*="language-"],
   [class*="language-"] {
-    padding: 0.4em 0.8em;
-    font-family: 'antikor regular';
-    font-size: 14px;
-    color: rgba(255, 255, 255, .8);
-    white-space: break-spaces;
-    background: transparent;
+    padding: 0;
+    font-family: $code-font;
+    font-size: 18px;
+    color: $color-primary;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    overflow: auto;
+    tab-size: 4;
+    hyphens: none;
+    background: $code-background;
   }
 }
 
 .code-multiline {
   margin: 30px 0 !important;
   padding: 20px 30px !important;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .code-inline {
   padding: 5px 10px;
-  font-family: 'antikor regular';
+  font-family: $code-font;
   color: $color-primary;
   background: $color-secondary;
   border-radius: 5px;
 }
 
-.aside-note {
-  padding: 5px 20px !important;
-  border-color: $color-dark !important;
+.token {
+  &.prolog,
+  &.doctype,
+  &.cdata,
+  &.inserted,
+  &.punctuation,
+  &.operator,
+  &.property,
+  &.selector,
+  &.delimiter,
+  &.class-name,
+  &.function-name,
+  &.function {
+    color: $code-primary;
+  }
+
+  &.constant,
+  &.symbol,
+  &.variable,
+  &.tag,
+  &.attr-name,
+  &.namespace,
+  &.deleted,
+  &.important,
+  &.atrule,
+  &.keyword,
+  &.builtin {
+    color: $code-tertiary;
+  }
+
+  &.boolean,
+  &.number,
+  &.string,
+  &.char,
+  &.attr-value,
+  &.regex,
+  &.entity,
+  &.url {
+    color: $code-info;
+  }
+
+  &.comment,
+  &.block-comment,
+  &.comment *,
+  &.block-comment * {
+    color: $code-mute !important;
+  }
+
+  &.important,
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
 }

@@ -68,12 +68,15 @@ Il existe bien évidemment [des `analysers` par langue déjà prêts à l'emploi
 Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-boost.html) sur certaines propriétés afin de privilégier automatiquement ces propriétés lors du calcul de pertinence.
 
 <div class="tabs">
-<div class="nav">
-<a href="#mapping-boost-json" class="active">json</a>
-<a href="#mapping-boost-yaml">yaml</a>
+<div class="tabs__nav">
+  <a href="#mapping-boost-json" class="active">json</a>
+  <a href="#mapping-boost-yaml">yaml</a>
 </div>
-<div class="tab active" id="mapping-boost-json">
-<pre><code class="language-json">
+
+<div class="tabs__content">
+<div class="item active" id="mapping-boost-json">
+<pre>
+<code class="language-json">
 {
   "mappings": {
     "article": {
@@ -89,10 +92,12 @@ Vous pouvez ajouter dans votre mapping des [boost](https://www.elastic.co/guide/
     }
   }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="mapping-boost-yaml">
-<pre><code class="language-yaml">
+<div class="item" id="mapping-boost-yaml">
+<pre>
+<code class="language-yaml">
 fos_elastica:
   indexes:
     app:
@@ -101,15 +106,16 @@ fos_elastica:
           mappings:
             title:   { analyzer: my_analyzer, boost: 3 }
             content: { analyzer: my_analyzer }
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
 Dans cet exemple, le titre aura 3 fois plus de poids que le contenu lors du calcul de pertinence.
 
-<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention, les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article.
-</div>
+!!! Attention
+    Les `boosts` indiqués au `mapping` ne fonctionneront que sur les requêtes de type `term`. Pour les requêtes de type `range` ou `match` par exemple, il faudra préciser les `boosts` dans la requête comme expliqué dans la suite de l'article.
 
 ## Requêter
 
@@ -124,12 +130,14 @@ Pour utiliser votre `analyser` lors de la recherche, vous devez le préciser dan
 Les scores des résultats seront bien évidemment impactés par ces options.
 
 <div class="tabs">
-<div class="nav">
-<a href="#query-analyzer-json" class="active">json</a>
-<a href="#query-analyzer-php">php</a>
+<div class="tabs__nav">
+  <a href="#query-analyzer-json" class="active">json</a>
+  <a href="#query-analyzer-php">php</a>
 </div>
-<div class="tab active" id="query-analyzer-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="query-analyzer-json">
+<pre>
+<code class="language-json">
 {
   "query": {
     "bool": {
@@ -146,10 +154,12 @@ Les scores des résultats seront bien évidemment impactés par ces options.
     }
   }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="query-analyzer-php">
-<pre><code class="language-php">
+<div class="item" id="query-analyzer-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -159,11 +169,11 @@ $query = (new Query\Match())
     ->setFieldFuzziness('title', 'AUTO')
     ->setFieldMinimumShouldMatch('title', '70%')
 );
-
-</code></pre>
+</code>
+</pre>
 </div>
 </div>
-
+</div>
 ### Boost
 
 Les [`boost`](https://www.elastic.co/guide/en/elasticsearch/guide/current/_boosting_query_clauses.html) permettent également d'augmenter le poids d'une clause de votre rêquete. Plus le boost est élevé, plus votre clause pèsera sur le score.
@@ -171,12 +181,14 @@ Les [`boost`](https://www.elastic.co/guide/en/elasticsearch/guide/current/_boost
 Dans l'exemple suivant, nous faisons une recherche de la chaine `Foobar` sur un document ayant un titre et un contenu. Grâce aux `boost` nous pouvons donner plus d'importance aux titres qu'aux contenus.
 
 <div class="tabs">
-<div class="nav">
-<a href="#boost-json" class="active">json</a>
-<a href="#boost-php">php</a>
+<div class="tabs__nav">
+  <a href="#boost-json" class="active">json</a>
+  <a href="#boost-php">php</a>
 </div>
-<div class="tab active" id="boost-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="boost-json">
+<pre>
+<code class="language-json">
 {
   "query": {
     "bool": {
@@ -191,10 +203,12 @@ Dans l'exemple suivant, nous faisons une recherche de la chaine `Foobar` sur un 
     }
   }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="boost-php">
-<pre><code class="language-php">
+<div class="item" id="boost-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -209,19 +223,23 @@ $query->addShould((new Query\Match())
     ->setFieldQuery('content', $search)
     ->setFieldBoost('content', 2)
 );
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
 Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais avec plusieurs valeurs afin d'augmenter le score par palier.
 
 <div class="tabs">
-<div class="nav">
-<a href="#boost-step-json" class="active">json</a>
-<a href="#boost-step-php">php</a>
+<div class="tabs__nav">
+  <a href="#boost-step-json" class="active">json</a>
+  <a href="#boost-step-php">php</a>
 </div>
-<div class="tab active" id="boost-step-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="boost-step-json">
+<pre>
+<code class="language-json">
 {
   "query" : {
     "bool" : {
@@ -239,10 +257,12 @@ Vous pouvez également utiliser plusieurs `boost` sur la même propriété mais 
     }
   }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="boost-step-php">
-<pre><code class="language-php">
+<div class="item" id="boost-step-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -262,7 +282,9 @@ $query->addShould((new Query\Range('publishedAt', [
     'boost' => 3,
     'gte'   => (new \DateTime('-3 months'))->format('c'),
 ])));
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
@@ -285,12 +307,14 @@ Je vais surtout détailler les fonctions `script` et `decay` car ce sont celles 
 Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-script-score)) vous permettent de modifier le score de vos résultats à partir d'un script ou d'une formule de votre choix. Vous avez accès au document dont vous modifiez le score et pouvez donc utiliser l'une de ses propriétés dans le calcul. `_score` est une variable qui contient le score original.
 
 <div class="tabs">
-<div class="nav">
-<a href="#script-functions-json" class="active">json</a>
-<a href="#script-functions-php">php</a>
+<div class="tabs__nav">
+  <a href="#script-functions-json" class="active">json</a>
+  <a href="#script-functions-php">php</a>
 </div>
-<div class="tab active" id="script-functions-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="script-functions-json">
+<pre>
+<code class="language-json">
 {
     "script_score" : {
         "script" : {
@@ -299,10 +323,12 @@ Les scripts de score ([`script_score`](https://www.elastic.co/guide/en/elasticse
         }
     }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="script-functions-php">
-<pre><code class="language-php">
+<div class="item" id="script-functions-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -316,7 +342,9 @@ $score->addScriptScoreFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
@@ -327,12 +355,14 @@ Vous pouvez ainsi utiliser une valeur ou une formule métier pour calculer la pe
 Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-field-value-factor)) vous permet d'appliquer un facteur de multiplication (`factor`), une valeur par defaut (`missing`) ainsi qu'une fonction mathématique (`modifier`) à une propriété de votre document. Plusieurs fonctions mathématiques sont disponibles (`log`, `sqrt`, `ln`, ...).
 
 <div class="tabs">
-<div class="nav">
-<a href="#factor-functions-json" class="active">json</a>
-<a href="#factor-functions-php">php</a>
+<div class="tabs__nav">
+  <a href="#factor-functions-json" class="active">json</a>
+  <a href="#factor-functions-php">php</a>
 </div>
-<div class="tab active" id="factor-functions-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="factor-functions-json">
+<pre>
+<code class="language-json">
 {
     "field_value_factor": {
         "field": "rate",
@@ -341,10 +371,12 @@ Cette fonction de score ([`field_value_factor`](https://www.elastic.co/guide/en/
         "missing": 1
     }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="factor-functions-php">
-<pre><code class="language-php">
+<div class="item" id="factor-functions-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -361,7 +393,9 @@ $score->addFieldValueFactorFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
@@ -372,12 +406,14 @@ Dans cet exemple, la pertinence d'un résultat repose sur la note du document vi
 Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-function-score-query.html#function-decay)) sont une autre méthode pour modifier le score de vos résultats. Elles se basent sur des fonctions mathématiques pour réduire le score de vos résultats.
 
 <div class="tabs">
-<div class="nav">
-<a href="#decay-functions-json" class="active">json</a>
-<a href="#decay-functions-php">php</a>
+<div class="tabs__nav">
+  <a href="#decay-functions-json" class="active">json</a>
+  <a href="#decay-functions-php">php</a>
 </div>
-<div class="tab active" id="decay-functions-json">
-<pre><code class="language-json">
+<div class="tabs__content">
+<div class="item active" id="decay-functions-json">
+<pre>
+<code class="language-json">
 {
     "DECAY_FUNCTION": {
         "FIELD_NAME": {
@@ -388,10 +424,12 @@ Les fonctions de décroissance ([`decay function`](https://www.elastic.co/guide/
         }
     }
 }
-</code></pre>
+</code>
+</pre>
 </div>
-<div class="tab" id="decay-functions-php">
-<pre><code class="language-php">
+<div class="item" id="decay-functions-php">
+<pre>
+<code class="language-php">
 <?php
 use Elastica\Query;
 
@@ -410,7 +448,9 @@ $score->addDecayFunction(
 $score->setQuery($bool);
 
 $query = new Query($score);
-</code></pre>
+</code>
+</pre>
+</div>
 </div>
 </div>
 
@@ -437,21 +477,12 @@ Avec toutes ces fonctionnalités, vous dévriez être capables de gérer la pert
 
 L'important est de ne pas se limiter à la configuration de base et d'adapter l'algorithme de score à vos données et vos besoins.
 
-<style type="text/css">
-    .container .tabs .nav { background: #ccc; }
-    .container .tabs .nav:before, .tabs .nav:after { content: ""; display: table; clear: both; }
-    .container .tabs .nav a { float: left; display: block; padding: 5px 10px; margin: 0; text-decoration: none; }
-    .container .tabs .nav a.active { background-color: #444; color: #fff; }
-    .container .tabs .tab { display: none; clear: both; }
-    .container .tabs .tab.active { display: block; }
-</style>
-
 <script type="text/javascript">
     function Tabs (element)
     {
         this.element = element;
-        this.links   = element.querySelectorAll('.nav a');
-        this.tabs    = element.querySelectorAll('.tab');
+        this.links   = element.querySelectorAll('.tabs__nav a');
+        this.tabs    = element.querySelectorAll('.tabs__content .item');
 
         [].forEach.call(this.links, function (link) {
             link.addEventListener('click', function (event) {

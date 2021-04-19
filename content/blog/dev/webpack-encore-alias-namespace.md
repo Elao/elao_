@@ -114,4 +114,3 @@ import 'Style/app.scss';
 import logoPath from 'Images/logo.png';
 ```
 
----

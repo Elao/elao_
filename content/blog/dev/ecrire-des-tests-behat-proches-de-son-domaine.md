@@ -1,6 +1,6 @@
 ---
 type:               "post"
-title:              "Ecrire des tests Behat proches de son domaine"
+title:              "Écrire des tests Behat proches de son domaine"
 date:               "2018-06-17"
 publishdate:        "2018-06-17"
 draft:              false
@@ -18,13 +18,13 @@ author:    "ndievart"
 Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](/fr/dev/behat-3-test-fonctionnel-symfony/). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.
 Dans cet article nous allons voir comment nous écrivons désormais nos tests en partant d'une approche Domaine.
 
-# Cheminement 📖
+## Cheminement 📖
 
 L'ajout et le maintien des tests fonctionnels se sont avérés de plus en plus complexes à réaliser sur plusieurs de nos projets avec une grande complexité métier. Certains parcours utilisateur étaient compliqués à mettre en place. Le maintien à jour des fixtures de tests devenait difficile, les dépendances entre les entités testées les rendant encore plus complexes.
 
 Dans de nombreux cas, nous en arrivions à faire une fixture particulière pour chaque test plutôt que de réutiliser certaines d'entre elles pour être totalement maître du contexte. A chaque modification du _model_, la mise à jour de toutes les fixtures étaient une réelle perte de temps.
 
-La plupart des projets chez [élao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaires pour créer des entités pour les contextes qui nous intéressent.
+La plupart des projets chez [Elao](https://www.elao.com) ont [une architecture hexagonale](/fr/dev/architecture-hexagonale-symfony) et sont orientés DDD, Domain Driven Design. Nous avons donc déjà toutes les méthodes métiers nécessaires pour créer des entités pour les contextes qui nous intéressent.
 
 Par exemple, nous avons dans notre classe métier «Produit» des méthodes nous permettant de créer directement des produits de différent _types_ comme des formules. Ces méthodes permettent d'abstraire certaines informations inutiles à faire figurer à chaque endroit du code et simplifient la création de ces produits.
 Nos _commands_ utilisent donc déjà ces méthodes pour créer des formules, et sont très flexibles pour chaque besoin différent.
@@ -81,7 +81,7 @@ Nous n'avons plus à _loader_ des fixtures et à les maintenir, maintenant, nous
 
 > Comment mettre tout cela en place avec Behat ?
 
-# Mise en place 🔧
+## Mise en place 🔧
 
 Tout d'abord, nous avons besoin d'installer Behat en _dev-dependencies_ de notre composer.json
 
@@ -120,7 +120,9 @@ Expliquons ensuite comment réaliser un _step_ comme `And there is a plan named 
 
 Nous allons donc créer un _Manager_ qui nous permettra d'appeler nos méthodes de création de produits, de modifier des paramètres, d'appeler les _repositories_ pour persister en base de données ce qui doit l'être etc...
 
-> features/Behat/Manager/ProductManager.php
+```
+features/Behat/Manager/ProductManager.php
+```
 
 ```php
 <?php
@@ -155,7 +157,9 @@ Ce _Manager_ utilise la méthode _static_ que nous avons vue précédemment qui 
 
 Nous allons ensuite créer un service qui va nous servir de _proxy_, sous la forme d'un passe-plat, pour pouvoir appeler notre _Manager_ dans nos contextes Behat.
 
-> features/Behat/Proxy/ProductProxy.php
+```
+features/Behat/Proxy/ProductProxy.php
+```
 
 ```php
 <?php
@@ -181,7 +185,9 @@ class ProductProxy
 
 Et enfin, nous allons créer un _ProductContext_ afin de créer notre _step_ Gherkin
 
-> features/Behat/Context/ProductProxy.php
+```
+features/Behat/Context/ProductProxy.php
+```
 
 ```php
 <?php
@@ -215,7 +221,9 @@ class ProductContext implements Context
 
 Ensuite, nous n'avons plus qu'à modifier notre fichier `default.yml` afin de lui spécifier l'utilisation du nouveau contexte que nous venons de créer.
 
-> features/Behat/Resources/config/default.yml
+```
+features/Behat/Resources/config/default.yml
+```
 
 ```yaml
 default:
@@ -290,7 +298,7 @@ class ProductContext implements Context
 
 Et c'est tout, pas besoin de _parser_ le _DOM_ pour retrouver la valeur du prix de la formule et vérifier si il est égale à A ou B. Cela rend les _steps_ Behat beaucoup plus lisibles.
 
-# Passage d'informations entre _step_ 📦
+## Passage d'informations entre step 📦
 
 Au fur et à mesure de l'utilisation de ce système, vous vous rendrez compte qu'il manque quelque chose... En effet, les différents _steps_ sont distincts les uns des autres, ne communiquant pas, ils ne peuvent pas utiliser les valeurs des autres _steps_.
 Imaginons que vous souhaitez créer une formule "Early bird" et que celle-ci soit disponible uniquement jusqu'à une certaine date. Pour réaliser ce _step_ il vous faudra donc soit créer un nouveau _step_ qui permet de créer une formule avec une référence, un prix et une date de fin de disponibilité. Cela nous fait dupliquer une partie du code précédent et ce n'est pas forcément pertinent.
@@ -300,7 +308,9 @@ Pour éviter cela, il est intéresant de pouvoir récupérer un élément du _st
 Afin de réaliser cette tâche, nous avons ajouté un service qui sert de réceptacle de données entre nos _steps_.
 Ce _Storage_ contient simplement un tableau indexé par type de donnée stockée et nous offre l'accès à un getter et un setter pour récupérer ou écraser la donnée.
 
-> features/Behat/Storage/Storage.php
+```
+features/Behat/Storage/Storage.php
+```
 
 ```php
 <?php
@@ -458,7 +468,7 @@ class ProductContext implements Context
 
 À la lecture de notre test fonctionnel, nous comprenons tout de suite dans quel contexte nous nous trouvons, avec une formule non disponible, et nous testons qu'elle n'est plus achetable par un utilisateur.
 
-# Axes d'amélioration 🚀
+## Axes d'amélioration 🚀
 
 Afin de rendre nos tests fonctionnels encore plus compréhensibles, nous avons de futurs axes d'amélioration comme pouvoir naviguer sur le site sans faire mention des urls qui n'ont pas toujours de notion métier.
 Ce qui permettrait la rédaction de _steps_ tel que:
@@ -482,7 +492,7 @@ De même, la modification d'une entité peut se passer hors des _steps_ prédéf
 
 Mais tout ceci demande de coder tous les contextes, les _steps_, les _proxies_, ce qui est très verbeux. Cependant la valeur ajoutée d'avoir une bonne couverture de tests fonctionnels est importante et le temps passé à coder les tests est du temps gagné en débogage.
 
-# En conclusion 🎬
+## En conclusion 🎬
 
 Avant, nous avions beaucoup de tests avec des fixtures lourdes à maintenir qui cachaient une grande partie de ce qui était chargé. Nous avons maintenant des _steps_ qui décrivent le contexte dans lequel le test s'effectue. Le code métier directement utilisé est plus maintenable.
 

@@ -67,7 +67,7 @@ Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagn�
 
 Cela a été le plus dur à formaliser : pas facile de mettre des mots sur ce qui nous fait lever le matin pour aller bosser. On souhaite être utiles à notre niveau dans le métier que l’on maîtrise, tout en s'inscrivant au cœur d’un projet sociétal, en apportant notre pierre à l'édifice.
 
-Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme Tribü, une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore PanneauPocket, une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté lorsque l'on affirme notre envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
+Avec le recul, c'était évident. Quand on voit l'engagement remarquable des équipes sur des projets comme [Tribü](../../case-study/tribu.md), une plateforme de gestion de déchets, ou Ferme Directe, qui permet de redonner un peu plus aux agriculteurs, ou encore [PanneauPocket](../../case-study/panneaupocket.md), une application permettant de renforcer la communication des mairies et associations envers les citoyen·ne·s, on se dit qu'on n'est pas complètement à côté lorsque l'on affirme notre envie de mettre notre savoir-faire au service du bien commun. Ce sont donc, dans un monde idéal, les projets que nous irons chercher avant tout.
 
 
 ### How

@@ -130,6 +130,6 @@ Ces concepts n'étaient pas nouveaux, ils étaient là, distillés au quotidien 
 
 Maintenant, un autre challenge nous attendait : mettre en forme et arriver à transmettre tout ça à travers notre site pour les personnes qui ne nous connaissent pas encore, mais il s'agit d'une autre histoire que [Christelle](../../member/cmozzati.yaml) vous racontera bientôt.
 
-Ci-dessous la plateforme de marque telle que l'on nous l'avons présentée à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous contactant directement. 
+Ci-dessous la plateforme de marque telle que l'on nous l'avons présentée à l'équipe, si vous avez des questions ou des remarques, vous pouvez réagir sur ce tweet, cette publication Linkedin ou en nous [contactant](/contact) directement. 
 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/f6doSsIFEIL4Jy" width="760px" height="570px"  frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>

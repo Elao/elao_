@@ -50,7 +50,22 @@ class HtaccessGenerator
 
     private function getRedirections(string $target): array
     {
-        return $target === self::TARGET_SITE ? $this->getSiteRedirections() : $this->getBlogRedirections();
+        $redirections = $target === self::TARGET_SITE ? $this->getSiteRedirections() : $this->getBlogRedirections();
+
+        return array_merge($redirections, $this->getTrailingSlash($redirections));
+    }
+
+    private function getTrailingSlash(array $redirections): array
+    {
+        $trailingSlashRedirection = [];
+
+        foreach ($redirections as $source => $destination) {
+            if (preg_match('/\/$/', $source, $matches, PREG_OFFSET_CAPTURE) !== 1) {
+                $trailingSlashRedirection[$source . '/'] = $destination;
+            }
+        }
+
+        return $trailingSlashRedirection;
     }
 
     private function getBlogRedirections(): array
@@ -58,7 +73,6 @@ class HtaccessGenerator
         $redirections = array_map(fn (string $route) => $this->router->generate($route, [], UrlGeneratorInterface::ABSOLUTE_URL), [
             '/' => 'blog',
             '/fr' => 'blog',
-            '/fr/' => 'blog',
         ]);
 
         $articles = $this->getArticlesBefore(new \DateTimeImmutable('2021-01-01'));
@@ -67,8 +81,12 @@ class HtaccessGenerator
             $path = sprintf('/%s/%s', $article->lang, $article->slug);
             $url = $this->router->generate('blog_article', ['article' => $article->slug], UrlGeneratorInterface::ABSOLUTE_URL);
             $redirections[$path] = $url;
-            // Add with trailing slash path:
-            $redirections[$path . '/'] = $url;
+
+            foreach ($article->tags as $tag) {
+                $tagPath = sprintf('/fr/tags/%s', $tag);
+                $tagUrl =  $this->router->generate('blog_tag', ['tag' => $tag], UrlGeneratorInterface::ABSOLUTE_URL);
+                $redirections[$tagPath] = $tagUrl;
+            }
         }
 
         return $redirections;
@@ -78,25 +96,15 @@ class HtaccessGenerator
     {
         return array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
-            '/fr/' => 'homepage',
             '/fr/la-tribu' => 'team',
-            '/fr/la-tribu/' => 'team',
             '/fr/developpement' => 'services',
-            '/fr/developpement/' => 'services',
             '/fr/hebergement' => 'services',
-            '/fr/hebergement/' => 'services',
             '/fr/conseil' => 'services',
-            '/fr/conseil/' => 'services',
             '/fr/nos-experiences' => 'case_studies',
-            '/fr/nos-experiences/' => 'case_studies',
             '/fr/recrutement' => 'jobs',
-            '/fr/recrutement/' => 'jobs',
             '/fr/nous-contacter' => 'contact',
-            '/fr/nous-contacter/' => 'contact',
             '/fr/legal' => 'legal',
-            '/fr/legal/' => 'legal',
             '/fr/a-propos' => 'contact',
-            '/fr/a-propos/' => 'contact',
         ]);
     }
 

@@ -6,10 +6,9 @@
 }
 
 .banner-home__title {
-  margin-left: 110px;
-  margin-bottom: 65px;
+  margin-bottom: 65px !important;
   position: static;
-  font-size: 58px;
+  font-size: 58px !important;
   line-height: 1.3;
 }
 
@@ -19,13 +18,15 @@
   width: 950px;
   display: flex;
   align-items: center;
-  font-family: 'antikor regular';
-  font-size: 32px;
-  color: #fff;
   background: $color-brand;
 
-  p {
+  h1 {
+    margin: 0;
     width: 510px;
+    font-family: 'antikor regular';
+    font-size: 32px;
+    font-weight: normal;
+    color: #fff;
   }
 }
 
@@ -155,13 +156,13 @@
     width: 70%;
     min-width: 250px;
     height: 230px;
-    order: 2;
     justify-content: center;
     align-self: flex-end;
-    font-size: 24px;
+    order: 2;
 
-    p {
+    h1 {
       width: unset;
+      font-size: 24px;
     }
   }
 
@@ -248,7 +249,10 @@
   .banner-home__content {
     padding: 20px 20px 30px;
     height: unset;
-    font-size: 18px;
+
+    h1 {
+      font-size: 18px;
+    }
   }
 
   .banner-home__title {

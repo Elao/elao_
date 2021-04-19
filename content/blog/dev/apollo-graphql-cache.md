@@ -135,7 +135,7 @@ client.writeQuery({
 })
 ```
 
-En combinant l'utilisation de ce deux methodes dans l'`update` de la mutation, nous pouvons ainsi mettre à jour notre cache :
+En combinant l'utilisation de ce deux méthodes dans l'`update` de la mutation, nous pouvons ainsi mettre à jour notre cache :
 
 ```javascript
 const ADD_TODO = gql`
@@ -171,7 +171,7 @@ client
 
 ## Fragments
 
-De la même manière qu'avec `readQuery` et `writeQuery`, il est posible de mettre à jour des portions de requêtes utilisant le même fragment avec les méthodes `readFragment` et `writeFragment`.
+De la même manière qu'avec `readQuery` et `writeQuery`, il est possible de mettre à jour des portions de requêtes utilisant le même fragment avec les méthodes `readFragment` et `writeFragment`.
 
 Par exemple avec les requêtes suivantes :
 
@@ -222,9 +222,9 @@ client.writeFragment({
 
 ## Mise à jour automatique
 
-Heuresement, il n'est pas toujours obligatoire de mettre manuellement à jour le cache comme ci-dessus. Il y a certains cas où le cache est automatiquement mis à jour par Apollo.
+Heureusement, il n'est pas toujours obligatoire de mettre manuellement à jour le cache comme ci-dessus. Il y a certains cas où le cache est automatiquement mis à jour par Apollo.
 
-Lorsque vous réalisez une requête recupérant des données contenant un `id`, par exemple :
+Lorsque vous réalisez une requête récupérant des données contenant un `id`, par exemple :
 
 ```graphql
 query {
@@ -246,7 +246,7 @@ mutation {
 }
 ```
 
-Apollo a compris que vous intevennez sur le même objet (même type et meme id). Le cache sera alors automatiquement mis à jour et la propriété `name` sera modifiée partout. Attention par contre, le cache sera mis à jour avec les données renvoyées par la mutation, il faut donc bien faire attention à selectionner les données que l'on souhaite modifier dans le cache.
+Apollo a compris que vous intervenez sur le même objet (même type et meme id). Le cache sera alors automatiquement mis à jour et la propriété `name` sera modifiée partout. Attention par contre, le cache sera mis à jour avec les données renvoyées par la mutation, il faut donc bien faire attention à sélectionner les données que l'on souhaite modifier dans le cache.
 
 Je vous parlais du côté *state manager* du cache, et bien c'est ce qui se passe ici. Les objets y sont stockés avec une clé de cache de façon à pouvoir mettre à jour tous les résultats de requête concernés en une fois lorsque que l'un d'eux est modifié (sous couvert qu'ils soient identifiables par un `id` évidemment).
 
@@ -284,7 +284,7 @@ const cache = new InMemoryCache({
 });
 ```
 
-D'autre configuration sont possibles, je vous encourage à lire [la documentation à ce sujet](https://www.apollographql.com/docs/react/caching/cache-configuration/) pour les découvrir.
+D'autres configurations sont possibles, je vous encourage à lire [la documentation à ce sujet](https://www.apollographql.com/docs/react/caching/cache-configuration/) pour les découvrir.
 
 ## Redirection de cache
 
@@ -314,7 +314,7 @@ query Todo($id: ID!) {
 }
 ```
 
-Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le case de la première car les données ne sont pas stockés avec la même clé de cache.
+Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le case de la première car les données ne sont pas stockées avec la même clé de cache.
 
 La redirection de cache permettra d'aller chercher ces données dans le cache d'une autre requête.
 
@@ -373,9 +373,9 @@ client
   })
 ```
 
-Avouons le, cela peut vite devenir long et fastidieux si une resource apparait dans beaucoup de requêtes différentes. Il existe actuellement [une *feature request*](https://github.com/apollographql/apollo-feature-requests/issues/4) pour palier à cela et proposer un moyen de supprimer simplement un objet dans l'ensemble du cache. La fonctionnalité semble prévue dans la *roadmap* de version 3.0 du client.
+Avouons le, cela peut vite devenir long et fastidieux si une ressource apparaît dans beaucoup de requêtes différentes. Il existe actuellement [une *feature request*](https://github.com/apollographql/apollo-feature-requests/issues/4) pour palier à cela et proposer un moyen de supprimer simplement un objet dans l'ensemble du cache. La fonctionnalité semble prévue dans la *roadmap* de version 3.0 du client.
 
-En attendant, plusieurs *workaround* temporaires sont proposés dans ce même post, j'utilise [celui-ci](https://github.com/apollographql/apollo-feature-requests/issues/4#issuecomment-437041503) :
+En attendant, plusieurs *workarounds* temporaires sont proposés dans ce même post, j'utilise [celui-ci](https://github.com/apollographql/apollo-feature-requests/issues/4#issuecomment-437041503) :
 
 Dans le fichier instanciant votre cache, ajoutez la fonction suivante :
 
@@ -442,7 +442,7 @@ client
 
 Pour chaque requête vous pouvez configurer l'option `fetchPolicy` afin d'indiquer à Apollo comment utiliser le cache.
 
-* `cache-first` : c'est la valeur par defaut, le client recherche le résultat dans le cache avant de faire une requête.
+* `cache-first` : c'est la valeur par défaut, le client recherche le résultat dans le cache avant de faire une requête.
 * `cache-and-network` : le client retournera le contenu du cache mais fera tout de même la requête afin de le mettre à jour, permet d'avoir une réponse rapide.
 * `network-only` : le client ne retournera jamais le contenu du cache pour cette requête et fera systématiquement un appel réseau.
 * `cache-only` : le client ne fera aucun appel réseau et se contentera de lire le cache.
@@ -450,7 +450,7 @@ Pour chaque requête vous pouvez configurer l'option `fetchPolicy` afin d'indiqu
 
 ## Persistence
 
-Par default, le cache Apollo utilise l'adapteur `InMemoryCache` qui comme son nom l'indique, stocke le cache en mémoire. Dans le cas d'une application web, chaque actualisation de la page ou nouvel onglet remet le cache à zero. En cas d'app native, cela se fera à chaque fermeture de l'app.
+Par défaut, le cache Apollo utilise l'adapteur `InMemoryCache` qui comme son nom l'indique, stocke le cache en mémoire. Dans le cas d'une application web, chaque actualisation de la page ou nouvel onglet remet le cache à zéro. En cas d'app native, cela se fera à chaque fermeture de l'app.
 
 Heureusement il est possible de [persister le cache](https://github.com/apollographql/apollo-cache-persist#storage-providers) de façon non volatile en fournissant un *storage provider*. En *local storage* pour du web par exemple, ou encore dans une base *SQLite* ou en fichier pour les app natives.
 

@@ -37,7 +37,7 @@ export default {
 
 Dans ce composant par exemple, lorsque la variable `foobar` est modifié, le contenu du champ est mis à jour et lorsque le contenu du champ est modifié, la variable `foobar` est modifiée.
 
-Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiable par les composants, nous ne pouvons faire que du One-Way Binding (lorsque le modèle change, l'interface est mise à jour, l'inverse n'est pas possible).
+Si nous introduisons Vuex (ou un autre state manager), les variables du store n'étant pas modifiables par les composants, nous ne pouvons faire que du One-Way Binding (lorsque le modèle change, l'interface est mise à jour, l'inverse n'est pas possible).
 
 ```html
 <template>

@@ -1,4 +1,3 @@
-
 ---
 type:               "post"
 title:              "Petit guide de style du blog"
@@ -44,6 +43,27 @@ Un coup sur deux, on a un style différent de citation, sinon on s'ennuie.
 
 > Quoi ? Un deuxième style de citation ? Eos officia, vel corporis eaque architecto eveniet voluptatibus, ullam impedit excepturi quis quidem sint facere laboriosam harum error esse iusto. Asperiores, placeat.
 > <cite>John Doe</cite>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur.
+
+!!! Titre
+    Nous avons des `admonition` pour les informations à faire ressortir.
+
+Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+!!! Titre success
+    Le même composant dans le style "success".
+
+Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+!!! Titre danger
+    Le même composant dans le style "danger".
 
 ## Les images
 

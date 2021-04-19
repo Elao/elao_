@@ -55,7 +55,7 @@ Qu’est-ce qui nous fait nous lever tous les matins pour travailler sur des pro
 
 ## Notre plateforme de marque
 
-Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagnés d’Oriane Audeoud (Galanga) et Estelle Gironde (Heystelle), nous avons travaillé sur notre plateforme de marque. L’objectif de celle-ci était de nous aligner sur ce que l’on voulait dire d’Elao et des valeurs qui nous rassemblent en tant que collectif et pas uniquement dans un but de communication.
+Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagnés d’Oriane Audeoud ([Galanga](https://galanga-inside.fr/)) et Estelle Gironde ([Heystelle](https://www.heystelle.fr/)), nous avons travaillé sur notre plateforme de marque. L’objectif de celle-ci était de nous aligner sur ce que l’on voulait dire d’Elao et des valeurs qui nous rassemblent en tant que collectif et pas uniquement dans un but de communication.
 
 À travers de longs entretiens avec l’équipe, Oriane et Estelle ont su prendre le temps de tirer l’essence d’Elao pour le formaliser à travers le concept du [Golden Circle](https://www.youtube.com/watch?v=qp0HIF3SfI4) développé et présenté par Simon Sinek.
  
@@ -76,7 +76,7 @@ Avec le recul, c'était évident. Quand on voit l'engagement remarquable des éq
 
 Là, on touche d'abord à notre quotidien et nos interactions avec nos clients et leurs utilisateurs : nous essayons de toujours mettre la création de valeur au centre des discussions, même si le plus souvent, cela nous amène à simplifier et à réduire le budget des premières versions. On aime beaucoup simplifier. 
 
-Ce système vertueux va au-delà de nos interactions sur les projets de nos clients, elle doit prendre en compte la valeur de l’écosystème  dans lequel nous baignons depuis 16 ans. Les fondations d'Elao reposent sur les fondamentaux du mouvement open source. Sans lui, nous n'en serions pas là, et nous essayons au quotidien de lui rendre un peu de ce qu'il nous a apporté. Nous encourageons l’équipe à contribuer à des projets, nous ouvrons régulièrement du code, nous partageons nos expériences dans notre blog, nous donnons des conférences et nous nous impliquons dans l’écosystème associatif lyonnais (AFUP, Mixit, Cuisine du web, Digital League). 
+Ce système vertueux va au-delà de nos interactions sur les projets de nos clients, elle doit prendre en compte la valeur de l’écosystème  dans lequel nous baignons depuis 16 ans. Les fondations d'Elao reposent sur les fondamentaux du mouvement open source. Sans lui, nous n'en serions pas là, et nous essayons au quotidien de lui rendre un peu de ce qu'il nous a apporté. Nous encourageons l’équipe à contribuer à des projets, nous ouvrons régulièrement du code, nous partageons nos expériences dans notre blog, nous donnons des conférences et nous nous impliquons dans l’écosystème associatif lyonnais ([AFUP](https://afup.org/), [Mixit](https://mixitconf.org/), [Cuisine du web](https://www.lacuisineduweb.com/), [Digital League](https://www.digital-league.org/)). 
 
 
 ### What

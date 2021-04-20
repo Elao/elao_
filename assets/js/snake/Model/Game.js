@@ -32,7 +32,7 @@ export default class Game {
             }
 
             if (this.hasCollision(...nextHead)) {
-                this.end();
+                this.end(nextHead);
             } else {
                 this.snake.update(nextHead);
             }
@@ -72,8 +72,8 @@ export default class Game {
         return this.pixels.find(pixel => pixel.match(x, y)) || null;
     }
 
-    end() {
+    end(crash) {
         console.info('💀');
-        this.snake.die();
+        this.snake.die(crash);
     }
 }

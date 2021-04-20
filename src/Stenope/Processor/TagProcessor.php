@@ -31,6 +31,11 @@ class TagProcessor implements ProcessorInterface, ContentManagerAwareInterface
             return;
         }
 
-        $data['tags'] = array_map([$this->slugger, 'slug'], $data['tags']);
+        $data['tags'] = array_map([$this, 'slugify'], $data['tags']);
+    }
+
+    private function slugify(string $tag): string
+    {
+        return $this->slugger->slug($tag)->lower()->toString();
     }
 }

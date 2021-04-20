@@ -57,8 +57,8 @@
                                 <ul class="tag-list">
                                     {% for tag in article.tags %}
                                         <li class="tag-list__item">
-                                            <a href="{{ path('blog_tag', { tag: tag|lower }) }}" rel="nofollow">
-                                                #{{ tag|u.title }}
+                                            <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                #{{ tag|u.camel.title }}
                                             </a>
                                         </li>
                                     {% endfor %}

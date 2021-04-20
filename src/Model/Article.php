@@ -46,7 +46,7 @@ class Article
 
     public function hasTag(string $tag): bool
     {
-        return \in_array(strtolower($tag), array_map('strtolower', $this->tags), true);
+        return \in_array($tag, $this->tags, true);
     }
 
     public function hasAuthor(Member $author, int $maxAuthors = 0): bool

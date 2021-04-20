@@ -12,7 +12,7 @@
         </li>
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
-                <span itemprop="name">#{{ tag|u.title }}</span>
+                <span itemprop="name">#{{ tag|u.camel.title }}</span>
             </a>
             <meta itemprop="position" content="2"/>
         </li>
@@ -23,8 +23,6 @@
     {% include 'blog/pagination.html.twig' with {
         route: 'blog_tag_page',
         minPageRoute: 'blog_tag',
-        routeParams: {
-            tag: tag|lower,
-        }
+        routeParams: { tag: tag }
     } %}
 {% endblock content %}

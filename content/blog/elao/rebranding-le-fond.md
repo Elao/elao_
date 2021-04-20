@@ -14,7 +14,7 @@ header_img:         "images/posts/headers/elao-rebrand-banner-fond.jpg "
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["xgorse","cmozzati"]
-tweetId:            ""
+tweetId:            "1384417140346920962"
 ---
 
 ## Un petit peu de contexte

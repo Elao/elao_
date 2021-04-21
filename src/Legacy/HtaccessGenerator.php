@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Legacy;
 
 use App\Model\Article;
+use App\Model\CaseStudy;
 use Stenope\Bundle\ContentManager;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
@@ -94,18 +95,27 @@ class HtaccessGenerator
 
     private function getSiteRedirections(): array
     {
-        return array_map(fn (string $route) => $this->router->generate($route), [
+        $redirections = array_map(fn (string $route) => $this->router->generate($route), [
             '/fr' => 'homepage',
             '/fr/la-tribu' => 'team',
             '/fr/developpement' => 'services',
             '/fr/hebergement' => 'services',
             '/fr/conseil' => 'services',
             '/fr/nos-experiences' => 'case_studies',
+            '/fr/etudes-de-cas' => 'case_studies',
             '/fr/recrutement' => 'jobs',
             '/fr/nous-contacter' => 'contact',
             '/fr/legal' => 'legal',
             '/fr/a-propos' => 'contact',
         ]);
+
+        foreach ($this->getCaseStudies() as $caseStudy) {
+            $path = sprintf('/fr/etudes-de-cas/%s', $caseStudy->slug);
+            $url = $this->router->generate('case_study', ['caseStudy' => $caseStudy->slug]);
+            $redirections[$path] = $url;
+        }
+
+        return $redirections;
     }
 
     private function getHtaccessRule(string $legacyPath, string $url): string
@@ -128,5 +138,13 @@ class HtaccessGenerator
             ['date' => false],
             fn (Article $article) => $article->publishdate < $limit
         );
+    }
+
+    /**
+     * @return CaseStudy[]
+     */
+    private function getCaseStudies(): array
+    {
+        return $this->contentManager->getContents(CaseStudy::class);
     }
 }

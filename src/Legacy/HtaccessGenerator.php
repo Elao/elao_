@@ -102,6 +102,7 @@ class HtaccessGenerator
             '/fr/hebergement' => 'services',
             '/fr/conseil' => 'services',
             '/fr/nos-experiences' => 'case_studies',
+            '/fr/etudes-de-cas' => 'case_studies',
             '/fr/recrutement' => 'jobs',
             '/fr/nous-contacter' => 'contact',
             '/fr/legal' => 'legal',

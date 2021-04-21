@@ -110,7 +110,7 @@ class HtaccessGenerator
 
         foreach ($this->getCaseStudies() as $caseStudy) {
             $path = sprintf('/fr/etudes-de-cas/%s', $caseStudy->slug);
-            $url = $this->router->generate('case_study', ['caseStudy' => $caseStudy->slug], UrlGeneratorInterface::ABSOLUTE_URL);
+            $url = $this->router->generate('case_study', ['caseStudy' => $caseStudy->slug]);
             $redirections[$path] = $url;
         }
 

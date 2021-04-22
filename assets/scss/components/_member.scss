@@ -145,7 +145,7 @@
       right: unset;
       bottom: -40px;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) !important;
 
       span {
         font-size: 45px;

@@ -95,6 +95,7 @@ RUN \
     && apt-get install --yes --no-install-recommends \
         php${PHP_VERSION}-cli \
         php${PHP_VERSION}-fpm \
+        # ⚠️ DO NOT REMOVE !!!
         php${PHP_VERSION}-gd \
         php${PHP_VERSION}-intl \
         php${PHP_VERSION}-curl \

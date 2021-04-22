@@ -68,13 +68,22 @@
     </div>
 
     {% if article.tableOfContent %}
-        <ul class="table-of-content" data-aos="fade-up">
+        <ol class="table-of-content" data-aos="fade-up">
             {% for id, title in article.tableOfContent %}
                 <li class="table-of-content__item">
                     <a href="#{{ id }}">{{ title }}</a>
+
+                    <ol class="table-of-content__sub-level">
+                        <li>
+                            <a href="pouet">Nemo sunt corporis</a>
+                        </li>
+                        <li>
+                            <a href="pouet">Perspiciatis voluptatem</a>
+                        </li>
+                    </ol>
                 </li>
             {% endfor %}
-        </ul>
+        </ol>
     {% endif %}
 
     <div class="article-content">

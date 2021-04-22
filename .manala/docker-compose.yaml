@@ -48,11 +48,11 @@ services:
       - ./php/app.ini:/etc/php/7.4/fpm/conf.d/php.ini:ro
       - ./php/xdebug/${OS}.ini:/etc/php/7.4/fpm/conf.d/xdebug.ini:ro
       - ./php/fpm.conf:/etc/php/7.4/fpm/pool.d/zz-www.conf:ro
-      - ./starship/config.toml:/etc/starship/config.toml:ro
       - ..:/srv:cached
+      - ${SSH_AUTH_SOCK:-/dev/null}:${SSH_AUTH_SOCK:-/tmp/null}
     links:
       - maildev
     environment:
-      - STARSHIP_CONFIG=/etc/starship/config.toml
+      - STARSHIP_CONFIG=/srv/.manala/starship/config.toml
       - XDG_CACHE_HOME=/srv/.manala/.cache
-      - HISTFILE=/srv/.manala/.cache/.bash_history
+      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK:-/dev/null}

@@ -22,3 +22,6 @@ disabled = true
 
 [php]
 disabled = true
+
+[nodejs]
+disabled = true

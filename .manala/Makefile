@@ -24,16 +24,19 @@ HELP += $(call help,up,        Create and start environment (BUILD))
 up:
 	$(call message,Create and start environment...)
 	mkdir -p $(_ROOT_DIR)/.manala/.cache
-	OS=$(OS) docker-compose up \
-		$(if $(BUILD),--build --remove-orphans)
+	OS=$(OS) \
+	$(if $(OS_DARWIN),SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock) \
+		docker-compose up \
+			$(if $(BUILD),--build --remove-orphans)
 
 HELP += $(call help,clean,     Clean environment)
 clean:
 	$(call confirm,Please$(,) confirm environment cleaning)
-	OS=$(OS) docker-compose down \
-		--rmi all \
-		--volumes \
-		--remove-orphans
+	OS=$(OS) \
+		docker-compose down \
+			--rmi all \
+			--volumes \
+			--remove-orphans
 
 HELP += $(call help,sh,        Shell environment)
 sh:
@@ -46,12 +49,6 @@ HELP += $(call help,sh.nginx,  Shell environment - Nginx)
 sh.nginx:
 	docker-compose exec \
 		nginx \
-		bash
-
-HELP += $(call help,sh.mariadb,Shell environment - MariaDB)
-sh.mariadb:
-	docker-compose exec \
-		mariadb \
 		bash
 
 endif

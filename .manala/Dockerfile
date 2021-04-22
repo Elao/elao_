@@ -63,8 +63,6 @@ WORKDIR /srv
 
 FROM base AS app
 
-ARG PHP_VERSION=7.4
-
 # Disable irrelevants apt-key warnings
 ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 # Disable all debian user interaction
@@ -87,7 +85,8 @@ RUN \
     && mkdir -p /usr/etc \
     && echo "cache=\${XDG_CACHE_HOME}/npm" > /usr/etc/npmrc
 
-# Php
+ARG PHP_VERSION=7.4
+
 RUN \
     echo "deb https://packages.sury.org/php/ buster main" > /etc/apt/sources.list.d/php.list \
     && curl --silent --location --show-error https://packages.sury.org/php/apt.gpg \
@@ -96,6 +95,7 @@ RUN \
     && apt-get install --yes --no-install-recommends \
         php${PHP_VERSION}-cli \
         php${PHP_VERSION}-fpm \
+        php${PHP_VERSION}-gd \
         php${PHP_VERSION}-intl \
         php${PHP_VERSION}-curl \
         php${PHP_VERSION}-mbstring \
@@ -117,5 +117,9 @@ RUN \
 STOPSIGNAL SIGQUIT
 
 EXPOSE 9000
+
+COPY docker/bin/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 CMD ["php-fpm7.4"]

@@ -29,10 +29,14 @@ Dans le blog, le `h1` est le titre de l'article. Dans le corps de l'article, on 
 ######h6 laceat quas odio atque molestiae
 
 ## Le sommaire
-Pour plus de clarté et selon notre design, seuls les `h2` doivent figurer au sommaire. Pour cela, dans le header de l'article :
+Le sommaire permet d'afficher les `h2` et les `h3` présents dans l'article. Selon le besoin, précisez le niveau de titre à faire figurer au sommaire.
 
 ```yaml
-tableOfContent:     2
+tableOfContent: 2
+```
+ou
+```yaml
+tableOfContent: 3
 ```
 
 ## Les éléments typographiques

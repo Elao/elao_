@@ -6,7 +6,7 @@ publishdate:        "2017-06-21"
 draft:              false
 
 description:        "Présentation de l'architecture hexagonale et de son implémentation avec le framework Symfony."
-tableOfContent:     2
+tableOfContent:     3
 
 thumbnail:          "images/posts/thumbnails/hexagons.jpg"
 header_img:         "images/posts/headers/hexagons.jpg"

@@ -35,6 +35,8 @@ services:
     # please note that last definitions always *replace* previous ones
 
     App\Stenope\Processor\TableOfContentProcessor:
+        arguments:
+            $defaultDepth: 2
         tags: [{ name: stenope.processor, priority: -10 }]
 
     # Override default HTML Anchor processor:

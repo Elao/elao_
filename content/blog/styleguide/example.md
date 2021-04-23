@@ -4,7 +4,7 @@ title:              "Petit guide de style du blog"
 date:               "2020-09-23"
 publishdate:        "2020-09-23"
 draft:              true
-tableOfContent:     2
+tableOfContent:     3
 
 description:        "Tour d'horizon de ce qu'on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction."
 
@@ -32,7 +32,9 @@ Dans le blog, le `h1` est le titre de l'article. Dans le corps de l'article, on 
 Le sommaire permet d'afficher les `h2` et les `h3` présents dans l'article. Selon le besoin, précisez le niveau de titre à faire figurer au sommaire.
 
 ```yaml
-tableOfContent: 2
+tableOfContent: true
+# identique à:
+# tableOfContent: 2
 ```
 ou
 ```yaml

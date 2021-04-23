@@ -12,6 +12,7 @@ thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnem
 credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
+outdated:           true
 
 author:    "tjarrand"
 ---

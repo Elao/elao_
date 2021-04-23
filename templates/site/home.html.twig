@@ -142,7 +142,7 @@
                     {% for item in technos %}
                         {% set techno = content_get('App\\Model\\Technology', item.id) %}
                         <li>
-                            {#<a href="{{ path('technology', { technology: 'symfony' })}}" class="technologies__item">#}
+                            <a href="{{ path('technology', { technology: 'symfony' })}}" class="technologies__item">
                             {# TODO: wire back technos links once ready #}
                             <div class="technologies__item">
                                 <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">

@@ -28,11 +28,19 @@ class TechnologyController extends AbstractController
      */
     public function show(Technology $technology): Response
     {
-        $articles = $this->manager->getContents(
-            Article::class,
-            ['date' => false],
-            fn ($article) => $article->hasTag($technology->slug)
-        );
+        if(count($technology->articles) > 0 ){
+            $articles = $this->manager->getContents(
+                Article::class,
+                ['date' => false],
+                fn ($article) => in_array($article->slug, $technology->articles)
+            );
+        } else {
+            $articles = $this->manager->getContents(
+                Article::class,
+                ['date' => false],
+                fn ($article) => $article->hasTag($technology->slug)
+            );
+        }
 
         return $this->render('technology/technology.html.twig', [
             'technology' => $technology,

@@ -2,6 +2,7 @@
 name: "Symfony"
 logo: "build/images/technos/symfony.svg"
 title: "Nous utilisons Symfony pour créer des applications robustes"
+articles: [dev/architecture-hexagonale-symfony, dev/comment-integrer-vue-js-application-symfony, dev/authentification-par-lien-magique]
 ---
 
 Pour nos développements backend, nous nous appuyons sur Symfony, un framework PHP largement plébiscité par la communauté.
@@ -37,14 +38,3 @@ Pour les besoins d’une solution globale d’administration et de gestion de tr
 
 La problématique de forte volumétrie de données et de traitement (imports et gestion de ces données) nous a poussé à opter pour Symfony, en complément de React pour obtenir une interface utilisateur rapide et moderne.
 -> lien vers l’étude de cas Musique & Music
-
-## Article de blog liés à Symfony
-
-L’architecture hexagonale avec Symfony
--> lien vers l’article https://blog.elao.com/fr/dev/architecture-hexagonale-symfony/
-
-Comment intégrer Vue JS dans une application
--> lien vers l’article https://blog.elao.com/fr/dev/comment-integrer-vue-js-application-symfony/
-
-Authentification par lien magique
--> lien vers l’article https://blog.elao.com/fr/dev/authentification-par-lien-magique/

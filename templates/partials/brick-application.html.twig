@@ -1,8 +1,8 @@
-<div class="brick-application" data-aos="zoom-in-down">
+<a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
     <p>Votre job n'est pas dans la liste ?</p>
-    <h3 class="title">Nous prenons les candidature spontanée</h3>
-    <a class="contact-link" href="{{ path('contact') }}">
-        <img src="{{ asset('build/images/card.svg') }}" alt="">
+    <h3 class="title">Nous prenons les candidature spontanées</h3>
+    <span class="animation">
+        {% include 'partials/svg-letter.html.twig' %}
         <span>Nous envoyer un message</span>
-    </a>
-</div>
+    </span>
+</a>

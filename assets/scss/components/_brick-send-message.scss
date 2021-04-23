@@ -1,5 +1,4 @@
-.brick-development,
-.brick-application {
+.brick-send-message {
   @extend .brick;
   @extend .brick--large;
 
@@ -14,24 +13,44 @@
     color: #fff;
   }
 
-  .contact-link {
+  .animation {
     display: flex;
     align-items: center;
     font-family: 'antikor bold';
     font-size: 28px;
     border: none;
 
-    img {
-      margin: 0;
+    .letter {
       margin-right: 30px;
       width: 90px;
+      overflow: visible;
+    }
+
+    .letter__arrow {
+      .base,
+      .tip {
+        transition: transform ease-out .1s;
+      }
+    }
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    .letter__arrow {
+      .base {
+        transform: scaleX(1.2);
+      }
+
+      .tip {
+        transform: translateX(15px);
+      }
     }
   }
 }
 
 @media (max-width: $screen-sm) {
-  .brick-development,
-  .brick-application {
+  .brick-send-message {
     .title {
       margin: 20px 0;
       max-width: 500px;
@@ -39,7 +58,7 @@
       line-height: 26px;
     }
 
-    .contact-link {
+    .animation {
       font-size: 20px;
     }
   }

@@ -3,6 +3,7 @@ name: "Symfony"
 logo: "build/images/technos/symfony.svg"
 title: "Nous utilisons Symfony pour créer des applications robustes"
 articles: [dev/architecture-hexagonale-symfony, dev/comment-integrer-vue-js-application-symfony, dev/authentification-par-lien-magique]
+caseStudies: [tribu, cirano, climapp]
 ---
 
 Pour nos développements backend, nous nous appuyons sur Symfony, un framework PHP largement plébiscité par la communauté.

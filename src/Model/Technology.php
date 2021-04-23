@@ -13,6 +13,7 @@ class Technology
     public string $content;
     public ?string $description;
     public ?array $articles;
+    public ?array $caseStudies;
     public \DateTimeInterface $lastModified;
 
     /** Show a dedicated page or not */

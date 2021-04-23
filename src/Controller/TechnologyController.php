@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Article;
+use App\Model\CaseStudy;
 use App\Model\Technology;
 use Stenope\Bundle\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -42,9 +43,18 @@ class TechnologyController extends AbstractController
             );
         }
 
+        if(count($technology->caseStudies) > 0 ){
+            $caseStudies = $this->manager->getContents(
+                CaseStudy::class,
+                ['date' => false],
+                fn ($article) => in_array($article->slug, $technology->caseStudies)
+            );
+        }
+
         return $this->render('technology/technology.html.twig', [
             'technology' => $technology,
             'articles' => \array_slice($articles, 0, 3),
+            'caseStudies' => $caseStudies ?? [],
         ])->setLastModified($technology->lastModified);
     }
 }

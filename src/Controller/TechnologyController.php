@@ -29,11 +29,11 @@ class TechnologyController extends AbstractController
      */
     public function show(Technology $technology): Response
     {
-        if(count($technology->articles) > 0 ){
+        if (!\is_null($technology->articles)) {
             $articles = $this->manager->getContents(
                 Article::class,
                 ['date' => false],
-                fn ($article) => in_array($article->slug, $technology->articles)
+                fn ($article) => \in_array($article->slug, $technology->articles, true)
             );
         } else {
             $articles = $this->manager->getContents(
@@ -43,11 +43,11 @@ class TechnologyController extends AbstractController
             );
         }
 
-        if(count($technology->caseStudies) > 0 ){
+        if (!\is_null($technology->caseStudies)) {
             $caseStudies = $this->manager->getContents(
                 CaseStudy::class,
                 ['date' => false],
-                fn ($article) => in_array($article->slug, $technology->caseStudies)
+                fn ($article) => \in_array($article->slug, $technology->caseStudies, true)
             );
         }
 

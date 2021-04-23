@@ -1,13 +1,60 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    Nous recrutons
+    <div class="page-jobs">
 
-    <div>
-        {% for job in jobs %}
-            <a href="{{ path('job', { job: job.slug }) }}">
-                <h2>{{ job.title }}</h2>
-            </a>
-        {% endfor %}
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Jobs</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+
+        <div class="banner-case-study">
+            <h1 class="banner-case-study__title" data-aos="fade-right">
+                Rejoindre la
+                <span>magic team</span>
+            </h1>
+            <div class="banner-case-study__content">
+                <div class="info" data-aos="fade-in">
+                    <p>Voici les postes pour lesquels nous recrutons, mais nous recevons aussi vos candidatures spontanées avec plaisir !</p>
+                </div>
+                <div class="highlight" data-aos="zoom-in-left">
+                    <p>Bien vivre et bien faire vivre les équipes, c'est ce qui motive au quotidien les cofondateurs d'Elao.</p>
+                </div>
+            </div>
+        </div>
+
+        <ul class="article-list">
+            {% for job in jobs %}
+                <li class="miniature-inline miniature-inline--small" data-aos="fade-up-left">
+                     <a href="" class="miniature-inline__image">
+                        <span class="image" style="background-image: url(https://www.fillmurray.com/460/300)"></span>
+                    </a>
+                    <div class="miniature-inline__content">
+                        <a href="{{ path('job', { job: job.slug }) }}" class="title">
+                            {{ job.title }}
+                        </a>
+                        <p class="description">
+                            {# {{ job.description }} #}
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit consequatur rerum.
+                        </p>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <aside class="bricks">
+            {% include 'partials/brick-application.html.twig' %}
+        </aside>
     </div>
 {% endblock %}

@@ -45,7 +45,7 @@
                         </div>
                     </li>
                 {% elseif page == minPage and loop.index < 5 %}
-                    <li class="miniature-inline miniature-inline--large" data-aos="fade-left">
+                    <li class="miniature-inline" data-aos="fade-left">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
                         </a>

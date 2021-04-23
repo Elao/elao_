@@ -2,6 +2,8 @@
 name: "Algolia"
 logo: "build/images/technos/algolia.svg"
 title: "Algolia, un moteur de recherche interne pertinent et performant"
+articles: []
+caseStudies: []
 ---
 
 Algolia est un atout de taille pour bénéficier d’un moteur de recherche rapide, pertinent et efficace. Grâce à ce service, le résultat de recherche est pertinent, ce qui améliore considérablement l’expérience client. Nos équipes peuvent intégrer ou vous aider à intégrer Algolia à votre application et ainsi améliorer l’expérience utilisateur de vos clients. 

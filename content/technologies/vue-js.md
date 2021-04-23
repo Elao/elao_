@@ -4,6 +4,8 @@ logo: "build/images/technos/vue.svg"
 title: "Vue.js : un peu de magie dans nos interfaces🧙‍♀️"
 title-seo: "Développement Vue.js à Lyon - Elao met de la magie dans vos applis ! 🧙‍♀️"
 meta-description: "Nous vous aidons à réfléchir à des interfaces utilisateur rapides et efficaces que nous pouvons mettre en oeuvre grâce à Vue.js, un framework javascript reconnu et solide !"
+articles: []
+caseStudies: []
 ---
 
 Vue.js est un framework JavaScript, assez comparable à React. Tout comme ce dernier, il permet d'**obtenir des interfaces fluides et rapides**, sans avoir à rafraîchir la page après une action de l'utilisateur. **Chez Elao, nous l'utilisons pour améliorer l'expérience utilisateur (UX)** sur des pages comme par exemple des formulaires réactifs agrémentés d'animations d'aide à la saisie, un générateur de playlists, un outil pour recadrer un avatar, etc. Nous pouvons également l'utiliser pour constituer une application plus ambitieuse. 

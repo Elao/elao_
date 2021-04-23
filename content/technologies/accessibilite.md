@@ -1,6 +1,8 @@
 ---
 name: "Accessibilité"
 title: "Responsive design, accessibilité : des interfaces web exigeantes"
+articles: []
+caseStudies: []
 ---
 
 La question du niveau d'exigence d'accessibilité doit être adressée dès le début de la conception graphique. Lors de la réalisation des interfaces, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Chez Elao, nous évaluons le niveau d’exigence d'accessibilité des projets selon les enjeux, le public visé et le budget. 

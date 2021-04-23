@@ -34,27 +34,53 @@
             </div>
         </div>
 
-        <ul class="article-list">
-            {% for job in jobs %}
-                <li class="miniature-inline miniature-inline--small" data-aos="fade-up-left">
-                     <a href="" class="miniature-inline__image">
-                        <span class="image" style="background-image: url(https://www.fillmurray.com/460/300)"></span>
-                    </a>
+        {# Todo : pour l'instant on a une erreur si il y a zéro offre d'emploi #}
+        {% if jobs is not empty %}
+            <ul class="article-list">
+                {% for job in jobs %}
+                    <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
+                        <div class="miniature-inline__content">
+                            <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
+                                {{ job.title }}
+                            </a>
+                            <p class="description" itemprop="description">
+                                {# Todo : permettre d'afficher la description #}
+                                {# {{ job.description }} #}
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, assumenda repellendus at officiis optio.
+                            </p>
+                            <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Voir le poste
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                        <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                        <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <aside class="bricks">
+                {% include 'partials/brick-application.html.twig' %}
+            </aside>
+        {% else %}
+            <ul class="article-list">
+                <li class="miniature-inline miniature-inline--small no-result" data-aos="fade-up-left">
                     <div class="miniature-inline__content">
-                        <a href="{{ path('job', { job: job.slug }) }}" class="title">
-                            {{ job.title }}
+                        <span class="title">Nous n'avons aucun poste ouvert en ce moment. Vous souhaitez nous envoyer une candidature spontanée ?</span>
+                        <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
+                            <span>
+                                Envoyez nous un message
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                </svg>
+                            </span>
                         </a>
-                        <p class="description">
-                            {# {{ job.description }} #}
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid suscipit consequatur rerum.
-                        </p>
                     </div>
                 </li>
-            {% endfor %}
-        </ul>
-
-        <aside class="bricks">
-            {% include 'partials/brick-application.html.twig' %}
-        </aside>
+            </ul>
+        {% endif %}
     </div>
 {% endblock %}

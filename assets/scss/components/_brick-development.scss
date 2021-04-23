@@ -1,4 +1,5 @@
-.brick-development {
+.brick-development,
+.brick-application {
   @extend .brick;
   @extend .brick--large;
 
@@ -29,7 +30,8 @@
 }
 
 @media (max-width: $screen-sm) {
-  .brick-development {
+  .brick-development,
+  .brick-application {
     .title {
       margin: 20px 0;
       max-width: 500px;

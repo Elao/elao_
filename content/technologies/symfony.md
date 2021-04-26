@@ -1,12 +1,16 @@
 ---
 name: "Symfony"
 logo: "build/images/technos/symfony.svg"
-title: "Nous utilisons Symfony pour créer des applications robustes"
+title: 
+    - "Nous utilisons Symfony" 
+    - "pour créer des applications robustes"
 articles: [dev/architecture-hexagonale-symfony, dev/comment-integrer-vue-js-application-symfony, dev/authentification-par-lien-magique]
 caseStudies: [tribu, cirano, climapp]
+titleSeo: "Développement Symfony : nous créons des applicatifs et projets web robustes et évolutifs 💪"
+metaDescription : "Pourquoi faire confiance à Elao et Symfony, en choisir ce framework pour le développement de son logiciel ou application ? On vous dit tout 😎"
 ---
 
-Pour nos développements backend, nous nous appuyons sur Symfony, un framework PHP largement plébiscité par la communauté.
+Pour nos développements backend, nous nous appuyons sur **Symfony, un framework PHP largement plébiscité par la communauté**.
 
 ## Pourquoi avons-nous fait le choix de Symfony ?
 
@@ -28,14 +32,6 @@ Forts de ces nombreuses années à utiliser Symfony, nous avons développé une 
 
 Nous contribuons directement au code de Symfony en proposant des améliorations ou des évolutions qui servent à la communauté.
 
-Nous créons des bundles open source, c’est à dire des outils qui nous sont utiles dans nos projets, que nous réutilisons dès que nous en avons besoin et que nous rendons public, afin qu’ils profitent à la communauté.
+Nous créons des bundles open source, c’est-à-dire des outils qui nous sont utiles dans nos projets, que nous réutilisons dès que nous en avons besoin et que nous rendons public, afin qu’ils profitent à la communauté.
 
 Nous participons régulièrement à des évènements et des meetups autour de Symfony, en tant que participants ainsi qu’en tant que speakers afin de nous enrichir et de partager nos connaissances.
-
-## Projets créés avec Symfony
-
-Pour les besoins d’une solution globale d’administration et de gestion de transport de déchets, nous avons opté pour Symfony afin de gérer un back-office solide.
--> lien vers l’étude de cas Tribu
-
-La problématique de forte volumétrie de données et de traitement (imports et gestion de ces données) nous a poussé à opter pour Symfony, en complément de React pour obtenir une interface utilisateur rapide et moderne.
--> lien vers l’étude de cas Musique & Music

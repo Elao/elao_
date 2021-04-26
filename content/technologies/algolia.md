@@ -1,7 +1,9 @@
 ---
 name: "Algolia"
 logo: "build/images/technos/algolia.svg"
-title: "Algolia, un moteur de recherche interne pertinent et performant"
+title: 
+    - "Algolia, un moteur de recherche interne" 
+    - "pertinent et performant"
 articles: []
 caseStudies: []
 ---

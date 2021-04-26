@@ -1,5 +1,7 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
+{% block meta_title technology.titleSeo ?? technology.fullTitle %}
+{% block meta_description technology.metaDescription ?? technology.fullTitle %}
 
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
@@ -23,10 +25,17 @@
         - câbler le logo de la techno (parfois on a pas de logo, ne pas afficher l'image)
     #}
     <div class="banner-technology">
-        <h1 class="banner-technology__title">
-            {{ technology.title }}
-            <span>fin du titre</span>
-        </h1>
+        {% if technology.isTwoPartTitle %}
+            <h1 class="banner-technology__title">
+                {{ technology.firstPartTitle }}
+                <span>{{ technology.secondPartTitle }}</span>
+            </h1>
+        {% else %}
+            <h1 class="banner-technology__title">
+                {{ technology.fullTitle }}
+            </h1>
+        {% endif %}
+
         <div class="banner-technology__image">
             <img src="{{ asset(technology.logo) }}" alt="logo de {{ technology.name }}" class="logo">
         </div>

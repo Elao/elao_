@@ -1,6 +1,8 @@
 ---
 name: "Accessibilité"
-title: "Responsive design, accessibilité : des interfaces web exigeantes"
+title:
+    - "Responsive design, accessibilité :"
+    - "des interfaces web exigeantes"
 articles: []
 caseStudies: []
 ---

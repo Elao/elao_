@@ -1,7 +1,9 @@
 ---
 name: "Vue.js"
 logo: "build/images/technos/vue.svg"
-title: "Vue.js : un peu de magie dans nos interfaces🧙‍♀️"
+title: 
+    - "Vue.js" 
+    - "un peu de magie dans nos interfaces🧙‍♀️"
 title-seo: "Développement Vue.js à Lyon - Elao met de la magie dans vos applis ! 🧙‍♀️"
 meta-description: "Nous vous aidons à réfléchir à des interfaces utilisateur rapides et efficaces que nous pouvons mettre en oeuvre grâce à Vue.js, un framework javascript reconnu et solide !"
 articles: []

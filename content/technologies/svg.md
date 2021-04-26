@@ -1,6 +1,7 @@
 ---
 name: SVG
 logo: build/images/technos/svg.svg
-title: SVG
+title: 
+    - SVG
 show: false
 ---

@@ -1,6 +1,8 @@
 ---
 name: "Paiement"
-title: "Intégration d'une solution de paiement en ligne"
+title: 
+ - "Intégration d'une solution de paiement en ligne" 
+ - "pour votre application"
 title-seo: "Paiement en ligne pour votre application web ou mobile avec Elao 💴"
 meta-description: "Les transactions bancaires peuvent être nécessaires pour votre projet web ou mobile. Nous pouvons vous accompagner dans l'intégration d'une solution de paiement en ligne comme Stripe, PayPal, MangoPay ..."
 ---

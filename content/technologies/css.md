@@ -1,6 +1,7 @@
 ---
 name: CSS
 logo: build/images/technos/css3.svg
-title: CSS
+title: 
+    - CSS
 show: false
 ---

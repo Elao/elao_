@@ -1,6 +1,8 @@
 ---
 name: "Signature électronique"
-title: "Souscription et signature électronique dans votre application web"
+title: 
+    - "Souscription et signature électronique"
+    - "pour votre application web"
 articles: []
 caseStudies: []
 ---

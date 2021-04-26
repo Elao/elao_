@@ -8,14 +8,36 @@ class Technology
 {
     public string $name;
     public ?string $logo = null;
-    public string $title;
+    public array $title = [];
     public string $slug;
     public string $content;
     public ?string $description;
+    public ?string $metaDescription = null;
+    public ?string $titleSeo = null;
     public ?array $articles = null;
     public ?array $caseStudies = null;
     public \DateTimeInterface $lastModified;
 
     /** Show a dedicated page or not */
     public bool $show = true;
+
+    public function isTwoPartTitle(): bool
+    {
+        return \count($this->title) > 1 ?? false;
+    }
+
+    public function getFullTitle(): string
+    {
+        return $this->isTwoPartTitle() ? sprintf('%s %s', $this->title[0], $this->title[1]) : $this->title[0];
+    }
+
+    public function getFirstPartTitle(): string
+    {
+        return $this->title[0];
+    }
+
+    public function getSecondPartTitle(): string
+    {
+        return $this->title[1];
+    }
 }

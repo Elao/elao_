@@ -1,6 +1,7 @@
 ---
 name: "Bootstrap"
 logo: "build/images/technos/bootstrap.svg"
-title: bootstrap
+title:
+    - bootstrap
 show: false
 ---

@@ -25,7 +25,8 @@ images: ["images/casestudies/headers/musique-music-banner.jpg"] <!-- TODO -->
 ## L'expertise Elao déployée pour l'application Musique Music
 
 ### Ateliers de recueil du besoin
-Musique & Music n'en était pas à sa première version mais Elao a été missionné pour repartir d'une feuille blanche. Il a fallu reprendre l'essence de l'existant pour proposer une version que l'on pouvait rapidement mettre en production tout en assurant un minimum de fonctionnalité afin que les utilisateurs retrouvent leurs petits.
+Musique & Music n'en était pas à sa première version, l'application existait déjà depuis plusieurs années mais la dette technique et l'obsolescence du code existant a décidé les fondateurs de repartir d'une feuille blanche. 
+Il a donc fallu tirer l'essence de l'existant afin de proposer une version que l'on pouvait rapidement mettre en production, tout en assurant que les fonctionnalités clés soient présentes afin que les utilisateurs retrouvent leurs petits.
 À partir de ces ateliers, nous avons été en mesure de proposer une feuille de route fonctionnelle permettant d'arriver à une "nouvelle première version" du projet.
 Très rapidement, outre le front-office, le besoin d'un back-office efficace a émergé, dans le but de rendre plus efficaces les équipes Musique & Music. 
 
@@ -34,22 +35,17 @@ Les développeurs Elao sont avant tout des concepteurs et n'hésitent pas à êt
 Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'interface utilisateurs (UI) ont été réalisées main dans la main avec Mathilde Vandier, designer freelance, avec laquelle nous avons itéré du début à la fin du projet.
 
 ### Phase de build (développement)
-C'est avec Anne-Laure et Xavier qu'Antoine, CTO de Musique & Music, a mené toute la phase de spécifications fonctionnelles. Il était nécessaire sur ce projet d'apporter une vraie force humaine, car les délais étaient serrés et nous n'étions pas trop de 3 paires d'yeux. Benjamin, Thomas et Amélie ont eux, mené de front toute la phase de développement : **ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à Musique & Music d'avoir une première version fonctionnelle à proposer à sa base d'utilisateurs fidèles.
+C'est avec Anne-Laure et Xavier qu'Antoine, CTO de Musique & Music, a mené toute la phase de spécifications fonctionnelles. Il était nécessaire sur ce projet d'apporter une vraie force humaine, car les délais étaient serrés et nous n'étions pas trop de trois. Benjamin, Thomas et Amélie ont eux, mené de front toute la phase de développement : **ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à Musique & Music d'avoir une première version fonctionnelle à proposer à sa base d'utilisateurs.
 
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
-Depuis la mise en production de ses applications, Musique & Music fait appel à Elao de façon régulière pour faire évoluer son produit en fonction des besoins remontés par ses techniciens et ses clients.
+Depuis la mise en production de ses applications, Musique & Music fait appel à Elao de façon régulière pour faire évoluer son produit en fonction des besoins remontés par ses équipes et ses utilisateurs.
 
 
 ## Les applications
 
 ### Pour les professionnels du montage vidéo : une bibliothèque de musique fluide et dynamique
 
-Musique & Music met un point d'honneur à avoir les interfaces les plus fluides possibles et une expérience utilisateur de haut niveau. Il était nécessaire d'aller vers le plus possible de réactivité côté application. 
-
-**Les contraintes étaient les suivantes :**
-<!-- TODO ajouter contraintes
-Est-ce que la taille de la BDD des MP3 en était une ?
- -->
+Musique & Music met un point d'honneur à proposer les interfaces les plus fluides possibles et une expérience utilisateur de haut niveau. Il était nécessaire d'aller vers un maximum de réactivité de l'applicatif. 
 
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
 

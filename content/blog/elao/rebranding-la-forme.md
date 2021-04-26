@@ -1,7 +1,7 @@
 
 ---
 type:               "post"
-title:              "Rebranding 2/3 : la forme"
+title:              "Rebranding 2/4 : la forme"
 date:               "2021-04-22"
 publishdate:        "2021-04-22"
 draft:              false
@@ -18,7 +18,7 @@ tweetId:            ""
 ---
 
 ## Un nouveau logo, une nouvelle charte graphique
-Xavier en a parlé, le socle est posé <!-- #TODO insérer lien vers l'autre article --> et il nous paraît plus que solide. Maintenant, comment est-ce que l'on donne vie à tout ça ? 
+[Xavier en a parlé](../rebranding-le-fond.md), le socle est posé et il nous paraît plus que solide. Maintenant, comment est-ce que l'on donne vie à tout ça ? 
 
 Après un travail remarquable à 4 mains sur notre plateforme de marque réalisé avec [Oriane](https://galanga-inside.fr/), [Estelle](https://www.heystelle.fr/) a la lourde mission de réaliser la charte graphique qui va donner corps à tous les mots que nous avons réussi à poser sur Elao.
 À travers un travail itératif, qui a nécessité plusieurs ateliers, des discussions mais surtout beaucoup d'écoute de toutes parts, Estelle parvient à la version qui fait tilt. Celle qui nous ressemble et qui nous parle.

@@ -4,7 +4,6 @@ type:               "post"
 title:              "Rebranding 2/4 : la forme"
 date:               "2021-04-22"
 publishdate:        "2021-04-22"
-draft:              false
 tableOfContent:     true
 
 description:        "Après le fond, la forme."
@@ -113,4 +112,3 @@ Merci Oriane, Estelle, Adrien et Gweno : vous faites un peu partie de l'équipe 
       <span class="figure__legend">Elao, plus que jamais, développe du lien :)</span>
     </figcaption>
 </figure>
-

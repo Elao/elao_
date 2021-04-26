@@ -6,7 +6,7 @@ publishdate:        "2018-10-30"
 draft:              false
 
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
-tableOfContent:            true
+tableOfContent:     2
 
 thumbnail:          "images/posts/thumbnails/tdd.jpg"
 header_img:         "images/posts/headers/tdd.jpg"
@@ -21,7 +21,7 @@ N'ayez pas honte de ne pas savoir par où commencer.
 Beaucoup de personnes parlent de « déclic » lorsqu'il s'agit d'appréhender le TDD.
 L'ambition de cet article est d'essayer de créer ce déclic.
 
-## Pourquoi faire du *Test Driven Development*
+## Pourquoi faire du Test Driven Development
 
 On trouve pléthore de littérature à ce sujet et voici selon nous les avantages à faire du TDD en vrac :
 

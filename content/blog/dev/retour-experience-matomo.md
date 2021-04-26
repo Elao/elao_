@@ -3,7 +3,7 @@ type:               "post"
 title:              "Sauvez un cookie 🍪, installez Matomo !"
 date:               "2019-03-21"
 publishdate:        "2019-03-21"
-tableOfContent:            true
+tableOfContent:     2
 draft:              false
 
 description:        "Chez Elao, nous mesurons désormais l'audience de nos propres sites grâce à Matomo. Retour d'expérience. "

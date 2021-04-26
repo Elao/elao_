@@ -68,13 +68,23 @@
     </div>
 
     {% if article.tableOfContent %}
-        <ul class="table-of-content" data-aos="fade-up">
-            {% for id, title in article.tableOfContent %}
+        <ol class="table-of-content" data-aos="fade-up">
+            {% for headline in article.tableOfContent %}
                 <li class="table-of-content__item">
-                    <a href="#{{ id }}">{{ title }}</a>
+                    <a href="#{{ headline.id }}">{{ headline.content }}</a>
+
+                    {% if headline.children is not empty %}
+                        <ol class="table-of-content__sub-level">
+                            {% for child in headline.children %}
+                                    <li>
+                                        <a href="#{{ child.id }}">{{ child.content }}</a>
+                                    </li>
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
                 </li>
             {% endfor %}
-        </ul>
+        </ol>
     {% endif %}
 
     <div class="article-content">

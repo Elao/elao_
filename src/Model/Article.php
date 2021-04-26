@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Stenope\Processor\Headline;
+
 class Article
 {
     public string $type;
@@ -30,7 +32,7 @@ class Article
     /**
      * Automatically generated
      *
-     * @var string[]
+     * @var Headline[]
      */
     public ?array $tableOfContent = null;
 

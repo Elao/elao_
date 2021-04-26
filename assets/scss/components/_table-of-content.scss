@@ -35,6 +35,17 @@
   }
 }
 
+.table-of-content__sub-level {
+  padding-left: 0;
+  font-family: 'antikor medium';
+  font-size: 15px;
+  list-style: none;
+
+  li {
+    margin-top: 7px;
+  }
+}
+
 @media (max-width: $screen-sm) {
   .table-of-content {
     padding: 25px 25px 25px 65px;

@@ -14,7 +14,7 @@ header_img:         "images/posts/headers/elao-rebrand-banner-tech.jpg "
 credits:            { name: 'Phil Hearing', url: 'https://unsplash.com/@philhearing' }
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
-authors:            ["tjarrand"]
+authors:            ["tjarrand", "msteinhausser"]
 #tweetId:            "1384417140346920962"
 ---
 

@@ -12,8 +12,8 @@ class Technology
     public string $slug;
     public string $content;
     public ?string $description;
-    public ?array $articles;
-    public ?array $caseStudies;
+    public ?array $articles = null;
+    public ?array $caseStudies = null;
     public \DateTimeInterface $lastModified;
 
     /** Show a dedicated page or not */

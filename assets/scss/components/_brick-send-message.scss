@@ -5,6 +5,7 @@
   min-height: 190px;
   color: $color-light;
   background: $color-dark;
+  transition: opacity ease .4s, transform ease .4s, background ease .2s !important;
 
   .title {
     margin: 40px 0;
@@ -29,7 +30,7 @@
     .letter__arrow {
       .base,
       .tip {
-        transition: transform ease-out .1s;
+        transition: transform ease-out .2s;
       }
     }
   }
@@ -37,13 +38,18 @@
   &:hover,
   &:active,
   &:focus {
-    .letter__arrow {
-      .base {
-        transform: scaleX(1.2);
-      }
+    color: $color-light;
+    background: darken($color-dark, 2%);
 
-      .tip {
-        transform: translateX(15px);
+    .animation {
+      .letter__arrow {
+        .base {
+          transform: scaleX(1.2);
+        }
+
+        .tip {
+          transform: translateX(15px);
+        }
       }
     }
   }
@@ -59,7 +65,12 @@
     }
 
     .animation {
-      font-size: 20px;
+      font-size: 18px;
+      line-height: 1.2;
+
+      .letter {
+        width: 60px;
+      }
     }
   }
 }

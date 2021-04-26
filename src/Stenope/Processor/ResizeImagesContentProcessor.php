@@ -81,6 +81,6 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
     private function isLocalImage(string $url): bool
     {
-        return \is_string(parse_url($url, PHP_URL_HOST));
+        return !\is_string(parse_url($url, PHP_URL_HOST));
     }
 }

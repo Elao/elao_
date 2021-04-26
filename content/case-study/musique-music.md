@@ -49,7 +49,7 @@ Musique & Music met un point d'honneur à proposer les interfaces les plus fluid
 
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
 
-<!-- TODO parler SRR -->
+<!-- TODO parler SSR -->
 
 
 <!-- TODO <figure>

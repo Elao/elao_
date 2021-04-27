@@ -69,6 +69,11 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
+        // Ignore animated gifs
+        if (preg_match('/\.gif$/', $source)) {
+            return;
+        }
+
         $dpr1 = $this->resizedUrlGenerator->withPreset($source, $this->preset);
         $dpr2 = $this->resizedUrlGenerator->withPreset($source, $this->preset, ['dpr' => 2]);
 

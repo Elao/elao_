@@ -8,6 +8,7 @@ use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
 use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\Mime\MimeTypes;
 
 /**
  * Provide resized and optimized images, for retina devices as well, inside a specific content.
@@ -19,6 +20,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
     private string $type;
     private string $preset;
     private string $property;
+    private MimeTypes $mimeTypes;
 
     public function __construct(
         ResizedUrlGenerator $resizedUrlGenerator,
@@ -30,6 +32,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
         $this->type = $type;
         $this->preset = $preset;
         $this->property = $property;
+        $this->mimeTypes = new MimeTypes();
     }
 
     public function __invoke(array &$data, string $type, Content $content): void
@@ -69,8 +72,8 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
-        // Ignore animated gifs
-        if (preg_match('/\.gif$/', $source)) {
+        // Ignore unsupported image formats
+        if (!$this->isSupported($source)) {
             return;
         }
 
@@ -82,6 +85,18 @@ class ResizeImagesContentProcessor implements ProcessorInterface
         $dpr1 1x,
         $dpr2 2x,
         HTML);
+    }
+
+    private function isSupported(string $url): bool
+    {
+        switch ($this->mimeTypes->guessMimeType($url)) {
+            case 'image/gif':
+            case 'image/svg+xml':
+                return false;
+
+            default:
+                return true;
+        }
     }
 
     private function isLocalImage(string $url): bool

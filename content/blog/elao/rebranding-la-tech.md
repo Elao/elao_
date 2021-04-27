@@ -4,7 +4,6 @@ type:               "post"
 title:              "Rebranding 3/4 : la tech"
 date:               "2021-05-03"
 publishdate:        "2021-05-03"
-draft:              false
 tableOfContent:     2
 
 description:        "On s'outille."

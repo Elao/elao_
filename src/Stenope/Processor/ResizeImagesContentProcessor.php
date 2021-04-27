@@ -89,7 +89,14 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
     private function isSupported(string $url): bool
     {
-        switch ($this->mimeTypes->guessMimeType($url)) {
+        try {
+            $mimeType = $this->mimeTypes->guessMimeType($url);
+        } catch (\InvalidArgumentException $exception) {
+            // File not found
+            return false;
+        }
+
+        switch ($mimeType) {
             case 'image/gif':
             case 'image/svg+xml':
                 return false;

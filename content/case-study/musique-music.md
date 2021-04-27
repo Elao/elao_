@@ -67,7 +67,7 @@ Mais cette fluidité d'utilisation ne devait pas se faire au détriment des perf
 Ainsi, toutes les pages sont servies avec leurs contenus et leurs méta-données complètes avant-même l'execution du Javascript dans le navigateur du client (ou des robots d'indexation des moteurs de recherche).
 
 #### Côté recherche, la puissance d'Algolia
-La base Musique & Music compte plus de 650 000 titres, chacun avec ses méta-données, ses labels. La pertinence et la vélocité de la recherche sont deux critères déterminants dans le produit M&M, c'est pourquoi nous avons fait le choix d'utiliser Algolia. 
+La base Musique & Music compte plus de 650 000 titres, chacun avec ses méta-données, ses labels. La pertinence et la vélocité de la recherche sont deux critères déterminants dans le produit M&M, c'est pourquoi nous avons fait le choix d'embarquer la solution Algolia. 
 
 ### Pour l'équipe Musique & Music, un espace d'administration adapté à leurs besoins
 

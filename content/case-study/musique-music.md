@@ -11,7 +11,7 @@ shortDescription: "Librairie musicale pour les professionnels"
 clients: Musique & Music
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html", "css", "svg", "algolia"]
+technologies: ["symfony", "react", "html", "css", "algolia", "svg"]
 members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
 images: ["images/casestudies/headers/musique-music-banner.jpg"] <!-- TODO -->
 ---
@@ -47,10 +47,11 @@ Depuis la mise en production de ses applications, Musique & Music fait appel à 
 
 Musique & Music met un point d'honneur à proposer les interfaces les plus fluides possibles et une expérience utilisateur de haut niveau. Il était nécessaire d'aller vers un maximum de réactivité de l'applicatif.
 
-Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
+Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, couplé à une api GraphQL, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
 
-<!-- TODO parler SSR -->
+Mais cette fluidité d'utilisation ne devait pas se faire au détriment des performances de référencement : c'est pourquoi toute la partie publique de Musique Music est **pré-rendue coté serveur** avec le même code React piloté, éxécuté puis servi par l'application Symfony.
 
+Ainsi toutes les pages sont servies avec leurs contenus et leurs méta-données complètes avant même l'execution du Javascript dans le navigateur du client (ou des robot d'indexation des moteurs de recherche).
 
 <!-- TODO <figure>
     <img src="images/casestudies/tribu-saisie.png" alt="Application de saisie de tri de déchets">

@@ -15,20 +15,14 @@ class Technology
     public ?string $metaDescription = null;
     public ?string $titleSeo = null;
     public ?array $articles = null;
-    public ?array $caseStudies = null;
     public \DateTimeInterface $lastModified;
 
     /** Show a dedicated page or not */
     public bool $show = true;
 
-    public function isTwoPartTitle(): bool
-    {
-        return \count($this->title) > 1 ?? false;
-    }
-
     public function getFullTitle(): string
     {
-        return $this->isTwoPartTitle() ? sprintf('%s %s', $this->title[0], $this->title[1]) : $this->title[0];
+        return implode(' ', $this->title);
     }
 
     public function getFirstPartTitle(): string

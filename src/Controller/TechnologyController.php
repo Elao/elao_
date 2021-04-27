@@ -39,17 +39,15 @@ class TechnologyController extends AbstractController
             $articles = $this->manager->getContents(
                 Article::class,
                 ['date' => false],
-                fn ($article) => $article->hasTag($technology->slug)
+                fn (Article $article): bool => $article->hasTag($technology->name)
             );
         }
 
-        if (!\is_null($technology->caseStudies)) {
-            $caseStudies = $this->manager->getContents(
-                CaseStudy::class,
-                ['date' => false],
-                fn ($article) => \in_array($article->slug, $technology->caseStudies, true)
-            );
-        }
+        $caseStudies = $this->manager->getContents(
+            CaseStudy::class,
+            ['technologies' => $technology->name],
+            fn (CaseStudy $caseStudy): bool => $caseStudy->hasTechnology($technology)
+        );
 
         return $this->render('technology/technology.html.twig', [
             'technology' => $technology,

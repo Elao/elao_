@@ -4,7 +4,6 @@ title:
     - "Souscription et signature électronique"
     - "pour votre application web"
 articles: []
-caseStudies: []
 ---
 La signature électronique est un excellent moyen de gagner du temps dans un processus de vente en ligne, car il évite de nombreux allers-retours et d'éventuelles pertes de documents. De plus, ce système est parfaitement sécurisé et confidentiel : c'est une valeur ajoutée pour l'utilisateur mais également pour les collaborateurs. Chez Elao, nous accompagnons nos clients dans l'intégration de solutions de signatures électroniques 
 

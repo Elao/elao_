@@ -19,22 +19,16 @@
         </li>
     </ol>
 
-    {# Todo :
-        - permettre de couper le titre en 2 parties (Exemple : Nous utilisons Symfony pour créer <span>des applications robustes</span>)
-        - trouver une image de bannière générique pour les technos
-        - câbler le logo de la techno (parfois on a pas de logo, ne pas afficher l'image)
-    #}
     <div class="banner-technology">
-        {% if technology.isTwoPartTitle %}
-            <h1 class="banner-technology__title">
-                {{ technology.firstPartTitle }}
-                <span>{{ technology.secondPartTitle }}</span>
-            </h1>
-        {% else %}
-            <h1 class="banner-technology__title">
-                {{ technology.fullTitle }}
-            </h1>
-        {% endif %}
+        <h1 class="banner-technology__title">
+        {% for title in technology.title %}
+            {% if loop.first %}
+                {{ title }}
+            {% else %}
+                <span>{{ title }}</span>
+            {% endif %}
+        {% endfor %}
+        </h1>
 
         <div class="banner-technology__image">
             <img src="{{ asset(technology.logo) }}" alt="logo de {{ technology.name }}" class="logo">
@@ -42,7 +36,12 @@
     </div>
 
     <div class="page-technology">
+
         {{ technology.content|raw }}
+
+        <div class="bricks">
+            {% include 'partials/brick-development.html.twig' %}
+        </div>
 
         {% if caseStudies is not empty %}
             <h2 class="h2--dash">Projets créés avec {{ technology.name }}</h2>

@@ -96,7 +96,7 @@ Et comme il n'y a pas de bon design sans bonne intégration, je profite de cet a
 
 ## On ne se serait pas amusé·e·s sans quelques embuches…
 Il serait honnête d'admettre que tout n'a pas été "tout beau tout rose" : on a aussi essuyé des échecs dans cette aventure. Une boîte tech qui se lance dans un gros chantier de communication, ça demande quelques ajustements ! 
-Parmis eux :
+Parmi eux :
 - Avant mon arrivée chez Elao, il y avait déjà eu quelques tentatives de redesign de logo avec une graphiste indépendante, mais le brief n'était pas suffisamment clair et le résultat ne nous ressemblait pas. L'écoute, les conseils d'Oriane et le livrable de la plateforme de marque nous ont permis de cibler finement les zones sur lesquelles on voulait s'affirmer ; 
 - Côté planning, on espérait une sortie à la rentrée 2020. On a donc 6 mois de retard. Heureusement, c'était pour la bonne cause : priorité aux projets des clients !
 

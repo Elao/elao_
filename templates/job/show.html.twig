@@ -1,8 +1,48 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>{{ job.title }}</h1>
-    <div>
-        {{ job.content|raw }}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('jobs') }}">
+                <span itemprop="name">Rejoindre la magic team</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">{{ job.title }}</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+
+    <div class="banner">
+        {# Todo : permettre de séparer le titre en 2 parties #}
+        <h1 class="banner__title" data-aos="fade-right">
+            {# {{ job.title }} #}
+            Développeur·euse
+            <span>backend</span>
+        </h1>
+        {#
+            .banner__content options (pick one) :
+                - background-image -> uncomment inline style
+                - text
+                - no image & no text -> will display empty pink square
+        #}
+        <div class="banner__highlight" data-aos="zoom-in">
+            <p>{# your main text here #}</p>
+            <i class="icon icon--semicolon" aria-hidden="true"></i>
+        </div>
+        <div class="banner__content" data-aos="fade-right" {# style="background: url()" #}>
+            {# your secondary text here #}
+        </div>
     </div>
+
+    {{ job.content|raw }}
 {% endblock %}

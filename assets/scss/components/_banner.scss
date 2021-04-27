@@ -3,10 +3,13 @@
   padding-bottom: 320px;
   position: relative;
   display: flex;
+  align-items: center;
 }
 
 .banner__title {
   margin: 0 30px 0 110px;
+  position: relative;
+  top: -20px;
   line-height: 1.5;
 }
 

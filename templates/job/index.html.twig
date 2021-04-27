@@ -18,18 +18,23 @@
             </li>
         </ol>
 
-        <div class="banner-case-study">
-            <h1 class="banner-case-study__title" data-aos="fade-right">
+        <div class="banner">
+            <h1 class="banner__title" data-aos="fade-right">
                 Rejoindre la
-                <span>magic team</span>
+                <span>magic team Elao</span>
             </h1>
-            <div class="banner-case-study__content">
-                <div class="info" data-aos="fade-in">
-                    <p>Voici les postes pour lesquels nous recrutons, mais nous recevons aussi vos candidatures spontanées avec plaisir !</p>
-                </div>
-                <div class="highlight" data-aos="zoom-in-left">
-                    <p>Bien vivre et bien faire vivre les équipes, c'est ce qui motive au quotidien les cofondateurs d'Elao.</p>
-                </div>
+            {#
+                .banner__content options (pick one) :
+                    - background-image -> uncomment inline style
+                    - text
+                    - no image & no text -> will display empty pink square
+            #}
+            <div class="banner__highlight" data-aos="zoom-in">
+                <p>{# your main text here #}</p>
+                <i class="icon icon--semicolon" aria-hidden="true"></i>
+            </div>
+            <div class="banner__content" data-aos="fade-right" {# style="background: url()" #}>
+                {# your secondary text here #}
             </div>
         </div>
 

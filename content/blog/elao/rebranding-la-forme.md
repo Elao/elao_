@@ -3,7 +3,6 @@
 type:               "post"
 title:              "Rebranding 2/4 : la forme"
 date:               "2021-04-22"
-publishdate:        "2021-04-22"
 tableOfContent:     true
 
 description:        "Après le fond, la forme."

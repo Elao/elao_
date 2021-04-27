@@ -11,7 +11,7 @@ thumbnail:          "images/posts/headers/elao-rebrand-header-forme.jpg"
 tags:               ["Rebranding", "Logo"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
-tweetId:            ""
+tweetId:            "1386971321310060546"
 ---
 
 ## Un nouveau logo, une nouvelle charte graphique

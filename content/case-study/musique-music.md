@@ -12,7 +12,7 @@ clients: Musique & Music
 size: 3 mois
 services: ["Accompagnement", "Développement"]
 technologies: ["symfony", "react", "html", "css", "svg", "algolia"]
-members: ["aldeboissieu", "tjarrand", "adefrance", "xroldo", "bleveque"]
+members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
 images: ["images/casestudies/headers/musique-music-banner.jpg"] <!-- TODO -->
 ---
 
@@ -25,10 +25,10 @@ images: ["images/casestudies/headers/musique-music-banner.jpg"] <!-- TODO -->
 ## L'expertise Elao déployée pour l'application Musique Music
 
 ### Ateliers de recueil du besoin
-Musique & Music n'en était pas à sa première version, l'application existait déjà depuis plusieurs années mais la dette technique et l'obsolescence du code existant a décidé les fondateurs de repartir d'une feuille blanche. 
+Musique & Music n'en était pas à sa première version, l'application existait déjà depuis plusieurs années mais la dette technique et l'obsolescence du code existant a décidé les fondateurs de repartir d'une feuille blanche.
 Il a donc fallu tirer l'essence de l'existant afin de proposer une version que l'on pouvait rapidement mettre en production, tout en assurant que les fonctionnalités clés soient présentes afin que les utilisateurs retrouvent leurs petits.
 À partir de ces ateliers, nous avons été en mesure de proposer une feuille de route fonctionnelle permettant d'arriver à une "nouvelle première version" du projet.
-Très rapidement, outre le front-office, le besoin d'un back-office efficace a émergé, dans le but de rendre plus efficaces les équipes Musique & Music. 
+Très rapidement, outre le front-office, le besoin d'un back-office efficace a émergé, dans le but de rendre plus efficaces les équipes Musique & Music.
 
 ### Ateliers UX/UI
 Les développeurs Elao sont avant tout des concepteurs et n'hésitent pas à être force de proposition d'un point de vue fonctionnel.
@@ -45,7 +45,7 @@ Depuis la mise en production de ses applications, Musique & Music fait appel à 
 
 ### Pour les professionnels du montage vidéo : une bibliothèque de musique fluide et dynamique
 
-Musique & Music met un point d'honneur à proposer les interfaces les plus fluides possibles et une expérience utilisateur de haut niveau. Il était nécessaire d'aller vers un maximum de réactivité de l'applicatif. 
+Musique & Music met un point d'honneur à proposer les interfaces les plus fluides possibles et une expérience utilisateur de haut niveau. Il était nécessaire d'aller vers un maximum de réactivité de l'applicatif.
 
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
 
@@ -61,7 +61,7 @@ Pour répondre à ces besoins et aux spécifications fonctionnelles du produit M
 
 ### Pour l'équipe Musique & Music, un espace d'administration adapté à leurs besoins
 
-L'équipe de Musique & Music utilise au quotidien l'espace administrateurs : les commerciaux ont un œil sur les nouveaux inscrits, les responsables de production ajoutent quotidiennement de nouvelles playlists et de nouveaux albums. **Il leur fallait un espace d'administration leur permettant d'effectuer toutes ces tâches.** 
+L'équipe de Musique & Music utilise au quotidien l'espace administrateurs : les commerciaux ont un œil sur les nouveaux inscrits, les responsables de production ajoutent quotidiennement de nouvelles playlists et de nouveaux albums. **Il leur fallait un espace d'administration leur permettant d'effectuer toutes ces tâches.**
 
 <!-- TODO <figure>
     <img src="images/casestudies/tribu-reporting.png" alt="Rapport de tri de déchets">

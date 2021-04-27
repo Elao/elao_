@@ -13,7 +13,7 @@ credits:            { name: 'Phil Hearing', url: 'https://unsplash.com/@philhear
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["tjarrand", "msteinhausser"]
-#tweetId:            "1384417140346920962"
+#tweetId:            ""
 ---
 
 ## Du sur mesure
@@ -47,7 +47,7 @@ Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 ### Son fonctionnement
 
 - Stenope scanne votre application Symfony comme le ferait un robot d'indexation et exporte chaque page vers un fichier HTML dans un dossier de build.
-- Stenope fournit une collection de services dédiées à la gestion de contenus statiques permettant de lister et convertir des sources de données (comme des fichiers Markdown locaux mais aussi des CMS Headless distants) en objet PHP métier, comme le ferait un ORM.
+- Stenope fournit une collection de services dédiés à la gestion de contenus statiques permettant de lister et convertir des sources de données (comme des fichiers Markdown locaux mais aussi des CMS Headless distants) en objet PHP métier, comme le ferait un ORM.
 - Stenope vous donne un grand contrôle sur la manière dont sont récupérés et hydratés ces contenus.
 - Il ne vous reste qu'à utiliser vos objets métier comme bon vous semble, par exemple dans des controllers et des templates twig.
 

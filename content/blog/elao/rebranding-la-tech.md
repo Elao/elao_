@@ -12,7 +12,7 @@ thumbnail:          "images/posts/headers/elao-rebrand-banner-tech.jpg"
 credits:            { name: 'Phil Hearing', url: 'https://unsplash.com/@philhearing' }
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
-authors:            ["tjarrand", "msteinhausser"]
+authors:            ["tjarrand", "msteinhausser", "adefrance"]
 #tweetId:            ""
 ---
 
@@ -55,8 +55,8 @@ Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-sou
 
 ## Accessibilité
 
-Sur notre site comme dans nos articles de blog, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Cela prend plusieurs formes, notamment pour n'en citer que certaines
-- des choix graphiques qui permettent à tous d'accéder aux contenus : par les contrastes, les couleurs, les formes, les tailles ou les animations
+Sur notre site comme dans nos articles de blog, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Cela prend plusieurs formes, notamment pour n'en citer que certaines :
+- des choix graphiques qui permettent à tous d'accéder aux contenus par les contrastes, les couleurs, les formes, les tailles ou les animations
 - une navigation simple (à la souris comme au clavier) et le respect de l'ordre naturel de la page
 - des medias légendés et crédités
 - le choix de cacher certains éléments aux lecteurs d'écrans car ils ont un but cosmétique et peuvent polluer la traduction

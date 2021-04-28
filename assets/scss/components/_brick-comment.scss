@@ -16,3 +16,11 @@
     margin-top: 40px;
   }
 }
+
+@media (max-width: $screen-xs) {
+  .brick-comment {
+    .tweet-container {
+      display: none;
+    }
+  }
+}

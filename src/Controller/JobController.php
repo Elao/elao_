@@ -11,13 +11,6 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/recrutement", options={
- *   "stenope": {
- *     "ignore": true
- *    }
- * })
- */
 class JobController extends AbstractController
 {
     private ContentManager $manager;

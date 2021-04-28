@@ -19,6 +19,11 @@
 
 @media (max-width: $screen-xs) {
   .brick-comment {
+    .title {
+      margin: 0 0 20px;
+      font-size: 27px;
+    }
+
     .tweet-container {
       display: none;
     }

@@ -53,8 +53,19 @@ Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 
 Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-source compte déjà de nombreux projets de qualité répondant à ce besoin) : Stenope c'est un ensemble d'outils pour générer des sites statiques sur mesure dans Symfony !
 
-## Deploiement continu
+## Accessibilité
 
+Sur notre site comme dans nos articles de blog, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Cela prend plusieurs formes, notamment pour n'en citer que certaines
+- des choix graphiques qui permettent à tous d'accéder aux contenus : par les contrastes, les couleurs, les formes, les tailles ou les animations
+- une navigation simple (à la souris comme au clavier) et le respect de l'ordre naturel de la page
+- des medias légendés et crédités
+- le choix de cacher certains éléments aux lecteurs d'écrans car ils ont un but cosmétique et peuvent polluer la traduction
+- ou au contraire d'apporter des alternatives à ceux qui ont besoin d'être retranscrits
+- la possibilité d'accéder au contenu quelle que soit la taille de son écran ou le niveau de son zoom
+
+Dans la pratique, l'accessibilité ce sont aussi des optimisations en cours de projet, et nous allons continuer à y travailler avec les évolutions du site. Notre démarche d'accessibilité se veut poussée tout en étant consciente des compromis qu'elle doit faire avec le temps et le coût du projet. C'est un chantier qui s'étalera dans le temps.
+
+## Deploiement continu
 
 ## Sources
 

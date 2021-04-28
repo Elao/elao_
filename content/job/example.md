@@ -2,7 +2,6 @@
 type:               "post"
 title:              "Exemple d'annonce"
 date:               "2021-04-23"
-publishdate:        "2021-04-23"
 draft:              false
 active:             true
 

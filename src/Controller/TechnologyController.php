@@ -46,7 +46,7 @@ class TechnologyController extends AbstractController
         $caseStudies = $this->manager->getContents(
             CaseStudy::class,
             ['technologies' => $technology->name],
-            fn (CaseStudy $caseStudy): bool => $caseStudy->hasTechnology($technology)
+            fn (CaseStudy $caseStudy): bool => $caseStudy->enabled && $caseStudy->hasTechnology($technology)
         );
 
         return $this->render('technology/technology.html.twig', [

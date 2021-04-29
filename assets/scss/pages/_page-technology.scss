@@ -4,10 +4,6 @@
   .article-list {
     .miniature-inline {
       max-width: 930px;
-
-      &:first-of-type {
-        margin-left: 110px;
-      }
     }
   }
 }
@@ -17,10 +13,6 @@
     padding: 0;
 
     .article-list {
-      .miniature:first-of-type {
-        margin-left: 0;
-      }
-
       .miniature-inline {
         margin-left: 0;
       }

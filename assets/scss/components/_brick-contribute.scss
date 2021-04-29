@@ -1,0 +1,8 @@
+.brick-contribute {
+  @extend .brick;
+  @extend .brick--large;
+  padding: 60px 100px;
+
+  color: #fff;
+  background: $color-dark;
+}

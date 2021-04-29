@@ -1,4 +1,4 @@
 ---
 name: "Javascript"
-logo: "build/images/technos/graphql.svg"
+logo: "build/images/technos/javascript.svg"
 ---

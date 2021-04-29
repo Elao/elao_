@@ -47,8 +47,8 @@ services:
         tags: [{ name: stenope.processor, priority: -20 }]
 
     App\Stenope\Processor\GithubEditLinkProcessor:
-        $repository: '%env(GITHUB_REPO)%'
-        $reference: '%env(GITHUB_REF)%'
+        $repository: '%env(APP_GITHUB_REPO)%'
+        $reference: '%env(APP_GITHUB_REF)%'
 
     resize_images_content_processor.case_study:
         class: App\Stenope\Processor\ResizeImagesContentProcessor

@@ -1,0 +1,6 @@
+github_edit_file:
+    path: '/{repo}/edit/{ref}/{file}'
+    requirements:
+        file: '.+'
+        repo: '\w+/\w+'
+        ref: '.+'

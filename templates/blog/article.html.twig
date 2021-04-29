@@ -165,6 +165,19 @@
         {% endblock %}
     </div>
 
+    {% if article.githubEditLink is not empty %}
+        <div class="bricks">
+            <div class="brick-comment">
+                <p>
+                    Une typo ?
+                    <a href="{{ article.githubEditLink }}" target="_blank" class="animated-link animated-link--light">
+                        Modifier cet article sur Github
+                    </a>
+                </p>
+            </div>
+        </div>
+    {% endif %}
+
     {% if article.tweetId is not empty %}
         <div class="bricks">
             <div class="brick-comment">

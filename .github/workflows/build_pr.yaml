@@ -82,6 +82,7 @@ jobs:
         env:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          GITHUB_REF: ${{ github.head_ref }}
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'

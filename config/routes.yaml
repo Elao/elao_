@@ -2,6 +2,14 @@
 #    path: /
 #    controller: App\Controller\DefaultController::index
 
+github:
+    schemes: https
+    host: github.com
+    resource: routes/external/github.yaml
+    options:
+        stenope:
+            ignore: true
+
 twitter:
     schemes: https
     host: twitter.com

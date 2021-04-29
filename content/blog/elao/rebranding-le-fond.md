@@ -9,8 +9,8 @@ tableOfContent:     2
 
 description:        "On pose les bases."
 
-thumbnail:          "images/posts/headers/elao-rebrand-banner-fond.jpg "
-header_img:         "images/posts/headers/elao-rebrand-banner-fond.jpg "
+thumbnail:          "images/posts/headers/elao-rebrand-banner-fond.jpg"
+header_img:         "images/posts/headers/elao-rebrand-banner-fond.jpg"
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["xgorse","cmozzati"]

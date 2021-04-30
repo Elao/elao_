@@ -101,7 +101,7 @@ Les navigateurs qui ne supportent par le WebP verront quand même les images en 
 
 ## Déploiement continu
 
-Par nature, le déploiement d'un site statique est simple et sans prise de tête (💘) : on build, et déploie les fichiers statiques sur un serveur en SSH (via `scp` ou `rsync`). Il est alors aisé de mettre en place un Github workflow pour faire ce travail pour nous. Nous avons même poussé pour obtenir un deploy directement sur Github Pages avec un aperçu par Pull Request, ce qui est fortement appréciable pour commenter en équipe un rendu ou un contenu avant de le merger.
+Par nature, le déploiement d'un site statique est simple et sans prise de tête (💘) : on build, et déploie les fichiers statiques sur un serveur en SSH (via `scp` ou `rsync`). Il est alors aisé de mettre en place un [workflow Github](https://github.com/Elao/elao_/blob/master/.github/workflows/deploy.yaml) pour faire ce travail pour nous. Nous avons même poussé pour obtenir un deploy directement sur Github Pages avec un aperçu par Pull Request, ce qui est fortement appréciable pour commenter en équipe un rendu ou un contenu avant de le merger.
 
 ## Sources
 

@@ -65,3 +65,12 @@ glide:
             w: 100
             h: 100
             fit: crop
+
+        twitter_card:
+            w: 600
+            h: 600
+
+        opengraph_image:
+            w: 1200
+            h: 627
+            q: 85

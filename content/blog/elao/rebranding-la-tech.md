@@ -53,6 +53,10 @@ Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 
 Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-source compte déjà de nombreux projets de qualité répondant à ce besoin) : Stenope c'est un ensemble d'outils pour générer des sites statiques sur-mesure dans Symfony !
 
+## Setup du projet
+
+Comme à notre habitude chez Elao, nous utilisons notre outil fait-maison qui nous permet d’industraliser nos environnement de travail : manala. Pour ce besoin précis d’obtenir un site qui tourne - rapidement - sous symfony, notre collègue nervo - principal mainteneur du projet - nous a concocté une recipe nommée [lazy.symfony](https://manala.github.io/manala-recipes/recipes/lazy.symfony/), qui, comme son nom l’indique, promets de ne pas trop s'en faire. Rien à installer, mis à part Docker.
+
 ## Accessibilité
 
 Sur notre site comme dans nos articles de blog, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Cela prend plusieurs formes, notamment :

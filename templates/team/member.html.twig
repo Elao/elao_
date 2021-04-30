@@ -1,7 +1,9 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
-{% block og_image asset(member.tribePicture)  %}
-{% block twitter_image absolute_url(asset(member.tribePicture))  %}
+{% block twitter_card_type 'summary' %}
+{% block og_image absolute_url(asset(member.tribePicture|glide_image_preset('opengraph_image'))) %}
+{% block twitter_image absolute_url(asset(member.tribePicture|glide_image_preset('twitter_card'))) %}
+{% block meta_title 'La tribu Elao : '  ~ member.pseudo ?? member.name %}
 
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">

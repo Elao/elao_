@@ -37,7 +37,7 @@ class BlogController extends AbstractController
             'page' => $page,
             'minPage' => 1,
             'maxPage' => ceil(\count($articles) / $perPage),
-        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModified'));
+        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
     /**
@@ -60,7 +60,7 @@ class BlogController extends AbstractController
             'page' => $page,
             'minPage' => 1,
             'maxPage' => ceil(\count($articles) / $perPage),
-        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModified'));
+        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
     /**
@@ -70,6 +70,6 @@ class BlogController extends AbstractController
     {
         return $this->render('blog/article.html.twig', [
             'article' => $article,
-        ])->setLastModified($article->lastModified);
+        ])->setLastModified($article->getLastModifiedOrCreated());
     }
 }

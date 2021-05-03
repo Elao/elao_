@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Opération sur un fichier avec la commande find"
 date:               "2009-12-03"
-publishdate:        "2009-12-03"
-draft:              false
+lastModified:       ~
 
 description:        "Opération sur un fichier avec la commande find"
 

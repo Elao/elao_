@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Premiers pas avec le framework Python \"Django\""
 date:               "2010-09-15"
-publishdate:        "2010-09-15"
-draft:              false
+lastModified:       ~
 
 description:        "Premiers pas avec le framework Python \"Django\""
 

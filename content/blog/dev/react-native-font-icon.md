@@ -1,15 +1,14 @@
 ---
 type:           "post"
 title:          "Intégrer des icônes vectorielles dans React Native"
-date:           "2018-03-02"
-publishdate:    "2018-03-06"
-draft:          false
+date:           "2018-03-06"
+lastModified:       ~
 tableOfContent: 2
 
 description:    "Comment intégrer des icônes vectorielles dans une app React Native grâce à une police de caractères personnalisée."
 thumbnail:      "images/posts/thumbnails/harpal-singh-396280-unsplash.jpg"
 credits:        { name: "Harpal Singh", url: "https://unsplash.com/@aquatium" }
-header_img:     "images/posts/headers/harpal-singh-396280-unsplash.jpg"
+banner:     "images/posts/headers/harpal-singh-396280-unsplash.jpg"
 tags:           ["React native", "Mobile", "Font", "Icon"]
 categories:     ["dev"]
 

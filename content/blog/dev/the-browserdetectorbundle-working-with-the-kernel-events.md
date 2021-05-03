@@ -2,8 +2,7 @@
 type:               "post"
 title:              "The BrowserDetectorBundle: working with the Kernel events"
 date:               "2013-08-02"
-publishdate:        "2013-08-02"
-draft:              false
+lastModified:       ~
 
 description:        "The BrowserDetectorBundle: working with the Kernel events"
 

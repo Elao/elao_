@@ -1,15 +1,14 @@
 ---
 type:               "post"
 title:              "L'architecture hexagonale avec Symfony"
-date:               "2017-06-05"
-publishdate:        "2017-06-21"
-draft:              false
+date:               "2017-06-21"
+lastModified:       ~
 
 description:        "Présentation de l'architecture hexagonale et de son implémentation avec le framework Symfony."
 tableOfContent:     3
 
 thumbnail:          "images/posts/thumbnails/hexagons.jpg"
-header_img:         "images/posts/headers/hexagons.jpg"
+banner:             "images/posts/headers/hexagons.jpg"
 tags:               ["Architecture", "Conception", "Symfony", "PHP"]
 categories:         ["Dev", "Symfony"]
 

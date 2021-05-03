@@ -2,13 +2,12 @@
 type:               "post"
 title:              "DotScale Paris 2017"
 date:               "2017-04-24"
-publishdate:        "2017-04-24"
-draft:              false
+lastModified:       ~
 
 description:        "Aperçu du DotScale Paris 2017"
 
 thumbnail:          "images/posts/thumbnails/dotscale.jpg"
-header_img:         "images/posts/headers/dotscale.jpg"
+banner:             "images/posts/headers/dotscale.jpg"
 tags:               ["DevOps", "SysAdmin", "Infrastructure", "Conférence", "Scalabilité"]
 categories:         ["conference"]
 author:    "gfaivre"

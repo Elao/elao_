@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "Intégrer... notre agence de Lyon"
-date:           "2017-01-20"
 publishdate:    "2017-01-20"
 draft:          false
 

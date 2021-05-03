@@ -1,14 +1,13 @@
 ---
 type:           "post"
 title:          "Améliorez la pertinence de vos résultats ElasticSearch grâce au score"
-date:           "2017-04-24"
-publishdate:    "2017-04-27"
-draft:          false
+date:           "2017-04-27"
+lastModified:       ~
 
 description:    "Améliorez la pertinence de vos résultats ElasticSearch grâce au score."
 
 thumbnail:      "images/posts/thumbnails/elasticsearch.png"
-header_img:     "images/posts/headers/elasticsearch.jpg"
+banner:     "images/posts/headers/elasticsearch.jpg"
 tags:           ["Moteur de recherche", "ElasticSearch", "Pertinence", "Elastica"]
 categories:     ["dev"]
 

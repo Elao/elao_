@@ -1,14 +1,13 @@
 ---
 type:           "post"
 title:          "GAD : Github Agile Dashboard"
-date:           "2017-06-28"
-publishdate:    "2017-07-04"
-draft:          false
+date:           "2017-07-04"
+lastModified:       ~
 
 description:    "Comment j'ai créé un petit outil en ligne de commande pour m'aider dans mon quotidien agile"
 
 thumbnail:      "images/posts/thumbnails/github-agile-dashboard.jpg"
-header_img:     "images/posts/headers/github-agile-dashboard.jpg"
+banner:     "images/posts/headers/github-agile-dashboard.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github", "git", "node", "cli"]
 categories:     ["methodo", "dev"]
 

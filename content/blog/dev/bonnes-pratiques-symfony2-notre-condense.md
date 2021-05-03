@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Bonnes pratiques Symfony2 : notre condensé !"
 date:               "2013-04-19"
-publishdate:        "2013-04-19"
-draft:              false
+lastModified:       ~
 
 description:        "Bonnes pratiques Symfony2 : notre condensé !"
 
 thumbnail:          "images/posts/thumbnails/kafeine.png"
-header_img:         "images/posts/headers/elephpant_elao_family.jpg"
+banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
 categories:         ["Tips", "Symfony"]
 

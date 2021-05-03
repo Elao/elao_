@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Sécuriser ses accès serveur: Authentification par clés SSH"
 date:               "2010-03-05"
-publishdate:        "2010-03-05"
-draft:              false
+lastModified:       ~
 
 description:        "Sécuriser ses accès serveur: Authentification par clés SSH."
 

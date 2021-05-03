@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur Paris Web 2015"
 date:               "2015-10-14"
-publishdate:        "2015-10-14"
-draft:              false
+lastModified:       ~
 
 description:        "Paris Web, la conférence francophone des gens qui font le web !"
 
 thumbnail:          "images/posts/thumbnails/unicorn.jpg"
-header_img:         "images/posts/headers/unicorn.jpg"
+banner:             "images/posts/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
 categories:         ["conference"]
 

@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Twig : Quelques pro-tips issue du Symfony Live 2013"
 date:               "2013-04-19"
-publishdate:        "2013-04-19"
-draft:              false
+lastModified:       ~
 
 description:        "Twig : Quelques pro-tips issue du Symfony Live 2013"
 
 thumbnail:          "images/posts/thumbnails/badass_vader.jpg"
-header_img:         "images/posts/headers/php_forum_team_elao.jpg"
+banner:             "images/posts/headers/php_forum_team_elao.jpg"
 tags:               ["Tips", "Twig", "Symfony 2"]
 categories:         ["Tips", "Twig", "Symfony"]
 

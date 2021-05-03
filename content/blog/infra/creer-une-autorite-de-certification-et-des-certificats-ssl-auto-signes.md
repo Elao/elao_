@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Créer une autorité de certification et des certificats SSL auto-signés"
 date:               "2010-10-05"
-publishdate:        "2010-10-05"
-draft:              false
+lastModified:       ~
 
 description:        "Créer une autorité de certification et des certificats SSL auto-signés"
 

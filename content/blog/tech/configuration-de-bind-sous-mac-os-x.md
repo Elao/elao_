@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Configuration de Bind sous Mac OS X"
 date:               "2010-05-21"
-publishdate:        "2010-05-21"
-draft:              false
+lastModified:       ~
 
 description:        "Configuration de Bind sous Mac OS X."
 

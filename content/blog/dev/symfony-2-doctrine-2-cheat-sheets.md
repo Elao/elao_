@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Symfony 2 - Doctrine 2 - Cheat Sheets"
 date:               "2011-03-24"
-publishdate:        "2011-03-24"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"
 
 thumbnail:          "images/posts/thumbnails/cool_cat.jpg"
-header_img:         "images/posts/headers/elephpant_elao_family.jpg"
+banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]
 categories:         ["Dev", "Symfony", Doctrine]
 

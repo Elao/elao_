@@ -1,14 +1,13 @@
 ---
 type:           "post"
 title:          "Gérer un projet AGILE avec GitHub"
-date:           "2017-04-24"
-publishdate:    "2017-04-26"
-draft:          false
+date:           "2017-04-26"
+lastModified:       ~
 
 description:    "Retour d'expérience sur la gestion d'un projet avec GitHub."
 
 thumbnail:      "images/posts/thumbnails/github-agile.jpg"
-header_img:     "images/posts/headers/github-agile.jpg"
+banner:     "images/posts/headers/github-agile.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github"]
 categories:     ["methodo"]
 

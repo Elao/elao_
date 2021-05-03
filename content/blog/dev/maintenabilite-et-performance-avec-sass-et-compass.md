@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Maintenabilité et performance avec Sass et Compass"
 date:               "2013-04-09"
-publishdate:        "2013-04-09"
-draft:              false
+lastModified:       ~
 
 description:        "Maintenabilité et performance avec Sass et Compass"
 
 thumbnail:          "images/posts/thumbnails/sass.png"
-header_img:         "images/posts/headers/elao_team_front.jpg"
+banner:             "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign", "Développement"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 

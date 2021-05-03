@@ -2,9 +2,8 @@
 type:               "post"
 title:              "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 date:               "2013-07-18"
-publishdate:        "2013-07-18"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 

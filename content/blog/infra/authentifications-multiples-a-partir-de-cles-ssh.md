@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Authentifications multiples à partir de clés SSH"
 date:               "2010-04-11"
-publishdate:        "2010-04-11"
-draft:              false
+lastModified:       ~
 
 description:        "Authentifications multiples à partir de clés SSH."
 

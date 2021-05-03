@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Controller ses services applicatifs avec supervisor"
 date:               "2014-12-22"
-publishdate:        "2014-12-22"
-draft:              false
+lastModified:       ~
 
 description:        "Supervisor est un système de contrôle des processus/services applicatifs destiné aux systèmes de types UNIX."
 

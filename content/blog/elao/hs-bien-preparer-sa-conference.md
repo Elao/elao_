@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Comment bien préparer sa conférence ?"
 date:               "2014-06-03"
-publishdate:        "2014-06-03"
-draft:              false
+lastModified:       ~
 
 description:        "Comment bien préparer sa conférence ?"
 

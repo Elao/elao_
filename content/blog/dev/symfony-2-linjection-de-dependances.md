@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Symfony 2 – L’injection de dépendances"
 date:               "2010-06-03"
-publishdate:        "2010-06-03"
-draft:              false
+lastModified:       ~
 
 description:        "Symfony 2 – L’injection de dépendances"
 

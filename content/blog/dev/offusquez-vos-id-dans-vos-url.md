@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Offusquez vos id dans vos url"
 date:               "2019-11-06"
-publishdate:        "2019-11-06"
-draft:              false
+lastModified:       ~
 
 description:        "Découverte d'alternatives aux ID auto-incrémentés dans les urls et leur mise en place dans le framework Symfony."
 
 thumbnail:          "images/posts/thumbnails/obfuscation.jpg"
-header_img:         "images/posts/headers/obfuscation.jpg"
+banner:             "images/posts/headers/obfuscation.jpg"
 tags:               ["Securite","PHP","Symfony","Framework"]
 categories:         ["Dev", "Symfony"]
 

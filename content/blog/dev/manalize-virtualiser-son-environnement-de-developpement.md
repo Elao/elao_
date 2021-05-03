@@ -2,12 +2,11 @@
 type:               "post"
 title:              "Virtualiser son environnement de développement avec Manalize ✨"
 date:               "2019-01-29"
-publishdate:        "2019-01-29"
-draft:              false
+lastModified:       ~
 tableOfContent:     2
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
-header_img:         "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
+banner:             "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
 thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
 credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]

@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Comment intégrer Vue.js dans une application Symfony"
 date:               "2016-10-21"
-publishdate:        "2016-10-21"
+lastModified:       ~
 modifieddate:       "2020-05-05"
-draft:              false
 
 description:        "Guide d'intrégration de Vue.js dans une application Symfony"
 
 thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-header_img:         "images/posts/headers/vuejs.jpg"
+banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur la NodeSchool Paris"
 date:               "2015-05-27"
-publishdate:        "2015-05-27"
-draft:              false
+lastModified:       ~
 
 description:        "La NodeSchool permet de pratiquer Javascript et Node.js grâce à des ateliers interactifs."
 
 thumbnail:          "images/posts/thumbnails/nodejs.png"
-header_img:         "images/posts/headers/php_elao_code.jpg"
+banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Javascript", "Node.js", "Conférences"]
 categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 

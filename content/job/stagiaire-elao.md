@@ -1,7 +1,6 @@
 ---
 type:               "post"
 title:              "Retour d'expérience d'un stagiaire Elao"
-date:               "2017-05-29"
 publishdate:        "2017-06-19"
 draft:              false
 

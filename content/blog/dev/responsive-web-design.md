@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Responsive Web Design"
 date:               "2012-07-31"
-publishdate:        "2012-07-31"
-draft:              false
+lastModified:       ~
 
 description:        "Responsive Web Design"
 
 thumbnail:          "images/posts/thumbnails/html5.jpg"
-header_img:         "images/posts/headers/elao_team_front.jpg"
+banner:             "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 

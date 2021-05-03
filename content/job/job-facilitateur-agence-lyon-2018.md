@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
-date:           "2018-02-14"
 publishdate:    "2018-02-26"
 draft:          false
 

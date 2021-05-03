@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur le MiXiT 2018"
 date:               "2018-05-16"
-publishdate:        "2018-05-16"
-draft:              false
+lastModified:       ~
 
 description:        "Nos retours sur les conférences du MiXiT 2018."
 
 thumbnail:          "images/posts/thumbnails/mixit-2018.png"
-header_img:         "images/posts/headers/mixit-2018.jpg"
+banner:             "images/posts/headers/mixit-2018.jpg"
 tags:               ["Javascript", "Web","Conférence"]
 categories:         ["Dev", "Actualité", "Web", "Conférence"]
 

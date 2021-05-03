@@ -2,13 +2,12 @@
 type:               "post"
 title:              "PHP Tour 2016, Merciiiiii"
 date:               "2016-05-27"
-publishdate:        "2016-05-27"
-draft:              false
+lastModified:       ~
 
 description:        "Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
 
 thumbnail:          "images/posts/thumbnails/phptour-thumbnail.jpg"
-header_img:         "images/posts/headers/phptour-2016.jpg"
+banner:             "images/posts/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "conférence", "afup", "clermont'ech"]
 categories:         ["Actualité", "Web", "conference"]
 

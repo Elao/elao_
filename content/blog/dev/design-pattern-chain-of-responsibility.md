@@ -2,13 +2,12 @@
 type:           "post"
 title:          "Le Design Pattern 'Chain of Responsibility'"
 date:           "2017-05-13"
-publishdate:    "2017-05-13"
-draft:          false
+lastModified:       ~
 
 description:    "Nouvel article consacré aux Design Patterns. Aujourd'hui : le pattern Chain of Responsibility"
 
 thumbnail:      "images/posts/thumbnails/chaplin-assembly-line.jpeg"
-header_img:     "images/posts/headers/chaplin-assembly-line.jpg"
+banner:     "images/posts/headers/chaplin-assembly-line.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

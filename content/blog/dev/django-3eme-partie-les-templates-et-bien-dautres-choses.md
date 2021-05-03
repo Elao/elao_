@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Django (3ème partie) : les templates, et bien d'autres choses ..."
 date:               "2010-10-15"
-publishdate:        "2010-10-15"
-draft:              false
+lastModified:       ~
 
 description:        "Django (3ème partie) : les templates, et bien d'autres choses ..."
 

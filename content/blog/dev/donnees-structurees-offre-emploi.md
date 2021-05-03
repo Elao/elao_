@@ -1,14 +1,12 @@
 ---
 type:               "post"
 title:              "Mettez en valeur vos offres d'emploi grâce aux données structurées"
-date:               "2019-08-26"
 tableOfContent:     2
-draft:              false
 
 description:        "Et si vous rendiez vos offres d'emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ? "
 
 thumbnail:          "images/posts/thumbnails/arrows-square.jpg"
-header_img:         "images/posts/headers/arrows.jpg"
+banner:             "images/posts/headers/arrows.jpg"
 tags:               ["Seo", "microdata", "rich snippets"]
 categories:         ["Dev", "Web"]
 

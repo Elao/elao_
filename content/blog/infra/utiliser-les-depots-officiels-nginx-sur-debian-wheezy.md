@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Utiliser les dépôts officiels Nginx sur Debian Wheezy"
 date:               "2014-12-19"
-publishdate:        "2014-12-19"
-draft:              false
+lastModified:       ~
 
 description:        "Comment configurer et utiliser les dépôts Nginx sur Debian Wheezy."
 

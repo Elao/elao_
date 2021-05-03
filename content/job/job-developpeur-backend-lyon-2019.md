@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "À la recherche d'une développeuse / un développeur Backend"
-date:           "2019-11-12"
 publishdate:    "2019-11-12"
 draft:          false
 active:         true

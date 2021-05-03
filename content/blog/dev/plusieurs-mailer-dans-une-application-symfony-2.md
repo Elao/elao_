@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Plusieurs mailer dans une application Symfony 2"
 date:               "2013-10-11"
-publishdate:        "2013-10-11"
-draft:              false
+lastModified:       ~
 
 description:        "Plusieurs mailer dans une application Symfony 2"
 

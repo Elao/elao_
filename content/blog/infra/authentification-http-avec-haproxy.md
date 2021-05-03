@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Authentification HTTP avec HA Proxy"
 date:               "2015-03-10"
-publishdate:        "2015-03-10"
-draft:              false
+lastModified:       ~
 
 description:        "Comment gérer une authentification HTTP basique avec HA Proxy, définir des utilisateurs, des groupes et le type d'authentification souhaitée."
 

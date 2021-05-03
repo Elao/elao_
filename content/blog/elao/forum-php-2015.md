@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur le Forum PHP 2015"
 date:               "2015-11-26"
-publishdate:        "2015-11-26"
-draft:              false
+lastModified:       ~
 
 description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a retenu."
 
 thumbnail:          "images/posts/thumbnails/haphpybirthday.jpg"
-header_img:         "images/posts/headers/elephpant_elao_family.jpg"
+banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
 categories:         ["conference"]
 

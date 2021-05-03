@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Installation de FUSE et s3fs sur une Debian Lenny"
 date:               "2010-01-12"
-publishdate:        "2010-01-12"
-draft:              false
+lastModified:       ~
 
 description:        "Installation de FUSE et s3fs sur une Debian Lenny"
 

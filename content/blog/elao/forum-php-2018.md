@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur le Forum PHP 2018"
 date:               "2018-11-29"
-publishdate:        "2018-11-29"
-draft:              false
+lastModified:       ~
 
 description:        "En attendant l'AFUP Day, voici notre retour sur le Forum PHP 2018."
 
 thumbnail:          "images/posts/thumbnails/forumphp2018-team.jpeg"
-header_img:         "images/posts/headers/forumphp2018-team.jpeg"
+banner:             "images/posts/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author:             ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]

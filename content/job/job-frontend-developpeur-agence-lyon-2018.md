@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "A la recherche d'un développeur ou d'une développeuse Frontend pour notre agence de Lyon"
-date:           "2018-02-14"
 publishdate:    "2018-02-27"
 draft:          false
 

@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Dates PHP et Timezone UTC, pourquoi est-ce important ?"
 date:               "2017-11-21"
-publishdate:        "2017-11-21"
-draft:              false
+lastModified:       ~
 
 description:        "Mise au point sur les problématiques de timezone avec les dates PHP."
 
 thumbnail:          "images/posts/thumbnails/time.jpg"
-header_img:         "images/posts/headers/time.jpg"
+banner:             "images/posts/headers/time.jpg"
 tags:               ["Symfony", "PHP","Datetime", "Timezone"]
 categories:         ["Dev", "Symfony", "PHP"]
 

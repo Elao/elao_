@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "À la recherche d'un(e) «Sysadmin»"
-date:           "2018-05-29"
 publishdate:    "2018-05-29"
 draft:          false
 

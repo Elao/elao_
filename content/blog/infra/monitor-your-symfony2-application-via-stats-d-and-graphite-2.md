@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Monitor your Symfony2 application via Stats.d and Graphite (2/2)"
 date:               "2012-11-23"
-publishdate:        "2012-11-23"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "Monitor your Symfony2 application via Stats.d and Graphite Part. 2"
 
 thumbnail:          "images/posts/thumbnails/rocket.jpg"
-header_img:         "images/posts/headers/minions.jpg"
+banner:             "images/posts/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]
 categories:         ["Infra", "Monitoring"]
 

@@ -14,12 +14,17 @@ class Article
     public string $slug;
     public string $content;
     public ?\DateTimeImmutable $date = null;
-    public ?\DateTimeImmutable $publishdate = null;
-    public \DateTimeImmutable $lastModified;
+    public ?\DateTimeImmutable $lastModified = null;
     public bool $draft = true;
     public ?string $description;
+    /**
+     * Main image for the articles, used as thumbnail and banner.
+     */
     public string $thumbnail;
-    public string $header;
+    /**
+     * If provided, the image to use on top of the show article view instead of the thumbnail image.
+     */
+    public ?string $banner;
     public array $tags = [];
     public string $lang = 'fr';
     public array $categories;
@@ -62,5 +67,10 @@ class Article
         }
 
         return \in_array($author, $this->authors, true);
+    }
+
+    public function getLastModifiedOrCreated(): ?\DateTimeImmutable
+    {
+        return $this->lastModified ?? $this->date;
     }
 }

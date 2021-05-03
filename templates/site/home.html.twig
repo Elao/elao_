@@ -142,16 +142,17 @@
                     {% for item in technos %}
                         {% set techno = content_get('App\\Model\\Technology', item.id) %}
                         <li>
-                            <a
-                                {% if techno.show %}
-                                href="{{ path('technology', { technology: techno.slug })}}"
-                                {% endif %}
-                                class="technologies__item">
+                        {% if techno.show %}
+                            <a href="{{ path('technology', { technology: techno.slug })}}" class="technologies__item">
+                                <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
+                                {{ techno.name }}
+                            </a>
+                        {% else %}
                             <div class="technologies__item">
                                 <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
                                 {{ techno.name }}
                             </div>
-                            </a>
+                        {% endif %}
                         </li>
                     {% endfor %}
                 </ul>

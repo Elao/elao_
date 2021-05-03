@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace App\Stenope\Processor;
 
 use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
+use Stenope\Bundle\Behaviour\HtmlCrawlerManagerInterface;
 use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
-use Symfony\Component\DomCrawler\Crawler;
 use Symfony\Component\Mime\MimeTypes;
 
 /**
@@ -16,6 +16,7 @@ use Symfony\Component\Mime\MimeTypes;
 class ResizeImagesContentProcessor implements ProcessorInterface
 {
     private ResizedUrlGenerator $resizedUrlGenerator;
+    private HtmlCrawlerManagerInterface $crawlers;
 
     private string $type;
     private string $preset;
@@ -24,40 +25,38 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
     public function __construct(
         ResizedUrlGenerator $resizedUrlGenerator,
+        HtmlCrawlerManagerInterface $crawlers,
         string $type,
         string $preset,
         string $property = 'content'
     ) {
         $this->resizedUrlGenerator = $resizedUrlGenerator;
+        $this->crawlers = $crawlers;
         $this->type = $type;
         $this->preset = $preset;
         $this->property = $property;
         $this->mimeTypes = new MimeTypes();
     }
 
-    public function __invoke(array &$data, string $type, Content $content): void
+    public function __invoke(array &$data, Content $content): void
     {
-        if ($type !== $this->type) {
+        if ($content->getType() !== $this->type) {
             return;
         }
 
-        $crawler = new Crawler($data[$this->property]);
+        $crawler = $this->crawlers->get($content, $data, $this->property);
 
-        try {
-            $crawler->html();
-        } catch (\Exception $e) {
+        if (\is_null($crawler)) {
             // Content is not valid HTML.
             return;
         }
-
-        $crawler = new Crawler($data[$this->property]);
 
         /** @var \DomElement $element * */
         foreach ($crawler->filter('img') as $element) {
             $this->processImage($element);
         }
 
-        $data[$this->property] = $crawler->html();
+        $this->crawlers->save($content, $data, $this->property);
     }
 
     private function processImage(\DOMElement $element): void

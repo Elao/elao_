@@ -13,9 +13,9 @@ use Stenope\Bundle\Content;
  */
 class CategoryProcessor implements ProcessorInterface
 {
-    public function __invoke(array &$data, string $type, Content $content): void
+    public function __invoke(array &$data, Content $content): void
     {
-        if (!is_a($type, Article::class, true) || isset($data['category'])) {
+        if (!is_a($content->getType(), Article::class, true) || isset($data['category'])) {
             return;
         }
 

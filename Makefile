@@ -105,7 +105,7 @@ lint.phpstan: export APP_ENV = test
 lint.phpstan:
 	bin/console cache:clear --ansi
 	bin/console cache:warmup --ansi
-	vendor/bin/phpstan analyse
+	vendor/bin/phpstan analyse --memory-limit=-1
 
 lint.phpstan@integration: export APP_ENV = test
 lint.phpstan@integration:

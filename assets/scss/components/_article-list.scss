@@ -6,6 +6,10 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  .miniature-inline {
+    margin: 0 20px 80px;
+  }
 }
 
 @media (max-width: $screen-lg) {

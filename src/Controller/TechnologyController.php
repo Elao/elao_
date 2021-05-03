@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Article;
+use App\Model\CaseStudy;
 use App\Model\Technology;
 use Stenope\Bundle\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -12,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/techno")
+ * @Route("/glossaire")
  */
 class TechnologyController extends AbstractController
 {
@@ -28,15 +29,30 @@ class TechnologyController extends AbstractController
      */
     public function show(Technology $technology): Response
     {
-        $articles = $this->manager->getContents(
-            Article::class,
+        if (!\is_null($technology->articles)) {
+            $articles = $this->manager->getContents(
+                Article::class,
+                ['date' => false],
+                fn ($article) => \in_array($article->slug, $technology->articles, true)
+            );
+        } else {
+            $articles = $this->manager->getContents(
+                Article::class,
+                ['date' => false],
+                fn (Article $article): bool => $article->hasTag($technology->slug)
+            );
+        }
+
+        $caseStudies = $this->manager->getContents(
+            CaseStudy::class,
             ['date' => false],
-            fn ($article) => $article->hasTag($technology->slug)
+            fn (CaseStudy $caseStudy): bool => $caseStudy->enabled && $caseStudy->hasTechnology($technology)
         );
 
         return $this->render('technology/technology.html.twig', [
             'technology' => $technology,
             'articles' => \array_slice($articles, 0, 3),
+            'caseStudies' => $caseStudies,
         ])->setLastModified($technology->lastModified);
     }
 }

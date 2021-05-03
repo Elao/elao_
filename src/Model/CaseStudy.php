@@ -28,4 +28,9 @@ class CaseStudy
     {
         return \in_array($member->slug, $this->members, true);
     }
+
+    public function hasTechnology(Technology $technology): bool
+    {
+        return \in_array($technology->slug, $this->technologies, true);
+    }
 }

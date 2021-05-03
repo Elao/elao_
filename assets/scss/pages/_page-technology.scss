@@ -1,0 +1,27 @@
+.page-technology {
+  padding: 0 110px;
+
+  .article-list {
+    margin-top: 50px;
+
+    .miniature-inline {
+      max-width: 930px;
+    }
+  }
+
+  .bricks {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-technology {
+    padding: 0;
+
+    .article-list {
+      .miniature-inline {
+        margin-left: 0;
+      }
+    }
+  }
+}

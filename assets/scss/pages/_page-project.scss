@@ -127,15 +127,12 @@
       width: 100%;
     }
 
-    .item {
-      margin: 0 5px 10px;
-      width: calc(33.33% - 10px);
-      min-width: unset;
-    }
-
+    .item,
     .item--medium,
     .item--large {
+      margin: 0 5px 10px;
       width: calc(50% - 10px);
+      min-width: unset;
     }
   }
 }

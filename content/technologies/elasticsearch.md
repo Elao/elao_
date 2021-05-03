@@ -1,7 +1,11 @@
 ---
 name: "ElasticSearch"
 logo: "build/images/technos/elasticsearch.svg"
-title: "ElasticSearch : un moteur de recherche simple et efficace pour votre application web"
+title:
+    - "ElasticSearch : un moteur de recherche simple et efficace"
+    - "pour votre application web" 
+titleSeo: "Intégration de la solution Elastic Search dans votre applicatif web - Elao"
+metaDescription : "Elao a développé une expertise dans la mise en place d'Elastic Search, un moteur de recherche performant, pour ses clients. Nous pouvons vous accompagner grâce à notre expertise technique d'Elastic Search."
 ---
 
 ElasticSearch est un logiciel open source assurant **une recherche rapide et pertinente dans vos bases de données**. Chez Elao, nous l'utilisons en grande majorité pour des recherches de géolocalisations, par exemple pour trouver une offre d'emploi près de son domicile ou dans un rayon d'un certain nombre de kilomètre, ou bien pour de la recherche plus classique de texte.
@@ -28,10 +32,9 @@ Nous pouvons intervenir à la fois pour mettre en réfléchir à une solution et
 
 ## Les projets pour lesquels nous avons installé et paramétré ElasticSearch
 
-Pour ce site d'offres d'emploi, ElasticSearch a été un allié de taille pour faire bénéficier aux utilisateurs de la recherche géographique.
+- **My Job Company** : pour ce site d'offres d'emploi, ElasticSearch a été un allié de taille pour faire bénéficier aux utilisateurs de la recherche géographique.
 
--> lien vers MJC
 
 ##Les articles de blog à propos d'ElasticSearch
 
-Améliorer la pertinence de vos résultats ElasticSearch grâce au score. https://blog.elao.com/fr/dev/ameliorez-pertinence-resultat-elastic-search-score/
+- [Améliorer la pertinence de vos résultats ElasticSearch grâce au score.](https://blog.elao.com/fr/dev/ameliorez-pertinence-resultat-elastic-search-score/)

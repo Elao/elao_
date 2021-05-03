@@ -1,18 +1,82 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
+{% block meta_title technology.titleSeo ?? technology.fullTitle %}
+{% block meta_description technology.metaDescription ?? technology.fullTitle %}
 
 {% block content %}
-    {{ technology.content|raw }}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">{{ technology.name }}</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
 
-    <h2>Articles liés</h2>
-    <div>
-        {% for article in articles %}
-            <div>
-                <img src="{{ asset(article.thumbnail) }}" />
-                {{ article.title }}
-                <a href="{{ path('blog_article', { article: article.slug }) }}">
-                    Lire l'article_
-                </a>
-            </div>
+    <div class="banner-technology">
+        <h1 class="banner-technology__title">
+        {% for title in technology.title %}
+            {% if loop.first %}
+                {{ title }}
+            {% else %}
+                <span>{{ title }}</span>
+            {% endif %}
         {% endfor %}
-    <div>
+        </h1>
+
+        <div class="banner-technology__image">
+            <img src="{{ asset(technology.logo) }}" alt="logo de {{ technology.name }}" class="logo">
+        </div>
+    </div>
+
+    <div class="page-technology">
+
+        {{ technology.content|raw }}
+
+        {% if caseStudies is not empty %}
+            <h2 class="h2--dash">Projets créés avec {{ technology.name }}</h2>
+            <ul class="article-list">
+                {% for caseStudy in caseStudies %}
+                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
+                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
+                            <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
+                        </a>
+                        <div class="miniature__content">
+                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="title">{{ caseStudy.title }}</a>
+                            <p class="description">{{ caseStudy.description }}</p>
+                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="link link--brand">Lire l'article</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        {% if articles is not empty %}
+            <h2 class="h2--dash">Articles liés à {{ technology.name }}</h2>
+            <ul class="article-list">
+                {% for article in articles %}
+                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
+                    <a href="#" class="miniature__image">
+                        <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
+                    </a>
+                    <div class="miniature__content">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <div class="bricks">
+            {% include 'partials/brick-development.html.twig' %}
+        </div>
+    </div>
+
 {% endblock content %}

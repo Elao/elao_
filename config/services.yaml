@@ -10,6 +10,8 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            string $projectDir: '%kernel.project_dir%'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
@@ -43,6 +45,10 @@ services:
     Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
     App\Stenope\Processor\HtmlAnchorProcessor:
         tags: [{ name: stenope.processor, priority: -20 }]
+
+    App\Stenope\Processor\GithubEditLinkProcessor:
+        $repository: '%env(APP_GITHUB_REPO)%'
+        $reference: '%env(APP_GITHUB_REF)%'
 
     resize_images_content_processor.case_study:
         class: App\Stenope\Processor\ResizeImagesContentProcessor

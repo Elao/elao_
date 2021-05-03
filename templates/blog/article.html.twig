@@ -177,6 +177,17 @@
                 </p>
                 <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
             </div>
+
+            {% if article.githubEditLink is not empty %}
+                <div class="brick-contribute">
+                    <p>
+                        Une typo ?
+                        <a href="{{ article.githubEditLink }}" target="_blank" class="animated-link animated-link--light">
+                            Modifier cet article sur Github
+                        </a>
+                    </p>
+                </div>
+            {% endif %}
         </div>
     {% endif %}
 {% endblock content %}

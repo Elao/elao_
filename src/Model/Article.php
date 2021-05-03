@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Stenope\Processor\GithubEditLinkProcessor;
 use App\Stenope\Processor\Headline;
 
 class Article
@@ -45,6 +46,9 @@ class Article
     public $outdated = false;
 
     public ?string $tweetId = null;
+
+    /** @see GithubEditLinkProcessor */
+    public ?string $githubEditLink = null;
 
     public function hasTag(string $tag): bool
     {

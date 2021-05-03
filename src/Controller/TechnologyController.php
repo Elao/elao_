@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/techno")
+ * @Route("/glossaire")
  */
 class TechnologyController extends AbstractController
 {

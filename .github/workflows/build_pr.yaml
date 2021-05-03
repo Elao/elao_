@@ -81,8 +81,9 @@ jobs:
         run: bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
         env:
           APP_ENV: prod
-          ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          APP_FORCE_NO_INDEX: 1
           APP_GITHUB_REF: ${{ github.head_ref }}
+          ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'

@@ -39,10 +39,6 @@
 
         {{ technology.content|raw }}
 
-        <div class="bricks">
-            {% include 'partials/brick-development.html.twig' %}
-        </div>
-
         {% if caseStudies is not empty %}
             <h2 class="h2--dash">Projets créés avec {{ technology.name }}</h2>
             <ul class="article-list">
@@ -53,6 +49,8 @@
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="title">{{ caseStudy.title }}</a>
+                            <p class="description">{{ caseStudy.description }}</p>
+                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="link link--brand">Lire l'article</a>
                         </div>
                     </li>
                 {% endfor %}
@@ -75,6 +73,10 @@
                 {% endfor %}
             </ul>
         {% endif %}
+
+        <div class="bricks">
+            {% include 'partials/brick-development.html.twig' %}
+        </div>
     </div>
 
 {% endblock content %}

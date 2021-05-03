@@ -4,6 +4,8 @@ title:
     - "Responsive design, accessibilité :"
     - "des interfaces web exigeantes"
 articles: []
+titleSeo: "Accessibilité des pages web ✨: des sites de qualité pour une expérience réussie"
+metaDescription : "Chez Elao, nous mettons en oeuvre les bonnes pratique d'intégration HTML /CSS pour un site ou une application de qualité"
 ---
 
 La question du niveau d'exigence d'accessibilité doit être adressée dès le début de la conception graphique. Lors de la réalisation des interfaces, nous mettons l’accent sur le niveau d’exigence d’intégration, le respect des standards et des bonnes pratiques. Chez Elao, nous évaluons le niveau d’exigence d'accessibilité des projets selon les enjeux, le public visé et le budget. 

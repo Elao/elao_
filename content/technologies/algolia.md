@@ -5,6 +5,8 @@ title:
     - "Algolia, un moteur de recherche interne"
     - "pertinent et performant"
 articles: []
+titleSeo: "Intégration de la solution Algolia dans votre applicatif web - Elao"
+metaDescription : "Elao a développé une expertise dans la mise en place d'Algolia, un moteur de recherche performant, pour ses clients. Nous pouvons vous accompagner grâce à notre expertise technique d'Algolia."
 ---
 
 Algolia est un atout de taille pour bénéficier d’un moteur de recherche rapide, pertinent et efficace. Grâce à ce service, le résultat de recherche est pertinent, ce qui améliore considérablement l’expérience client. Nos équipes peuvent intégrer ou vous aider à intégrer Algolia à votre application et ainsi améliorer l’expérience utilisateur de vos clients.

@@ -24,14 +24,4 @@ class Technology
     {
         return implode(' ', $this->title);
     }
-
-    public function getFirstPartTitle(): string
-    {
-        return $this->title[0];
-    }
-
-    public function getSecondPartTitle(): string
-    {
-        return $this->title[1];
-    }
 }

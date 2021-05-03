@@ -5,6 +5,8 @@ title:
     - "Des interfaces web interactives,"
     - "fluides et dynamiques avec React"
 articles: []
+titleSeo: "Développement React, accompagnement et expertise - Elao (Lyon)"
+metaDescription : "Chez Elao, nous développons des applications et sites web performants en React. Nous pouvons réaliser votre projet ou accompagner vos équipes à Lyon."
 ---
 
 Des interfaces simples et rapides à utiliser : c’est l’expérience que l’on souhaite tous sur le web ! Aujourd’hui, de nombreux frameworks JavaScript, dont React, permettent d’obtenir ces résultats, autant pour des applications mobiles que pour des fonctionnalités sur des pages web. Après avoir testé de nombreux frameworks comme BackboneJS, Ember ou encore Angular, l’équipe a adopté React pour la réalisation de la plupart des projets nécessitant une application mobile ou des interfaces web dynamiques. 

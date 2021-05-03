@@ -6,7 +6,7 @@ title:
     - "un peu de magie 🧙‍♀️ dans nos interfaces"
 title-seo: "Développement Vue.js à Lyon - Elao met de la magie dans vos applis ! 🧙‍♀️"
 meta-description: "Nous vous aidons à réfléchir à des interfaces utilisateur rapides et efficaces que nous pouvons mettre en oeuvre grâce à Vue.js, un framework javascript reconnu et solide !"
-articles: []
+articles: ["dev/realisez-une-application-vue-js-avec-vue-cli", "dev/comment-integrer-vue-js-application-symfony", "dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets"]
 ---
 
 Vue.js est un framework JavaScript, assez comparable à React. Tout comme ce dernier, il permet d'**obtenir des interfaces fluides et rapides**, sans avoir à rafraîchir la page après une action de l'utilisateur. **Chez Elao, nous l'utilisons pour améliorer l'expérience utilisateur (UX)** sur des pages comme par exemple des formulaires réactifs agrémentés d'animations d'aide à la saisie, un générateur de playlists, un outil pour recadrer un avatar, etc. Nous pouvons également l'utiliser pour constituer une application plus ambitieuse.
@@ -32,11 +32,3 @@ Nous sommes vigilants, lors de nos développements, à garantir le crawl des pag
 - **My Job Company**. utilise Vue.js dans diverses sections de l'applicatif, notamment afin d'aider à la saisie d'informations dans les formulaires grâce à des réglettes, des couleurs, etc.
 - [**On sort !**](../case-study/onsort.md) : lister des événements dans un agenda, rechercher des sorties rapidement via une interface simple et rapide ... C'est grâce à Vue.js !
 - **Wotol** : nous avions à trouver une solution pour gérer un grand volume d'annonces à trier avec plusieurs filtres pour faciliter la navigation et l'expérience utilisateur.
-
-## Les articles qui parlent de Vue.js
-
-- [Réalisez une application Vue.js avec vue-cli](https://blog.elao.com/fr/dev/realisez-une-application-vue-js-avec-vue-cli/)
-
-- [Comment intégrer Vue.js dans une application Symfony](https://blog.elao.com/fr/dev/comment-integrer-vue-js-application-symfony/)
-
-- [Pourquoi devriez-vous utiliser Vue.js dans vos projets ?](https://blog.elao.com/fr/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/)

@@ -43,7 +43,7 @@
             <h2 class="h2--dash">Projets créés avec {{ technology.name }}</h2>
             <ul class="article-list">
                 {% for caseStudy in caseStudies %}
-                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
+                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
                         <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
                         </a>
@@ -61,7 +61,7 @@
             <h2 class="h2--dash">Articles liés à {{ technology.name }}</h2>
             <ul class="article-list">
                 {% for article in articles %}
-                <li class="miniature" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
+                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
                     <a href="#" class="miniature__image">
                         <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
                     </a>

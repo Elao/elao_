@@ -9,7 +9,6 @@ tableOfContent:     2
 description:        "On s'outille."
 
 thumbnail:          "images/posts/headers/elao-rebrand-banner-tech.jpg"
-credits:            { name: 'Phil Hearing', url: 'https://unsplash.com/@philhearing' }
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["tjarrand", "msteinhausser", "adefrance", "aldeboissieu"]
@@ -55,7 +54,7 @@ Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-sou
 
 ## Setup du projet
 
-Comme à notre habitude chez Elao, nous utilisons notre outil fait-maison qui nous permet d’industraliser nos environnement de travail : manala. Pour ce besoin précis d’obtenir un site qui tourne - rapidement - sous symfony, notre collègue nervo - principal mainteneur du projet - nous a concocté une recipe nommée [lazy.symfony](https://manala.github.io/manala-recipes/recipes/lazy.symfony/), qui, comme son nom l’indique, promets de ne pas trop s'en faire. Rien à installer, mis à part Docker.
+Comme à notre habitude chez Elao, nous utilisons notre outil fait-maison qui nous permet d’industrialiser nos environnements de travail : [Manala](https://www.manala.io/). Pour ce besoin précis d’obtenir un site qui tourne - rapidement - sous Symfony, notre collègue [nervo](../../member/frey.yaml) - principal mainteneur du projet - nous a concocté une recipe nommée [lazy.symfony](https://manala.github.io/manala-recipes/recipes/lazy.symfony/), qui, comme son nom l’indique, promet de ne pas trop s'en faire. Rien à installer, mis à part Docker.
 
 ## Accessibilité
 
@@ -115,7 +114,7 @@ Par nature, le déploiement d'un site statique est simple et sans prise de tête
 ## Sources
 
 - Le site Elao (propulsé par Stenope) : https://github.com/Elao/elao_
-- La doc de Stenope, propulsée par lui-même 🧠 : https://github.com/StenopePHP/Stenope
+- La doc de Stenope, propulsée par lui-même 🧠 : https://stenopephp.github.io/Stenope/
 - Glide : https://glide.thephpleague.com/
 - Github Actions : https://docs.github.com/en/actions/learn-github-actions
 - Et comme toujours, Manala : https://manala.github.io/manala-recipes/

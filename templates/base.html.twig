@@ -45,7 +45,7 @@
         {% endblock %}
 
         {# Optional no-index #}
-        {% if noindex is defined and noindex %}
+        {% if forceNoIndex or noindex ?? false %}
             <meta name="robots" content="noindex" />
         {% endif %}
 

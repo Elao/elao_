@@ -50,6 +50,8 @@ Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 - Stenope vous donne un grand contrôle sur la manière dont sont récupérés et hydratés ces contenus.
 - Il ne vous reste qu'à utiliser vos objets métier comme bon vous semble, par exemple dans des controllers et des templates twig.
 
+![stenope-cli](images/posts/2021/rebranding-la-tech/stenope.png)
+
 Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-source compte déjà de nombreux projets de qualité répondant à ce besoin) : Stenope c'est un ensemble d'outils pour générer des sites statiques sur-mesure dans Symfony !
 
 ## Setup du projet
@@ -70,13 +72,13 @@ Dans la pratique, l'accessibilité ce sont aussi des optimisations en cours de p
 
 ## SEO
 
-La refonte et plus globalement la nouvelle identité graphique a donné lieu à une réflexion sur le positionnement d'Elao. Nous en avons donc profité pour écrire du contenu frais, réecrire les `title` et `meta description`, revoir l'arborescence des pages, etc. 
+La refonte et plus globalement la nouvelle identité graphique a donné lieu à une réflexion sur le positionnement d'Elao. Nous en avons donc profité pour écrire du contenu frais, réecrire les `title` et `meta description`, revoir l'arborescence des pages, etc.
 Bien entendu, dans le cadre d'une refonte, n'oublions pas les fondamentaux:
 - Penser aux redirections (301) des pages si les urls changent
 - En profiter pour améliorer les performances des pages 🚀
 - Déterminer un plan d'indexation des pages pour le crawl des robots
 
-Afin de faciliter cette mise en oeuvre qui peut être laborieuse, nous avons développé un petit outil visible dans la toolbar et le profiler de Symfony. Celui-ci comporte deux onglets : SEO et Accessibilité, et apporte des informations sur la page. En vrac, quelques exemples : 
+Afin de faciliter cette mise en oeuvre qui peut être laborieuse, nous avons développé un petit outil visible dans la toolbar et le profiler de Symfony. Celui-ci comporte deux onglets : SEO et Accessibilité, et apporte des informations sur la page. En vrac, quelques exemples :
 - SEO : Title, meta description, hiérarchie des titres, directives pour les robots, données hreflangs, partage sur les réseaux sociaux
 - Accessibilité : images sans balise alt, icones non-explicitées, formulaires non-accessibles, statut des liens internes et externes
 
@@ -87,7 +89,7 @@ Cet outil s'appelle Accesseo, il fait encore l'objet de quelques ajustements à 
 
 ## Images et performances
 
-Stenope ne fournit rien pour le resize d'images : le choix de l'outil et de son implémentation est libre. Pour nous, différentes options se sont présentées pour afficher dans les images dans la bonne taille, tout en bénéficiant de bonnes performances de chargement. Nous avions évoqué un CDN Thumbor, mais finalement, notre choix s'est porté sur [Glide](https://glide.thephpleague.com/). Nous obtenons une intégration souple et facile à utiliser. 
+Stenope ne fournit rien pour le resize d'images : le choix de l'outil et de son implémentation est libre. Pour nous, différentes options se sont présentées pour afficher dans les images dans la bonne taille, tout en bénéficiant de bonnes performances de chargement. Nous avions évoqué un CDN Thumbor, mais finalement, notre choix s'est porté sur [Glide](https://glide.thephpleague.com/). Nous obtenons une intégration souple et facile à utiliser.
 
 Chaque image du site existe en 2 versions au minimum :
 - l’une (la plus grande) pour permettre un affichage optimal sur les écrans haute résolution

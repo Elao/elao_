@@ -1,10 +1,49 @@
 .page-jobs {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  h2,
+  h3 {
+    grid-column: 2 / 13;
+  }
+
+  p {
+    margin: 0 0 30px;
+  }
+
+  .offset-content,
   .article-list {
-    margin: 0 auto;
-    max-width: 1020px;
+    grid-column: 3 / 12;
+  }
+
+  .values {
+    grid-column: 2 / 12;
+  }
+
+  .bricks {
+    grid-column: 2 / 13;
+  }
+
+  .check-block {
+    margin-top: 60px;
+    grid-column: 2 / 13;
   }
 
   .no-result {
     margin: 0 0 40px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-jobs {
+    h2,
+    h3,
+    .offset-content,
+    .article-list,
+    .values,
+    .bricks,
+    .check-block {
+      grid-column: 1 / 13;
+    }
   }
 }

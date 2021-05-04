@@ -165,18 +165,20 @@
         {% endblock %}
     </div>
 
-    {% if article.tweetId is not empty %}
+    {% if article.tweetId is not empty or article.githubEditLink is not empty %}
         <div class="bricks">
-            <div class="brick-comment">
-                <p class="title">Commenter</p>
-                <p>
-                    Des commentaires ?
-                    <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
-                        Poursuivons la discussion sur twitter !
-                    </a>
-                </p>
-                <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
-            </div>
+            {% if article.tweetId is not empty %}
+                <div class="brick-comment">
+                    <p class="title">Commenter</p>
+                    <p>
+                        Des commentaires ?
+                        <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
+                            Poursuivons la discussion sur twitter !
+                        </a>
+                    </p>
+                    <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+                </div>
+            {% endif %}
 
             {% if article.githubEditLink is not empty %}
                 <div class="brick-contribute">

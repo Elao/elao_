@@ -2,14 +2,13 @@
 type:           "post"
 title:          "Commander au clavier une application Symfony grâce au Routing"
 date:           "2018-10-25"
-publishdate:    "2018-10-25"
-draft:          false
+lastModified:       ~
 
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
 tableOfContent: 2
 
 thumbnail:      "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
-header_img:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
+banner:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
 tags:           ["Symfony", "Routing", "UX"]
 categories:     ["dev", "Symfony"]
 

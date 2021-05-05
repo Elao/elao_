@@ -2,14 +2,13 @@
 type:               "post"
 title:              "🎃 Films d'Halloween : la sélection de l'équipe 🍿"
 date:               "2019-10-31"
-publishdate:        "2019-10-31"
+lastModified:       ~
 tableOfContent:     2
-draft:              false
 
 description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
 
 thumbnail:          "images/posts/thumbnails/halloween-2019.jpg"
-header_img:         "images/posts/headers/halloween-2019.jpg"
+banner:             "images/posts/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 

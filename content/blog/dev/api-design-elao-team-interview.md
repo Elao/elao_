@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Conception et développement d'API : l'interview croisée de l'équipe Élao"
 date:               "2017-11-27"
-publishdate:        "2017-11-27"
-draft:              false
+lastModified:       ~
 
 description:        "Interview croisée des développeurs d'Élao à propos de leurs diverses expériences en conception et développement d'API"
 tableOfContent:     2
 
 thumbnail:          "images/posts/thumbnails/api-interview-micro-phone.png"
-header_img:         "images/posts/headers/api-interview-micro-phone.png"
+banner:             "images/posts/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
 categories:         ["Dev"]
 

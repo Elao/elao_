@@ -2,15 +2,14 @@
 type:           "post"
 title:          "From react-native init to app stores real quick"
 date:           "2017-11-09"
-publishdate:    "2017-11-09"
+lastModified:       ~
 lang:           "en"
-draft:          false
 
 description:    "From react-native init to stores real quick"
 tableOfContent: 3
 
 thumbnail:      "images/posts/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
-header_img:     "images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"
+banner:     "images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"
 tags:           ["react", "react native", "mobile"]
 categories:     ["dev"]
 

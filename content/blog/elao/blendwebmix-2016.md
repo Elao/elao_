@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Blend Web Mix 2016 : un gros coup de boost"
 date:               "2016-11-08"
-publishdate:        "2016-11-08"
-draft:              false
+lastModified:       ~
 
 description:        ""
 
 thumbnail:          "images/posts/thumbnails/blend2016.jpg"
-header_img:         "images/posts/headers/blend2016.jpg"
+banner:             "images/posts/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 

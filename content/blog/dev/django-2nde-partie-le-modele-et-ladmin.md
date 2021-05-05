@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Django (2nde partie) : le Modèle et l’Admin"
 date:               "2010-10-06"
-publishdate:        "2010-10-06"
-draft:              false
+lastModified:       ~
 
 description:        "Django (2nde partie) : le Modèle et l’Admin"
 

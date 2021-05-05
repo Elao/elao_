@@ -2,13 +2,12 @@
 type:           "post"
 title:          "Planification de rendez-vous avec OptaPlanner"
 date:           "2017-10-10"
-publishdate:    "2017-10-10"
-draft:          false
+lastModified:       ~
 
 description:    ""
 
 thumbnail:      "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
-header_img:     "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
+banner:     "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
 tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 

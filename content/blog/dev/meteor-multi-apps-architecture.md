@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Meteor - Archi. multi-apps connectées"
 date:               "2015-06-23"
-publishdate:        "2015-06-23"
-draft:              false
+lastModified:       ~
 
 description:        "Architecture d'une application Meteor décomposée en plusieurs sous-applications connectées à la même base de données MongoDb."
 
 thumbnail:          "images/posts/thumbnails/beer.jpg"
-header_img:         "images/posts/headers/elephpant_elao.jpg"
+banner:             "images/posts/headers/elephpant_elao.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
 categories:         ["Web", "Meteor"]
 

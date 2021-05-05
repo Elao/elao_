@@ -3,13 +3,12 @@
 type:               "post"
 title:              "Migrer un site web sans interruption de service grâce au reverse proxy d'Apache."
 date:               "2012-05-04"
-publishdate:        "2012-05-04"
-draft:              false
+lastModified:       ~
 
 description:        "Migrer un site web sans interruption de service grâce au reverse proxy d'Apache."
 
 thumbnail:          "images/posts/thumbnails/pulp_starwars.png"
-header_img:         "images/posts/headers/php_elao_code.jpg"
+banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Apache","Linux","Trucs et astuces"]
 categories:         ["Infra", "Linux"]
 

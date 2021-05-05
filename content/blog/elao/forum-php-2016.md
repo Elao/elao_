@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Retour sur le Forum PHP 2016"
 date:               "2016-11-07"
-publishdate:        "2016-11-07"
-draft:              false
+lastModified:       ~
 
 description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 
 thumbnail:          "images/posts/thumbnails/forumphp2016-thumb.jpg"
-header_img:         "images/posts/headers/forumphp2016.jpg"
+banner:             "images/posts/headers/forumphp2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
 author:             ["tjarrand", "bleveque", "lhoizey", "rchalas", "mcolin", "bviguier", "rhanna", "xgorse", "ndievart"]

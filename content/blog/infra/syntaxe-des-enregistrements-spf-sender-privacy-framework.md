@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Syntaxe des enregistrements SPF (Sender Privacy Framework)"
 date:               "2009-12-05"
-publishdate:        "2009-12-05"
-draft:              false
+lastModified:       ~
 
 description:        "Syntaxe des enregistrements SPF, cas d'utilisation et options de configuration."
 

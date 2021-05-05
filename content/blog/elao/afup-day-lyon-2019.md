@@ -2,13 +2,12 @@
 type:               "post"
 title:              "AFUP Day 2019 à Lyon : le compte-rendu de l'équipe"
 date:               "2019-05-20"
-publishdate:        "2019-05-20"
-draft:              false
+lastModified:       ~
 
 description:        "Notre compte-rendu de l'Afup Day à Lyon, du 17 mai 2019."
 
 thumbnail:          "images/posts/thumbnails/afup-day-2019.jpg"
-header_img:         "images/posts/headers/afup-day-2019.jpg"
+banner:             "images/posts/headers/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
 author:             ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]

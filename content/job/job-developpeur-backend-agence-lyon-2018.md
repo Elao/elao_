@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "À la recherche d'un développeur ou d'une développeuse Back"
-date:           "2018-02-14"
 publishdate:    "2018-02-27"
 draft:          false
 

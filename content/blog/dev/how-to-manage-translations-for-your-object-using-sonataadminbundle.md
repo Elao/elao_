@@ -2,9 +2,8 @@
 type:               "post"
 title:              "How to manage translations for your object using SonataAdminBundle"
 date:               "2012-07-27"
-publishdate:        "2012-07-27"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "How to manage translations for your object using SonataAdminBundle"
 

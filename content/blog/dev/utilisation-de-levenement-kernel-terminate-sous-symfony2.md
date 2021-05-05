@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Utilisation de l'évènement kernel.terminate sous Symfony2"
 date:               "2013-07-18"
-publishdate:        "2013-07-18"
-draft:              false
+lastModified:       ~
 
 description:        "Utilisation de l'évènement kernel.terminate sous Symfony2"
 

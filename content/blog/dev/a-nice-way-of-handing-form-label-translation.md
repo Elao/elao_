@@ -3,9 +3,8 @@
 type:               "post"
 title:              "A nice way of handling form label translation"
 date:               "2013-09-13"
-publishdate:        "2013-09-13"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "A nice way of handling form label translation"
 

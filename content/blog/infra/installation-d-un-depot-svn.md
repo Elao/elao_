@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Installation d'un dépôt SVN"
 date:               "2009-12-02"
-publishdate:        "2009-12-02"
-draft:              false
+lastModified:       ~
 
 description:        "Installation d'un dépôt SVN pour gérer et versioner le code source d'un projet"
 

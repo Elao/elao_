@@ -136,7 +136,7 @@ class HtaccessGenerator
         return $this->contentManager->getContents(
             Article::class,
             ['date' => false],
-            fn (Article $article) => $article->publishdate < $limit
+            fn (Article $article) => $article->date < $limit
         );
     }
 

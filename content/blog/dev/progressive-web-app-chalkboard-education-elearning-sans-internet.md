@@ -2,14 +2,13 @@
 type:           "post"
 title:          "E-learning sans internet ou presque"
 date:           "2017-11-22"
-publishdate:    "2017-11-22"
-draft:          false
+lastModified:       ~
 
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
 tableOfContent: 3
 
 thumbnail:      "images/posts/2017/chalkboard-education/woman-phone.jpg"
-header_img:     "images/posts/2017/chalkboard-education/woman-phone.jpg"
+banner:     "images/posts/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["Progressive Web App", "Offline", "React", "Symfony"]
 categories:     ["dev", "Symfony", "javascript"]
 

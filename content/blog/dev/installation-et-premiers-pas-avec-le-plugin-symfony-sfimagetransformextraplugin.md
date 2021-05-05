@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin"
 date:               "2010-07-12"
-publishdate:        "2010-07-12"
-draft:              false
+lastModified:       ~
 
 description:        "Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin."
 

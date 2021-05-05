@@ -3,8 +3,7 @@
 type:               "post"
 title:              "Installer graphite sur Debian Wheezy"
 date:               "2014-12-20"
-publishdate:        "2014-12-20"
-draft:              false
+lastModified:       ~
 
 description:        "Installation de graphite avec Gunicorn et Nginx sur debian Wheezy."
 

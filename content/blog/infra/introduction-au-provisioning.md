@@ -1,14 +1,13 @@
 ---
 type:               "post"
 title:              "Introduction au provisioning"
-date:               "2015-12-09"
-publishdate:        "2016-02-03"
-draft:              false
+date:               "2016-02-03"
+lastModified:       ~
 
 description:        "Introduction aux principes de base de l'approvisionnement (ou provisoning) d'environnements de développement, d'exécution, de production ou encore de test"
 
 thumbnail:          "images/posts/thumbnails/puppet.jpg"
-header_img:         "images/posts/headers/php_elao_code.jpg"
+banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Ansible", "Linux", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Provisioning", "Ansible"]
 

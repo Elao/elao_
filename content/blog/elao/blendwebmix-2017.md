@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Le Blend Web Mix 2017 arrive !"
 date:               "2017-10-18"
-publishdate:        "2017-10-18"
-draft:              false
+lastModified:       ~
 
 description:        ""
 
 thumbnail:          "images/posts/thumbnails/pre-blend-2017.jpg"
-header_img:         "images/posts/headers/pre-blend-2017.jpg"
+banner:             "images/posts/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 

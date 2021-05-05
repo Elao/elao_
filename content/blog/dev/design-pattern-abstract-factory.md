@@ -2,13 +2,12 @@
 type:           "post"
 title:          "Le Design Pattern 'Abstract Factory'"
 date:           "2017-04-11"
-publishdate:    "2017-04-11"
-draft:          false
+lastModified:       ~
 
 description:    "Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Abstract Factory"
 
 thumbnail:      "images/posts/thumbnails/schema.jpg"
-header_img:     "images/posts/headers/header_schema.jpg"
+banner:     "images/posts/headers/header_schema.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

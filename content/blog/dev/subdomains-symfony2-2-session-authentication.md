@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 date:               "2013-02-28"
-publishdate:        "2013-02-28"
+lastModified:       ~
 lang:               "en"
-draft:              false
 
 description:        "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 
 thumbnail:          "images/posts/thumbnails/turtle.jpg"
-header_img:         "images/posts/headers/php_elao_code.jpg"
+banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "Symfony", "PHP"]
 

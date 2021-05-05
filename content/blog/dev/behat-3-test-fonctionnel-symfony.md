@@ -1,14 +1,13 @@
 ---
 type:               "post"
 title:              "Behat 3 pour vos tests fonctionnels Symfony2"
-date:               "2015-10-23"
-publishdate:        "2016-01-06"
-draft:              false
+date:               "2016-01-06"
+lastModified:       ~
 
 description:        "Installation et utilisation de Behat 3 pour vos tests fonctionnels Symfony2"
 
 thumbnail:          "images/posts/thumbnails/behat.png"
-header_img:         "images/posts/headers/behat_cover.jpg"
+banner:             "images/posts/headers/behat_cover.jpg"
 tags:               ["Behat","Symfony","Mink","Alice"]
 categories:         ["Dev", Symfony", "PHP"]
 

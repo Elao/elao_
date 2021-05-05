@@ -1,14 +1,13 @@
 ---
 type:               "post"
 title:              "Pourquoi devriez-vous utiliser Vue.js dans vos projets ?"
-date:               "2016-10-17"
-publishdate:        "2016-10-19"
-draft:              false
+date:               "2016-10-19"
+lastModified:       ~
 
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
 
 thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-header_img:         "images/posts/headers/vuejs.jpg"
+banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript"]
 

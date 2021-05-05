@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Réalisez une application Vue.js avec vue-cli"
 date:               "2016-11-04"
-publishdate:        "2016-11-04"
-draft:              false
+lastModified:       ~
 
 description:        "Introduction à la réalisation d'applications frontend avec Vue.js et vue-cli."
 
 thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-header_img:         "images/posts/headers/vuejs.jpg"
+banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

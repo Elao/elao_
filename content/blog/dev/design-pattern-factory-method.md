@@ -2,13 +2,12 @@
 type:           "post"
 title:          "Le Design Pattern 'Factory Method'"
 date:           "2017-04-10"
-publishdate:    "2017-04-10"
-draft:          false
+lastModified:       ~
 
 description:    "Premier article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Factory Method"
 
 thumbnail:      "images/posts/thumbnails/scientist.jpg"
-header_img:     "images/posts/headers/scientist.jpg"
+banner:     "images/posts/headers/scientist.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 

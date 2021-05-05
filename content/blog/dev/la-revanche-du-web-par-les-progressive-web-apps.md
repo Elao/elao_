@@ -2,13 +2,12 @@
 type:           "post"
 title:          "Le web n'est pas mort, la revanche par les Progressives Web Apps"
 date:           "2016-12-05"
-publishdate:    "2016-12-05"
-draft:          false
+lastModified:       ~
 
 description:    "Les Progressives Web Apps ont pour objectif de rivaliser avec les apps natives. Voyons comment cela fonctionne et le gain que cela apporte à vos utilisateurs."
 
 thumbnail:      "images/posts/thumbnails/pwa-general.jpg"
-header_img:     "images/posts/2016/pwa/pwa-general.jpg"
+banner:     "images/posts/2016/pwa/pwa-general.jpg"
 tags:           ["Progressive Web App", "Service Worker", "Mobile", "Offline"]
 categories:     ["dev"]
 

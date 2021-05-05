@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Créer un cluster 2 nodes Proxmox"
 date:               "2015-01-16"
-publishdate:        "2015-01-16"
-draft:              false
+lastModified:       ~
 
 description:        "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
 

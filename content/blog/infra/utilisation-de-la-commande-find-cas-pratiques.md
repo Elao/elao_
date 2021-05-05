@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Utilisation de la commande find - cas pratiques"
 date:               "2010-04-23"
-publishdate:        "2010-04-23"
-draft:              false
+lastModified:       ~
 
 description:        "Utilisation de la commande find - cas pratiques"
 

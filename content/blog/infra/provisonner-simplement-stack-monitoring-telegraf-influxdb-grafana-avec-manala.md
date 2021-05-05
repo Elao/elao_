@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana avec Manala"
 date:               "2017-01-25"
-publishdate:        "2017-01-25"
-draft:              false
+lastModified:       ~
 
 description:        "Comment utiliser les roles Ansible de Manala pour provisionner simplement une stack de monitoring Telegraf + InfluxDB + Grafana"
 
 language:           "fr"
 thumbnail:          "images/posts/thumbnails/grafana.jpg"
-header_img:         "images/posts/headers/grafana.jpg"
+banner:             "images/posts/headers/grafana.jpg"
 tags:               ["provisoning","manala","ansible","influxdb","grafana","telegraf","monitoring"]
 categories:         ["Infra", "manala", "ansible"]
 

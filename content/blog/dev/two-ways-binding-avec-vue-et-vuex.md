@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Two Way-Binding avec Vue et Vuex"
 date:               "2019-09-25"
-publishdate:        "2019-09-25"
-draft:              false
+lastModified:       ~
 
 description:        "Mise en place d'un Two-Way Binding avec Vue et Vuex."
 
 thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-header_img:         "images/posts/headers/vuejs.jpg"
+banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

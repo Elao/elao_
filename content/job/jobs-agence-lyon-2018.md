@@ -1,7 +1,6 @@
 ---
 type:           "post"
 title:          "Session recrutements chez élao !"
-date:           "2018-02-19"
 publishdate:    "2018-02-28"
 draft:          false
 active:         true

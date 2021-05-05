@@ -1455,12 +1455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "77747fd164cc68ccf5db0b91586f7eb1e057dfef"
+                "reference": "d6353683b0d6710f869c16512b83e7f6e09bc2ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/77747fd164cc68ccf5db0b91586f7eb1e057dfef",
-                "reference": "77747fd164cc68ccf5db0b91586f7eb1e057dfef",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/d6353683b0d6710f869c16512b83e7f6e09bc2ed",
+                "reference": "d6353683b0d6710f869c16512b83e7f6e09bc2ed",
                 "shasum": ""
             },
             "require": {
@@ -1478,6 +1478,7 @@
                 "symfony/finder": "^5.1",
                 "symfony/http-foundation": "^5.1",
                 "symfony/http-kernel": "^5.1",
+                "symfony/mime": "^5.1",
                 "symfony/process": "^5.1",
                 "symfony/property-access": "^5.1",
                 "symfony/routing": "^5.1",
@@ -1536,7 +1537,7 @@
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
                 "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-03-31T12:29:56+00:00"
+            "time": "2021-05-03T15:43:11+00:00"
         },
         {
             "name": "symfony/asset",

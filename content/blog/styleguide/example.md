@@ -2,13 +2,14 @@
 type:               "post"
 title:              "Petit guide de style du blog"
 date:               "2020-09-23"
-publishdate:        "2020-09-23"
-draft:              true
+#lastModified:       ~ # A utiliser par défaut
+lastModified:       "2021-03-17" # A utiliser pour indiquer explicitement qu'un article a été mis à jour
 tableOfContent:     3
 
 description:        "Tour d'horizon de ce qu'on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction."
 
 thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
+banner:             ~ # Si vous voulez une image différente des miniatures comme bannière sur la vue de l'article
 credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Tag 1", "Tag 2"]
 categories:         ["Dev", "Symfony"]

@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Comment démarrer en TDD en PHP ?"
 date:               "2018-10-30"
-publishdate:        "2018-10-30"
-draft:              false
+lastModified:       ~
 
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
 tableOfContent:     2
 
 thumbnail:          "images/posts/thumbnails/tdd.jpg"
-header_img:         "images/posts/headers/tdd.jpg"
+banner:             "images/posts/headers/tdd.jpg"
 tags:               ["PHP", "Test", "TDD"]
 categories:         ["Dev", "PHP"]
 

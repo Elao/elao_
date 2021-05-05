@@ -25,7 +25,7 @@
     </ol>
 
     <div class="article-banner">
-        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>
+        <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>
 
         <div class="article-info" data-aos="zoom-in">
             {% set authors = article.authors|length > 5 ? [null] : article.authors %}
@@ -49,8 +49,10 @@
                 </div>
             {% endblock %}
             <div class="article-info__date">
-                <span>Publication <strong>{{ article.publishdate|format_date('long') }}</strong></span>
-                <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+                <span>Publication <strong>{{ article.date|format_date('long') }}</strong></span>
+                {% if article.lastModified %}
+                    <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+                {% endif %}
             </div>
         </div>
 

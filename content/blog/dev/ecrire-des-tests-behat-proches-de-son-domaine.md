@@ -2,13 +2,12 @@
 type:               "post"
 title:              "Écrire des tests Behat proches de son domaine"
 date:               "2018-06-17"
-publishdate:        "2018-06-17"
-draft:              false
+lastModified:       ~
 
 description:        ""
 
 thumbnail:          "images/posts/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png"
-header_img:         "images/posts/headers/ecrire-test-behat-proche-de-son-domaine.jpg"
+banner:             "images/posts/headers/ecrire-test-behat-proche-de-son-domaine.jpg"
 tags:               ["Behat","Symfony","DDD"]
 categories:         ["Dev", Symfony", "PHP"]
 

@@ -3,7 +3,7 @@
 type:               "post"
 title:              "Rebranding 3/4 : la tech"
 date:               "2021-05-04"
-publishdate:        "2021-05-04"
+lastModified:       ~
 tableOfContent:     2
 
 description:        "On s'outille."

@@ -2,14 +2,13 @@
 type:               "post"
 title:              "Sauvez un cookie 🍪, installez Matomo !"
 date:               "2019-03-21"
-publishdate:        "2019-03-21"
+lastModified:       ~
 tableOfContent:     2
-draft:              false
 
 description:        "Chez Elao, nous mesurons désormais l'audience de nos propres sites grâce à Matomo. Retour d'expérience. "
 
 thumbnail:          "images/posts/thumbnails/matomo.jpg"
-header_img:         "images/posts/headers/matomo.jpg"
+banner:             "images/posts/headers/matomo.jpg"
 tags:               ["Seo", "RGPD", "Matomo"]
 categories:         ["Dev", "Web"]
 

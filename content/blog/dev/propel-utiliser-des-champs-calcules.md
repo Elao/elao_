@@ -2,8 +2,7 @@
 type:               "post"
 title:              "Propel - Utiliser des champs calculés"
 date:               "2010-05-13"
-publishdate:        "2010-05-13"
-draft:              false
+lastModified:       ~
 
 description:        "Propel - Utiliser des champs calculés"
 

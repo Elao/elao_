@@ -1,4 +1,12 @@
 stenope:
+    copy:
+        -
+            src: '%kernel.project_dir%/public'
+            dest: .
+            fail_if_missing: true
+            ignore_dot_files: false # include .well-known dir
+            excludes:
+                - '*.php'
     providers:
         App\Model\Article: '%kernel.project_dir%/content/blog'
         App\Model\Certification: '%kernel.project_dir%/content/certif'

@@ -1,0 +1,40 @@
+name: Clean PR preview
+
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+
+  deploy-pr:
+    name: '🧹 Clean PR preview'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: 'Remove PR folder if it exists'
+        run: rm -Rf pr/${{ github.event.number }}
+
+      - name: 'Git status'
+        run: git status
+
+      # https://github.com/EndBug/add-and-commit
+      - name: 'Commit & push changes'
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: GitHub Actions Bot
+          author_email: actions@github.com
+          COMMIT_MESSAGE: |
+            [AUTO] Removed deployment for PR #${{ github.event.number }}
+
+            for commit ${{ github.sha }}
+          add: "./pr/"
+          ref: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

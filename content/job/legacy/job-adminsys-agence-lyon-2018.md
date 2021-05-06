@@ -1,10 +1,10 @@
 ---
 type:           "post"
-title:          "À la recherche d'un(e) «Sysadmin»"
-publishdate:    "2018-05-29"
-draft:          false
-
+title:          ["À la recherche d'un(e) «Sysadmin»"]
 description:    "Élao recherche un ou une Sysadmin à Lyon"
+date:    "2018-05-29"
+active:         false
+
 
 thumbnail:      "images/posts/thumbnails/adminsys.jpg"
 header_img:     "images/posts/headers/adminsys.jpg"

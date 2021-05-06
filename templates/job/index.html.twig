@@ -1,6 +1,10 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
+{# TODO: better title & descr ? #}
+{% block meta_title "Les offres d'emploi d'Elao" %}
+{% block meta_description "Decouvrez les offres d'emploi ouvertes à Elao" %}
+
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -159,19 +163,16 @@
         </div>
 
         <h2 class="h2--dash">Les offres d’emploi ouvertes</h2>
-        {# Todo : pour l'instant on a une erreur si il y a zéro offre d'emploi #}
         {% if jobs is not empty %}
             <ul class="article-list">
                 {% for job in jobs %}
                     <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
                         <div class="miniature-inline__content">
                             <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
-                                {{ job.title }}
+                                {{ job.fullTitle }}
                             </a>
                             <p class="description" itemprop="description">
-                                {# Todo : permettre d'afficher la description #}
-                                {# {{ job.description }} #}
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, assumenda repellendus at officiis optio.
+                                {{ job.description }}
                             </p>
                             <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
                                 <span>

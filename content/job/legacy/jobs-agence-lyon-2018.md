@@ -1,12 +1,10 @@
 ---
-type:           "post"
-title:          "Session recrutements chez élao !"
-publishdate:    "2018-02-28"
-draft:          false
-active:         true
-
+title:          ["Session recrutements chez élao !"]
 description:    "4 postes à pourvoir au sein de notre tribu lyonnaise"
+date:           "2018-02-28"
+active:         false
 
+type:           "post"
 thumbnail:      "images/posts/thumbnails/stand-up.jpg"
 header_img:     "images/posts/headers/stand-up.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]

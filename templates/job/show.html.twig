@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title job.titleSeo ?? job.fullTitle %}
+{% block meta_description job.metaDescription ?? job.description %}
+
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -16,18 +19,21 @@
         </li>
         <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
-                <span itemprop="name">{{ job.title }}</span>
+                <span itemprop="name">{{ job.fullTitle }}</span>
             </a>
             <meta itemprop="position" content="3" />
         </li>
     </ol>
 
     <div class="banner">
-        {# Todo : permettre de séparer le titre en 2 parties #}
         <h1 class="banner__title" data-aos="fade-right">
-            {# {{ job.title }} #}
-            Développeur·euse
-            <span>backend</span>
+            {% for title in job.title %}
+                {% if loop.first %}
+                    {{ title }}
+                {% else %}
+                    <span>{{ title }}</span>
+                {% endif %}
+            {% endfor %}
         </h1>
         {#
             .banner__content options (pick one) :

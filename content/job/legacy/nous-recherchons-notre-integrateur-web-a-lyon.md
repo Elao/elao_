@@ -1,11 +1,10 @@
 ---
-type:           "post"
-title:          "Intégrer... notre agence de Lyon"
-publishdate:    "2017-01-20"
-draft:          false
-
+title:          ["Intégrer... notre agence de Lyon"]
 description:    "Nous cherchons notre intégratrice/intégrateur web à Lyon."
+date:           "2017-01-20"
+active:         false
 
+type:           "post"
 thumbnail:      "images/posts/thumbnails/boy.png"
 header_img:     "images/posts/headers/JobLyon.jpg"
 tags:           ["recrutement", "jobs", "integration", "lyon"]

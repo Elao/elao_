@@ -1,11 +1,10 @@
 ---
+title:          ["Retour d'expérience d'un stagiaire Elao"]
+description:    "Cela fait maintenant 4 mois que je travaille en tant que stagiaire au sein de la tribu Elao Paris et je pense qu'il est intéressant de prendre un peu de recul sur les mois écoulés"
+date:           "2017-06-19"
+active:         false
+
 type:               "post"
-title:              "Retour d'expérience d'un stagiaire Elao"
-publishdate:        "2017-06-19"
-draft:              false
-
-description:        "Cela fait maintenant 4 mois que je travaille en tant que stagiaire au sein de la tribu Elao Paris et je pense qu'il est intéressant de prendre un peu de recul sur les mois écoulés"
-
 thumbnail:          "images/posts/thumbnails/stagiaire_pc.jpg"
 header_img:         "images/posts/headers/gate.jpg"
 tags:               ["stagiaire","web","elao"]

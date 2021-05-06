@@ -1,9 +1,10 @@
 ---
-type:               "post"
-title:              "Exemple d'annonce"
-date:               "2021-04-23"
-draft:              false
-active:             true
+title:
+    - "Exemple d'annonce:"
+    - "Développeur·euse backend"
+description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, assumenda repellendus at officiis optio."
+date:        "2021-04-23"
+active:      true
 
 ---
 

@@ -32,11 +32,11 @@ class JobController extends AbstractController
 
         return $this->render('job/index.html.twig', [
             'jobs' => $jobs,
-        ])->setLastModified(ContentUtils::max($jobs, 'lastModified'));
+        ])->setLastModified(\count($jobs) > 0 ? ContentUtils::max($jobs, 'lastModified') : null);
     }
 
     /**
-     * @Route("/{job}", name="job")
+     * @Route("/{job<.+>}", name="job")
      */
     public function show(Job $job): Response
     {

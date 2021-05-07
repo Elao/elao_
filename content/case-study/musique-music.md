@@ -11,7 +11,7 @@ shortDescription: "Librairie musicale pour les professionnels"
 clients: Musique & Music
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html", "css", "algolia", "svg"]
+technologies: ["symfony", "react", "html", "css", "svg"]
 members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
 images: ["images/casestudies/headers/musique-music-banner.jpg"]
 ---
@@ -58,16 +58,13 @@ Pour répondre à ces besoins et aux spécifications fonctionnelles du produit M
 <figure>
     <img src="images/casestudies/musique-music-results.jpg" alt="La recherche Musique & Music">
     <figcaption>
-      <span class="figure__legend">La recherche Musique & Music, propulsée par Algolia</span>
+      <span class="figure__legend">La recherche Musique & Music</span>
     </figcaption>
 </figure>
 
 Mais cette fluidité d'utilisation ne devait pas se faire au détriment des performances de référencement : c'est pourquoi toute la partie publique de Musique & Music est **pré-rendue coté serveur** avec le même code React piloté, exécuté puis servi par l'application Symfony.
 
 Ainsi, toutes les pages sont servies avec leurs contenus et leurs méta-données complètes avant-même l'execution du Javascript dans le navigateur du client (ou des robots d'indexation des moteurs de recherche).
-
-#### Côté recherche, la puissance d'Algolia
-La base Musique & Music compte plus de 650 000 titres, chacun avec ses méta-données, ses labels. La pertinence et la vélocité de la recherche sont deux critères déterminants dans le produit M&M, c'est pourquoi nous avons fait le choix d'embarquer la solution Algolia. 
 
 ### Pour l'équipe Musique & Music, un espace d'administration adapté à leurs besoins
 

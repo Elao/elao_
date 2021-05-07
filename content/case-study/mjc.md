@@ -24,7 +24,7 @@ images: ["images/casestudies/headers/mjc-banner.jpg"]
 
 Profitant de cette refonte, MyJob.Company a souhaité intégrer davantage de transparance et d'ouverture dans sa plateforme, ce qui a fait écho aux valeurs d'Elao.
 
-## L'expertise Elao déployée pour l'application Tribü
+## L'expertise Elao déployée pour l'application MyJob.Company
 
 ### Ateliers de recueil du besoin
 Elao a reçu l'équipe de MyJob.Company dans ses locaux afin de réaliser différents ateliers d'expression du besoin et de co-conception. Ces ateliers nous ont permis de comprendre les différents enjeux de la refonte ainsi que les différents principes de la cooptation et la recommandation. Nous avons défini ensemble un premier périmètre fonctionnel couvrant l'existant et permettant une bascule vers la nouvelle plateforme le plus tôt possible.

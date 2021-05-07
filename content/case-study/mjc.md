@@ -58,7 +58,7 @@ L'autre enjeu était la qualité des offres proposer sur la plateforme. Grâce �
 * Pouvoir traiter les candidatures grâce à un workflow.
 
 <figure>
-    <img src="images/casestudies/mjc-recruteur-mes-offres.jpg" alt="Recruteur - Mes offres d'emploi">
+    <img src="images/casestudies/mjc-recruteur-mes-offres.png" alt="Recruteur - Mes offres d'emploi">
     <figcaption>
       <span class="figure__legend">Recruteur - Mes offres d'emploi</span>
     </figcaption>
@@ -76,7 +76,7 @@ Le coopteurs devait pouvoir rechercher les différents offres d'emploi grâce à
 Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies/elasticsearch.md) qui permet à la fois une recherche par pertinence et une recherche par géolocalisation.
 
 <figure>
-    <img src="images/casestudies/mjc-coopteur-recherche.jpg" alt="Coopteur - Moteur de recherche">
+    <img src="images/casestudies/mjc-coopteur-recherche.png" alt="Coopteur - Moteur de recherche">
     <figcaption>
       <span class="figure__legend">Coopteur - Moteur de recherche</span>
     </figcaption>
@@ -91,7 +91,7 @@ Les canditats devaient également pouvoir suivre leurs candidatures et pouvoir u
 * Trouver facilement une offre d'emploi grâce au moteur de recherche.
 
 <figure>
-    <img src="images/casestudies/mjc-candidat-suivi.jpg" alt="Candidat - Suivi de la candidature">
+    <img src="images/casestudies/mjc-candidat-suivi.png" alt="Candidat - Suivi de la candidature">
     <figcaption>
       <span class="figure__legend">Candidat - Suivi de la candidature</span>
     </figcaption>

@@ -70,7 +70,7 @@ Le coopteur devait pouvoir rechercher les différentes offres d'emploi grâce à
 
 **Les contraintes étaient les suivantes :**
 * Pouvoir recommander simplement un profil ou partager l'offre à ses réseaux.
-* Pouvoir suivre en temps réel et de façon transparante les candidatures.
+* Pouvoir suivre en temps réel et de façon transparente les candidatures.
 * Un moteur de recherche pertinent.
 
 Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies/elasticsearch.md) qui permet à la fois une recherche par pertinence et une recherche par géolocalisation.

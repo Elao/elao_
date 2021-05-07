@@ -84,7 +84,7 @@ Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies
 
 ### Pour les candidats
 
-Les canditats devaient également pouvoir suivre leurs candidatures et pouvoir utiliser l'application comme un jobboard plus classique. C'est à dire pouvoir rechercher une offre d'emploi et postuler directement.
+Les candidats devaient également pouvoir suivre leurs candidatures et pouvoir utiliser l'application comme un jobboard plus classique, c'est-à-dire en ayant la possibilité de rechercher une offre d'emploi et de postuler directement.
 
 **Les contraintes étaient les suivantes :**
 * Retrouver toutes ses candidatures.

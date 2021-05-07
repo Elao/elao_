@@ -22,7 +22,7 @@ images: ["images/casestudies/headers/mjc-banner.jpg"]
 
 **MyJob.Company a confié à Elao le développement de la refonte de leur plateforme ainsi que le développement de nouvelles fonctionnalités dans le cadre d'un changement de business model.**
 
-Profitant de cette refonte, MyJob.Company a souhaité intégrer davantage de transparance et d'ouverture dans sa plateforme, ce qui a fait écho aux valeurs d'Elao.
+Profitant de cette refonte, MyJob.Company a souhaité intégrer davantage de transparence et d'ouverture dans sa plateforme, ce qui a fait écho aux valeurs d'Elao.
 
 ## L'expertise Elao déployée pour l'application MyJob.Company
 

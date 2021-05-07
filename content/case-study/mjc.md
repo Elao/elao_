@@ -47,7 +47,7 @@ Depuis la mise en production, nous avons continué à développer de nouvelles f
 
 ### Pour les recruteurs : un ATS pour publier des offres et suivre les candidures
 
-Un <abbr title="Applications Tracking System">ATS</abbr> est un logiciel permettant gérer un flux de candidatures à travers un workflow de recrutement. MyJob.Company souhaitait offrir à ses clients recruteurs d'avantage de contrôle et de suivi sur les candidatures. L'application devait proposer plusieurs workflows paramétrables afin de d'adapter aux différents processus de recrutement de ses clients.
+Un <abbr title="Applications Tracking System">ATS</abbr> est un logiciel permettant gérer un flux de candidatures à travers un parcours de recrutement. MyJob.Company souhaitait offrir à ses clients recruteurs davantage de contrôle et de suivi sur les candidatures. L'application devait proposer plusieurs parcours configurables afin de s'adapter aux différents processus de recrutement de ses clients.
 
 L'autre enjeu était la qualité des offres proposer sur la plateforme. Grâce à son savoir faire dans le domaine du recrutement, MyJob.Company a conçu un tunnel de rédaction permettant de publier une offre avec les informations pertinantes et de qualité.
 

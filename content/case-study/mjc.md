@@ -38,7 +38,7 @@ Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'inte
 Maxime et Amélie ont mené de front toute la phase de développement, **accompagnant l'équipe de MyJob.Company dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à MyJob.Company de tester très vite la refonte auprès des ses utilisateurs.
 
 ### Bascule
-La bascule vers la nouvelle plateforme a été un des principaux eujeux de ce projet. La base de données contenant plusieurs dizaines de milliers d'utilisateurs et d'offres d'emplois a dû être migrée et la bascule a dû être réalisée de façon la plus transparente possible pour les utilisateurs.
+La bascule vers la nouvelle plateforme a été l'un des principaux enjeux de ce projet. La base de données contenant plusieurs dizaines de milliers d'utilisateurs et d'offres d'emplois a dû être migrée et la bascule a dû être réalisée de la façon la plus transparente possible pour les utilisateurs.
 
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
 Depuis la mise en production, nous avons continué à développer de nouvelles fonctionnalités tout en faisant évoluer l'application en fonction des besoins remontés par l'équipe de MyJob.Company et par ses utilisateurs.

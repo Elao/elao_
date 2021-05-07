@@ -81,4 +81,12 @@ class SiteController extends AbstractController
     {
         return $this->render('site/privacy.html.twig');
     }
+
+    /**
+     * @Route("/politique-de-divulgation-de-vulnerabilites", name="disclosure")
+     */
+    public function disclosurePolicy(): Response
+    {
+        return $this->render('site/disclosure.html.twig');
+    }
 }

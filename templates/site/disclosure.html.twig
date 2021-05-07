@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Politique de divulgation de vulnérabilités</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+    <h2>Politique de divulgation de vulnérabilités</h2>
+
+
+    <h2>Objets</h2>
+    <p>En tant que concepteurs d'applications, la sûreté et la sécurité de nos clients et de leurs données est l'une de nos principales priorités.</p>
+    <p>Bien que nous mettions un soin tout particulier à concevoir et fabriquer des applications de la meilleure qualité possible il est possible que malgré nos efforts certaines vulnérabilités soient encore présentes dans nos réalisations ou soient découvertes par la suite.</p>
+    <p>Ce document a pour but de faciliter la réception de rapports de vulnérabilité potentielle de nos produits, outils ou réalisations.
+    Ainsi chacun est encouragé à nous signaler les vulnérabilités identifiées.
+    Chercheurs, partenaires, clients ou toute autre source sont les bienvenus.</p>
+
+
+    <h2>Engagements et directives</h2>
+    <p>Nous nous engageons, lorsque vous nous signalez un problème:</p>
+        <ul>
+            <li>À ne pas poursuivre en justice les parties déclarantes qui soumettent des rapports.</li>
+            <li>Collaborer avec vous afin de comprendre et résoudre le(s) problème(s) rencontré(s).</li>
+            <li>Vous confirmer la prise en compte de votre signalement dans les 72 heures.</li>
+    </ul>
+
+    <h2>Exigences en matière de divulgations</h2>
+    <p>Bien que nous nous efforçions d'être le plus rigoureux possible, nous ne pouvons garantir l'exactitude et l'exhaustivité des données publiées sur ce support.</p>
+    <p>Le site est maintenu et mis à jour, nous ne pouvons néanmoins pas garantir l'actualisation des informations et méthodes qu'il contient.</p>
+    <p>Nous nous réservons le droits de corriger à tous moment ces données si d'aventure nous constations qu'elles sont érronées ou inexactes. En conséquence, l'utilisateur est seul responsable de leur utilisation.</p>
+
+    <h2>Responsabilité</h2>
+    <p>Nous ne pourrions être tenu pour responsable des dommages directs ou indirects qui pourraient résulter de l'accès ou de l'utilisation des ressources proposées par ce site.</p>
+    <p>Concernant les articles du blog notamment, ils sont rédigés à des fins pédagogiques et éducatives et doivent être mis en application en ayant bien compris leur finalité.</p>
+    <p>Nous nous réservons le droit de modifier ou d'interrompre, temporairement ou de façon permanente, tout ou partie de l'accès au site afin d'effectuer les opérations de maintenance nécessaires à son bon fonctionnement.</p>
+
+    <h2>Protection des données personnelles</h2>
+    <p>La confidentialité et la sécurité de vos données est une <strong>priorité absolue</strong> pour nous.</p>
+    <p>Les adresses électroniques recueillies dans le cadre du formulaire de contact ne sont utilisées que pour l'envoi d'informations ayant motivé l'inscription.</p>
+    <p>Pour plus d’informations sur nos pratiques de confidentialité et les mesures prises pour protéger votre vie privée, consultez en détails notre page <a href="{{ path('privacy') }}">protection des données.</a></p>
+
+    <h2>Droits d'auteur</h2>
+    <h3>Reproduction sur support papier</h3>
+    <p>À l'exception de l'iconographie, la reproduction des pages de ce site sur un support papier est autorisée, sous réserve du respect des trois conditions suivantes :</p>
+    <ul>
+        <li>Gratuité de la diffusion</li>
+        <li>Respect de l'intégrité des documents reproduits (aucune modification, ni altération d'aucune sorte)</li>
+        <li>Citation explicite du site <a href="{{ path('homepage') }}">({{ url('homepage') }})</a> comme source et mention que les droits de reproduction sont réservés et strictement limités</li>
+    </ul>
+    <h3>Reproduction sur support électronique</h3>
+    <p>La reproduction de tout ou partie de ce site sur un support électronique est autorisée sous réserve de l'ajout de façon claire et lisible de la source <a href="{{ path('homepage') }}">({{ url('homepage') }})</a> et de la mention "Droits réservés". Les informations utilisées ne doivent l'être à des fins personnelles, associatives ou professionnelles ; toute utilisation à des fins commerciales ou publicitaires est exclue.</p>
+{% endblock %}

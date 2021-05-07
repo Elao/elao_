@@ -41,7 +41,7 @@ Maxime et Amélie ont mené de front toute la phase de développement, **accompa
 La bascule vers la nouvelle plateforme a été un des principaux eujeux de ce projet. La base de données contenant plusieurs dizaines de milliers d'utilisateurs et d'offres d'emplois a dû être migrée et la bascule a dû être réalisée de façon la plus transparente possible pour les utilisateurs.
 
 ### Phase de run (évolutions fonctionnelles et maintenance applicative)
-Depuis la mise en production, nous avons continué à développer de nouvelles fonctionnalités tout en faisant évoluer l'application en fonction des remontés de MyJob.Company et de ses utilisateurs.
+Depuis la mise en production, nous avons continué à développer de nouvelles fonctionnalités tout en faisant évoluer l'application en fonction des besoins remontés par l'équipe de MyJob.Company et par ses utilisateurs.
 
 ## Les applications
 

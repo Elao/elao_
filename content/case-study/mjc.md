@@ -5,7 +5,7 @@ date: "2021-04-16"
 
 # Params
 metaDescription: "MyJob.Company — Recrutement par cooptation."
-description: "MyJob.Company propose une plateforme d'offres d'emploi fonctionnant sur le principe de la coopatation."
+description: "MyJob.Company propose une plateforme d'offres d'emploi fonctionnant sur le principe de la cooptation."
 websiteUrl: https://myjob.company/fr/
 shortDescription: "Recrutement par cooptation."
 clients: MyJob.Company

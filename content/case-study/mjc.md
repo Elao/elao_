@@ -64,7 +64,7 @@ L'autre enjeu était la qualité des offres proposer sur la plateforme. Grâce �
     </figcaption>
 </figure>
 
-### Pour les coopteurs : un moteur de recherche et un suivi de leur cooptée.
+### Pour les coopteurs : un moteur de recherche et un suivi de leurs cooptés
 
 Le coopteurs devait pouvoir rechercher les différents offres d'emploi grâce à un moteur de recherche multi-critères et géolocalisé. MyJob.Company souhaitait également offrir davantage de suivi et de transparence à ses coopteurs. L'application devait donc permettre aux coopteurs de suivre l'avancement des candidatures qu'ils ont généré, si elle ont été acceptée ou refusée et pour quelle raison.
 

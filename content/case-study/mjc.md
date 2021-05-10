@@ -32,7 +32,7 @@ Elao a reçu l'équipe de MyJob.Company dans ses locaux afin de réaliser diffé
 
 ### Ateliers UX/UI
 Les développeurs Elao sont avant tout des concepteurs, capables d'être force de proposition d'un point de vue fonctionnel.
-Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'interface utilisateurs (UI) ont été réalisées main dans la main avec [Mathilde Vandier](http://www.mvandier.com/), designer freelance, avec laquelle nous avons itéré du début à la fin du projet.
+Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'interface utilisateurs (UI) ont été réalisées main dans la main avec <a href="http://www.mvandier.com/" target="_blank">Mathilde Vandier</a>, designer freelance, avec laquelle nous avons itéré du début à la fin du projet.
 
 ### Phase de build (développement)
 Maxime et Amélie ont mené de front toute la phase de développement, **accompagnant l'équipe de MyJob.Company dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à MyJob.Company de tester très vite la refonte auprès des ses utilisateurs.

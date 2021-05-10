@@ -18,7 +18,7 @@ tweetId:            ~
 
 Vous l'aurez compris à la lecture des [précédents articles](/blog/tag/rebranding), nous changeons notre façon de nous présenter mais nous restons fidèles à nos valeurs et à ce qui fait que nous sommes nous aujourd'hui. 
 Mais ensuite ?
-Les sujets du fond et de la forme ont été adressés mais dans les faits cela change quoi ? 
+Les sujets du fond et de la forme ont été adressés mais dans les faits, qu'est-ce que ça change ? 
 
 Dans notre quotidien, pas tant de choses, la plupart des sujets que nous abordons font déjà plus ou moins partie de notre quotidien et ce depuis trèèèèèès longtemps. 
 Dans le vôtre ? C'est précisément là où l'on aimerait changer certaines choses en arrêtant de trop fonctionner en vase clos (à notre goût).
@@ -112,13 +112,13 @@ Bienvenue à la petite soeur donc, créée en Mars 2020 en plein confinement (ba
 Elle aura dorénavant la tâche de porter ces métiers gravitant autour de la conception d'applications et au combien essentiels à leurs cycles de vie.
 
 Nous sommes restés relativement discrets autour de cet écosystème (malgré que nous partageons pas mal de choses avec [Manala](https://github.com/manala/))  partant du principe qu'il était essentiel et nécessaire au bon fonctionnement d'un applicatif.
-Mais il est plus que temps aujourd'hui de considérer que nous exercions deux métiers distinct, avec des contraintes, des attentes, des rythmes différents.
+Mais il est plus que temps aujourd'hui de considérer que nous exercions deux métiers distincts, avec des contraintes, des attentes, des rythmes différents.
 
-Bien que nous soyions fiers, avec Elao et à notre échelle d'avoir participé à l'évangélisation de ces bonnes pratiques et de cet outillage nous pensons devoir évoluer et être capable de mettre en avant cette équipe pleinement dédiée à cette activité.
+Bien que nous soyions fiers, avec Elao et à notre échelle d'avoir participé, à l'évangélisation de ces bonnes pratiques et de cet outillage nous pensons devoir évoluer et être capables de mettre en avant cette équipe pleinement dédiée à cette activité.
 
 D'autant que l'on constate de plus en plus que nos clients ont conscience que la conception d'une application n'est que la première brique d'un assemblage plus important et que l'environnement dans lequel celle-ci va évoluer est aussi important. 
 
-###Pourquoi c'est si important ? 
+###Mais pourquoi c'est si important ? 
 
 Parce qu'une application qui «vie» c'est finalement comme une bagnole, une moto ou dans une moindre mesure un vélo. 
 Si on en prend pas soin et qu'on n'y fait pas attention, un jour ou l'autre elle vous lâche sur l'autoroute des vacances... 
@@ -132,7 +132,7 @@ Le job des équipes Rix est donc de faire en sorte que ça n'arrive pas:
 - En aidant les équipes de developpement à faire l'analyse technique de code présentant des problèmes de conception / performances.
 - En supervisant les services critiques.
 
-Le but, comme nous le faisons pour Elao depuis bien longtemps étant de facilité les cycles de vie des applications en apportant un maximum de données utiles à la prise de décisions et à la résolution des incidents afin que ceux-ci soient le moins pénalisant possible.
+Le but, comme nous le faisons pour Elao depuis bien longtemps étant de faciliter les cycles de vie des applications en apportant un maximum de données utiles à la prise de décisions et à la résolution des incidents afin que ceux-ci soient le moins pénalisant possible.
 
 ###Et comment vous faites ça ?
 

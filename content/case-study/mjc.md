@@ -9,7 +9,7 @@ description: "MyJob.Company propose une plateforme d'offres d'emploi fonctionnan
 websiteUrl: https://myjob.company/fr/
 shortDescription: "Recrutement par cooptation."
 clients: MyJob.Company
-size: 2 ans
+size: 6 mois
 services: ["Refonte", "Développement"]
 technologies: ["symfony", "elasticsearch", "vue-js", "html", "css"]
 members: ["mcolin", "adefrance"]

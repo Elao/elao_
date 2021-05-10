@@ -1,17 +1,11 @@
 ---
-type:           "post"
-title:          "Intégrer... l'équipe, en alternance"
-publishdate:    "2021-05-16"
-draft:          false
+title:
+    - "Nous cherchons un·e"
+    - "intégrateur·rice web en alternance"
+description: "Intégrer… l'équipe, en alternance."
+date:        "2021-05-16"
+active:      true
 
-description:    "Nous proposons un poste d'intégrateur·rice web en alternance."
-
-thumbnail:      "images/posts/thumbnails/boy.png"
-header_img:     "images/posts/headers/JobLyon.jpg"
-tags:           ["recrutement", "jobs", "integration", "lyon"]
-categories:     ["elao", "jobs", "recrutement"]
-
-author:         "elao"
 ---
 
 Nous recherchons **un Intégrateur ou une Intégratrice Web en alternance**

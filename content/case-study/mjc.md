@@ -18,7 +18,7 @@ images: ["images/casestudies/headers/mjc-banner.jpg"]
 
 ## Le contexte du projet
 
-**MyJob.Company est une entreprise de recrutement : elle propose une plateforme d'offres d'emploi (job board) utilisant la cooptation.** Sa force est d'avoir une base de d'environ 60&nbsp;000 coopteurs capables de recommander leurs connaissances et des personnes de leurs réseaux pour les offres d'emploi publiées sur la plateforme. Les coopteurs perçoivent une prime pour les cooptations menant à un recrutement et les recruteurs ont accès une grande communauté de coopteurs.
+**MyJob.Company est une entreprise de recrutement : elle propose une plateforme d'offres d'emploi (job board) utilisant la cooptation.** Sa force est d'avoir une base de d'environ 60&nbsp;000 coopteurs capables de recommander des personnes de leurs réseaux pour les offres d'emploi publiées sur la plateforme. Les coopteurs perçoivent une prime pour les cooptations menant à un recrutement et les recruteurs ont accès une grande communauté de coopteurs.
 
 **MyJob.Company a confié à Elao le développement de la refonte de leur plateforme ainsi que le développement de nouvelles fonctionnalités dans le cadre d'un changement de business model.**
 
@@ -27,15 +27,14 @@ Profitant de cette refonte, MyJob.Company a souhaité intégrer davantage de tra
 ## L'expertise Elao déployée pour l'application MyJob.Company
 
 ### Ateliers de recueil du besoin
-Elao a reçu l'équipe de MyJob.Company dans ses locaux afin de réaliser différents ateliers d'expression du besoin et de co-conception. Ces ateliers nous ont permis de comprendre les différents enjeux de la refonte ainsi que les différents principes de la cooptation et la recommandation. Nous avons défini ensemble un premier périmètre fonctionnel couvrant l'existant et permettant une bascule vers la nouvelle plateforme le plus tôt possible.
+Elao a animé plusieurs ateliers d'expression du besoin, dans une démarche de co-conception. Ces ateliers nous ont permis de comprendre les enjeux de la refonte ainsi que les principes de la cooptation et la recommandation. Nous avons défini ensemble un premier périmètre fonctionnel couvrant l'existant et permettant une bascule vers la nouvelle plateforme le plus tôt possible.
 **Les besoins étaient double : proposer une refonte technique et accompagner le changement de business model.**
 
 ### Ateliers UX/UI
-Les développeurs Elao sont avant tout des concepteurs, capables d'être force de proposition d'un point de vue fonctionnel.
 Les étapes de conception des parcours utilisateurs (UX) et des maquettes d'interface utilisateurs (UI) ont été réalisées main dans la main avec <a href="http://www.mvandier.com/" target="_blank">Mathilde Vandier</a>, designer freelance, avec laquelle nous avons itéré du début à la fin du projet.
 
 ### Phase de build (développement)
-Maxime et Amélie ont mené de front toute la phase de développement, **accompagnant l'équipe de MyJob.Company dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à MyJob.Company de tester très vite la refonte auprès de ses utilisateurs.
+Maxime et Amélie ont mené de front toute la phase de développement, **accompagnant l'équipe de MyJob.Company dans la rédaction des spécifications fonctionnelles** pour anticiper tous les cas nominaux du projet. **Ils ont ensuite posé les bases techniques, développé chaque fonctionnalité, réalisé les tests automatisés et la recette fonctionnelle, jusqu'à l'intégration HTML / CSS aux petits oignons.** La mise en production de la première version a permis à MyJob.Company de proposer rapidement l'outil à ses utilisateurs.
 
 ### Bascule
 La bascule vers la nouvelle plateforme a été l'un des principaux enjeux de ce projet. La base de données contenant plusieurs dizaines de milliers d'utilisateurs et d'offres d'emplois a dû être migrée et la bascule a dû être réalisée de la façon la plus transparente possible pour les utilisateurs.
@@ -54,8 +53,8 @@ L'autre enjeu était la qualité des offres proposées sur la plateforme. Grâce
 **Les contraintes étaient les suivantes :**
 
 * Une interface claire et simple pour les recruteurs.
-* Pouvoir s'adapter aux différents besoins des clients.
-* Pouvoir traiter les candidatures grâce à un workflow.
+* Un parcours personnalisé, permettant de s'adapter aux différents besoins des clients.
+* Une gestion des candidatures la plus fluide possible.
 
 <figure>
     <img src="images/casestudies/mjc-recruteur-mes-offres.png" alt="Recruteur - Mes offres d'emploi">
@@ -66,12 +65,12 @@ L'autre enjeu était la qualité des offres proposées sur la plateforme. Grâce
 
 ### Pour les coopteurs : un moteur de recherche et un suivi de leurs cooptés
 
-Le coopteur devait pouvoir rechercher les différentes offres d'emploi grâce à un moteur de recherche multi-critères et géolocalisé. MyJob.Company souhaitait également offrir davantage de suivi et de transparence à ses coopteurs. L'application devait donc permettre aux coopteurs de suivre l'avancement des candidatures qu'ils ont généré, si elle ont été acceptées ou refusées et pour quelle raison.
+Le coopteur devait pouvoir accéder aux offres d'emploi grâce à un moteur de recherche multi-critères et géolocalisé. MyJob.Company souhaitait également offrir davantage de suivi et de transparence à ses coopteurs. L'application devait donc leur permettre de suivre l'avancement des candidatures qu'ils ont générées ainsi que leur statut : si elle ont été acceptées ou refusées et pour quelle raison.
 
 **Les contraintes étaient les suivantes :**
-* Pouvoir recommander simplement un profil ou partager l'offre à ses réseaux.
-* Pouvoir suivre en temps réel et de façon transparente les candidatures.
-* Un moteur de recherche pertinent.
+* Permettre de recommander simplement un profil ou partager l'offre à ses réseaux ;
+* Avoir un suivi en temps réel et de façon transparente des candidatures ;
+* Proposer un moteur de recherche puissant et pertinent.
 
 Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies/elasticsearch.md) qui permet à la fois une recherche par pertinence et une recherche par géolocalisation.
 
@@ -84,10 +83,10 @@ Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies
 
 ### Pour les candidats
 
-Les candidats devaient également pouvoir suivre leurs candidatures et pouvoir utiliser l'application comme un jobboard plus classique, c'est-à-dire en ayant la possibilité de rechercher une offre d'emploi et de postuler directement.
+Les candidats devaient également pouvoir suivre leurs candidatures et pouvoir utiliser l'application comme un job board plus classique, c'est-à-dire en ayant la possibilité de rechercher une offre d'emploi et de postuler directement.
 
 **Les contraintes étaient les suivantes :**
-* Retrouver toutes ses candidatures.
+* Permettra au candidat de retrouver toutes ses candidatures ;
 * Trouver facilement une offre d'emploi grâce au moteur de recherche.
 
 <figure>

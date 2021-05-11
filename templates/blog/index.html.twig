@@ -15,21 +15,25 @@
                         </a>
                         <div class="miniature-highlight__content" data-aos="zoom-in">
                             <div class="info">
-                                {% set authors = article.authors|length > 5 ? [null] : article.authors %}
+                                {% set authors = article.authors|length > 5 ? [] : article.authors %}
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                                     <div class="article-author__image">
                                         {% for author in authors %}
-                                            {% if author is same as(null) %}
-                                                <img {{ macros.imageSrcset('images/members/avatars/elao-team.jpg', 'author_avatar') }} />
-                                            {% else %}
+                                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
                                                 <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
-                                            {% endif %}
+                                            </a>
+                                        {% else %}
+                                            <img {{ macros.imageSrcset('images/members/avatars/elao-team.jpg', 'author_avatar') }} />
                                         {% endfor %}
                                     </div>
                                     <span class="article-author__info">
                                         Écrit par
-                                        {% for author in article.authors %}
-                                            <strong>{{ author.name }}</strong>
+                                        {% for author in authors %}
+                                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                                <strong>{{ author.name }}</strong>
+                                            </a>
+                                        {% else %}
+                                            <strong>La team élao</strong>
                                         {% endfor %}
                                     </span>
                                     <span class="article-author__info">

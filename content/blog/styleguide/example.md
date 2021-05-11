@@ -1,5 +1,4 @@
 ---
-type:               "post"
 title:              "Petit guide de style du blog"
 date:               "2020-09-23"
 #lastModified:       ~ # A utiliser par défaut

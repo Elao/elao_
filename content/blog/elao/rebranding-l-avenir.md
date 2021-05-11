@@ -11,7 +11,7 @@ thumbnail:          "images/posts/headers/elao-rebrand-banner-future.jpg"
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["gfaivre"]
-tweetId:            ~
+tweetId:            "1392037980945125377"
 ---
 
 ##Premiers pas vers une nouvelle ère

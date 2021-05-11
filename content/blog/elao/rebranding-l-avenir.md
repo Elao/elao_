@@ -107,29 +107,31 @@ Ce changement, c'est de donner une «vraie» existence aux équipes Ops qui nous
 
 ##Rix
 
+![Rix](images/posts/2021/rebranding-l-avenir/rix-logo.jpg)
+
 Bienvenue à la petite soeur donc, créée en Mars 2020 en plein confinement (bah oui, on ne se refait pas 🤷🏻‍♂️).
 
-Elle aura dorénavant la tâche de porter ces métiers gravitant autour de la conception d'applications et au combien essentiels à leurs cycles de vie.
+Elle aura dorénavant la tâche de porter ces métiers gravitant autour de la conception d'applications et ô combien essentiels à leurs cycles de vie.
 
-Nous sommes restés relativement discrets autour de cet écosystème (malgré que nous partageons pas mal de choses avec [Manala](https://github.com/manala/))  partant du principe qu'il était essentiel et nécessaire au bon fonctionnement d'un applicatif.
+Nous sommes restés relativement discrets autour de cet écosystème (bien que nous partageons pas mal de choses avec [Manala](https://github.com/manala/)), partant du principe qu'il était essentiel et nécessaire au bon fonctionnement d'un applicatif.
 Mais il est plus que temps aujourd'hui de considérer que nous exercions deux métiers distincts, avec des contraintes, des attentes, des rythmes différents.
 
-Bien que nous soyions fiers, avec Elao et à notre échelle d'avoir participé, à l'évangélisation de ces bonnes pratiques et de cet outillage nous pensons devoir évoluer et être capables de mettre en avant cette équipe pleinement dédiée à cette activité.
+Bien que nous soyons fiers, avec Elao et à notre échelle d'avoir participé, à l'évangélisation de ces bonnes pratiques et de cet outillage, nous pensons devoir évoluer et être capables de mettre en avant cette équipe pleinement dédiée à cette activité.
 
 D'autant que l'on constate de plus en plus que nos clients ont conscience que la conception d'une application n'est que la première brique d'un assemblage plus important et que l'environnement dans lequel celle-ci va évoluer est aussi important. 
 
 ###Mais pourquoi c'est si important ? 
 
-Parce qu'une application qui «vie» c'est finalement comme une bagnole, une moto ou dans une moindre mesure un vélo. 
-Si on en prend pas soin et qu'on n'y fait pas attention, un jour ou l'autre elle vous lâche sur l'autoroute des vacances... 
+Parce qu'une application qui «vit» c'est finalement comme une bagnole, une moto ou dans une moindre mesure un vélo. 
+Si on n'en prend pas soin, un jour ou l'autre elle vous lâche sur l'autoroute des vacances... 
 
 Et personne n'aime tomber en râde sur la route des vacances...
 
 Le job des équipes Rix est donc de faire en sorte que ça n'arrive pas:
 
-- Par la mise en place de «workflows»
-- Par la surveillance active du comportement de l'application
-- En aidant les équipes de developpement à faire l'analyse technique de code présentant des problèmes de conception / performances.
+- Par la mise en place de «workflows» permettant d'aller sereinement vers la production;
+- Par la surveillance active du comportement de l'application ;
+- En aidant les équipes de developpement à faire l'analyse technique de code présentant des problèmes de conception / performances ;
 - En supervisant les services critiques.
 
 Le but, comme nous le faisons pour Elao depuis bien longtemps étant de faciliter les cycles de vie des applications en apportant un maximum de données utiles à la prise de décisions et à la résolution des incidents afin que ceux-ci soient le moins pénalisant possible.
@@ -140,14 +142,14 @@ On ne réinvente pas la roue et on s'appuie sur des solutions connues et éprouv
 
 Mais avant tout on travaille de concert avec les équipes techniques de nos clients afin de les aider à mettre en place, entre autres:
 
-* Les environnements de développements
-* Des infrastructures sur-mesure.
-* De l'Infrastructure As Code (IAC)
-* De l'automatisation (Ansible/Manala)
-* De l'intégration continue
-* Des outils de supervision (métriques, logs, alertes...)
-* Des tirs de charges (résilience, disponibilité...)
-* Des outils de gestion des mots de passe applicatifs
+* Les environnements de développements ;
+* Des infrastructures sur-mesure ;
+* De l'Infrastructure As Code (IAC) ;
+* De l'automatisation (Ansible/Manala) ;
+* De l'intégration continue ;
+* Des outils de supervision (métriques, logs, alertes...) ;
+* Des tirs de charges (résilience, disponibilité...) ;
+* Des outils de gestion des mots de passe applicatifs.
 
 ###Où ?
 
@@ -155,11 +157,19 @@ Eh bien..., ça dépend !
 
 Lorsque l'on peut, l'ensemble est infogéré et opéré sur des plateformes matérielles françaises 🇫🇷 (OVH et Scaleway) parce qu'on est très sensibles aux problématiques de souveraineté numérique et de gouvernance des données, même si pour l'instant on a le sentiment qu'elles sont encore mécomprises.
 
-Mais ils arrivent également que l'on intervienne avec des fournisseurs de Cloud comme Google (GCP) et Amazon (AWS), lorsque les services du client le nécessite.
+Mais il arrive également que l'on intervienne avec des fournisseurs de Cloud comme Google (GCP) et Amazon (AWS), lorsque les services du client le nécessitent.
+
+###Comment ?
+
+Encore une fois..., ça dépend !
+
+Nous utilisons pas mal d'instances sur des cloud publics, principalement chez OVH et Scaleway mais nous intervenons également de plus en plus sur des infrastructutres nécessitant d'aller sur des technologies comme Kubernetes et dans ce cas là, ça dépend pas mal de la volonté du client. 
+La localisation de son cluster dépendant directement de ses contraintes d'exploitation.
+Globalement nous nous appuyons sur les technologies qui représentent l'état de l'art des infrastructures modernes.
 
 ###Et la sécurité ?
 
-Ça n'est pas notre métier, toutefois nous y sommes très sensibles et sommes entourés de confrères que nous connaissons bien dont c'est le métier, ça tombe bien.
+Ça n'est pas notre métier, toutefois nous y sommes très sensibles et sommes entourés de confrères que nous connaissons qui en sont experts, ça tombe bien.
 
 En plus d'assurer la surveillance et les mises à jour de sécurité des environnements applicatifs, nous accompagnons donc nos clients vers des démarches visant à renforcer la sécurité des socles applicatifs comme de leurs environnements.
 
@@ -167,3 +177,17 @@ En plus d'assurer la surveillance et les mises à jour de sécurité des environ
 - Pentest
 - Bug Bounty (https://www.yeswehack.com/)
 
+##Conclusion
+
+Le chemin parcouru en 16 ans d'existence est énorme, il aurait pu être différent, sans doute plus simple avec des choix différents et plus lucratifs, peut-être plus dur avec un peu moins de chance et un peu moins de chouettes rencontres ! 
+Mais au final la réussite n'est-elle pas aussi d'être à l'aise avec ce que l'on est et ce que l'on veut ?
+
+La volonté, la passion sont toujours là, les ambitions ont évoluées.
+Dans un monde qui change très vite nous aimerions réussir à avoir plus d'impact. 
+A notre échelle bien évidemment, mais si nous parvenons à faire en sorte qu'Elao, pour les années à venir, reste un modèle vertueux tant par sa production de valeur technique que par sa capacité à permettre à ses équipes de bien vivre et de trouver un environnement sein et dédié à l'expression de leurs talents, nous aurions le sentiment du devoir accompli.
+
+(Re)mettre en forme ce parcours n'a pas été chose facile. Accepter de se mettre en scène encore moins mais l'étape était nécessaire. 
+Conscients qu'il ne faut rien considérer comme acquis nous continuerons à nous efforcer de rester fidèles à nos valeurs et aux objectifs que nous vous avons partagés.
+Clients, partenaires, amis, collaborateurs(trices) anciens et actuels, merci ! **VOUS** avez tou(te)s, à votre niveau contribués à créer ce que **NOUS** sommes aujourd'hui.
+
+![breathtaking](images/posts/2021/rebranding-l-avenir/breathtaking.gif)

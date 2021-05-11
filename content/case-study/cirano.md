@@ -9,7 +9,7 @@ websiteUrl: https://cirano.io/
 clients: Businove
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-terms: ["symfony", "bootstrap", "vue-js"]
+terms: ["symfony", "bootstrap", "vue-js", "payment"]
 members: ["xavierr", "mbernard", "adefrance"]
 images: ["content/images/casestudies/headers/cirano-banner.jpg"]
 ---
@@ -30,15 +30,15 @@ Une fois inscrit, l’utilisateur renseigne les informations de son entreprise q
 
 ## Un outil pensé pour simplifier la saisie
 
-Le recueil des informations nécessaires à la déclaration des activités en vue d’obtenir un crédit d’impôt peut s’avérer fastidieux et compliqué. Cirano a été pensé pour rendre cette saisie la plus fluide possible : l’utilisateur est guidé à chaque étape de saisie grâce à une interface intuitive et aux diverses rubriques d’aide contextuelle.</p>
+Le recueil des informations nécessaires à la déclaration des activités en vue d’obtenir un crédit d’impôt peut s’avérer fastidieux et compliqué. Cirano a été pensé pour rendre cette saisie la plus fluide possible : l’utilisateur est guidé à chaque étape de saisie grâce à une interface intuitive et aux diverses rubriques d’aide contextuelle.
 
-Par ailleurs, le site propose sur la partie publique du site une FAQ détaillée ainsi qu’un test permettant aux utilisateurs qui envisagent de s’inscrire de tester préalablement leur niveau d’éligibilité au crédit d’impôt CIR ou CII.</p>
+Par ailleurs, le site propose sur la partie publique du site une FAQ détaillée ainsi qu’un test permettant aux utilisateurs qui envisagent de s’inscrire de tester préalablement leur niveau d’éligibilité au crédit d’impôt CIR ou CII.
 
 ## Et techniquement, ça donne quoi ?
 
-Le projet a été développé avec Symfony 4.3 en suivant la méthodologie DDD et l’architecture hexagonale.</p>
+Le projet a été développé avec Symfony 4.3 en suivant la méthodologie DDD et l’architecture hexagonale.
 
-Le test d’éligibilité de la partie publique du site a été réalisé en Vue.js afin de proposer une expérience fluide et sans rechargement de page.</p>
+Le test d’éligibilité de la partie publique du site a été réalisé en Vue.js afin de proposer une expérience fluide et sans rechargement de page.
 
 Ce projet fut également l’occasion d’implémenter Stripe en tant que solution de paiement pour la première fois chez Elao. Stripe s’est avéré un choix satisfaisant à la fois pour les développeurs et pour le client :
 

@@ -39,10 +39,10 @@ Nous avons donc choisi de prendre le parti inverse de ce que nous avions connu (
 
 ###Pourquoi ? Simplement, pour… :
 
-* Garantir que le choix technique n'enferme pas un client dans une problématique de recrutement de profils alors en pleine pénurie;
-* S'assurer que nous soyons toujours en mesure d'intervenir sur un socle que nous avons conçu;
-* Construire des équipes diverses mais homogènes, ayant la même culture, la même passion et capables de passer d'un projet à un autre facilement en s'appuyant sur les expériences passées;
-* Mettre en place les meilleures pratiques de conception logiciel;
+* Garantir que le choix technique n'enferme pas un client dans une problématique de recrutement de profils alors en pleine pénurie ;
+* S'assurer que nous soyons toujours en mesure d'intervenir sur un socle que nous avons conçu ;
+* Construire des équipes diverses mais homogènes, ayant la même culture, la même passion et capables de passer d'un projet à un autre facilement en s'appuyant sur les expériences passées ;
+* Mettre en place les meilleures pratiques de conception logiciel ;
 * Être efficaces et ainsi maîtriser au mieux les contraintes budgétaires de ceux qui nous font confiance.
 
 ###Faire en sorte que les équipes vivent bien
@@ -79,7 +79,7 @@ Pour le reste l'auto-organisation fonctionne plutôt bien puisque les équipes :
 * Sont en contact direct avec nos clients ;
 * S'organisent pour gérer leurs absences de manière transparente par rapport aux projets ;
 * Participent aux recrutements;
-* Sont présentes lors des rendez-vous commerciaux avec nos futurs clients;
+* Sont présentes lors des rendez-vous commerciaux avec nos futurs clients ;
 * Gèrent leur présence ou non dans les locaux ;
 * Sont libres de contribuer à des projets «Open source» sur leur temps de travail lorsque les plannings le permettent ;
 * Participent activement à la vie de l'équipe.
@@ -129,7 +129,7 @@ Et personne n'aime tomber en râde sur la route des vacances...
 
 Le job des équipes Rix est donc de faire en sorte que ça n'arrive pas:
 
-- Par la mise en place de «workflows» permettant d'aller sereinement vers la production;
+- Par la mise en place de «workflows» permettant d'aller sereinement vers la production ;
 - Par la surveillance active du comportement de l'application ;
 - En aidant les équipes de developpement à faire l'analyse technique de code présentant des problèmes de conception / performances ;
 - En supervisant les services critiques.
@@ -182,12 +182,12 @@ En plus d'assurer la surveillance et les mises à jour de sécurité des environ
 Le chemin parcouru en 16 ans d'existence est énorme, il aurait pu être différent, sans doute plus simple avec des choix différents et plus lucratifs, peut-être plus dur avec un peu moins de chance et un peu moins de chouettes rencontres ! 
 Mais au final la réussite n'est-elle pas aussi d'être à l'aise avec ce que l'on est et ce que l'on veut ?
 
-La volonté, la passion sont toujours là, les ambitions ont évoluées.
+La volonté, la passion sont toujours là, les ambitions ont évolué.
 Dans un monde qui change très vite nous aimerions réussir à avoir plus d'impact. 
-A notre échelle bien évidemment, mais si nous parvenons à faire en sorte qu'Elao, pour les années à venir, reste un modèle vertueux tant par sa production de valeur technique que par sa capacité à permettre à ses équipes de bien vivre et de trouver un environnement sein et dédié à l'expression de leurs talents, nous aurions le sentiment du devoir accompli.
+À notre échelle bien évidemment, mais si nous parvenons à faire en sorte qu'Elao, pour les années à venir, reste un modèle vertueux tant par sa production de valeur technique que par sa capacité à permettre à ses équipes de bien vivre et de trouver un environnement sein et dédié à l'expression de leurs talents, nous aurions le sentiment du devoir accompli.
 
 (Re)mettre en forme ce parcours n'a pas été chose facile. Accepter de se mettre en scène encore moins mais l'étape était nécessaire. 
 Conscients qu'il ne faut rien considérer comme acquis nous continuerons à nous efforcer de rester fidèles à nos valeurs et aux objectifs que nous vous avons partagés.
-Clients, partenaires, amis, collaborateurs(trices) anciens et actuels, merci ! **VOUS** avez tou(te)s, à votre niveau contribués à créer ce que **NOUS** sommes aujourd'hui.
+Client·e·s, partenaires, ami·e·s, collaborateurs·rices ancien·ne·s et actuel·le·s, merci ! **VOUS** avez tou·te·s, à votre niveau, contribué à créer ce que **NOUS** sommes aujourd'hui.
 
 ![breathtaking](images/posts/2021/rebranding-l-avenir/breathtaking.gif)

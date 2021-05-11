@@ -151,7 +151,19 @@
             <img src="{{ asset('build/images/pages/values/accessibility.svg') }}" alt="" class="value-item__image" data-aos="zoom-in-right">
             <div class="value-item__content" data-aos="zoom-in-left">
                 <h3>L'accessibilité</h3>
-                <p>Nos applications, comme nos locaux, sont accessibles aux personnes en situation de handicap, non pas par “opportunité business” mais parce que nous croyons profondément en l’égalité des chances et cela passe par un accès à l’information pour tou·te·s.</p>
+                <p>Nos applications, comme nos locaux, sont accessibles aux personnes en situation de handicap, non pas par « opportunité business » mais parce que nous croyons profondément en l’égalité des chances et cela passe par un accès à l’information pour tou·te·s.</p>
+
+                <a href="{{ path('technology', {
+                    technology: 'accessibilite'
+                }) }}" class="btn btn--secondary btn--animated aos-init aos-animate fade-left" data-aos="fade-left">
+                    <span>
+                        En savoir plus sur l'accessibilité web
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                            <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"></path>
+                            <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"></path>
+                        </svg>
+                    </span>
+                </a>
             </div>
         </div>
     </div>

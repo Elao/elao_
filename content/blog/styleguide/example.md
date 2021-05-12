@@ -144,7 +144,7 @@ credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }
 * **Cette règle ne fonctionne pas en anglais** où le signe double n'a pas d'espace avant *(Hello!)*. 
 * Attention à bien utiliser les vrais points de suspension `…` et non 3 points à la suite `...` 
 * Les points de suspension sont suivis d'une espace ;
-* Préférez les guillemets français pour vos citations : `« »`. Sur Mac, `⌥ alt` + `è` et  `⌥ alt` + `⇧ maj` + `è`. 
+* Préférez les guillemets français pour vos citations : `« »`. Sur Mac, <kbd>⌥ alt</kbd> + <kbd>è</kbd> et  <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>è</kbd>. 
 
 ### Unités
 * Toutes les unités précédées d'une valeur doivent avoir une espace insécable qui les précèdent ;  
@@ -233,4 +233,3 @@ Quelques ressources intéressantes :
 * La page Wikipédia des [Conventions typographiques](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques) ; 
 * L'article [« Féminiser au point médian »](http://romy.tetue.net/feminiser-au-point-median) ;
 * Suivez [TypoChef](https://twitter.com/typochef) sur Twitter.
-

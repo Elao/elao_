@@ -185,11 +185,11 @@ Les items d'une liste à puces commencent toujours avec une majuscule et finisse
 
 #### Listes numérotées
 Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.
-*Exemple :
-"Les valeurs d'Elao sont :
+*Exemple :*
+Les valeurs d'Elao sont :
 1. L'humain avant tout. 
 2. Rester humbles et apprendre de nos erreurs.
-3. S’ouvrir, partager, ne rien garder pour soi.*
+3. S’ouvrir, partager, ne rien garder pour soi.
 
 #### L'emploi du "etc"
 Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une virgule et suivi d'un point. Il n'est JAMAIS suivi de points de suspension "~~etc...~~".
@@ -230,7 +230,7 @@ Il est à votre discrétion d'utiliser la formule la plus adaptée en fonction d
 
 ### Pour aller plus loin
 Quelques ressources intéressantes :
-* La page Wikipédia des [Conventions typographiques](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques)
-* L'article [« Féminiser au point médian »](http://romy.tetue.net/feminiser-au-point-median)
-* Suivez [TypoChef](https://twitter.com/typochef) sur Twitter
+* La page Wikipédia des [Conventions typographiques](https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques) ; 
+* L'article [« Féminiser au point médian »](http://romy.tetue.net/feminiser-au-point-median) ;
+* Suivez [TypoChef](https://twitter.com/typochef) sur Twitter.
 

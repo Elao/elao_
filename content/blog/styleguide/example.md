@@ -129,7 +129,7 @@ Pensez à préciser dans le markdown le langage dans lequel est votre code, si v
 
 Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : [Unsplash](https://unsplash.com/) (chouchou ❤️), [Pexels](https://www.pexels.com/), etc...
 
-Pour créditer l'auteur de la photo de couverture, renseignez la clé `credits` dans le header de l'article:
+Pour créditer l'auteur de la photo de couverture, renseignez la clé `credits` dans le header de l'article :
 
 ```yaml
 credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }

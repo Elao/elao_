@@ -199,7 +199,7 @@ Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une 
 ### D'autres petites règles bien utiles
 
 * Il est inutile de mettre un point final `.` à un titre ;
-* Il est inutile de mettre deux points `:` ` après un titre ou un `label` de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;
+* Il est inutile de mettre deux points `:` après un titre ou un `label` de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;
 * Les `et` ne doivent jamais être précédés d'une virgule, sauf dans des cas exceptionnels comme l'énumération ;
 * L’usage du mot « Éditer » pour « Modifier » est incorrect. Éditer, c’est « publier, diffuser », non « corriger » ;
 * L'usage du mot « Adresser » pour « Traiter » est incorrect. En français, « adresser » signifie « envoyer », « émettre des paroles », ou « diriger quelqu’un vers la personne qui convient », par exemple *adresser un malade à un spécialiste*. On ne dira donc pas « Adresser un problème/sujet » mais plutôt « Traiter », « Aborder », « S'attaquer à » ;

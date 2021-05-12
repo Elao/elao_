@@ -4,6 +4,7 @@ title:
     - "Responsive design, accessibilité :"
     - "des interfaces web exigeantes"
 articles: []
+logo: ~
 titleSeo: "Accessibilité des pages web ✨: des sites de qualité pour une expérience réussie"
 metaDescription : "Chez Elao, nous mettons en oeuvre les bonnes pratique d'intégration HTML /CSS pour un site ou une application de qualité"
 ---

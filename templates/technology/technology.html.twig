@@ -30,9 +30,11 @@
         {% endfor %}
         </h1>
 
-        <div class="banner-technology__image">
-            <img src="{{ asset(technology.logo) }}" alt="logo de {{ technology.name }}" class="logo">
-        </div>
+        {% if technology.logo is not empty %}
+            <div class="banner-technology__image">
+                <img src="{{ asset(technology.logo) }}" alt="logo de {{ technology.name }}" class="logo">
+            </div>
+        {% endif %}
     </div>
 
     <div class="page-technology">

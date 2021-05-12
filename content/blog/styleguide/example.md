@@ -143,7 +143,7 @@ credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }
 * Les signes doubles comme `!` , `?` , `;` , `:`, `«`, `»` sont toujours entourés de deux espaces ;  *Exemple : Bonjour, comment vas-tu ? Je suis contente de te revoir !*
 * **Cette règle ne fonctionne pas en anglais** où le signe double n'a pas d'espace avant *(Hello!)*. 
 * Attention à bien utiliser les vrais points de suspension `…` et non 3 points à la suite `...` . Sur Mac, <kbd>⌥ alt</kbd> + <kbd>.</kbd>
-* Les points de suspension sont suivis d'une espace ;
+* Les points de suspension sont suivis d'une espace ; 
 * Préférez les guillemets français pour vos citations : `« »`. Sur Mac, <kbd>⌥ alt</kbd> + <kbd>è</kbd> et  <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>è</kbd>. 
 
 ### Unités
@@ -219,8 +219,8 @@ Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solut
 *Exemple 2 : « Bonjour à tou·te·s ! »*
 
 Pour faire un point médian :
-Sur Mac : `⌥ alt` + `⇧ maj` + `F` ; 
-Sur PC : `Alt+0183` ou `Alt+00B7.
+Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ; 
+Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt+<kbd>00B7</kbd>.
 
 #### Utiliser des formules non genrées (épicène)
 *Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*

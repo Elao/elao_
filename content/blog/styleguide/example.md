@@ -140,14 +140,15 @@ credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }
 ### Ponctuation
 * Les signes simples comme `,` et `.` ne sont précédés d'aucune espace ;  
 *Exemple : Je suis contente, aujourd'hui il fait grand soleil, ça faisait longtemps que ça n'était pas arrivé.*
-* Les signes doubles comme `!` , `?` , `;` , `:`, `«`, `»` sont toujours entourés de deux espaces ;  *Exemple : Bonjour, comment vas-tu ? Je suis contente de te revoir !*
+* Les signes doubles comme `!` , `?` , `;` , `:`, `«`, `»` sont toujours entourés de deux espaces ;  
+  *Exemple : Bonjour, comment vas-tu ? Je suis contente de te revoir !*
 * **Cette règle ne fonctionne pas en anglais** où le signe double n'a pas d'espace avant *(Hello!)*. 
 * Attention à bien utiliser les vrais points de suspension `…` et non 3 points à la suite `...` . Sur Mac, <kbd>⌥ alt</kbd> + <kbd>.</kbd>
 * Les points de suspension sont suivis d'une espace ; 
 * Préférez les guillemets français pour vos citations : `« »`. Sur Mac, <kbd>⌥ alt</kbd> + <kbd>è</kbd> et  <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>è</kbd>. 
 
 ### Unités
-* Toutes les unités précédées d'une valeur doivent avoir une espace insécable qui les précèdent ;  
+* Toutes les unités suivant une valeur doivent avoir une espace insécable qui les précède ;  
 *Exemple : "**10 %**" et non "~~10%~~", "**10 h**" et non "~~10h~~", "**10 €**" et non "~~10€~~", "**10 km**" et non "~~10km~~".*
 * En français, cela marche avec absolument toutes les unités. On écrira donc plutôt "**10 km / h**" et non "~~10km/h~~" ;
 * Cette règle ne fonctionne pas en anglais où l'on accole l'unité à la valeur (10$ ou $10) ;
@@ -174,8 +175,8 @@ Le séparateur de millier est l’espace insécable, le séparateur de décimale
 
 ### Listes
 #### Listes à puces
-Les items d'une liste à puces commencent toujours avec une majuscule et finissent par un point-virgule, sauf le dernier qui se termine par un point.
-*Exemple :*
+Les items d'une liste à puces commencent toujours avec une majuscule et finissent par un point-virgule, sauf le dernier qui se termine par un point.  
+*Exemple :*  
 Pour se sentir mieux :
 - Pensez à faire des pauses plusieurs fois dans la journée ; 
 - Levez les yeux de votre écran plusieurs fois par heure ; 
@@ -184,7 +185,7 @@ Pour se sentir mieux :
 **N. B. : la règle étant à la base pour l'édition de documents imprimés, il est admis pour les présentations et interfaces web de ne pas surcharger et de ne pas suivre la règle des ponctuations de liste. Mais si vous souhaitez en mettre, c'est cette règle qu'il faut suivre.**
 
 #### Listes numérotées
-Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.
+Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.  
 *Exemple :*
 Les valeurs d'Elao sont :
 1. L'humain avant tout. 
@@ -192,13 +193,13 @@ Les valeurs d'Elao sont :
 3. S’ouvrir, partager, ne rien garder pour soi.
 
 #### L'emploi du "etc"
-Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une virgule et suivi d'un point. Il n'est JAMAIS suivi de points de suspension "~~etc...~~".
+Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une virgule et suivi d'un point. Il n'est JAMAIS suivi de points de suspension "~~etc...~~".  
 *Exemple : « Pensez à acheter des fruits : pommes, bananes, clémentines**, etc.** »*
 
 ### D'autres petites règles bien utiles
 
 * Il est inutile de mettre un point final `.` à un titre ;
-* Il est inutile de mettre deux points : après un titre ou un `label` de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;
+* Il est inutile de mettre deux points `:` ` après un titre ou un `label` de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;
 * Les `et` ne doivent jamais être précédés d'une virgule, sauf dans des cas exceptionnels comme l'énumération ;
 * L’usage du mot « Éditer » pour « Modifier » est incorrect. Éditer, c’est « publier, diffuser », non « corriger » ;
 * L'usage du mot « Adresser » pour « Traiter » est incorrect. En français, « adresser » signifie « envoyer », « émettre des paroles », ou « diriger quelqu’un vers la personne qui convient », par exemple *adresser un malade à un spécialiste*. On ne dira donc pas « Adresser un problème/sujet » mais plutôt « Traiter », « Aborder », « S'attaquer à » ;
@@ -215,7 +216,7 @@ Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solut
 *Exemple 2 : « Bonjour à toutes et à tous ! »*
 
 #### Utiliser le point médian
-*Exemple 1 : « Chaque employé·e doit faire sa demande de congés sur Lucca. »*
+*Exemple 1 : « Chaque employé·e doit faire sa demande de congés sur Lucca. »*  
 *Exemple 2 : « Bonjour à tou·te·s ! »*
 
 Pour faire un point médian :
@@ -223,7 +224,7 @@ Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ;
 Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt+<kbd>00B7</kbd>.
 
 #### Utiliser des formules non genrées (épicène)
-*Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*
+*Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*  
 *Exemple 2 : « Bonjour tout le monde ! »*
 
 Il est à votre discrétion d'utiliser la formule la plus adaptée en fonction du contexte.

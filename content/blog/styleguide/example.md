@@ -186,7 +186,7 @@ Pour se sentir mieux :
 
 #### Listes numérotées
 Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.  
-*Exemple :*
+*Exemple :*  
 Les valeurs d'Elao sont :
 1. L'humain avant tout. 
 2. Rester humbles et apprendre de nos erreurs.
@@ -212,7 +212,7 @@ Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une 
 Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solutions possibles pour que cela reste lisible en fonction du contexte :
 
 #### Doubler au féminin la formule masculine
-*Exemple 1 : « Chaque employé et employée doit faire sa demande de congés sur Lucca. »*
+*Exemple 1 : « Chaque employé et employée doit faire sa demande de congés sur Lucca. »*  
 *Exemple 2 : « Bonjour à toutes et à tous ! »*
 
 #### Utiliser le point médian

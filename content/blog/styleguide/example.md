@@ -12,7 +12,7 @@ banner:             ~ # Si vous voulez une image différente des miniatures comm
 credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Tag 1", "Tag 2"]
 categories:         ["Dev", "Symfony"]
-authors:            ["adefrance","tjarrand"]
+authors:            ["adefrance","tjarrand", "cmozzati"]
 tweetId: "1369737350830583811"
 ---
 
@@ -127,7 +127,7 @@ Pensez à préciser dans le markdown le langage dans lequel est votre code, si v
 
 ### Bonus
 
-Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : [Unsplash](https://unsplash.com/) (chouchou ❤️), [Pexels](https://www.pexels.com/), etc...
+Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : [Unsplash](https://unsplash.com/) (chouchou ❤️), [Pexels](https://www.pexels.com/), etc.
 
 Pour créditer l'auteur de la photo de couverture, renseignez la clé `credits` dans le header de l'article :
 
@@ -149,12 +149,12 @@ credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }
 
 ### Unités
 * Toutes les unités suivant une valeur doivent avoir une espace insécable qui les précède ;  
-*Exemple : "**10 %**" et non "~~10%~~", "**10 h**" et non "~~10h~~", "**10 €**" et non "~~10€~~", "**10 km**" et non "~~10km~~".*
+*Exemple : **10 %** et non ~~10%~~, **10 h** et non ~~10h~~, **10 €** et non ~~10€~~, **10 km** et non ~~10km~~.*
 * En français, cela marche avec absolument toutes les unités. On écrira donc plutôt "**10 km / h**" et non "~~10km/h~~" ;
 * Cette règle ne fonctionne pas en anglais où l'on accole l'unité à la valeur (10$ ou $10) ;
-* Les abréviations d'unités ne sont jamais mises au pluriels : ~~10kms~~, ~~10cms~~.
+* Les abréviations d'unités ne sont jamais mises au pluriels : ~~10 kms~~, ~~10 cms~~.
 
-### Les bonnes abréviations
+### Utiliser les bonnes abréviations
 Souvent, les abréviations officielles sont assez méconnues. En voici quelques-unes : 
 * **M.** et non ~~Mr~~;
 * **Mme** ;
@@ -171,11 +171,13 @@ Une abréviation est suivie d’un point, sauf :
 Autre cas particulier : il faut inclure un espace dans l'abréviation de Nota Bene, `N. B.`
 
 ### Nombres
-Le séparateur de millier est l’espace insécable, le séparateur de décimale est la virgule.  *Exemple : « Le solde est de 3 586,12 euros ».*
+Le séparateur de millier est l’espace insécable, le séparateur de décimale est la virgule.  
+*Exemple : « Le solde est de 3 586,12 euros ».*
 
 ### Listes
 #### Listes à puces
 Les items d'une liste à puces commencent toujours avec une majuscule et finissent par un point-virgule, sauf le dernier qui se termine par un point.  
+
 *Exemple :*  
 Pour se sentir mieux :
 - Pensez à faire des pauses plusieurs fois dans la journée ; 
@@ -186,6 +188,7 @@ Pour se sentir mieux :
 
 #### Listes numérotées
 Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.  
+
 *Exemple :*  
 Les valeurs d'Elao sont :
 1. L'humain avant tout. 
@@ -198,11 +201,12 @@ Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une 
 
 ### D'autres petites règles bien utiles
 
+* Dans le web, l'usage du __souligné__ est utilisé strictement pour signifier un lien. Pour mettre l'emphase sur un mot, préférez le gras.
 * Il est inutile de mettre un point final `.` à un titre ;
 * Il est inutile de mettre deux points `:` après un titre ou un `label` de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;
 * Les `et` ne doivent jamais être précédés d'une virgule, sauf dans des cas exceptionnels comme l'énumération ;
-* L’usage du mot « Éditer » pour « Modifier » est incorrect. Éditer, c’est « publier, diffuser », non « corriger » ;
-* L'usage du mot « Adresser » pour « Traiter » est incorrect. En français, « adresser » signifie « envoyer », « émettre des paroles », ou « diriger quelqu’un vers la personne qui convient », par exemple *adresser un malade à un spécialiste*. On ne dira donc pas « Adresser un problème/sujet » mais plutôt « Traiter », « Aborder », « S'attaquer à » ;
+* L’usage du mot « **Éditer** » pour « Modifier » est incorrect. Éditer, c’est « publier, diffuser », non « corriger » ;
+* L'usage du mot « **Adresser** » pour « Traiter » est incorrect. En français, « adresser » signifie « envoyer », « émettre des paroles », ou « diriger quelqu’un vers la personne qui convient », par exemple *adresser un malade à un spécialiste*. On ne dira donc pas « Adresser un problème/sujet » mais plutôt « Traiter », « Aborder », « S'attaquer à » ;
 * L'adjectif « Transverse » est un anglicisme. On lui préfère sa traduction française « Transversal » ;
 * Les guillemets servent à citer quelqu’un et **c’est tout**, jamais à insister sur un mot ni à couvrir une approximation ;
 *Exemple : gérer un projet en mode “agile” ou “classique” => gérer un projet en mode agile ou classique* ;
@@ -219,8 +223,8 @@ Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solut
 *Exemple 1 : « Chaque employé·e doit faire sa demande de congés sur Lucca. »*  
 *Exemple 2 : « Bonjour à tou·te·s ! »*
 
-Pour faire un point médian :
-Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ; 
+Pour faire un point médian :  
+Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ;  
 Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt+<kbd>00B7</kbd>.
 
 #### Utiliser des formules non genrées (épicène)

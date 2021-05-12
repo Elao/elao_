@@ -68,7 +68,7 @@ Sur notre site comme dans nos articles de blog, nous mettons l’accent sur le n
 - ou au contraire d'apporter des alternatives à ceux qui ont besoin d'être retranscrits
 - la possibilité d'accéder au contenu quelle que soit la taille de son écran ou le niveau de son zoom
 
-Dans la pratique, l'accessibilité ce sont aussi des optimisations en cours de projet, et nous allons continuer à y travailler avec les évolutions du site. Notre démarche d'accessibilité se veut poussée tout en étant consciente des compromis qu'elle doit faire avec le temps et le coût du projet. C'est un chantier qui s'étalera dans le temps.
+Dans la pratique, l'[accessibilité](../../technologies/accessibilite.md) ce sont aussi des optimisations en cours de projet, et nous allons continuer à y travailler avec les évolutions du site. Notre démarche d'accessibilité se veut poussée tout en étant consciente des compromis qu'elle doit faire avec le temps et le coût du projet. C'est un chantier qui s'étalera dans le temps.
 
 ## SEO
 

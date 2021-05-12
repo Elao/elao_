@@ -30,6 +30,10 @@
     font-family: 'faktum bold';
     color: $color-light;
   }
+
+  a:hover strong {
+    color: #fff;
+  }
 }
 
 .article-author__info + .article-author__info {

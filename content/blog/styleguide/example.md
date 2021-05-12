@@ -142,7 +142,7 @@ credits: { name: 'Jane Doe', url: 'https://unsplash.com/@janedoe' }
 *Exemple : Je suis contente, aujourd'hui il fait grand soleil, ça faisait longtemps que ça n'était pas arrivé.*
 * Les signes doubles comme `!` , `?` , `;` , `:`, `«`, `»` sont toujours entourés de deux espaces ;  *Exemple : Bonjour, comment vas-tu ? Je suis contente de te revoir !*
 * **Cette règle ne fonctionne pas en anglais** où le signe double n'a pas d'espace avant *(Hello!)*. 
-* Attention à bien utiliser les vrais points de suspension `…` et non 3 points à la suite `...` 
+* Attention à bien utiliser les vrais points de suspension `…` et non 3 points à la suite `...` . Sur Mac, <kbd>⌥ alt</kbd> + <kbd>.</kbd>
 * Les points de suspension sont suivis d'une espace ;
 * Préférez les guillemets français pour vos citations : `« »`. Sur Mac, <kbd>⌥ alt</kbd> + <kbd>è</kbd> et  <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>è</kbd>. 
 

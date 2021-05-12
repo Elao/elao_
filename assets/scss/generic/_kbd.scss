@@ -1,0 +1,12 @@
+kbd {
+  background-color: $color-secondary;
+  border-radius: 5px;
+  border: 1px solid rgba($color-primary, 0.2);
+  box-shadow: 0 1px 1px rgba($color-secondary, 0.2), 0 2px 0 0 rgba($color-secondary, 0.7) inset;
+  color: $color-primary;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 2px 4px;
+  white-space: nowrap;
+  font-size: 18px;
+}

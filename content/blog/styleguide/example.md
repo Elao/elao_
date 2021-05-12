@@ -225,7 +225,7 @@ Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solut
 
 Pour faire un point médian :  
 Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ;  
-Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt+<kbd>00B7</kbd>.
+Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.
 
 #### Utiliser des formules non genrées (épicène)
 *Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*  

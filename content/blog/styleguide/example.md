@@ -175,11 +175,11 @@ Le séparateur de millier est l’espace insécable, le séparateur de décimale
 ### Listes
 #### Listes à puces
 Les items d'une liste à puces commencent toujours avec une majuscule et finissent par un point-virgule, sauf le dernier qui se termine par un point.
-*Exemple :
-"Pour se sentir mieux :
+*Exemple :*
+Pour se sentir mieux :
 - Pensez à faire des pauses plusieurs fois dans la journée ; 
 - Levez les yeux de votre écran plusieurs fois par heure ; 
-- Évitez de consommer trop d'excitants (café, thé, etc.)."*
+- Évitez de consommer trop d'excitants (café, thé, etc.).
 
 **N. B. : la règle étant à la base pour l'édition de documents imprimés, il est admis pour les présentations et interfaces web de ne pas surcharger et de ne pas suivre la règle des ponctuations de liste. Mais si vous souhaitez en mettre, c'est cette règle qu'il faut suivre.**
 

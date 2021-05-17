@@ -51,6 +51,7 @@ Même si nous avions déjà notre petite idée, l'équipe a été sondée de man
 </figure>
 
 ### Limiter les présentations descendantes
+
 Soyons réalistes, personne n'a envie d'enchaîner des réunions Zoom à écouter des présentations descendantes des chiffres de l'année. C'est le meilleur moyen pour finir comme ça 👇
 
 ![](images/posts/2021/teambuilding/dodo.gif)
@@ -63,6 +64,7 @@ Bon, je vous avoue qu'on en a quand même fait une, de présentation descendante
 
 
 ### Privilégier des ateliers en groupe
+
 Pour recréer des moments de partage, hors des projets, proposer des activités de groupe est l'un des meilleurs moyens de retrouver un esprit d'équipe, même à distance. 
 
 De notre côté, nous avons fait 2 ateliers, l'un individuel avec une mise en commun rapide, l'autre en groupe et une séance de Q&A, préparée elle aussi en groupe. 
@@ -70,6 +72,7 @@ De notre côté, nous avons fait 2 ateliers, l'un individuel avec une mise en co
 **Petite astuce :** préparer les groupes à l'avance pour s'assurer le plus de mixité possible dans les profils.
 
 #### "Communiquer à cerveau total" : connaître son profil HBDI pour mieux travailler en équipe
+
 Un premier atelier que je qualifierais d'« introspectif », dans le sens où il s'agit de faire un petit test qui permet de mieux se connaître et surtout de mieux connaître les autres. En quelques questions, le test permet de savoir quel élément de notre personnalité est prépondérant entre ces 4 : Rationnel, Méthodique, Créatif·ve, Affectif·ve. 
 
 <figure>
@@ -99,6 +102,7 @@ Alors que Xavier, fondateur d'Elao, était plus proche de celui-là :
 
 
 #### "Faire rayonner Elao"
+
 Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver des idées pour faire rayonner Elao à l'extérieur, avec la contrainte de faire une présentation uniquement visuelle, permettant ainsi d'éviter de s'enquiller des présentations PPT de plusieurs pages. Plein de très bonnes idées que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
 
 Voici une petite sélection de présentations d'idée, à vous de deviner de quoi il s'agit…
@@ -110,21 +114,25 @@ Voici une petite sélection de présentations d'idée, à vous de deviner de quo
 
 
 #### Séance de Q&A
+
 À la toute fin des deux journées et après avoir laisser mûrir un peu la masse d'informations et peut-être en avoir discuté entre nous, l'équipe a eu la possibilité de poser toutes les questions. Finir là-dessus permet de faire émerger des discussions vraiment très riches et surtout de lever toute ambiguïté qui aurait pu se créer. 
 
 **Petite astuce :** permettre la préparation des questions en groupe, ce qui permet d'échanger sur les sujets importants mais également de permettre aux plus introverti·e·s d'être tout de même représenté·e·s, via la voix de quelqu'un d'autre.
 
 
 ### User et abuser des outils à notre disposition 
+
 Parmis les bonnes choses à faire, je dirais qu'il ne faut pas avoir peur d'utiliser les outils qui sont à notre disposition aujourd'hui. Nous sommes passé de Jitsi via Workadventure à Discord et Miro sans hésiter. Si nous avions eu plus de temps de préparation, j'aurais peut-être même mis en place un petit Wooclap pour permettre de générer encore plus d'intéraction lors de la première présentation. 
 
 
 ### Garder des moments de pauses
+
 Le format `4 demies-journées = 4 moments ensemble` a été très apprécié, parce qu'il avait le mérite de permettre de souffler, de répondre à un client, de faire une petite revue de code, de pousser un petit fix… sans être obligé d'avoir l'œil sur sa boîte mail ou ses notifs Slack pendant les ateliers. **Permettrer des temps de respiration permettent à chacun·e d'être réellement présent·e pendant les moments de partage.**
 
 C'est un format que nous aimerions beaucoup voir se développer pour les conférences en ligne. 
 
 ### Ne pas oublier de s'amuser
+
 Il existe pléthore de jeux rigolos pour se retrouver en ligne, nos préférés :
 * [Gartic Phone](https://garticphone.com/fr), un Esquissé en ligne
 * [Wolfy](https://wolfy.fr/), un Loup-Garou de Thiercelieux en ligne
@@ -140,10 +148,13 @@ Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…
 ![](images/posts/2021/teambuilding/cochon.gif)
 
 ### Laisser mûrir et (espérer) se retrouver en extérieur
+
 Pour clore les deux jours, nous avions initialement prévu de se retrouver tou·te·s ensemble au Parc pour un goûter et proposer à l'équipe une séance de <abbr title="Question & Answers - questions réponses">Q&A</abbr> sur les différents sujets qui la préoccupent. Malheureusement le temps n'était pas avec nous pour faire ça <abbr title="In Real Life">IRL</abbr>, on a donc dû la faire à distance.
 
 ### Recueillir le feedback de l'équipe
+
 Pour que le prochain team-building soit encore meilleur, ne pas oublier de recueillir le feedback de l'équipe, de façon publique, privée ou anonyme. 
 
 ## Pour aller plus loin
+
 Ce n'était pas parfait, parce qu'on n'était pas ensemble. On aurait aimé faire beaucoup plus mais ça a eu le mérite de faire passer un moment hors des projets, à prendre un peu de hauteur et à recréer un peu de cette spontanéité. 

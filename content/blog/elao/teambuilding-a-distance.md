@@ -17,11 +17,13 @@ tweetId:            ""
 
 Crise sanitaire oblige, on tente pour le moment de se rassembler le moins possible. Dès le premier confinement, il y a plus d'un an, l'ensemble de l'équipe a embarqué son matériel, direction le télétravail. Certain·e·s ne sont même quasiment jamais revenus dans les bureaux. 
 
-Si le télétravail s'est mis en place assez naturellement, il n'en a pas été de même côté communication interne. En effet, historiquement, l'équipe échange beaucoup et le télétravail restait très occasionnel, surtout par goût de travailler proches les un·e·s des autres, de laisser traîner une oreille dans l'open-space pour joindre une conversation technique ou pour partager le repas de midi autour d'une partie de Mario Kart. 
+Si le télétravail s'est mis en place assez naturellement, il n'en a pas été de même côté communication interne. En effet, historiquement, le télétravail restait très occasionnel, surtout par goût de travailler proches les un·e·s des autres, de laisser traîner une oreille dans l'open-space pour joindre une conversation technique ou pour partager le repas de midi autour d'une partie de Mario Kart. 
 
-Désormais, notre quotidien est surtout fait de notifications Slack, Github et de réunions Jitsi : il y a tout une culture de la spontanéité à recréer. Pour y aider, on a mis quelques petites choses en place, à commencer par un espace WorkAdventure qui réplique nos bureaux et permet de s'y installer le matin et de s'approcher vers un·e collègue pour lui parler. Passé le fun du début, hélas, l'habitude de s'y connecter n'a pas été prise. Rien ne remplace la spontanéité de l'oreille qui traîne.
+Désormais, notre quotidien est surtout fait de notifications Slack, Github et de réunions Jitsi : **il y a tout une culture de la spontanéité à recréer**. Pour y aider, on a mis quelques petites choses en place, à commencer par un espace WorkAdventure qui réplique nos bureaux, nous permet de s'y installer le matin et de s'approcher vers un·e collègue pour lui parler. 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This week-end, I&#39;ve hidden a secret place inside our <a href="https://twitter.com/Workadventure_?ref_src=twsrc%5Etfw">@Workadventure_</a> <a href="https://twitter.com/Elao?ref_src=twsrc%5Etfw">@Elao</a>&#39;s virtual office. So today morning my workmates went on a small &quot;treasure hunt&quot; quest. Most of them fared well. 😁 <a href="https://t.co/vrfwirYwwa">pic.twitter.com/vrfwirYwwa</a></p>&mdash; Maxime Steinhausser (@ogizanagi) <a href="https://twitter.com/ogizanagi/status/1356223173033926660?ref_src=twsrc%5Etfw">February 1, 2021</a></blockquote>
+
+Passé le fun du début, hélas, l'habitude de s'y connecter n'a pas été prise. Rien ne remplace la spontanéité de l'oreille qui traîne.
 
 On a aussi tenté de mettre en place [Donut](https://elao.slack.com/apps/A11MJ51SR-donut), un petit robot Slack qui désigne des paires de collègues ayant la mission de se faire une petit pause café virtuelle dans la semaine.  
 
@@ -29,7 +31,7 @@ Dans ce contexte, il est normal de forcer un peu la communication ou les réunio
 
 Nous sommes en mai, il était donc plus que temps de se retrouver, même à distance. On ne pouvait plus attendre, déjà frustré·e·s de ne pas avoir pu faire notre traditionnelle raclette de Noël ou nos pique-niques printaniers habituels au Parc de la Tête d'Or. Alors on a fait comme on pouvait, en tentant de recréer un peu de chaleur dans un format 100 % distanciel. Comment ?
 
-## Le format sur 2 jours
+## Un format sur 2 jours
 
 Quand la date a été définie, nous avons demandé à l'équipe de garder 2 jours dans leur agenda, sans prévoir de call ni de rendez-vous client et si possible, de rester sur Lyon. Ça nous permettait d'être libre sur nos possibilités, d'envisager un rassemblement si la situation nous le permettait (spoiler alert : hélas, ça n'a pas été le cas).
 
@@ -71,17 +73,11 @@ De notre côté, nous avons fait 2 ateliers, l'un individuel avec une mise en co
 
 **Petite astuce :** préparer les groupes à l'avance pour s'assurer le plus de mixité possible dans les profils.
 
-#### "Communiquer à cerveau total" : connaître son profil HBDI pour mieux travailler en équipe
+#### Premier atelier : "Communiquer à cerveau total"
 
 Un premier atelier que je qualifierais d'« introspectif », dans le sens où il s'agit de faire un petit test qui permet de mieux se connaître et surtout de mieux connaître les autres. En quelques questions, le test permet de savoir quel élément de notre personnalité est prépondérant entre ces 4 : Rationnel, Méthodique, Créatif·ve, Affectif·ve. 
 
-<figure>
-    <img src="images/posts/2021/teambuilding/monmoi.png">
-    <figcaption>
-      <span class="figure__legend">Les résultats de notre test HBDI. En voilà une équipe très complémentaire !</span>
-    </figcaption>
-</figure>
-
+![](images/posts/2021/teambuilding/monmoi.png)
 
 L'intérêt de ce test est de comprendre pourquoi chacun·e a une perception différente d'une même situation, selon son prisme propre et sa sensibilité. 
 
@@ -100,40 +96,42 @@ Pour la petite histoire, la majorité de notre équipe de techs ressemblait à �
 Alors que Xavier, fondateur d'Elao, était plus proche de celui-là :
 ![](images/posts/2021/teambuilding/hbdi-entrepreneur.png)
 
+Bref, tout ceci semble bien cohérent !
 
-#### "Faire rayonner Elao"
+#### Deuxième atelier : "Faire rayonner Elao"
 
-Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver des idées pour faire rayonner Elao à l'extérieur, avec la contrainte de faire une présentation uniquement visuelle, permettant ainsi d'éviter de s'enquiller des présentations PPT de plusieurs pages. Plein de très bonnes idées que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
+Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver des idées pour faire rayonner Elao à l'extérieur, avec la contrainte de proposer une présentation uniquement visuelle, permettant ainsi d'éviter de s'enquiller des présentations PPT de plusieurs pages. 
+
+Plein de très bonnes idées en sont ressorties, que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
 
 Voici une petite sélection de présentations d'idée, à vous de deviner de quoi il s'agit…
 ![](images/posts/2021/teambuilding/solution1.jpg)
 ![](images/posts/2021/teambuilding/solution2.jpg)
 ![](images/posts/2021/teambuilding/solution3.jpg)
-![](images/posts/2021/teambuilding/solution4.jpg)
 ![](images/posts/2021/teambuilding/solution5.jpg)
 
 
-#### Séance de Q&A
+#### Troisième atelier : séance de Q&A
 
-À la toute fin des deux journées et après avoir laisser mûrir un peu la masse d'informations et peut-être en avoir discuté entre nous, l'équipe a eu la possibilité de poser toutes les questions. Finir là-dessus permet de faire émerger des discussions vraiment très riches et surtout de lever toute ambiguïté qui aurait pu se créer. 
+À la toute fin des deux journées et après avoir digéré la masse d'informations, l'équipe a eu la possibilité de poser toutes les questions restant en suspens. Finir là-dessus permet de faire émerger des discussions  très riches et surtout de lever toute ambiguïté qui aurait pu se créer concernant les messages passés. 
 
-**Petite astuce :** permettre la préparation des questions en groupe, ce qui permet d'échanger sur les sujets importants mais également de permettre aux plus introverti·e·s d'être tout de même représenté·e·s, via la voix de quelqu'un d'autre.
+**Petite astuce :** permettre la préparation des questions en groupe, ce qui permet de faire émerger les sujets importants mais également aux plus introverti·e·s d'être tout de même représenté·e·s, via la voix de quelqu'un d'autre.
 
 
 ### User et abuser des outils à notre disposition 
 
-Parmis les bonnes choses à faire, je dirais qu'il ne faut pas avoir peur d'utiliser les outils qui sont à notre disposition aujourd'hui. Nous sommes passé de Jitsi via Workadventure à Discord et Miro sans hésiter. Si nous avions eu plus de temps de préparation, j'aurais peut-être même mis en place un petit Wooclap pour permettre de générer encore plus d'intéraction lors de la première présentation. 
+Il ne faut pas avoir peur d'utiliser les outils accessibles aujourd'hui, même pour du one-shot, une version d'essai d'un outil payant peut largement suffire. Nous sommes passé de Jitsi via Workadventure à Discord et Miro sans hésiter. Si nous avions eu plus de temps de préparation, j'aurais peut-être même mis en place un petit Wooclap pour permettre de générer encore plus d'intéraction lors de la première présentation. 
 
 
 ### Garder des moments de pauses
 
-Le format `4 demies-journées = 4 moments ensemble` a été très apprécié, parce qu'il avait le mérite de permettre de souffler, de répondre à un client, de faire une petite revue de code, de pousser un petit fix… sans être obligé d'avoir l'œil sur sa boîte mail ou ses notifs Slack pendant les ateliers. **Permettrer des temps de respiration permettent à chacun·e d'être réellement présent·e pendant les moments de partage.**
+Le format `4 demies-journées = 4 moments ensemble` a été très apprécié, parce qu'il avait le mérite de permettre de souffler, de répondre à un client, de faire une petite revue de code, de pousser un petit fix… sans être obligé d'avoir l'œil sur sa boîte mail ou ses notifs Slack pendant les ateliers. **Donner des temps de respiration permet à chacun·e d'être réellement présent·e pendant les moments de partage.**
 
 C'est un format que nous aimerions beaucoup voir se développer pour les conférences en ligne. 
 
 ### Ne pas oublier de s'amuser
 
-Il existe pléthore de jeux rigolos pour se retrouver en ligne, nos préférés :
+Les moments informels sont aussi importants que les ateliers. Il existe pléthore de jeux rigolos pour se retrouver en ligne, nos préférés :
 * [Gartic Phone](https://garticphone.com/fr), un Esquissé en ligne
 * [Wolfy](https://wolfy.fr/), un Loup-Garou de Thiercelieux en ligne
 * [Curvytron](http://www.curvytron.com/#/), un snake [fait-maison](../../case-study/curvytron.md)
@@ -149,7 +147,7 @@ Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…
 
 ### Laisser mûrir et (espérer) se retrouver en extérieur
 
-Pour clore les deux jours, nous avions initialement prévu de se retrouver tou·te·s ensemble au Parc pour un goûter et proposer à l'équipe une séance de <abbr title="Question & Answers - questions réponses">Q&A</abbr> sur les différents sujets qui la préoccupent. Malheureusement le temps n'était pas avec nous pour faire ça <abbr title="In Real Life">IRL</abbr>, on a donc dû la faire à distance.
+Pour clore les deux jours, nous avions initialement prévu de se retrouver tou·te·s ensemble au Parc pour un goûter pour la séance de <abbr title="Question & Answers - questions réponses">Q&A</abbr>. Malheureusement le temps n'était pas avec nous pour faire ça <abbr title="In Real Life">IRL</abbr>, on a donc dû la faire à distance.
 
 ### Recueillir le feedback de l'équipe
 

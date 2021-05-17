@@ -69,7 +69,7 @@ Un systeme d'événement est disponible pour faire communiquer les composants en
 
 Développant majoritairement avec Symfony, un gros plus que j'ai trouvé au framework est qu'il s'intègre très simplement à Symfony. Il est en effet possible de mélanger vos templates **Vue.js** et vos templates **Twig** et il est très simple d'y intégrer des composants voire de cabler une application **Vue.js** sur un template ou un formulaire Symfony.
 
-Pour plus d'informations sur le sujet, vous pouvez lire mon article "[Comment intégrer Vue.js dans une application Symfony](/blog/dev/comment-integrer-vue-js-application-symfony/)"
+Pour plus d'informations sur le sujet, vous pouvez lire mon article "[Comment intégrer Vue.js dans une application Symfony](./comment-integrer-vue-js-application-symfony.md)"
 
 ## Conclusion
 

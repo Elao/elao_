@@ -47,7 +47,6 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 * CSS3 / SASS
 * Balisage sémantique
 * Responsive design
-* Bootstrap
 * SVG
 * Savoir découper une maquette (depuis Sketch, Figma ou Photoshop)
 
@@ -59,6 +58,7 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 * Notions UX/UI
 * Gulp
 * JSX (React)
+* Une connaissance de base des principaux frameworks CSS (Bootstrap, etc.)
 
 ### Les « petits plus » qui peuvent faire la différence
 * Vous avez des notions d’accessibilité web, ou du moins y êtes sensible et avez envie d'apprendre ;

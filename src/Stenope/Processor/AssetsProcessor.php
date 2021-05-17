@@ -1,11 +1,5 @@
 <?php
 
-/*
- * This file is part of the "StenopePHP/Stenope" bundle.
- *
- * @author Thomas Jarrand <thomas.jarrand@gmail.com>
- */
-
 namespace App\Stenope\Processor;
 
 use Stenope\Bundle\Behaviour\ProcessorInterface;

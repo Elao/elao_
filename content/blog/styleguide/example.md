@@ -71,13 +71,13 @@ cillum dolore eu fugiat nulla pariatur.
 Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-!!! Titre success
+!!! success "Titre"
     Le même composant dans le style "success".
 
 Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-!!! Titre danger
+!!! danger "Titre"
     Le même composant dans le style "danger".
 
 ### Les images

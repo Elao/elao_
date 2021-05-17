@@ -32,7 +32,7 @@ Néanmoins, ces deux solutions peuvent parfois entraîner de nombreuses contrain
 
 Cette **instruction X-Robots-Tag indiquera aux robots de ne pas indexer la page**. Attention, cette méthode ne doit pas être couplée avec une directive de disallow de l'intégralité du robots.txt, puisque les bots n'auraient jamais accès à ce tag.
 
-Une des variantes est la balise meta robots noindex, [c'est une des solutions décrites par Google dans sa documentation officielle](<https://support.google.com/webmasters/answer/93710?hl=fr>).
+Une des variantes est la balise meta robots noindex, [c'est une des solutions décrites par Google dans sa documentation officielle](https://support.google.com/webmasters/answer/93710?hl=fr).
 
 ### Comment paramétrer ce tag sur Symfony ?
 
@@ -76,7 +76,7 @@ Grâce à la directive `disallow`, on pense pouvoir empêcher les robots de visi
 
 De plus, il n'est pas rare de trouver en production des fichiers `robots.txt` paramétrés pour le staging, car ils auraient été oubliés lors de la mise en production 🙀.
 
-Bon à savoir : la directive Noindex, qui était rarement utilisée, [a été officiellement abandonnée par Google](<https://webmasters.googleblog.com/2019/07/a-note-on-unsupported-rules-in-robotstxt.html>).
+Bon à savoir : la directive Noindex, qui était rarement utilisée, [a été officiellement abandonnée par Google](https://webmasters.googleblog.com/2019/07/a-note-on-unsupported-rules-in-robotstxt.html).
 
 ## Oups, mon site avec des urls de staging a été indexé ...
 

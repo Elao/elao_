@@ -19,20 +19,24 @@ Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui, le p
 
 <table width="100%">
     <tr>
-        <td width="50%" align="center">
-            {{< figure style="text-align:center;" src="images/posts/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine">}}
-    <figcaption style="text-align: center;font-style: italic;">Une gentille famille américaine</figcaption>
+        <td>
+            <figure>
+                <img src="images/posts/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine" />
+                <figcaption style="text-align: center;font-style: italic;">Une gentille famille américaine</figcaption>
+            </figure>
         </td>
-        <td width="50%" align="center">
-            {{< figure src="images/posts/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine">}}
-<figcaption style="text-align: center;font-style: italic;">Une <strike>gentille</strike> famille américaine</figcaption>
+        <td>
+            <figure>
+                <img src="images/posts/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine"/>
+                <figcaption style="text-align: center;font-style: italic;">Une <strike>gentille</strike> famille américaine</figcaption>
+            </figure>
         </td>
     </tr>
 </table>
 
-<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Le livre <strong><i>Head First Design Patterns</i></strong> (<a href="/fr/dev/design-pattern-factory-method">dont j'ai déjà vanté les mérites</a>) regroupe les deux patterns <code>Factory Method</code> et <code>AbstractFactory</code> dans un même chapitre consultable en ligne et intitulé <a href="https://www.safaribooksonline.com/library/view/head-first-design/0596007124/ch04.html" target="_blank">The Factory Pattern: Baking with OO Goodness</a>. Je ne saurais trop vous encourager à le consulter !
-</div>
+!!! info ""
+    Le livre __**Head First Design Patterns**__ ([dont j'ai déjà vanté les mérites](../design-pattern-factory-method.md)) regroupe les deux patterns <code>Factory Method</code> et <code>AbstractFactory</code> dans un même chapitre consultable en ligne et intitulé [The Factory Pattern: Baking with OO Goodness](https://www.safaribooksonline.com/library/view/head-first-design/0596007124/ch04.html). Je ne saurais trop vous encourager à le consulter !
+
 
 ## Classification
 
@@ -46,11 +50,11 @@ C'est une très jolie définition dont je ne me lasse pas ... (Comme toute défi
 
 En résumé, le pattern `Abstract Factory` va nous permettre d'instancier des familles de produits dépendant les uns des autres sans qu'il soit nécessaire de préciser leur type concret (je ne suis pas sûr qu'on soit plus avancé ...)
 
-## Schéma du design pattern `Abstract Factory`
+## Schéma du design pattern Abstract Factory
 
-<p class="text-center">
-    {{< figure class="text-center" src="images/posts/design-pattern/creation-abstract-factory.png" alt="Le Design Pattern 'Abstract Factory'">}}
-</p>
+<figure>
+    <img class="text-center" src="images/posts/design-pattern/creation-abstract-factory.png" alt="Le Design Pattern 'Abstract Factory'" />
+</figure>
 
 Ne vous laissez pas impressionner par la densité du schéma et le nombre de participants. Le pattern n'a rien d'insurmontable et peut s'avérer utile dans de nombreuses situations.
 
@@ -74,7 +78,7 @@ Pour ce faire, j'ai développé une librairie qui contient deux classes qui anal
 
 Mon client est aux anges et souhaite donc étendre ce fonctionnel aux projets hébergés sur Gitlab (vous la voyez arriver la nouvelle `famille` ?). Bien évidemment, la structure HTML des pages Gitlab est complètement différente des pages Github, et mon parser Github est tout à fait incapable de comprendre les données retournées par mon crawler Gitlab ... La contrainte est donc la suivante : si mon crawler est un crawler Github, alors je dois utiliser le parser Github ; si mon crawler est un crawler Gitlab, alors je dois utiliser le parser Gitlab. Et mon client ne compte pas s'arrêter là, il souhaite bien évidemment aussi gérer les pages Bitbucket ...
 
-## Résolution de la problématique à l'aide du DP `AbstractFactory`
+## Résolution de la problématique à l'aide du DP AbstractFactory
 
 Vous l'aurez sans doute deviné, nous nous trouvons en présence de trois familles de produits différentes : la famille des produits Github, la famille des produits Gitlab et la famille des produits Bickbucket. Dans chacune de ces familles, on retrouve un produit `Crawler` et un produit `Parser` conçus pour collaborer ensemble.
 
@@ -90,11 +94,11 @@ Comment garantir que j'utilise des produits d'une même famille ? Réponse : le 
     <tr>
         <td>SCMCrawlerInterface:</td>
         <td colspan="3">
-            <pre class="code">
+            <pre class="code-multiline"><code class="language-php">
 public function getProjectNameHtml();
 public function getSummaryHtml();
 public function getCommittedFilesHtml();
-            </pre>
+            </code></pre>
         </td>
     </tr>
     <tr>
@@ -106,11 +110,11 @@ public function getCommittedFilesHtml();
     <tr>
         <td>SCMParserInterface:</td>
         <td colspan="3">
-            <pre class="code">
+            <pre class="code-multiline"><code class="language-php">
 public function parseProjectName($projectNameHtml);
 public function parseSummary($summaryHtml);
 public function parseCommittedFiles($committedFilesHtml);
-            </pre>
+</code></pre>
         </td>
     </tr>
     <tr>
@@ -122,10 +126,10 @@ public function parseCommittedFiles($committedFilesHtml);
     <tr>
         <td>SCMFactoryInterface</td>
         <td colspan="3">
-            <pre class="code">
+            <pre class="code-multiline"><code class="language-php">
 public function getCrawler();
 public function getParser();
-            </pre>
+            </code></pre>
         </td>
     </tr>
     <tr>

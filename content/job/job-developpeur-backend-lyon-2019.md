@@ -54,7 +54,7 @@ Idéalement, vos compétences incluent :
 - Symfony
 - Bonnes connaissances des bases de données relationnelles
 - Des notions avancées de Javascript (ES6+)
-- Notions de DDD et [architecture hexagonale](/fr/dev/architecture-hexagonale-symfony/)
+- Notions de DDD et [architecture hexagonale](../blog/dev/architecture-hexagonale-symfony.md)
 - Expérience des tests unitaires et fonctionnels
 - Qualité du code (pair programming, code review, documentation)
 - Respect des standards et bonnes pratiques

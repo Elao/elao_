@@ -21,7 +21,7 @@ Si le télétravail s'est mis en place assez naturellement, il n'en a pas été 
 
 Désormais, notre quotidien est surtout fait de notifications Slack, Github et de réunions Jitsi : il y a tout une culture de la spontanéité à recréer. Pour y aider, on a mis quelques petites choses en place, à commencer par un espace WorkAdventure qui réplique nos bureaux et permet de s'y installer le matin et de s'approcher vers un·e collègue pour lui parler. Passé le fun du début, hélas, l'habitude de s'y connecter n'a pas été prise. Rien ne remplace la spontanéité de l'oreille qui traîne.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This week-end, I&#39;ve hidden a secret place inside our <a href="https://twitter.com/Workadventure_?ref_src=twsrc%5Etfw">@Workadventure_</a> <a href="https://twitter.com/Elao?ref_src=twsrc%5Etfw">@Elao</a>&#39;s virtual office. So today morning my workmates went on a small &quot;treasure hunt&quot; quest. Most of them fared well. 😁 <a href="https://t.co/vrfwirYwwa">pic.twitter.com/vrfwirYwwa</a></p>&mdash; Maxime Steinhausser (@ogizanagi) <a href="https://twitter.com/ogizanagi/status/1356223173033926660?ref_src=twsrc%5Etfw">February 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This week-end, I&#39;ve hidden a secret place inside our <a href="https://twitter.com/Workadventure_?ref_src=twsrc%5Etfw">@Workadventure_</a> <a href="https://twitter.com/Elao?ref_src=twsrc%5Etfw">@Elao</a>&#39;s virtual office. So today morning my workmates went on a small &quot;treasure hunt&quot; quest. Most of them fared well. 😁 <a href="https://t.co/vrfwirYwwa">pic.twitter.com/vrfwirYwwa</a></p>&mdash; Maxime Steinhausser (@ogizanagi) <a href="https://twitter.com/ogizanagi/status/1356223173033926660?ref_src=twsrc%5Etfw">February 1, 2021</a></blockquote>
 
 On a aussi tenté de mettre en place [Donut](https://elao.slack.com/apps/A11MJ51SR-donut), un petit robot Slack qui désigne des paires de collègues ayant la mission de se faire une petit pause café virtuelle dans la semaine.  
 
@@ -158,3 +158,5 @@ Pour que le prochain team-building soit encore meilleur, ne pas oublier de recue
 ## Pour aller plus loin
 
 Ce n'était pas parfait, parce qu'on n'était pas ensemble. On aurait aimé faire beaucoup plus mais ça a eu le mérite de faire passer un moment hors des projets, à prendre un peu de hauteur et à recréer un peu de cette spontanéité. 
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

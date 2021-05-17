@@ -6,9 +6,7 @@ tableOfContent:     2
 
 description:        "Pour la première fois dans l'histoire d'Elao, nous avons fait notre teambuilding à distance."
 
-thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
-banner:             ~ # Si vous voulez une image différente des miniatures comme bannière sur la vue de l'article
-credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
+thumbnail:          images/posts/2021/teambuilding/workadventure.png
 tags:               ["Team building", "Télétravail"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
@@ -30,13 +28,6 @@ On a aussi tenté de mettre en place [Donut](https://elao.slack.com/apps/A11MJ51
 Dans ce contexte, il est normal de forcer un peu la communication ou les réunions d'équipe informelles. Ce n'est pas simple car ça demande de l'énergie, au quotidien, d'animer tout ça. Si les agitateurs habituels s'y sont essayé au début, tenir sur la durée est une autre affaire.  
 
 Nous sommes en mai, il était donc plus que temps de se retrouver, même à distance. On ne pouvait plus attendre, déjà frustré·e·s de ne pas avoir pu faire notre traditionnelle raclette de Noël ou nos pique-niques printaniers habituels au Parc de la Tête d'Or. Alors on a fait comme on pouvait, en tentant de recréer un peu de chaleur dans un format 100 % distanciel. Comment ?
-
-<figure>
-    <img src="images/posts/2021/teambuilding/workadventure.png">
-    <figcaption>
-      <span class="figure__legend">L'équipe dans notre salle de réunion… virtuelle</span>
-    </figcaption>
-</figure>
 
 ## Le format sur 2 jours
 

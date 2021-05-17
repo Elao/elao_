@@ -139,7 +139,7 @@ Il existe pléthore de jeux rigolos pour se retrouver en ligne, nos préférés 
 * [Wolfy](https://wolfy.fr/), un Loup-Garou de Thiercelieux en ligne
 * [Curvytron](http://www.curvytron.com/#/), un snake [fait-maison](../../case-study/curvytron.md)
 * [WhatTheTune](https://whatthetune.com/), un blind-test réalisé par [Tom](../../member/tjarrand.yml), notre game designer préféré
-* [Skribbl](https://skribbl.io/), un Pictionnary en ligne
+* [Skribbl](https://skribbl.io/), un Pictionary en ligne
 
 Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…
 

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Stenope\Processor;
 
 use Stenope\Bundle\Behaviour\ProcessorInterface;
@@ -40,10 +42,12 @@ class AssetsProcessor implements ProcessorInterface
 
         $crawler = new Crawler($data[$this->property]);
 
+        /** @var \DOMElement $element */
         foreach ($crawler->filter('source') as $element) {
             $element->setAttribute('src', $this->assetUtils->getUrl($element->getAttribute('src')));
         }
 
+        /** @var \DOMElement $element */
         foreach ($crawler->filter('video') as $element) {
             $element->setAttribute('poster', $this->assetUtils->getUrl($element->getAttribute('poster')));
         }

@@ -153,7 +153,7 @@ Pour clore les deux jours, nous avions initialement prévu de se retrouver tou·
 
 Pour que le prochain team-building soit encore meilleur, ne pas oublier de recueillir le feedback de l'équipe, de façon publique, privée ou anonyme. 
 
-## Pour aller plus loin
+## Pour conclure…
 
 Ce n'était pas parfait, parce qu'on n'était pas ensemble. On aurait aimé faire beaucoup plus mais ça a eu le mérite de faire passer un moment hors des projets, à prendre un peu de hauteur et à recréer un peu de cette spontanéité. 
 

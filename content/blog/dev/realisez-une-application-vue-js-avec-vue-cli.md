@@ -14,7 +14,7 @@ categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 author:    "mcolin"
 ---
 
-Dans mes précédents articles je vous présentais [pourquoi utiliser Vue.js dans vos projets](/blog/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) et [comment intégrer Vue.js à une application Symfony](/fr/dev/comment-integrer-vue-js-application-symfony/). Je vais maintenant vous présenter une autre facette du framework d'Evan You, la création d'applications frontend grâce à l'outil [vue-cli](https://github.com/vuejs/vue-cli).
+Dans mes précédents articles je vous présentais [pourquoi utiliser Vue.js dans vos projets](./pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets.md) et [comment intégrer Vue.js à une application Symfony](./comment-integrer-vue-js-application-symfony.md). Je vais maintenant vous présenter une autre facette du framework d'Evan You, la création d'applications frontend grâce à l'outil [vue-cli](https://github.com/vuejs/vue-cli).
 
 ## vue-cli
 

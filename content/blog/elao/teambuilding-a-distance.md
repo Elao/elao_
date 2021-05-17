@@ -140,10 +140,29 @@ Les moments informels sont aussi importants que les ateliers. Il existe pléthor
 
 Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…
 
-![](images/posts/2021/teambuilding/canard-banane.gif)
-![](images/posts/2021/teambuilding/ananas.gif)
-![](images/posts/2021/teambuilding/chataigne.gif)
-![](images/posts/2021/teambuilding/cochon.gif)
+<video loop muted playsinline controls poster="images/posts/2021/teambuilding/canard-banane.jpeg">
+    <source type="video/webm" src="images/posts/2021/teambuilding/canard-banane.webm">
+    <source type="video/mp4" src="images/posts/2021/teambuilding/canard-banane.mp4">
+    <img src="images/posts/2021/teambuilding/canard-banane.gif"/>
+</video>
+
+<video loop muted playsinline controls poster="images/posts/2021/teambuilding/ananas.jpeg">
+    <source type="video/webm" src="images/posts/2021/teambuilding/ananas.webm">
+    <source type="video/mp4" src="images/posts/2021/teambuilding/ananas.mp4">
+    <img src="images/posts/2021/teambuilding/ananas.gif"/>
+</video>
+
+<video loop muted playsinline controls poster="images/posts/2021/teambuilding/chataigne.jpeg">
+    <source type="video/webm" src="images/posts/2021/teambuilding/chataigne.webm">
+    <source type="video/mp4" src="images/posts/2021/teambuilding/chataigne.mp4">
+    <img src="images/posts/2021/teambuilding/chataigne.gif"/>
+</video>
+
+<video loop muted playsinline controls poster="images/posts/2021/teambuilding/cochon.jpeg">
+    <source type="video/webm" src="images/posts/2021/teambuilding/cochon.webm">
+    <source type="video/mp4" src="images/posts/2021/teambuilding/cochon.mp4">
+    <img src="images/posts/2021/teambuilding/cochon.gif"/>
+</video>
 
 ### Laisser mûrir et (espérer) se retrouver en extérieur
 

@@ -1,7 +1,7 @@
 ---
 title:              "Retour sur 2 jours de team building… à distance"
-date:               "2020-05-18"
-lastModified:       ~ # A utiliser par défaut
+date:               "2021-05-18"
+lastModified:       ~
 tableOfContent:     2
 
 description:        "Pour la première fois dans l'histoire d'Elao, nous avons fait notre teambuilding à distance."
@@ -17,7 +17,7 @@ tweetId:            ""
 
 Crise sanitaire oblige, on tente pour le moment de se rassembler le moins possible. Dès le premier confinement, il y a plus d'un an, l'ensemble de l'équipe a embarqué son matériel, direction le télétravail. Certain·e·s ne sont même quasiment jamais revenus dans les bureaux. 
 
-Si le télétravail s'est mis en place assez naturellement, il n'en a pas été de même côté communication interne. En effet, historiquement, le télétravail restait très occasionnel, surtout par goût de travailler proches les un·e·s des autres, de laisser traîner une oreille dans l'open-space pour joindre une conversation technique ou pour partager le repas de midi autour d'une partie de Mario Kart. 
+Si le télétravail s'est mis en place assez naturellement, il n'en a pas été de même côté communication interne. En effet, historiquement, le télétravail restait très occasionnel, surtout par goût de travailler proches les un·e·s des autres, de laisser traîner une oreille dans l'open-space pour joindre une conversation technique ou pour partager le repas de midi autour d'une partie de Super Smash Bros Ultimate. 
 
 Désormais, notre quotidien est surtout fait de notifications Slack, Github et de réunions Jitsi : **il y a tout une culture de la spontanéité à recréer**. Pour y aider, on a mis quelques petites choses en place, à commencer par un espace WorkAdventure qui réplique nos bureaux, nous permet de s'y installer le matin et de s'approcher vers un·e collègue pour lui parler. 
 
@@ -58,7 +58,7 @@ Soyons réalistes, personne n'a envie d'enchaîner des réunions Zoom à écoute
 
 ![](images/posts/2021/teambuilding/dodo.gif)
 
-Bon, je vous avoue qu'on en a quand même fait une, de présentation descendante. Fort heureusement, elle était attendue et semi-intéractive, avec des questions à la volée, sans attendre une phase finale de Q&A. Ça a permis de rendre l'ensemble plus vivant. 
+Bon, je vous avoue qu'on en a quand même fait une, de présentation descendante. Fort heureusement, elle était attendue et semi-interactive, avec des questions à la volée, sans attendre une phase finale de Q&A. Ça a permis de rendre l'ensemble plus vivant. 
 
 **Petite astuce :** pour réveiller les esprits, sans en abuser, ça peut être amusant de commencer par un ice-breaker. Pour l'un des ateliers, tout le monde est allé chercher une peluche de son appart. Ça a le mérite de faire ouvrir sa cam à tout le monde et de faire sourire. Surtout quand on a un très très gros panda (argh, j'aurais tellement dû faire une capture d'écran de ce moment).
 Ça permet d'éviter ça :
@@ -104,7 +104,7 @@ Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver d
 
 Plein de très bonnes idées en sont ressorties, que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
 
-Voici une petite sélection de présentations d'idée, à vous de deviner de quoi il s'agit…
+Voici une petite sélection de présentations d'idées, à vous de deviner de quoi il s'agit…
 ![](images/posts/2021/teambuilding/solution1.jpg)
 ![](images/posts/2021/teambuilding/solution2.jpg)
 ![](images/posts/2021/teambuilding/solution3.jpg)

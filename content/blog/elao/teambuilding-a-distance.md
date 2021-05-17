@@ -81,6 +81,14 @@ De notre côté, nous avons fait 2 ateliers, l'un individuel avec une mise en co
 #### "Communiquer à cerveau total" : connaître son profil HBDI pour mieux travailler en équipe
 Un premier atelier que je qualifierais d'« introspectif », dans le sens où il s'agit de faire un petit test qui permet de mieux se connaître et surtout de mieux connaître les autres. En quelques questions, le test permet de savoir quel élément de notre personnalité est prépondérant entre ces 4 : Rationnel, Méthodique, Créatif·ve, Affectif·ve. 
 
+<figure>
+    <img src="images/posts/2021/teambuilding/monmoi.png">
+    <figcaption>
+      <span class="figure__legend">Les résultats de notre test HBDI. En voilà une équipe très complémentaire !</span>
+    </figcaption>
+</figure>
+
+
 L'intérêt de ce test est de comprendre pourquoi chacun·e a une perception différente d'une même situation, selon son prisme propre et sa sensibilité. 
 
 À la fin, on a partagé nos petits diagrammes et nous nous sommes placés sur un tableau blanc numérique préparé au préalable. Un atelier qui aurait mérité un petit débrief informel autour d'une bière ou d'un Perrier citron. 
@@ -91,6 +99,13 @@ L'intérêt de ce test est de comprendre pourquoi chacun·e a une perception dif
       <span class="figure__legend">Les résultats de notre test HBDI. En voilà une équipe très complémentaire !</span>
     </figcaption>
 </figure>
+
+Pour la petite histoire, la majorité de notre équipe de techs ressemblait à ça :
+![](images/posts/2021/teambuilding/hbdi-ingenieur.png)
+
+Alors que Xavier, fondateur d'Elao, était plus proche de celui-là :
+![](images/posts/2021/teambuilding/hbdi-entrepreneur.png)
+
 
 #### "Faire rayonner Elao"
 Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver des idées pour faire rayonner Elao à l'extérieur, avec la contrainte de faire une présentation uniquement visuelle, permettant ainsi d'éviter de s'enquiller des présentations PPT de plusieurs pages. Plein de très bonnes idées que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).

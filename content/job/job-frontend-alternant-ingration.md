@@ -22,7 +22,7 @@ Backend, frontend et/ou devops, [les équipes](https://www.elao.com/la-tribu) di
 
 Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
 
-Pour le moment, contexte sanitaire oblige, une grande partie de l'équipe est quotidiennement en télétravail. Habiter Lyon n'est donc pas un pré-requis et **l'offre est ouverte aussi bien à Lyon qu'en full remote**. <!-- TODO à acter --> 
+Pour le moment, contexte sanitaire oblige, une grande partie de l'équipe est quotidiennement en télétravail. Habiter Lyon n'est donc pas un pré-requis et **l'offre est ouverte aussi bien à Lyon qu'en full remote**. 
 
 Si aujourd'hui il s'agit d'une offre d'alternance, **l'objectif de toute embauche chez Elao est de se projeter à long terme**. Si nous en avons alors la possibilité, nous aimerions vous proposer par la suite un CDI.
 

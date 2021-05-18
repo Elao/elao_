@@ -2,7 +2,7 @@
 title:
     - "Exemple d'annonce:"
     - "Développeur·euse backend"
-description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, assumenda repellendus at officiis optio."
+description: "Nous cherchons un·e développeur·euse backend à Lyon."
 date:        "2021-04-23"
 active:      true
 

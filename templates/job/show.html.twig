@@ -25,30 +25,81 @@
         </li>
     </ol>
 
-    <div class="banner">
-        <h1 class="banner__title" data-aos="fade-right">
-            {% for title in job.title %}
-                {% if loop.first %}
-                    {{ title }}
-                {% else %}
-                    <span>{{ title }}</span>
-                {% endif %}
-            {% endfor %}
-        </h1>
-        {#
-            .banner__content options (pick one) :
-                - background-image -> uncomment inline style
-                - text
-                - no image & no text -> will display empty pink square
-        #}
-        <div class="banner__highlight" data-aos="zoom-in">
-            <p>{# your main text here #}</p>
-            <i class="icon icon--semicolon" aria-hidden="true"></i>
+    <div itemscope itemtype="https://schema.org/JobPosting">
+        <div class="banner">
+            <h1 class="banner__title" data-aos="fade-right" itemprop="title">
+                {% for title in job.title %}
+                    {% if loop.first %}
+                        {{ title }}
+                    {% else %}
+                        <span>{{ title }}</span>
+                    {% endif %}
+                {% endfor %}
+            </h1>
+            {#
+                .banner__content options (pick one) :
+                    - background-image -> uncomment inline style
+                    - text
+                    - no image & no text -> will display empty pink square
+            #}
+            <div class="banner__highlight" data-aos="zoom-in">
+                <p itemprop="description">{{ job.description }}</p>
+                <i class="icon icon--semicolon" aria-hidden="true"></i>
+            </div>
+            <div class="banner__content" data-aos="fade-right" {# style="background: url()" #}>
+                {# your secondary text here #}
+            </div>
         </div>
-        <div class="banner__content" data-aos="fade-right" {# style="background: url()" #}>
-            {# your secondary text here #}
-        </div>
-    </div>
 
-    {{ job.content|raw }}
+        <div class="page-project__detail" itemscope itemtype="https://schema.org/JobPosting">
+            <ul>
+                <li class="item" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--document" aria-hidden="true"></i>
+                        Type de contrat
+                    </small>
+                    <p itemprop="employmentType">CDI</p>
+                </li>
+                <li class="item item--medium" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--location" aria-hidden="true"></i>
+                        Lieu
+                    </small>
+                    <p itemprop="jobLocation">Lyon, remote possible</p>
+                </li>
+                <li class="item item--medium" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--megaphone" aria-hidden="true"></i>
+                        Prise de poste
+                    </small>
+                    <p itemprop="jobStartDate">Juin 2021</p>
+                </li>
+            </ul>
+            <ul>
+                <li class="item" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--diploma" aria-hidden="true"></i>
+                        Niveau de formation
+                    </small>
+                    <p itemprop="educationRequirements">BAC +3</p>
+                </li>
+                <li class="item" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--time" aria-hidden="true"></i>
+                        Expérience
+                    </small>
+                    <p itemprop="experienceRequirements">> 2 ans</p>
+                </li>
+                <li class="item" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--bill" aria-hidden="true"></i>
+                        Rémunération
+                    </small>
+                    <p itemprop="estimatedSalary">Entre 1K€ et 100K€</p>
+                </li>
+            </ul>
+        </div>
+
+        {{ job.content|raw }}
+    </div>
 {% endblock %}

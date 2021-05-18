@@ -76,13 +76,9 @@
     margin: 0 0 50px;
   }
 
+  .banner__highlight,
   .banner__content {
-    margin: 0;
-    padding: 30px 40px 40px;
-    width: 100%;
-    height: unset;
-    position: static;
-    order: 3;
+    font-size: 20px;
   }
 
   .banner__highlight {
@@ -91,22 +87,30 @@
     width: 100%;
     min-height: unset;
     min-width: unset;
-    font-size: 20px;
     order: 2;
+  }
+
+  .banner__content {
+    margin: 25px 0 0;
+    padding: 30px 40px 40px;
+    width: 100%;
+    height: unset;
+    position: static;
+    order: 3;
   }
 }
 
 @media (max-width: $screen-xs) {
-  .banner__content {
-    display: none;
-  }
-
   .banner__highlight {
     padding: 20px;
-    font-size: 18px;
 
     .icon {
       display: none;
     }
+  }
+
+  .banner__highlight,
+  .banner__content {
+    font-size: 18px;
   }
 }

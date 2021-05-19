@@ -1,6 +1,6 @@
 ---
 title:              "Retour sur 2 jours de team building… à distance"
-date:               "2021-05-18"
+date:               "2021-05-20"
 lastModified:       ~
 tableOfContent:     2
 
@@ -105,9 +105,8 @@ Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver d
 Plein de très bonnes idées en sont ressorties, que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
 
 Voici une petite sélection de présentations d'idées, à vous de deviner de quoi il s'agit…
-![](images/posts/2021/teambuilding/solution1.jpg)
-![](images/posts/2021/teambuilding/solution2.jpg)
 ![](images/posts/2021/teambuilding/solution3.jpg)
+![](images/posts/2021/teambuilding/solution2.jpg)
 ![](images/posts/2021/teambuilding/solution5.jpg)
 
 

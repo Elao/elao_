@@ -43,7 +43,7 @@
             <div class="banner__content" data-aos="fade-right"></div>
         </div>
 
-        <div class="page-job__detail" itemscope itemtype="https://schema.org/JobPosting">
+        <div class="page-job-posting" itemscope itemtype="https://schema.org/JobPosting">
             <ul class="tile-list">
                 <li class="tile" data-aos="zoom-in-down">
                     <small>
@@ -90,8 +90,10 @@
                     <p itemprop="estimatedSalary">Entre 1K€ et 100K€</p>
                 </li>
             </ul>
-        </div>
 
-        {{ job.content|raw }}
+            <div class="page-job-posting__content">
+                {{ job.content|raw }}
+            </div>
+        </div>
     </div>
 {% endblock %}

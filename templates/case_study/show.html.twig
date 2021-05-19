@@ -80,24 +80,24 @@
         </div>
 
         <div class="page-project__detail">
-            <ul>
-                <li class="item" data-aos="zoom-in-down">
+            <ul class="tile-list">
+                <li class="tile" data-aos="zoom-in-down">
                     <small>Client</small>
                     <p>{{ caseStudy.clients }}</p>
                 </li>
-                <li class="item" data-aos="zoom-in-down">
+                <li class="tile" data-aos="zoom-in-down">
                     <small>Taille du projet</small>
                     <p>{{ caseStudy.size }}</p>
                 </li>
             </ul>
-            <ul>
-                <li class="item item--medium" data-aos="zoom-in-down">
+            <ul class="tile-list">
+                <li class="tile tile--medium" data-aos="zoom-in-down">
                     <small>Services Elao</small>
                     {% for service in caseStudy.services %}
                         <p>{{ service }}</p>
                     {% endfor %}
                 </li>
-                <li class="item item--large" data-aos="zoom-in-down">
+                <li class="tile tile--large" data-aos="zoom-in-down">
                     <small>Technologies</small>
                     <ul class="technologies technologies--light">
                         {% for technologySlug in caseStudy.technologies %}

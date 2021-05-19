@@ -27,6 +27,7 @@ html.no-js [data-aos] {
 @import "components/_admonition";
 @import "components/_alert";
 @import "components/_animated-block";
+@import "components/_animated-link";
 @import "components/_article-author";
 @import "components/_article-banner";
 @import "components/_article-content";
@@ -48,6 +49,7 @@ html.no-js [data-aos] {
 @import "components/_banner-values";
 @import "components/_breadcrumb";
 @import "components/_brick";
+@import "components/_brick-comment";
 @import "components/_brick-conception";
 @import "components/_brick-contact";
 @import "components/_brick-send-message";
@@ -85,10 +87,9 @@ html.no-js [data-aos] {
 @import "components/_tag-list";
 @import "components/_team";
 @import "components/_technologies";
+@import "components/_tile";
 @import "components/_titles";
 @import "components/_values";
-@import "components/_brick-comment";
-@import "components/_animated-link";
 
 // generic
 @import "generic/_a";

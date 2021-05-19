@@ -38,7 +38,7 @@
     </div>
 
     <div class="call-to-action">
-        <a href="" class="btn btn--primary btn--animated">
+        <a href="#offers" class="btn btn--primary btn--animated">
             <span>
                 Accéder directement aux offres d'emploi
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -162,7 +162,7 @@
             </ul>
         </div>
 
-        <h2 class="h2--dash">Les offres d’emploi ouvertes</h2>
+        <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
         {% if jobs is not empty %}
             <ul class="article-list">
                 {% for job in jobs %}

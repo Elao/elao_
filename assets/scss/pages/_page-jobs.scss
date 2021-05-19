@@ -32,6 +32,10 @@
   .no-result {
     margin: 0 0 40px;
   }
+
+  #offers {
+    scroll-margin-top: 30px;
+  }
 }
 
 @media (max-width: $screen-md) {

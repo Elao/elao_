@@ -10,7 +10,7 @@ thumbnail:          images/posts/2021/teambuilding/workadventure.png
 tags:               ["Team building", "Télétravail"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
-tweetId:            ""
+tweetId:            "1395285448122150913"
 ---
 
 ## Contexte

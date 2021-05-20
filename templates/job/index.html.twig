@@ -1,13 +1,212 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% block content %}
-    Nous recrutons
+{# TODO: better title & descr ? #}
+{% block meta_title "Les offres d'emploi d'Elao" %}
+{% block meta_description "Découvrez les offres d'emploi ouvertes chez Elao" %}
 
-    <div>
-        {% for job in jobs %}
-            <a href="{{ path('job', { job: job.slug }) }}">
-                <h2>{{ job.title }}</h2>
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
             </a>
-        {% endfor %}
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Jobs</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+    <div class="banner">
+        <h1 class="banner__title" data-aos="fade-right">
+            Rejoindre la
+            <span>magic team Elao</span>
+        </h1>
+        <div class="banner__highlight" data-aos="zoom-in">
+            <p>Nous sommes en recherche perpétuelle de nouveaux talents.</p>
+            <i class="icon icon--semicolon" aria-hidden="true"></i>
+        </div>
+        <div class="banner__content" data-aos="fade-right">
+            <p>Adeptes de l'adage « le talent, c’est d’avoir envie de faire quelque chose » ; nous privilégions toute personnalité volontaire et motivée par la <strong>soif de nouveaux challenges techniques</strong> au sein d’une <strong>équipe unie.</strong></p>
+            <p>Ce sont ces éléments qui assurent aujourd’hui notre réussite.</p>
+            <p>Laissez-nous vous convaincre…</p>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <a href="#offers" class="btn btn--primary btn--animated">
+            <span>
+                Accéder directement aux offres d'emploi
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                </svg>
+            </span>
+        </a>
+    </div>
+
+    <div class="page-jobs">
+        <h2 class="h2--dash">D'un point de vue Technique</h2>
+        <div class="offset-content">
+            <p>Nos domaines d’expertise s’harmonisent autour de technos modernes, d’un code de qualité, d’une satisfaction clients/utilisateurs au service de <a href="{{ path('case_studies') }}">projets concrets</a> et forts d'une veille active. </p>
+        </div>
+
+        <h2 class="h2--dash">D’un point de vue projet</h2>
+        <div class="offset-content">
+            <p>C'est certain, on ne peut pas vous présenter les projets que nous aborderons dans les 6 prochains mois.</p>
+            <p>Mais… On peut miser sur le fait qu’ils seront techniquement motivants et à forte valeur ajoutée.</p>
+            <p>Ces projets, sur lesquels vous travaillerez, seront adaptés à vos domaines d’expertise ; le cas échéant et selon les besoins, vous serez formé·e.</p>
+        </div>
+
+        <h2 class="h2--dash">D'un point de vue général</h2>
+        <h3>Nos valeurs</h3>
+        {# <div class="offset-content"> #}
+            <div class="values">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <span class="values__item values__item--info"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        L'humain avant tout
+                    </span>
+                    {% set delay = delay + delayGap %}
+                    <span class="values__item values__item--tertiary"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        Rester humble et apprendre de ses erreurs
+                    </span>
+                    {% set delay = delay + delayGap %}
+                    <span class="values__item values__item--primary"
+                        data-aos="fade-up"
+                        data-aos-duration="{{ duration }}"
+                        data-aos-delay="{{ delay }}"
+                    >
+                        <i class="icon icon--quote" aria-hidden="true"></i>
+                        S'ouvrir, partager, ne rien garder pour soi
+                    </span>
+                {% endwith %}
+                <a href="{{ path('values') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                    <span>
+                        Découvrir nos valeurs
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                            <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                            <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        {# </div> #}
+
+        <h3>Notre Culture web</h3>
+        <div class="offset-content">
+            <p>Chineurs du web et chroniqueurs, notre <a href="{{ path('blog') }}">blog technique</a> vous permettra de sortir votre plus belle plume. Au-delà de notre blog, nous ne sommes pas en reste quant aux contributions open source.</p>
+            <p><strong>Avec une équipe de collaborateurs passionnés par leur métier, nous nous intégrons au cœur des communautés du web pour apprendre et partager.</strong></p>
+            <ul>
+                <li>Membre et sponsor régulier de l’Afup</li>
+                <li>Membre de l’AFSY</li>
+                <li>Adhérent à La Cuisine du Web</li>
+                <li>Membre des Duchess</li>
+                <li>Membre de la Digital League</li>
+            </ul>
+            <p><strong>On n’a pas soif que de technos, on est également présents aux apéros du web et pas que pour le web, on aime les chips ! (AperoPHP, meetups Duchess, meetups Ansible, événements AFSY...)</strong></p>
+        </div>
+
+        <h3>L’état d’esprit</h3>
+        <div class="offset-content">
+            <ul>
+                <li>Longboards et fixies sont les bienvenus. Mais on aime aussi les bons vieux biclous !</li>
+                <li>On a aussi quelques adeptes de plantes et de lombricomposteurs dans l’équipe.</li>
+                <li>On aime les animaux et on les collectionne (ElePHPants, mais pas que...)</li>
+                <li>Les tenues confortables sont fortement conseillées : tongs, bermudas et autres fashion faux-pas 😎 sont également cautionnés.</li>
+            </ul>
+        </div>
+
+        <h3>On est joueurs·euses 🕹</h3>
+        <div class="offset-content">
+            <p>... et fier·e·s de nos petits projets : jetez un œil à <a href="{{ path('case_studies', { case_study: 'curvytron' }) }}">Lazerdrive / Curvytron</a></p>
+        </div>
+
+        <h3>Mais surtout…</h3>
+        <div class="offset-content">
+            <p>Notre effectif nous permet de bénéficier d’un cadre de travail propice à l’échange, à la sérénité et à l’épanouissement professionnel : 5 jours sur 7 ça a son importance !</p>
+            <p>Une petite équipe autant hétéroclite qu'homogène (si si, c’est possible !), sérieuse sans se prendre au sérieux.</p>
+        </div>
+
+        <h2 class="h2--dash">En pratique</h2>
+        <h3>Le cadre de travail</h3>
+        <div class="offset-content">
+            <ul>
+                <li>Nos bureaux sont situés à Lyon, à côté de Charpennes, dans une résidence calme, à proximité des commerces, des principales lignes de transport (bus, métro, tramways, SNCF), des lieux de restauration, et à 15 minutes à pied du Parc de la Tête d'or.</li>
+                <li>Notre open space, à taille humaine, n'a rien d'un hall de gare.</li>
+                <li>Postes de travail : Mac OSX, virtualisation (Vagrant, Docker), Slack ...</li>
+            </ul>
+        </div>
+        <div class="check-block check-block--right" data-aos="zoom-in-left">
+            <h3 class="check-block__title">Parmi les avantages proposés à nos collaborateurs :</h3>
+            <ul class="check-block__list">
+                <li>Le télétravail est ouvert à tou·te·s et sans limite</li>
+                <li>La mutuelle (Alan) est prise en charge par l'entreprise à 100%, pour vous et vos enfants</li>
+                <li>Nous proposons les Tickets Restaurant (Swile)</li>
+                <li>Pour les cyclistes, nous couvrons vos frais de déplacement avec l’IKV (indemnité kilométrique vélocipède)</li>
+                <li>Une cagnotte personnelle est disponible pour vos dépenses ou de formation (participation aux événements web, matériel spécifique, licences…)</li>
+                <li>Du thé et une machine à café sont en libre service</li>
+            </ul>
+        </div>
+
+        <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
+        {% if jobs is not empty %}
+            <ul class="article-list">
+                {% for job in jobs %}
+                    <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
+                        <div class="miniature-inline__content">
+                            <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
+                                {{ job.fullTitle }}
+                            </a>
+                            <p class="description" itemprop="description">
+                                {{ job.description }}
+                            </p>
+                            <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Voir le poste
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                        <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                        <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+            <aside class="bricks">
+                {% include 'partials/brick-application.html.twig' %}
+            </aside>
+        {% else %}
+            <ul class="article-list">
+                <li class="miniature-inline miniature-inline--small no-result" data-aos="fade-up-left">
+                    <div class="miniature-inline__content">
+                        <span class="title">Nous n'avons aucun poste ouvert en ce moment. Vous souhaitez nous envoyer une candidature spontanée ?</span>
+                        <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
+                            <span>
+                                Envoyez nous un message
+                                <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                                    <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                                    <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        {% endif %}
     </div>
 {% endblock %}

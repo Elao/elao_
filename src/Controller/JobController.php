@@ -12,11 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/recrutement", options={
- *   "stenope": {
- *     "ignore": true
- *    }
- * })
+ * @Route("/recrutement")
  */
 class JobController extends AbstractController
 {
@@ -36,11 +32,11 @@ class JobController extends AbstractController
 
         return $this->render('job/index.html.twig', [
             'jobs' => $jobs,
-        ])->setLastModified(ContentUtils::max($jobs, 'lastModified'));
+        ])->setLastModified(\count($jobs) > 0 ? ContentUtils::max($jobs, 'lastModified') : null);
     }
 
     /**
-     * @Route("/{job}", name="job")
+     * @Route("/{job<.+>}", name="job")
      */
     public function show(Job $job): Response
     {

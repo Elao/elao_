@@ -1,11 +1,10 @@
 ---
-type:           "post"
-title:          "A la recherche d'un développeur ou d'une développeuse Frontend pour notre agence de Lyon"
-publishdate:    "2018-02-27"
-draft:          false
-
+title:          ["A la recherche d'un développeur ou d'une développeuse Frontend pour notre agence de Lyon"]
 description:    "Nous recherchons un développeur ou une développeuse Frontend pour notre agence de Lyon."
+date:           "2018-02-27"
+active:         false
 
+type:           "post"
 thumbnail:      "images/posts/thumbnails/Chatfocus.jpg"
 header_img:     "images/posts/headers/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]

@@ -174,15 +174,17 @@
                             {% endfor %}
                             </ul>
                         {% endfor %}
-{#                      <li>#}
-{#                          {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}#}
-{#                          <a href="{{ path('jobs') }}">#}
-{#                              Nous recrutons#}
-{#                              {% if count %}#}
-{#                                  <span class="bullet">{{ count }}</span>#}
-{#                              {% endif %}#}
-{#                          </a>#}
-{#                      </li>#}
+                        <ul>
+                            <li>
+                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
+                                <a href="{{ path('jobs') }}">
+                                    Nous recrutons
+                                    {% if count %}
+                                        <span class="bullet">{{ count }}</span>
+                                    {% endif %}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="socials">
                         <ul>

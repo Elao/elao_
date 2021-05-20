@@ -302,15 +302,14 @@
             {% include 'partials/brick-visit.html.twig' %}
             {% include 'partials/brick-contact.html.twig' %}
 
-            {# TODO: once jobs are ready, wire back#}
-{#            <a href="{{ path('jobs') }}" class="brick-team">#}
-{#                <img src="{{ asset('build/images/tipi.svg') }}" alt="">#}
-{#                <h3 class="title">Rejoindre la tribu</h3>#}
-{#                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}#}
-{#                {% if count %}#}
-{#                    <span class="subtitle">{{count}} offres</span>#}
-{#                {% endif %}#}
-{#            </a>#}
+            <a href="{{ path('jobs') }}" class="brick-team">
+                <img src="{{ asset('build/images/tipi.svg') }}" alt="">
+                <h3 class="title">Rejoindre la tribu</h3>
+                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
+                {% if count %}
+                    <span class="subtitle">{{count}} offres</span>
+                {% endif %}
+            </a>
         </aside>
     </div>
 {% endblock %}

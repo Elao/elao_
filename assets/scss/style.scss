@@ -36,6 +36,7 @@ html.no-js [data-aos] {
 @import "components/_article-info";
 @import "components/_article-list";
 @import "components/_article-tag-list";
+@import "components/_banner";
 @import "components/_banner-case-study";
 @import "components/_banner-error";
 @import "components/_banner-home";
@@ -49,13 +50,13 @@ html.no-js [data-aos] {
 @import "components/_brick";
 @import "components/_brick-conception";
 @import "components/_brick-contact";
-@import "components/_brick-contribute";
-@import "components/_brick-development";
+@import "components/_brick-send-message";
 @import "components/_brick-team";
 @import "components/_brick-visit";
 @import "components/_btn";
 @import "components/_build-steps";
 @import "components/_bullet";
+@import "components/_call-to-action";
 @import "components/_certification-list";
 @import "components/_certification";
 @import "components/_check-block";
@@ -108,3 +109,4 @@ html.no-js [data-aos] {
 @import "pages/_page-technology";
 @import "pages/_page-values";
 @import "pages/_page-signature";
+@import "pages/_page-jobs";

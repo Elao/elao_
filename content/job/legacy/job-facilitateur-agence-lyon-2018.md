@@ -1,11 +1,11 @@
 ---
-type:           "post"
-title:          "Facilitateur(trice) projet, j'ai besoin d'aide."
-publishdate:    "2018-02-26"
-draft:          false
-
+title:          ["Facilitateur(trice) projet, j'ai besoin d'aide."]
 description:    "Nous recherchons un facilitateur(trice) projet pour notre agence de Lyon."
+date:           "2018-02-26"
+active:         false
 
+
+type:           "post"
 thumbnail:      "images/posts/thumbnails/riccardo-chiarini-247364.jpg"
 header_img:     "images/posts/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]

@@ -1,11 +1,10 @@
 ---
-type:           "post"
-title:          "À la recherche d'un développeur ou d'une développeuse Back"
-publishdate:    "2018-02-27"
-draft:          false
-
+title:          ["À la recherche d'un développeur ou d'une développeuse Back"]
 description:    "élao recherche un développeur ou une développeuse backend à Lyon."
+date:           "2018-02-27"
+active:         false
 
+type:           "post"
 thumbnail:      "images/posts/thumbnails/back.jpg"
 header_img:     "images/posts/headers/back.jpg"
 tags:           ["job", "web", "mobile", "lyon", "paris", "backend", "symfony", "PHP"]

@@ -14,7 +14,7 @@
         "league/glide-symfony": "^1.0",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.2",
-        "stenope/stenope": "0.x-dev",
+        "stenope/stenope": "dev-fix-assets-processor",
         "symfony/asset": "^5.2",
         "symfony/console": "^5.2",
         "symfony/dotenv": "^5.2",

@@ -1,0 +1,11 @@
+.page-job-posting {}
+
+.page-job-posting__content {
+  padding-left: 200px;
+}
+
+@media (max-width: $screen-md) {
+  .page-job-posting__content {
+    padding-left: 0;
+  }
+}

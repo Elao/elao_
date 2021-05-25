@@ -77,3 +77,11 @@ services:
             $provider: '@.inner'
             $disabled: '%env(bool:INCLUDE_SAMPLES)%'
             $ignored: ['example']
+
+    App\Stenope\Provider\SampleRemovalProvider.Job:
+        class: App\Stenope\Provider\SampleRemovalProvider
+        decorates: stenope.provider.files.App\Model\Job
+        arguments:
+            $provider: '@.inner'
+            $disabled: '%env(bool:INCLUDE_SAMPLES)%'
+            $ignored: ['example']

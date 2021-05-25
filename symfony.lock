@@ -35,6 +35,18 @@
     "elao/accesseo": {
         "version": "1.x-dev"
     },
+    "elao/enum": {
+        "version": "1.7",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.7",
+            "ref": "d44e1c8caa4cabcab399724df787de558459dd83"
+        },
+        "files": [
+            "config/packages/elao_enum.yaml"
+        ]
+    },
     "erusev/parsedown": {
         "version": "1.8.0-beta-7"
     },
@@ -487,7 +499,7 @@
         "version": "v3.0.5"
     },
     "twig/intl-extra": {
-        "version": "v3.0.5"
+        "version": "v3.3.0"
     },
     "twig/string-extra": {
         "version": "v3.3.0"

@@ -42,7 +42,7 @@ l'University Of Ghana.
 
 ## Progressive Web App
 
-Avec l'émergence des [Progressive Web Apps](/fr/dev/la-revanche-du-web-par-les-progressive-web-apps/), nous avons
+Avec l'émergence des [Progressive Web Apps](./la-revanche-du-web-par-les-progressive-web-apps.md), nous avons
 conseillé Chalkboard Education de revenir au web pour plusieurs raisons :
 
 - Le public visé est majoritairement sur Android, OS pour lequel actuellement les navigateurs supportent le mieux le

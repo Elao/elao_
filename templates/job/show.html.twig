@@ -1,8 +1,100 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title job.titleSeo ?? job.fullTitle %}
+{% block meta_description job.metaDescription ?? job.description %}
+
 {% block content %}
-    <h1>{{ job.title }}</h1>
-    <div>
-        {{ job.content|raw }}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('jobs') }}">
+                <span itemprop="name">Rejoindre la magic team</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">{{ job.fullTitle }}</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+
+    <div itemscope itemtype="https://schema.org/JobPosting">
+        <div class="banner">
+            <h1 class="banner__title" data-aos="fade-right" itemprop="title">
+                {% for title in job.title %}
+                    {% if loop.first %}
+                        {{ title }}
+                    {% else %}
+                        <span>{{ title }}</span>
+                    {% endif %}
+                {% endfor %}
+            </h1>
+            <div class="banner__highlight" data-aos="zoom-in">
+                <p itemprop="description">{{ job.description }}</p>
+                <i class="icon icon--semicolon" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="page-job-posting" itemscope itemtype="https://schema.org/JobPosting">
+            <ul class="tile-list">
+                <li class="tile" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--document" aria-hidden="true"></i>
+                        Type de contrat
+                    </small>
+                    <p itemprop="employmentType">{{ job.contractType }}</p>
+                </li>
+                <li class="tile tile--medium" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--location" aria-hidden="true"></i>
+                        Lieu
+                    </small>
+                    <p itemprop="jobLocation">{{ job.place }}</p>
+                </li>
+                <li class="tile tile--medium" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--time" aria-hidden="true"></i>
+                        Prise de poste
+                    </small>
+                    <p itemprop="jobStartDate">
+                        {{ job.hiringDate ? job.hiringDate|format_date(pattern='MMMM Y', locale='fr')|capitalize : '-' }}
+                    </p>
+                </li>
+            </ul>
+            <ul class="tile-list">
+                <li class="tile" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--diploma" aria-hidden="true"></i>
+                        Niveau de formation
+                    </small>
+                    <p itemprop="educationRequirements">{{ job.formation ?? '-' }}</p>
+                </li>
+                <li class="tile" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--time" aria-hidden="true"></i>
+                        Expérience
+                    </small>
+                    <p itemprop="experienceRequirements">{{ job.experience ?? '-' }}</p>
+                </li>
+                <li class="tile" data-aos="zoom-in-down">
+                    <small>
+                        <i class="icon icon--bill" aria-hidden="true"></i>
+                        Rémunération
+                    </small>
+                    <p itemprop="estimatedSalary">{{ job.remuneration ?? '-' }}</p>
+                </li>
+            </ul>
+
+            <div class="page-job-posting__content">
+                {{ job.content|raw }}
+            </div>
+        </div>
     </div>
 {% endblock %}

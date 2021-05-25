@@ -1,11 +1,10 @@
 .btn {
-  padding: 0 50px;
-  height: 67px;
-  display: inline-flex;
-  align-items: center;
+  padding: 20px 50px;
+  min-height: 67px;
   font-family: antikor bold;
   font-size: 18px !important;
   text-decoration: none;
+  text-align: center;
   border: none;
   transition: background ease-in .1s;
 
@@ -79,7 +78,6 @@
       transform-origin: bottom;
       opacity: 0;
       transition: transform .3s, opacity .3s;
-
     }
   }
 

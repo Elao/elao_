@@ -53,6 +53,10 @@ The Symfony CLI exposes you the URL at which the site is available.
 
     make watch
 
+## Writing an article
+
+Please, follow the [guidelines](https://elao.github.io/elao_/blog/styleguide/example/).
+
 ## Assets
 
 Reference images & other assets in Twig templates using `asset()`:

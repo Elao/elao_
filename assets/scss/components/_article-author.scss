@@ -2,6 +2,11 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
 }
 
 .article-author__image {
@@ -24,6 +29,10 @@
     margin-top: 2px;
     font-family: 'faktum bold';
     color: $color-light;
+  }
+
+  a:hover strong {
+    color: #fff;
   }
 }
 
@@ -73,7 +82,7 @@
     height: 60px;
 
     @for $i from 1 through 5 {
-      img:nth-child(#{$i}) {
+      a:nth-child(#{$i}) {
         position: absolute;
         left: #{$i * 45}px;
       }

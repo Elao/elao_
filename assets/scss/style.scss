@@ -27,6 +27,7 @@ html.no-js [data-aos] {
 @import "components/_admonition";
 @import "components/_alert";
 @import "components/_animated-block";
+@import "components/_animated-link";
 @import "components/_article-author";
 @import "components/_article-banner";
 @import "components/_article-content";
@@ -36,6 +37,7 @@ html.no-js [data-aos] {
 @import "components/_article-info";
 @import "components/_article-list";
 @import "components/_article-tag-list";
+@import "components/_banner";
 @import "components/_banner-case-study";
 @import "components/_banner-error";
 @import "components/_banner-home";
@@ -47,15 +49,17 @@ html.no-js [data-aos] {
 @import "components/_banner-values";
 @import "components/_breadcrumb";
 @import "components/_brick";
+@import "components/_brick-comment";
 @import "components/_brick-conception";
 @import "components/_brick-contact";
+@import "components/_brick-send-message";
 @import "components/_brick-contribute";
-@import "components/_brick-development";
 @import "components/_brick-team";
 @import "components/_brick-visit";
 @import "components/_btn";
 @import "components/_build-steps";
 @import "components/_bullet";
+@import "components/_call-to-action";
 @import "components/_certification-list";
 @import "components/_certification";
 @import "components/_check-block";
@@ -83,10 +87,9 @@ html.no-js [data-aos] {
 @import "components/_tag-list";
 @import "components/_team";
 @import "components/_technologies";
+@import "components/_tile";
 @import "components/_titles";
 @import "components/_values";
-@import "components/_brick-comment";
-@import "components/_animated-link";
 
 // generic
 @import "generic/_a";
@@ -95,6 +98,7 @@ html.no-js [data-aos] {
 @import "generic/_figure";
 @import "generic/_iframe";
 @import "generic/_img";
+@import "generic/_kbd";
 @import "generic/_ul";
 
 // pages
@@ -107,3 +111,5 @@ html.no-js [data-aos] {
 @import "pages/_page-technology";
 @import "pages/_page-values";
 @import "pages/_page-signature";
+@import "pages/_page-jobs";
+@import "pages/_page-job-posting";

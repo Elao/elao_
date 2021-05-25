@@ -8,10 +8,6 @@ active:      true
 
 ---
 
-Nous recherchons **un Intégrateur ou une Intégratrice Web en alternance**
-
-<!--more-->
-
 ## En quelques mots
 Nous œuvrons dans un environnement technique dédié à la conception et au développement d’applications web et mobile sur mesure. C’est le cœur de notre activité.
 Spécialistes open source et expert·e·s Symfony/JS avec une grosse culture devops, nous cherchons un·e intégrateur·rice HTML/CSS en alternance, pour former un binôme de choc avec [Amélie](../../member/adefrance.yaml), notre intégratrice certifiée [Opquast](https://www.opquast.com/). C'est Amélie qui vous aidera à progresser au quotidien sur les bonnes pratiques d'intégration.
@@ -66,7 +62,5 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 ## Pour postuler
 
 Nous attendons votre CV accompagnés de quelques mots sur [jobs@elao.com](mailto:jobs@elao.com?subject=Int%C3%A9grateur%C2%B7rice%20HTML%2FCSS%20en%20alternance), précisez-nous simplement **la date de démarrage de votre alternance** ainsi que le **rythme école / entreprise** envisagé. 
-
----
 
 À bientôt !

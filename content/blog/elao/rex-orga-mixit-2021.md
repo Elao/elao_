@@ -36,6 +36,7 @@ Nous avons proposé diverses options pour nos speakers :
 
 2021 arrive et nous découvrons WorkAdventure, un espace virtuel où chacun peut se déplacer librement avec son avatar et rentrer en interaction avec d'autres participants, déclencher l'ouverture d'iframe pour voir des vidéos ou des sites web ou encore participer à des petites conférences grâce à Jitsi. Nous testons ici chez Elao de créer une carte de notre bureau. Résultat : c'est sympa, on prend vite l'outil en main et je découvre avec beaucoup de satisfaction la création de map 😎. Hop, la solution est vite acceptée par la team MiXiT, et nous voilà à proposer un espace virtuel aux participants et des stands aux sponsors et associations qui ont répondu à l'appel. 
 C'est peut-être le meilleur souvenir que j'ai de la conférence, car nous nous sommes vraiment tous amusés à créer des petits mondes pour rendre la conférence plus humaine ! Bonus : ma fille a même participé en proposant des petites chèvres qui se baladent dans les mondes, et des requins dans l'océan qui borde deux des maps. Comment résister 🐐 🦈 ? Et puis j'ai passé des heures à construire avec elle des cartes pleines de petits poneys 🥰 (et de lacs de magmas). 
+Et puis surtout, la plus belle surprise de cette édition, ce sont les inventions très marrantes de Grégory, agiliste de profession, qui s'est révélé être un très bon comédien. Il nous a régalé avec un quizz très marrant qui porte sur l'histoire de MiXiT et sur de superbes vidéos d'intro. Je ne peux pas m'empêcher d'en partager ici ;
 
 ## L'outil de LiveStream : Vimeo (ne faites surtout pas ça chez vous)
 
@@ -54,13 +55,16 @@ Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème 
 Après le semi-fiasco de la soirée de mercredi soir (il y a eu au moins 20 minutes de retard pour le talk d'Isabelle Collet, la deuxième conférence de la soirée), nous décidons d'abandonner Vimeo car nous n'avons plus confiance. Fort heureusement, les suggestions d'outils et propositions n'ont pas manqué de pleuvoir auprès des membres de l'organisation. Merci à vous tous <3. Grâce à ça, nous basculons sur un outil open source Big Blue Button, hébergé localement par l'Ecole des Mines de Saint-Etienne. Un grand merci à eux de nous avoir fait cette proposition et de nous avoir rappelé que des solutions (qui marchent) existent, en dehors des noms déjà bien (trop) connus. 
 Aucun problème pour mettre à jour le site et faire en sorte que ce soit transparent pour nos participants (Merci CleverCloud pour l'hébergement et le déploiement zero downtime!).
 
-## Une édition difficile, mais une communauté en or 🥇
-
-Certes, la réalisation de cette édition n'a pas toujours été facile. Il y a toujours des aléas, mais le freeze du live a vraiment été un gros coup porté au moral. Mais le soutien de nos sponsors et la bienveillance des participant(e)s nous a fait chaud au coeur, et a rendu la conférence plus chaleureuse que prévu. Merci, vraiment, notamment à Florence C. des Duchesses et Esther, notre invitée géniale ! 
-
 ## Et puis l'équipe ? 
 
 On va pas se mentir, organiser une conférence en ligne, c'est pas aussi fun que d'habitude. Par exemple, on parle pas de la soirée, qui est le point culminant de la conférence. On parle pas non plus de "où on va mettre le camion à crèpes ?" et de tous les petits détails sympathiques qui vont nous rappeler que bientôt, on se voit tous, et que ça va être très cool. Et enfin, on a pas de sponsor bière (même si le sponsor bière était quand même sponsor, bisous Braincube (et vive l'Auvergne!)). Bref, on a même l'impression à un moment donné qu'on a "que" les mauvais côtés de la conférence : les réunions de l'équipe se font en visio, pareil pour les discussions avec les sponsors ou avec les associations qui ont un stand sur Workadventure, on ne voit personne. Donc ça, c'est ce qu'on vit tous depuis plusieurs mois : ça nous manque. 
 
 Puisqu'il paraît que ça fait du bien au cerveau, voici tout de même les effets positifs : 
 - On a pu faire des réunions avec des gens au 4 coins ~~du monde~~ de l'Europe (Pay-Bas, Montpellier, Saint-Etienne!) et accueillir de nouveaux membres et leur chat fou (coucou Audrey 😘!). On a été un peu plus organisé sur les outils de suivi et de travail, puisqu'on avait pas vraiment le choix ! 
+
+## Et maintenant ?
+
+Certes, la réalisation de cette édition n'a pas toujours été facile. Il y a toujours des aléas, mais le freeze du live a vraiment été un gros coup porté au moral. Mais le soutien de nos sponsors et la bienveillance des participant(e)s nous a fait chaud au coeur, et a rendu la conférence plus chaleureuse que prévu. Merci, vraiment, notamment à Florence C. des Duchesses et Esther, notre invitée géniale ! 
+De cette édition, je retiendrai surtout la programmation vraiment exceptionnelle (le replay est disponible), que nous avons reçu un très beau soutien de notre communauté, et enfin que les membres de votre équipe de bénévole peut avoir des talents vraiment insoupçonnés. 
+
+Cheers, et à l'année prochaine ! 🙌

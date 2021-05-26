@@ -49,21 +49,23 @@
                         <i class="icon icon--document" aria-hidden="true"></i>
                         Type de contrat
                     </small>
-                    <p itemprop="employmentType">CDI</p>
+                    <p itemprop="employmentType">{{ job.contractType }}</p>
                 </li>
                 <li class="tile tile--medium" data-aos="zoom-in-down">
                     <small>
                         <i class="icon icon--location" aria-hidden="true"></i>
                         Lieu
                     </small>
-                    <p itemprop="jobLocation">Lyon, remote possible</p>
+                    <p itemprop="jobLocation">{{ job.place }}</p>
                 </li>
                 <li class="tile tile--medium" data-aos="zoom-in-down">
                     <small>
                         <i class="icon icon--time" aria-hidden="true"></i>
                         Prise de poste
                     </small>
-                    <p itemprop="jobStartDate">Juin 2021</p>
+                    <p itemprop="jobStartDate">
+                        {{ job.hiringDate ? job.hiringDate|format_date(pattern='MMMM Y', locale='fr')|capitalize : '-' }}
+                    </p>
                 </li>
             </ul>
             <ul class="tile-list">
@@ -72,21 +74,21 @@
                         <i class="icon icon--diploma" aria-hidden="true"></i>
                         Niveau de formation
                     </small>
-                    <p itemprop="educationRequirements">BAC +3</p>
+                    <p itemprop="educationRequirements">{{ job.formation ?? '-' }}</p>
                 </li>
                 <li class="tile" data-aos="zoom-in-down">
                     <small>
                         <i class="icon icon--time" aria-hidden="true"></i>
                         Expérience
                     </small>
-                    <p itemprop="experienceRequirements">> 2 ans</p>
+                    <p itemprop="experienceRequirements">{{ job.experience ?? '-' }}</p>
                 </li>
                 <li class="tile" data-aos="zoom-in-down">
                     <small>
                         <i class="icon icon--bill" aria-hidden="true"></i>
                         Rémunération
                     </small>
-                    <p itemprop="estimatedSalary">Entre 1K€ et 100K€</p>
+                    <p itemprop="estimatedSalary">{{ job.remuneration ?? '-' }}</p>
                 </li>
             </ul>
 

@@ -10,6 +10,7 @@
         "ext-iconv": "*",
         "ext-json": "*",
         "composer/package-versions-deprecated": "^1.11",
+        "elao/enum": "^1.14",
         "league/glide-symfony": "^1.0",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^5.2",
@@ -38,7 +39,7 @@
         "symfony/webpack-encore-bundle": "^1.11",
         "symfony/yaml": "^5.2",
         "twig/extra-bundle": "^3.3",
-        "twig/intl-extra": "^3.0",
+        "twig/intl-extra": "^3.3",
         "twig/string-extra": "^3.3",
         "twig/twig": "^2.12|^3.0"
     },

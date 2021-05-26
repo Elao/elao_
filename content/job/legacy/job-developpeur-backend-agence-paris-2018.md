@@ -3,8 +3,8 @@ title:          ["À la recherche de développeurs.euses Back"]
 description:    "élao recherche des développeuses/développeurs backend à Paris."
 date:           "2018-06-11"
 active:         false
+contractType:   CDI
 
-type:           "post"
 thumbnail:      "images/posts/thumbnails/back-2.jpg"
 header_img:     "images/posts/headers/back-2.jpg"
 tags:           ["job", "web", "mobile", "paris", "backend", "symfony", "PHP"]

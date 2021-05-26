@@ -1540,16 +1540,16 @@
         },
         {
             "name": "stenope/stenope",
-            "version": "dev-fix-assets-processor",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "f399699ea3daf415876e0e10ddc91a8b0799256c"
+                "reference": "418bcfd1e7944f42513eb1a53a102d00d362f4ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/f399699ea3daf415876e0e10ddc91a8b0799256c",
-                "reference": "f399699ea3daf415876e0e10ddc91a8b0799256c",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/418bcfd1e7944f42513eb1a53a102d00d362f4ce",
+                "reference": "418bcfd1e7944f42513eb1a53a102d00d362f4ce",
                 "shasum": ""
             },
             "require": {
@@ -1587,6 +1587,7 @@
                 "symfony/twig-bridge": "^5.1",
                 "symfony/twig-bundle": "^5.1"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1623,9 +1624,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/fix-assets-processor"
+                "source": "https://github.com/StenopePHP/Stenope/tree/v0.2.0"
             },
-            "time": "2021-05-20T10:26:45+00:00"
+            "time": "2021-05-25T20:17:33+00:00"
         },
         {
             "name": "symfony/asset",

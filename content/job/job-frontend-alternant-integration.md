@@ -5,10 +5,16 @@ title:
 description: "Intégrer… l'équipe, en alternance."
 date:        "2021-05-16"
 active:      true
-
+contractType: CDI # 'CDD', 'CDI' ou 'INTERNSHIP'
+place:        "Lyon, remote possible"
+hiringDate:   "2021-06-01"
+formation:    "BAC +3"
+experience:   "> 2 ans"
+remuneration: ~
 ---
 
 ## En quelques mots
+
 Nous œuvrons dans un environnement technique dédié à la conception et au développement d’applications web et mobile sur mesure. C’est le cœur de notre activité.
 Spécialistes open source et expert·e·s Symfony/JS avec une grosse culture devops, nous cherchons un·e intégrateur·rice HTML/CSS en alternance, pour former un binôme de choc avec [Amélie](../../member/adefrance.yaml), notre intégratrice certifiée [Opquast](https://www.opquast.com/). C'est Amélie qui vous aidera à progresser au quotidien sur les bonnes pratiques d'intégration.
 
@@ -39,6 +45,7 @@ Pour vous en dire un peu plus, il peut s'agir d'intégrer de simples sites one p
 Vous avez donc envie de construire un code de qualité pour mener à bien une intégration pouvant s’avérer complexe et vous êtes force de proposition au sein des équipes.
 
 ### Les « basiques »
+
 * HTML5
 * CSS3 / SASS
 * Balisage sémantique
@@ -47,6 +54,7 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 * Savoir découper une maquette (depuis Sketch, Figma ou Photoshop)
 
 ### Les « petits plus » appréciables
+
 * Javascript
 * Git
 * Méthodologie (BEM, etc.)
@@ -56,6 +64,7 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 * JSX (React)
 
 ### Les « petits plus » qui peuvent faire la différence
+
 * Vous avez des notions d’accessibilité web, ou du moins y êtes sensible et avez envie d'apprendre ;
 * Vous avez une appétence graphique et êtes à l'aise avec l'idée d'être force de proposition en UX/UI.
 

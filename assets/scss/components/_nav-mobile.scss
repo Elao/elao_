@@ -15,9 +15,10 @@
     flex-direction: column;
     background: $color-brand;
     z-index: 1000;
+    overflow-y: auto;
 
     ul {
-      margin: 0 auto;
+      margin: 0 auto 45px;
       padding: 0 45px;
       height: 100%;
       min-width: 400px;

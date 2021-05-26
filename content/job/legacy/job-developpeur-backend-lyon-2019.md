@@ -3,8 +3,8 @@ title:          ["À la recherche d'une développeuse / un développeur Backend"
 description:    "élao recherche une développeuse / un développeur Backend à Lyon."
 date:           "2019-11-12"
 active:         false
+contractType:   CDI
 
-type:           "post"
 thumbnail:      "images/posts/2019/dev-back-nov-2019/image-full.jpg"
 header_img:     "images/posts/2019/dev-back-nov-2019/image-banner.jpg"
 tags:           ["job", "web", "lyon", "backend", "symfony", "PHP", "Javascript"]

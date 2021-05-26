@@ -1,0 +1,74 @@
+.tile {
+  &:before,
+  &:after { display: none; }
+
+  margin: 0 20px 40px;
+  padding: 35px 40px;
+  width: 290px;
+  min-width: 290px;
+  font-family: 'antikor bold';
+  font-size: 26px;
+  color: $color-light;
+  background: $color-dark;
+
+  small {
+    margin: 0 0 20px;
+    display: block;
+    font-family: 'faktum regular';
+    font-size: 16px;
+    color: #fff;
+
+    .icon {
+      font-size: 25px;
+      line-height: 1;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+}
+
+.tile-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.tile--medium {
+  min-width: 400px;
+}
+
+.tile--large {
+  min-width: 620px;
+}
+
+@media (max-width: $screen-lg) {
+  .tile-list {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .tile,
+  .tile--medium,
+  .tile--large {
+    margin: 0 5px 10px;
+    width: calc(50% - 10px);
+    min-width: unset;
+
+    &:last-of-type:not(:nth-child(even)) {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .tile-list {
+    flex-direction: column;
+  }
+
+  .tile {
+    margin: 0 0 10px;
+    width: 100%;
+  }
+}

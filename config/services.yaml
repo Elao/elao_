@@ -36,6 +36,8 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    # Tmp override the Stenope's TOC processor causing issues ("Notice: Undefined index: content")
+    Stenope\Bundle\Processor\TableOfContentProcessor: '@App\Stenope\Processor\TableOfContentProcessor'
     App\Stenope\Processor\TableOfContentProcessor:
         arguments:
             $defaultDepth: 2

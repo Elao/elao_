@@ -19,6 +19,7 @@ class JobContractType extends ReadableEnum
     public const CDI = 'CDI';
     public const CDD = 'CDD';
     public const INTERNSHIP = 'INTERNSHIP';
+    public const WORK_STUDY = 'WORK-STUDY';
 
     public static function readables(): array
     {
@@ -26,6 +27,7 @@ class JobContractType extends ReadableEnum
             self::CDI => 'CDI',
             self::CDD => 'CDD',
             self::INTERNSHIP => 'Stage',
+            self::WORK_STUDY => 'Alternance',
         ];
     }
 }

@@ -87,7 +87,7 @@ Déjà, il faut un outil de livestream. Après avoir fait un petit tour du march
 - Possibilité de streamer nos propres vidéos, de faire des transitions sympas, d'utiliser les flux vidéo et son de la team et des invités via OBS 
 - Une licence abordable pour les finances de l'association 💸
 
-Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème est un petit temps entre le temps réel et la transmission, qui nous semble surmontable. Hervé, un membre de l'orga, monte rapidement et avec beaucoup de talent sur l'outil (bravo à lui 👏) et prend en main la diffusion. Bon, si vous avez participé à la conférence, vous savez déjà que cela ne s'est PAS passé comme prévu 😅. 
+Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème est un petit lag entre le temps réel et la transmission, qui nous semble surmontable. Hervé, un membre de l'orga, monte rapidement et avec beaucoup de talent sur l'outil (bravo à lui 👏) et prend en main la diffusion. Bon, si vous avez participé à la conférence, vous savez déjà que cela ne s'est PAS passé comme prévu 😅. 
 
 Le premier jour de conférence s'est déroulé avec un léger freeze de quelques minutes, magnifiquement rattrapé par Guillaume Pitron. Mais le jour suivant, le live a été interrompu de nombreuses et longues minutes, ce qui nous a amené à ouvrir une cellule de crise et à changer notre solution technique en plein milieu de la conférence, un scenario cauchemardesque comme vous pouvez l'imaginer. 
 

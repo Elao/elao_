@@ -16,7 +16,7 @@ remuneration: "Selon profil"
 ## En quelques mots
 
 Nous œuvrons dans un environnement technique dédié à la conception et au développement d’applications web et mobile sur mesure. C’est le cœur de notre activité.
-Spécialistes open source et expert·e·s Symfony/JS avec une grosse culture devops, nous cherchons un·e intégrateur·rice HTML/CSS en alternance, pour former un binôme de choc avec [Amélie](../../member/adefrance.yaml), notre intégratrice certifiée [Opquast](https://www.opquast.com/). C'est Amélie qui vous aidera à progresser au quotidien sur les bonnes pratiques d'intégration.
+Spécialistes open source et expert·e·s Symfony/JS avec une grosse culture devops, nous cherchons un·e intégrateur·rice HTML/CSS en alternance, pour former un binôme de choc avec [Amélie](../member/adefrance.yaml), notre intégratrice certifiée [Opquast](https://www.opquast.com/). C'est Amélie qui vous aidera à progresser au quotidien sur les bonnes pratiques d'intégration.
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. **Elao reste pragmatique mais ne transige pas sur la qualité au quotidien.**
 

@@ -36,12 +36,10 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
-    # Tmp override the Stenope's TOC processor causing issues ("Notice: Undefined index: content")
-    Stenope\Bundle\Processor\TableOfContentProcessor: '@App\Stenope\Processor\TableOfContentProcessor'
-    App\Stenope\Processor\TableOfContentProcessor:
-        arguments:
-            $defaultDepth: 2
-        tags: [{ name: stenope.processor, priority: -10 }]
+    App\Stenope\Processor\DefaultTocProcessor:
+        tags:
+            - name: 'stenope.processor'
+              priority: '-90' # before the TableOfContentProcessor
 
     # Override default HTML Anchor processor:
     Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'

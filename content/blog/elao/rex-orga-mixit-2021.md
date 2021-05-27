@@ -117,7 +117,7 @@ Puisqu'il paraît que ça fait du bien au cerveau, voici tout de même un effet 
 
 ## Et maintenant ?
 
-Certes, la réalisation de cette édition n'a pas toujours été facile. Il y a toujours des aléas, mais le freeze du live a vraiment été un gros coup porté au moral. Mais le soutien de nos sponsors et la bienveillance des participant(e)s nous a fait chaud au coeur, et a rendu la conférence plus chaleureuse que prévu. Merci, vraiment, notamment à Florence C. des Duchesses et Esther, notre invitée géniale ! 
+Certes, la réalisation de cette édition n'a pas toujours été facile. Il y a toujours des aléas, mais le freeze du live a vraiment été un gros coup porté au moral. Heureusement, le soutien de nos sponsors et la bienveillance des participant·e·s nous a fait chaud au coeur, et a rendu la conférence plus chaleureuse que prévu. Merci, vraiment, notamment à Florence C. des Duchesses et Esther, notre invitée géniale ! 
 De cette édition, je retiendrai surtout la programmation vraiment exceptionnelle (le replay est disponible), que nous avons reçu un très beau soutien de notre communauté, et enfin que les membres de votre équipe de bénévoles peut avoir des talents vraiment insoupçonnés. 
 
 Cheers, et à l'année prochaine ! 🙌

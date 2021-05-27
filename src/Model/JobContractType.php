@@ -11,6 +11,7 @@ use Elao\Enum\ReadableEnum;
  * @method static JobContractType CDI()
  * @method static JobContractType CDD()
  * @method static JobContractType INTERNSHIP()
+ * @method static JobContractType WORK_STUDY()
  */
 class JobContractType extends ReadableEnum
 {

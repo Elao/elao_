@@ -113,7 +113,7 @@ On ne va pas se mentir, organiser une conférence en ligne, c'est pas aussi fun 
 
 Bref, on a même l'impression à un moment donné qu'on a "que" les mauvais côtés de la conférence : les réunions de l'équipe se font en visio, pareil pour les discussions avec les sponsors ou avec les associations qui ont un stand sur Workadventure, on ne voit personne. Donc ça, c'est ce qu'on vit tous depuis plusieurs mois : ça nous manque. 
 
-Puisqu'il paraît que ça fait du bien au cerveau, voici tout de même un effet de bord positif : on a pu faire des réunions avec des gens au 4 coins ~~du monde~~ de l'Europe (Pays-Bas, Montpellier, Saint-Etienne !) et accueillir de nouveaux membres et leur chat fou (coucou Audrey 😘 !). On a été un peu plus organisé sur les outils de suivi et de travail, puisqu'on n'avait pas vraiment le choix ! 
+Puisqu'il paraît que ça fait du bien au cerveau, voici tout de même un effet de bord positif : on a pu faire des réunions avec des gens aux 4 coins ~~du monde~~ de l'Europe (Pays-Bas, Montpellier, Saint-Etienne !) et accueillir de nouveaux membres et leur chat fou (coucou Audrey 😘 !). On a été un peu plus organisés sur les outils de suivi et de travail, puisqu'on n'avait pas vraiment le choix ! 
 
 ## Et maintenant ?
 

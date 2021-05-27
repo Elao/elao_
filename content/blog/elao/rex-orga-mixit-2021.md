@@ -73,7 +73,7 @@ Et puis surtout, la plus belle surprise de cette édition, ce sont les invention
 <figure>
     <img src="images/posts/2021/mixit/quizz-mixit2.jpg">
     <figcaption>
-      <span class="figure__legend">Quizz MiXiT avec question (avec la réponse D)</span>
+      <span class="figure__legend">Quiz MiXiT avec question (avec la réponse D)</span>
     </figcaption>
 </figure>
 

@@ -1,4 +1,8 @@
-.banner-methodology {}
+.banner-methodology {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .banner-methodology__title {
   margin-bottom: 60px;
@@ -37,12 +41,7 @@
 
 @media (max-width: $screen-sm) {
   .banner-methodology__title {
-    display: flex;
-    justify-content: center;
-
-    h1 {
-      margin: 0;
-    }
+    margin-bottom: 40px;
   }
 
   .banner-methodology__content {

@@ -209,6 +209,15 @@
     }
 
     .architecture,
+    .audit,
+    .tests {
+      img {
+        margin: 0 auto;
+        max-width: 350px;
+      }
+    }
+
+    .architecture,
     .audit {
       margin: 40px 0 0;
       flex-direction: column;
@@ -232,11 +241,7 @@
         margin: 0 0 40px;
       }
     }
-  }
-}
 
-@media (max-width: $screen-xs) {
-  .page-services {
     .banner-engineering {
       margin: 0 0 150px;
 
@@ -251,31 +256,12 @@
       }
     }
 
-    .banner-support {
-      margin: 0 0 60px;
-
-      &:before {
-        height: 35px;
-        width: 95px;
-        top: calc(100% - 20px);
-        right: 20px;
-        bottom: unset;
-        left: unset;
-      }
-
+    .banner-support,
+    .banner-tech-support {
+      &:before,
       &:after {
-        font-size: 40px;
-        top: 100%;
-        right: 45px;
-        left: unset;
+        display: none;
       }
-    }
-  }
-
-  .banner-tech-support {
-    &:before,
-    &:after {
-      display: none;
     }
   }
 }
@@ -285,6 +271,14 @@
     .btn {
       width: 100%;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .page-services {
+    .banner-support {
+      margin: 0 0 60px;
     }
   }
 }

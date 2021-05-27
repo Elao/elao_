@@ -109,7 +109,7 @@ Aucun problème pour mettre à jour le site et faire en sorte que ce soit transp
 
 ## Et puis l'équipe ? 
 
-On va pas se mentir, organiser une conférence en ligne, c'est pas aussi fun que d'habitude. Par exemple, on parle pas de la soirée, qui est le point culminant de la conférence. On ne parle pas non plus de "où on va mettre le camion à crèpes ?" et de tous les petits détails sympathiques qui vont nous rappeler que bientôt, on se voit tous, et que ça va être très cool. Et enfin, on a pas de sponsor bière (même si le sponsor bière était quand même sponsor, bisous Braincube (et vive l'Auvergne!)). 
+On ne va pas se mentir, organiser une conférence en ligne, c'est pas aussi fun que d'habitude. Par exemple, on ne parle pas de la soirée, qui est le point culminant de la conférence. On ne parle pas non plus de "où on va mettre le camion à crêpes ?" et de tous les petits détails sympathiques qui vont nous rappeler que bientôt, on se voit tous, et que ça va être très cool. Et enfin, on a pas de sponsor bière (même si le sponsor bière était quand même sponsor, bisous Braincube (et vive l'Auvergne!)). 
 
 Bref, on a même l'impression à un moment donné qu'on a "que" les mauvais côtés de la conférence : les réunions de l'équipe se font en visio, pareil pour les discussions avec les sponsors ou avec les associations qui ont un stand sur Workadventure, on ne voit personne. Donc ça, c'est ce qu'on vit tous depuis plusieurs mois : ça nous manque. 
 

@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    {% if article.tableOfContent %}
+    {% if article.tableOfContent is not empty %}
         <ol class="table-of-content" data-aos="fade-up">
             {% for headline in article.tableOfContent %}
                 <li class="table-of-content__item">

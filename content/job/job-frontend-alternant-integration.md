@@ -5,7 +5,7 @@ title:
 description: "Intégrer… l'équipe, en alternance."
 date:        "2021-05-16"
 active:      true
-contractType: INTERNSHIP # 'CDD', 'CDI' ou 'INTERNSHIP'
+contractType: WORK-STUDY # 'CDD', 'CDI', 'INTERNSHIP' ou 'WORK-STUDY'
 place:        "Lyon, remote possible"
 hiringDate:   ~
 formation:    "BAC +3"

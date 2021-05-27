@@ -1,7 +1,6 @@
 .banner-methodology {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .banner-methodology__title {
@@ -31,7 +30,7 @@
 
 @media (max-width: $screen-lg) {
   .banner-methodology__content {
-    padding: 0 70px;
+    padding: 0 40px 0 0;
 
     img {
       min-width: 350px;
@@ -40,6 +39,10 @@
 }
 
 @media (max-width: $screen-sm) {
+  .banner-methodology {
+    align-items: center;
+  }
+
   .banner-methodology__title {
     margin-bottom: 40px;
   }

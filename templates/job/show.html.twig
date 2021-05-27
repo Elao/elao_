@@ -3,6 +3,9 @@
 {% block meta_title job.titleSeo ?? job.fullTitle %}
 {% block meta_description job.metaDescription ?? job.description %}
 
+{% block og_image absolute_url(asset(job.ogImage|glide_image_preset('opengraph_image'))) %}
+{% block twitter_image absolute_url(asset(job.twitterImage|glide_image_preset('twitter_card'))) %}
+
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

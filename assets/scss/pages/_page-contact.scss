@@ -1,5 +1,9 @@
-.page-contact {
-  .h1--small {
-    margin-bottom: 50px;
+.page-contact {}
+
+@media (max-width: $screen-lg) {
+  .page-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

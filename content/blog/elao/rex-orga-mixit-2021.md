@@ -98,7 +98,7 @@ Le premier jour de conférence s'est déroulé avec un léger freeze de quelques
 Après le semi-fiasco de la soirée de mercredi soir (il y a eu au moins 20 minutes de retard pour le talk d'Isabelle Collet, la deuxième conférence de la soirée), nous décidons d'abandonner Vimeo car nous n'avons plus confiance. Fort heureusement, les suggestions d'outils et propositions n'ont pas manqué de pleuvoir auprès des membres de l'organisation. Merci à vous tous <3. 
 
 Grâce à ça, nous basculons sur un outil open source Big Blue Button, hébergé localement par l'Ecole des Mines de Saint-Etienne. Un grand merci à eux de nous avoir fait cette proposition et de nous avoir rappelé que des solutions (qui marchent) existent, en dehors des noms déjà bien (trop) connus. 
-Aucun problème pour mettre à jour le site et faire en sorte que ce soit transparent pour nos participants (Merci CleverCloud pour l'hébergement et le déploiement zero downtime!).
+Aucun problème pour mettre à jour le site et faire en sorte que ce soit transparent pour nos participants (merci CleverCloud pour l'hébergement et le déploiement zero downtime !).
 
 <figure>
     <img src="images/posts/2021/mixit/mixit-freeze.png">

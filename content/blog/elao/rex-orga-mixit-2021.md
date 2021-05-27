@@ -13,15 +13,12 @@ authors:            ["aldeboissieu"]
 ---
 Le challenge de l'édition 2019, c'était le changement de lieu pour la Manufacture de Tabacs, dans le but d'accueillir plus participants : de 350 à plus de 1000. Puis, vient 2020. L'organisation se passe bien, le programme est ficelé. Mais comme vous le savez, la mort dans l'âme, nous avons dû annuler car l'incertitude de la suite pesait trop sur notre moral. Finalement, nous avons bien fait, puisque nous avons été ensuite confinés. **Finalement, l'édition 2021 nous promettait encore plus de surprises !**
 
-<figure>
-    <img src="images/posts/2021/mixit/mixit-fun.png">
-    <figcaption>
-      <span class="figure__legend">MiXiT, dans le monde d'avant.</span>
-    </figcaption>
-</figure>
-
 Pourquoi faire un retour d'expérience cette année, et pas les années précédentes ? **Et bien tout simplement parce que cette année n'a pas été comme les autres sur l'organisation même de la conférence et celle de l'équipe.**
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/552546506?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MIXIT intro 18-05"></iframe></div> 
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<br>
 En passant, je tiens à remercier mon employeur Elao (qui héberge d'ailleurs ce billet de blog), qui permet à ses collaborateurs (et donc à moi) de prendre du temps de travail pour contribuer à des projets open source ou à des projets comme MiXiT, en estimant que cela est vertueux pour la communauté. Si vous pratiquez une activité bénévole, vous devez vous douter que c'est un filet de sécurité très confortable…
 
 ## Le choix de la conférence en ligne
@@ -33,6 +30,10 @@ Voyons les choses du côté positif :
 - Profitons-en pour inviter des speakers pour qui il est difficile de se déplacer habituellement, 
 - c'est bête à dire, mais c'est toujours "mieux" que "no MiXiT"
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/552546594?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MIXIT intro 20-05"></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<br>
+
 ## Aider les speakers à proposer une conférence de chez eux, de bonne qualité
 
 Nous avons proposé diverses options pour nos speakers : 
@@ -40,9 +41,9 @@ Nous avons proposé diverses options pour nos speakers :
 - une conférence pré-enregistrée, et s'ils le souhaitent, nous aurions envoyé chez eux un·e professionnel·le pour la captation > cette option n'a pas été retenue par nos invité·e·s. Ceux qui ont souhaité pré-enregistrer leur conférence l'ont fait par leurs propres moyens et se sont ensuite rendus disponible pour les questions/réponses (merci à eux !). Pour le cas d'une conférencière qui a du partir à l'étranger plus vite que prévu, Agnès et elle ont enregistré une session de questions/réponses entre elles, avec des questions préparées par Agnès. 
 
 <figure>
-    <img src="images/posts/2021/mixit/conference_esther.jpg">
+    <img src="images/posts/2021/mixit/conference-sinatou.png">
     <figcaption>
-      <span class="figure__legend">Setup : partage d'écran, conférencière et micro fluffy.</span>
+      <span class="figure__legend">Le talk pré-enregistré de Sinatou Saka.</span>
     </figcaption>
 </figure>
 
@@ -64,18 +65,15 @@ C'est peut-être le meilleur souvenir que j'ai de la conférence, car nous nous 
 Et puis surtout, la plus belle surprise de cette édition, ce sont les inventions très marrantes de Grégory, agiliste de profession, qui s'est révélé être un très bon comédien. Il nous a régalé avec un quizz très marrant qui porte sur l'histoire de MiXiT et sur de superbes vidéos d'intro. Je ne peux pas m'empêcher d'en partager ici ;
 
 <figure>
-    <img src="images/posts/2021/mixit/quizz-mixit.jpg">
-    <figcaption>
-      <span class="figure__legend">Quizz MiXiT</span>
-    </figcaption>
-</figure>
-
-<figure>
     <img src="images/posts/2021/mixit/quizz-mixit2.jpg">
     <figcaption>
       <span class="figure__legend">Quiz MiXiT avec question (avec la réponse D)</span>
     </figcaption>
 </figure>
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/552546561?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MIXIT intro 19-05"></iframe></div>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<br>
 
 ## L'outil de LiveStream : Vimeo (ne faites surtout pas ça chez vous)
 
@@ -87,11 +85,13 @@ Déjà, il faut un outil de livestream. Après avoir fait un petit tour du march
 - Possibilité de streamer nos propres vidéos, de faire des transitions sympas, d'utiliser les flux vidéo et son de la team et des invités via OBS 
 - Une licence abordable pour les finances de l'association 💸
 
-Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème est un petit lag entre le temps réel et la transmission, qui nous semble surmontable. Hervé, un membre de l'orga, monte rapidement et avec beaucoup de talent sur l'outil (bravo à lui 👏) et prend en main la diffusion. Bon, si vous avez participé à la conférence, vous savez déjà que cela ne s'est PAS passé comme prévu 😅. 
+Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème est un petit lag entre le temps réel et la transmission, qui nous semble surmontable. Hervé, un membre de l'orga, monte rapidement en compétence et avec beaucoup de talent sur l'outil (bravo à lui 👏) et prend en main la diffusion. Bon, si vous avez participé à la conférence, vous savez déjà que cela ne s'est PAS passé comme prévu 😅. 
 
 Le premier jour de conférence s'est déroulé avec un léger freeze de quelques minutes, magnifiquement rattrapé par Guillaume Pitron. Mais le jour suivant, le live a été interrompu de nombreuses et longues minutes, ce qui nous a amené à ouvrir une cellule de crise et à changer notre solution technique en plein milieu de la conférence, un scenario cauchemardesque comme vous pouvez l'imaginer. 
 
-![](images/posts/2021/mixit/crazy.gif)
+<figure>
+    <img src="images/posts/2021/mixit/crazy.gif">
+</figure>
 
 ## La crise
 
@@ -122,8 +122,16 @@ De cette édition, je retiendrai surtout la programmation vraiment exceptionnell
 
 Cheers, et à l'année prochaine ! 🙌
 
+<figure>
+    <img src="images/posts/2021/mixit/mixit-fun.png">
+    <figcaption>
+      <span class="figure__legend">MiXiT, dans le monde d'avant.</span>
+    </figcaption>
+</figure>
+
 Pour en savoir plus sur MiXiT : https://mixitconf.org/
-Pour voir les conférences : 
+
+Pour (re)voir les conférences : 
 - Carole Adam: [CovPrehension : simulation multi-agent pour expliquer la crise sanitaire](https://mixitconf.org/2021/covprehension-simulation-multi-agent-pour-expliquer-la-crise-sanitaire)
 - James Auger: [Means and Ends](https://mixitconf.org/2021/means-and-ends)
 - Guillaume Pitron: [Métaux rares: l'envers des technologies numériques](https://mixitconf.org/2021/metaux-rares-l-envers-des-technologies-numeriques)

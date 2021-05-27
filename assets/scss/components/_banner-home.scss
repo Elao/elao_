@@ -308,11 +308,10 @@
     .item {
       padding: 15px 20px;
       margin: 0;
-      height: 120px;
-      font-size: 16px;
-
-      width: 260px;
       margin-left: auto;
+      height: 120px;
+      width: calc(100% - 50px);
+      font-size: 16px;
 
       small {
         font-size: 14px;

@@ -11,7 +11,7 @@ tags:               ["conference", "mixit"]
 categories:         ["Elao"]
 authors:            ["aldeboissieu"]
 ---
-Le challenge de l'édition 2019, c'était le changement de lieu pour la Manufacture de Tabacs, dans le but d'accueillir plus participants : de 350 à plus de 1000. Puis, vient 2020. L'organisation se passe bien, le programme est ficelé. Mais comme vous le savez, la mort dans l'âme, nous avons dû annuler car l'incertitude de la suite pesait trop sur notre moral. Finalement, nous avons bien fait, puisque nous avons été ensuite confinés par la suite. **Finalement, l'édition 2021 nous promettait encore plus de surprises !**
+Le challenge de l'édition 2019, c'était le changement de lieu pour la Manufacture de Tabacs, dans le but d'accueillir plus participants : de 350 à plus de 1000. Puis, vient 2020. L'organisation se passe bien, le programme est ficelé. Mais comme vous le savez, la mort dans l'âme, nous avons dû annuler car l'incertitude de la suite pesait trop sur notre moral. Finalement, nous avons bien fait, puisque nous avons été ensuite confinés. **Finalement, l'édition 2021 nous promettait encore plus de surprises !**
 
 <figure>
     <img src="images/posts/2021/mixit/mixit-fun.png">

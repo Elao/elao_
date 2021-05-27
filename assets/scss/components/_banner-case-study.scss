@@ -91,6 +91,7 @@
       .icon {
         right: 35px;
         bottom: -35px;
+        font-size: 80px;
       }
     }
 
@@ -109,10 +110,11 @@
 @media (max-width: $screen-xs) {
   .banner-case-study__content {
     .highlight {
+      padding: 25px 40px;
       font-size: 18px;
 
       .icon {
-        font-size: 65px;
+        display: none;
       }
     }
   }

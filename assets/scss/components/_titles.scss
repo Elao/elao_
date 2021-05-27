@@ -113,12 +113,9 @@ h6, .h6 {
 
 @media (max-width: $screen-md) {
   h1, .h1 {
-    // margin-left: 70px;
-    // margin-bottom: 70px;
-
     margin: 0 0 40px;
     font-size: 32px;
-    line-height: 1.4;
+    line-height: 1.3;
   }
 
   h2, .h2 {
@@ -132,10 +129,6 @@ h6, .h6 {
 }
 
 @media (max-width: $screen-sm) {
-  h1, .h1 {
-    // margin-left: 40px;
-  }
-
   .anchor-title {
     scroll-margin-top: 50px;
 
@@ -147,7 +140,6 @@ h6, .h6 {
 
 @media (max-width: $screen-xs) {
   h1, .h1 {
-    // margin-bottom: 30px;
     font-size: 27px;
   }
 

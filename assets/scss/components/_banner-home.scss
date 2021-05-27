@@ -6,10 +6,25 @@
 }
 
 .banner-home__title {
-  margin-bottom: 65px !important;
-  position: static;
-  font-size: 58px !important;
+  margin: 0 0 65px 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'faktum bold';
+  font-size: 58px;
+  color: $color-brand;
   line-height: 1.3;
+
+  span {
+    color: $color-primary;
+
+    &:last-of-type {
+      &:after {
+        color: $color-brand;
+        content: '_';
+      }
+    }
+  }
 }
 
 .banner-home__content {
@@ -24,7 +39,7 @@
     margin: 0;
     width: 510px;
     font-family: 'antikor regular';
-    font-size: 32px;
+    font-size: 32px !important;
     font-weight: normal;
     color: #fff;
   }
@@ -111,7 +126,7 @@
       font-family: 'antikor medium';
       color: $color-primary;
       font-size: 76px;
-      line-height: 1;
+      line-height: 1.2;
     }
 
     small {
@@ -153,16 +168,16 @@
 
   .banner-home__content {
     padding: 0 70px;
-    width: 70%;
+    width: 85%;
     min-width: 250px;
     height: 230px;
     justify-content: center;
-    align-self: flex-end;
+    align-self: center;
     order: 2;
 
     h1 {
       width: unset;
-      font-size: 24px;
+      font-size: 24px !important;
     }
   }
 
@@ -229,13 +244,18 @@
     }
   }
 
+  .banner-home__content {
+    align-self: flex-end;
+  }
+
   .banner-home__list {
     flex-direction: column;
 
     .item {
       margin: 5px 0;
-      height: 185px;
-      width: 70%;
+      padding: 30px 60px;
+      height: unset;
+      width: 80%;
       min-width: 250px;
 
       .number {
@@ -246,18 +266,23 @@
 }
 
 @media (max-width: $screen-xs) {
+  .banner-home {
+    margin-top: 0;
+  }
+
   .banner-home__content {
-    padding: 20px 20px 30px;
+    padding: 20px 20px 40px;
     height: unset;
+    width: 100%;
 
     h1 {
-      font-size: 18px;
+      font-size: 18px !important;
     }
   }
 
   .banner-home__title {
-    margin-bottom: 30px;
-    font-size: 32px;
+    margin-bottom: 40px;
+    font-size: 35px !important;
   }
 
   .banner-home__image {
@@ -282,8 +307,16 @@
   .banner-home__list {
     .item {
       padding: 15px 20px;
+      margin: 0;
       height: 120px;
-      font-size: 18px;
+      font-size: 16px;
+
+      width: 260px;
+      margin-left: auto;
+
+      small {
+        font-size: 14px;
+      }
 
       .number {
         margin: 0;

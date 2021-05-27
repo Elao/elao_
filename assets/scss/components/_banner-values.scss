@@ -56,29 +56,12 @@
     width: 100%;
 
     .highlight {
-      width: 260px;
-      height: 90px;
-      bottom: -35px;
-      right: 30px;
-
-      .icon {
-        right: 30px;
-        bottom: -15px;
-        font-size: 50px;
-      }
+      display: none;
     }
 
     .image {
       width: 100%;
       height: 230px;
-    }
-  }
-}
-
-@media (max-width: $screen-xs) {
-  .banner-values__content {
-    .highlight {
-      right: 0;
     }
   }
 }

@@ -8,6 +8,8 @@ class Job
 {
     use MetaTrait;
 
+    public const DEFAULT_SOCIAL_IMG = 'images/common/elao-developpe-du-lien.jpg';
+
     public string $slug;
 
     /** @var string[] An array of title part that'll be separated by a new line on show */
@@ -38,5 +40,7 @@ class Job
     {
         // Defaults to CDI
         $this->contractType = JobContractType::CDI();
+        // Default social images
+        $this->ogImage = $this->twitterImage = self::DEFAULT_SOCIAL_IMG;
     }
 }

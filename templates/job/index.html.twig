@@ -1,9 +1,11 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{# TODO: better title & descr ? #}
 {% block meta_title "Les offres d'emploi d'Elao" %}
 {% block meta_description "Découvrez les offres d'emploi ouvertes chez Elao" %}
+
+{% block og_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('opengraph_image'))) %}
+{% block twitter_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">

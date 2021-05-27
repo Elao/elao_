@@ -3,8 +3,9 @@
 
 {% block meta_title %}{{ caseStudy.metaTitle|default(caseStudy.title) }} | {{ parent() }}{% endblock %}
 {% block meta_description %}{{ caseStudy.metaDescription|default(caseStudy.description)|default(parent()) }}{% endblock %}
-{% block og_image asset(caseStudy.images|first)  %}
-{% block twitter_image absolute_url(asset(caseStudy.images|first))  %}
+
+{% block og_image asset(caseStudy.images|first|glide_image_preset('opengraph_image')) %}
+{% block twitter_image absolute_url(asset(caseStudy.images|first|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
     <div class="page-project">

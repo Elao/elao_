@@ -55,12 +55,11 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 
 ### Les « petits plus » appréciables
 
-* Javascript
 * Git
 * Méthodologie (BEM, etc.)
 * Twig
 * Notions UX/UI
-* Gulp
+* Javascript
 * JSX (React)
 
 ### Les « petits plus » qui peuvent faire la différence

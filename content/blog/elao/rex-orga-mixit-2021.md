@@ -50,7 +50,7 @@ Nous avons proposé diverses options pour nos speakers :
 
 ## Des talks, d'accord, mais le reste ? 🥞 ??
 
-2021 arrive et nous découvrons WorkAdventure, un espace virtuel où chacun peut se déplacer librement avec son avatar et rentrer en interaction avec d'autres participants, déclencher l'ouverture d'iframe pour voir des vidéos ou des sites web ou encore participer à des petites conférences grâce à Jitsi. Nous testons ici chez Elao de créer une carte de notre bureau. Résultat : c'est sympa, on prend vite l'outil en main et je découvre avec beaucoup de satisfaction la création de map 😎. 
+2021 arrive et nous découvrons [WorkAdventure](https://workadventu.re/), un espace virtuel où chacun peut se déplacer librement avec son avatar et rentrer en interaction avec d'autres participants, déclencher l'ouverture d'iframe pour voir des vidéos ou des sites web ou encore participer à des petites conférences grâce à Jitsi. Nous testons ici chez Elao de créer une carte de notre bureau. Résultat : c'est sympa, on prend vite l'outil en main et je découvre avec beaucoup de satisfaction la création de map 😎. 
 
 Hop, la solution est vite acceptée par la team MiXiT, et nous voilà à proposer un espace virtuel aux participants et des stands aux sponsors et associations qui ont répondu à l'appel. 
 

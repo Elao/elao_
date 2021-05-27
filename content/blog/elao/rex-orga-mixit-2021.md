@@ -37,7 +37,7 @@ Voyons les choses du côté positif :
 
 Nous avons proposé diverses options pour nos speakers : 
 - une conférence en live "classique" : partage d'écran, caméra et audio. Pour les aider, nous leur proposons de leur offrir du matériel (micro, caméra)
-- une conférence pré-enregistrée, et s'ils le souhaitent, nous aurions envoyer chez eux un professionnel pour la captation > cette option n'a pas été retenue par nos invités. Ceux qui ont souhaité pré-enregistrer leur conférence l'ont fait de leur propre moyen et se sont ensuite rendus disponible pour les questions/réponse (merci à eux!). Pour le cas d'une conférencière qui a du partir à l'étranger plus vite que prévu, Agnès et elle ont enregistré une session de question/réponse entre elles, avec des questions qu'Agnès avait préparé. 
+- une conférence pré-enregistrée, et s'ils le souhaitent, nous aurions envoyé chez eux un·e professionnel·le pour la captation > cette option n'a pas été retenue par nos invité·e·s. Ceux qui ont souhaité pré-enregistrer leur conférence l'ont fait par leurs propres moyens et se sont ensuite rendus disponible pour les questions/réponses (merci à eux !). Pour le cas d'une conférencière qui a du partir à l'étranger plus vite que prévu, Agnès et elle ont enregistré une session de questions/réponses entre elles, avec des questions préparées par Agnès. 
 
 <figure>
     <img src="images/posts/2021/mixit/conference_esther.jpg">

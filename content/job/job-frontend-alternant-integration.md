@@ -5,12 +5,12 @@ title:
 description: "Intégrer… l'équipe, en alternance."
 date:        "2021-05-16"
 active:      true
-contractType: CDI # 'CDD', 'CDI' ou 'INTERNSHIP'
+contractType: INTERNSHIP # 'CDD', 'CDI' ou 'INTERNSHIP'
 place:        "Lyon, remote possible"
-hiringDate:   "2021-06-01"
+hiringDate:   ~
 formation:    "BAC +3"
-experience:   "> 2 ans"
-remuneration: ~
+experience:   ~
+remuneration: "Selon profil"
 ---
 
 ## En quelques mots
@@ -24,7 +24,7 @@ Backend, frontend et/ou devops, [les équipes](https://www.elao.com/la-tribu) di
 
 Dans ce contexte et pour renforcer la tribu dans les besoins d'intégration, nous vous proposons de rejoindre l'équipe lyonnaise. Une petite structure et une équipe jeune et dynamique.
 
-Pour le moment, contexte sanitaire oblige, une grande partie de l'équipe est quotidiennement en télétravail. Habiter Lyon n'est donc pas un pré-requis et **l'offre est ouverte aussi bien à Lyon qu'en full remote**. 
+Pour le moment, contexte sanitaire oblige, une grande partie de l'équipe est quotidiennement en télétravail. Habiter Lyon n'est donc pas un pré-requis et **l'offre est ouverte aussi bien à Lyon qu'en full remote**.
 
 Si aujourd'hui il s'agit d'une offre d'alternance, **l'objectif de toute embauche chez Elao est de se projeter à long terme**. Si nous en avons alors la possibilité, nous aimerions vous proposer par la suite un CDI.
 
@@ -33,7 +33,7 @@ Si aujourd'hui il s'agit d'une offre d'alternance, **l'objectif de toute embauch
 * Vous êtes en fin de cursus d'une école spécialisée en informatique et spécifiquement dans le développement web ;
 * Vous avez envie de vous former à l'intégration HTML/CSS de qualité ;
 * Vous avez une touche créative et une bonne sensibilité design ;
-* Vous êtes organisé·e, méthodique et à l’aise pour challenger votre art ; 
+* Vous êtes organisé·e, méthodique et à l’aise pour challenger votre art ;
 * Vous savez gérer efficacement votre temps et les priorités au sein des équipes projet : conçus sur mesure pour nos clients, nos projets sont divers et variés ;
 * Évidemment, vous êtes efficace, réactif·ve et motivé·e. Entre nous, l'inverse serait étonnant mais dans le doute... nous le précisons.
 
@@ -70,6 +70,6 @@ Vous avez donc envie de construire un code de qualité pour mener à bien une in
 
 ## Pour postuler
 
-Nous attendons votre CV accompagnés de quelques mots sur [jobs@elao.com](mailto:jobs@elao.com?subject=Int%C3%A9grateur%C2%B7rice%20HTML%2FCSS%20en%20alternance), précisez-nous simplement **la date de démarrage de votre alternance** ainsi que le **rythme école / entreprise** envisagé. 
+Nous attendons votre CV accompagnés de quelques mots sur [jobs@elao.com](mailto:jobs@elao.com?subject=Int%C3%A9grateur%C2%B7rice%20HTML%2FCSS%20en%20alternance), précisez-nous simplement **la date de démarrage de votre alternance** ainsi que le **rythme école / entreprise** envisagé.
 
 À bientôt !

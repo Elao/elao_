@@ -26,7 +26,7 @@ En passant, je tiens à remercier mon employeur Elao (qui héberge d'ailleurs ce
 
 ## Le choix de la conférence en ligne
 
-Nous décidons, en septembre 2020, d'organiser une conférence en ligne et non en présentiel, car nous savons que l'incertitude est trop démotivante pour l'équipe. Nous ne voulions pas nous lancer dans une édition "comme d'habitude mais en ligne", car nous-même n'aurions pas envie d'y participer. Nous avons plutôt imaginé **des sessions courtes, en fin de soirée, pour que les spectateurs puissent se retrouver** ensemble boire un verre de jus de pomme (ou autre) et grignoter une crêpe (ou autre), si cela pouvait être possible. Rappelez-vous, en septembre 2020: c'était difficile de savoir ce qu'il serait possible de faire.
+Nous décidons, en septembre 2020, d'organiser une conférence en ligne et non en présentiel, car nous savons que l'incertitude est trop démotivante pour l'équipe. Nous ne voulions pas nous lancer dans une édition "comme d'habitude mais en ligne", car nous-même n'aurions pas envie d'y participer. Nous avons plutôt imaginé **des sessions courtes, en fin de soirée, pour que les spectateurs puissent se retrouver** ensemble boire un verre de jus de pomme (ou autre) et grignoter une crêpe (ou autre), si cela pouvait être possible. Rappelez-vous, en septembre 2020 : c'était difficile de savoir ce qu'il serait possible de faire.
 
 Voyons les choses du côté positif :
 

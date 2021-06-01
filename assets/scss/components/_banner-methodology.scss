@@ -1,4 +1,7 @@
-.banner-methodology {}
+.banner-methodology {
+  display: flex;
+  flex-direction: column;
+}
 
 .banner-methodology__title {
   margin-bottom: 60px;
@@ -27,7 +30,7 @@
 
 @media (max-width: $screen-lg) {
   .banner-methodology__content {
-    padding: 0 70px;
+    padding: 0 40px 0 0;
 
     img {
       min-width: 350px;
@@ -36,13 +39,12 @@
 }
 
 @media (max-width: $screen-sm) {
-  .banner-methodology__title {
-    display: flex;
-    justify-content: center;
+  .banner-methodology {
+    align-items: center;
+  }
 
-    h1 {
-      margin: 0;
-    }
+  .banner-methodology__title {
+    margin-bottom: 40px;
   }
 
   .banner-methodology__content {

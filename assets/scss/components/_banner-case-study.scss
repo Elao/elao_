@@ -15,11 +15,8 @@
   display: flex;
 
   .info {
-    padding: 20px 40px;
+    padding: 100px 30px 40px 30px;
     flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
 
     p {
       width: 400px;
@@ -59,6 +56,7 @@
 
 @media (max-width: $screen-lg) {
   .banner-case-study {
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,7 +71,7 @@
     align-items: flex-start;
 
     .info {
-      margin: 40px 0;
+      margin: 0 0 40px;
       padding: 0;
       width: 100%;
       align-items: flex-start;
@@ -93,6 +91,7 @@
       .icon {
         right: 35px;
         bottom: -35px;
+        font-size: 80px;
       }
     }
 
@@ -111,10 +110,11 @@
 @media (max-width: $screen-xs) {
   .banner-case-study__content {
     .highlight {
+      padding: 25px 40px;
       font-size: 18px;
 
       .icon {
-        font-size: 65px;
+        display: none;
       }
     }
   }

@@ -29,7 +29,7 @@
   }
 
   .nav-mobile__header {
-    margin: 0 20px 90px;
+    margin: 10px 20px 90px;
     min-height: 60px;
     justify-content: space-between;
     display: flex;
@@ -107,7 +107,7 @@
 @media (max-width: $screen-xs) {
   .nav-mobile--open {
     ul {
-      min-width: 230px;
+      min-width: 280px;
     }
   }
 }

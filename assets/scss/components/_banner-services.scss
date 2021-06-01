@@ -56,7 +56,7 @@
   }
 
   .banner-services__title {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: static;
   }
 
@@ -86,7 +86,15 @@
 }
 
 @media (max-width: $screen-sm) {
+  .banner-services__title {
+    max-width: 250px;
+  }
+
   .banner-services__content {
+    .image {
+      top: calc(100% - 25px);
+    }
+
     .highlight {
       font-size: 18px;
     }

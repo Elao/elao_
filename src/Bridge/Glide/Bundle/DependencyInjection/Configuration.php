@@ -16,7 +16,6 @@ class Configuration implements ConfigurationInterface
     {
         $rootNode = ($treeBuilder = new TreeBuilder('glide'))->getRootNode();
 
-        // @phpstan-ignore-next-line
         $rootNode
             ->children()
                 ->scalarNode('base_url')

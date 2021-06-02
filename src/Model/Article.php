@@ -6,7 +6,7 @@ namespace App\Model;
 
 use App\Stenope\Processor\GithubEditLinkProcessor;
 use Stenope\Bundle\Processor\TableOfContentProcessor;
-use Stenope\Bundle\TableOfContent\Headline;
+use Stenope\Bundle\TableOfContent\TableOfContent;
 
 class Article
 {
@@ -39,11 +39,9 @@ class Article
     /**
      * Automatically generated
      *
-     * @var Headline[]
-     *
      * @see TableOfContentProcessor
      */
-    public array $tableOfContent = [];
+    public ?TableOfContent $tableOfContent = null;
 
     /**
      * True if the article is obsolete/outdated.

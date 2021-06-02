@@ -153,70 +153,13 @@
             </div>
         </header>
         <div class="container">
-        <main>
-            {% block content %}{% endblock %}
-        </main>
-        {% block footer %}
-            <footer class="footer">
-                <section class="footer__links">
-                    <p class="h1">
-                        elao
-                        <span>développe</span>
-                         <span>du lien</span>
-                    </p>
-                    <div class="links">
-                        {% for col in site.footer %}
-                            <ul>
-                            {% for item in col %}
-                                <li>
-                                    <a href="{{ path(item.path) }}">{{ item.label }}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        {% endfor %}
-                        <ul>
-                            <li>
-                                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                                <a href="{{ path('jobs') }}">
-                                    Nous recrutons
-                                    {% if count %}
-                                        <span class="bullet">{{ count }}</span>
-                                    {% endif %}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="socials">
-                        <ul>
-                            <li>
-                                <a href="{{ site.social.github }}" target="_blank">
-                                    <i class="icon icon--github"></i>
-                                    Github
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ site.social.twitter }}" target="_blank">
-                                    <i class="icon icon--twitter"></i>
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ site.social.instagram }}" target="_blank">
-                                    <i class="icon icon--instagram"></i>
-                                    Instagram
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <section class="footer__legals">
-                    <span>© 2005 - {{ 'now'|date('Y') }} - ELAO - Tous droits réservés</span>
-                    <a href="{{ path('legal') }}">Mentions légales</a>
-                    <a href="{{ path('privacy') }}">Protection des données</a>
-                </section>
-            </footer>
+            <main>
+                {% block content %}{% endblock %}
+            </main>
+            {% block footer %}
+                {{ include('footer.html.twig') }}
+            {% endblock %}
         </div>
-        {% endblock %}
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

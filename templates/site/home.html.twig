@@ -306,8 +306,8 @@
                 <img src="{{ asset('build/images/tipi.svg') }}" alt="">
                 <h3 class="title">Rejoindre la tribu</h3>
                 {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                {% if count %}
-                    <span class="subtitle">{{count}} offres</span>
+                {% if count > 0 %}
+                    <span class="subtitle">{{ 'job_offers'|trans({ count: count }) }}</span>
                 {% endif %}
             </a>
         </aside>

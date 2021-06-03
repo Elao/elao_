@@ -17,7 +17,7 @@
   .job {
     margin: 0 0 40px;
     font-family: 'antikor bold';
-    font-size: 18px;
+    font-size: 1.8rem;
     color: $color-brand;
   }
 
@@ -41,7 +41,7 @@
 
     li {
       margin: 0 15px;
-      font-size: 30px;
+      font-size: 3rem;
 
       &:before,
       &:after { display: none; }
@@ -79,7 +79,7 @@
     span {
       margin-bottom: 10px;
       font-family: 'antikor bold';
-      font-size: 45px;
+      font-size: 4.5rem;
       color: $color-primary;
       line-height: 1;
     }
@@ -148,7 +148,7 @@
       transform: translateX(-50%) !important;
 
       span {
-        font-size: 45px;
+        font-size: 4.5rem;
       }
     }
   }
@@ -187,7 +187,7 @@
       width: 220px;
 
       span {
-        font-size: 32px;
+        font-size: 3.2rem;
       }
     }
   }

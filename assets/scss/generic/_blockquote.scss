@@ -3,7 +3,7 @@ blockquote {
   padding: 0;
   position: relative;
   font-family: 'antikor regular';
-  font-size: 28px;
+  font-size: 2.8rem;
   color: $color-text;
   line-height: 1.4;
 
@@ -12,7 +12,7 @@ blockquote {
     top: -15px;
     left: -110px;
     font-family: 'icomoon';
-    font-size: 60px;
+    font-size: 6rem;
     color: $color-brand;
     content: '\e911';
     line-height: 1;
@@ -30,18 +30,18 @@ blockquote:nth-of-type(even),
   background: $color-primary;
   color: #fff;
   font-family: 'faktum regular';
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1.6;
 
   &:before {
     top: -45px;
     left: 40px;
-    font-size: 65px;
+    font-size: 6.5rem;
   }
 
   cite {
     font-family: 'faktum bold';
-    font-size: 16px;
+    font-size: 1.6rem;
     font-style: normal;
     text-align: right;
   }
@@ -55,7 +55,7 @@ blockquote:nth-of-type(even),
     &:before {
       top: -45px;
       left: 0;
-      font-size: 45px;
+      font-size: 4.5rem;
     }
   }
 
@@ -66,14 +66,14 @@ blockquote:nth-of-type(even),
     &:before {
       top: -40px;
       left: 30px;
-      font-size: 60px;
+      font-size: 6rem;
     }
   }
 }
 
 @media (max-width: $screen-xs) {
   blockquote {
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 1.8;
   }
 

@@ -9,14 +9,14 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'faktum regular';
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
   background: $color-brand;
 
   h1 {
     margin: 0 0 20px;
     font-family: 'antikor bold';
-    font-size: 32px;
+    font-size: 3.2rem;
     color: #fff;
   }
 }
@@ -37,12 +37,12 @@
 @media (max-width: $screen-sm) {
   .article-header {
     padding: 35px 30px 50px;
-    font-size: 18px;
+    font-size: 1.8rem;
     line-height: 1.5;
 
     h1 {
       margin-top: 0;
-      font-size: 24px;
+      font-size: 2.4rem;
       line-height: 1.4;
     }
   }

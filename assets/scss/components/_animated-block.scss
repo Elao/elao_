@@ -6,7 +6,7 @@
   justify-content: space-between;
   text-decoration: none;
   font-family: faktum bold;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: $color-primary;
   border: solid 4px $color-secondary;
   background: transparent;
@@ -111,14 +111,14 @@
     margin: 0 0 5px;
     display: flex;
     font-family: antikor regular;
-    font-size: 18px;
+    font-size: 1.8rem;
     color: #f4756d;
   }
 
   .icon {
     margin-left: 15px;
     color: $color-brand;
-    font-size: 20px;
+    font-size: 2rem;
     transition: transform ease-in-out .2s;
   }
 
@@ -134,7 +134,7 @@
   .animated-block {
     padding: 20px 25px;
     height: 135px;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .animated-block__icon {
@@ -144,8 +144,8 @@
   }
 
   .animated-block__content {
-        .title {
-      font-size: 16px;
+    .title {
+      font-size: 1.6rem;
     }
   }
 }

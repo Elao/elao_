@@ -3,7 +3,7 @@
   min-height: 67px;
   display: inline-flex;
   font-family: antikor bold;
-  font-size: 18px !important;
+  font-size: 1.8rem !important;
   text-decoration: none;
   text-align: center;
   border: none;
@@ -121,6 +121,6 @@
 
 @media (max-width: $screen-xs) {
   .btn {
-    font-size: 16px !important;
+    font-size: 1.6rem !important;
   }
 }

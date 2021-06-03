@@ -21,7 +21,7 @@
     p {
       width: 400px;
       font-family: 'faktum regular';
-      font-size: 20px;
+      font-size: 2rem;
       color: $color-text;
       line-height: 1.6;
     }
@@ -38,7 +38,7 @@
     justify-content: center;
     flex: 1;
     font-family: "antikor regular";
-    font-size: 24px;
+    font-size: 2.4rem;
     color: #fff;
     line-height: 1.6;
     background: $color-brand;
@@ -47,7 +47,7 @@
       position: absolute;
       right: 10px;
       bottom: -45px;
-      font-size: 110px;
+      font-size: 11rem;
       color: $color-secondary;
       line-height: 1;
     }
@@ -91,7 +91,7 @@
       .icon {
         right: 35px;
         bottom: -35px;
-        font-size: 80px;
+        font-size: 8rem;
       }
     }
 
@@ -111,7 +111,7 @@
   .banner-case-study__content {
     .highlight {
       padding: 25px 40px;
-      font-size: 18px;
+      font-size: 1.8rem;
 
       .icon {
         display: none;

@@ -38,7 +38,7 @@
   justify-content: center;
   font-family: 'antikor regular';
   color: $color-light;
-  font-size: 18px;
+  font-size: 1.8rem;
   background: $color-dark;
   border: none;
   transition: background ease-in .2s;
@@ -53,13 +53,13 @@
   .title {
     color: #fff;
     font-family: 'faktum bold';
-    font-size: 46px;
+    font-size: 4.6rem;
   }
 
   .icon {
     position: absolute;
     bottom: -35px;
-    font-size: 125px;
+    font-size: 12.5rem;
   }
 
   .icon--bracket-left {
@@ -99,12 +99,12 @@
     height: 200px;
 
     .title {
-      font-size: 32px;
+      font-size: 3.2rem;
     }
 
     .icon {
       bottom: -20px;
-      font-size: 64px;
+      font-size: 6.4rem;
     }
 
     .icon--chevrons-right {

@@ -64,7 +64,7 @@
     padding: 25px 35px;
     min-width: 370px;
     display: flex;
-    font-size: 16px;
+    font-size: 1.6rem;
     background: $color-dark;
   }
 
@@ -79,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'faktum regular';
-    font-size: 20px;
+    font-size: 2rem;
     transition: background ease-in .15s;
 
     &:hover,
@@ -91,7 +91,7 @@
     .title {
       margin: 0 0 20px;
       font-family: 'antikor bold';
-      font-size: 32px;
+      font-size: 3.2rem;
       color: #fff;
       line-height: normal !important;
     }
@@ -149,10 +149,10 @@
         width: 100%;
         height: unset;
         min-height: 250px;
-        font-size: 16px;
+        font-size: 1.6rem;
 
         .title {
-          font-size: 24px;
+          font-size: 2.4rem;
         }
       }
     }

@@ -1,3 +1,5 @@
+import '../scss/style.scss';
+
 // start the Stimulus application
 import './bootstrap';
 import AOS from 'aos';

@@ -24,6 +24,10 @@ start:
 watch:
 	npm run watch
 
+## Start webpack dev server with HMR (Hot reload)
+dev:
+	npx encore dev-server --mode=development --port=8085
+
 clear:
 	rm -rf build public/build
 

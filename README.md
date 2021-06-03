@@ -49,9 +49,11 @@ The Symfony CLI exposes you the URL at which the site is available.
 
     make build
 
-### Start asset watcher
+### Start Webpack dev-server
 
-    make watch
+To build assets for development purposes, with HMR (hot reloading) enabled, run:
+
+    make dev
 
 ## Writing an article
 

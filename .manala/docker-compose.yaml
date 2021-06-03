@@ -50,6 +50,8 @@ services:
       - ./php/fpm.conf:/etc/php/7.4/fpm/pool.d/zz-www.conf:ro
       - ..:/srv:cached
       - ${SSH_AUTH_SOCK:-/dev/null}:${SSH_AUTH_SOCK:-/tmp/null}
+    ports:
+        - '8085:8085'
     links:
       - maildev
     environment:

@@ -1,4 +1,6 @@
 const Encore = require('@symfony/webpack-encore');
+const path = require('path');
+const chokidar = require('chokidar');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -83,7 +85,20 @@ Encore
 
     // Required for styles hot reloading with Webpack dev server
     .disableCssExtraction(Encore.isDevServer())
-;
+    .configureDevServerOptions(options => {
+        // Watch Twig files to force reload the browser on changes:
 
+        // Supposed to work as of https://github.com/webpack/webpack-dev-server/pull/3136, but does not:
+        // options.watchFiles = [path.join(__dirname, '/templates/**/*.twig')]
+
+        options.onBeforeSetupMiddleware = (devServer) => {
+            const files = [path.resolve(__dirname, 'templates/**/*.html.twig')]
+
+            chokidar.watch(files).on('all', () => {
+                devServer.sockWrite(devServer.sockets, 'content-changed')
+            })
+        }
+    })
+;
 
 module.exports = Encore.getWebpackConfig();

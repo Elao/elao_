@@ -39,22 +39,23 @@ services:
 
   app:
     hostname: app.elao
-    build:
-      context: .
-      target: app
+    extends:
+      file: ./docker.common-services.yaml
+      service: app.template
     restart: always
     volumes:
       - ./php/app.ini:/etc/php/7.4/cli/conf.d/php.ini:ro
       - ./php/app.ini:/etc/php/7.4/fpm/conf.d/php.ini:ro
       - ./php/xdebug/${OS}.ini:/etc/php/7.4/fpm/conf.d/xdebug.ini:ro
       - ./php/fpm.conf:/etc/php/7.4/fpm/pool.d/zz-www.conf:ro
-      - ..:/srv:cached
-      - ${SSH_AUTH_SOCK:-/dev/null}:${SSH_AUTH_SOCK:-/tmp/null}
-    ports:
-        - '8085:8085'
     links:
       - maildev
-    environment:
-      - STARSHIP_CONFIG=/srv/.manala/starship/config.toml
-      - XDG_CACHE_HOME=/srv/.manala/.cache
-      - SSH_AUTH_SOCK=${SSH_AUTH_SOCK:-/dev/null}
+
+  app.webpack-dev:
+    extends:
+        file: ./docker.common-services.yaml
+        service: app.template
+    restart: always
+    ports:
+        - '8085:8085'
+    command: make dev

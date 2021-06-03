@@ -51,7 +51,9 @@ The Symfony CLI exposes you the URL at which the site is available.
 
 ### Start Webpack dev-server
 
-To build assets for development purposes, with HMR (hot reloading) enabled, run:
+If you're using Docker, the dev-server is already started for you.
+
+Otherwise, in order to build assets for development purposes, with HMR (hot reloading) enabled, run:
 
     make dev
 

@@ -1,0 +1,12 @@
+services:
+    app.template:
+        build:
+            context: .
+            target: app
+        volumes:
+            - ..:/srv:cached
+            - ${SSH_AUTH_SOCK:-/dev/null}:${SSH_AUTH_SOCK:-/tmp/null}
+        environment:
+            - STARSHIP_CONFIG=/srv/.manala/starship/config.toml
+            - XDG_CACHE_HOME=/srv/.manala/.cache
+            - SSH_AUTH_SOCK=${SSH_AUTH_SOCK:-/dev/null}

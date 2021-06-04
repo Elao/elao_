@@ -26,7 +26,7 @@ Pour aller plus loin dans la mise en place de ce pattern, Quentin a eu l’idée
 
 Je trouve cette solution très intéressante lorsque l’on souhaite créer une application complexe et que l’on veux documenter facilement les différents composant graphique de celle-ci.
 
-Lien vers sa présentation : https://docs.google.com/presentation/d/1E1aFvrFC5Fbda2DJVg7cUR8NKIhaTdhpowyRWRQ2n1c/edit?usp=sharing
+Lien : [Présentation](https://docs.google.com/presentation/d/1E1aFvrFC5Fbda2DJVg7cUR8NKIhaTdhpowyRWRQ2n1c/edit?usp=sharing), [Bundle](https://github.com/qmachard/atomic-design-bundle)
 
 # Montez à bord d'une équipe autonome ! par David Laizé
 

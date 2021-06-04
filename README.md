@@ -33,6 +33,11 @@ When Docker, use
 
 to log into the container before running the next commands.
 
+If you use a local install, next commands can be used, but you can also start
+the whole application using a single command:
+
+    make start
+
 ## Start the server
 
     make up
@@ -41,7 +46,7 @@ The site is now available at: http://localhost:8080
 
 Alternatively, if you use a local install & Symfony CLI, you can use:
 
-    make start
+    make serve
 
 The Symfony CLI exposes you the URL at which the site is available.
 

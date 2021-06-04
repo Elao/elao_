@@ -16,8 +16,13 @@ install:
 # Development #
 ###############
 
-## Start dev server
+## Start the whole application for development purposes (local only)
 start:
+	# https://www.npmjs.com/package/concurrently
+	npx concurrently "make serve" "make dev" --names="Symfony,Webpack" --prefix=name --kill-others --kill-others-on-fail
+
+## Start Symfony server
+serve:
 	symfony server:start --no-tls
 
 ## Watch assets
@@ -28,6 +33,7 @@ watch:
 dev:
 	npx encore dev-server --mode=development --port=8085
 
+## Clear the build and assets
 clear:
 	rm -rf build public/build
 

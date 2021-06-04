@@ -30,5 +30,12 @@ Lien vers sa présentation : https://docs.google.com/presentation/d/1E1aFvrFC5Fb
 
 # Montez à bord d'une équipe autonome ! par David Laizé
 
+De ce que j’ai retenu pour être une bonne équipe autonome, il faut
 
+- Avoir des règles explicites : sans un cadre précis personne ne sais ce qu’il doit faire
+- Partager, sur tout, tous le temps, il ne faux rien garder pour soit
+- Être solidaire avec ses équipiers, faire des revues de code systématique, transmettre son savoir
+- Se remettre en question en permanence (toujours rechercher la meilleure approcher, ne pas ce reposer sur ses acquis)
+
+Par contre avoir une equipe complètement autonome est quelque chose de très rare.
 

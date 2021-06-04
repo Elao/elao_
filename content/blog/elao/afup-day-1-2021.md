@@ -18,6 +18,16 @@ Voici quelques notes de l'équipe d'Elao et qui vous propose de faire un zoom su
 
 # Réconcilier le Back et le Front dans un projet Symfony, par Quentin Machard
 
+Cette session présentais la mise en place du pattern Atomic Design au sein d’une application Symfony.
+
+L’Atomic Design consiste à découper ses templates en plusieurs fichiers de granularités différentes (Atomes, Molécules, Organisme, Templates & Pages), C’est une philosophie qui est beaucoup plus utilisé dans les framework front comme React ou VueJS où l’ont va créer des composants réutilisables.
+
+Pour aller plus loin dans la mise en place de ce pattern, Quentin a eu l’idée de créer un Bundle permettant de documenter ces templates ainsi que leur différent états facilement (Pour les autres langages nous pouvons utiliser StoryBook, qui lui a fortement servis d’inspiration).
+
+Je trouve cette solution très intéressante lorsque l’on souhaite créer une application complexe et que l’on veux documenter facilement les différents composant graphique de celle-ci.
+
+Lien vers sa présentation : https://docs.google.com/presentation/d/1E1aFvrFC5Fbda2DJVg7cUR8NKIhaTdhpowyRWRQ2n1c/edit?usp=sharing
+
 # Montez à bord d'une équipe autonome ! par David Laizé
 
 

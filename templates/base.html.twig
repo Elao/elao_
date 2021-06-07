@@ -55,8 +55,10 @@
         </script>
 
         {% block stylesheets %}
-            {{ encore_entry_link_tags('style') }}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
+
+        {{ encore_entry_script_tags('app') }}
 
         {% if site.trackers.matomo is not empty %}
             <!-- Matomo -->
@@ -160,8 +162,6 @@
                 {{ include('footer.html.twig') }}
             {% endblock %}
         </div>
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
     </body>
 </html>

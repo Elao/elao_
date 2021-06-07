@@ -7,6 +7,7 @@ stenope:
             ignore_dot_files: false # include .well-known dir
             excludes:
                 - '*.php'
+    shared_html_crawlers: true
     providers:
         App\Model\Article: '%kernel.project_dir%/content/blog'
         App\Model\Certification: '%kernel.project_dir%/content/certif'

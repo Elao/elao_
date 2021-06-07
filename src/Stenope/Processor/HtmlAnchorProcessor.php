@@ -4,46 +4,44 @@ declare(strict_types=1);
 
 namespace App\Stenope\Processor;
 
+use Stenope\Bundle\Behaviour\HtmlCrawlerManagerInterface;
 use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
 use Stenope\Bundle\Service\HtmlUtils;
-use Symfony\Component\DomCrawler\Crawler;
 
 /**
  * Add anchor to titles
  */
 class HtmlAnchorProcessor implements ProcessorInterface
 {
+    private HtmlCrawlerManagerInterface $crawlers;
     private string $property;
 
-    public function __construct(string $property = 'content')
+    public function __construct(HtmlCrawlerManagerInterface $crawlers, string $property = 'content')
     {
+        $this->crawlers = $crawlers;
         $this->property = $property;
     }
 
-    public function __invoke(array &$data, string $type, Content $content): void
+    public function __invoke(array &$data, Content $content): void
     {
         if (!isset($data[$this->property])) {
             return;
         }
 
-        $crawler = new Crawler($data[$this->property]);
+        $crawler = $this->crawlers->get($content, $data, $this->property);
 
-        try {
-            $crawler->html();
-        } catch (\Exception $e) {
+        if (\is_null($crawler)) {
             // Content is not valid HTML.
             return;
         }
-
-        $crawler = new Crawler($data[$this->property]);
 
         /** @var \DomElement $element * */
         foreach ($crawler->filter('h1, h2, h3, h4, h5, h6') as $element) {
             $this->addAnchor($element);
         }
 
-        $data[$this->property] = $crawler->html();
+        $this->crawlers->save($content, $data, $this->property);
     }
 
     /**

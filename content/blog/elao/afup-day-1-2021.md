@@ -28,12 +28,15 @@ Je trouve cette solution très intéressante lorsque l’on souhaite créer une 
 
 # Montez à bord d'une équipe autonome ! par David Laizé
 
-De ce que j’ai retenu pour être une bonne équipe autonome, il faut
+Lors des cette session David nous a fais une retour d’expérience sur les bonnes pratiques qui permette d’obtenir une équipe autonome.
 
-- Avoir des règles explicites : sans un cadre précis personne ne sais ce qu’il doit faire
-- Partager, sur tout, tous le temps, il ne faux rien garder pour soit
-- Être solidaire avec ses équipiers, faire des revues de code systématique, transmettre son savoir
-- Se remettre en question en permanence (toujours rechercher la meilleure approcher, ne pas ce reposer sur ses acquis)
+Une équipe autonome est un ensemble de personne qui arrive a produire un résultat en gardant un rythme soutenu sans avoir besoin de pilotage et dont tout le monde est aligné sur les même objectifs.
 
-Par contre avoir une equipe complètement autonome est quelque chose de très rare.
+Pour cela il faut de l’entraide, du partage, de la transmission de son savoir au travers de revue de code systématique. Il faut également savoir se remettre en question en permanence, toujours être a la recherche de la meilleur approche et ne pas se reposer sur ses acquis.
+
+Pour être une bonne équipe autonome, ses membres doivent être proches en dehors du bureau, ils doivent passer du temps ensemble, soit lors de conférences, soit lors d’autres activités (soirées, randonnées, …).
+
+Par contre celle-ci doit avoir définir des règles explicites, sans un cadre précis personne ne sais ce qu’il doit faire et quand il doit le faire.
+
+Malgré toute ces années d’expériences il a rarement croisé des équipes autonomes.
 

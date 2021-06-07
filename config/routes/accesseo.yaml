@@ -1,0 +1,4 @@
+when@dev:
+    _accesseo_profiler:
+        resource: '@ElaoAccesseoBundle/config/routing/accesseo.xml'
+        prefix: /_profiler

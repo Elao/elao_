@@ -19,6 +19,6 @@ class CategoryProcessor implements ProcessorInterface
             return;
         }
 
-        $data['category'] = \basename($content->getSlug());
+        $data['category'] = basename($content->getSlug());
     }
 }

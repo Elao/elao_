@@ -1,14 +1,11 @@
 <?php
 
-$finder = PhpCsFixer\Finder::create()
-    ->in([
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
-    ])
+$finder = (new PhpCsFixer\Finder())
+    ->in(__DIR__)
+    ->exclude('var')
 ;
 
-return PhpCsFixer\Config::create()
-    ->setUsingCache(true)
+return (new PhpCsFixer\Config())
     ->setRiskyAllowed(true)
     ->setFinder($finder)
     ->setRules([
@@ -22,9 +19,8 @@ return PhpCsFixer\Config::create()
         'phpdoc_summary' => false,
         'phpdoc_annotation_without_dot' => false,
         'phpdoc_order' => true,
-        'psr0' => false,
         'single_line_throw' => false,
         'simplified_null_return' => false,
-        'yoda_style' => null,
+        'yoda_style' => [],
     ])
 ;

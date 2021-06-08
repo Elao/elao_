@@ -30,7 +30,7 @@ L’Atomic Design consiste à découper ses templates en plusieurs fichiers de g
 
 Pour aller plus loin dans la mise en place de ce pattern, Quentin a eu l’idée de créer un [Bundle](https://github.com/qmachard/atomic-design-bundle) permettant de documenter ces templates ainsi que leurs différents états facilement (pour les autres langages nous pouvons utiliser [StoryBook](https://storybook.js.org/), qui lui a fortement servi d’inspiration).
 
-Cette solution est très intéressante lorsque l’on souhaite créer une application complexe et que l’on veut documenter facilement les différents composants graphique de celle-ci.
+Cette solution est très intéressante lorsque l’on souhaite créer une application complexe et que l’on veut documenter facilement ses différents composants graphiques.
 
 # Montez à bord d'une équipe autonome ! par David Laizé
 

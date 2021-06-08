@@ -26,7 +26,7 @@ Parmi les bonnes pratiques, Romaric cite le design pattern Décoration, le Bus d
 
 Cette session présentait la mise en place du pattern `Atomic Design` au sein d’une application Symfony.
 
-L’Atomic Design consiste à découper ses templates en plusieurs fichiers de granularités différentes (Atomes, Molécules, Organismes, Templates & Pages), C’est une philosophie qui est beaucoup plus utilisé dans les frameworks front, comme React ou VueJS, où l’on créé des composants réutilisables.
+L’Atomic Design consiste à découper ses templates en plusieurs fichiers de granularités différentes (Atomes, Molécules, Organismes, Templates & Pages), C’est une philosophie qui est beaucoup plus utilisée dans les frameworks front, comme React ou VueJS, où l’on crée des composants réutilisables.
 
 Pour aller plus loin dans la mise en place de ce pattern, Quentin a eu l’idée de créer un [Bundle](https://github.com/qmachard/atomic-design-bundle) permettant de documenter ces templates ainsi que leurs différents états facilement (pour les autres langages nous pouvons utiliser [StoryBook](https://storybook.js.org/), qui lui a fortement servi d’inspiration).
 

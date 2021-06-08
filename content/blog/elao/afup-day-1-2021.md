@@ -44,7 +44,7 @@ Pour être une bonne équipe autonome, les membres doivent être proches en deho
 
 Par contre celle-ci doit avoir défini des règles explicites, car sans un cadre précis, personne ne sait ce qu’il doit faire et quand il doit le faire.
 
-David a expliqué que malgré toutes ses années d’expériences, il a rarement croisé des équipes autonomes.
+David a expliqué que malgré toutes ses années d’expérience, il a rarement croisé des équipes autonomes.
 
 ## Alors, cette édition ? 
 

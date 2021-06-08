@@ -16,7 +16,7 @@ Voici quelques notes de l'équipe d'Elao et qui vous propose de faire un zoom su
 
 # Un service, Késako ? Par Romaric Drigon
 
-Romaric a fait une piqure de rappel très intéressante et très didactique sur ce que sont les services, et comment les organiser pour les utiliser au mieux. Parmi les principaux problèmes que Romaric soulève, il y a les services qui font trop de choses. Difficilement lisibles, trop de dépendances, difficiles à utiliser. Il appelle ça ... le plat de spaghetti. Pour améliorer son code, il faut avoir en tête le principe de responsabilité unique et ainsi mieux découper ses services. Mais attention à ne pas tomber dans l'excès inverse (le plat de ravioli), et n'avoir que de tout petits services, ce qui compliquerait également la compréhension du code. 
+Romaric a fait une piqûre de rappel très intéressante et très didactique sur ce que sont les services, et comment les organiser pour les utiliser au mieux. Parmi les principaux problèmes que Romaric soulève, il y a les services qui font trop de choses. Difficilement lisibles, trop de dépendances, difficiles à utiliser. Il appelle ça ... « le plat de spaghettis ». Pour améliorer son code, il faut avoir en tête le principe de responsabilité unique et ainsi mieux découper ses services. Mais attention à ne pas tomber dans l'excès inverse (« le plat de raviolis »), et n'avoir que de tout petits services, ce qui compliquerait également la compréhension du code. 
 
 Parmi les bonnes pratiques, Romaric cite le design pattern Décoration, le Bus de commande (que nous utilisons beaucoup chez Elao), les événements, etc. 
 

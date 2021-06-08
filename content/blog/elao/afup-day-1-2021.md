@@ -11,7 +11,7 @@ categories:         ["conference"]
 author:             ["aldeboissieu", "bleveque"]
 ---
 
-Le premier jour de conférence de l'AFUP Day a eu lieu le 28 mai 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Lille et Rennes. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :). 
+Le premier jour de conférence de l'AFUP Day a eu lieu le 28 mai 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Lille et Rennes. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :).  
 Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur trois conférences :
 
 ## Un service, Késako ? Par Romaric Drigon

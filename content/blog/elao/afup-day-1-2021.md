@@ -34,7 +34,7 @@ Cette solution est très intéressante lorsque l’on souhaite créer une applic
 
 # Montez à bord d'une équipe autonome ! par David Laizé
 
-Lors cette session David nous a fait un retour d’expérience sur les bonnes pratiques qui permettent d’obtenir une équipe autonome.
+Lors cette session, David nous a fait un retour d’expérience sur les bonnes pratiques qui permettent d’obtenir une équipe autonome.
 
 Une équipe autonome est un ensemble de personnes qui arrivent à produire un résultat en gardant un rythme soutenu sans avoir besoin de pilotage, et où tout le monde est aligné sur les même objectifs.
 

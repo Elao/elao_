@@ -36,7 +36,7 @@ Cette solution est très intéressante lorsque l’on souhaite créer une applic
 
 Lors cette session, David nous a fait un retour d’expérience sur les bonnes pratiques qui permettent d’obtenir une équipe autonome.
 
-Une équipe autonome est un ensemble de personnes qui arrivent à produire un résultat en gardant un rythme soutenu sans avoir besoin de pilotage, et où tout le monde est aligné sur les même objectifs.
+Une équipe autonome est un ensemble de personnes qui arrivent à produire un résultat en gardant un rythme soutenu sans avoir besoin de pilotage, et où tout le monde est aligné sur les mêmes objectifs.
 
 Pour cela, il faut : de l’entraide, du partage et de la transmission de son savoir au travers de revues de code systématiques. Il faut également savoir se remettre en question en permanence, toujours être à la recherche de la meilleure approche et ne pas se reposer sur ses acquis.
 

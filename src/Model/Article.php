@@ -25,7 +25,7 @@ class Article
     /**
      * If provided, the image to use on top of the show article view instead of the thumbnail image.
      */
-    public ?string $banner;
+    public ?string $banner = null;
     public array $tags = [];
     public string $lang = 'fr';
     public array $categories;

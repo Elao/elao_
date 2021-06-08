@@ -14,15 +14,15 @@ author:             ["aldeboissieu", "bleveque"]
 Le premier jour de conférence de l'AFUP Day a eu lieu le 28 mai 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Lille et Rennes. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :). 
 Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur trois conférences :
 
-# Un service, Késako ? Par Romaric Drigon
+## Un service, Késako ? Par Romaric Drigon
 
 Romaric a fait une piqûre de rappel très intéressante et très didactique sur ce que sont les services, et comment les organiser pour les utiliser au mieux. Parmi les principaux problèmes que Romaric soulève, il y a les services qui font trop de choses. Difficilement lisibles, trop de dépendances, difficiles à utiliser. Il appelle ça ... « le plat de spaghettis ». Pour améliorer son code, il faut avoir en tête le principe de responsabilité unique et ainsi mieux découper ses services. Mais attention à ne pas tomber dans l'excès inverse (« le plat de raviolis »), et n'avoir que de tout petits services, ce qui compliquerait également la compréhension du code. 
 
-Parmi les bonnes pratiques, Romaric cite le design pattern Décoration, le Bus de commande (que nous utilisons beaucoup chez Elao), les événements, etc. 
+Parmi les bonnes pratiques, Romaric cite le design pattern `Décoration`, le `Bus de commande` (que nous utilisons beaucoup chez Elao), les événements, etc. 
 
 [Sa conférence est à voir ici.](https://speakerdeck.com/romaricdrigon/un-service-kezako)
 
-# Réconcilier le Back et le Front dans un projet Symfony, par Quentin Machard
+## Réconcilier le Back et le Front dans un projet Symfony, par Quentin Machard
 
 Cette session présentait la mise en place du pattern `Atomic Design` au sein d’une application Symfony.
 
@@ -32,7 +32,7 @@ Pour aller plus loin dans la mise en place de ce pattern, Quentin a eu l’idée
 
 Cette solution est très intéressante lorsque l’on souhaite créer une application complexe et que l’on veut documenter facilement ses différents composants graphiques.
 
-# Montez à bord d'une équipe autonome ! par David Laizé
+## Montez à bord d'une équipe autonome ! par David Laizé
 
 Lors cette session, David nous a fait un retour d’expérience sur les bonnes pratiques qui permettent d’obtenir une équipe autonome.
 

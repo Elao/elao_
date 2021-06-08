@@ -9,6 +9,7 @@ use Stenope\Bundle\ContentManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
@@ -43,7 +44,14 @@ class GenerateArticleCommand extends Command
 
         $io->title('Création d\'un nouvel article');
 
-        $title = $io->ask('Titre');
+        $title = $io->ask('Titre', null, function ($value) {
+            if (\is_null($value) || \strlen($value) === 0) {
+                throw new \RuntimeException('Le titre est obligatoire.');
+            }
+
+            return $value;
+        });
+
         $slug = $io->ask('Slug', $this->getSlug($title));
         $category = $io->choice('Catégorie', $this->listCategories(), 'dev');
 
@@ -53,27 +61,24 @@ class GenerateArticleCommand extends Command
             return 1;
         }
 
-        $author = $io->choice('Auteur(e)', $this->listAuthors());
+        $authors = $io->askQuestion(
+            (new ChoiceQuestion('Auteur(e)s (séparé(e)s par des virgules)', $this->listAuthors()))->setMultiselect(true)
+        );
+
         $date = $io->ask('Date de publication', (new \DateTimeImmutable())->format('Y-m-d'));
-        $lang = $io->ask('Langue', 'fr');
         $description = $io->ask('Description');
-        $tags = array_map('trim', explode(',', $io->ask('Tags')));
+        $tags = array_map('trim', explode(',', $io->ask('Tags (séparés par des virgules)') ?? ''));
         $thumbnail = $io->ask('Miniature', "images/posts/thumbnails/$slug.jpg");
-        $banner = $io->ask('Bannière', "images/posts/headers/$slug.jpg");
-        $draft = $io->confirm('Brouillon');
 
         $io->definitionList(
             ['Titre' => $title],
-            ['Description' => $description],
-            ['Categorie' => $category],
-            ['Auteur(e)' => $author],
-            ['Date' => $date],
-            ['Tag(s)' => implode(', ', $tags)],
-            ['Langue' => $lang],
             ['Slug' => $slug],
+            ['Categorie' => $category],
+            ['Auteur(e)s' => implode(', ', $authors)],
+            ['Date' => $date],
+            ['Description' => $description],
+            ['Tag(s)' => implode(', ', $tags)],
             ['Miniature' => $thumbnail],
-            ['Bannière' => $banner],
-            ['Brouillon' => $draft ? 'Oui' : 'Non'],
         );
 
         if (!$io->confirm('Confirmer la création ?')) {
@@ -85,19 +90,21 @@ class GenerateArticleCommand extends Command
         $this->createMarkdownFile(
             $filepath = "$category/$slug.md",
             [
-                'title' => $title,
-                'author' => $author,
-                'date' => $date,
-                'lang' => $lang,
-                'description' => $description,
-                'tags' => $tags,
-                'thumbnail' => $thumbnail,
-                'banner' => $banner,
-                'draft' => $draft,
+                new Header(['title' => $title]),
+                new Header(['date' => $date], 'Au format YYYY-MM-DD'),
+                new Header(['lastModified' => $date], 'À utiliser pour indiquer explicitement qu\'un article à été mis à jour', false),
+                new Header(['description' => $description]),
+                new Header([(\count($authors) > 1 ? 'authors' : 'author') => \count($authors) > 1 ? $authors : $authors[0]], 'author|authors (multiple acceptés)'),
+                new Header(['tableOfContent' => true], '`true` pour activer ou `3` pour lister les titres sur 3 niveaux.', false),
+                new Header(['tags' => $tags]),
+                new Header(['thumbnail' => $thumbnail]),
+                new Header(['banner' => "images/posts/headers/$slug.jpg"], 'Uniquement si différent de la minitature (thumbnail)', false),
+                new Header(['credit' => ['name' => 'Thomas Jarrand', 'url' => 'https://unsplash.com/@tom32i']], 'Pour créditer la photo utilisée en miniature', false),
+                new Header(['tweetId' => null], 'Ajouter l\'id du Tweet après publication.', false),
             ]
         );
 
-        $io->success("Article créé : $filepath");
+        $io->success("Article créé : {$this->path}/$filepath - http://localhost:8000/blog/${category}/${slug}");
 
         return 0;
     }
@@ -146,11 +153,45 @@ class GenerateArticleCommand extends Command
         return strtolower((string) $slugger->slug($name));
     }
 
-    private function createMarkdownFile(string $path, array $header): void
+    private function createMarkdownFile(string $path, array $headers): void
     {
-        $this->filesystem->dumpFile(
-            $this->path . '/' . $path,
-            implode(PHP_EOL, ['---', Yaml::dump($header, 1), '---'])
-        );
+        $head = implode(PHP_EOL, $headers);
+
+        $this->filesystem->dumpFile($this->path . '/' . $path, <<<EOT
+---
+$head
+---
+
+<!--- Mon contenu ici -->
+EOT);
+    }
+}
+
+class Header
+{
+    public array $value;
+    public ?string $comment;
+    public bool $active;
+
+    public function __construct(array $value, ?string $comment = null, bool $active = true)
+    {
+        $this->value = $value;
+        $this->comment = $comment;
+        $this->active = $active;
+    }
+
+    public function __toString()
+    {
+        $line = trim(Yaml::dump($this->value, 1, 4, Yaml::DUMP_NULL_AS_TILDE), PHP_EOL);
+
+        if (!$this->active) {
+            $line = "#$line";
+        }
+
+        if (!\is_null($this->comment)) {
+            $line = "$line # {$this->comment}";
+        }
+
+        return $line;
     }
 }

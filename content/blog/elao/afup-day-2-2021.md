@@ -30,12 +30,15 @@ Nous repartons de cette présentation avec quelques pistes pour migrer plus effi
 
 ## Authentification : peut-on se passer du mot de passe ? Par Mathieu Passenaud
 
-- Avec le SSO on peut gérer pratiquement tout les cas
-- Magic Link : envoi d’un mail et connexion via un lien reçu
-- Device Flow : C’est la technique utilisée lorsque l’on veux connecter sa télé sur une application que l’on utilise déjà sur son téléphone (par exemple Disney+)
-- Certaines personne se connecte exclusivement via les procédures de mot de passe oublié
-- Mais il faut laisser le choix aux utilisateurs en leur proposant plusieurs solutions technique
+Dans nos applications, on ce retrouve souvent à refaire ou réutiliser les même modules de gestions des utilisateurs. Mais dans certains cas nous pourrions simplement utiliser du SSO pour déléguer a un tiers toute cette gestion.
 
+Le problème de passer exclusivement par une solution externe est surtout un problème de securité ressentie, par exemple si nous mettons en place une connexion uniquement via Facebook ou Goole, nous nous coupons de toute les personnes qui ne souhaites pas leur envoyer des informations.
+
+Ces dernières années, certaines applications ont mis en place un type de connexion "Device Flow" qui permet de s'authentifier rapidement sur un autre appareil si nous sommes déjà connecté autre part (c'est le genre de connexion en place pour la plupart des applications sur les tv connecté).
+
+Un certain nombre d'utilisateur ce sert exclusivement de la procédure de mot de passe oublié pour ce connecter sur des sites interfaces
+
+La bonne pratique est de laisser le choix a l'utilisateur, tout en proposant plusieurs solution technique.
 
 ## Code d'équipe: clé de qualité et de solidarité, par Hélène Maitre-Marchois
 
@@ -46,7 +49,6 @@ Dans cette présentation Hélène nous a donnée plusieurs clés afin de mieux t
 - **Openness** : Les solutions correspondent à un besoin à un moment précis.
 - **Focus** : l'équipe a besoin d'une vision claire du produit et du calendrier.
 - **Courage** : il faut sortir de sa zone de confort et se remettre en question continuellement, il faut savoir dire "Je ne sais pas".
-
 
 ## Alors, cette édition ? 
 

@@ -39,12 +39,12 @@ Nous repartons de cette présentation avec quelques pistes pour migrer plus effi
 
 ## Code d'équipe: clé de qualité et de solidarité, par Hélène Maitre-Marchois
 
-Dans cette présentation Hélène nous a donnée plusieurs clé afin de mieux travailler en équipe.
+Dans cette présentation Hélène nous a donnée plusieurs clés afin de mieux travailler en équipe.
 
 - **Commitment** : en faire trop ce n'est pas s'engager, mais se cramer et mettre en danger les resources de l'équipe
-- **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter a dire que les choses ne vont pas, celà aidera l'équipe a grandir.
-- **Openness** : Les solution correspondent a un besoin a un moment précis.
-- **Focus** : l'équipe a besoin d'une vision clair du produit et du calendrier.
+- **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter à dire que les choses ne vont pas. Cela aidera l'équipe a grandir.
+- **Openness** : Les solutions correspondent à un besoin à un moment précis.
+- **Focus** : l'équipe a besoin d'une vision claire du produit et du calendrier.
 - **Courage** : il faut sortir de sa zone de confort et se remettre en question continuellement, il faut savoir dire "Je ne sais pas".
 
 

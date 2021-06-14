@@ -29,45 +29,23 @@ Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur t
 ## Authentification : peut-on se passer du mot de passe ? Par Mathieu Passenaud
 
 - Avec le SSO on peut gérer pratiquement tout les cas
-- Mais il faut laisser le choix aux utilisateurs en leur proposant plusieurs solutions technique
 - Magic Link : envoi d’un mail et connexion via un lien reçu
 - Device Flow : C’est la technique utilisé lorsque l’on veux connecté sa télé sur une application que l’on utilise déjà sur son téléphone (par exemple Disney+)
 - Certaines personne se connecte exclusivement via les procédures de mot de passe oublié
+- Mais il faut laisser le choix aux utilisateurs en leur proposant plusieurs solutions technique
 
-## Code d'équipe: clé de qualité et de solidarité,  par Hélène Maitre-Marchois
 
-- **Commitment**
-    - en faire trop ce n’est pas s’engager, c’est se cramer et mettre en danger les resources de l’équipe 
-    - nous ne sommes pied tout seul, toutes les individualités sont à prendre en compte
-    - faire des échanges 1-1 pour prendre régulièrement la température dans l’équipe 
-    - faire de son mieux avec ce qu’on a
-    - faire partie d’une équipe soudée et solidaire 
-- **Respect**
-    - l’équipe peut dire non quand l’organisation va trop loin
-    - ne pas hésiter a dire les choses ne vont pas. cela aidera l’équipe a grandir
-    - mais les limites sont différentes pour chacun et en fonction de leur états d’esprit
-    - l’organisation doit respecter notre travail et nos compétences
-- **Openness**
-    - attention à la guerre des égos
-    - on ne parle pas des personnes, mais de leur travail et de la façon dont il sert le développement du produit
-    - on est aussi là pour sortir de notre zone de confort et apprendre a mieux faire. laissez vous surprendre 
-    - resté lucide pour avancer au pièce
-    - on est là pour travailler et relever des défis qui se pose à nous
-    - les solutions correspondent à un besoin à un moment précis. ne gardons pas les étiquettes sur le long termes
-- **Focus**
-    - vision clair du produit, du calendrier et des évolutions 
-    - les dev ne sont pas responsable de tout, mais doit demander au max les conditions nécessaire à son épanouissement
-    - l’énergie de l’équipe est le produit 
-    - la qualité ne peut être qu’améliorer par les réflexions de groupes
-    - à faire ensemble : revue de design, pair et mob programming, revue de code.
-- **Courage**
-    - sortir de sa zone de confort 
-    - apprendre au quotidien 
-    - se remettre en question continuellement
-    - demande de la confiance en soi
-    - savoir dire je ne sais pas. Cherchons la solution ensemble.
-    - prendre des risques tech pour toujours évoluer en équipe.
-    - l’humilité de demander de l’aide, savoir écouter et accueillir avec bienveillance, c’est ce qui créera l’environnent secure qui pourra vous permettre d’apprendre au mieux.
-    - c’est sans doute ce qui demande le plus de courage.
+## Code d'équipe: clé de qualité et de solidarité, par Hélène Maitre-Marchois
+
+Dans cette présentation Hélène nous a donnée plusieurs clé afin de mieux travailler en équipe.
+
+- **Commitment** : en faire trop ce n'est pas s'engager, mais se cramer et mettre en danger les resources de l'équipe
+- **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter a dire que les choses ne vont pas, celà aidera l'équipe a grandir.
+- **Openness** : Les solution correspondent a un besoin a un moment précis.
+- **Focus** : l'équipe a besoin d'une vision clair du produit et du calendrier.
+- **Courage** : il faut sortir de sa zone de confort et se remettre en question continuellement, il faut savoir dire "Je ne sais pas".
+
 
 ## Alors, cette édition ? 
+
+Malgré une conférence une nouvelle fois en ligne, l'équipe de l'AFUP a parfaitement réussi à entretenir une ambiance sympathique et la bonne humeur régnait sur le chat et dans l'espace virtuel WorkAdventure. Tout était fluide et très bien organisé. Bravo à l'équipe !

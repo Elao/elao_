@@ -12,7 +12,7 @@ author:             ["bleveque"]
 ---
 
 Le deuxième jour de conférence de l'AFUP Day a eu lieu le 11 juin 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Toulouse et Tours. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :).  
-Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur trois conférences :
+Voici quelques notes pour trois des sessions de cette journée de conférence :
 
 ## Comment dompter un Legacy ? Parlons smoke testing, golden master et même migration progressive, par Estelle Le Cam
 

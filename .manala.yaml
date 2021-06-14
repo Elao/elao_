@@ -6,12 +6,27 @@
 manala:
     recipe: lazy.symfony
 
-app: elao
+###########
+# Project #
+###########
+
+project:
+    name: elao
+
+##########
+# System #
+##########
 
 system:
     nginx:
         version: 1.18
+        port: 8000
     php:
         version: 7.4
+        extensions:
+          - gd
     nodejs:
         version: 12
+    network:
+        ports:
+          - 8080:8080 # Webpack dev server

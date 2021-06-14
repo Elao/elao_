@@ -42,7 +42,7 @@ the whole application using a single command:
 
     make up
 
-The site is now available at: http://localhost:8080
+The site is now available at: http://localhost:8000
 
 Alternatively, if you use a local install & Symfony CLI, you can use:
 

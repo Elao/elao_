@@ -4,7 +4,7 @@
 
 ## Requirements
 
-* Docker Desktop 2.2.0+
+* Docker Desktop 2.2.0+ or Docker Engine + Docker Compose
 
 ## Setup
 
@@ -15,7 +15,7 @@ manala init -i lazy.symfony foo
 cd foo
 ```
 
-Up the environment and shell into it into another terminal:
+Up the system and open a shell into an another terminal:
 
 ```shell
 make up

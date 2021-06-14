@@ -16,15 +16,17 @@ Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur t
 
 ## Comment dompter un Legacy ? Parlons smoke testing, golden master et même migration progressive, par Estelle Le Cam
 
-- Smoke Testing
-    - Vérifier que toute les route en GET retourne des 200
-- MCD
-    - Modélisation graphique de toute l’application ainsi que des interactions dans celle-ci
-- Découverte des chemin critique + test de ceux-ci via Cypress (test E2E en mode boite noir)
-- Migration Continue via le StranglerPattern
-    - Je connaissais le principe, mais pas le nom
-    - On rajoute une couche devant le code Legacy pour router soit sur l’ancien code soit sur le nouveau code
+Retour d'experience sur la migration continue d'un projet initialement developper en PHP 4 et qui a subi plusieurs migration successive (PHP 5 avec un framework maison, puis PHP7 avec un framework opensource).
 
+Il faut des tests, le niveau de test le plus rapide a mettre en place est le **Smoke Testing** car il permet d'executer toute les urls en GET de l'application pour verifier qu'elle renvoient bien un code de retour valide.
+
+Avant toute migration nous devons determiner quel sont les différents composant metiers de notre application et comment il interagissent entre eux, idéalement a partir d'une modélisation graphique simple (type MCD).
+
+En plus des tests existant il peut être utile/recommander de determiner les différent chemins critiques de l'application et de les tester via un outil comme **Cypress**.
+
+Au cours de la migration du produit de Estelle, son équipe a mis en place le Pattern "Strangler Pattern", c'est-a-dire que l'on rajoute une couche devant l'application legacy qui va en fonction de url appelé soit l'ancienne application soit la nouvelle.
+
+Nous repartons de cette présentation avec quelques pistes pour migrer plus efficacement de futures projets.
 
 ## Authentification : peut-on se passer du mot de passe ? Par Mathieu Passenaud
 

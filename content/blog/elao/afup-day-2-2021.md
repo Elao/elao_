@@ -16,7 +16,7 @@ Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur t
 
 ## Comment dompter un Legacy ? Parlons smoke testing, golden master et même migration progressive, par Estelle Le Cam
 
-Retour d'expérience sur la migration continue d'un projet initialement développée en PHP 4 et qui a subie plusieurs migrations successives (PHP 5 avec un framework maison, puis PHP7 avec un framework opensource).
+Retour d'expérience sur la migration continue d'un projet initialement développé en PHP 4 et qui a subi plusieurs migrations successives (PHP 5 avec un framework maison, puis PHP7 avec un framework opensource).
 
 Il faut des tests. Le niveau de test le plus rapide à mettre en place est le **Smoke Testing** car il permet d'exécuter toutes les urls en GET de l'application pour vérifier qu'elle renvoient bien un code de retour valide.
 

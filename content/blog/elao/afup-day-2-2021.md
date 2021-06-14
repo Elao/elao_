@@ -45,7 +45,7 @@ La meilleure pratique est de laisser le choix à l'utilisateur en proposant plus
 Dans cette présentation, Hélène nous a donné plusieurs clés afin de mieux travailler en équipe.
 
 - **Commitment** : attention à l'excès d'engagement : en faire trop ce n'est pas s'engager, mais se cramer et mettre en danger les ressources de l'équipe.
-- **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter à dire que les choses ne vont pas. Cela aidera l'équipe a grandir.
+- **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter à dire que les choses ne vont pas. Cela aidera l'équipe à grandir.
 - **Openness** : Les solutions correspondent à un besoin à un moment précis.
 - **Focus** : L'équipe a besoin d'une vision claire du produit et du calendrier.
 - **Courage** : Il faut sortir de sa zone de confort et se remettre en question continuellement, et savoir dire "Je ne sais pas".

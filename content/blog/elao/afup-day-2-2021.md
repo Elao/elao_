@@ -16,23 +16,23 @@ Voici quelques notes de l'équipe d'Elao qui vous propose de faire un zoom sur t
 
 ## Comment dompter un Legacy ? Parlons smoke testing, golden master et même migration progressive, par Estelle Le Cam
 
-Retour d'experience sur la migration continue d'un projet initialement developper en PHP 4 et qui a subi plusieurs migration successive (PHP 5 avec un framework maison, puis PHP7 avec un framework opensource).
+Retour d'expérience sur la migration continue d'un projet initialement développée en PHP 4 et qui a subie plusieurs migrations successives (PHP 5 avec un framework maison, puis PHP7 avec un framework opensource).
 
-Il faut des tests, le niveau de test le plus rapide a mettre en place est le **Smoke Testing** car il permet d'executer toute les urls en GET de l'application pour verifier qu'elle renvoient bien un code de retour valide.
+Il faut des tests. Le niveau de test le plus rapide à mettre en place est le **Smoke Testing** car il permet d'exécuter toutes les urls en GET de l'application pour vérifier qu'elle renvoient bien un code de retour valide.
 
-Avant toute migration nous devons determiner quel sont les différents composant metiers de notre application et comment il interagissent entre eux, idéalement a partir d'une modélisation graphique simple (type MCD).
+Avant toute migration nous devons déterminer quels sont les différents composants métiers de notre application et comment ils interagissent entre eux, idéalement à partir d'une modélisation graphique simple (type MCD).
 
-En plus des tests existant il peut être utile/recommander de determiner les différent chemins critiques de l'application et de les tester via un outil comme **Cypress**.
+En plus des tests existants il peut être utile/recommandé de déterminer les différents chemins critiques de l'application et de les tester via un outil comme **Cypress**.
 
-Au cours de la migration du produit de Estelle, son équipe a mis en place le Pattern "Strangler Pattern", c'est-a-dire que l'on rajoute une couche devant l'application legacy qui va en fonction de url appelé soit l'ancienne application soit la nouvelle.
+Au cours de la migration du produit d'Estelle, son équipe a mis en place le Pattern "Strangler Pattern", c'est-à-dire que l'on rajoute une couche devant l'application legacy qui va, en fonction de l'url, appeler soit l'ancienne application, soit la nouvelle.
 
-Nous repartons de cette présentation avec quelques pistes pour migrer plus efficacement de futures projets.
+Nous repartons de cette présentation avec quelques pistes pour migrer plus efficacement de futurs projets.
 
 ## Authentification : peut-on se passer du mot de passe ? Par Mathieu Passenaud
 
 - Avec le SSO on peut gérer pratiquement tout les cas
 - Magic Link : envoi d’un mail et connexion via un lien reçu
-- Device Flow : C’est la technique utilisé lorsque l’on veux connecté sa télé sur une application que l’on utilise déjà sur son téléphone (par exemple Disney+)
+- Device Flow : C’est la technique utilisée lorsque l’on veux connecter sa télé sur une application que l’on utilise déjà sur son téléphone (par exemple Disney+)
 - Certaines personne se connecte exclusivement via les procédures de mot de passe oublié
 - Mais il faut laisser le choix aux utilisateurs en leur proposant plusieurs solutions technique
 

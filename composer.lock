@@ -1534,12 +1534,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "9b81e96fe6fd49581e07c58344d90bae4c3bf3cf"
+                "reference": "d8ee8cc16d300fa754924bfe968bd5545b8bf76f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/9b81e96fe6fd49581e07c58344d90bae4c3bf3cf",
-                "reference": "9b81e96fe6fd49581e07c58344d90bae4c3bf3cf",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/d8ee8cc16d300fa754924bfe968bd5545b8bf76f",
+                "reference": "d8ee8cc16d300fa754924bfe968bd5545b8bf76f",
                 "shasum": ""
             },
             "require": {
@@ -1572,6 +1572,7 @@
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/phpstan": "^0.12.32",
                 "symfony/browser-kit": "^5.1",
+                "symfony/expression-language": "^5.1",
                 "symfony/framework-bundle": "^5.1",
                 "symfony/phpunit-bridge": "^5.1",
                 "symfony/twig-bridge": "^5.1",
@@ -1587,7 +1588,10 @@
             "autoload": {
                 "psr-4": {
                     "Stenope\\Bundle\\": "src"
-                }
+                },
+                "files": [
+                    "src/ExpressionLanguage/exprs.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1614,9 +1618,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/v0.4.0"
+                "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-06-07T09:22:02+00:00"
+            "time": "2021-06-14T15:08:55+00:00"
         },
         {
             "name": "symfony/asset",

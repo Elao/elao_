@@ -1,0 +1,55 @@
+.elaomojis {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.elaomojis__item {
+  margin: 10px;
+  padding: 10px;
+  width: calc(20% - 20px);
+  display: flex;
+  align-items: center;
+  font-family: 'antikor regular';
+  font-size: 14px;
+  color: $color-text;
+  // text-align: center;
+  background: $color-secondary;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  img {
+    margin: 0 15px 0 0;
+  }
+}
+
+@media (max-width: $screen-lg) {
+  .elaomojis__item {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .elaomojis__item {
+    width: calc(50% - 20px);
+
+    img {
+      // margin: 0 10px 0 0;
+    }
+  }
+}
+
+@media (max-width: $screen-xxs) {
+  .elaomojis {
+    margin: 0;
+  }
+
+  .elaomojis__item {
+    width: 100%;
+  }
+}

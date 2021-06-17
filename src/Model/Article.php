@@ -14,8 +14,8 @@ class Article
     public string $title;
     public string $slug;
     public string $content;
-    public ?\DateTimeImmutable $date = null;
-    public ?\DateTimeImmutable $lastModified = null;
+    public ?\DateTimeInterface $date = null;
+    public ?\DateTimeInterface $lastModified = null;
     public bool $draft = true;
     public ?string $description;
     /**
@@ -70,7 +70,7 @@ class Article
         return \in_array($author, $this->authors, true);
     }
 
-    public function getLastModifiedOrCreated(): ?\DateTimeImmutable
+    public function getLastModifiedOrCreated(): ?\DateTimeInterface
     {
         return $this->lastModified ?? $this->date;
     }

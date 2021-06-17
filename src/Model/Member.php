@@ -46,7 +46,7 @@ class Member
     public bool $anonymousTribePicture = false;
 
     public ?\DateTime $integrationDate = null;
-    public ?\DateTimeImmutable $lastModified = null;
+    public ?\DateTimeInterface $lastModified = null;
 
     /**
      * Fields that requires to be initialized (not nullable, no default value) go in the constructor.

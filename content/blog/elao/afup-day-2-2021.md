@@ -30,9 +30,9 @@ Nous repartons de cette présentation avec quelques pistes pour migrer plus effi
 
 ## Authentification : peut-on se passer du mot de passe ? Par Mathieu Passenaud
 
-Dans nos applications, on se retrouve souvent à refaire ou réutiliser les même modules de gestions des utilisateurs. Mais dans certains cas nous pourrions simplement utiliser du SSO pour déléguer a un tiers toute cette gestion.
+Dans nos applications, on se retrouve souvent à refaire ou réutiliser les même modules de gestions des utilisateurs. Mais dans certains cas nous pourrions simplement utiliser du SSO pour déléguer à un tiers toute cette gestion.
 
-Le problème de passer exclusivement par une solution externe est surtout un problème de securité ressentie, par exemple si nous mettons en place une connexion uniquement via Facebook ou Google, nous nous coupons de toutes les personnes qui ne souhaitent pas leur envoyer des informations.
+Le soucis de passer exclusivement par une solution externe est surtout un problème de sécurité ressentie. Par exemple si nous mettons en place une connexion uniquement via Facebook ou Google, nous nous coupons de toutes les personnes qui ne souhaitent pas leur envoyer des informations.
 
 Ces dernières années, certaines applications ont mis en place un type de connexion "Device Flow" qui permet de s'authentifier rapidement sur un autre appareil si nous sommes déjà connecté par ailleurs (c'est le genre de connexion en place pour la plupart des applications des téléviseurs connectés).
 

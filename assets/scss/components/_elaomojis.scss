@@ -15,7 +15,6 @@
   font-family: 'antikor regular';
   font-size: 14px;
   color: $color-text;
-  // text-align: center;
   background: $color-secondary;
 
   &:before,
@@ -25,6 +24,16 @@
 
   img {
     margin: 0 15px 0 0;
+    width: 32px;
+  }
+
+  .img {
+    margin: 0 15px 0 0;
+    width: 32px;
+    height: 32px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
   }
 }
 
@@ -37,10 +46,6 @@
 @media (max-width: $screen-xs) {
   .elaomojis__item {
     width: calc(50% - 20px);
-
-    img {
-      // margin: 0 10px 0 0;
-    }
   }
 }
 

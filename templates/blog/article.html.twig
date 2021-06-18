@@ -55,7 +55,8 @@
             {% endblock %}
             <div class="article-info__date">
                 <span>Publication <strong>{{ article.date|format_date('long') }}</strong></span>
-                {% if article.lastModified %}
+                {# Do only display the last modified date if not null and different day than the publication date #}
+                {% if article.lastModified and article.lastModified > article.date|date_modify('+1 day 00:00') %}
                     <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
                 {% endif %}
             </div>

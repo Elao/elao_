@@ -4,6 +4,7 @@ title:              "Mettez en valeur vos offres d'emploi grâce aux données st
 tableOfContent:     2
 
 description:        "Et si vous rendiez vos offres d'emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ? "
+date:               "2019-08-26"
 
 thumbnail:          "images/posts/thumbnails/arrows-square.jpg"
 banner:             "images/posts/headers/arrows.jpg"

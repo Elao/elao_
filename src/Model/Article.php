@@ -14,7 +14,7 @@ class Article
     public string $title;
     public string $slug;
     public string $content;
-    public ?\DateTimeInterface $date = null;
+    public \DateTimeInterface $date;
     public ?\DateTimeInterface $lastModified = null;
     public bool $draft = true;
     public ?string $description;
@@ -70,7 +70,7 @@ class Article
         return \in_array($author, $this->authors, true);
     }
 
-    public function getLastModifiedOrCreated(): ?\DateTimeInterface
+    public function getLastModifiedOrCreated(): \DateTimeInterface
     {
         return $this->lastModified ?? $this->date;
     }

@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Migrer les mots de passe utilisateur vers une autre méthode d'encodage avec Symfony"
 date:               "2017-09-12"
-lastModified:       ~
+lastModified:       "2021-06-18"
 
 description:        "Migration continue de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
 
@@ -10,6 +10,11 @@ thumbnail:          "images/posts/thumbnails/password.jpg"
 banner:             "images/posts/headers/password.jpg"
 tags:               ["Sécurité", "Migration", "Encodage", "Symfony"]
 categories:         ["Dev", "Symfony"]
+outdated: >
+    Cet article date un peu et il est maintenant possible de gérer la migration des
+    mots de passe de vos utilisateurs de façon un peu plus native dans Symfony en
+    utilisant le mécanisme de migration
+    de [hash de passwords](https://symfony.com/doc/current/security/password_migration.html)
 
 author:    "mcolin"
 ---

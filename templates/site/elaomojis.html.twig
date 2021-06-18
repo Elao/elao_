@@ -1,18 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Elaomojis</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
     <div class="banner">
         <h1 class="banner__title" data-aos="fade-right">
             Sélection officielle
             <span>de nos Elaomojis 🥁🥁🥁</span>
         </h1>
         <div class="banner__highlight" data-aos="zoom-in">
-            <p>À l’occasion de la Journée mondiale des emojis (World Emoji Day), voici une sélection de nos :emojis-favoris:</p>
-            <i class="icon icon--semicolon" aria-hidden="true"></i>
+            <p>À l’occasion de la Journée Mondiale des Emojis 2021 (World Emoji Day), nous sommes ravis de vous présenter une sélection de nos :emojis-favoris:</p>
         </div>
     </div>
 
-    <h2>La team happy 🥳</h2>
+    <h2>Pour commencer, notre happy team 🥳</h2>
     <ul class="elaomojis">
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/happy/alyona-happy.gif') }}')"></span>
@@ -76,7 +90,7 @@
         </li>
     </ul>
 
-    <h2>Nos perroquets préférés 🦜</h2>
+    <h2>Le must : les perroquets 🦜</h2>
     <ul class="elaomojis">
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/parrot/fiesta-parrot.gif') }}')"></span>
@@ -100,8 +114,16 @@
         </li>
     </ul>
 
-    <h2>Nos canards favoris 🦆</h2>
+    <h2>On adore les canards 🦆</h2>
     <ul class="elaomojis">
+        <li class="elaomojis__item" class="aria-hidden="true>
+            <span class="img" style="background: url('{{ asset('build/images/elaomojis/ducks/duck.png') }}')"></span>
+            :duck:
+        </li>
+        <li class="elaomojis__item" class="aria-hidden="true>
+            <span class="img" style="background: url('{{ asset('build/images/elaomojis/ducks/duck-on-the-back.png') }}')"></span>
+            :duck-on-the-back:
+        </li>
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/ducks/happy-duck.png') }}')"></span>
             :happy-duck:
@@ -112,7 +134,7 @@
         </li>
     </ul>
 
-    <h2>Nos chats fétiches 🐈</h2>
+    <h2>On aime aussi les chats 🐈</h2>
     <ul class="elaomojis">
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/cats/rage-cat.png') }}')"></span>
@@ -136,7 +158,7 @@
         </li>
     </ul>
 
-    <h2>Pour juger, pour bouder 🦉</h2>
+    <h2>Et les animaux qui jugent 🔥🔥</h2>
     <ul class="elaomojis">
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/judging/judging-hermine.png') }}')"></span>
@@ -176,7 +198,7 @@
         </li>
     </ul>
 
-    <h2>Divers 📦</h2>
+    <h2>Enfin, les inclassables 📦</h2>
     <ul class="elaomojis">
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/others/approving-hermine.png') }}')"></span>
@@ -185,10 +207,6 @@
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/others/loading-hermine.gif') }}')"></span>
             :loading-hermine:
-        </li>
-        <li class="elaomojis__item" class="aria-hidden="true>
-            <span class="img" style="background: url('{{ asset('build/images/elaomojis/others/duck-on-the-back.png') }}')"></span>
-            :duck-on-the-back:
         </li>
         <li class="elaomojis__item" class="aria-hidden="true>
             <span class="img" style="background: url('{{ asset('build/images/elaomojis/others/broken-courgette.png') }}')"></span>

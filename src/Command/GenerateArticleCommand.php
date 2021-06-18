@@ -14,6 +14,8 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\String\Slugger\AsciiSlugger;
+use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Validation;
 use Symfony\Component\Yaml\Yaml;
 
 class GenerateArticleCommand extends Command
@@ -44,21 +46,15 @@ class GenerateArticleCommand extends Command
 
         $io->title('Création d\'un nouvel article');
 
-        $title = $io->ask('Titre', null, function ($value) {
-            if (\is_null($value) || \strlen($value) === 0) {
-                throw new \RuntimeException('Le titre est obligatoire.');
-            }
-
-            return $value;
-        });
+        $title = $io->ask('Titre', null, Validation::createCallable(new NotBlank([
+            'message' => 'Le titre est obligatoire.',
+        ])));
 
         $slug = $io->ask('Slug', $this->getSlug($title));
         $category = $io->choice('Catégorie', $this->listCategories(), 'dev');
 
         if ($this->exists($category, $slug)) {
-            $io->error("L'article \"$category/$slug\" existe déjà.");
-
-            return 1;
+            throw new \RuntimeException(sprintf('L\'article "%s/%s" existe déjà.', $category, $slug));
         }
 
         $authors = $io->askQuestion(
@@ -92,19 +88,38 @@ class GenerateArticleCommand extends Command
             [
                 new Header(['title' => $title]),
                 new Header(['date' => $date], 'Au format YYYY-MM-DD'),
-                new Header(['lastModified' => $date], 'À utiliser pour indiquer explicitement qu\'un article à été mis à jour', false),
+                new Header(
+                    ['lastModified' => $date],
+                    'À utiliser pour indiquer explicitement qu\'un article à été mis à jour',
+                    false
+                ),
                 new Header(['description' => $description]),
-                new Header([(\count($authors) > 1 ? 'authors' : 'author') => \count($authors) > 1 ? $authors : $authors[0]], 'author|authors (multiple acceptés)'),
-                new Header(['tableOfContent' => true], '`true` pour activer ou `3` pour lister les titres sur 3 niveaux.', false),
+                new Header(
+                    [(\count($authors) > 1 ? 'authors' : 'author') => \count($authors) > 1 ? $authors : $authors[0]],
+                    'author|authors (multiple acceptés)'
+                ),
+                new Header(
+                    ['tableOfContent' => true],
+                    '`true` pour activer ou `3` pour lister les titres sur 3 niveaux.',
+                    false
+                ),
                 new Header(['tags' => $tags]),
                 new Header(['thumbnail' => $thumbnail]),
-                new Header(['banner' => "images/posts/headers/$slug.jpg"], 'Uniquement si différent de la minitature (thumbnail)', false),
-                new Header(['credit' => ['name' => 'Thomas Jarrand', 'url' => 'https://unsplash.com/@tom32i']], 'Pour créditer la photo utilisée en miniature', false),
+                new Header(
+                    ['banner' => "images/posts/headers/$slug.jpg"],
+                    'Uniquement si différent de la minitature (thumbnail)',
+                    false
+                ),
+                new Header(
+                    ['credit' => ['name' => 'Thomas Jarrand', 'url' => 'https://unsplash.com/@tom32i']],
+                    'Pour créditer la photo utilisée en miniature',
+                    false
+                ),
                 new Header(['tweetId' => null], 'Ajouter l\'id du Tweet après publication.', false),
             ]
         );
 
-        $io->success("Article créé : {$this->path}/$filepath - http://localhost:8000/blog/${category}/${slug}");
+        $io->success("Article créé : $this->path/$filepath - http://localhost:8000/blog/$category/$slug");
 
         return 0;
     }
@@ -116,7 +131,7 @@ class GenerateArticleCommand extends Command
         $finder->in($this->path)->directories();
 
         return array_map(
-            fn (\SplFileInfo $dir) => $dir->getBasename(),
+            static fn (\SplFileInfo $dir) => $dir->getBasename(),
             array_values(iterator_to_array($finder))
         );
     }
@@ -128,8 +143,8 @@ class GenerateArticleCommand extends Command
         );
 
         $choices = array_combine(
-            array_map(fn (Member $member) => $member->slug, $members),
-            array_map(fn (Member $member) => $member->pseudo ?? $member->name, $members)
+            array_map(static fn (Member $member) => $member->slug, $members),
+            array_map(static fn (Member $member) => $member->pseudo ?? $member->name, $members)
         );
 
         if ($choices === false) {
@@ -188,7 +203,7 @@ class Header
             $line = "#$line";
         }
 
-        if (!\is_null($this->comment)) {
+        if (null !== $this->comment) {
             $line = "$line # {$this->comment}";
         }
 

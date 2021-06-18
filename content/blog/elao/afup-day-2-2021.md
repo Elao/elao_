@@ -46,10 +46,10 @@ Dans cette présentation, Hélène nous a donné plusieurs clés afin de mieux t
 
 - **Commitment** : attention à l'excès d'engagement : en faire trop ce n'est pas s'engager, mais se cramer et mettre en danger les ressources de l'équipe.
 - **Respect** : L'équipe peut dire non quand l'organisation va trop loin, il ne faut pas hésiter à dire que les choses ne vont pas. Cela aidera l'équipe à grandir.
-- **Openness** : Les solutions correspondent à un besoin à un moment précis.
+- **Openness** : Il ne faut pas juger les solutions en places, car elles  correspondaient au besoin au moment du développement, ce qui n'est peut-être plus le cas maintenant.
 - **Focus** : L'équipe a besoin d'une vision claire du produit et du calendrier.
 - **Courage** : Il faut sortir de sa zone de confort et se remettre en question continuellement, et savoir dire "Je ne sais pas".
 
 ## Alors, cette édition ? 
 
-Malgré une conférence une nouvelle fois en ligne, l'équipe de l'AFUP a parfaitement réussi à entretenir une ambiance sympathique et la bonne humeur régnait sur le chat et dans l'espace virtuel WorkAdventure. Tout était fluide et très bien organisé. Bravo à l'équipe !
+Pour cette dernière journée de conférence, l'AFUP nous as encore fourni un programme de qualité et une super organisation. On vous donne rendez-vous pour le ForumPHP les 21 et 22 octobre 2021 sur Paris. Bravo à l'équipe !

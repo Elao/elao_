@@ -2,7 +2,7 @@
 type:               "post"
 title:              "Virtualiser son environnement de développement avec Manalize ✨"
 date:               "2019-01-29"
-lastModified:       ~
+lastModified:       "2021-06-18"
 tableOfContent:     2
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
@@ -11,7 +11,12 @@ thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnem
 credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
-outdated:           true
+outdated: >
+    Cet article date et contient quelques informations obsolètes.
+
+    Notamment, l'outil **manalize** a été remplacé
+    par [**Manala**](https://manala.github.io/manala/) et
+    ses [_recipes_](https://github.com/manala/manala-recipes).
 
 author:    "tjarrand"
 ---
@@ -152,4 +157,10 @@ Pourquoi ne pas tester un petit `manalize setup .` dès maintenant et voir votre
 
 En 2019, une nouvelle mouture de `manalize` devrait pointer le bout de son nez, encore plus cool !
 Mais ça fera l'objet d'un prochain article. 😉
+
+!!! Info "Breaking news!"
+    Cette nouvelle mouture s'apelle simplement [**Manala**](https://manala.github.io/manala/) 
+    et consiste en un binaire Go et un ensemble de [_recipes_](https://github.com/manala/manala-recipes) 
+    pour bootstraper vos projets, que ce soit en utilisant Vagrant, Docker, 
+    Ansible, et bien plus encore !
 

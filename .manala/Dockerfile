@@ -1,32 +1,18 @@
-ARG NGINX_VERSION=1.18
-ARG MAILDEV_VERSION=2.0.0-beta3
-
-#########
-# Nginx #
-#########
-
-FROM nginx:${NGINX_VERSION}-alpine AS nginx
-
-###########
-# MailDev #
-###########
-
-FROM maildev/maildev:${MAILDEV_VERSION} AS maildev
-
-USER root
-
-CMD ["--web", "80", "--smtp", "25"]
+ARG DEBIAN=buster
 
 ########
 # Base #
 ########
 
-FROM debian:buster-slim as base
+FROM debian:${DEBIAN}-slim as base
 
-# Disable irrelevants apt-key warnings
-ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
-# Disable all debian user interaction
-ARG DEBIAN_FRONTEND=noninteractive
+ARG DEBIAN
+ARG USER_ID=1000
+ARG GROUP_ID=1000
+ARG S6_OVERLAY_VERSION=2.2.0.3
+ARG GOSU_VERSION=1.13
+ARG GOMPLATE_VERSION=3.9.0
+ARG STARSHIP_VERSION=0.55.0
 
 # The 'container' environment variable tells systemd that it's running inside a
 # Docker container environment.
@@ -36,91 +22,102 @@ ENV container="docker"
 RUN \
     apt-get update \
     && apt-get install --yes --no-install-recommends \
-        bash-completion \
-        apt-utils \
-        gnupg \
-        ca-certificates \
         sudo \
         curl \
-        unzip \
+        ca-certificates \
+        gnupg \
+        bsdtar bzip2 \
+        bash-completion \
         make \
-        rsync \
-        vim-tiny \
         less \
+        vim \
     # User
-    && adduser --disabled-password --gecos "" app \
-    && echo "app ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/app \
+    && addgroup --gid ${GROUP_ID} lazy \
+    && adduser --home /home/lazy --shell /bin/bash --uid ${USER_ID} --gecos lazy --ingroup lazy --disabled-password lazy \
+    && mkdir -p /run/user/${USER_ID} && chown lazy:lazy /run/user/${USER_ID} \
+    && printf "lazy ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/lazy \
+    # S6
+    && curl -sSL https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz \
+      | bsdtar -xvf - -C /usr/bin --strip-components=2 bin/s6-svscan bin/s6-supervise bin/s6-svc \
+    # Gosu
+    && curl -sSL https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64 \
+        -o /usr/local/bin/gosu \
+    && chmod +x /usr/local/bin/gosu \
+    # Gomplate
+    && curl -sSL https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64 \
+        -o /usr/local/bin/gomplate \
+    && chmod +x /usr/local/bin/gomplate \
+    # Bash completion
+    && mkdir -p /etc/bash_completion.d \
     # Starship
-    && curl --location https://github.com/starship/starship/releases/latest/download/starship-x86_64-unknown-linux-gnu.tar.gz \
-        | tar zx -C /usr/local/bin \
-    && echo "eval \"\$(starship init bash)\"" > /etc/profile.d/starship.sh
+    && curl -sSL https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz \
+        | bsdtar -xvf - -C /usr/local/bin \
+    && printf "eval \"\$(starship init bash)\"\nexport STARSHIP_CONFIG=\"/etc/starship/config.toml\"" > /etc/profile.d/starship.sh
 
-WORKDIR /srv
+##########
+# System #
+##########
 
-#######
-# App #
-#######
+FROM base AS system
 
-FROM base AS app
-
-# Disable irrelevants apt-key warnings
-ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
-# Disable all debian user interaction
-ARG DEBIAN_FRONTEND=noninteractive
-
-ARG NODE_VERSION=12
+ARG DEBIAN
 
 RUN \
-    echo "deb https://deb.nodesource.com/node_${NODE_VERSION}.x buster main" > /etc/apt/sources.list.d/node.list \
-    && curl --silent --location --show-error https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
+    apt-get install --yes --no-install-recommends \
+      unzip \
+      git \
+      rsync
+
+# Nginx
+RUN \
+    printf "deb http://nginx.org/packages/debian/ ${DEBIAN} nginx" > /etc/apt/sources.list.d/nginx.list \
+    && curl -sSL http://nginx.org/keys/nginx_signing.key \
         | apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
-    && curl --silent --location --show-error https://dl.yarnpkg.com/debian/pubkey.gpg \
+    && apt-get update \
+    && apt-get install --yes --no-install-recommends \
+        nginx=1.18.*
+
+# Php
+RUN \
+    printf "deb https://packages.sury.org/php/ ${DEBIAN} main" > /etc/apt/sources.list.d/php.list \
+    && curl -sSL https://packages.sury.org/php/apt.gpg \
+        -o /etc/apt/trusted.gpg.d/php.gpg \
+    && apt-get update \
+    && apt-get install --yes --no-install-recommends \
+        php7.4-cli \
+        php7.4-fpm \
+        php7.4-opcache \
+        php7.4-xdebug \
+        # Symfony
+        php7.4-intl \
+        php7.4-curl \
+        php7.4-mbstring \
+        php7.4-xml \
+        # Project
+        php7.4-gd \
+    && phpdismod xdebug \
+    && mkdir /run/php \
+    && update-alternatives --install /usr/sbin/php-fpm php-fpm /usr/sbin/php-fpm7.4 1 \
+    && update-alternatives --install /etc/php/default php-config-default /etc/php/7.4 1 \
+    # Composer
+    && curl -sSL https://getcomposer.org/installer \
+        | php -- --install-dir /usr/local/bin --filename composer \
+    # Symfony
+    && SYMFONY_VERSION=`curl -sSL https://get.symfony.com/cli/LATEST --fail` \
+    && curl -sSL https://github.com/symfony/cli/releases/download/v${SYMFONY_VERSION}/symfony_linux_amd64 \
+        -o /usr/local/bin/symfony \
+    && chmod +x /usr/local/bin/symfony
+
+# Nodejs
+RUN \
+    printf "deb https://deb.nodesource.com/node_12.x ${DEBIAN} main" > /etc/apt/sources.list.d/node.list \
+    && curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
+        | apt-key add - \
+    && printf "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
+    && curl -sSL https://dl.yarnpkg.com/debian/pubkey.gpg \
         | apt-key add - \
     && apt-get update \
     && apt-get install --yes --no-install-recommends \
         nodejs \
-        yarn \
-    # Cache
-    && mkdir -p /usr/etc \
-    && echo "cache=\${XDG_CACHE_HOME}/npm" > /usr/etc/npmrc
+        yarn
 
-ARG PHP_VERSION=7.4
-
-RUN \
-    echo "deb https://packages.sury.org/php/ buster main" > /etc/apt/sources.list.d/php.list \
-    && curl --silent --location --show-error https://packages.sury.org/php/apt.gpg \
-        --output /etc/apt/trusted.gpg.d/php.gpg \
-    && apt-get update \
-    && apt-get install --yes --no-install-recommends \
-        php${PHP_VERSION}-cli \
-        php${PHP_VERSION}-fpm \
-        # ⚠️ DO NOT REMOVE !!!
-        php${PHP_VERSION}-gd \
-        php${PHP_VERSION}-intl \
-        php${PHP_VERSION}-curl \
-        php${PHP_VERSION}-mbstring \
-        php${PHP_VERSION}-xml \
-        php${PHP_VERSION}-sqlite \
-        php-xdebug \
-    && mkdir /run/php \
-    # Composer
-    && curl --silent --location --show-error https://getcomposer.org/installer \
-        | php -- --install-dir /usr/local/bin --filename composer \
-    # Symfony
-    && VERSION=`curl --silent --location --fail https://get.symfony.com/cli/LATEST` \
-    && curl --silent --location --show-error https://github.com/symfony/cli/releases/download/v${VERSION}/symfony_linux_amd64.gz \
-        --output - | gunzip > /usr/local/bin/symfony \
-    && chmod +x /usr/local/bin/symfony
-
-# Override stop signal to stop process gracefully
-# https://github.com/php/php-src/blob/17baa87faddc2550def3ae7314236826bc1b1398/sapi/fpm/php-fpm.8.in#L163
-STOPSIGNAL SIGQUIT
-
-EXPOSE 9000
-
-COPY docker/bin/entrypoint.sh /usr/local/bin/entrypoint.sh
-
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-
-CMD ["php-fpm7.4"]

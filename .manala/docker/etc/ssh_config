@@ -1,5 +1,0 @@
-Host *
-    StrictHostKeyChecking no
-    HashKnownHosts        no
-    UserKnownHostsFile    /dev/null
-    LogLevel              ERROR

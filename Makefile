@@ -31,7 +31,7 @@ watch:
 
 ## Start webpack dev server with HMR (Hot reload)
 dev:
-	npx encore dev-server --mode=development --port=8085
+	npx encore dev-server --mode=development
 
 ## Clear the build and assets
 clear:
@@ -137,16 +137,16 @@ security.symfony@integration:
 security.npm@integration:
 	npm audit ; RC=$${?} ; [ $${RC} -gt 2 ] && exit $${RC} || exit 0
 
-############
+#######
 # SSH #
-############
+#######
 
 ssh@production:
 	ssh app@website-1.elao.prod.elao.run
 
-############
-# Test     #
-############
+########
+# Test #
+########
 
 ## Most basic test: check the build command, without images
 test: build-content-without-images

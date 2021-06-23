@@ -152,3 +152,10 @@ ssh@production:
 test: build-content-without-images
 test:
 	$(call message_success, Most basic tests succeeded. You can ensure a \`make build-content\` is successful for more complete tests.)
+
+############
+# Utils    #
+############
+
+article:
+	bin/console app:generate:article

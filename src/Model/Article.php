@@ -16,7 +16,6 @@ class Article
     public string $content;
     public ?\DateTimeInterface $date = null;
     public ?\DateTimeInterface $lastModified = null;
-    public bool $draft = true;
     public ?string $description;
     /**
      * Main image for the articles, used as thumbnail and banner.
@@ -27,9 +26,11 @@ class Article
      */
     public ?string $banner = null;
     public array $tags = [];
+
+    /**
+     * Used for old articles written in english
+     */
     public string $lang = 'fr';
-    public array $categories;
-    //public string $category;
 
     /** @var array<Member> */
     public array $authors = [];

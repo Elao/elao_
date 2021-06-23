@@ -85,3 +85,7 @@ services:
             $provider: '@.inner'
             $disabled: '%env(bool:INCLUDE_SAMPLES)%'
             $ignored: ['example']
+
+    App\Command\GenerateArticleCommand:
+        arguments:
+            $path: '%kernel.project_dir%/content/blog'

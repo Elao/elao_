@@ -10,6 +10,7 @@ export default class Snake {
         this.positions = [];
         this.lastTail = null;
         this.crash = null;
+        this.died = null;
 
         this.reset();
     }
@@ -28,6 +29,7 @@ export default class Snake {
     die(crash) {
         this.alive = false;
         this.crash = crash;
+        this.died = Date.now();
     }
 
     reset() {
@@ -37,6 +39,7 @@ export default class Snake {
         this.forward = true;
         this.alive = true;
         this.crash = null;
+        this.died = null;
     }
 
     isHorizontal() {

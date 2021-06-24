@@ -41,6 +41,10 @@ export default class Game {
 
     onInput(type) {
         if (!this.snake.alive) {
+            if (Date.now() - this.snake.died < 3000) {
+                return;
+            }
+
             return this.reset();
         }
 

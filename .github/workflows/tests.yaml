@@ -62,31 +62,33 @@ jobs:
 
       - name: 'Composer validate'
         if: always() && steps.deps.outcome == 'success'
-        run: composer validate --no-check-publish
+        run: composer validate --no-check-publish --ansi --no-interaction
 
       - name: 'Lint YAML'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.yaml@integration
+        run: bin/console lint:yaml config translations --parse-tags --ansi --no-interaction
 
       - name: 'Lint Twig'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.yaml@integration
+        run: bin/console lint:twig templates --show-deprecations --ansi --no-interaction
 
       - name: 'Lint JS'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.eslint@integration
+        run: npm run lint
 
       - name: 'Lint Parameters and Services'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.container@integration
+        run: bin/console lint:container --ansi --no-interaction
 
       - name: 'PHP CS Fixer'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.php-cs-fixer@integration
+        run: vendor/bin/php-cs-fixer fix --dry-run --diff
 
       - name: 'PhpStan'
         if: always() && steps.deps.outcome == 'success'
-        run: make lint.phpstan@integration
+        run: vendor/bin/phpstan --no-progress --no-interaction analyse
+        env:
+          APP_ENV: test
 
       # - name: Run tests
       #   run: vendor/bin/simple-phpunit --testdox

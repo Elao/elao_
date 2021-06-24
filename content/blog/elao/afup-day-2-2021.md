@@ -1,7 +1,7 @@
 ---
 type:               "post"
 title:              "AFUP Day 2021, jour 2 : le compte-rendu de l'équipe"
-date:               "2021-06-21"
+date:               "2021-06-24"
 lastModified:       ~
 
 description:        "Notre compte-rendu du deuxième jour de l'Afup Day, édition 2021, à distance !"

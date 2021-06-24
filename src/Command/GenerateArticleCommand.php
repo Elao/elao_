@@ -142,16 +142,10 @@ class GenerateArticleCommand extends Command
             $this->contents->getContents(Member::class, ['name' => true], ['active' => true])
         );
 
-        $choices = array_combine(
+        return array_combine(
             array_map(static fn (Member $member) => $member->slug, $members),
             array_map(static fn (Member $member) => $member->pseudo ?? $member->name, $members)
         );
-
-        if ($choices === false) {
-            throw new \LogicException('Should not happen.');
-        }
-
-        return $choices;
     }
 
     private function exists(string $category, string $slug): bool

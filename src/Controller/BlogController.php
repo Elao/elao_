@@ -11,9 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/blog")
- */
+#[Route('/blog')]
 class BlogController extends AbstractController
 {
     private ContentManager $manager;
@@ -23,10 +21,8 @@ class BlogController extends AbstractController
         $this->manager = $manager;
     }
 
-    /**
-     * @Route(name="blog")
-     * @Route("/page/{!page}", name="blog_page", requirements={"page"="\d+"})
-     */
+    #[Route(name: 'blog')]
+    #[Route('/page/{!page}', name: 'blog_page', requirements: ['page' => '\d+'])]
     public function index(int $page = 1, int $perPage = 20): Response
     {
         $articles = $this->manager->getContents(Article::class, ['date' => false]);
@@ -40,10 +36,8 @@ class BlogController extends AbstractController
         ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
-    /**
-     * @Route("/tag/{tag}", name="blog_tag")
-     * @Route("/tag/{tag}/{!page}", name="blog_tag_page", requirements={"page"="\d+"})
-     */
+    #[Route('/tag/{tag}', name: 'blog_tag')]
+    #[Route('/tag/{tag}/{!page}', name: 'blog_tag_page', requirements: ['page' => '\d+'])]
     public function tag(string $tag, int $page = 1, int $perPage = 20): Response
     {
         $articles = $this->manager->getContents(
@@ -63,9 +57,7 @@ class BlogController extends AbstractController
         ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
-    /**
-     * @Route("/{article}", name="blog_article", requirements={"article"=".+"})
-     */
+    #[Route('/{article}', name: 'blog_article', requirements: ['article' => '.+'])]
     public function article(Article $article): Response
     {
         return $this->render('blog/article.html.twig', [

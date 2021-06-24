@@ -11,9 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/etudes-de-cas")
- */
+#[Route('/etudes-de-cas')]
 class CaseStudyController extends AbstractController
 {
     private ContentManager $manager;
@@ -23,9 +21,7 @@ class CaseStudyController extends AbstractController
         $this->manager = $manager;
     }
 
-    /**
-     * @Route(name="case_studies")
-     */
+    #[Route(name: 'case_studies')]
     public function list(): Response
     {
         $caseStudies = $this->getActiveCasesStudies();
@@ -35,9 +31,7 @@ class CaseStudyController extends AbstractController
         ])->setLastModified(ContentUtils::max($caseStudies, 'lastModified'));
     }
 
-    /**
-     * @Route("/{caseStudy}", name="case_study")
-     */
+    #[Route('/{caseStudy}', name: 'case_study')]
     public function show(CaseStudy $caseStudy): Response
     {
         $caseStudies = array_filter($this->getActiveCasesStudies(), static fn (CaseStudy $s): bool => $s !== $caseStudy);

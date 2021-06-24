@@ -13,9 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class SiteController extends AbstractController
 {
-    /**
-     * @Route("/", name="homepage")
-     */
+    #[Route('/', name: 'homepage')]
     public function home(ContentManager $manager): Response
     {
         /** @var Article[] $articles */
@@ -28,25 +26,19 @@ class SiteController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/nos-services", name="services")
-     */
+    #[Route('/nos-services', name: 'services')]
     public function services(): Response
     {
         return $this->render('site/services.html.twig');
     }
 
-    /**
-     * @Route("/methodologie", name="methodology")
-     */
+    #[Route('/methodologie', name: 'methodology')]
     public function methodology(): Response
     {
         return $this->render('site/methodology.html.twig');
     }
 
-    /**
-     * @Route("/nos-valeurs", name="values")
-     */
+    #[Route('/nos-valeurs', name: 'values')]
     public function values(ContentManager $manager): Response
     {
         $activeMembers = $manager->getContents(Member::class, null, static fn (Member $member): bool => $member->active);
@@ -58,25 +50,19 @@ class SiteController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/contact", name="contact")
-     */
+    #[Route('/contact', name: 'contact')]
     public function contact(): Response
     {
         return $this->render('site/contact.html.twig');
     }
 
-    /**
-     * @Route("/legal", name="legal")
-     */
+    #[Route('/legal', name: 'legal')]
     public function legal(): Response
     {
         return $this->render('site/legal.html.twig');
     }
 
-    /**
-     * @Route("/confidentialite", name="privacy")
-     */
+    #[Route('/confidentialite', name: 'privacy')]
     public function privacy(): Response
     {
         return $this->render('site/privacy.html.twig');

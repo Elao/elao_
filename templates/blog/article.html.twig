@@ -99,14 +99,18 @@
         <main class="article-content__main">
 
             {% if article.outdated %}
-                <p class="alert alert--info">
-                    {% if article.outdated is same as true %}
-                        <i class="icon icon--info" aria-hidden="true"></i>
-                        Attention, cet article date un peu, il est peut-être obsolète, gardez cela en tête lors de votre lecture !
-                    {% else %}
-                        {{ article.outdated }}
-                    {% endif %}
-                </p>
+                <div class="alert alert--info">
+                    <i class="icon icon--info" aria-hidden="true"></i>
+                    <div>
+                        {% if article.outdated is same as true %}
+                            <p>
+                                Attention, cet article date un peu, il est peut-être obsolète, gardez cela en tête lors de votre lecture !
+                            </p>
+                        {% else %}
+                            {{ article.outdated|nl2br|markdownify|raw }}
+                        {% endif %}
+                    </div>
+                </div>
             {% endif %}
 
             {{ article.content|raw }}

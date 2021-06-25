@@ -8,6 +8,10 @@
     margin-right: 25px;
     font-size: 25px;
   }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .alert--error {

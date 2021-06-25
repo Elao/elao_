@@ -1,6 +1,3 @@
-import Symbol from 'snake/Rendering/Symbol';
-import Logo from 'snake/Assets/Logo';
-
 export default class CrashRenderer {
     constructor(snake) {
         this.snake = snake;
@@ -39,8 +36,6 @@ export default class CrashRenderer {
             const { crash, head } = this.snake;
             const x = (crash[0] + head[0]) / 2 - 1;
             const y = (crash[1] + head[1]) / 2 - 1;
-
-            console.log({ crash, head, x, y });
 
             this.element.setAttribute('style', `transform: translate(${x}px, ${y}px);`);
 

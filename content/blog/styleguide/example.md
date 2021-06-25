@@ -2,7 +2,7 @@
 title:              "Petit guide de style du blog"
 date:               "2020-09-23"
 #lastModified:       ~ # A utiliser par défaut
-lastModified:       "2021-03-17" # A utiliser pour indiquer explicitement qu'un article a été mis à jour
+lastModified:       "2021-03-17" # A utiliser pour indiquer explicitement qu'un article a été mis à jour à une date. Supprimer la propriété pour utiliser la date de dernier commit.
 tableOfContent:     3
 
 description:        "Tour d'horizon de ce qu'on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction."

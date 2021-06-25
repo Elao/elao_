@@ -2,10 +2,11 @@ import MapRenderer from 'snake/Rendering/MapRenderer';
 import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
 import PixelsRenderer from 'snake/Rendering/PixelsRenderer';
 import CrashRenderer from 'snake/Rendering/CrashRenderer';
+import Logo from 'snake/Assets/Logo';
 import styles from 'snake/Rendering/styles';
 
 export default class SvgRenderer {
-    static createElement(size, margin = 3) {
+    static createElement(size, margin = 1.5, marginTop = 1.5) {
         const element = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
         // Attributes
@@ -13,7 +14,7 @@ export default class SvgRenderer {
         element.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
-        element.setAttribute('viewBox', `${-margin} ${-margin} ${size + margin * 2} ${size + margin * 2}`);
+        element.setAttribute('viewBox', `${-margin} ${-margin - marginTop} ${size + margin * 2} ${size + margin * 2 + marginTop}`);
 
         // Style
         element.style.width = '100vw';
@@ -40,6 +41,7 @@ export default class SvgRenderer {
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PixelsRenderer(game.pixels);
         this.crash = new CrashRenderer(game.snake);
+        this.logo = new Logo();
         this.element = this.constructor.createElement(game.size);
 
         this.period = game.period;
@@ -53,6 +55,7 @@ export default class SvgRenderer {
         this.snake.attach(this.element);
         this.pixels.attach(this.element);
         this.crash.attach(this.element);
+        this.logo.attach(this.element, game.size);
 
         document.body.appendChild(this.element);
     }

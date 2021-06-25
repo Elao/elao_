@@ -5,7 +5,7 @@ export default class SnakeRenderer {
 
         // Style
         this.element.setAttribute('fill', 'none');
-        this.element.setAttribute('stroke', '#ffffff');
+        this.element.setAttribute('stroke', '#FF4344');
         this.element.setAttribute('stroke-width', '0.9');
         this.element.setAttribute('stroke-linecap', 'square');
         this.element.setAttribute('d', this.getPath());

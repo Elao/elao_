@@ -68,9 +68,7 @@ class SiteController extends AbstractController
         return $this->render('site/privacy.html.twig');
     }
 
-    /**
-     * @Route("/elaomojis", name="elaomojis")
-     */
+    #[Route('/elaomojis', name: 'elaomojis')]
     public function elaomojis(): Response
     {
         return $this->render('site/elaomojis.html.twig');

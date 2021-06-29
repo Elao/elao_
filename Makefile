@@ -49,15 +49,15 @@ build:
 build-content: export APP_ENV = prod
 build-content:
 	rm -rf public/resized
-	symfony bin/console cache:clear
-	symfony bin/console stenope:build
+	symfony console cache:clear
+	symfony console stenope:build
 
 ## Build static site without resizing images, for moar speed
 build-content-without-images: export APP_ENV = prod
 build-content-without-images: export GLIDE_PRE_GENERATE_CACHE = 0
 build-content-without-images:
-	symfony php bin/console cache:clear
-	symfony php bin/console stenope:build
+	symfony console cache:clear
+	symfony console stenope:build
 
 ## Build static site with assets
 build-static: build build-content
@@ -73,8 +73,8 @@ build-subdir: export WEBPACK_PUBLIC_PATH = /elao_/build
 build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8001/elao_
 build-subdir: clear build
 	rm -rf public/resized
-	symfony php bin/console cache:clear
-	symfony php bin/console stenope:build build/elao_
+	symfony console cache:clear
+	symfony console stenope:build build/elao_
 
 ## Serve the static version of the site from a subdir / with base url
 serve-static-subdir:
@@ -91,21 +91,21 @@ lint.composer:
 	symfony composer validate --no-check-publish
 
 lint.container:
-	symfony php bin/console lint:container
+	symfony console lint:container
 
 lint.php-cs-fixer:
 	symfony php vendor/bin/php-cs-fixer fix
 
 lint.twig:
-	symfony php bin/console lint:twig templates --show-deprecations
+	symfony console lint:twig templates --show-deprecations
 
 lint.yaml:
-	symfony php bin/console lint:yaml config translations --parse-tags
+	symfony console lint:yaml config translations --parse-tags
 
 lint.phpstan: export APP_ENV = test
 lint.phpstan:
-	symfony php bin/console cache:clear --ansi
-	symfony php bin/console cache:warmup --ansi
+	symfony console cache:clear --ansi
+	symfony console cache:warmup --ansi
 	symfony php vendor/bin/phpstan analyse --memory-limit=-1
 
 lint.eslint:
@@ -142,4 +142,4 @@ test:
 ############
 
 article:
-	bin/console app:generate:article
+	symfony console app:generate:article

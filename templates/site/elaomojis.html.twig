@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
+{% block meta_title "Notre sélection d'Elaomojis | Elao" %}
+{% block meta_description "À l’occasion de la Journée Mondiale des Emojis 2021 (World Emoji Day), nous sommes ravis de vous présenter une sélection de nos :emojis-favoris: | Elao" %}
+
+{% block twitter_card_type 'summary_large_image' %}
+{% block og_image asset('social/elaomojis-2021.jpg'|glide_image_preset('opengraph_image')) %}
+{% block twitter_image absolute_url(asset('social/elaomojis-2021.jpg'|glide_image_preset('twitter_card'))) %}
+
 {% block content %}
     <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
         <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">

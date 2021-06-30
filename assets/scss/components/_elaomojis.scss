@@ -37,6 +37,7 @@
   .img {
     margin: 0 15px 0 0;
     width: 32px;
+    min-width: 32px;
     height: 32px;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -46,13 +47,13 @@
 
 @media (max-width: $screen-lg) {
   .elaomojis__item {
-    width: calc(25% - 20px);
+    width: calc(50% - 20px);
   }
 }
 
 @media (max-width: $screen-xs) {
   .elaomojis__item {
-    width: calc(50% - 20px);
+    width: 100%;
   }
 }
 

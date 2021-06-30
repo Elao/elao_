@@ -1,13 +1,15 @@
 export default class CrashRenderer {
     constructor(snake) {
         this.snake = snake;
+        this.container = null;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
         this.element.setAttribute('class', 'crash__symbol_container');
     }
 
     attach(container) {
-        container.appendChild(this.element);
+        this.container = container;
+        this.container.appendChild(this.element);
     }
 
     createSymbol(value) {
@@ -27,6 +29,7 @@ export default class CrashRenderer {
         if (!this.snake.crash) {
             if (this.element.children.length) {
                 this.element.innerHTML = '';
+                this.container.classList.remove('shake');
             }
 
             return;
@@ -44,6 +47,8 @@ export default class CrashRenderer {
             this.createSymbol('$');
             this.createSymbol(';');
             this.createSymbol('?');
+
+            this.container.classList.add('shake');
         }
     }
 }

@@ -1,6 +1,8 @@
 export default class Snake {
-    static get defaultPositions() {
-        return [[6,0], [5,0], [4,0], [3,0], [2,0], [1,0], [0,0]];
+    static get length() { return 5; }
+
+    static defaultPositions(length = this.length, x = 0, y = 0) {
+        return new Array(length).fill(null).map((v, i) => [x + length - i, y]);
     }
 
     constructor() {
@@ -19,6 +21,10 @@ export default class Snake {
         return this.positions[0];
     }
 
+    get score() {
+        return this.positions.length - this.constructor.length;
+    }
+
     eat() {
         if (this.lastTail) {
             this.positions.push(this.lastTail);
@@ -34,7 +40,7 @@ export default class Snake {
 
     reset() {
         this.positions.length = 0;
-        this.positions.push(...this.constructor.defaultPositions);
+        this.positions.push(...this.constructor.defaultPositions());
         this.horizontal = true;
         this.forward = true;
         this.alive = true;

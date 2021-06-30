@@ -2,6 +2,7 @@ import MapRenderer from 'snake/Rendering/MapRenderer';
 import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
 import PixelsRenderer from 'snake/Rendering/PixelsRenderer';
 import CrashRenderer from 'snake/Rendering/CrashRenderer';
+import ScoreRenderer from 'snake/Rendering/ScoreRenderer';
 import Logo from 'snake/Assets/Logo';
 import styles from 'snake/Rendering/styles';
 
@@ -15,23 +16,16 @@ export default class SvgRenderer {
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
         element.setAttribute('viewBox', `${-margin} ${-margin - marginTop} ${size + margin * 2} ${size + margin * 2 + marginTop}`);
+        element.setAttribute('id', 'snake');
 
         // Style
-        element.style.width = '100vw';
-        element.style.height = '100vh';
-        element.style.position = 'fixed';
-        element.style.zIndex = 1001;
-        element.style.top = 0;
-        element.style.left = 0;
-        element.style.right = 0;
-        element.style.bottom = 0;
-        element.style.backgroundColor = '#FF4344';
-
         const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
 
         style.innerHTML = styles;
 
         element.appendChild(style);
+
+        document.body.style.overflow = 'hidden';
 
         return element;
     }
@@ -40,9 +34,13 @@ export default class SvgRenderer {
         this.map = new MapRenderer(game.size);
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PixelsRenderer(game.pixels);
-        this.crash = new CrashRenderer(game.snake);
+        this.crash = new CrashRenderer(game.snake, this.container);
+        this.score = new ScoreRenderer(game.snake);
         this.logo = new Logo();
         this.element = this.constructor.createElement(game.size);
+        this.container = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+
+        this.element.appendChild(this.container);
 
         this.period = game.period;
         this.time = 0;
@@ -51,11 +49,12 @@ export default class SvgRenderer {
 
         this.update = this.update.bind(this);
 
-        this.map.attach(this.element);
-        this.snake.attach(this.element);
-        this.pixels.attach(this.element);
-        this.crash.attach(this.element);
-        this.logo.attach(this.element, game.size);
+        this.map.attach(this.container);
+        this.snake.attach(this.container);
+        this.pixels.attach(this.container);
+        this.crash.attach(this.container);
+        this.logo.attach(this.container, game.size);
+        this.score.attach(this.container, game.size);
 
         document.body.appendChild(this.element);
     }
@@ -69,5 +68,6 @@ export default class SvgRenderer {
         this.snake.update((this.time / this.period) % this.period);
         this.pixels.update();
         this.crash.update();
+        this.score.update();
     }
 }

@@ -43,6 +43,6 @@ export default class SnakeRenderer {
     }
 
     update(progress) {
-        this.element.setAttribute('d', this.getPath(this.snake.alive ? progress : 1));
+        this.element.setAttribute('d', this.getPath(this.snake.alive ? Math.min(progress, 1) : 1));
     }
 }

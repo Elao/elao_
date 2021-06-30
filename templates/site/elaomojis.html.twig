@@ -475,7 +475,9 @@
         </li>
     </ul>
 
-    <div class="bricks">
+    {# Todo : uncomment after tweet is tweeted 🐦 #}
+
+    {# <div class="bricks">
         <div class="brick-comment">
             <p class="title">Et vous ?</p>
             <p>
@@ -486,5 +488,26 @@
             </p>
             <div id="tweet-container" class="tweet-container" data-tweet-id=""></div>
         </div>
-    </div>
+    </div> #}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script>
+        window.onload = (function(){
+            var tweet = document.getElementById('tweet-container');
+            // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+            twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                conversation: 'none',
+                cards: 'hidden',
+                theme: 'light',
+                lang: 'fr',
+                align: 'center',
+                width: 550, // default
+                dnt: true,
+            })
+        });
+    </script>
 {% endblock %}

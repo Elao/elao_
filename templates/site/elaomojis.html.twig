@@ -483,20 +483,22 @@
         </li>
     </ul>
 
-    {# Todo : uncomment after tweet is tweeted 🐦 #}
+    {% set tweetId = '' %} {# TODO : set tweet ID once tweeted 🐦 #}
 
-    {# <div class="bricks">
+    {% if tweetId is not empty %}
+    <div class="bricks">
         <div class="brick-comment">
             <p class="title">Et vous ?</p>
             <p>
                 Quels sont vos emojis préférés ?
-                <a href="" target="_blank" class="animated-link animated-link--light">
+                <a href="{{ external_url('twitter_like', { tweet_id: tweetId }) }}" target="_blank" class="animated-link animated-link--light">
                     Poursuivons la discussion sur twitter !
                 </a>
             </p>
-            <div id="tweet-container" class="tweet-container" data-tweet-id=""></div>
+            <div id="tweet-container" class="tweet-container" data-tweet-id="{{ tweetId }}"></div>
         </div>
-    </div> #}
+    </div>
+    {% endif %}
 {% endblock %}
 
 {% block javascripts %}

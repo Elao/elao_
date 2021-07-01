@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Yaml\Yaml;
 
 class SiteController extends AbstractController
 {
@@ -72,16 +73,10 @@ class SiteController extends AbstractController
     #[Route('/elaomojis', name: 'elaomojis')]
     public function elaomojis(ParameterBagInterface $parameterBag): Response
     {
-        /** @var string $rawConfig */
-        $rawConfig = file_get_contents($parameterBag->get('kernel.project_dir') . '/templates/site/elaomojis.config.json');
+        $path = $parameterBag->get('kernel.project_dir') . '/templates/site/elaomojis.yaml';
 
         return $this->render('site/elaomojis.html.twig', [
-            'config' => json_decode(
-                $rawConfig,
-                true,
-                10,
-                JSON_THROW_ON_ERROR
-            ),
+            'config' => Yaml::parseFile($path),
         ]);
     }
 }

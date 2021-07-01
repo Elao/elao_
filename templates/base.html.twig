@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="{% block meta_locale app.request.locale %}" class="no-js">
     <head>
+        <link rel="alternate" href="http://demo-elao.com/" hreflang="x-default" />
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="googlebot" content="notranslate" />
+        <meta name="googlebot-news" content="noindex, nofollow">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +29,6 @@
             <meta property="og:title" content="{% block og_title block('meta_title') %}" />
             <meta property="og:locale" content="{% block og_locale block('meta_locale') %}" />
             <meta property="og:description" content="{% block og_description block('meta_description') %}" />
-            <meta property="og:url" content="{{ app.request.uri }}" />
             <meta property="og:site_name" content="elao_" />
             {% set og_image %}{% block og_image %}{% endblock %}{% endset %}
             {% if og_image|default(false) %}

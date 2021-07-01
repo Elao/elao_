@@ -1,18 +1,15 @@
-export default class CrashRenderer {
+export default class ScoreRenderer {
     constructor(snake) {
         this.snake = snake;
         this.score = null;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'text');
 
-        this.element.setAttribute('fill', 'white');
-        this.element.setAttribute('font-size', '0.8');
-        this.element.setAttribute('font-family', 'faktum bold');
-        this.element.setAttribute('text-anchor', 'end');
+        this.element.setAttribute('class', 'score');
     }
 
-    attach(container, size) {
-        this.element.setAttribute('x', size + 0.5);
-        this.element.setAttribute('y', -1.4);
+    attach(container, size, border, marginTop) {
+        this.element.setAttribute('x', size + border);
+        this.element.setAttribute('y', - marginTop + 0.1);
 
         container.appendChild(this.element);
     }

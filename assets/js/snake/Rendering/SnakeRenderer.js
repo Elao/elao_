@@ -15,7 +15,7 @@ export default class SnakeRenderer {
         container.appendChild(this.element);
     }
 
-    getPath(progress) {
+    getPath(progress = 1) {
         const { positions } = this.snake;
         const last = positions.length - 1;
 

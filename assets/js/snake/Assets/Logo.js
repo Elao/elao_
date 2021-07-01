@@ -12,7 +12,6 @@ export default class Logo {
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
         path.setAttribute('d', content);
-        path.setAttribute('fill', 'white');
 
         return path;
     }
@@ -25,7 +24,6 @@ export default class Logo {
         element.setAttribute('y', y);
         element.setAttribute('width', width);
         element.setAttribute('height', height);
-        element.setAttribute('fill', '#ffffff');
 
         return element;
     }
@@ -34,7 +32,9 @@ export default class Logo {
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
         this.element.setAttribute('viewBox', '0 0 300 100');
-        this.element.setAttribute('width', 2);
+        this.element.setAttribute('width', 2.1);
+        this.element.setAttribute('height', 0.7);
+        this.element.setAttribute('class', 'snake__logo');
 
         const { createPath, createRect, paths } = this.constructor;
 
@@ -43,9 +43,9 @@ export default class Logo {
         this.element.appendChild(createRect(256.98, 91.44, 59.96, 15.85));
     }
 
-    attach(container, size) {
-        this.element.setAttribute('x', -0.5);
-        this.element.setAttribute('y', 4 - size);
+    attach(container, size, border, marginTop) {
+        this.element.setAttribute('x', - border);
+        this.element.setAttribute('y', - border - marginTop);
 
         container.appendChild(this.element);
     }

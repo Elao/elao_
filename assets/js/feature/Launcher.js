@@ -7,8 +7,9 @@ const B = 66;
 const KONAMICODE = [UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,B,A];
 
 export default class Launcher {
-    constructor(files, trigger) {
+    constructor(files, styles, trigger) {
         this.files = files;
+        this.styles = styles;
         this.trigger = trigger;
         this.sequence = new Array(KONAMICODE.length).fill(0);
         this.engine = null;
@@ -50,7 +51,10 @@ export default class Launcher {
         if (this.files.length) {
             window.addEventListener('snake-ready', this.onReady);
 
-            this.files.forEach(file => document.head.appendChild(this.getScript(file)));
+            this.styles.forEach(url => document.head.appendChild(this.getStyle(url)));
+            this.styles.length = 0;
+
+            this.files.forEach(url => document.head.appendChild(this.getScript(url)));
             this.files.length = 0;
         } else {
             this.onReady();
@@ -67,10 +71,20 @@ export default class Launcher {
         this.engine.start();
     }
 
-    getScript(src) {
+    getScript(url) {
         const element = document.createElement('script');
 
-        element.src = src;
+        element.src = url;
+        element.defer = true;
+
+        return element;
+    }
+
+    getStyle(url) {
+        const element = document.createElement('link');
+
+        element.rel = 'stylesheet';
+        element.href = url;
         element.defer = true;
 
         return element;

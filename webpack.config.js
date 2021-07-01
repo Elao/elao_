@@ -28,6 +28,7 @@ Encore
     .addEntry('app', './assets/js/app.js')
     .addEntry('see', './assets/js/snake/index.js') /* Snake Easter Egg */
     .addStyleEntry('style', './assets/scss/style.scss')
+    .addStyleEntry('see_style', './assets/scss/snake.scss')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

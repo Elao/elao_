@@ -61,9 +61,6 @@
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
 
-            <!-- S.E.E. -->
-            <meta name="see" content="{{ encore_entry_js_files('see')|json_encode|escape('html_attr') }}">
-
             {% if site.trackers.matomo is not empty %}
                 <!-- Matomo -->
                 <script type="text/javascript">
@@ -81,6 +78,10 @@
                 <!-- End Matomo Code -->
             {% endif %}
         {% endblock %}
+
+        <!-- S.E.E. -->
+        <meta name="see" content="{{ encore_entry_js_files('see')|json_encode|escape('html_attr') }}">
+        <meta name="see_style" content="{{ encore_entry_css_files('see_style')|json_encode|escape('html_attr') }}">
     </head>
     <body>
         <header class="header">

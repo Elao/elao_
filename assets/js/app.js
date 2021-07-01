@@ -15,6 +15,7 @@ function init() {
     try {
         new Launcher(
             JSON.parse(document.head.querySelector('meta[name="see"]').content),
+            JSON.parse(document.head.querySelector('meta[name="see_style"]').content),
             document.getElementById('see')
         );
         document.getElementById('see').click();

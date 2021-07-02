@@ -8,7 +8,7 @@ import Logo from 'snake/Assets/Logo';
 import CloseButton from 'snake/Assets/CloseButton';
 
 export default class SvgRenderer {
-    static createElement(size, margin, marginTop) {
+    static createElement(size, margin) {
         const element = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 
         // Attributes
@@ -16,13 +16,13 @@ export default class SvgRenderer {
         element.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
-        element.setAttribute('viewBox', `${-margin} ${-margin - marginTop} ${size + margin * 2} ${size + margin * 2 + marginTop}`);
+        element.setAttribute('viewBox', `${-margin} ${-margin} ${size + margin * 2} ${size + margin * 2}`);
         element.setAttribute('class', 'snake-renderer');
 
         return element;
     }
 
-    constructor(game, onClose, touchControls, margin = 2.5, marginTop = 1.5) {
+    constructor(game, onClose, touchControls, margin = 3.5) {
         this.map = new MapRenderer(game.size);
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PointRenderer(game.pixels);
@@ -33,9 +33,8 @@ export default class SvgRenderer {
         this.close = new CloseButton(onClose);
         this.touchControls = touchControls;
         this.margin = margin;
-        this.marginTop = marginTop;
         this.element = document.createElement('div');
-        this.svg = this.constructor.createElement(game.size, this.margin, this.marginTop);
+        this.svg = this.constructor.createElement(game.size, this.margin);
         this.container = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
         this.element.appendChild(this.svg);
@@ -53,8 +52,8 @@ export default class SvgRenderer {
         this.map.attach(this.container);
         this.snake.attach(this.container);
         this.pixels.attach(this.container);
-        this.score.attach(this.container, game.size, this.map.border, this.marginTop);
-        this.logo.attach(this.container, game.size, this.map.border, this.marginTop);
+        this.score.attach(this.container, game.size, this.map.border);
+        this.logo.attach(this.container, game.size, this.map.border);
         this.crash.attach(this.container);
         this.end.attach(this.element);
         this.close.attach(this.element);

@@ -43,7 +43,7 @@ export default class Logo {
         this.element.appendChild(createRect(256.98, 91.44, 59.96, 15.85));
     }
 
-    attach(container, size, border, marginTop) {
+    attach(container, size, border, marginTop = 1.5) {
         this.element.setAttribute('x', - border);
         this.element.setAttribute('y', - border - marginTop);
 

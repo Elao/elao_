@@ -8,22 +8,22 @@ export default class TouchControls {
         this.element.innerHTML = `
             <div class="pad">
                 <div>
-                    <button type="button" value="up">↖</button>
-                    <button type="button" value="right">↗</button>
+                    <button type="button" value="up" class="icon icon--arrow"></button>
+                    <button type="button" value="right" class="icon icon--arrow"></button>
                 </div>
                 <div>
-                    <button type="button" value="left">↙</button>
-                    <button type="button" value="down">↘</button>
+                    <button type="button" value="left" class="icon icon--arrow"></button>
+                    <button type="button" value="down" class="icon icon--arrow"></button>
                 </div>
             </div>
             <div class="pad">
                 <div>
-                    <button type="button" value="up">↖</button>
-                    <button type="button" value="right">↗</button>
+                    <button type="button" value="up" class="icon icon--arrow"></button>
+                    <button type="button" value="right" class="icon icon--arrow"></button>
                 </div>
                 <div>
-                    <button type="button" value="left">↙</button>
-                    <button type="button" value="down">↘</button>
+                    <button type="button" value="left" class="icon icon--arrow"></button>
+                    <button type="button" value="down" class="icon icon--arrow"></button>
                 </div>
             </div>
         `;

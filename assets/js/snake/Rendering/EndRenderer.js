@@ -8,7 +8,14 @@ export default class EndRenderer {
         this.element.innerHTML = `
             <p>Score :</p>
             <p class="end__score"></p>
-            <p class="message">Appuyez sur une fleche pour rejouer</p>
+            <p class="message">Appuyez pour rejouer <span>_</span></p>
+            <div class="arrows">
+                <div class="icon icon--arrow up"></div>
+                <div class="break"></div>
+                <div class="icon icon--arrow left"></div>
+                <div class="icon icon--arrow down"></div>
+                <div class="icon icon--arrow right"></div>
+            </div
         `;
 
         this.element.setAttribute('class', 'snake__end-panel');

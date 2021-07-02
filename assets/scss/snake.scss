@@ -1,60 +1,134 @@
 @import "base/_variables";
 
-#snake {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  zIndex: 1001;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: $color-brand;
+body.snake {
+  overflow: hidden;
+}
 
-  .point {
-    font-size: 1.2px;
-    font-family: 'faktum bold';
-    text-anchor: middle;
-    animation: popIn 200ms ease-in;
-  }
+.snake-container {
+  z-index: 1001;
 
-  .point__container {
-    transform: translate3d(0px, 0.3px, 0px);
-  }
+  .snake-renderer {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-brand;
 
-  .crash__symbol {
-      fill: $code-primary;
+    /** POINTS */
+
+    .point__container {
+      transform: translate3d(0px, 0.3px, 0px);
+    }
+
+    .point {
+      font-size: 1.2px;
       font-family: 'faktum bold';
-      font-size: 0.05em;
-      transform-origin: 1px 1px;
-      animation: floating 2s linear infinite;
-  }
+      text-anchor: middle;
+      animation: popIn 200ms ease-in;
 
-  .snake__logo {
-    rect, path {
+      &.color-0 { fill: $color-primary; }
+      &.color-1 { fill: $color-dark; }
+      &.color-2 { fill: $color-info; }
+    }
+
+    /** HEADER */
+
+    .snake__logo {
+      rect, path {
+        fill: #ffffff;
+      }
+    }
+
+    .score {
       fill: #ffffff;
+      font-size: 0.8px;
+      font-family: 'faktum bold';
+      text-anchor: end;
+    }
+
+    /** Crash Animation */
+
+    .crash__symbol {
+        fill: $code-primary;
+        font-family: 'faktum bold';
+        font-size: 0.05em;
+        transform-origin: 1px 1px;
+        animation: floating 2s linear infinite;
+    }
+
+    .crash__symbol:nth-child(5n+1) { animation-delay: -400ms; }
+    .crash__symbol:nth-child(5n+2) { animation-delay: -800ms; }
+    .crash__symbol:nth-child(5n+3) { animation-delay: -1200ms; }
+    .crash__symbol:nth-child(5n+4) { animation-delay: -1600ms; }
+
+    .shake {
+      animation-name: shake;
+      animation-duration: 600ms;
+      transform-origin:50% 50%;
+      animation-iteration-count: 1;
+      animation-timing-function: ease-out;
     }
   }
 
-  .score {
-    fill: #ffffff;
-    font-size: 0.8px;
-    font-family: 'faktum bold';
-    text-anchor: end;
+  /** END SCREEN */
+
+  .snake__end-panel {
+    background-color: $color-secondary;
+    color: $color-brand;
+    font-family: 'faktum regular';
+    padding: 1em;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideDown 300ms ease-out;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+
+    .message {
+      font-size: 0.8em;
+    }
+
+    .end__score {
+      font-size: 2em;
+      font-family: 'faktum bold';
+      color: $color-primary;
+    }
   }
 
-  .crash__symbol:nth-child(5n+1) { animation-delay: -400ms; }
-  .crash__symbol:nth-child(5n+2) { animation-delay: -800ms; }
-  .crash__symbol:nth-child(5n+3) { animation-delay: -1200ms; }
-  .crash__symbol:nth-child(5n+4) { animation-delay: -1600ms; }
+  /** CLOSE BUTTON */
 
-  .shake {
-    animation-name: shake;
-    animation-duration: 600ms;
-    transform-origin:50% 50%;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
+  .close-button {
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 3em;
+    line-height: 1;
+    text-align: center;
+    vertical-align: middle;
+    background: none;
+    border: none;
+    font-family: "faktum regular";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
+
+  /** Animations */
 
   @keyframes floating {
     0% { transform:  rotate3d(0, 0, 1, 0turn) scale3d(1, 1, 1); }
@@ -64,16 +138,20 @@
 
   @-webkit-keyframes shake {
     0% { -webkit-transform: translate3d(2%, 1%, 0) rotate3d(0, 0, 1, 0deg); }
-    10% { -webkit-transform: translate3d(-1%, -2%, 0) rotate3d(0, 0, 1, -1deg); }
-    20% { -webkit-transform: translate3d(-2%, 0%, 0) rotate3d(0, 0, 1, 1deg); }
-    40% { -webkit-transform: translate3d(1%, -1%, 0) rotate3d(0, 0, 1, -1.5deg); }
-    80% { -webkit-transform: translate3d(-1%, -0.5%, 0) rotate3d(0, 0, 1, 1deg); }
-    100% { -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg); }
+    20% { -webkit-transform: translate3d(-1%, -1.5%, 0) rotate3d(0, 0, 1, -1deg); }
+    40% { -webkit-transform: translate3d(-1.5%, 0%, 0) rotate3d(0, 0, 1, 1deg); }
+    60% { -webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg); }
   }
 
   @keyframes popIn {
     0% { transform:  scale3d(0.5, 0.5, 0.5); }
     75% { transform:  scale3d(1.2, 1.2, 1.2); }
     100% { transform:  scale3d(1, 1, 1); }
+  }
+
+  @keyframes slideDown {
+    0% { top: 45%; opacity: 0; transform: translate(-50%, -50%) rotate3d(1, 0, 0,90deg); }
+    50% { opacity: 1; transform: translate(-50%, -50%) rotate3d(1, 0, 0,45deg); }
+    100% { top: 50%; transform: translate(-50%, -50%) rotate3d(1, 0, 0,0deg); }
   }
 }

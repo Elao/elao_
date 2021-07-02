@@ -9,19 +9,29 @@ export default class Engine {
         this.start = this.start.bind(this);
         this.update = this.update.bind(this);
         this.onInput = this.onInput.bind(this);
+        this.stop = this.stop.bind(this);
 
         this.game = new Game();
         this.controls = new Controls(this.onInput);
-        this.renderer = new SvgRenderer(this.game);
+        this.renderer = new SvgRenderer(this.game, this.stop);
         this.gameLoop = new FixedLoop(this.game.period, this.update);
         this.renderLoop = new Loop(this.renderer.update);
     }
 
     start() {
         this.game.reset();
+        this.renderer.attach();
         this.renderLoop.start();
         this.controls.start();
         this.gameLoop.start();
+    }
+
+    stop() {
+        this.renderLoop.stop();
+        this.gameLoop.stop();
+        this.controls.stop();
+        this.renderer.detach();
+        this.game.reset();
     }
 
     onInput(type, active) {

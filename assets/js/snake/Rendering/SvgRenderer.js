@@ -3,7 +3,9 @@ import SnakeRenderer from 'snake/Rendering/SnakeRenderer';
 import PointRenderer from 'snake/Rendering/PointRenderer';
 import CrashRenderer from 'snake/Rendering/CrashRenderer';
 import ScoreRenderer from 'snake/Rendering/ScoreRenderer';
+import EndRenderer from 'snake/Rendering/EndRenderer';
 import Logo from 'snake/Assets/Logo';
+import CloseButton from 'snake/Assets/CloseButton';
 
 export default class SvgRenderer {
     static createElement(size, margin, marginTop) {
@@ -15,26 +17,30 @@ export default class SvgRenderer {
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
         element.setAttribute('viewBox', `${-margin} ${-margin - marginTop} ${size + margin * 2} ${size + margin * 2 + marginTop}`);
-        element.setAttribute('id', 'snake');
-
-        document.body.style.overflow = 'hidden';
+        element.setAttribute('class', 'snake-renderer');
 
         return element;
     }
 
-    constructor(game, margin = 2.5, marginTop = 1.5) {
+    constructor(game, onClose, margin = 2.5, marginTop = 1.5) {
         this.map = new MapRenderer(game.size);
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PointRenderer(game.pixels);
         this.crash = new CrashRenderer(game.snake, this.container);
         this.score = new ScoreRenderer(game.snake);
+        this.end = new EndRenderer(game.snake);
         this.logo = new Logo();
+        this.close = new CloseButton(onClose);
         this.margin = margin;
         this.marginTop = marginTop;
-        this.element = this.constructor.createElement(game.size, this.margin, this.marginTop);
+        this.element = document.createElement('div');
+        this.svg = this.constructor.createElement(game.size, this.margin, this.marginTop);
         this.container = document.createElementNS('http://www.w3.org/2000/svg', 'g');
 
-        this.element.appendChild(this.container);
+        this.element.appendChild(this.svg);
+        this.svg.appendChild(this.container);
+
+        this.element.className = 'snake-container';
 
         this.period = game.period;
         this.time = 0;
@@ -46,11 +52,21 @@ export default class SvgRenderer {
         this.map.attach(this.container);
         this.snake.attach(this.container);
         this.pixels.attach(this.container);
-        this.crash.attach(this.container);
-        this.logo.attach(this.container, game.size, this.map.border, this.marginTop);
         this.score.attach(this.container, game.size, this.map.border, this.marginTop);
+        this.logo.attach(this.container, game.size, this.map.border, this.marginTop);
+        this.crash.attach(this.container);
+        this.end.attach(this.element);
+        this.close.attach(this.element);
+    }
 
+    attach() {
+        document.body.classList.add('snake');
         document.body.appendChild(this.element);
+    }
+
+    detach() {
+        document.body.classList.remove('snake');
+        document.body.removeChild(this.element);
     }
 
     onGameFrame() {
@@ -63,5 +79,6 @@ export default class SvgRenderer {
         this.pixels.update();
         this.crash.update();
         this.score.update();
+        this.end.update();
     }
 }

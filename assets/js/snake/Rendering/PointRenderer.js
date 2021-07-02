@@ -1,7 +1,7 @@
 export default class PointRenderer {
-    constructor(pixels, colors = ['#7f1A55', '#063A5A', '#00CBCB']) {
+    constructor(pixels, length = 3) {
         this.pixels = pixels;
-        this.colors = colors;
+        this.length = length;
         this.element = document.createElementNS('http://www.w3.org/2000/svg', 'g');
         this.symbols = new Map();
 
@@ -17,7 +17,7 @@ export default class PointRenderer {
         element.setAttribute('fill', color);
         element.setAttribute('x', x);
         element.setAttribute('y', y);
-        element.setAttribute('class', 'point');
+        element.setAttribute('class', `point color-${color}`);
         element.style.transformOrigin = `${x}px ${y - 0.3}px`;
 
         element.innerHTML = value;
@@ -30,9 +30,7 @@ export default class PointRenderer {
     }
 
     getRandomColor() {
-        const { length } = this.colors;
-
-        return this.colors[Math.min(Math.floor(Math.random() * length), length - 1)];
+        return Math.min(Math.floor(Math.random() * this.length), this.length);
     }
 
     renderPixel(pixel) {

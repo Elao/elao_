@@ -25,7 +25,7 @@ export default class FixedLoop {
 
         clearInterval(this.interval);
 
-        this.frame = null;
+        this.interval = null;
     }
 
     update() {

@@ -13,8 +13,6 @@ export default class Game {
     }
 
     reset() {
-        console.log('game reset');
-        console.trace();
         this.snake.reset();
 
         this.timeouts.forEach(timeout => clearTimeout(timeout));

@@ -197,6 +197,7 @@ body.snake {
         opacity: 0.2;
         border-radius: 0.2em;
         margin: 0.05em;
+        touch-action: manipulation;
 
         &::before {
           display: block;

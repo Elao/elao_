@@ -2,7 +2,8 @@ import FixedLoop from 'snake/core/FixedLoop';
 import Loop from 'snake/core/Loop';
 import SvgRenderer from 'snake/Rendering/SvgRenderer';
 import Game from 'snake/Model/Game';
-import Controls from 'snake/Model/Controls';
+import KeyboardControls from 'snake/control/KeyboardControls';
+import TouchControls from 'snake/control/TouchControls';
 
 export default class Engine {
     constructor() {
@@ -12,8 +13,9 @@ export default class Engine {
         this.stop = this.stop.bind(this);
 
         this.game = new Game();
-        this.controls = new Controls(this.onInput);
-        this.renderer = new SvgRenderer(this.game, this.stop);
+        this.keyboardControls = new KeyboardControls(this.onInput);
+        this.touchControls = new TouchControls(this.onInput, this.game.snake);
+        this.renderer = new SvgRenderer(this.game, this.stop, this.touchControls);
         this.gameLoop = new FixedLoop(this.game.period, this.update);
         this.renderLoop = new Loop(this.renderer.update);
     }
@@ -22,14 +24,16 @@ export default class Engine {
         this.game.reset();
         this.renderer.attach();
         this.renderLoop.start();
-        this.controls.start();
+        this.keyboardControls.start();
+        this.touchControls.start();
         this.gameLoop.start();
     }
 
     stop() {
         this.renderLoop.stop();
         this.gameLoop.stop();
-        this.controls.stop();
+        this.keyboardControls.stop();
+        this.touchControls.stop();
         this.renderer.detach();
         this.game.reset();
     }

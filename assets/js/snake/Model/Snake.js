@@ -52,6 +52,20 @@ export default class Snake {
         return this.positions[0][1] === this.positions[1][1];
     }
 
+    getDirection() {
+        const [head, next] = this.positions;
+        const [hx, hy] = head;
+        const [nx, ny] = next;
+
+        if (hy === ny) {
+            // Horizontal
+            return hx > nx ? 'right' : 'left';
+        } else {
+            // Vertical
+            return hy > ny ? 'down' : 'up';
+        }
+    }
+
     update(nextHead) {
         this.lastTail = this.positions.pop();
         this.positions.unshift(nextHead);

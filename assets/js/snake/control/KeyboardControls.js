@@ -3,7 +3,7 @@ const RIGHT = 39;
 const UP = 38;
 const DOWN = 40;
 
-export default class Controls {
+export default class KeyboardControls {
     constructor(onChange) {
         this.onChange = onChange;
         this.x = [false, false];

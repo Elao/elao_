@@ -22,7 +22,7 @@ export default class SvgRenderer {
         return element;
     }
 
-    constructor(game, onClose, margin = 2.5, marginTop = 1.5) {
+    constructor(game, onClose, touchControls, margin = 2.5, marginTop = 1.5) {
         this.map = new MapRenderer(game.size);
         this.snake = new SnakeRenderer(game.snake);
         this.pixels = new PointRenderer(game.pixels);
@@ -31,6 +31,7 @@ export default class SvgRenderer {
         this.end = new EndRenderer(game.snake);
         this.logo = new Logo();
         this.close = new CloseButton(onClose);
+        this.touchControls = touchControls;
         this.margin = margin;
         this.marginTop = marginTop;
         this.element = document.createElement('div');
@@ -57,6 +58,7 @@ export default class SvgRenderer {
         this.crash.attach(this.container);
         this.end.attach(this.element);
         this.close.attach(this.element);
+        this.touchControls.attach(this.element);
     }
 
     attach() {

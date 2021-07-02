@@ -1,7 +1,7 @@
 export default class EndRenderer {
     constructor(snake) {
         this.snake = snake;
-        this.alive = null;
+        this.alive = true;
         this.container = null;
         this.element = document.createElement('div');
 

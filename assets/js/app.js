@@ -18,6 +18,7 @@ function init() {
             JSON.parse(document.head.querySelector('meta[name="see_style"]').content),
             document.getElementById('see')
         );
+        document.getElementById('see').click();
     } catch {
         // Fail silently.
     }

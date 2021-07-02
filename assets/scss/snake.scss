@@ -6,28 +6,21 @@ body.snake {
 
 .snake-container {
   z-index: 1001;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-brand;
 
   .snake-renderer {
     width: 100vw;
     height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $color-brand;
 
     /** POINTS */
 
-    .point__container {
-      transform: translate3d(0px, 0.3px, 0px);
-    }
-
     .point {
-      font-size: 1.2px;
-      font-family: 'faktum bold';
-      text-anchor: middle;
-      animation: popIn 200ms ease-in;
+      animation: popIn 400ms ease-out;
 
       &.color-0 { fill: $color-primary; }
       &.color-1 { fill: $color-dark; }
@@ -55,6 +48,7 @@ body.snake {
         fill: $code-primary;
         font-family: 'faktum bold';
         font-size: 0.05em;
+        text-anchor: middle;
         transform-origin: 1px 1px;
         animation: floating 2s linear infinite;
     }
@@ -165,9 +159,9 @@ body.snake {
   /** Animations */
 
   @keyframes floating {
-    0% { transform:  rotate3d(0, 0, 1, 0turn) scale3d(1, 1, 1); }
-    50% { transform:  rotate3d(0, 0, 1, 0.5turn) scale3d(0.67, 0.67, 0.67); }
-    100% { transform:  rotate3d(0, 0, 1, 1turn) scale3d(1, 1, 1); }
+    0% { transform: rotate3d(0, 0, 1, 0turn) scale3d(1, 1, 1); }
+    50% { transform: rotate3d(0, 0, 1, 0.5turn) scale3d(0.67, 0.67, 0.67); }
+    100% { transform: rotate3d(0, 0, 1, 1turn) scale3d(1, 1, 1); }
   }
 
   @-webkit-keyframes shake {
@@ -178,9 +172,9 @@ body.snake {
   }
 
   @keyframes popIn {
-    0% { transform:  scale3d(0.5, 0.5, 0.5); }
-    75% { transform:  scale3d(1.2, 1.2, 1.2); }
-    100% { transform:  scale3d(1, 1, 1); }
+    0% { transform: scale3d(0.5, 0.5, 0.5); }
+    75% { transform: scale3d(1.2, 1.2, 1.2); }
+    100% { transform: scale3d(1, 1, 1); }
   }
 
   @keyframes slideDown {

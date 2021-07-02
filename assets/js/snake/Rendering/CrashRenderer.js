@@ -21,6 +21,7 @@ export default class CrashRenderer {
         symbol.setAttribute('x', 0 + (Math.random() - 0.5) * 0.1);
         symbol.setAttribute('y', 0 + (Math.random() - 0.5) * 0.1);
         symbol.setAttribute('class', 'crash__symbol');
+        //symbol.style.transformOrigin = `0px 0px`;
 
         this.element.appendChild(symbol);
     }

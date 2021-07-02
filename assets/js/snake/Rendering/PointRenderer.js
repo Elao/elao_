@@ -11,16 +11,13 @@ export default class PointRenderer {
         this.removePixel = this.removePixel.bind(this);
     }
 
-    static createSymbol(x, y, color, value = 'o') {
-        const element = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    static createSymbol(x, y, color) {
+        const element = document.createElementNS('http://www.w3.org/2000/svg', 'path');
 
         element.setAttribute('fill', color);
-        element.setAttribute('x', x);
-        element.setAttribute('y', y);
+        element.setAttribute('d', `M${x-0.5},${y-0.5} m0.92148,0.50153c0,0.24796 -0.19211,0.39889 -0.42148,0.39889c-0.22937,0 -0.42148,-0.15092 -0.42148,-0.39889c0,-0.2495 0.19223,-0.40196 0.42148,-0.40196c0.22937,0.00012 0.42148,0.15246 0.42148,0.40196zm-0.23554,0c0,-0.12934 -0.05885,-0.18937 -0.18594,-0.18937c-0.12709,0 -0.18594,0.06002 -0.18594,0.18937c0,0.12628 0.05885,0.1863 0.18594,0.1863c0.12709,0 0.18594,-0.06002 0.18594,-0.1863z`);
         element.setAttribute('class', `point color-${color}`);
-        element.style.transformOrigin = `${x}px ${y - 0.3}px`;
-
-        element.innerHTML = value;
+        element.style.transformOrigin = `${x}px ${y}px`;
 
         return element;
     }

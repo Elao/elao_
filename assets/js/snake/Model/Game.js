@@ -7,35 +7,45 @@ export default class Game {
         this.size = size;
         this.snake = new Snake();
         this.pixels = [];
+        this.timeouts = [];
 
-        this.reset();
+        this.addPixel = this.addPixel.bind(this);
     }
 
     reset() {
-        this.pixels.length = 0;
-
+        console.log('game reset');
+        console.trace();
         this.snake.reset();
 
-        this.pixels.push(this.generatePixel());
-        this.pixels.push(this.generatePixel());
+        this.timeouts.forEach(timeout => clearTimeout(timeout));
+        this.timeouts.length = 0;
+
+        this.pixels.length = 0;
+
+        this.timeouts = new Array(5).fill(null).map((v, i) => setTimeout(this.addPixel, i * 1500));
+    }
+
+    addPixel() {
         this.pixels.push(this.generatePixel());
     }
 
     update() {
-        if (this.snake.alive) {
-            const nextHead = this.snake.getNextHead();
-            const pixel = this.getPixelAt(...nextHead);
+        if (!this.snake.alive) {
+            return;
+        }
 
-            if (pixel) {
-                this.pixels.splice(this.pixels.indexOf(pixel), 1, this.generatePixel());
-                this.snake.eat();
-            }
+        const nextHead = this.snake.getNextHead();
+        const pixel = this.getPixelAt(...nextHead);
 
-            if (this.hasCollision(...nextHead)) {
-                this.end(nextHead);
-            } else {
-                this.snake.update(nextHead);
-            }
+        if (pixel) {
+            this.pixels.splice(this.pixels.indexOf(pixel), 1, this.generatePixel());
+            this.snake.eat();
+        }
+
+        if (this.hasCollision(...nextHead)) {
+            this.end(nextHead);
+        } else {
+            this.snake.update(nextHead);
         }
     }
 

@@ -1,10 +1,10 @@
 ---
 title: 'Anne-Laure, développeuse web chez Elao depuis 3 ans'
-date: '2021-06-26' # Au format YYYY-MM-DD
-description: 'What a year to be alive'
+date: '2021-07-03' # Au format YYYY-MM-DD
+description: ''
 author: cmozzati # author|authors (multiple acceptés)
 tags: [elao, team]
-thumbnail: images/posts/thumbnails/anne-laure-developpeuse-web-chez-elao-depuis-3-ans.jpg
+thumbnail: images/posts/2021/itw-2b.jpeg
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
@@ -21,13 +21,14 @@ Ensuite, j'apprécie beaucoup les interactions avec mes collègues : que ce soit
 
 ### Qu'est-ce que tu fais quand tu ne travailles pas ?
 
-Quand je ne travaille pas, j'aime bien participer aux apéros ou meetups de diverses communautés comme par exemple celle de l'AFUP à Lyon. J'ai une vie associative assez active depuis de nombreuses années 👵 (surtout autour du cinéma). Depuis que je suis dans le milieu du développement, je participe à l'organisation d'une conférence technique / agile / alien qui s'apelle MiXiT, qui a lieu à Lyon une fois par an, en dehors des pandémies. 
-Côté loisirs, j'aime participer à l'écriture de fanzines, faire du yoga malgré mon manque de souplesse, voir mes amis et boire des bières. J'aime bien regarder des films, de préférence plutôt fantastique, de S-F, ou avec un petit grain de folie. J'adore lire, même s'il faut reconnaître que mon nombre de romans lus s'est effondrée depuis la naissance de ma fille. En ce moment, je lis Nostromo de Conrad, qui est un auteur dans lequel je me suis plongée grâce à un de mes collègues d'Elao (merci à lui - il se reconnaitra :)). Un de mes auteurs préférés est Roberto Bolaño, je peux relire de nombreuses fois ses romans. C'est un auteur Chilien, du coup je rêve d'aller au Chili et en profiter pour aller visiter l'île de Pâques ! 
+Quand je ne travaille pas, j'aime bien participer aux apéros ou meetups de diverses communautés comme par exemple celle de l'AFUP à Lyon. J'ai une vie associative assez active depuis de nombreuses années 👵 (surtout autour du cinéma). Depuis que je suis dans le milieu du développement, je participe à l'organisation d'une conférence technique / agile / alien qui s'apelle [MiXiT](https://mixitconf.org/), qui a lieu à Lyon une fois par an, en dehors des pandémies. 
+
+Côté loisirs, j'aime participer à l'écriture de fanzines, faire du yoga malgré mon manque de souplesse, voir mes amis et boire des bières. J'aime bien regarder des films, de préférence plutôt fantastique, de S-F, ou avec un petit grain de folie. J'adore lire, même s'il faut reconnaître que mon nombre de romans lus s'est effondrée depuis la naissance de ma fille. En ce moment, je lis Nostromo de Joseph Conrad, qui est un auteur dans lequel je me suis plongée grâce à un de mes collègues d'Elao (merci à lui - il se reconnaitra :)). Un de mes auteurs préférés est Roberto Bolaño, je peux relire de nombreuses fois ses romans. C'est un auteur Chilien, du coup je rêve d'aller au Chili et en profiter pour aller visiter l'île de Pâques ! 
 
 ## L'interview :fast-parrot: 
 
 ### Tes 3 emojis préf du Slack
-Mon emoji préféré est `:banana-dance:`, car il me rappelle le bon vieux temps des forums, qui me manquent. Mes autres emojis préférés sont des emojis elao-private-joke, donc indiffusables. 
+Mon emoji préféré est la banane qui danse, en souvenir du bon vieux temps des forums, qui me manquent. Mes autres emojis préférés sont des emojis elao-private-joke, donc indiffusables. 
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 

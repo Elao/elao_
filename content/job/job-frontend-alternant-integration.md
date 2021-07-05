@@ -4,7 +4,7 @@ title:
     - "intégrateur·rice web en alternance"
 description: "Intégrer… l'équipe, en alternance."
 date:        "2021-05-16"
-active:      true
+active:      false
 contractType: WORK-STUDY # 'CDD', 'CDI', 'INTERNSHIP' ou 'WORK-STUDY'
 place:        "Lyon, remote possible"
 hiringDate:   ~

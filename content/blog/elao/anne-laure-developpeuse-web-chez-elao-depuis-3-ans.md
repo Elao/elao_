@@ -15,7 +15,7 @@ L'informatique n'est pas mon parcours initial, j'ai fait une reconversion profes
 
 ## C'est quoi que tu préfères dans le quotidien de ton métier ?
 
-Ce que j'aime dans le quotidien de mon métier, c'est que j'apprends tous les jours et que la satisfaction est énorme quand on réussit à résondre son problème et qu'en plus on a progressé.
+Ce que j'aime dans le quotidien de mon métier, c'est que j'apprends tous les jours et que la satisfaction est énorme quand on réussit à résoudre son problème et qu'en plus on a progressé.
 Ensuite, j'apprécie beaucoup les interactions avec mes collègues : que ce soit pour leur poser des questions, ou bien en aidant moi-même quelqu'un, en partageant notre veille, ou tout simplement pour se détendre. J'ai la chance de travailler avec des personnes ayant un sens de l'humour très développé, ce qui rend les journées beaucoup plus agréables !
 
 ### Qu'est-ce que tu fais quand tu ne travailles pas ?

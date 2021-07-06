@@ -9,7 +9,7 @@ tags: [symfony, php, attributes]
 thumbnail: images/posts/thumbnails/les-attributs-php-8-dans-symfony.jpg
 #banner: images/posts/headers/les-attributs-php-8-dans-symfony.jpg # Uniquement si différent de la minitature (thumbnail)
 #credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
-#tweetId: ~ # Ajouter l'id du Tweet après publication.
+tweetId: '1412341801734791169' # Ajouter l'id du Tweet après publication.
 ---
 
 ## Les attributs PHP 8
@@ -29,7 +29,8 @@ Les annotations commencent par `@` et se place dans un docblock. [Un parser écr
 ```php
 use App\MetaData\Foobar;
 
-class Foo {
+class Foo 
+{
   /**
    * @Foobar
    */
@@ -42,7 +43,8 @@ Les attributs ont une syntaxe un peu différente mais s'utilisent de la même fa
 ```php
 use App\MetaData\Foobar;
 
-class Foo {
+class Foo 
+{
   #[Foobar]
   private string $foobar  
 }
@@ -103,7 +105,7 @@ Pour plus de détails, reportez vous aux différentes documentations qui intêgr
 
 ## Les contraintes de validation
 
-Comme pour le reste des annotation fournit par Symfony, vous pouvez réutiliser la plupart des contraintes de validations en attributs :
+Comme pour le reste des annotations fournies par Symfony, vous pouvez réutiliser la plupart des contraintes de validations en attributs :
 
 ```php
 use Symfony\Component\Validator\Constraints as Assert;
@@ -290,6 +292,6 @@ Symfony continu de proposer de nouveaux usages pour les attributs avec par exemp
 * [L'autowiring de service](https://symfony.com/blog/new-in-symfony-5-3-service-autowiring-with-attributes)
 * [L'argument resolver CurrentUser](https://symfony.com/blog/new-in-symfony-5-2-controller-argument-attributes)
 * [La configuration du serializer](https://symfony.com/doc/current/components/serializer.html#attributes-groups)
-* [La configuration du cache http](https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html)
+* [La configuration du cache HTTP](https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/annotations/cache.html)
 
 Avec le temps, je suis certain qu'ils seront adoptés par tous et montreront tout leur potentiel.

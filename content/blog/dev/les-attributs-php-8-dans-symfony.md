@@ -69,19 +69,19 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-  #[Route('/', methods=['GET'], name="homepage")
+  #[Route('/', methods=['GET'], name="homepage")]
   public function homepage()
   {
   }
 
-  #[Route('/foobar/{foo_id}/{bar_id}')
+  #[Route('/foobar/{foo_id}/{bar_id}')]
   #[ParamConverter('foo', options: ['mapping' => ['foo_id' => 'id']])]
   #[ParamConverter('bar', options: ['mapping' => ['bar_id' => 'id']])]
   public function foobar(Foo $foo, Bar $bar)
   {
   }
 
-  #[Route('/article/{article_slug}')
+  #[Route('/article/{article_slug}')]
   #[Entity('article', expr='repository.findOneBySlug(article_slug)')]
   public function article(Article $article)
   {

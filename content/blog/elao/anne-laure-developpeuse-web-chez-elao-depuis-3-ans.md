@@ -1,6 +1,6 @@
 ---
 title: 'Anne-Laure, développeuse web chez Elao depuis 3 ans'
-date: '2021-07-03' # Au format YYYY-MM-DD
+date: '2021-07-08' # Au format YYYY-MM-DD
 description: ''
 author: cmozzati # author|authors (multiple acceptés)
 tags: [elao, team]
@@ -14,7 +14,7 @@ Salut 👋
 
 L'informatique n'est pas mon parcours initial, j'ai fait une reconversion professionnelle il y a un peu plus de trois ans. Je suis diplômée d'un master dans le domaine des Lettres, et j'ai travaillé de nombreuses années comme chef de projet web et chargée de référencement (SEO). J'ai toujours rêvé de faire du code, et je me suis finalement lancée. Je ne regrette rien, j'adore mon métier ! Si vous voulez en savoir plus sur un parcours en reconversion et sur la façon dont vous pouvez aider des personnes en reconversion, [regardez cette conférence](https://www.youtube.com/watch?v=gW_TJ7kAu78&ab_channel=AFUPPHP) et jetez un oeil à ce que fait [l'AFUP dans son programme de mentorat](https://afup.org/p/1038-programme-mentorat). 
 
-## C'est quoi que tu préfères dans le quotidien de ton métier ?
+## Qu'est-ce que tu préfères dans le quotidien de ton métier ?
 
 Ce que j'aime dans le quotidien de mon métier, c'est que j'apprends tous les jours et que la satisfaction est énorme quand je parviens à résoudre mon problème et qu'en plus, j'ai progressé.
 Ensuite, j'apprécie beaucoup les interactions avec mes collègues : que ce soit pour leur poser des questions, ou bien en aidant moi-même quelqu'un, en partageant notre veille, ou tout simplement pour se détendre. J'ai la chance de travailler avec des personnes ayant un sens de l'humour très développé, ce qui rend les journées beaucoup plus agréables !
@@ -44,7 +44,7 @@ Plutôt Slack, mais j'aime bien passer un petit coup de fil de temps en temps, q
 
 ### Thé ou Café ?
 
-Café allongé (le café!)
+Café allongé (le café !)
 
 ### PHP ou JS ?
 

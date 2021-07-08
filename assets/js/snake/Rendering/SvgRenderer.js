@@ -16,7 +16,7 @@ export default class SvgRenderer {
         element.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
         element.setAttribute('xmlns:xlink', 'http://www.w3.org/1999/xlink');
         element.setAttribute('version', '1.1');
-        element.setAttribute('viewBox', `${-margin} ${-margin} ${size + margin * 2} ${size + margin * 2}`);
+        element.setAttribute('viewBox', `${-margin} ${-margin} ${size - 1 + margin * 2} ${size - 1 + margin * 2}`);
         element.setAttribute('class', 'snake-renderer');
 
         return element;

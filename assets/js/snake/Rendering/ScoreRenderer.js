@@ -8,7 +8,7 @@ export default class ScoreRenderer {
     }
 
     attach(container, size, border, marginTop = 1.5) {
-        this.element.setAttribute('x', size + border);
+        this.element.setAttribute('x', size - 1 + border);
         this.element.setAttribute('y', - marginTop + 0.1);
 
         container.appendChild(this.element);

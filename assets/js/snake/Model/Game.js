@@ -24,7 +24,11 @@ export default class Game {
     }
 
     addPixel() {
-        this.pixels.push(this.generatePixel());
+        const pixel = this.generatePixel();
+
+        if (pixel) {
+            this.pixels.push(pixel);
+        }
     }
 
     update() {
@@ -36,8 +40,9 @@ export default class Game {
         const pixel = this.getPixelAt(...nextHead);
 
         if (pixel) {
-            this.pixels.splice(this.pixels.indexOf(pixel), 1, this.generatePixel());
+            this.pixels.splice(this.pixels.indexOf(pixel), 1);
             this.snake.eat();
+            this.timeouts.push(setTimeout(this.addPixel, 500 + Math.random() * 500));
         }
 
         if (this.hasCollision(...nextHead)) {
@@ -62,15 +67,20 @@ export default class Game {
     hasCollision(x, y) {
         const tail = this.snake.getNextTail();
 
-        return x < 0 || x > this.size || y < 0 || y > this.size || tail.some(([tx, ty]) => tx === x && ty === y);
+        return x < 0 || x >= this.size || y < 0 || y >= this.size || tail.some(([tx, ty]) => tx === x && ty === y);
     }
 
-    generatePixel() {
-        let x, y;
+    generatePixel(maxTry = 100) {
+        let x, y, tries = 0;
 
         while (this.getPixelAt(x, y) !== null || this.hasCollision(x, y)) {
             x = Pixel.getRandomPoint(this.size);
             y = Pixel.getRandomPoint(this.size);
+            tries++;
+
+            if (tries > maxTry) {
+                return null;
+            }
         }
 
         return new Pixel(x, y);

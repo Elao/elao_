@@ -5,7 +5,7 @@ description: ''
 author: cmozzati # author|authors (multiple acceptés)
 tags: [elao, team]
 thumbnail: images/posts/2021/itw-2b.jpeg
-#tweetId: '1413061065374580737' # Ajouter l'id du Tweet après publication.
+tweetId: '1413061065374580737' # Ajouter l'id du Tweet après publication.
 ---
 
 ## Ton parcours

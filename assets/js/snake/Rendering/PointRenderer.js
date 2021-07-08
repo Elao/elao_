@@ -27,7 +27,7 @@ export default class PointRenderer {
     }
 
     getRandomColor() {
-        return Math.min(Math.floor(Math.random() * this.length), this.length);
+        return Math.floor(Math.random() * this.length);
     }
 
     renderPixel(pixel) {

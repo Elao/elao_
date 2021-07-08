@@ -2,7 +2,7 @@ import Snake from 'snake/Model/Snake';
 import Pixel from 'snake/Model/Pixel';
 
 export default class Game {
-    constructor(period = 200, size = 16) {
+    constructor(period = 225, size = 16) {
         this.period = period;
         this.size = size;
         this.snake = new Snake();

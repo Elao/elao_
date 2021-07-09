@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/event-dispatcher.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "PHP", "Symfony"]
 
-author:    "vbouzeran"
+authors:            ["vbouzeran"]
 ---
 
 

@@ -13,7 +13,7 @@ banner:             "images/posts/headers/minions.jpg"
 tags:               ["Linux","Monitoring","Symfony"]
 categories:         ["Infra", "Monitoring"]
 
-author:    "tbessoussa"
+authors:            ["tbessoussa"]
 ---
 
 During this tutorial, we will install Stats.d and Graphite on the same server our application is running on. Don't forget that it's best if you monitor your application with graphite & stats.d using another server because that will not be the case in this tutorial.

@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/homer-do-not-care.png"
 tags:               ["Linux", "Trucs et astuces", "Tips"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

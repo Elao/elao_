@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/rocket.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author:    "tbessoussa"
+authors:            ["tbessoussa"]
 ---
 
 

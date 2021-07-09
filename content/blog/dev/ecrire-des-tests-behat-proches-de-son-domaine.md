@@ -11,7 +11,7 @@ banner:             "images/posts/headers/ecrire-test-behat-proche-de-son-domain
 tags:               ["Behat","Symfony","DDD"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author:    "ndievart"
+authors:            ["ndievart"]
 ---
 
 Il y a quelque temps nous publiions un article sur [l'utilisation Behat 3 pour l'écriture des tests fonctionnels Symfony](./behat-3-test-fonctionnel-symfony.md). Depuis les choses ont beaucoup changé sur les différents projets où nous posons du Behat pour nos tests fonctionnels.

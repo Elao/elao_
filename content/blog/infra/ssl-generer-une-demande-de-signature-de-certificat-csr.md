@@ -12,7 +12,7 @@ banner:             "images/posts/headers/elao_babyfoot.jpg"
 tags:               ["Infra", "Linux", "SSL", "Certicats", "Sécurité"]
 categories:         ["Infra", "Sécurité", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

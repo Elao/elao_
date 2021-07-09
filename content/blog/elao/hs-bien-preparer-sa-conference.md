@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
 categories:         ["Actualité", "Communication", "conference"]
 
-author:    "jjames"
+authors:            ["jjames"]
 
 ---
 

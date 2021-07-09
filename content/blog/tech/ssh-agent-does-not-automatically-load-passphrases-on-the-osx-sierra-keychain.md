@@ -12,7 +12,7 @@ banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["SSH", "OSX"]
 categories:         ["Dev", "Tech", "OSX"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 Some of us encountered an issue after upgrading to Mac OS Sierra.

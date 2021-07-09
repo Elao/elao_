@@ -12,7 +12,7 @@ banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Apache","Linux","Trucs et astuces"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

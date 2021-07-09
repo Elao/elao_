@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/linux_fix.jpg"
 tags:               ["Linux", "Tips"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/toad.jpg"
 tags:               ["Développement", "PHP", "Symfony"]
 categories:         ["PHP", "Symfony"]
 
-author:    "xavierr"
+authors:            ["xavierr"]
 ---
 
 Bonjour,

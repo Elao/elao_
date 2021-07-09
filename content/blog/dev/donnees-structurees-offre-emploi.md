@@ -11,7 +11,7 @@ banner:             "images/posts/headers/arrows.jpg"
 tags:               ["Seo", "microdata", "rich snippets"]
 categories:         ["Dev", "Web"]
 
-author:    "aldeboissieu"
+authors:            ["aldeboissieu"]
 ---
 Certaines informations extraites d'une page web sont **directement affichées dans la page de résultats du moteur de recherche Google**, permettant ainsi au géant du web d'*enrichir* ses résultats de recherche. Ces contenus supplémentaires sont appellés des extraits enrichis (ou rich snippets). Ils peuvent concerner de nombreuses thématiques : produits, recettes de cuisine, spectacles ou encore … des offres d'emploi !
 

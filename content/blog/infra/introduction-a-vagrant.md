@@ -11,7 +11,7 @@ banner:             "images/posts/headers/vagrant.png"
 tags:               ["Vagrant", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Vagrant"]
 
-author:    "mbernard"
+authors:            ["mbernard"]
 
 ---
 

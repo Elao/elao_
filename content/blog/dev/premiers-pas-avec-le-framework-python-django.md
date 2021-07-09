@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/first_step.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
-author:    "xavierr"
+authors:            ["xavierr"]
 ---
 
 Bonjour à toutes et à tous,

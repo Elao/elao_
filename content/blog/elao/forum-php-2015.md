@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
 categories:         ["conference"]
 
-author:    "rhanna"
+authors:            ["rhanna"]
 ---
 
 ## PHP a 20 ans et s'offre une cure de jouvence avec la version 7

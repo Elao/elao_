@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

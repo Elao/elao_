@@ -12,7 +12,7 @@ banner:             "images/posts/headers/grafana.jpg"
 tags:               ["provisoning","manala","ansible","influxdb","grafana","telegraf","monitoring"]
 categories:         ["Infra", "manala", "ansible"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 ## Manala

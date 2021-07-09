@@ -11,7 +11,7 @@ banner:             "images/posts/headers/php_forum_team_elao_2.jpg"
 tags:               ["Conférence", "Symfony Live", "Conférence"]
 categories:         ["conference", "Symfony Live"]
 
-author:    "rhanna"
+authors:            ["rhanna"]
 ---
 
 La septième édition du SymfonyLive Paris s'est tenue le jeudi 9 avril à la Cité Internationale Universitaire de Paris. Retour sur cet évènement.

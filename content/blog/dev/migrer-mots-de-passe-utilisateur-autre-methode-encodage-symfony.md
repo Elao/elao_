@@ -16,7 +16,7 @@ outdated: >
     utilisant le mécanisme de migration
     de [hash de passwords](https://symfony.com/doc/current/security/password_migration.html)
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 # Contexte

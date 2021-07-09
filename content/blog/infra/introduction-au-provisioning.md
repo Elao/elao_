@@ -11,7 +11,7 @@ banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Ansible", "Linux", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Provisioning", "Ansible"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

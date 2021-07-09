@@ -12,7 +12,7 @@ banner:             "images/posts/headers/matomo.jpg"
 tags:               ["Seo", "RGPD", "Matomo"]
 categories:         ["Dev", "Web"]
 
-author:    "aldeboissieu"
+authors:            ["aldeboissieu"]
 ---
 
 Anciennement nommé Piwik, Matomo est une solution de mesure d'audience de sites web, alternative libre à Google Analytics. Chez Elao, nous avons souhaité l'utiliser définitivement pour analyser le trafic de notre site et de notre blog. Nous partageons avec vous quelques informations qui vous seront peut-être utiles si, vous aussi, **vous souhaitez rendre anonymes les informations relatives à vos visiteurs** 🔒.

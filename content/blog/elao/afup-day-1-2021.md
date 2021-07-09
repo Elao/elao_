@@ -8,7 +8,7 @@ description:        "Notre compte-rendu du premier jour de l'Afup Day, édition 
 thumbnail:          "images/posts/2021/afup-day-2021/afup-day-2021.png"
 tags:               ["Développement", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
-author:             ["aldeboissieu", "bleveque"]
+authors:            ["aldeboissieu", "bleveque"]
 ---
 
 Le premier jour de conférence de l'AFUP Day a eu lieu le 28 mai 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Lille et Rennes. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :).  

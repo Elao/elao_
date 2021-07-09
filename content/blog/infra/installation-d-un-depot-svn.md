@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/kenny.jpg"
 tags:               ["Linux", "SVN"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

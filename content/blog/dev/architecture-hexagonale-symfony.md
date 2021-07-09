@@ -12,7 +12,7 @@ banner:             "images/posts/headers/hexagons.jpg"
 tags:               ["Architecture", "Conception", "Symfony", "PHP"]
 categories:         ["Dev", "Symfony"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 ## Introduction

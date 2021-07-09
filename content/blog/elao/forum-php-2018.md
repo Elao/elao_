@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/forumphp2018-team.jpeg"
 banner:             "images/posts/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
 categories:         ["conference"]
-author:             ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]
+authors:            ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]
 ---
 
 Cette année, le Forum PHP s'est achevé sur l'annonce d'un nouvel évènement organisé par l'AFUP : les [Afup Days](https://event.afup.org/), qui auront lieu simultanément à Lille, Lyon et Rennes.

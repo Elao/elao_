@@ -11,7 +11,7 @@ banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 Vue permet déjà de faire du Two-Way Binding grâce à la directive `v-model`. C'est à dire mettre à jour l'interface lorsque le modèle change et vice et versa.

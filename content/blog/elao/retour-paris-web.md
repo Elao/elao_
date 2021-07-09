@@ -11,7 +11,7 @@ banner:             "images/posts/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
 categories:         ["conference"]
 
-author:    "lhoizey"
+authors:            ["lhoizey"]
 ---
 
 

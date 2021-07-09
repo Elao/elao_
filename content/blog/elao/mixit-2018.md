@@ -11,7 +11,7 @@ banner:             "images/posts/headers/mixit-2018.jpg"
 tags:               ["Javascript", "Web","Conférence"]
 categories:         ["Dev", "Actualité", "Web", "Conférence"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 # Retour MiXiT 2018

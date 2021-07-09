@@ -11,7 +11,7 @@ banner:     "images/posts/headers/stickers.jpg"
 tags:           ["infra", "nginx", "linux"]
 categories:     ["infra", "nginx"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

@@ -68,7 +68,7 @@ services:
         arguments:
             $provider: '@.inner'
             $disabled: '%env(bool:INCLUDE_SAMPLES)%'
-            $ignored: ['styleguide/example']
+            $ignored: ['styleguide/example', 'elao/trame-itw']
 
     App\Stenope\Provider\SampleRemovalProvider.CaseStudy:
         class: App\Stenope\Provider\SampleRemovalProvider

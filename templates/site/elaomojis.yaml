@@ -1,0 +1,156 @@
+tweetId: ''
+categories:
+    - title: "Le choix de l'équipe 🙋‍♀️🙆‍♂️"
+      sections:
+          - title: "Réaction : YES ! 👍"
+            emojis:
+                - code: ":+1:"
+                  path: miscellaneous/++1.png
+                - code: ":bananadance:"
+                  path: miscellaneous/bananadance.gif
+                - code: ":coeurdoigts:"
+                  path: miscellaneous/coeurdoigts.png
+                - code: ":marioluigidance:"
+                  path: miscellaneous/marioluigidance.gif
+                - code: ":ultra-fast-parrot:"
+                  path: parrots/ultra-fast-parrot.gif
+                - code: ":real-fiesta-parrot:"
+                  path: parrots/real-fiesta-parrot.gif
+                - code: ":approving-hermine:"
+                  path: miscellaneous/approving-hermine.png
+          - title: "Réaction : hmm... 👎"
+            emojis:
+                - code: ":judging-hermine:"
+                  path: judging/judging-hermine.png
+                - code: ":judging-merle:"
+                  path: judging/judging-merle.png
+                - code: ":non-non-cat:"
+                  path: miscellaneous/non-non-cat.gif
+                - code: ":gneu-gneu-gneu:"
+                  path: miscellaneous/gneu-gneu-gneu.png
+          - title: "Réaction : pardon ? 🤷‍♀️"
+            emojis:
+                - code: ":ah:"
+                  path: ah/ah.png
+                - code: ":ah-poisson:"
+                  path: ah/ah-poisson.png
+                - code: ":ah-guinea-pig:"
+                  path: ah/ah-guinea-pig.png
+                - code: ":slowclap:"
+                  path: miscellaneous/slowclap.gif
+                - code: ":facepalm-animate:"
+                  path: miscellaneous/facepalm-animate.gif
+          - title: Inclassables
+            emojis:
+                - code: ":chips:"
+                  path: miscellaneous/chips.png
+                - code: ":twig-loading:"
+                  path: miscellaneous/twig-loading.gif
+                - code: ":help:"
+                  path: miscellaneous/help.png
+                - code: ":fire-parrot:"
+                  path: parrots/fire-parrot.gif
+                - code: ":poti-blagueur:"
+                  path: cats/poti-blagueur.png
+                - code: ":excellent-mrburns:"
+                  path: miscellaneous/excellent-mrburns.gif
+    - title: "Quelques collections 🙌"
+      sections:
+          - title: Ah ! - Denis Brogniart
+            emojis:
+                - code: ":ah:"
+                  path: ah/ah.png
+                - code: ":ah-poisson:"
+                  path: ah/ah-poisson.png
+                - code: ":ah-puffer-fish:"
+                  path: ah/ah-puffer-fish.png
+                - code: ":ah-guinea-pig:"
+                  path: ah/ah-guinea-pig.png
+                - code: ":ah-picasso:"
+                  path: ah/ah-picasso.png
+                - code: ":ah-plastic-bird:"
+                  path: ah/ah-plastic-bird.png
+          - title: Les perroquets
+            emojis:
+                - code: ":fiesta-parrot:"
+                  path: parrots/fiesta-parrot.gif
+                - code: ":real-fiesta-parrot:"
+                  path: parrots/real-fiesta-parrot.gif
+                - code: ":ultra-fast-parrot:"
+                  path: parrots/ultra-fast-parrot.gif
+                - code: ":devil-parrot:"
+                  path: parrots/devil-parrot.gif
+                - code: ":fire-parrot:"
+                  path: parrots/fire-parrot.gif
+          - title: Les canards
+            emojis:
+                - code: ":duck:"
+                  path: ducks/duck.png
+                - code: ":duck-on-the-back:"
+                  path: ducks/duck-on-the-back.png
+                - code: ":happy-duck:"
+                  path: ducks/happy-duck.png
+                - code: ":king-duck:"
+                  path: ducks/king-duck.png
+          - title: Les chats
+            emojis:
+                - code: ":rage-cat:"
+                  path: cats/rage-cat.png
+                - code: ":amazed-cat:"
+                  path: cats/amazed-cat.png
+                - code: ":poti-blagueur:"
+                  path: cats/poti-blagueur.png
+                - code: ":killer-robot-cat:"
+                  path: cats/killer-robot-cat.png
+                - code: ":catjam:"
+                  path: cats/catjam.gif
+          - title: Les animaux qui jugent
+            emojis:
+                - code: ":judging-hermine:"
+                  path: judging/judging-hermine.png
+                - code: ":judging-merle:"
+                  path: judging/judging-merle.png
+                - code: ":judging-otter:"
+                  path: judging/judging-otter.png
+                - code: ":judging-guinea-pig:"
+                  path: judging/judging-guinea-pig.png
+                - code: ":judging-swans:"
+                  path: judging/judging-swans.png
+                - code: ":judging-heron:"
+                  path: judging/judging-heron.png
+                - code: ":judging-shark:"
+                  path: judging/judging-shark.png
+                - code: ":judging-mantis:"
+                  path: judging/judging-mantis.png
+                - code: ":judging-goose:"
+                  path: judging/judging-goose.png
+                - code: ":judgemental-shoelace:"
+                  path: judging/judgemental-shoelace.png
+          - title: 'Bonus : la happy team'
+            emojis:
+                - code: ":alyona-happy:"
+                  path: happy/alyona-happy.gif
+                - code: ":amelie-happy:"
+                  path: happy/amelie-happy.gif
+                - code: ":anne-laure-happy:"
+                  path: happy/anne-laure-happy.gif
+                - code: ":arti-happy:"
+                  path: happy/arti-happy.gif
+                - code: ":ben-happy:"
+                  path: happy/ben-happy.gif
+                - code: ":christelle-happy:"
+                  path: happy/christelle-happy.gif
+                - code: ":flo-happy:"
+                  path: happy/flo-happy.gif
+                - code: ":guewen-happy:"
+                  path: happy/guewen-happy.gif
+                - code: ":lod-happy:"
+                  path: happy/lod-happy.gif
+                - code: ":max-happy:"
+                  path: happy/max-happy.gif
+                - code: ":ogi-happy:"
+                  path: happy/ogi-happy.gif
+                - code: ":tom-happy:"
+                  path: happy/tom-happy.gif
+                - code: ":xavg-happy:"
+                  path: happy/xavg-happy.gif

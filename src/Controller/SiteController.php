@@ -8,8 +8,10 @@ use App\Model\Article;
 use App\Model\Member;
 use Stenope\Bundle\ContentManager;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Yaml\Yaml;
 
 class SiteController extends AbstractController
 {
@@ -66,5 +68,15 @@ class SiteController extends AbstractController
     public function privacy(): Response
     {
         return $this->render('site/privacy.html.twig');
+    }
+
+    #[Route('/elaomojis', name: 'elaomojis')]
+    public function elaomojis(ParameterBagInterface $parameterBag): Response
+    {
+        $path = $parameterBag->get('kernel.project_dir') . '/templates/site/elaomojis.yaml';
+
+        return $this->render('site/elaomojis.html.twig', [
+            'config' => Yaml::parseFile($path),
+        ]);
     }
 }

@@ -1,4 +1,4 @@
-.instagram-post-generator {
+.social-post-generator {
     display: flex;
     font-size: 20px;
     padding: 0.25em;
@@ -12,10 +12,28 @@
         flex-direction: column;
         flex: 1;
         padding: 0.25em;
+
+        select {
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: white;
+            cursor: pointer;
+
+            font-family: 'faktum regular';
+            font-size: 16px;
+            line-height: 1;
+            height: 2em;
+            padding: 0 .5em;
+            margin: 0.25em 0;
+            overflow: hidden;
+            border-radius: .25em;
+            font-family: 'faktum regular';
+        }
     }
 }
 
-.instagram-post--list {
+.social-post--list {
     display: flex;
     font-size: 20px;
     padding: 0.25em;
@@ -25,7 +43,7 @@
     flex-wrap: wrap;
 }
 
-.instagram-post {
+.social-post {
     width: calc(50% - 1em);
     position: relative;
     margin: 0.5em;

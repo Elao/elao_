@@ -77,11 +77,11 @@ class SiteController extends AbstractController
         ]);
     }
 
-    #[Route('/instagram', name: 'instagram', options: [
+    #[Route('/social', name: 'social', options: [
         'stenope' => ['sitemap' => false],
     ])]
-    public function instagram(ContentManager $manager): Response
+    public function social(ContentManager $manager): Response
     {
-        return $this->render('site/instagram.html.twig');
+        return $this->render('site/social.html.twig');
     }
 }

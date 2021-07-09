@@ -19,6 +19,11 @@
   background: $color-secondary;
 }
 
+.alert--warning {
+  color: transparentize(#fff, .1);
+  background: $color-warning;
+}
+
 .alert--info {
   color: transparentize(#fff, .1);
   background: $color-info;

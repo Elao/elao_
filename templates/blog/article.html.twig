@@ -113,6 +113,17 @@
                 </div>
             {% endif %}
 
+            {% if not article.published %}
+                <div class="alert alert--warning">
+                    <i class="icon icon--danger" aria-hidden="true"></i>
+                    <div>
+                        <p>
+                            Cet article n'est pas encore publié. Cet aperçu est disponible uniquement dans cet environnement mais n'apparaîtra en production qu'à partir du {{ article.date|format_date('long') }}
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+
             {{ article.content|raw }}
             {% block credits %}
                 {% if article.credits %}

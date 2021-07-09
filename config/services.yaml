@@ -75,6 +75,12 @@ services:
             $disabled: '%env(bool:INCLUDE_SAMPLES)%'
             $ignored: ['styleguide/example', 'elao/trame-itw']
 
+    App\Stenope\Manager\FilteringArticlesContentManager:
+        decorates: Stenope\Bundle\ContentManagerInterface
+        arguments:
+            $contentManager: '@.inner'
+            $filterUnpublished: '%env(not:bool:SHOW_UNPUBLISHED_ARTICLES)%'
+
     App\Stenope\Provider\SampleRemovalProvider.CaseStudy:
         class: App\Stenope\Provider\SampleRemovalProvider
         decorates: stenope.provider.files.App\Model\CaseStudy

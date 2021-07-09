@@ -1,0 +1,136 @@
+.instagram-post--list {
+    display: flex;
+    font-size: 20px;
+    padding: 0.25em;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+    flex-wrap: wrap;
+}
+
+.instagram-post {
+    width: calc(50% - 1em);
+    position: relative;
+    margin: 0.5em;
+    background: var(--insta-background);
+
+    &:after {
+      content: " ";
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    .content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10%;
+    }
+
+    &, p, h1, h2, h3, h4, h5, h6 {
+        color: var(--insta-foreground);
+    }
+
+    &.brand {
+        --insta-background: white;
+        --insta-foreground: #{$color-brand};
+        --insta-separator: #{$color-brand};
+    }
+    &.brand-reverse {
+        --insta-background: #{$color-brand};
+        --insta-foreground: white;
+        --insta-separator: white;
+    }
+    &.light-red {
+        --insta-background: #{$color-tertiary};
+        --insta-foreground: white;
+        --insta-separator: white;
+    }
+    &.pale {
+        --insta-background: #{$color-secondary};
+        --insta-foreground: #{$color-primary};
+        --insta-separator: #{$color-tertiary};
+    }
+    &.purple {
+        --insta-background: #{$color-primary};
+        --insta-foreground: white;
+        --insta-separator: #{$color-brand};
+    }
+    &.dark-blue {
+        --insta-background: #{$color-dark};
+        --insta-foreground: white;
+        --insta-separator: #{$color-brand};
+    }
+    &.light-blue {
+        --insta-background: #{$color-info};
+        --insta-foreground: white;
+        --insta-separator: #{$color-light};
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        display: block;
+        white-space: nowrap;
+        align-self: flex-start;
+        text-align: left;
+    }
+
+    .carret:after {
+        display: inline-block;
+        content: '_';
+        color: var(--insta-separator);
+        font-family: 'faktum bold';
+    }
+
+    p {
+        font-family: 'antikor regular';
+        font-size: 2.8rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .number {
+        font-size: 8rem;
+        font-family: 'antikor regular';
+        line-height: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &:after {
+            content: ' ';
+            display: block;
+            height: 0.2em;
+            width: 75%;
+            background-color: var(--insta-separator);
+            margin-bottom: 0.2em;
+        }
+    }
+
+    .number + p {
+        font-size: 2em;
+        line-height: 1.4;
+    }
+
+    .note {
+        font-size: 1.4rem;
+        margin-top: 1em;
+    }
+
+    .signature {
+        font-size: 1.4rem;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+
+        > :first-child {
+            font-family: 'antikor bold';
+        }
+    }
+}

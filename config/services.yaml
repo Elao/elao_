@@ -41,6 +41,11 @@ services:
             - name: 'stenope.processor'
               priority: '-90' # before the TableOfContentProcessor
 
+    App\Stenope\Processor\ElaomojisProcessor:
+        tags:
+            - name: 'stenope.processor'
+              priority: '10'
+
     # Override default HTML Anchor processor:
     Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
     App\Stenope\Processor\HtmlAnchorProcessor:

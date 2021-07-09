@@ -6,6 +6,7 @@ import AOS from 'aos';
 
 import Toggle from './feature/Toggle';
 import Launcher from './feature/Launcher';
+import SocialPostGenerator from './feature/SocialPostGenerator';
 
 function init() {
     // Mobile navigation
@@ -21,7 +22,11 @@ function init() {
     } catch {
         // Fail silently.
     }
+
 }
+
+// Social Post Generator
+window.SocialPostGenerator = SocialPostGenerator;
 
 window.addEventListener('load', init);
 

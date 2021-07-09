@@ -1,3 +1,20 @@
+.instagram-post-generator {
+    display: flex;
+    font-size: 20px;
+    padding: 0.25em;
+    align-items: center;
+    justify-content: center;
+    background-color: #EEE;
+    flex-wrap: wrap;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 0.25em;
+    }
+}
+
 .instagram-post--list {
     display: flex;
     font-size: 20px;
@@ -37,37 +54,43 @@
         color: var(--insta-foreground);
     }
 
-    &.brand {
+    h1 { font-size: 2.8em; }
+    h2 { font-size: 2.4em; }
+    h3 { font-size: 2.0em; }
+    h4 { font-size: 1.6em; }
+    h5 { font-size: 1.2em; }
+
+    &[data-theme="brand"] {
         --insta-background: white;
         --insta-foreground: #{$color-brand};
         --insta-separator: #{$color-brand};
     }
-    &.brand-reverse {
+    &[data-theme="brand-reverse"] {
         --insta-background: #{$color-brand};
         --insta-foreground: white;
         --insta-separator: white;
     }
-    &.light-red {
+    &[data-theme="light-red"] {
         --insta-background: #{$color-tertiary};
         --insta-foreground: white;
         --insta-separator: white;
     }
-    &.pale {
+    &[data-theme="pale"] {
         --insta-background: #{$color-secondary};
         --insta-foreground: #{$color-primary};
         --insta-separator: #{$color-tertiary};
     }
-    &.purple {
+    &[data-theme="purple"] {
         --insta-background: #{$color-primary};
         --insta-foreground: white;
         --insta-separator: #{$color-brand};
     }
-    &.dark-blue {
+    &[data-theme="dark-blue"] {
         --insta-background: #{$color-dark};
         --insta-foreground: white;
         --insta-separator: #{$color-brand};
     }
-    &.light-blue {
+    &[data-theme="light-blue"] {
         --insta-background: #{$color-info};
         --insta-foreground: white;
         --insta-separator: #{$color-light};
@@ -78,6 +101,10 @@
         white-space: nowrap;
         align-self: flex-start;
         text-align: left;
+
+        & + p {
+            text-align: left;
+        }
     }
 
     .carret:after {
@@ -89,7 +116,7 @@
 
     p {
         font-family: 'antikor regular';
-        font-size: 2.8rem;
+        font-size: 2.6rem;
         line-height: 1.4;
         text-align: center;
     }

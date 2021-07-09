@@ -78,7 +78,7 @@ class SiteController extends AbstractController
     }
 
     #[Route('/instagram', name: 'instagram', options: [
-        'stenope' => ['ignore' => true],
+        'stenope' => ['sitemap' => false],
     ])]
     public function instagram(ContentManager $manager): Response
     {

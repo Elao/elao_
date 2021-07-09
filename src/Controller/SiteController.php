@@ -76,4 +76,12 @@ class SiteController extends AbstractController
             'config' => $manager->getContent(Misc::class, 'elaomojis'),
         ]);
     }
+
+    #[Route('/instagram', name: 'instagram', options: [
+        'stenope' => ['ignore' => true],
+    ])]
+    public function instagram(ContentManager $manager): Response
+    {
+        return $this->render('site/instagram.html.twig');
+    }
 }

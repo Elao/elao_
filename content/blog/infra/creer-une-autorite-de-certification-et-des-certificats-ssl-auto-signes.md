@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/matryoshka.jpg"
 tags:               ["Linux", "Sécurité"]
 categories:         ["Linux", "Infra"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 Bonjour à tous !

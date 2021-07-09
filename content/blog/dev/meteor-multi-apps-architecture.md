@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elephpant_elao.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
 categories:         ["Web", "Meteor"]
 
-author:    "jgaulupeau"
+authors:            ["jgaulupeau"]
 ---
 
 Etant donnée que Meteor envoie tous les fichiers du projet aux clients web (hormis les dossiers spéciaux tels que `/server`, `/private`, `/public`), toute l'application est packagée et envoyée.<!--more--> Cela pose plusieurs problèmes dont :

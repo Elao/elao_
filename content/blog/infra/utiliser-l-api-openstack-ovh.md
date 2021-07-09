@@ -11,7 +11,7 @@ banner:             "images/posts/headers/facade.jpg"
 tags:               ["ovh","openstack","docker","infra","api"]
 categories:         ["Infra", "openstack", "ovh"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 OVH propose depuis quelque temps déjà d'accéder à certaines ressources de votre infrastructure à travers l'API Openstack.

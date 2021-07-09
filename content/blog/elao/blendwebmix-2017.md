@@ -11,7 +11,7 @@ banner:             "images/posts/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:             "lhoizey"
+authors:            ["lhoizey"]
 
 ---
 ## Blend runner \o/

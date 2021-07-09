@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign", "Développement"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
-author:    "fzannettacci"
+authors:            ["fzannettacci"]
 ---
 
 L'augmentation croissante du nombre de règles et de fichiers, le souci de la compatibilité des navigateurs, l'utilisation de CSS3, le travail en équipe, ... sont autant de facteurs qui complexifient le code CSS et peuvent le rendre hors de contrôle. <!--more-->L’objectif de cet article est de vous présenter les différentes fonctionnalités du préprocesseur Sass et son utilisation avec Compass qui vous aideront à gagner du temps sur vos intégrations.

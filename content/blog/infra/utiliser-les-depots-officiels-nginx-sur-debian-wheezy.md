@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/server.jpg"
 tags:               ["Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Linux", "Nginx"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

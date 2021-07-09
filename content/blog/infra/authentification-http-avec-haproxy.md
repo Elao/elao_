@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/lock.png"
 tags:               ["Infra", "HA Proxy", "Linux", "Network"]
 categories:         ["Infra", "HA Proxy", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

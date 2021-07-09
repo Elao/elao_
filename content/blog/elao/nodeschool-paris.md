@@ -11,7 +11,7 @@ banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Javascript", "Node.js", "Conférences"]
 categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 
-author:    "rhanna"
+authors:            ["rhanna"]
 ---
 
 Ce samedi 23 mai 2015, j'étais à la NodeSchool Paris #3 chez Mozilla Paris, dans sa majestueuse salle des fêtes, pour pratiquer Node.js.

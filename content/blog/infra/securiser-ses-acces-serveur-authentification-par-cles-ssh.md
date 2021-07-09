@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["ssh", "Sécurité"]
 categories:         ["Infra", "Linux", "SSH"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

@@ -11,7 +11,7 @@ banner:             "images/posts/headers/best-of-web-2016.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 La seconde édition du Best Of Web s'est tenue à Paris le vendredi 10 juin 2016. Comme l'année dernière c'est la salle de la Grande Crypte de Paris qui a hébergé l'événement. Le principe ne change pas, pendant une journée l'événement propose de revivre les meilleurs meetups parisiens orientés web.

@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/mailers.jpg"
 tags:               ["Symfony", "errorNotifierBundle", "SwiftMailer", "Mailer transport"]
 categories:         ["Dev", "Mailer", "Symfony"]
 
-author:    "jlopes"
+authors:            ["jlopes"]
 ---
 
 Voici une petite astuce que j'ai découvert hier et que j'ai pensé utile de partager !<!--more-->

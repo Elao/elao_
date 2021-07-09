@@ -11,7 +11,7 @@ banner:             "images/posts/headers/behat_cover.jpg"
 tags:               ["Behat","Symfony","Mink","Alice"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author:    "ndievart"
+authors:            ["ndievart"]
 ---
 
 Depuis peu, nous avons fait basculer notre [stack Symfony standard](https://github.com/Elao/symfony-standard) avec comme dépendance par défaut Behat 3.

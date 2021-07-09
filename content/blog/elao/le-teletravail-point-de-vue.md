@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elao_babyfoot.jpg"
 tags:               ["teletravail", "vie au travail"]
 categories:         ["vie au bureau", "elao"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

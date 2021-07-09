@@ -11,7 +11,7 @@ banner:             "images/posts/headers/forum_php_elao.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:    "ndievart"
+authors:            ["ndievart"]
 ---
 
 La première édition du Best of Web s’est tenue à Paris le vendredi 5 Juin 2015 à la Grande Crypte de Paris.

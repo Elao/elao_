@@ -12,7 +12,7 @@ banner:             "images/posts/headers/php_elao_code.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "Symfony", "PHP"]
 
-author:    "tbessoussa"
+authors:            ["tbessoussa"]
 ---
 
 This is a small feedback regarding the new Symfony 2.2 feature which makes the subdomains handling easier. By the way you can see the official documentation about <a style="text-align: justify;" href="http://symfony.com/doc/master/components/routing/hostname_pattern.html" target="_blank">routing & subdomains here</a>.

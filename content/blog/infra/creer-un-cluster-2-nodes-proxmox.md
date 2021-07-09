@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/matryoshka.jpg"
 tags:               ["proxmox", "openvz", "cluster"]
 categories:         ["Infra", "Proxmox", "Cluster"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

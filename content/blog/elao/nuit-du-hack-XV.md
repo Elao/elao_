@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/ndhxv.png"
 banner:             "images/posts/headers/ndhxv.jpg"
 tags:               ["SysAdmin", "Sécurité", "Conférence", "Hacking"]
 categories:         ["conference"]
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 Une éternité.

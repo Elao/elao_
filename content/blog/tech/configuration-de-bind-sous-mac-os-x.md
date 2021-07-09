@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/yosemite.jpg"
 tags:               ["Bind","Mac OSX", "OSX"]
 categories:         ["Tech", "OSX"]
 
-author:    "vbouzeran"
+authors:            ["vbouzeran"]
 
 ---
 

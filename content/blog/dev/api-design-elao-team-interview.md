@@ -12,7 +12,7 @@ banner:             "images/posts/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
 categories:         ["Dev"]
 
-author:    "elao"
+authors:            ["elao"]
 ---
 
 Concevoir et développer une API n'est pas un exercice trivial. La littérature en la matière et les ressources sur Internet abondent, mais au moment d'implémenter une API, le développeur reste confronté à de nombreux choix.

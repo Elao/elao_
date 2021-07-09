@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/yosemite.jpg"
 tags:               ["OSX"]
 categories:         ["Tech", "OSX"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

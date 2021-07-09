@@ -12,7 +12,7 @@ banner:             "images/posts/headers/tdd.jpg"
 tags:               ["PHP", "Test", "TDD"]
 categories:         ["Dev", "PHP"]
 
-author:    "rhanna"
+authors:            ["rhanna"]
 ---
 
 **Test Driven Development** ou le développement guidé par les tests, n'est clairement pas une méthode triviale.

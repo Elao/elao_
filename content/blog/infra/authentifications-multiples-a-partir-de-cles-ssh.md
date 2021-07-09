@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/keep-calm-and-connect-to-ssh.png"
 tags:               ["SSH", "Linux", "Sécurité", "Tips"]
 categories:         ["Infra", "Linux", "SSH"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

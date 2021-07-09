@@ -16,8 +16,8 @@
 
 {% block content %}
 <h1>Générateur de post pour les réseaux sociaux</h1>
-<div class="instagram-post-generator">
-    <div id="social-post-generator-target" class="instagram-post" data-theme="brand">
+<div class="social-post-generator">
+    <div id="social-post-generator-target" class="social-post" data-theme="brand">
         <div class="content">
             <h1 class="carret">Hello</h1>
         </div>
@@ -53,15 +53,15 @@
     </form>
 </div>
 <h2>Exemples et templates</h2>
-<div class="instagram-post--list">
-    <div class="instagram-post" data-theme="brand">
+<div class="social-post--list">
+    <div class="social-post" data-theme="brand">
         <div class="content">
             {% block title %}
             <h1 class="carret" contenteditable="true">Hello</h1>
             {% endblock %}
         </div>
     </div>
-    <div class="instagram-post" data-theme="brand-reverse">
+    <div class="social-post" data-theme="brand-reverse">
         <div class="content">
             {% block title_with_paragraph %}
                 <h2 class="carret" contenteditable="true">Aloha</h2>
@@ -69,14 +69,14 @@
             {% endblock %}
         </div>
     </div>
-    <div class="instagram-post" data-theme="light-red">
+    <div class="social-post" data-theme="light-red">
         <div class="content">
             {% block paragraph %}
                 <p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu consectetur magna.</p>
             {% endblock %}
         </div>
     </div>
-    <div class="instagram-post" data-theme="pale">
+    <div class="social-post" data-theme="pale">
         <div class="content">
             {% block quote %}
                 <p contenteditable="true">Consectetur adipiscing elit. Aenean eu consectetur magna.</p>
@@ -87,7 +87,7 @@
             {% endblock %}
         </div>
     </div>
-    <div class="instagram-post" data-theme="purple">
+    <div class="social-post" data-theme="purple">
         <div class="content">
             {% block statistic %}
                 <span class="number" contenteditable="true">11%</span>
@@ -95,13 +95,13 @@
             {% endblock %}
         </div>
     </div>
-    <div class="instagram-post" data-theme="light-blue">
+    <div class="social-post" data-theme="light-blue">
         <div class="content">
             <span class="number" contenteditable="true">11%</span>
             <p contenteditable="true">Aenean eu consectetur magna.</p>
         </div>
     </div>
-    <div class="instagram-post" data-theme="dark-blue">
+    <div class="social-post" data-theme="dark-blue">
         <div class="content">
             <p class="carret" contenteditable="true">Lorem ipsum dolor sit amet</p>
         </div>

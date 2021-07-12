@@ -89,9 +89,9 @@ class GenerateArticleCommand extends Command
                 new Header(['title' => $title]),
                 new Header(['date' => $date], 'Au format YYYY-MM-DD'),
                 new Header(
-                    ['lastModified' => $date],
-                    'À utiliser pour indiquer explicitement qu\'un article à été mis à jour',
-                    false
+                    ['lastModified' => null],
+                    'Au format YYYY-MM-DD. Pour indiquer explicitement qu\'un article à été mis à jour',
+                    true
                 ),
                 new Header(['description' => $description]),
                 new Header(

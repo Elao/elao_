@@ -1,11 +1,12 @@
 ---
 title: 'Anne-Laure, développeuse web chez Elao depuis 3 ans'
 date: '2021-07-08' # Au format YYYY-MM-DD
+lastModified: ~
 description: ''
 authors: [cmozzati, aldeboissieu]
 tags: [elao, team]
 thumbnail: images/posts/2021/itw-2b.jpeg
-tweetId: '1413061065374580737' # Ajouter l'id du Tweet après publication.
+tweetId: '1413061065374580737'
 ---
 
 ## Ton parcours

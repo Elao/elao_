@@ -1,7 +1,7 @@
 ---
 title: '[Prénom], [poste] chez Elao depuis X ans'
 date: '2021-06-25' # Au format YYYY-MM-DD
-#lastModified: '2021-06-25' # À utiliser pour indiquer explicitement qu'un article à été mis à jour
+lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: 'petite phrase sympa sur la personne'
 author: cmozzati # author|authors (multiple acceptés)
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.

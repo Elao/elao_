@@ -75,4 +75,9 @@ class Article
     {
         return $this->lastModified ?? $this->date;
     }
+
+    public function isPublished(): bool
+    {
+        return new \DateTimeImmutable() >= $this->date;
+    }
 }

@@ -6,7 +6,7 @@ namespace App\Stenope\Listener;
 
 use App\Model\Member;
 use Stenope\Bundle\Command\BuildCommand;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
@@ -14,10 +14,10 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class BuildListener implements EventSubscriberInterface
 {
-    private ContentManager $manager;
+    private ContentManagerInterface $manager;
     private UrlGeneratorInterface $urlGenerator;
 
-    public function __construct(ContentManager $manager, UrlGeneratorInterface $urlGenerator)
+    public function __construct(ContentManagerInterface $manager, UrlGeneratorInterface $urlGenerator)
     {
         $this->manager = $manager;
         $this->urlGenerator = $urlGenerator;

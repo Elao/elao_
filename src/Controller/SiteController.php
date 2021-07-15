@@ -7,7 +7,7 @@ namespace App\Controller;
 use App\Model\Article;
 use App\Model\Member;
 use App\Model\Misc;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class SiteController extends AbstractController
 {
     #[Route('/', name: 'homepage')]
-    public function home(ContentManager $manager): Response
+    public function home(ContentManagerInterface $manager): Response
     {
         /** @var Article[] $articles */
         $articles = $manager->getContents(Article::class, ['date' => false]);
@@ -40,7 +40,7 @@ class SiteController extends AbstractController
     }
 
     #[Route('/nos-valeurs', name: 'values')]
-    public function values(ContentManager $manager): Response
+    public function values(ContentManagerInterface $manager): Response
     {
         $activeMembers = $manager->getContents(Member::class, null, static fn (Member $member): bool => $member->active);
         $count = \count($activeMembers);
@@ -70,7 +70,7 @@ class SiteController extends AbstractController
     }
 
     #[Route('/elaomojis', name: 'elaomojis')]
-    public function elaomojis(ContentManager $manager): Response
+    public function elaomojis(ContentManagerInterface $manager): Response
     {
         return $this->render('site/elaomojis.html.twig', [
             'config' => $manager->getContent(Misc::class, 'elaomojis'),

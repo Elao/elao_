@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c22f2d2fa9b2ce4dddbc9514ed54755",
+    "content-hash": "bc36ba053a30c3b09f86180ddbe71d3b",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1530,16 +1530,16 @@
         },
         {
             "name": "stenope/stenope",
-            "version": "dev-master",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "341ffb67c9da2d136ba909775e1fc21ee8eaaa3b"
+                "reference": "53696ed066f81e42dfa5bb242b2f284b1f79f5ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/341ffb67c9da2d136ba909775e1fc21ee8eaaa3b",
-                "reference": "341ffb67c9da2d136ba909775e1fc21ee8eaaa3b",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/53696ed066f81e42dfa5bb242b2f284b1f79f5ad",
+                "reference": "53696ed066f81e42dfa5bb242b2f284b1f79f5ad",
                 "shasum": ""
             },
             "require": {
@@ -1578,7 +1578,6 @@
                 "symfony/twig-bridge": "^5.1",
                 "symfony/twig-bundle": "^5.1"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1618,9 +1617,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/master"
+                "source": "https://github.com/StenopePHP/Stenope/tree/v0.6.0"
             },
-            "time": "2021-06-29T08:23:11+00:00"
+            "time": "2021-07-15T09:08:36+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7804,7 +7803,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "stenope/stenope": 20,
         "elao/accesseo": 20
     },
     "prefer-stable": true,
@@ -7817,5 +7815,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }

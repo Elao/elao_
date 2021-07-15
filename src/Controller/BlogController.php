@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Article;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Stenope\Bundle\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,9 +14,9 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/blog')]
 class BlogController extends AbstractController
 {
-    private ContentManager $manager;
+    private ContentManagerInterface $manager;
 
-    public function __construct(ContentManager $manager)
+    public function __construct(ContentManagerInterface $manager)
     {
         $this->manager = $manager;
     }

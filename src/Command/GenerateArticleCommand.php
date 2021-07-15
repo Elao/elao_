@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Command;
 
 use App\Model\Member;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -23,10 +23,10 @@ class GenerateArticleCommand extends Command
     protected static $defaultName = 'app:generate:article';
 
     private string $path;
-    private ContentManager $contents;
+    private ContentManagerInterface $contents;
     private Filesystem $filesystem;
 
-    public function __construct(string $path, ContentManager $contents)
+    public function __construct(string $path, ContentManagerInterface $contents)
     {
         $this->path = $path;
         $this->contents = $contents;

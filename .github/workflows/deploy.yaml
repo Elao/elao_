@@ -2,6 +2,8 @@ name: Deploy site
 
 on:
   workflow_dispatch: ~
+  schedule:
+    - cron: '0 8 * * 1,2,3,4,5' # At 08:30 (UTC, => 09:30 / 10:30 in Europe/Paris depending on the DST), each day of the week.
   push:
     branches:
       - master
@@ -89,6 +91,7 @@ jobs:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: ${{ secrets.WEBSITE_URL }}
           INCLUDE_SAMPLES: 0
+          SHOW_UNPUBLISHED_ARTICLES: 0
           MATOMO_ID: 1
 
       - name: '🚀 Deploy'

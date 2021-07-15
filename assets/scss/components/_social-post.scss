@@ -1,181 +1,125 @@
-.social-post-generator {
-    display: flex;
-    font-size: 20px;
-    padding: 0.25em;
-    align-items: center;
-    justify-content: center;
-    background-color: #EEE;
-    flex-wrap: wrap;
-
-    form {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        padding: 0.25em;
-
-        select {
-            outline: 0;
-            box-shadow: none;
-            border: 0 !important;
-            background: white;
-            cursor: pointer;
-
-            font-family: 'faktum regular';
-            font-size: 16px;
-            line-height: 1;
-            height: 2em;
-            padding: 0 .5em;
-            margin: 0.25em 0;
-            overflow: hidden;
-            border-radius: .25em;
-            font-family: 'faktum regular';
-        }
-    }
-}
-
-.social-post--list {
-    display: flex;
-    font-size: 20px;
-    padding: 0.25em;
-    align-items: center;
-    justify-content: center;
-    background-color: #EEE;
-    flex-wrap: wrap;
-}
-
 .social-post {
-    width: calc(50% - 1em);
-    position: relative;
-    margin: 0.5em;
-    background: var(--insta-background);
+  margin: .25em;
+  width: calc(50% - .5em);
+  position: relative;
+  font-family: 'antikor regular';
+  font-size: 40px;
+  color: var(--insta-foreground);
+  line-height: 1.4;
+  text-align: center;
+  background: var(--insta-background);
 
-    &:after {
-      content: " ";
-      display: block;
-      padding-bottom: 100%;
-    }
+  &:after {
+    padding-bottom: 100%;
+    content: '';
+    display: block;
+  }
 
-    .content {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10%;
-    }
+  .content {
+    padding: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    &, p, h1, h2, h3, h4, h5, h6 {
-        color: var(--insta-foreground);
-    }
+  &[data-theme="brand"] {
+    --insta-background: #fff;
+    --insta-foreground: #{$color-brand};
+    --insta-separator: #{$color-brand};
+  }
 
-    h1 { font-size: 2.8em; }
-    h2 { font-size: 2.4em; }
-    h3 { font-size: 2.0em; }
-    h4 { font-size: 1.6em; }
-    h5 { font-size: 1.2em; }
+  &[data-theme="brand-reverse"] {
+    --insta-background: #{$color-brand};
+    --insta-foreground: #fff;
+    --insta-separator: #fff;
+  }
 
-    &[data-theme="brand"] {
-        --insta-background: white;
-        --insta-foreground: #{$color-brand};
-        --insta-separator: #{$color-brand};
-    }
-    &[data-theme="brand-reverse"] {
-        --insta-background: #{$color-brand};
-        --insta-foreground: white;
-        --insta-separator: white;
-    }
-    &[data-theme="light-red"] {
-        --insta-background: #{$color-tertiary};
-        --insta-foreground: white;
-        --insta-separator: white;
-    }
-    &[data-theme="pale"] {
-        --insta-background: #{$color-secondary};
-        --insta-foreground: #{$color-primary};
-        --insta-separator: #{$color-tertiary};
-    }
-    &[data-theme="purple"] {
-        --insta-background: #{$color-primary};
-        --insta-foreground: white;
-        --insta-separator: #{$color-brand};
-    }
-    &[data-theme="dark-blue"] {
-        --insta-background: #{$color-dark};
-        --insta-foreground: white;
-        --insta-separator: #{$color-brand};
-    }
-    &[data-theme="light-blue"] {
-        --insta-background: #{$color-info};
-        --insta-foreground: white;
-        --insta-separator: #{$color-light};
-    }
+  &[data-theme="light-red"] {
+    --insta-background: #{$color-tertiary};
+    --insta-foreground: #fff;
+    --insta-separator: #fff;
+  }
 
-    h1, h2, h3, h4, h5, h6 {
-        display: block;
-        white-space: nowrap;
-        align-self: flex-start;
-        text-align: left;
+  &[data-theme="pale"] {
+    --insta-background: #{$color-secondary};
+    --insta-foreground: #{$color-primary};
+    --insta-separator: #{$color-tertiary};
+  }
 
-        & + p {
-            text-align: left;
-        }
-    }
+  &[data-theme="purple"] {
+    --insta-background: #{$color-primary};
+    --insta-foreground: #fff;
+    --insta-separator: #{$color-brand};
+  }
 
-    .carret:after {
-        display: inline-block;
-        content: '_';
-        color: var(--insta-separator);
-        font-family: 'faktum bold';
-    }
+  &[data-theme="dark-blue"] {
+    --insta-background: #{$color-dark};
+    --insta-foreground: #fff;
+    --insta-separator: #{$color-brand};
+  }
 
-    p {
-        font-family: 'antikor regular';
-        font-size: 2.6rem;
-        line-height: 1.4;
-        text-align: center;
-    }
+  &[data-theme="light-blue"] {
+    --insta-background: #{$color-info};
+    --insta-foreground: #fff;
+    --insta-separator: #{$color-light};
+  }
+}
 
-    .number {
-        font-size: 8rem;
-        font-family: 'antikor regular';
-        line-height: 1;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+.social-post__title {
+  display: block;
+  align-self: flex-start;
+  color: var(--insta-foreground);
+  text-align: left;
+  white-space: nowrap;
 
-        &:after {
-            content: ' ';
-            display: block;
-            height: 0.2em;
-            width: 75%;
-            background-color: var(--insta-separator);
-            margin-bottom: 0.2em;
-        }
-    }
+  &:after {
+    display: inline-block;
+    font-family: 'faktum bold';
+    color: var(--insta-separator);
+    content: '_';
+  }
 
-    .number + p {
-        font-size: 2em;
-        line-height: 1.4;
-    }
+  & + p {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
 
-    .note {
-        font-size: 1.4rem;
-        margin-top: 1em;
-    }
+h1.social-post__title { font-size: 1.4em; }
+h2.social-post__title { font-size: 1.2em; }
 
-    .signature {
-        font-size: 1.4rem;
-        margin-top: 2em;
-        display: flex;
-        flex-direction: column;
+.social-post__number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'antikor regular';
+  font-size: 3.2em;
+  line-height: 1;
+  text-align: center;
 
-        > :first-child {
-            font-family: 'antikor bold';
-        }
-    }
+  &:after {
+    margin-bottom: .2em;
+    height: .2em;
+    width: 75%;
+    display: block;
+    content: '';
+    background-color: var(--insta-separator);
+  }
+}
+
+.social-post__signature {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: .55em;
+
+  :first-child {
+    font-family: 'antikor bold';
+  }
 }

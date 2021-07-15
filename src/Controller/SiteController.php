@@ -80,7 +80,7 @@ class SiteController extends AbstractController
     #[Route('/social', name: 'social', options: [
         'stenope' => ['sitemap' => false],
     ])]
-    public function social(ContentManager $manager): Response
+    public function social(): Response
     {
         return $this->render('site/social.html.twig');
     }

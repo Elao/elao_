@@ -1,4 +1,5 @@
-name: Deploy PR
+# Deploy a PR preview on Github Pages
+name: Deploy preview
 
 on:
   pull_request:
@@ -6,7 +7,7 @@ on:
 
 jobs:
 
-  deploy-pr:
+  deploy-preview:
     name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10

@@ -1,4 +1,4 @@
-name: Deploy site
+name: Deploy production
 
 on:
   workflow_dispatch: ~
@@ -10,8 +10,8 @@ on:
 
 jobs:
 
-  deploy-site:
-    name: '🚧  Build & deploy site 🚀'
+  deploy-production:
+    name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 

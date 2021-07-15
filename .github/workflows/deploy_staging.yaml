@@ -1,13 +1,15 @@
-name: Deploy GH Pages
+# Deploy on GH Pages as staging env
+name: Deploy staging
 
 on:
+  workflow_dispatch: ~
   push:
     branches:
       - master
 
 jobs:
 
-  deploy-master:
+  deploy-staging:
     name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10

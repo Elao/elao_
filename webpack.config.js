@@ -102,7 +102,7 @@ Encore
         options.onBeforeSetupMiddleware = (devServer) => {
             const files = [
                 path.resolve(__dirname, 'templates/**/*.html.twig'),
-                path.resolve(__dirname, 'content/misc/elaomojis.yaml'),
+                path.resolve(__dirname, 'content/**/*'),
             ]
 
             chokidar.watch(files).on('all', () => {

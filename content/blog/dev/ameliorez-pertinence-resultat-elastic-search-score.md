@@ -11,7 +11,7 @@ banner:     "images/posts/headers/elasticsearch.jpg"
 tags:           ["Moteur de recherche", "ElasticSearch", "Pertinence", "Elastica"]
 categories:     ["dev"]
 
-author: "mcolin"
+authors:        ["mcolin"]
 
 ---
 

@@ -11,7 +11,7 @@ banner:     "images/posts/headers/github-agile-dashboard.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github", "git", "node", "cli"]
 categories:     ["methodo", "dev"]
 
-author: "tjarrand"
+authors:        ["tjarrand"]
 
 ---
 

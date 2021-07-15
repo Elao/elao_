@@ -12,7 +12,7 @@ banner:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing
 tags:           ["Symfony", "Routing", "UX"]
 categories:     ["dev", "Symfony"]
 
-author: "rhanna"
+authors:        ["rhanna"]
 
 ---
 

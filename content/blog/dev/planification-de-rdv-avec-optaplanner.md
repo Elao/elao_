@@ -11,7 +11,7 @@ banner:     "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner
 tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 
-author: "rhanna"
+authors:        ["rhanna"]
 
 ---
 

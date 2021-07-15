@@ -11,7 +11,7 @@ banner:     "images/posts/2016/pwa/pwa-general.jpg"
 tags:           ["Progressive Web App", "Service Worker", "Mobile", "Offline"]
 categories:     ["dev"]
 
-author: "rhanna"
+authors:        ["rhanna"]
 
 ---
 

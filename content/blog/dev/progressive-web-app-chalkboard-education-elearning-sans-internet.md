@@ -12,7 +12,7 @@ banner:     "images/posts/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["Progressive Web App", "Offline", "React", "Symfony"]
 categories:     ["dev", "Symfony", "javascript"]
 
-author: "rhanna"
+authors:        ["rhanna"]
 
 ---
 

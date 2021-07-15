@@ -24,15 +24,15 @@ class AuthorProcessor implements ProcessorInterface, ContentManagerAwareInterfac
             return;
         }
 
-        if (!isset($data['authors']) && !isset($data['author'])) {
+        if (!isset($data['authors'])) {
             throw new \Exception('At least one author must be specified.');
         }
 
-        $authors = $data['authors'] ?? $data['author'];
+        $authors = $data['authors'];
 
-        $data['authors'] = array_map(
+        $data['authors'] = array_combine($authors, array_map(
             fn (string $id) => $this->contentManager->getContent(Member::class, $id),
-            \is_array($authors) ? $authors : [$authors]
-        );
+            $authors
+        ));
     }
 }

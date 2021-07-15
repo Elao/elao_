@@ -100,3 +100,6 @@ services:
     App\Command\GenerateArticleCommand:
         arguments:
             $path: '%kernel.project_dir%/content/blog'
+
+    App\Stenope\ExpressionLanguage\ExpressionLanguageProvider:
+        tags: [stenope.expression_language_provider]

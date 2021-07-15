@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Stenope\Processor\AuthorProcessor;
 use App\Stenope\Processor\GithubEditLinkProcessor;
 use Stenope\Bundle\Processor\TableOfContentProcessor;
 use Stenope\Bundle\TableOfContent\TableOfContent;
@@ -32,7 +33,11 @@ class Article
      */
     public string $lang = 'fr';
 
-    /** @var array<Member> */
+    /**
+     * @var array<string,Member> Indexed by author slug
+     *
+     * @see AuthorProcessor
+     */
     public array $authors = [];
 
     public ?array $credits = null;

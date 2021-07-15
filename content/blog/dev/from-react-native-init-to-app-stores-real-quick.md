@@ -13,7 +13,7 @@ banner:     "images/posts/headers/from-react-native-init-to-app-stores-real-quic
 tags:           ["react", "react native", "mobile"]
 categories:     ["dev"]
 
-author: "tjarrand"
+authors:        ["tjarrand"]
 
 ---
 

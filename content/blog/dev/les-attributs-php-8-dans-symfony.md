@@ -3,7 +3,7 @@ title: 'Les attributs PHP 8 dans Symfony'
 date: '2021-07-06' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: 'Utilisation des attributs PHP 8 à la place des annotations.'
-author: mcolin # author|authors (multiple acceptés)
+authors: [mcolin]
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [symfony, php, attributes]
 thumbnail: images/posts/thumbnails/les-attributs-php-8-dans-symfony.jpg

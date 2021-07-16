@@ -55,6 +55,14 @@
       padding-bottom: 100%;
     }
 
+    &[data-format="landscape"]:after {
+        padding-bottom: 67%;
+    }
+
+    &[data-format="portrait"]:after {
+        padding-bottom: 133%;
+    }
+
     .content {
         position: absolute;
         top: 0;
@@ -66,10 +74,19 @@
         align-items: center;
         justify-content: center;
         padding: 10%;
+
+        > *:first-child {
+            margin-top: 0;
+        }
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &, p, h1, h2, h3, h4, h5, h6 {
         color: var(--insta-foreground);
+        padding: 0;
     }
 
     h1 { font-size: 2.8em; }

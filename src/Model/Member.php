@@ -4,6 +4,12 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use Stenope\Bundle\Attribute\SuggestedDebugQuery;
+
+#[SuggestedDebugQuery('Actifs', filters: '_.active', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Anciens', filters: 'not _.active', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Vélotaffeurs', filters: '_.🚲 and _.active', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Piétons', filters: 'not _.🚲 and _.active', orders: 'desc:integrationDate')]
 class Member
 {
     public string $slug;

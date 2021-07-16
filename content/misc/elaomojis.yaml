@@ -161,3 +161,7 @@ categories:
                   path: happy/tom-happy.gif
                 - code: ":xavg-happy:"
                   path: happy/xavg-happy.gif
+                - code: ":xavr-happy:"
+                  path: happy/xavr-happy.gif
+                - code: ":yves-happy:"
+                  path: happy/yves-happy.gif

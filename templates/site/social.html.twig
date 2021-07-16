@@ -1,0 +1,110 @@
+{% extends 'base.html.twig' %}
+
+{% set noindex = true %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        window.addEventListener('load', () => {
+            new SocialPostGenerator(
+                document.forms.socialPostGenerator,
+                document.getElementById('social-post-generator-target')
+            );
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+<h1>Générateur de post pour les réseaux sociaux</h1>
+<div class="social-post-generator">
+    <div id="social-post-generator-target" class="social-post" data-theme="brand">
+        <div class="content">
+            <h1 class="carret">Hello</h1>
+        </div>
+    </div>
+    <form name="socialPostGenerator">
+        <p>Choisir un template et un thème :</p>
+        <select name="template">
+            <option value="{{ block('title')|e }}">Titre seul</option>
+            <option value="{{ block('title_with_paragraph')|e }}">Titre + paragraphe</option>
+            <option value="{{ block('paragraph')|e }}">Paragraphe seul</option>
+            <option value="{{ block('quote')|e }}">Citation</option>
+            <option value="{{ block('statistic')|e }}">Statistique</option>
+        </select>
+        <select name="theme">
+            <option value="brand">Rouge sur blanc</option>
+            <option value="brand-reverse">Blanc sur rouge</option>
+            <option value="light-red">Rouge cassé</option>
+            <option value="pale">Rose pale</option>
+            <option value="purple">Violet</option>
+            <option value="light-blue">Bleu clair</option>
+            <option value="dark-blue">Bleu sombre</option>
+        </select>
+        <br>
+        <p>Modifier le contenu directement dans le carré.</p>
+        <p>Puis sous <strong>Firefox</strong>:</p>
+        <ol>
+            <li>Clic droit</li>
+            <li>Selectionnez "Take screenshot"</li>
+            <li>Survoler le carré</li>
+            <li>Cliquer pour selectionner le carré</li>
+            <li>Télécharger l'image</li>
+        </ol>
+    </form>
+</div>
+<h2>Exemples et templates</h2>
+<div class="social-post--list">
+    <div class="social-post" data-theme="brand">
+        <div class="content">
+            {% block title %}
+            <h1 class="carret" contenteditable="true">Hello</h1>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="social-post" data-theme="brand-reverse">
+        <div class="content">
+            {% block title_with_paragraph %}
+                <h2 class="carret" contenteditable="true">Aloha</h2>
+                <p contenteditable="true">Lorem ipsum dolor sit amet.</p>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="social-post" data-theme="light-red">
+        <div class="content">
+            {% block paragraph %}
+                <p contenteditable="true">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu consectetur magna.</p>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="social-post" data-theme="pale">
+        <div class="content">
+            {% block quote %}
+                <p contenteditable="true">Consectetur adipiscing elit. Aenean eu consectetur magna.</p>
+                <p class="signature">
+                    <span contenteditable="true">Anne Laure</span>
+                    <span contenteditable="true">Développeuse Back</span>
+                </p>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="social-post" data-theme="purple">
+        <div class="content">
+            {% block statistic %}
+                <span class="number" contenteditable="true">11%</span>
+                <p contenteditable="true">Hola</p>
+            {% endblock %}
+        </div>
+    </div>
+    <div class="social-post" data-theme="light-blue">
+        <div class="content">
+            <span class="number" contenteditable="true">11%</span>
+            <p contenteditable="true">Aenean eu consectetur magna.</p>
+        </div>
+    </div>
+    <div class="social-post" data-theme="dark-blue">
+        <div class="content">
+            <p class="carret" contenteditable="true">Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

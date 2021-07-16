@@ -76,4 +76,12 @@ class SiteController extends AbstractController
             'config' => $manager->getContent(Misc::class, 'elaomojis'),
         ]);
     }
+
+    #[Route('/social', name: 'social', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
+    public function social(): Response
+    {
+        return $this->render('site/social.html.twig');
+    }
 }

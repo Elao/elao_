@@ -85,7 +85,7 @@ serve-static-subdir:
 # Lint #
 ########
 
-lint: lint.php-cs-fixer lint.phpstan lint.twig lint.yaml lint.eslint lint.container lint.composer
+lint: lint.php-cs-fixer lint.phpstan lint.twig lint.yaml lint.eslint lint.stylelint lint.container lint.composer
 
 lint.composer:
 	symfony composer validate --no-check-publish
@@ -109,7 +109,10 @@ lint.phpstan:
 	symfony php vendor/bin/phpstan analyse --memory-limit=-1
 
 lint.eslint:
-	npm run fix
+	npm run eslint
+
+lint.stylelint:
+	npm run stylelint
 
 ############
 # Security #

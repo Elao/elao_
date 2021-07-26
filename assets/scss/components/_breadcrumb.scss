@@ -11,11 +11,11 @@
   font-family: 'antikor bold';
   font-size: 16px;
 
-  &:before {
+  &::before {
     display: none;
   }
 
-  &:after {
+  &::after {
     width: unset;
     height: unset;
     position: absolute;
@@ -35,7 +35,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -44,7 +44,7 @@
     color: $color-text;
     text-decoration: none;
     border: none;
-    transition: color ease-in .1s;
+    transition: color ease-in 0.1s;
 
     &:hover,
     &:active,

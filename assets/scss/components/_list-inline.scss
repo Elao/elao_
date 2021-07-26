@@ -14,8 +14,8 @@
   flex-direction: column;
   align-items: flex-start;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

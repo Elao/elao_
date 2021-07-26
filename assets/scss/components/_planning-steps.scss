@@ -21,8 +21,8 @@
   color: #fff;
   background: $color-dark;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

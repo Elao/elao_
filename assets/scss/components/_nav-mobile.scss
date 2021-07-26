@@ -46,8 +46,8 @@
   .nav-mobile__item {
     margin: 15px 0;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
 
@@ -63,7 +63,7 @@
       color: #fff;
 
       span {
-        &:after {
+        &::after {
           background-color: #fff;
         }
       }
@@ -96,7 +96,7 @@
       color: $color-brand;
 
       span {
-        &:after {
+        &::after {
           display: none;
         }
       }

@@ -15,8 +15,8 @@
   margin: 10px 0;
   text-align: right;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

@@ -7,8 +7,8 @@
   }
 
   li {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }

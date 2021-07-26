@@ -9,7 +9,7 @@
   flex: 1;
 
   * {
-    all: revert
+    all: revert;
   }
 }
 
@@ -31,7 +31,7 @@
 
     &::selection {
       color: #fff;
-      background: transparentize(#fff, .8);
+      background: transparentize(#fff, 0.8);
     }
   }
 }

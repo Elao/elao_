@@ -13,11 +13,11 @@
   padding-right: 25px;
   white-space: nowrap;
 
-  &:before {
+  &::before {
     display: none;
   }
 
-  &:after {
+  &::after {
     top: 50%;
     right: 0;
     left: unset;
@@ -31,7 +31,7 @@
   }
 
   &:last-of-type {
-    &:after {
+    &::after {
       display: none;
     }
   }

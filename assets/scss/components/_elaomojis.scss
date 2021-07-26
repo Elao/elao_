@@ -12,8 +12,8 @@
   width: calc(20% - 20px);
   background: $color-secondary;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

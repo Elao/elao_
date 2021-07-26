@@ -7,14 +7,14 @@ ul {
     margin: 0 0 5px;
     position: relative;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
       border-radius: 50px;
     }
 
-    &:before {
+    &::before {
       top: 7px;
       left: -35px;
       height: 16px;
@@ -23,7 +23,7 @@ ul {
       border: solid 1px $color-secondary;
     }
 
-    &:after {
+    &::after {
       top: 13px;
       left: -29px;
       height: 6px;

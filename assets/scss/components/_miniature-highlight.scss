@@ -7,8 +7,8 @@
   flex-direction: column;
   align-items: flex-start;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 }
@@ -26,7 +26,7 @@
       transform: scale(1.02);
       transform-origin: center;
 
-      &:before { opacity: 1; }
+      &::before { opacity: 1; }
     }
   }
 
@@ -37,18 +37,18 @@
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    transition: transform ease-in-out .4s;
+    transition: transform ease-in-out 0.4s;
 
-    &:before {
+    &::before {
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       left: 0;
       content: '';
-      background-color: rgba(0, 0, 0, .15);
+      background-color: rgba(0, 0, 0, 0.15);
       opacity: 0;
-      transition: opacity ease-in-out .4s;
+      transition: opacity ease-in-out 0.4s;
     }
   }
 }
@@ -80,7 +80,7 @@
     justify-content: center;
     font-family: 'faktum regular';
     font-size: 20px;
-    transition: background ease-in .15s;
+    transition: background ease-in 0.15s;
 
     &:hover,
     &:active,

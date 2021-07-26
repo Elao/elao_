@@ -11,8 +11,8 @@
   margin: 5px;
   display: flex;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

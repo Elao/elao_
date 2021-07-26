@@ -1,6 +1,4 @@
 .tile {
-  &:before,
-  &:after { display: none; }
 
   margin: 0 20px 40px;
   padding: 35px 40px;
@@ -10,6 +8,9 @@
   font-size: 26px;
   color: $color-light;
   background: $color-dark;
+
+  &::before,
+  &::after { display: none; }
 
   small {
     margin: 0 0 20px;

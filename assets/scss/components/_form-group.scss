@@ -32,14 +32,14 @@
     font-family: 'antikor bold';
     font-size: 16px;
     color: $color-tertiary;
-    transition: opacity ease-in .1s;
+    transition: opacity ease-in 0.1s;
   }
 
   &:focus {
     outline: none;
 
     &::placeholder {
-      opacity: .4;
+      opacity: 0.4;
     }
   }
 }
@@ -64,11 +64,11 @@
   }
 
   &:empty {
-    &:before {
+    &::before {
       display: block;
       color: $color-tertiary;
       content: attr(placeholder);
-      transition: opacity ease-in .1s;
+      transition: opacity ease-in 0.1s;
       pointer-events: none;
     }
   }
@@ -76,8 +76,8 @@
   &:focus {
     outline: none;
 
-    &:before {
-      opacity: .4;
+    &::before {
+      opacity: 0.4;
     }
   }
 }

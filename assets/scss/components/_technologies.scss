@@ -9,8 +9,8 @@
     margin: 10px 0;
     min-width: 180px;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -37,7 +37,7 @@
   }
 
   a.technologies__item {
-    transition: color ease-in .2s;
+    transition: color ease-in 0.2s;
 
     &:hover,
     &:active,

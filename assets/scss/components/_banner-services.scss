@@ -14,7 +14,7 @@
     height: 400px;
     background-image: url(../../images/pages/services/services-banner.jpg);
     background-image: image-set(url(../../images/pages/services/services-banner.jpg) 1x,
-                                url(../../images/pages/services/services-banner@2x.jpg) 2x);
+    url(../../images/pages/services/services-banner@2x.jpg) 2x);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "antikor regular";
+    font-family: 'antikor regular';
     font-size: 24px;
     color: #fff;
     line-height: 1.6;

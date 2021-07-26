@@ -17,7 +17,7 @@
     position: relative;
     grid-column: 1 / 13;
 
-    &:after {
+    &::after {
       height: 190px;
       width: 500px;
       position: absolute;
@@ -60,21 +60,21 @@
     align-items: flex-start;
     grid-column: 2 / 12;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       width: 290px;
       position: absolute;
       content: '';
     }
 
-    &:before {
+    &::before {
       height: 480px;
       top: 95px;
       left: -310px;
       background: $color-secondary;
     }
 
-    &:after {
+    &::after {
       height: 660px;
       top: 0;
       right: -310px;
@@ -84,14 +84,14 @@
 
   .run__item {
     margin: 0 20px;
-    padding: 40px 30px 40px;
+    padding: 40px 30px;
     width: calc(33.33% - 20px);
     min-height: 485px;
     color: #fff;
     background: $color-dark;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
 
@@ -157,7 +157,7 @@
     min-width: 620px;
     position: relative;
 
-    &:before {
+    &::before {
       height: 60px;
       width: 290px;
       position: absolute;
@@ -190,7 +190,7 @@
 
 @media (max-width: $screen-md) {
   .page-methodology {
-    column-gap : unset;
+    column-gap: unset;
 
     .h2--dash,
     .h2--ordered {
@@ -208,7 +208,7 @@
         width: 100%;
       }
 
-      &:after {
+      &::after {
         display: none;
       }
     }
@@ -217,8 +217,8 @@
       flex-direction: column;
       grid-column: 1 / 13;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         display: none;
       }
     }

@@ -17,9 +17,9 @@
 }
 
 $statistics: primary   $color-secondary $color-secondary $color-primary   $color-brand,
-             secondary $color-primary   $color-primary   $color-secondary $color-brand,
-             info      $color-secondary $color-secondary $color-info      $color-light,
-             dark      $color-secondary $color-secondary $color-dark      $color-primary;
+  secondary $color-primary   $color-primary   $color-secondary $color-brand,
+  info      $color-secondary $color-secondary $color-info      $color-light,
+  dark      $color-secondary $color-secondary $color-dark      $color-primary;
 
 @each $style, $text-color, $figure-color, $background-color, $dash-color in $statistics {
   .statistics--#{$style} {

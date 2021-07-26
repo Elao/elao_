@@ -43,8 +43,8 @@
       margin: 0 15px;
       font-size: 30px;
 
-      &:before,
-      &:after { display: none; }
+      &::before,
+      &::after { display: none; }
 
       &:first-of-type { margin-left: 0; }
       &:last-of-type { margin-right: 0; }

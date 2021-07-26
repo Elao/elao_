@@ -27,15 +27,16 @@
     display: flex;
 
     li {
-      &:before,
-      &:after { display: none; }
-
-      &:first-of-type { margin-left: 0; }
-      &:last-of-type { margin-right: 0; }
 
       margin: 0 15px 30px;
       min-height: 30px;
       width: 240px;
+
+      &::before,
+      &::after { display: none; }
+
+      &:first-of-type { margin-left: 0; }
+      &:last-of-type { margin-right: 0; }
     }
   }
 }

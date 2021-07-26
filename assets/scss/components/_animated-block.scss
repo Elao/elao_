@@ -10,7 +10,7 @@
   color: $color-primary;
   border: solid 4px $color-secondary;
   background: transparent;
-  transition: background ease-in-out .2s;
+  transition: background ease-in-out 0.2s;
 
   &:hover {
     color: $color-primary;
@@ -63,35 +63,35 @@
 
     .gear {
       transform-origin: 37px 23px;
-      transition: transform ease-in .2s;
+      transition: transform ease-in 0.2s;
     }
 
     .mask {
       fill: #fff;
-      transition: fill ease-in-out .2s;
+      transition: fill ease-in-out 0.2s;
     }
   }
 
   svg.pen {
     path {
       fill: $color-primary;
-      transition: transform ease-in .2s;
+      transition: transform ease-in 0.2s;
     }
 
     rect {
       transform-origin: 0 0;
       width: 0;
       fill: $color-primary;
-      transition: width ease-in .2s;
+      transition: width ease-in 0.2s;
     }
   }
 
   svg.bulb {
     .light {
       opacity: 0;
-      transform: scale(.9);
+      transform: scale(0.9);
       transform-origin: 11px 11px;
-      transition: transform ease-in .2s, opacity ease-in .2s;
+      transition: transform ease-in 0.2s, opacity ease-in 0.2s;
     }
 
     polygon {
@@ -119,7 +119,7 @@
     margin-left: 15px;
     color: $color-brand;
     font-size: 20px;
-    transition: transform ease-in-out .2s;
+    transition: transform ease-in-out 0.2s;
   }
 
   p {
@@ -144,7 +144,7 @@
   }
 
   .animated-block__content {
-        .title {
+    .title {
       font-size: 16px;
     }
   }

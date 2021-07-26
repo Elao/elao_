@@ -9,8 +9,8 @@
 .pagination__item {
   margin: 0;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 
@@ -26,7 +26,7 @@
     color: $color-primary;
     border-bottom: solid 3px transparent;
 
-    &:after {
+    &::after {
       width: 43px;
       height: 43px;
       position: absolute;
@@ -34,13 +34,13 @@
       background: transparent;
       border-radius: 50%;
       z-index: -1;
-      transition: background ease-in .1s;
+      transition: background ease-in 0.1s;
     }
 
     &:hover,
     &:active,
     &:focus {
-      &:after {
+      &::after {
         background: $color-secondary;
       }
     }
@@ -56,14 +56,14 @@
 
 .pagination__item--nav {
   &:first-of-type {
-    margin-right: 40px
+    margin-right: 40px;
   }
 
   &:last-of-type {
     margin-left: 40px;
   }
 
-  &:after  {
+  &::after {
     display: none;
   }
 
@@ -74,7 +74,7 @@
     font-size: 20px;
     color: $color-brand;
     background: $color-secondary;
-    transition: background ease-in .1s;
+    transition: background ease-in 0.1s;
 
     &:hover,
     &:active,
@@ -88,7 +88,7 @@
 @media (max-width: $screen-xs) {
   .pagination__item--nav {
     &:first-of-type {
-      margin-right: 10px
+      margin-right: 10px;
     }
 
     &:last-of-type {

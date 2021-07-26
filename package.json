@@ -18,7 +18,7 @@
         "watch": "encore dev --watch",
         "build": "encore production",
         "eslint": "eslint assets/js --ext .js,.json --fix",
-        "stylelint": "stylelint 'assets/scss/**/*.scss'"
+        "stylelint": "stylelint 'assets/scss/**/*.scss' --fix"
     },
     "engines": {
         "node": ">=12"

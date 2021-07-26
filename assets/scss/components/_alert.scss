@@ -20,11 +20,11 @@
 }
 
 .alert--warning {
-  color: transparentize(#fff, .1);
+  color: transparentize(#fff, 0.1);
   background: $color-warning;
 }
 
 .alert--info {
-  color: transparentize(#fff, .1);
+  color: transparentize(#fff, 0.1);
   background: $color-info;
 }

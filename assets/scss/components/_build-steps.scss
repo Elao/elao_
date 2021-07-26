@@ -28,8 +28,8 @@
     margin-left: 110px;
     align-self: flex-start;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       top: 50%;
       display: flex;
@@ -39,7 +39,7 @@
       border-radius: unset;
     }
 
-    &:before {
+    &::before {
       height: unset;
       width: unset;
       left: -100px;
@@ -51,7 +51,7 @@
       background: transparent;
     }
 
-    &:after {
+    &::after {
       width: 130px;
       height: 100%;
       left: unset;
@@ -63,8 +63,8 @@
   &.development {
     align-self: center;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }
@@ -74,8 +74,8 @@
     margin-bottom: 0;
     align-self: flex-end;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       display: flex;
       border: none;
@@ -83,7 +83,7 @@
       background: transparent;
     }
 
-    &:before {
+    &::before {
       width: 180px;
       height: 100%;
       top: 0;
@@ -91,7 +91,7 @@
       background: $color-secondary;
     }
 
-    &:after {
+    &::after {
       height: unset;
       width: unset;
       top: unset;
@@ -117,13 +117,13 @@
     &.integration {
       margin-left: 0;
 
-      &:before {
+      &::before {
         display: none;
       }
     }
 
     &.validation {
-      &:after {
+      &::after {
         display: none;
       }
     }
@@ -150,15 +150,15 @@
     &.integration {
       margin-left: 0;
 
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         display: none;
       }
     }
 
     &.validation {
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         display: none;
       }
     }

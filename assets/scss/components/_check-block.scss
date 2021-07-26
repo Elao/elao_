@@ -4,7 +4,7 @@
   color: #fff;
   background: $color-info;
 
-  &:before {
+  &::before {
     position: absolute;
     top: -45px;
     left: 45px;
@@ -34,8 +34,8 @@
   li {
     margin-bottom: 35px;
 
-    &:before {
-      border-color: rgba(254, 227, 228, .4);
+    &::before {
+      border-color: rgba(254, 227, 228, 0.4);
     }
 
     &:last-of-type {
@@ -45,14 +45,14 @@
 }
 
 .check-block--right {
-  &:before {
+  &::before {
     left: unset;
     right: 45px;
   }
 }
 
 .check-block--unchecked {
-  &:before {
+  &::before {
     background-image: url('../../images/uncheck.svg');
   }
 }
@@ -69,8 +69,8 @@
     li {
       color: $color-text;
 
-      &:before {
-        border-color: rgba(127, 26, 85, .3);
+      &::before {
+        border-color: rgba(127, 26, 85, 0.3);
       }
     }
   }
@@ -80,7 +80,7 @@
   .check-block {
     margin-top: 40px;
 
-    &:before {
+    &::before {
       top: -38px;
     }
   }
@@ -90,7 +90,7 @@
   .check-block {
     padding: 75px 30px 75px 60px;
 
-    &:before {
+    &::before {
       width: 60px;
       left: unset;
       right: 30px;

@@ -56,12 +56,12 @@
     margin: 40px 0 130px;
     position: relative;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
     }
 
-    &:before {
+    &::before {
       height: 110px;
       width: 280px;
       bottom: 35px;
@@ -70,7 +70,7 @@
       background-color: $color-brand;
     }
 
-    &:after {
+    &::after {
       position: absolute;
       bottom: -50px;
       left: 35px;
@@ -91,12 +91,12 @@
     position: relative;
     display: inline-flex;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
     }
 
-    &:before {
+    &::before {
       height: 110px;
       width: 280px;
       bottom: 100px;
@@ -105,7 +105,7 @@
       background-color: $color-brand;
     }
 
-    &:after {
+    &::after {
       position: absolute;
       bottom: 30px;
       right: 35px;
@@ -258,8 +258,8 @@
 
     .banner-support,
     .banner-tech-support {
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         display: none;
       }
     }

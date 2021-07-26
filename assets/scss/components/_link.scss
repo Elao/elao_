@@ -5,21 +5,21 @@
   font-family: 'antikor bold';
   font-size: 18px;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
   }
 
-  &:before {
+  &::before {
     width: 15px;
     height: 3px;
     bottom: 0;
     right: 13px;
     content: '';
-    transition: ease-in .2s;
+    transition: ease-in 0.2s;
   }
 
-  &:after {
+  &::after {
     bottom: 6px;
     right: 10px;
     font-family: 'icomoon';
@@ -27,19 +27,19 @@
     line-height: 1;
     content: '\e913';
     opacity: 0;
-    transition: right ease-in .15s, opacity ease-out .2s;
+    transition: right ease-in 0.15s, opacity ease-out 0.2s;
   }
 
   &:hover,
   &:active,
   &:focus {
-    &:before {
+    &::before {
       height: 25px;
       width: 25px;
       right: -5px;
     }
 
-    &:after {
+    &::after {
       right: 1px;
       opacity: 1;
     }
@@ -49,30 +49,30 @@
 .link--brand {
   color: $color-brand;
 
-  &:before { background: $color-secondary; }
-  &:after { color: $color-secondary; }
+  &::before { background: $color-secondary; }
+  &::after { color: $color-secondary; }
 
   &:hover,
   &:active,
   &:focus {
     color: darken($color-brand, 15%);
 
-    &:before { background: $color-primary; }
-    &:after { color: $color-secondary; }
+    &::before { background: $color-primary; }
+    &::after { color: $color-secondary; }
   }
 }
 
 .link--primary {
   color: $color-primary;
 
-  &:before { background: $color-brand; }
+  &::before { background: $color-brand; }
 
   &:hover,
   &:active,
   &:focus {
     color: $color-brand;
 
-    &:before { background: $color-primary; }
-    &:after { color: $color-brand; }
+    &::before { background: $color-primary; }
+    &::after { color: $color-brand; }
   }
 }

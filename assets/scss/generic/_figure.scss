@@ -33,7 +33,7 @@ figcaption {
   padding-left: 30px;
   position: relative;
 
-  &:before {
+  &::before {
     width: 12px;
     height: 1px;
     position: absolute;

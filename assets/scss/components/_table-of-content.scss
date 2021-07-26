@@ -12,8 +12,8 @@
   margin-bottom: 20px;
   padding: 0 30px;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 
@@ -25,7 +25,7 @@
     color: $color-primary;
     text-decoration: none;
     border: none;
-    transition: color ease-in .1s;
+    transition: color ease-in 0.1s;
 
     &:hover,
     &:active,

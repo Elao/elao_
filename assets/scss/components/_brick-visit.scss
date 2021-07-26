@@ -36,11 +36,11 @@
     display: flex;
     flex-direction: column;
 
+    border: none;
+
     > span {
       margin: 0 0 15px;
     }
-
-    border: none;
 
     &:hover,
     &:active,

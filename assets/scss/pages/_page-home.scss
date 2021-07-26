@@ -27,7 +27,7 @@
     min-width: 600px;
     position: relative;
 
-    &:before {
+    &::before {
       position: absolute;
       bottom: 40px;
       right: -20px;
@@ -70,7 +70,7 @@
     }
 
     .section__image {
-      &:before {
+      &::before {
         right: unset;
         left: -20px;
       }
@@ -120,7 +120,7 @@
       width: 100%;
       min-width: unset;
 
-      &:before {
+      &::before {
         bottom: 30px;
         height: 70px;
         width: 170px;

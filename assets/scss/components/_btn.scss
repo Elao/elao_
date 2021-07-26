@@ -7,7 +7,7 @@
   text-decoration: none;
   text-align: center;
   border: none;
-  transition: background ease-in .1s;
+  transition: background ease-in 0.1s;
 
   > span {
     position: relative;
@@ -61,7 +61,7 @@
     position: absolute;
     bottom: -8px;
     right: -42px;
-    transition: transform .3s;
+    transition: transform 0.3s;
 
     .base,
     .tip {
@@ -71,14 +71,14 @@
 
     .base {
       transform: scaleX(0.5);
-      transition: transform .3s;
+      transition: transform 0.3s;
     }
 
     .tip {
       transform: rotate(-45deg) translate(-6px, 0);
       transform-origin: bottom;
       opacity: 0;
-      transition: transform .3s, opacity .3s;
+      transition: transform 0.3s, opacity 0.3s;
     }
   }
 

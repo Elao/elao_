@@ -13,8 +13,8 @@
   width: calc(25% - 30px);
   max-width: calc(25% - 30px);
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 
@@ -27,7 +27,7 @@
     line-height: 1.5;
     background: $color-dark;
     border: none;
-    transition: background ease-out .2s;
+    transition: background ease-out 0.2s;
 
     &:hover,
     &:active,
@@ -48,7 +48,7 @@
     }
 
     .name {
-      margin: 0 0 10px
+      margin: 0 0 10px;
     }
 
     .job {

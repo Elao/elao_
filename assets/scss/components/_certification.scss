@@ -9,8 +9,8 @@
   color: #fff;
   background: $color-brand;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     display: none;
   }
 

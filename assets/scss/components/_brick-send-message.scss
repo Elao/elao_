@@ -5,7 +5,7 @@
   min-height: 190px;
   color: $color-light;
   background: $color-dark;
-  transition: opacity ease .4s, transform ease .4s, background ease .2s !important;
+  transition: opacity ease 0.4s, transform ease 0.4s, background ease 0.2s !important;
 
   .title {
     margin: 40px 0;
@@ -30,7 +30,7 @@
     .letter__arrow {
       .base,
       .tip {
-        transition: transform ease-out .2s;
+        transition: transform ease-out 0.2s;
       }
     }
   }

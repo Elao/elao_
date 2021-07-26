@@ -19,7 +19,7 @@
     color: $color-primary;
 
     &:last-of-type {
-      &:after {
+      &::after {
         color: $color-brand;
         content: '_';
       }
@@ -101,8 +101,8 @@
   list-style: none;
 
   li {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       display: none;
     }
   }

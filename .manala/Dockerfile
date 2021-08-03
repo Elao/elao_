@@ -12,7 +12,7 @@ ARG GROUP_ID=1000
 ARG S6_OVERLAY_VERSION=2.2.0.3
 ARG GOSU_VERSION=1.13
 ARG GOMPLATE_VERSION=3.9.0
-ARG STARSHIP_VERSION=0.55.0
+ARG STARSHIP_VERSION=0.56.0
 
 # The 'container' environment variable tells systemd that it's running inside a
 # Docker container environment.
@@ -110,7 +110,7 @@ RUN \
 
 # Nodejs
 RUN \
-    printf "deb https://deb.nodesource.com/node_12.x ${DEBIAN} main" > /etc/apt/sources.list.d/node.list \
+    printf "deb https://deb.nodesource.com/node_16.x ${DEBIAN} main" > /etc/apt/sources.list.d/node.list \
     && curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key \
         | apt-key add - \
     && printf "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \

@@ -11,7 +11,7 @@ services:
     build:
       context: .
       target: system
-    image: elao:20210622090116
+    image: elao:20210803114530
     restart: always
     ports:
       - 8000:80

@@ -26,7 +26,7 @@ system:
         extensions:
           - gd
     nodejs:
-        version: 12
+        version: 16
     network:
         ports:
           - 8080:8080 # Webpack dev server

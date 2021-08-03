@@ -1,6 +1,7 @@
-# Lazy - Symfony
-
-* [Requirements](#requirements)
+---
+title: Lazy - Symfony
+tableOfContent: 3
+---
 
 ## Requirements
 

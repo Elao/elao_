@@ -21,7 +21,8 @@
         "fix": "eslint assets/js --ext .js,.json --fix"
     },
     "engines": {
-        "node": ">=12"
+        "node": ">=16",
+        "npm": ">=7"
     },
     "dependencies": {
         "@symfony/stimulus-bridge": "^2.1.0",

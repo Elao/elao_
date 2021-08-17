@@ -187,21 +187,21 @@
   }
 
   &[data-theme='brand'] {
-    --social-background: white;
+    --social-background: #fff;
     --social-foreground: #{$color-brand};
     --social-separator: #{$color-brand};
   }
 
   &[data-theme='brand-reverse'] {
     --social-background: #{$color-brand};
-    --social-foreground: white;
-    --social-separator: white;
+    --social-foreground: #fff;
+    --social-separator: #fff;
   }
 
   &[data-theme='light-red'] {
     --social-background: #{$color-tertiary};
-    --social-foreground: white;
-    --social-separator: white;
+    --social-foreground: #fff;
+    --social-separator: #fff;
   }
 
   &[data-theme='pale'] {
@@ -212,19 +212,19 @@
 
   &[data-theme='purple'] {
     --social-background: #{$color-primary};
-    --social-foreground: white;
+    --social-foreground: #fff;
     --social-separator: #{$color-brand};
   }
 
   &[data-theme='dark-blue'] {
     --social-background: #{$color-dark};
-    --social-foreground: white;
+    --social-foreground: #fff;
     --social-separator: #{$color-brand};
   }
 
   &[data-theme='light-blue'] {
     --social-background: #{$color-info};
-    --social-foreground: white;
+    --social-foreground: #fff;
     --social-separator: #{$color-light};
   }
 }

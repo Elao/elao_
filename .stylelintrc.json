@@ -4,7 +4,12 @@
     "order/properties-alphabetical-order": null,
     "scss/at-extend-no-missing-placeholder": [true, { "severity": "warning" }],
     "scss/at-extend-no-missing-placeholder": null,
+    "scss/selector-no-redundant-nesting-selector": false,
     "selector-class-pattern": "[\\w-_\\.\\[\\]']+",
-    "max-nesting-depth": 5
+    "max-nesting-depth": 5,
+    "selector-max-compound-selectors": 5,
+    "selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
+    "block-no-empty": null,
+    "declaration-property-value-disallowed-list": null
   }
 }

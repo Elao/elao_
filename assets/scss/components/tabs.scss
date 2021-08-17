@@ -24,11 +24,11 @@
       border-right: solid 3px $color-secondary;
       border-radius: 0 5px 0 0;
     }
+  }
 
-    &.active {
-      color: $color-primary;
-      background: $color-secondary;
-    }
+  .active {
+    color: $color-primary;
+    background: $color-secondary;
   }
 }
 
@@ -39,12 +39,12 @@
   .item {
     display: none;
 
-    &.active {
-      display: block;
-    }
-
     pre {
       margin: 0;
     }
+  }
+
+  .active {
+    display: block;
   }
 }

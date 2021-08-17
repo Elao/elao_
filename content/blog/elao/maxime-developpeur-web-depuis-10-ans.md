@@ -6,7 +6,7 @@ description: ''
 authors: ["cmozzati", "mcolin"] # author|authors (multiple acceptés)
 tags: [elao, team]
 thumbnail: images/posts/2021/itw-max.jpeg
-#tweetId: ~ # Ajouter l'id du Tweet après publication.
+tweetId: '1427645620635029520'
 ---
 
 ## Ton parcours

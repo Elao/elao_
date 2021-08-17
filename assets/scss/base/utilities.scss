@@ -7,11 +7,18 @@
   overflow: hidden;
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .no-scroll {
   overflow: hidden;
 }
 
-.hidden {
-  visibility: hidden;
-  opacity: 0;
+// Prevents hiding elements for animations if js is not enabled:
+.no-js [data-aos] {
+  opacity: 1;
+  transform: none;
+  pointer-events: unset;
 }

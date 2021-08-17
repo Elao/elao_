@@ -10,6 +10,7 @@
     "selector-max-compound-selectors": 5,
     "selector-no-qualifying-type": [true, {"ignore": ["attribute"]}],
     "block-no-empty": null,
-    "declaration-property-value-disallowed-list": null
+    "declaration-property-value-disallowed-list": null,
+    "scss/at-rule-no-unknown": [true, { "ignoreAtRules": ["keyframe"] }]
   }
 }

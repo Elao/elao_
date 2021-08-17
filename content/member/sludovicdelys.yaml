@@ -1,0 +1,30 @@
+active: true # make it true
+#🚲: true # velo-taffeur
+anonymousTribePicture: true # To protect your image privacy
+
+# Bio
+name: Sabrina Ludovic de Lys 
+pseudo: Sabrina Ludovic de Lys
+#gender: female
+#bio:
+position: Alternante en intégration
+integrationDate: 16-08-2021
+
+# Social
+website: ~
+twitter: ~
+github: sludovicdelys
+email: sabrina.ludovicdelys@elao.com
+avatar: images/members/avatars/path-to-avatar.jpg
+
+#certifications:
+    #- symfony
+    #- opquast
+
+emojis:
+    - ☕️
+    - 🎬
+    - 🧘🏽‍♀️
+    - 🪴
+    
+ 

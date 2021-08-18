@@ -45,7 +45,7 @@ class TeamController extends AbstractController
         $articles = $this->manager->getContents(
             Article::class,
             ['date' => false],
-            fn (Article $article): bool => $article->hasAuthor($member, 1)
+            fn (Article $article): bool => $article->hasAuthor($member)
         );
 
         $projects = $this->manager->getContents(

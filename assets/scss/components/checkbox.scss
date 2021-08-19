@@ -1,15 +1,36 @@
 .checkbox {
-   
+  padding-left: 35px;
 }
 
 .checkbox__input {
-    display: none;
+  display: none;
 }
 
 .checkbox__label {
-    &::before {
-        content: '';
-    }
+  position: relative;
+  font-size: 1em;
+  line-height: 1.3;
 
-    &::after {  }
+  &::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    left: -35px;
+    cursor: pointer;
+  }
+}
+
+.checkbox__input:checked + .checkbox__label {
+  &::after {
+    font-family: 'icomoon';
+    content: '\e918';
+    position: absolute;
+    left: -32px;
+    font-size: 16px;
+    top: 2px;
+    color: $color-dark;
+  }
 }

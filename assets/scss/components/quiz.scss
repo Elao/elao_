@@ -1,4 +1,20 @@
-.quiz {    
+.quiz {   
+    display: flex; 
+    flex-direction: column;
     background-color: $code-background;
     padding: 1em 2em; 
+}
+
+.quiz .btn {
+    margin-top: 2em;
+    align-self: flex-end;
+}
+
+.quiz h3 {
+    font-size: 1.2em;
+    
+}
+
+.quiz__details {
+    justify-content: space-around;
 }

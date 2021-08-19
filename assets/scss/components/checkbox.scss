@@ -1,0 +1,15 @@
+.checkbox {
+   
+}
+
+.checkbox__input {
+    display: none;
+}
+
+.checkbox__label {
+    &::before {
+        content: '';
+    }
+
+    &::after {  }
+}

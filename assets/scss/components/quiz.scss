@@ -5,16 +5,20 @@
     padding: 1em 2em; 
 }
 
-.quiz .btn {
-    margin-top: 2em;
-    align-self: flex-end;
-}
-
-.quiz h3 {
-    font-size: 1.2em;
-    
-}
-
 .quiz__details {
+    display: flex;
+    flex: wrap;
+    flex-direction: row-reverse;
     justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.quiz__details p {
+    color: #fff;
+    font-size: 18px; 
+    font-family: antikor bold;
+    padding: 15px 50px;
+    min-height: 67px;
+    background-color: $color-brand;
 }

@@ -1,24 +1,24 @@
 .quiz {   
-    display: flex; 
-    flex-direction: column;
-    background-color: $code-background;
-    padding: 1em 2em; 
+  display: flex; 
+  flex-direction: column;
+  background-color: $code-background;
+  padding: 1em 2em; 
 }
 
 .quiz__details {
-    display: flex;
-    flex: wrap;
-    flex-direction: row-reverse;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 2em;
-}
+  display: flex;
+  flex: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
 
-.quiz__details p {
+  p {
     color: #fff;
-    font-size: 18px; 
+    font-size: 1em; 
     font-family: antikor bold;
-    padding: 15px 50px;
-    min-height: 67px;
+    padding: 1em 3em;
+    min-height: 4em;
     background-color: $color-brand;
+  }
 }

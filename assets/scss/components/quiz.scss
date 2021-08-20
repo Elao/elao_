@@ -12,13 +12,28 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 2em;
+  
 
   p {
     color: #fff;
-    font-size: 1em; 
+    font-size: .95em; 
     font-family: antikor bold;
-    padding: 1em 3em;
-    min-height: 4em;
+    padding: 1em 2.5em;
     background-color: $color-brand;
+    
   }
+}
+
+.quiz__answer {
+  margin-top: .8em;
+  color: #fff;
+  padding: 0 .3em;
+}
+
+.correct {
+  background-color: $color-success;
+}
+
+.wrong {
+  background-color: $color-danger;
 }

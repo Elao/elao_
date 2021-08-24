@@ -23,6 +23,12 @@
                     <media:credit role="photographer" scheme="urn:ebu">{{ article.credits|join(', ') }}</media:credit>
                 {% endif %}
             </media:content>
+            {% for tag in article.tags %}
+                <category>{{ tag }}</category>
+            {% endfor %}
+            {% if article.tweetId %}
+                <comments>{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}</comments>
+            {% endif %}
         </item>
         {% endfor %}
     </channel>

@@ -1,26 +1,37 @@
 .quiz {   
   display: flex; 
   flex-direction: column;
-  background-color: $code-background;
-  padding: 1em 2em; 
+  background-color: $color-dark;
+  padding: 4em 2em; 
+
+  p{
+    color: #fff;
+    padding: 1em;
+  }
 }
 
-.quiz__details {
+.quiz__title {
+  h1 {
+    color: $color-light;
+  }
+}
+  
+
+.quiz__submit {
   display: flex;
   flex: wrap;
   flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 2em;
   
 
-  p {
+  button {
     color: #fff;
     font-size: .95em; 
     font-family: antikor bold;
     padding: 1em 2.5em;
-    background-color: $color-brand;
-    
+    background-color: $color-light;
   }
 }
 

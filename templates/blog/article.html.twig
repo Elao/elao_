@@ -224,86 +224,160 @@
     {% endif %}
 </div>
 {% endif %}
-
+<!--  Quiz Section Beginning -->
 <div class="quiz">
-    <h1 class="h3">Testez vos connaissances🤓</h1>
+    <!--  Quiz Header-->
+    <div class="quiz__title">
+        <h1 class="title">Testez vos </br> connaissances_</h1>
+    </div>
+    <!--  Quiz Content -->
     <div class="quiz__content">
-        <img src="https://www.fillmurray.com/640/360" alt="image de fill murray">
-        <h2 class="h4">1. Lorem, ipsum dolor sit amet consectetur adipisicing elit?</h2>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="ipsum">
-            <label class="checkbox__label" for="ipsum">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</label>
-        </div>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="lorem">
-            <label class="checkbox__label" for="lorem">Omnis quidem corrupti cupiditate facere enim, possimus fugit
-                saepe
-                numquam ab at, ullam deleniti placeat? Ipsam magnam, nam, labore neque harum veritatis.</label>
-        </div>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="quidem">
-            <label class="checkbox__label" for="quidem">Omnis quidem corrupti cupiditate facere enim, possimus fugit
-                saepe
-                numquam ab at, ullam deleniti placeat? Ipsam magnam, nam, labore neque harum veritatis.</label>
-        </div>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="corrupti">
-            <label class="checkbox__label" for="corrupti">Omnis quidem corrupti cupiditate facere enim, possimus fugit
-                saepe
-                numquam ab at, ullam deleniti placeat? Ipsam magnam, nam, labore neque harum veritatis.</label>
-        </div>
-        <div class="quiz__answer wrong">
-            <p>L'utilisateur n'a pas trouver la bonne réponse.</p>
-        </div>
-        <h2 class="h4">2. Lorem, ipsum dolor sit amet consectetur adipisicing elit?</h2>
-
-        <div class="radio">
-            <input class="radio__input" type="radio" name="drone" id="dolor">
-            <label class="radio__label" for="dolor">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</label>
-        </div>
-        <div class="radio">
-            <input class="radio__input" type="radio" name="drone" id="cupiditate">
-            <label class="radio__label" for="cupiditate">Omnis quidem corrupti cupiditate facere enim, possimus fugit
-                saepe numquam ab at, ullam deleniti placeat? Ipsam magnam, nam, labore neque harum veritatis.</label>
-        </div>
-        <div class="quiz__answer correct">
-            <p>L'utilisateur a trouvé la bonne réponse.</p>
-        </div>
-        <h2 class="h4">3. Lorem, ipsum dolor sit amet consectetur adipisicing elit?</h2>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="sit">
-            <label class="checkbox__label" for="sit"></label>
-            <div><code>
-            position: relative; 
-        </code></div>
-        </div>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="consectetur">
-            <label class="checkbox__label" for="consectetur"></label>
-            <div><code>
-            position: absolute; 
-        </code></div>
-        </div>
-        <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="nam">
-            <label class="checkbox__label" for="nam">
-                <div>
-                    <pre class="language-css"><code>.positioned {
-    position: absolute;
-    background: yellow;
-    top: 30px;
-    left: 30px;
-}</code></pre>
+        <!-- Question 1 -->
+        <div class="question">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content">
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="ipsum">
+                    <label class="checkbox__label" for="ipsum">Judging hermine</label>
                 </div>
-            </label>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="lorem">
+                    <label class="checkbox__label" for="lorem">Loading hermine</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="quidem">
+                    <label class="checkbox__label" for="quidem">Approving hermine</label>
+                </div>
+            </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="question">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content">
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="dolor">
+                    <label class="radio__label" for="dolor">Judging hermine
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="cupiditate">
+                    <label class="radio__label" for="cupiditate">Loading hermine
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="adipisicing">
+                    <label class="radio__label" for="adipisicing">Approving hermine
+                </div>
+            </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="question question--answered">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content question--success">
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="ipsom">
+                    <label class="checkbox__label" for="ipsom">Judging hermine</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="lorom">
+                    <label class="checkbox__label" for="lorom">Loading hermine</label>
+                </div>
+                <div class="checkbox">
+                    <input class="checkbox__input" type="checkbox" id="quidom">
+                    <label class="checkbox__label" for="quidom">Approving hermine</label>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- Question 4 -->
+        <div class="question question--answered">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content question--error">
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="mordor">
+                    <label class="radio__label" for="mordor">Judging hermine
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="cupidon">
+                    <label class="radio__label" for="cupidon">Loading hermine
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone" id="discipline">
+                    <label class="radio__label" for="discipline">Approving hermine
+                </div>
+            </div>
+            <!-- Question info  -->
+            <div class="question__info">
+                <span>La bonne réponse est :</span>
+                <span class="solution">Lorem ipsum dolor sit amet.</span>
+            </div>
+            <!-- Question info  -->
+            <div class="question__info">
+                <span>Les bonnes réponses sont :</span>
+                <span class="solution">Lorem ipsum dolor sit amet.</span>
+                <span class="solution">Lorem ipsum dolor sit amet.</span>
+            </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content">
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="sit">
+                    <label class="radio__label" for="sit"></label>
+                    <div><code>#judging-hermine</code></div>
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="consectetur">
+                    <label class="radio__label" for="consectetur"></label>
+                    <div><code>#loading-hermine</code></div>
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="nam">
+                    <label class="radio__label" for="nam">
+                        <div>
+                            <pre><code>#approving-hermine {
+        }</code></pre>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Question 6 -->
+        <div class="question question--answered">
+            <p>Quels sont les emojis préférés de Maxime Colin?</p>
+            <div class="question__content question--error">
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="sot">
+                    <label class="radio__label" for="sot"></label>
+                    <div><code>#judging-hermine</code></div>
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="consectetor">
+                    <label class="radio__label" for="consectetor"></label>
+                    <div><code>#loading-hermine</code></div>
+                </div>
+                <div class="radio">
+                    <input class="radio__input" type="radio" name="drone-code" id="nom">
+                    <label class="radio__label" for="nom">
+                        <div>
+                            <pre><code>#approving-hermine {
+        }</code></pre>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <!-- Question info  -->
+            <div class="question__info">
+                <span>La bonne réponse est :</span>
+                <div class="solution"><code>#loading-hermine</code></div>
+            </div>
+        </div>
+
+        <div class="quiz__submit">
+            <button class="btn">Valider les réponses_</button>
         </div>
     </div>
-    <div class="quiz__details">
-        <button class="btn btn--primary">Valider</button>
-        <p>Résultat: 2/3</p>
-    </div>
-
 </div>
+<!--  Quiz Section Ending -->
 {% endblock content %}
 
 {% block javascripts %}

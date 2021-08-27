@@ -4,7 +4,7 @@
   background-color: $color-dark;
   padding: 4em 2em; 
 
-  p{
+  p {
     color: #fff;
     padding: 1em;
   }
@@ -16,7 +16,6 @@
   }
 }
   
-
 .quiz__submit {
   display: flex;
   flex: wrap;
@@ -24,7 +23,6 @@
   justify-content: flex-start;
   align-items: center;
   margin-top: 2em;
-  
 
   button {
     color: #fff;
@@ -58,7 +56,6 @@
   flex-direction: column;
   font-family: 'faktum bold';
   color: #2ecccb;
-
 
   strong {
     line-height: 1;

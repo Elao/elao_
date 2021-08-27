@@ -29,7 +29,7 @@
   button {
     color: #fff;
     font-size: .95em; 
-    font-family: antikor bold;
+    font-family: 'antikor bold';
     padding: 1em 2.5em;
     background-color: $color-light;
   }
@@ -47,4 +47,30 @@
 
 .wrong {
   background-color: $color-danger;
+}
+
+.quiz__score {
+  display: flex;
+  flex: wrap;
+  width: 150px;
+  align-self: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'faktum bold';
+  color: #2ecccb;
+
+
+  strong {
+    line-height: 1;
+    font-size: .7em;
+  }
+  
+  .emoji {
+    font-size: 2.7em; 
+    margin: .3em; 
+  }
+
+  .percentage {
+    font-size: 3em;
+  }
 }

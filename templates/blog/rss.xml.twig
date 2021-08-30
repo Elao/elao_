@@ -7,6 +7,11 @@
         <link>{{ url('blog_rss') }}</link>
         <pubDate>{{ 'now'|date(constant('DATE_RFC2822')) }}</pubDate>
         <language>fr</language>
+        <image>
+            <url>{{ absolute_url(asset('apple-touch-icon.png')) }}</url>
+            <title>Elao</title>
+            <link>https://www.elao.com/</link>
+        </image>
         <atom:link href="{{ url('blog_rss') }}" rel="self" type="application/rss+xml"/>
         {% for article in articles %}
         <item>

@@ -61,6 +61,7 @@ class BlogController extends AbstractController
     public function rss(): Response
     {
         $articles = $this->manager->getContents(Article::class, ['date' => false]);
+        $articles = array_filter($articles, fn (Article $article) => $article->date > new \DateTime('-6 months'));
 
         $response = new Response();
         $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');

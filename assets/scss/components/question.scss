@@ -1,9 +1,5 @@
 .question {
-  margin-bottom: 2em; 
-
-  .question__content {
-    line-height: .5;
-  }
+  margin-bottom: 2em;
 
   p {
     margin-bottom: 1em; 
@@ -14,27 +10,22 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  color: #373737;
-  font-family: 'faktum medium';
+  color: $color-dark;
+  font-family: 'faktum regular';
   padding: 1em 2em;
   margin-top: 2em;
   font-size: 18px;
 
-  span {
-    padding: .3em;
-    font-family: faktum bold;
+  .title {
     color: $color-danger;
+    font-family: 'faktum bold';
   }
-
-  .solution {
-    font-family: faktum regular;
-    color: unset;
-  }
-
+  
   code {
     font-size: 15px;
-    padding: 0 .3em .25em;  
-    border-radius: 8px; 
+    padding: .2em;
+    margin: 0 0 .3em;
+    border-radius: 8px;
   }
 }
 
@@ -46,14 +37,12 @@
 
 .question--success {
   .question__content {
-    border-left: solid 4px #00cc99;
-    
+    border-left: solid 4px $color-success;
   }  
 }
 
 .question--error {
   .question__content {
     border-left: solid 4px $color-danger;
-    
   }  
 }

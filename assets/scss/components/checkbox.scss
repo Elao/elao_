@@ -1,6 +1,6 @@
 .checkbox {
-  margin-top: .5em;
-  padding-left: 2.1em;
+  margin-bottom: .9em;
+  padding-left: 1.8em;
   color: #fff;
 
   code {
@@ -14,13 +14,6 @@
     background-color: transparent !important;
     padding: 5px;
   }
-
-  div {
-    padding: .5em; 
-    display: flex;
-    background-color: $color-dark ;
-    margin: .3em;
-  } 
 }
 
 .checkbox__input {

@@ -1,20 +1,19 @@
 .radio {
-  margin-top: .5em;
-  padding-left: 2.1em;
+  margin-bottom: .9em;
+  padding-left: 1.9em;
   color: #fff;
 
   code {
     font-size: 15px;
     background-color: #fff; 
     color: $color-dark;
-    padding: 0 .3em .25em;  
+    padding: .2em;
     border-radius: 8px; 
   }
 
   pre {
     margin: 0;
-    height: 90px;
-    width: 1059px;
+    width: 100%;
     background-color: #fff !important;
     padding: .5em; 
     border-radius: 10px; 
@@ -40,7 +39,6 @@
     content: '';
     height: 18px;
     width: 18px;
-    /* border: 2px solid #fff; */
     border-radius: 50%;
     position: absolute;
     top: 1px;

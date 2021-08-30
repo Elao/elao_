@@ -10,380 +10,379 @@
 {% block twitter_image absolute_url(asset(article.thumbnail|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
-<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{ path('blog') }}">
-            <span itemprop="name">Blog</span>
-        </a>
-        <meta itemprop="position" content="1" />
-    </li>
-    <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="#">
-            <span itemprop="name">{{ article.title }}</span>
-        </a>
-        <meta itemprop="position" content="2" />
-    </li>
-</ol>
+	<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+		<li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="{{ path('blog') }}">
+				<span itemprop="name">Blog</span>
+			</a>
+			<meta itemprop="position" content="1" />
+		</li>
+		<li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+			<a itemprop="item" href="#">
+				<span itemprop="name">{{ article.title }}</span>
+			</a>
+			<meta itemprop="position" content="2" />
+		</li>
+	</ol>
 
-<div class="article-banner">
-    <div class="article-banner__cover"
-        style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner') }}"
-        data-aos="fade-down"></div>
+	<div class="article-banner">
+		<div class="article-banner__cover"
+			style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner') }}"
+			data-aos="fade-down"></div>
 
-    <div class="article-info" data-aos="zoom-in">
-        {% set authors = article.authors|length > 5 ? [] : article.authors %}
-        {% block author_header %}
-        <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
-            <div class="article-author__image">
-                {% for author in authors %}
-                <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
-                    <img {{ macros.imageSrcset(author.avatar(), 'author_avatar' ) }} />
-                </a>
-                {% else %}
-                <img {{ macros.imageSrcset('images/members/avatars/elao-team.jpg', 'author_avatar' ) }} />
-                {% endfor %}
-            </div>
-            <span class="article-author__info">
-                Écrit par
-                {% for author in authors %}
-                <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
-                    <strong>{{ author.name }}</strong>
-                </a>
-                {% else %}
-                <strong>La team élao</strong>
-                {% endfor %}
-            </span>
-        </div>
-        {% endblock %}
-        <div class="article-info__date">
-            <span>Publication <strong>{{ article.date|format_date('long') }}</strong></span>
-            {# Do only display the last modified date if not null and different day than the publication date #}
-            {% if article.lastModified and article.lastModified > article.date|date_modify('+1 day 00:00') %}
-            <span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
-            {% endif %}
-        </div>
-    </div>
+		<div class="article-info" data-aos="zoom-in">
+			{% set authors = article.authors|length > 5 ? [] : article.authors %}
+			{% block author_header %}
+			<div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
+				<div class="article-author__image">
+					{% for author in authors %}
+					<a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
+						<img {{ macros.imageSrcset(author.avatar(), 'author_avatar' ) }} />
+					</a>
+					{% else %}
+					<img {{ macros.imageSrcset('images/members/avatars/elao-team.jpg', 'author_avatar' ) }} />
+					{% endfor %}
+				</div>
+				<span class="article-author__info">
+					Écrit par
+					{% for author in authors %}
+					<a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
+						<strong>{{ author.name }}</strong>
+					</a>
+					{% else %}
+					<strong>La team élao</strong>
+					{% endfor %}
+				</span>
+			</div>
+			{% endblock %}
+			<div class="article-info__date">
+				<span>Publication <strong>{{ article.date|format_date('long') }}</strong></span>
+				{# Do only display the last modified date if not null and different day than the publication date #}
+				{% if article.lastModified and article.lastModified > article.date|date_modify('+1 day 00:00') %}
+				<span>Modification <strong>{{ article.lastModified|format_date('long') }}</strong></span>
+				{% endif %}
+			</div>
+		</div>
 
-    <div class="article-header" data-aos="zoom-in-up">
-        <h1>{{ article.title }}</h1>
-        <p>{{ article.description }}</p>
-        <ul class="article-tag-list">
-            {% for tag in article.tags %}
-            <li class="article-tag-list__item">
-                <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">#{{ tag|u.camel.title }}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+		<div class="article-header" data-aos="zoom-in-up">
+			<h1>{{ article.title }}</h1>
+			<p>{{ article.description }}</p>
+			<ul class="article-tag-list">
+				{% for tag in article.tags %}
+				<li class="article-tag-list__item">
+					<a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">#{{ tag|u.camel.title }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
 
-{% if article.tableOfContent is not empty %}
-<ol class="table-of-content" data-aos="fade-up">
-    {% for headline in article.tableOfContent %}
-    <li class="table-of-content__item">
-        <a href="#{{ headline.id }}">{{ headline.content }}</a>
+	{% if article.tableOfContent is not empty %}
+		<ol class="table-of-content" data-aos="fade-up">
+			{% for headline in article.tableOfContent %}
+			<li class="table-of-content__item">
+				<a href="#{{ headline.id }}">{{ headline.content }}</a>
 
-        {% if headline.children is not empty %}
-        <ol class="table-of-content__sub-level">
-            {% for child in headline.children %}
-            <li>
-                <a href="#{{ child.id }}">{{ child.content }}</a>
-            </li>
-            {% endfor %}
-        </ol>
-        {% endif %}
-    </li>
-    {% endfor %}
-</ol>
-{% endif %}
+				{% if headline.children is not empty %}
+				<ol class="table-of-content__sub-level">
+					{% for child in headline.children %}
+					<li>
+						<a href="#{{ child.id }}">{{ child.content }}</a>
+					</li>
+					{% endfor %}
+				</ol>
+				{% endif %}
+			</li>
+			{% endfor %}
+		</ol>
+	{% endif %}
 
-<div class="article-content">
-    <main class="article-content__main">
+	<div class="article-content">
+		<main class="article-content__main">
 
-        {% if article.outdated %}
-        <div class="alert alert--info">
-            <i class="icon icon--info" aria-hidden="true"></i>
-            <div>
-                {% if article.outdated is same as true %}
-                <p>
-                    Attention, cet article date un peu, il est peut-être obsolète, gardez cela en tête lors de votre
-                    lecture !
-                </p>
-                {% else %}
-                {{ article.outdated|nl2br|markdownify|raw }}
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
+			{% if article.outdated %}
+			<div class="alert alert--info">
+				<i class="icon icon--info" aria-hidden="true"></i>
+				<div>
+					{% if article.outdated is same as true %}
+					<p>
+						Attention, cet article date un peu, il est peut-être obsolète, gardez cela en tête lors de votre
+						lecture !
+					</p>
+					{% else %}
+					{{ article.outdated|nl2br|markdownify|raw }}
+					{% endif %}
+				</div>
+			</div>
+			{% endif %}
 
-        {% if not article.published %}
-        <div class="alert alert--warning">
-            <i class="icon icon--danger" aria-hidden="true"></i>
-            <div>
-                <p>
-                    Cet article n'est pas encore publié. Cet aperçu est disponible uniquement dans cet environnement
-                    mais n'apparaîtra en production qu'à partir du {{ article.date|format_date('long') }}
-                </p>
-            </div>
-        </div>
-        {% endif %}
+			{% if not article.published %}
+			<div class="alert alert--warning">
+				<i class="icon icon--danger" aria-hidden="true"></i>
+				<div>
+					<p>
+						Cet article n'est pas encore publié. Cet aperçu est disponible uniquement dans cet environnement
+						mais n'apparaîtra en production qu'à partir du {{ article.date|format_date('long') }}
+					</p>
+				</div>
+			</div>
+			{% endif %}
 
-        {{ article.content|raw }}
-        {% block credits %}
-        {% if article.credits %}
-        <div class="article-credits">
-            Crédits: photo de couverture par
-            {% if article.credits.url %}
-            <a href="{{ article.credits.url }}">
-                {{ article.credits.name }}
-            </a>
-            {% else %}
-            {{ article.credits.name }}
-            {% endif %}
-        </div>
-        {% endif %}
-        {% endblock %}
-    </main>
-    <aside class="article-content__aside">
-        {% if article.tweetId is not empty %}
-        <a href="{{ external_url('twitter_like', { tweet_id: article.tweetId }) }}" class="kudo" target="_blank">
-            <span class="kudo__button" aria-hidden="true"></span>
-            <span class="screen-reader">Cet article m’a été utile</span>
-            <span class="kudo__label" aria-hidden="true">Kudos</span>
-        </a>
-        {% endif %}
-    </aside>
-</div>
+			{{ article.content|raw }}
+			{% block credits %}
+			{% if article.credits %}
+			<div class="article-credits">
+				Crédits: photo de couverture par
+				{% if article.credits.url %}
+				<a href="{{ article.credits.url }}">
+					{{ article.credits.name }}
+				</a>
+				{% else %}
+				{{ article.credits.name }}
+				{% endif %}
+			</div>
+			{% endif %}
+			{% endblock %}
+		</main>
+		<aside class="article-content__aside">
+			{% if article.tweetId is not empty %}
+			<a href="{{ external_url('twitter_like', { tweet_id: article.tweetId }) }}" class="kudo" target="_blank">
+				<span class="kudo__button" aria-hidden="true"></span>
+				<span class="screen-reader">Cet article m’a été utile</span>
+				<span class="kudo__label" aria-hidden="true">Kudos</span>
+			</a>
+			{% endif %}
+		</aside>
+	</div>
 
-<div class="article-footer" data-aos="fade-in">
-    {% block author_footer %}
-    {% for author in article.authors %}
-    <div class="article-author">
-        <div class="article-author__image">
-            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
-                <img {{ macros.imageSrcset(author.avatar(), 'author_avatar' ) }} />
-            </a>
-        </div>
-        <span class="article-author__info">
-            {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
-            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
-                <strong>{{ author.name }}</strong>
-            </a>
-        </span>
+	<div class="article-footer" data-aos="fade-in">
+		{% block author_footer %}
+		{% for author in article.authors %}
+		<div class="article-author">
+			<div class="article-author__image">
+				<a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
+					<img {{ macros.imageSrcset(author.avatar(), 'author_avatar' ) }} />
+				</a>
+			</div>
+			<span class="article-author__info">
+				{{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
+				<a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}" {% endif -%}>
+					<strong>{{ author.name }}</strong>
+				</a>
+			</span>
 
-        <div class="article-author__social">
-            {% if author.twitter %}
-            <a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
-                <i class="icon icon--twitter" aria-hidden="true"></i>
-                <span class="screen-reader">Compte twitter de {{ author.name }}</span>
-            </a>
-            {% endif %}
-            {% if author.github %}
-            <a href="https://github.com/{{ author.github }} " class="social social--small">
-                <i class="icon icon--github" aria-hidden="true"></i>
-                <span class="screen-reader">Compte github de {{ author.name }}</span>
-            </a>
-            {% endif %}
-            {% if author.website %}
-            <a href="{{ author.website }}" class="social social--small">
-                <i class="icon icon--website" aria-hidden="true"></i>
-                <span class="screen-reader">Site personnel de {{ author.name }}</span>
-            </a>
-            {% endif %}
-        </div>
-    </div>
-    {% endfor %}
-    {% endblock %}
-</div>
+			<div class="article-author__social">
+				{% if author.twitter %}
+				<a href="https://twitter.com/{{ author.twitter }}" class="social social--small">
+					<i class="icon icon--twitter" aria-hidden="true"></i>
+					<span class="screen-reader">Compte twitter de {{ author.name }}</span>
+				</a>
+				{% endif %}
+				{% if author.github %}
+				<a href="https://github.com/{{ author.github }} " class="social social--small">
+					<i class="icon icon--github" aria-hidden="true"></i>
+					<span class="screen-reader">Compte github de {{ author.name }}</span>
+				</a>
+				{% endif %}
+				{% if author.website %}
+				<a href="{{ author.website }}" class="social social--small">
+					<i class="icon icon--website" aria-hidden="true"></i>
+					<span class="screen-reader">Site personnel de {{ author.name }}</span>
+				</a>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+		{% endblock %}
+	</div>
 
-{% if article.tweetId is not empty or article.githubEditLink is not empty %}
-<div class="bricks">
-    {% if article.tweetId is not empty %}
-    <div class="brick-comment">
-        <p class="title">Commenter</p>
-        <p>
-            Des commentaires ?
-            <a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank"
-                class="animated-link animated-link--light">
-                Poursuivons la discussion sur twitter !
-            </a>
-        </p>
-        <div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
-    </div>
-    {% endif %}
+	{% if article.tweetId is not empty or article.githubEditLink is not empty %}
+		<div class="bricks">
+			{% if article.tweetId is not empty %}
+			<div class="brick-comment">
+				<p class="title">Commenter</p>
+				<p>
+					Des commentaires ?
+					<a href="{{ external_url('twitter_elao_tweet', { tweetId: article.tweetId }) }}" target="_blank"
+						class="animated-link animated-link--light">
+						Poursuivons la discussion sur twitter !
+					</a>
+				</p>
+				<div id="tweet-container" class="tweet-container" data-tweet-id="{{ article.tweetId }}"></div>
+			</div>
+			{% endif %}
 
-    {% if article.githubEditLink is not empty %}
-    <div class="brick-contribute">
-        <p>
-            Une typo ?
-            <a href="{{ article.githubEditLink }}" target="_blank" class="animated-link animated-link--light">
-                Modifier cet article sur Github
-            </a>
-        </p>
-    </div>
-    {% endif %}
-</div>
-{% endif %}
-<!--  Quiz Section Beginning -->
-<div class="quiz">
-    <!--  Quiz Header-->
-    <div class="quiz__title">
-        <h1 class="title">Testez vos </br> connaissances_</h1>
-    </div>
-    <!--  Quiz Content -->
-    <div class="quiz__content">
-        <!-- Question 1 -->
-        <div class="question">
-            <p>Quels sont les emojis préférés de Maxime Colin?</p>
-            <div class="question__content">
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="ipsum">
-                    <label class="checkbox__label" for="ipsum">Judging hermine</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="lorem">
-                    <label class="checkbox__label" for="lorem">Loading hermine</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="quidem">
-                    <label class="checkbox__label" for="quidem">Approving hermine</label>
-                </div>
-            </div>
-        </div>
-        <!-- Question 2 -->
-        <div class="question">
-            <p>Quels sont les emojis préférés de Maxime Colin?</p>
-            <div class="question__content">
-                <div class="radio">
-                    <input class="radio__input" type="radio" name="drone" id="dolor">
-                    <label class="radio__label" for="dolor">Judging hermine
-                </div>
-                <div class="radio">
-                    <input class="radio__input" type="radio" name="drone" id="cupiditate">
-                    <label class="radio__label" for="cupiditate">Loading hermine
-                </div>
-                <div class="radio">
-                    <input class="radio__input" type="radio" name="drone" id="adipisicing">
-                    <label class="radio__label" for="adipisicing">Approving hermine
-                </div>
-            </div>
-        </div>
-        <!-- Question 3 -->
-        <div class="question question--answered">
-            <p>Quels sont les emojis préférés de Maxime Colin?</p>
-            <div class="question__content question--success">
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="ipsom">
-                    <label class="checkbox__label" for="ipsom">Judging hermine</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="lorom">
-                    <label class="checkbox__label" for="lorom">Loading hermine</label>
-                </div>
-                <div class="checkbox">
-                    <input class="checkbox__input" type="checkbox" id="quidom">
-                    <label class="checkbox__label" for="quidom">Approving hermine</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Question 4 -->
-    <div class="question question--answered">
-        <p>Quels sont les emojis préférés de Maxime Colin?</p>
-        <div class="question__content question--error">
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone" id="mordor">
-                <label class="radio__label" for="mordor">Judging hermine
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone" id="cupidon">
-                <label class="radio__label" for="cupidon">Loading hermine
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone" id="discipline">
-                <label class="radio__label" for="discipline">Approving hermine
-            </div>
-        </div>
-        <!-- Question info  -->
-        <div class="question__info">
-            <span>La bonne réponse est :</span>
-            <span class="solution">Lorem ipsum dolor sit amet.</span>
-        </div>
-        <!-- Question info  -->
-        <div class="question__info">
-            <span>Les bonnes réponses sont :</span>
-            <span class="solution">Lorem ipsum dolor sit amet.</span>
-            <span class="solution">Lorem ipsum dolor sit amet.</span>
-        </div>
-    </div>
-    <!-- Question 5 -->
-    <div class="question">
-        <p>Quels sont les emojis préférés de Maxime Colin?</p>
-        <div class="question__content">
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="sit">
-                <label class="radio__label" for="sit"></label>
-                <div><code>#judging-hermine</code></div>
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="consectetur">
-                <label class="radio__label" for="consectetur"></label>
-                <div><code>#loading-hermine</code></div>
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="nam">
-                <label class="radio__label" for="nam">
-                    <div>
-                        <pre><code>#approving-hermine {
-        }</code></pre>
-                    </div>
-                </label>
-            </div>
-        </div>
-    </div>
-    <!-- Question 6 -->
-    <div class="question question--answered">
-        <p>Quels sont les emojis préférés de Maxime Colin?</p>
-        <div class="question__content question--error">
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="sot">
-                <label class="radio__label" for="sot"></label>
-                <div><code>#judging-hermine</code></div>
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="consectetor">
-                <label class="radio__label" for="consectetor"></label>
-                <div><code>#loading-hermine</code></div>
-            </div>
-            <div class="radio">
-                <input class="radio__input" type="radio" name="drone-code" id="nom">
-                <label class="radio__label" for="nom">
-                    <div>
-                        <pre><code>#approving-hermine {
-        }</code></pre>
-                    </div>
-                </label>
-            </div>
-        </div>
-        <!-- Question info  -->
-        <div class="question__info">
-            <span>La bonne réponse est :</span>
-            <div class="solution"><code>#loading-hermine</code></div>
-        </div>
-    </div>
-    <!-- Submit button -->
-    <div class="quiz__submit">
-        <button class="btn">Valider les réponses_</button>
-    </div>
-    <!-- Quiz score -->
-    <div class="quiz__score">
-        <strong class="emoji">👏</strong>
-        <strong class="percentage">80%</strong>
-        <strong>de bonnes réponses</strong>
-    </div>
-</div>
-</div>
-<!--  Quiz Section Ending -->
+			{% if article.githubEditLink is not empty %}
+			<div class="brick-contribute">
+				<p>
+					Une typo ?
+					<a href="{{ article.githubEditLink }}" target="_blank" class="animated-link animated-link--light">
+						Modifier cet article sur Github
+					</a>
+				</p>
+			</div>
+			{% endif %}
+		</div>
+	{% endif %}
+
+	<div class="quiz">
+		<p class="quiz__title">
+			Testez vos
+			<span>connaissances</span>
+		</p>
+		<div class="quiz__content">
+			<!-- Checkbox before validation-->
+			<div class="question">
+				<p>Quels sont les emojis préférés de Maxime Colin?</p>
+				<div class="question__content">
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="ipsum">
+						<label class="checkbox__label" for="ipsum">Judging hermine</label>
+					</div>
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="lorem">
+						<label class="checkbox__label" for="lorem">Loading hermine</label>
+					</div>
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="quidem">
+						<label class="checkbox__label" for="quidem">Approving hermine</label>
+					</div>
+				</div>
+			</div>
+			<!-- Radio buttons before validation-->
+			<div class="question">
+				<p>Quels sont les emojis préférés de Maxime Colin?</p>
+				<div class="question__content">
+					<div class="radio">
+						<input class="radio__input" type="radio" name="drone" id="dolor">
+						<label class="radio__label" for="dolor">Judging hermine
+					</div>
+					<div class="radio">
+						<input class="radio__input" type="radio" name="drone" id="cupiditate">
+						<label class="radio__label" for="cupiditate">Loading hermine
+					</div>
+					<div class="radio">
+						<input class="radio__input" type="radio" name="drone" id="adipisicing">
+						<label class="radio__label" for="adipisicing">Approving hermine
+					</div>
+				</div>
+			</div>
+			<!-- Checkbox after validation and correct answer -->
+			<div class="question question--answered question--success">
+				<p>Quels sont les emojis préférés de Maxime Colin?</p>
+				<div class="question__content">
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="ipsom">
+						<label class="checkbox__label" for="ipsom">Judging hermine</label>
+					</div>
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="lorom">
+						<label class="checkbox__label" for="lorom">Loading hermine</label>
+					</div>
+					<div class="checkbox">
+						<input class="checkbox__input" type="checkbox" id="quidom">
+						<label class="checkbox__label" for="quidom">Approving hermine</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Radio buttons after validation and wrong answer -->
+		<div class="question question--answered question--error">
+			<p>Quels sont les emojis préférés de Maxime Colin?</p>
+			<div class="question__content">
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone" id="mordor">
+					<label class="radio__label" for="mordor">Judging hermine</label>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone" id="cupidon">
+					<label class="radio__label" for="cupidon">Loading hermine</label>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone" id="discipline">
+					<label class="radio__label" for="discipline">Approving hermine</label>
+				</div>
+			</div>
+			<!-- One solution  -->
+			<div class="question__info">
+				<span>La bonne réponse est :</span>
+				<span class="solution">Lorem ipsum dolor sit amet.</span>
+			</div>
+			<!-- Two solutions  -->
+			<div class="question__info">
+				<span>Les bonnes réponses sont :</span>
+				<span class="solution">Lorem ipsum dolor sit amet.</span>
+				<span class="solution">Lorem ipsum dolor sit amet.</span>
+			</div>
+		</div>
+		<!-- Radio buttons with code  -->
+		<div class="question">
+			<p>Quels sont les emojis préférés de Maxime Colin?</p>
+			<div class="question__content">
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="sit">
+					<label class="radio__label" for="sit"></label>
+					<div><code>#judging-hermine</code></div>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="consectetur">
+					<label class="radio__label" for="consectetur"></label>
+					<div><code>#loading-hermine</code></div>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="nam">
+					<label class="radio__label" for="nam">
+						<div>
+							<pre><code>#approving-hermine {
+}</code></pre>
+						</div>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- Radio buttons with code, after validation and wrong answer -->
+		<div class="question question--answered question--error">
+			<p>Quels sont les emojis préférés de Maxime Colin?</p>
+			<div class="question__content">
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="sot">
+					<label class="radio__label" for="sot"></label>
+					<div><code>#judging-hermine</code></div>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="consectetor">
+					<label class="radio__label" for="consectetor"></label>
+					<div><code>#loading-hermine</code></div>
+				</div>
+				<div class="radio">
+					<input class="radio__input" type="radio" name="drone-code" id="nom">
+					<label class="radio__label" for="nom">
+						<div>
+							<pre><code>#approving-hermine {
+	color: blue; 
+	padding: 10em;
+}</code></pre>
+						</div>
+					</label>
+				</div>
+			</div>
+			<!-- Solution to code question with radio buttons  -->
+			<div class="question__info">
+				<span>La bonne réponse est :</span>
+				<div class="solution"><code>#loading-hermine</code></div>
+			</div>
+		</div>
+		<!-- Submit button -->
+		<div class="quiz__submit">
+			<button class="btn">Valider les réponses_</button>
+		</div>
+		<!-- Quiz score -->
+		<div class="quiz__score">
+			<strong class="emoji">👏</strong>
+			<strong class="percentage">80%</strong>
+			<strong>de bonnes réponses</strong>
+		</div>
+	</div>
 {% endblock content %}
 
 {% block javascripts %}
@@ -392,19 +391,19 @@
 {% if article.tweetId is not empty %}
 <script src="https://platform.twitter.com/widgets.js"></script>
 <script>
-    window.onload = (function () {
-        var tweet = document.getElementById('tweet-container');
-        // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
-        twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
-            conversation: 'none',
-            cards: 'hidden',
-            theme: 'light',
-            lang: 'fr',
-            align: 'center',
-            width: 550, // default
-            dnt: true,
-        })
-    });
+	window.onload = (function () {
+		var tweet = document.getElementById('tweet-container');
+		// https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+		twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+			conversation: 'none',
+			cards: 'hidden',
+			theme: 'light',
+			lang: 'fr',
+			align: 'center',
+			width: 550, // default
+			dnt: true,
+		})
+	});
 </script>
 {% endif %}
 {% endblock %}

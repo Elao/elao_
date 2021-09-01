@@ -228,7 +228,7 @@
 	<div class="quiz">
 		<p class="quiz__title">
 			Testez vos
-			<span>connaissances_</span>
+			<span>connaissances</span>
 		</p>
 		<div class="quiz__content">
 			<!-- Checkbox before validation-->
@@ -332,10 +332,9 @@
 					</label>
 				</div>
 				<div class="radio">
-					<input class="radio__input" type="radio" name="drone-code" id="nam">
-					<label class="radio__label" for="nam">
-							<pre><code>#approving-hermine {
-}</code></pre>
+					<input class="radio__input" type="radio" name="drone-code" id="consectetur">
+					<label class="radio__label" for="consectetur">
+						<code>#approving-hermine {}</code>
 					</label>
 				</div>
 			</div>
@@ -360,7 +359,7 @@
 					<input class="radio__input" type="radio" name="drone-code" id="nom">
 					<label class="radio__label" for="nom">
 							<pre><code>#approving-hermine {
-	color: blue; 
+	color: blue;
 	padding: 10em;
 }</code></pre>
 					</label>
@@ -374,13 +373,56 @@
 		</div>
 		<!-- Submit button -->
 		<div class="quiz__submit">
-			<button class="btn">Valider les réponses_</button>
+			<button class="btn btn--light btn--animated">
+                <span>
+                    Valider les réponses
+                    {% include 'partials/svg-arrow.html.twig' %}
+                </span>
+            </button>
 		</div>
-		<!-- Quiz score -->
-		<div class="quiz__score">
-			<strong class="emoji">👏</strong>
-			<strong class="percentage">80%</strong>
-			<strong>de bonnes réponses</strong>
+		<!-- Quiz score 80 to 100% success -->
+		<div class="quiz__score quiz__score--excellent">
+			<div>
+				<p class="title">
+					<span aria-hidden="true">👏</span>
+					Bravo !
+				</p>
+				<p class="detail">
+					<span>Vous avez obtenu <strong>92%</strong></span>
+					<span>de réponses correctes</span>
+				</p>
+			</div>
+			<img src="{{ asset('build/images/quiz/congrats.gif') }}" alt="">
+		</div>
+
+		<!-- Quiz score 50 to 80% success -->
+		<div class="quiz__score quiz__score--average">
+			<div>
+				<p class="title">
+					<span aria-hidden="true">💪</span>
+					Pas mal
+				</p>
+				<p class="detail">
+					<span>Vous avez obtenu <strong>52%</strong></span>
+					<span>de réponses correctes</span>
+				</p>
+			</div>
+			<img src="{{ asset('build/images/quiz/well-done.gif') }}" alt="">
+		</div>
+
+		<!-- Quiz score < 50% success -->
+		<div class="quiz__score quiz__score--improvable">
+			<div>
+				<p class="title">
+					<span aria-hidden="true">😥</span>
+					Oh no !
+				</p>
+				<p class="detail">
+					<span>Vous avez obtenu <strong>2%</strong></span>
+					<span>de réponses correctes</span>
+				</p>
+			</div>
+			<img src="{{ asset('build/images/quiz/oh-no.gif') }}" alt="">
 		</div>
 	</div>
 {% endblock content %}

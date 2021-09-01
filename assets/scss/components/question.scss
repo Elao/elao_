@@ -2,7 +2,7 @@
   margin-bottom: 2em;
 
   p {
-    margin-bottom: 1em; 
+    margin-bottom: 1em;
   }
 }
 
@@ -17,15 +17,16 @@
   font-size: 18px;
 
   .title {
+    margin: 0 0 7px;
     color: $color-danger;
     font-family: 'faktum bold';
   }
-  
+
   code {
-    font-size: 15px;
-    padding: .2em;
     margin: 0 0 .3em;
-    border-radius: 8px;
+    padding: .2em;
+    font-size: 15px;
+    border-radius: 5px;
   }
 }
 
@@ -38,11 +39,18 @@
 .question--success {
   .question__content {
     border-left: solid 4px $color-success;
-  }  
+  }
 }
 
 .question--error {
   .question__content {
     border-left: solid 4px $color-danger;
-  }  
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .question__info {
+    padding: .6em .6em 1em;
+    font-size: 16px;
+  }
 }

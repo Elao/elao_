@@ -45,7 +45,9 @@ En revanche il est vrai que lorsque l'on s'éloigne un peu de la scène, il est 
 L'ambiance n'a guère changé. On ressent en effet une bienveillance générale de l'ensemble des participants et une vraie volonté de partage tout en gardant cet aspect de défiance dès que l'on rentre un peu trop dans le vif du sujet.
 On sent également la professionalisation du métier et l'intérêt, plus qu'identifié, des différents acteurs du marché. Les différents exposants étant clairement à la recherche de profils à recruter et ne s'en cachant pas.
 
-{{ < instagram BVu5JDdlCKi > }}
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BVu5JDdlCKi" data-instgrm-version="13">
+    <a href="https://www.instagram.com/p/BVu5JDdlCKi/"></a>
+</blockquote>
 
 # Les conférences
 
@@ -117,7 +119,7 @@ L'exploitation présentée permettant de désactiver complètement les filtres d
 Beaucoup de jolies références parmis les sponsors / exposants de cette édition, on y retrouve des noms bien connus parmi lesquels Qwant, Deloitte, Orange - Cyberdefense, OVH, Thales et bien d'autres. Mais ce qui est frappant c'est la présence (en force et sans jeu de mot), du ministère de la défense ([plus de 3000 postes d'ouverts](http://www.01net.com/actualites/hackers-engagez-vous-l-armee-francaise-recrute-descombattants-numeriques-1195388.html)) avec des polos estampillés « Combattants numériques » et de l'ANSSI, preuve s'il en est que le gouvernement prend de plus en plus au sérieux la problématique de la cyber-sécurité.
 A noter également la visite du secrétaire d'État au numérique Mounir Mahjoubi.
 
-{{ <tweet 878662496160272384> }}
+<div class="tweet-container" data-tweet-id="878662496160272384"></div>
 
 Énormément d'efforts sont consentis dans le recrutement chacun essayant de « draguer » au mieux et ce, sur beaucoup de domaines différents. Autant vous dire que l'on est pas en reste en termes de goodies ;)
 
@@ -152,7 +154,9 @@ Et enfin l'électrolab qui proposait également un stand en salle de conférence
 
 Divers et variés les workshops permettent de s'initier tranquillement (de 20h à 6h) à tout un tas de choses. De la création de son propre réseau Internet avec l'Electrolab à l'explication, pour les amateurs de drones, du pourquoi des « no fly zones » en passant par le crochetage de serrures.
 
-{{< instagram BHwgB9MjC5v >}}
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BHwgB9MjC5v" data-instgrm-version="13">
+    <a href="https://www.instagram.com/p/BHwgB9MjC5v/"></a>
+</blockquote>
 
 # La WarGame
 
@@ -174,7 +178,9 @@ Le principe du CTF est d'opposer les deux équipes qualifiées pour la finale, c
 
 Quant au « Spying Challenge » il fait rentrer en jeu la partie sociale du hacking puisque dans ce cas de figure les différents participants se voient confier un dossier et ont pour mission de récupérer un maximum d'information sur une « cible » désignée.
 
-{{< instagram BVugEXzFNcq >}}
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/BVugEXzFNcq" data-instgrm-version="13">
+    <a href="https://www.instagram.com/p/BVugEXzFNcq/"></a>
+</blockquote>
 
 # Easter Egg
 

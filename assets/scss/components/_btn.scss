@@ -55,6 +55,11 @@
   }
 }
 
+.btn--light {
+  color: $color-dark;
+  background: $color-light;
+}
+
 .btn--animated {
   .icon {
     width: 40px;
@@ -115,6 +120,13 @@
     .icon .base,
     .icon .tip {
       stroke: $color-primary;
+    }
+  }
+
+  &.btn--light {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-info;
     }
   }
 }

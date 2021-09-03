@@ -7,6 +7,7 @@
     padding: 0;
     list-style: none;
     display: flex;
+    align-items: center;
   }
 }
 
@@ -67,6 +68,42 @@
       &:after {
         transform: translateY(0);
         opacity: 1;
+      }
+    }
+  }
+}
+
+.nav__item--active {
+  a {
+    font-family: 'antikor bold';
+
+    span {
+      display: flex;
+      align-items: center;
+
+      &:before,
+      &:after {
+        font-size: 22px;
+        position: relative;
+        color: $color-brand;
+      }
+
+      &:before {
+        left: -5px; 
+        content: '['; 
+      }
+
+      &:after {
+        height: unset;
+        width: unset;
+        bottom: unset;
+        right: unset;
+        background-color: transparent;
+        opacity: 1;
+        transform: none;
+        transition: none;
+        content: ']';
+        right: -5px; 
       }
     }
   }

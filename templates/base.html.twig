@@ -115,7 +115,8 @@
                     <nav class="nav">
                         <ul>
                             {% for item in site.menu|filter(item => item.desktop ?? true) %}
-                                <li class="nav__item">
+                            {# CSS class for an active tab menu: nav__item--active #}
+                                <li class="nav__item"> 
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
                                             <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
@@ -130,6 +131,7 @@
 
                 {% block mobile_nav %}
                     <!-- Mobile nav -->
+                    {# CSS class for an active tab menu (mobile): nav-mobile__item--active#}
                     <nav class="nav-mobile">
                         <div class="nav-mobile__header">
                             <a href="{{ path('homepage') }}">

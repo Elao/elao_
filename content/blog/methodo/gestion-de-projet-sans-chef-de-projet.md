@@ -89,7 +89,7 @@ Pour que cette organisation fonctionne, **il est crucial que chaque membre de l'
 
 Il n'y a pas de recette magique. Notre culture de proximité du client est forte et complètement ancrée dans notre ADN et c'est ainsi que nous construisons notre équipe. 
 
-Si l'on devait être objectif, voici les pros & cons d'une organisation sans chef·fe de projet :
+Si l'on devait être objectif, voici les pour et contre d'une organisation sans chef·fe de projet :
 
 ### Avantages
 - **Toute l'équipe est impliquée de manière forte** ;

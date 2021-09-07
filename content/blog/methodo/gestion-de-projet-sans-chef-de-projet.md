@@ -77,7 +77,9 @@ Ce n'est pas toujours facile de trouver de ce genre de perle, d'autant plus dans
 **Non, on dirait plutôt : quand la responsabilité est partagée, tout le monde est responsable.** 
 Par contre, il est nécessaire, pour mettre tout ça en place, d'avoir déjà une forte culture de partage dans l'équipe. En effet, les clients n'ont pas toujours la rigueur d'historiser leurs besoins en créant un ticket, par exemple (même si on essaie de les inciter :) ). Il est nécessaire que chaque membre de l'équipe sache prendre le relai sans attendre que quelqu'un d'autre prenne le point.
 
-Cela dit, un projet a toujours son « lead technique », c'est-à-dire le développeur qui sera le plus souvent en frontal des différents sujets. C'est lui qui assure la cohérence technique du projet et a la plus grande vision fonctionnelle de ce dernier. C'est généralement un profil plus sénior chez nous, mais encore, ça dépend des projets.
+Cela dit, un projet a toujours son « lead technique », c'est-à-dire le développeur qui sera le plus souvent en frontal des différents sujets. C'est lui qui assure la cohérence technique du projet et a la plus grande vision fonctionnelle de ce dernier. Dans les faits, le lead est souvent pris de manière naturelle par un membre de l'équipe et dans la grande majorité, quasiment toute l'équipe est en capacité de la porter en fonction du projet / client.
+
+
 
 Pour que cette organisation fonctionne, **il est crucial que chaque membre de l'équipe se sente légitime avec le client**, responsable de l'information qu'il détient et qu'il ait le réflexe de la partager ou de l'historiser systématiquement. C'est toute la clé pour que cette organisation fonctionne.
 

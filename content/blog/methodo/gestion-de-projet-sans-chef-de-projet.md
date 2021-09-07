@@ -60,9 +60,9 @@ Notre intervention est importante en phase de préparation, c'est-à-dire celle 
 
 Nous nous assurons que tout soit prêt pour le développement : que le périmètre du projet soit suffisamment mûr et clair pour aboutir à des spécifications ou des maquettes graphiques. Par ailleurs, notons bien que ces livrables ne sont jamais « découverts » par les développeurs au dernier moment. Ils sont présents pour les construire, les valider, se projeter dessus pour les estimer. 
 
-**Le facilitateur prend tout son sens quand le projet atteint sa phase de « run »**, c'est-à-dire quand le périmètre initial a été mis en production et qu'il n'y a plus assez de fonctionnalités pour alimenter une équipe technique à temps plein. **Nous sommes là pour garantir que tous les projets en run aient la même attention et que tous les besoins clients soient traités**. En outre, c'est aussi un excellent pour libérer les développeurs de la charge mentale du projet, et leur permettre d'en accueillir un autre sereinement.
+**Le facilitateur prend tout son sens quand le projet atteint sa phase de « run »**, c'est-à-dire quand le périmètre initial a été mis en production et qu'il n'y a plus assez de fonctionnalités pour alimenter une équipe technique à temps plein. **Nous sommes là pour garantir que tous les projets en run aient la même attention et que tous les besoins clients soient traités**. En outre, c'est aussi un excellent moyen de libérer les développeurs de la charge mentale du projet, et leur permettre d'en accueillir un autre sereinement.
 
-C'est là que nous pilotons plus finement les plannings, avec projection à moyen / long terme, là où l'équipe de production a une vision naturellement plus court-termiste. On adore ce moment où on fait le tetris avec les plannings entre les nouveaux projets (build) et nos clients fidèles (run).
+C'est là que nous pilotons plus finement les plannings, avec projection à moyen / long terme, là où l'équipe de production a une vision naturellement plus court-termiste. On adore ce moment où l'on fait le tetris avec les plannings entre les nouveaux projets (build) et nos clients fidèles (run). Je ne suis pas sûre que les développeurs partagent cet enthousiasme :D 
 
 ## Les risques
 

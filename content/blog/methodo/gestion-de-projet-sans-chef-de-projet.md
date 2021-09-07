@@ -11,7 +11,7 @@ credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Organisation agile", "Gestion de projet"]
 categories:         ["methodo"]
 authors:            ["cmozzati"]
-tweetId:            "1369737350830583811"
+tweetId:            ""
 ---
 
 ## Pas de chef·fe de projet, vraiment ?
@@ -48,6 +48,8 @@ Tout au long du projet, et dès les premiers échanges, les développeurs sont e
 
 Alors oui, parfois il serait plus « productif » / « rentable » de n'engager les développeurs que sur de la production, mais c'est sans compter sur l'appétence de l'équipe à aller comprendre, creuser, entrer dans le métier du client afin de comprendre comment satisfaire les utilisateurs. **Au final, l'expérience nous a montré que le gain d'efficacité est réellement palpable.** Et ça, c'est bon pour le budget du client, qui s'offrira plus de fonctionnel et moins de points de synchro. 
 
+Et parmi les autres gains sensibles : **tout le monde prend du plaisir, car chacun peut avoir un impact réel sur le projet, au quotidien**. Et à l'arrivée d'un nouveau client, cela permet aux développeurs de naturellement se positionner sur les projets qui leur font envie. 
+
 ## Pas de chef de projet, mais des « facilitateurs »
 
 Chez Elao, les seuls postes qui pourraient se rapprocher d'un rôle de gestion de projet sont ceux de facilitateurs, dont je fais partie avec Xavier.
@@ -58,10 +60,9 @@ Notre intervention est importante en phase de préparation, c'est-à-dire celle 
 
 Nous nous assurons que tout soit prêt pour le développement : que le périmètre du projet soit suffisamment mûr et clair pour aboutir à des spécifications ou des maquettes graphiques. Par ailleurs, notons bien que ces livrables ne sont jamais « découverts » par les développeurs au dernier moment. Ils sont présents pour les construire, les valider, se projeter dessus pour les estimer. 
 
-**Le facilitateur prend tout son sens quand le projet atteint sa phase de « run »**, c'est-à-dire quand le périmètre initial a été mis en production et qu'il n'y a plus assez de fonctionnalités pour alimenter une équipe technique à temps plein. **Nous sommes là pour garantir que tous les projets en run aient la même attention et que tous les besoins clients soient traités**. 
+**Le facilitateur prend tout son sens quand le projet atteint sa phase de « run »**, c'est-à-dire quand le périmètre initial a été mis en production et qu'il n'y a plus assez de fonctionnalités pour alimenter une équipe technique à temps plein. **Nous sommes là pour garantir que tous les projets en run aient la même attention et que tous les besoins clients soient traités**. En outre, c'est aussi un excellent pour libérer les développeurs de la charge mentale du projet, et leur permettre d'en accueillir un autre sereinement.
 
 C'est là que nous pilotons plus finement les plannings, avec projection à moyen / long terme, là où l'équipe de production a une vision naturellement plus court-termiste. On adore ce moment où on fait le tetris avec les plannings entre les nouveaux projets (build) et nos clients fidèles (run).
-
 
 ## Les risques
 
@@ -92,8 +93,9 @@ Si l'on devait être objectif, voici les pros & cons d'une organisation sans che
 - **Toute l'équipe est impliquée de manière forte** ;
 - **Aucune perte d'information** ;
 - **Pas de « passe-plat »** avec une seule personne ayant la connaissance du projet ;
-- **Moins besoin de « points de synchro »**, tout le monde a toujours le même niveau d'info ;
+- **Peu de « points de synchro »**, tout le monde a toujours le même niveau d'info ;
 - Faire bénéficier au client de la **diversité de l'équipe** ;
+- Chaque membre de l'équipe peut avoir **un impact réel** sur le projet ;
 - **Les facilitateurs restent proches du projet** en cas de grain de sable dans les rouages.
 
 ### Inconvénients

@@ -1,26 +1,37 @@
-name: Deploy GH Pages
+# Deploy a PR preview on Github Pages
+name: Deploy preview
 
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    types: [ opened, synchronize, reopened, ready_for_review ]
 
 jobs:
 
-  deploy-master:
+  deploy-preview:
     name: '🚧  Build & deploy 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    # Do not run on Draft PRs
+    if: "!github.event.pull_request || github.event.pull_request.draft == false"
 
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
 
+      - name: 'Create GitHub deployment'
+        uses: chrnorm/deployment-action@releases/v1
+        id: deployment
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          environment: staging
+
       # https://github.com/actions/setup-node
       - name: 'Setup node'
         uses: actions/setup-node@v2
         with:
-          node-version: '12'
+          node-version: '16'
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -64,22 +75,46 @@ jobs:
           echo "::endgroup::"
         env:
           APP_ENV: prod
-          WEBPACK_PUBLIC_PATH: /elao_/build
+          WEBPACK_PUBLIC_PATH: /elao_/pr/${{ github.event.number }}/build
 
       - name: 'Build static site'
         run: bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
         env:
           APP_ENV: prod
           APP_FORCE_NO_INDEX: 1
-          ROUTER_DEFAULT_URI: https://elao.github.io/elao_
+          APP_GITHUB_REF: ${{ github.head_ref }}
+          ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          COMMIT_MESSAGE: "[AUTO] Static site update for ${{ github.sha }}"
+          COMMIT_MESSAGE: |
+            [AUTO] Deploy PR #${{ github.event.number }}
+
+            for commit ${{ github.sha }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
+          TARGET_FOLDER: pr/${{ github.event.number }} # The folder where the action should deploy on the deployment branch.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-          CLEAN_EXCLUDE: '["pr/"]' # Don't clean the PR deployments
+
+      - name: 'Update deployment status (success)'
+        if: success()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          description: "Deployed PR #${{ github.event.number }}"
+          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
+          environment_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
+          state: "success"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+
+      - name: 'Update deployment status (failure)'
+        if: failure()
+        uses: chrnorm/deployment-status@releases/v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          description: "Failed to deploy PR #${{ github.event.number }}"
+          state: "failure"
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}

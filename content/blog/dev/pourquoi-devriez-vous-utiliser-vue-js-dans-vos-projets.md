@@ -11,7 +11,7 @@ banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 A l'heure des frameworks front, et à contre-pied des désormais conventionnels Angular, Riot, Ember ou encore React, j'ai décidé de m'intéresser à [Vue.js](https://vuejs.org/). **Vue.js** est un framework javascript développé par Evan You qui se veut accessible, versatile et performant.

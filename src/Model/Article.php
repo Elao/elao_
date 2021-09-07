@@ -4,10 +4,18 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Stenope\Processor\AuthorProcessor;
 use App\Stenope\Processor\GithubEditLinkProcessor;
+use Stenope\Bundle\Attribute\SuggestedDebugQuery;
 use Stenope\Bundle\Processor\TableOfContentProcessor;
 use Stenope\Bundle\TableOfContent\TableOfContent;
 
+#[SuggestedDebugQuery('Scheduled', filters: 'not _.isPublished()', orders: 'desc:date')]
+#[SuggestedDebugQuery('Outdated', filters: '_.outdated', orders: 'desc:date')]
+#[SuggestedDebugQuery('Written in english', filters: '_.lang == "en"', orders: 'desc:date')]
+#[SuggestedDebugQuery('By author', filters: "'tjarrand' in keys(_.authors)", orders: 'desc:date')]
+#[SuggestedDebugQuery('By tag', filters: "'symfony' in _.tags", orders: 'desc:date')]
+#[SuggestedDebugQuery('Matching slug', filters: "_.slug matches '/symfony/'", orders: 'desc:date')]
 class Article
 {
     public string $type;
@@ -32,7 +40,11 @@ class Article
      */
     public string $lang = 'fr';
 
-    /** @var array<Member> */
+    /**
+     * @var array<string,Member> Indexed by author slug
+     *
+     * @see AuthorProcessor
+     */
     public array $authors = [];
 
     public ?array $credits = null;
@@ -74,5 +86,10 @@ class Article
     public function getLastModifiedOrCreated(): \DateTimeInterface
     {
         return $this->lastModified ?? $this->date;
+    }
+
+    public function isPublished(): bool
+    {
+        return new \DateTimeImmutable() >= $this->date;
     }
 }

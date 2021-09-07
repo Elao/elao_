@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block meta_title config.title %}
+{% block meta_description config.description %}
+
+{% block twitter_card_type 'summary_large_image' %}
+{% block og_image asset(config.ogImage|glide_image_preset('opengraph_image')) %}
+{% block twitter_image absolute_url(asset(config.twitterImage|glide_image_preset('twitter_card'))) %}
+
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Elaomojis</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+    <div class="banner">
+        <h1 class="banner__title" data-aos="fade-right">
+            Sélection officielle
+            <span>de nos Elaomojis 🥁🥁🥁</span>
+        </h1>
+        <div class="banner__highlight" data-aos="zoom-in">
+            <p>À l’occasion de la Journée Mondiale des Emojis 2021 (World Emoji Day), nous sommes ravis de vous présenter une sélection de nos :emojis-favoris:</p>
+        </div>
+    </div>
+
+    {% for category in config.categories %}
+        <h2>{{ category.title }}</h2>
+        {% for section in category.sections %}
+            <h3>{{ section.title }}</h3>
+            <ul class="elaomojis">
+                {% for emoji in section.emojis %}
+                    <li class="elaomojis__item" aria-hidden="true">
+                        <a href="{{ asset('build/images/elaomojis/%s'|format(emoji.path)) }}" target="_blank">
+                            <span class="img" style="background: url('{{ asset('build/images/elaomojis/%s'|format(emoji.path)) }}')"></span>
+                            {{ emoji.code }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endfor %}
+
+    {# TODO : set tweet ID in elaomojis.config.json once tweeted 🐦 #}
+    {% if config.tweetId is not empty %}
+        <div class="bricks">
+            <div class="brick-comment">
+                <p class="title">Et vous ?</p>
+                <p>
+                    Quels sont vos emojis préférés ?
+                    <a href="{{ external_url('twitter_like', { tweet_id: config.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
+                        Poursuivons la discussion sur twitter !
+                    </a>
+                </p>
+                <div id="tweet-container" class="tweet-container" data-tweet-id="{{ config.tweetId }}"></div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script>
+        window.onload = (function(){
+            var tweet = document.getElementById('tweet-container');
+            // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+            twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                conversation: 'none',
+                cards: 'hidden',
+                theme: 'light',
+                lang: 'fr',
+                align: 'center',
+                width: 550, // default
+                dnt: true,
+            })
+        });
+    </script>
+{% endblock %}

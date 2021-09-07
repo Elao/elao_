@@ -18,7 +18,7 @@ outdated: >
     par [**Manala**](https://manala.github.io/manala/) et
     ses [_recipes_](https://github.com/manala/manala-recipes).
 
-author:    "tjarrand"
+authors:            ["tjarrand"]
 ---
 
 Il y a certains changements, dans notre manière de travailler, qui facilitent tellement la vie (coucou Git) qu'une fois adoptés, on ne se voit plus revenir en arrière.

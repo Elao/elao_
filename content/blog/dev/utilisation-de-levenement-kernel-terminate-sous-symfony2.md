@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/geekon.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 
-author:    "tbessoussa"
+authors:            ["tbessoussa"]
 ---
 
 A quoi sert l'évènement kernel.terminate ? Regardons du côté de la documentation :

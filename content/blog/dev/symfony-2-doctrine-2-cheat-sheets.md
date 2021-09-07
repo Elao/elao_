@@ -12,7 +12,7 @@ banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]
 categories:         ["Dev", "Symfony", Doctrine]
 
-author:    "vbouzeran"
+authors:            ["vbouzeran"]
 ---
 
 

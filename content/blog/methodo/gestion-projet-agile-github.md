@@ -11,7 +11,7 @@ banner:     "images/posts/headers/github-agile.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github"]
 categories:     ["methodo"]
 
-author: "mcolin"
+authors:        ["mcolin"]
 
 ---
 

@@ -1,11 +1,12 @@
 ---
 title: 'Anne-Laure, développeuse web chez Elao depuis 3 ans'
 date: '2021-07-08' # Au format YYYY-MM-DD
+lastModified: ~
 description: ''
-author: cmozzati # author|authors (multiple acceptés)
+authors: [cmozzati, aldeboissieu]
 tags: [elao, team]
 thumbnail: images/posts/2021/itw-2b.jpeg
-#tweetId: ~ # Ajouter l'id du Tweet après publication.
+tweetId: '1413061065374580737'
 ---
 
 ## Ton parcours
@@ -23,7 +24,7 @@ Ensuite, j'apprécie beaucoup les interactions avec mes collègues : que ce soit
 
 Quand je ne travaille pas, j'aime bien participer aux apéros ou meetups de diverses communautés comme par exemple celle de l'AFUP à Lyon. J'ai une vie associative assez active depuis de nombreuses années 👵 (surtout autour du cinéma). Depuis que je suis dans le milieu du développement, je participe à l'organisation d'une conférence technique / agile / alien qui s'apelle [MiXiT](https://mixitconf.org/), qui a lieu à Lyon une fois par an, en dehors des pandémies. 
 
-Côté loisirs, j'aime participer à l'écriture de fanzines, faire du yoga malgré mon manque de souplesse, voir mes amis et boire des bières. J'aime bien regarder des films, de préférence plutôt fantastique, de S-F, ou avec un petit grain de folie. J'adore lire, même s'il faut reconnaître que mon nombre de romans lus s'est effondrée depuis la naissance de ma fille. En ce moment, je lis Nostromo de Joseph Conrad, qui est un auteur dans lequel je me suis plongée grâce à un de mes collègues d'Elao (merci à lui - il se reconnaitra :)). Un de mes auteurs préférés est Roberto Bolaño, je peux relire de nombreuses fois ses romans. C'est un auteur Chilien, du coup je rêve d'aller au Chili et en profiter pour aller visiter l'île de Pâques ! 
+Côté loisirs, j'aime participer à l'écriture de fanzines, faire du yoga malgré mon manque de souplesse, voir mes amis et boire des bières. J'aime bien regarder des films, de préférence plutôt fantastique, de S-F, ou avec un petit grain de folie. J'adore lire, même s'il faut reconnaître que mon nombre de romans lus s'est effondrée depuis la naissance de ma fille. En ce moment, je lis Nostromo de Joseph Conrad, qui est un auteur dans lequel je me suis plongée grâce à un de mes collègues d'Elao (merci à lui - il se reconnaitra 🤓). Un de mes auteurs préférés est Roberto Bolaño, je peux relire de nombreuses fois ses romans. C'est un auteur Chilien, du coup je rêve d'aller au Chili et en profiter pour aller visiter l'île de Pâques ! 
 
 ## L'interview :fast-parrot: 
 
@@ -36,7 +37,7 @@ Un gobelet, une tasse, et un bazar impossible à définir.
 
 ### Le projet sur lequel tu aimerais vraiment travailler
 
-Si on peut rêver : un programme pour un robot pour mars (ou n'importe quel instrument de mesure qui irait dans l'espace :))
+Si on peut rêver : un programme pour un robot pour mars (ou n'importe quel instrument de mesure qui irait dans l'espace 🚀)
 
 ### Plutôt Slack ou call ?
 

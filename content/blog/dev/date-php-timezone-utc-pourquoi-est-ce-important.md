@@ -11,7 +11,7 @@ banner:             "images/posts/headers/time.jpg"
 tags:               ["Symfony", "PHP","Datetime", "Timezone"]
 categories:         ["Dev", "Symfony", "PHP"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 <!--more-->

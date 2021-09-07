@@ -11,7 +11,7 @@ banner:             "images/posts/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 
-author:             ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
+authors:            ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 
 ---
 

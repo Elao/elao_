@@ -12,7 +12,7 @@ banner:             "images/posts/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 Dans mon [précédent article](/dev/pourquoi-devriez-vous-utiliser-vue-js-dans-vos-projets/) je vous parlais des avantages de Vue.js et vous expliquais pourquoi vous devriez l'utiliser dans vos projets. Je disais que **Vue.js** était parfait pour ajouter des fonctionnalités frontend à **Symfony**, je vais vous détailler dans cet article comment l'intégrer au framework **PHP**.

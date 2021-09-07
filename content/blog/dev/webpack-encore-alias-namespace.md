@@ -13,7 +13,7 @@ credits:            { name: "Jannes Glas" , url: "https://unsplash.com/@jannesgl
 tags:               ["Symfony", "JavaScript", "Webpack"]
 categories:         ["JavaScript", "Dev", "Symfony"]
 tweetId: "1289132577694121985"
-author:    "tjarrand"
+authors:            ["tjarrand"]
 ---
 
 Si vous travaillez avec Symfony et gérez votre base de code javascript avec Webpack Encore, j'ai aujourd'hui une petite astuce méconnue qui pourrait vous simplifier la vie : les alias Webpack.

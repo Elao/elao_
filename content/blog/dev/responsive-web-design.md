@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
-author:    "fzannettacci"
+authors:            ["fzannettacci"]
 ---
 
 Le web design responsive est né d'un constat simple, le web sort de nos bureaux pour prendre possession de nos mobiles, tablettes et télévisions. Notre conception web est ainsi contrainte à suivre cette multiplication des supports et dans certains cas, l’idée de créer différentes versions selon chaque appareil, serait simplement une perte de temps et d’énergie.<!--more-->

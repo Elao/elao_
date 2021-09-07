@@ -11,7 +11,7 @@ banner:             "images/posts/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
 categories:         ["conference"]
 
-author:    "rhanna"
+authors:            ["rhanna"]
 ---
 
 ## Symfony a 10 ans

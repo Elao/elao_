@@ -12,7 +12,7 @@ banner:     "images/posts/headers/harpal-singh-396280-unsplash.jpg"
 tags:           ["React native", "Mobile", "Font", "Icon"]
 categories:     ["dev"]
 
-author:    "tjarrand"
+authors:            ["tjarrand"]
 
 ---
 

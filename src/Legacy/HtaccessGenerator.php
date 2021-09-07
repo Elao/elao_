@@ -6,7 +6,7 @@ namespace App\Legacy;
 
 use App\Model\Article;
 use App\Model\CaseStudy;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class HtaccessGenerator
@@ -15,9 +15,9 @@ class HtaccessGenerator
     public const TARGET_BLOG = 'blog';
 
     private UrlGeneratorInterface $router;
-    private ContentManager $contentManager;
+    private ContentManagerInterface $contentManager;
 
-    public function __construct(UrlGeneratorInterface $router, ContentManager $contentManager)
+    public function __construct(UrlGeneratorInterface $router, ContentManagerInterface $contentManager)
     {
         $this->router = $router;
         $this->contentManager = $contentManager;

@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
 categories:         ["elao", "methodo"]
 
-author:             "ssolere"
+authors:            ["ssolere"]
 
 ---
 

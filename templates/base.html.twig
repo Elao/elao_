@@ -115,7 +115,7 @@
                     <nav class="nav">
                         <ul>
                             {% for item in site.menu|filter(item => item.desktop ?? true) %}
-                                <li class="nav__item">
+                                <li class="nav__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav__item--active' }}">
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
                                             <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
@@ -142,7 +142,7 @@
                         </div>
                         <ul>
                             {% for item in site.menu|filter(item => item.mobile ?? true) %}
-                                <li class="nav-mobile__item {{ item.mobileClass|default('') }}">
+                                <li class="nav-mobile__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav-mobile__item--active' }} {{ item.mobileClass|default('') }}">
                                     <a href="{{ path(item.path) }}">
                                         {% if item.icon ?? false %}
                                             <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>

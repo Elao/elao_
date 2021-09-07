@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
 categories:         ["Tips", "Symfony"]
 
-author:    "tjarrand"
+authors:            ["tjarrand"]
 ---
 
 ## Après le Symfony Live 2013, pour tous ceux qui n'ont pas pu venir, voici notre condensé des bonnes pratiques à respecter avec Symfony2 :

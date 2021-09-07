@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Command;
 
 use App\Model\Member;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -23,10 +23,10 @@ class GenerateArticleCommand extends Command
     protected static $defaultName = 'app:generate:article';
 
     private string $path;
-    private ContentManager $contents;
+    private ContentManagerInterface $contents;
     private Filesystem $filesystem;
 
-    public function __construct(string $path, ContentManager $contents)
+    public function __construct(string $path, ContentManagerInterface $contents)
     {
         $this->path = $path;
         $this->contents = $contents;
@@ -63,7 +63,7 @@ class GenerateArticleCommand extends Command
 
         $date = $io->ask('Date de publication', (new \DateTimeImmutable())->format('Y-m-d'));
         $description = $io->ask('Description');
-        $tags = array_map('trim', explode(',', $io->ask('Tags (séparés par des virgules)') ?? ''));
+        $tags = array_filter(array_map('trim', explode(',', $io->ask('Tags (séparés par des virgules)') ?? '')));
         $thumbnail = $io->ask('Miniature', "images/posts/thumbnails/$slug.jpg");
 
         $io->definitionList(
@@ -89,14 +89,14 @@ class GenerateArticleCommand extends Command
                 new Header(['title' => $title]),
                 new Header(['date' => $date], 'Au format YYYY-MM-DD'),
                 new Header(
-                    ['lastModified' => $date],
-                    'À utiliser pour indiquer explicitement qu\'un article à été mis à jour',
-                    false
+                    ['lastModified' => null],
+                    'Au format YYYY-MM-DD. Pour indiquer explicitement qu\'un article à été mis à jour',
+                    true
                 ),
                 new Header(['description' => $description]),
                 new Header(
-                    [(\count($authors) > 1 ? 'authors' : 'author') => \count($authors) > 1 ? $authors : $authors[0]],
-                    'author|authors (multiple acceptés)'
+                    ['authors' => $authors],
+                    '(multiple acceptés)'
                 ),
                 new Header(
                     ['tableOfContent' => true],
@@ -115,7 +115,8 @@ class GenerateArticleCommand extends Command
                     'Pour créditer la photo utilisée en miniature',
                     false
                 ),
-                new Header(['tweetId' => null], 'Ajouter l\'id du Tweet après publication.', false),
+                new Header(['tweetId' => ''], 'Ajouter l\'id du Tweet après publication.', true),
+                new Header(['outdated' => false], '`true` pour marquer un article comme obsolète ou une chaîne de caractère pour un message spécifique à afficher', true),
             ]
         );
 
@@ -191,7 +192,7 @@ class Header
 
     public function __toString()
     {
-        $line = trim(Yaml::dump($this->value, 1, 4, Yaml::DUMP_NULL_AS_TILDE), PHP_EOL);
+        $line = trim(Yaml::dump($this->value, 1, 4, Yaml::DUMP_NULL_AS_TILDE | Yaml::DUMP_EMPTY_ARRAY_AS_SEQUENCE), PHP_EOL);
 
         if (!$this->active) {
             $line = "#$line";

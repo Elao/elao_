@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/mail_bottle.jpeg"
 tags:               ["Linux", "Tips", "SPF"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

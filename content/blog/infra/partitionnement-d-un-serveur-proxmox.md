@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/hdd_partition.jpg"
 tags:               ["proxmox", "openvz", "partitionnement", "linux"]
 categories:         ["Infra", "Proxmox", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

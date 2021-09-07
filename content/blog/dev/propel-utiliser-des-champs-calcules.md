@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/mailers.jpg"
 tags:               ["Propel", "PHP", "ORM", "Symfony"]
 categories:         ["Dev", "PHP", "Propel", "ORM"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 Il est parfois très utile de pouvoir récupérer directement des champs calculés depuis la base de données, soit parce que passer par un criteria s'avère très compliqué, voir impossible, soit pour confier les calculs à la base de données.

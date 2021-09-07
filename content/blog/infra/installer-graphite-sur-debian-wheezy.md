@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/dashboard.png"
 tags:               ["Monitoring", "Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Monitoring", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 

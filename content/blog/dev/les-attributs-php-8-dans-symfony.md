@@ -1,9 +1,9 @@
 ---
 title: 'Les attributs PHP 8 dans Symfony'
 date: '2021-07-06' # Au format YYYY-MM-DD
-#lastModified: '2021-06-25' # À utiliser pour indiquer explicitement qu'un article à été mis à jour
+lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: 'Utilisation des attributs PHP 8 à la place des annotations.'
-author: mcolin # author|authors (multiple acceptés)
+authors: [mcolin]
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [symfony, php, attributes]
 thumbnail: images/posts/thumbnails/les-attributs-php-8-dans-symfony.jpg
@@ -69,7 +69,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-  #[Route('/', methods=['GET'], name="homepage")]
+  #[Route('/', methods: ['GET'], name: "homepage")]
   public function homepage()
   {
   }
@@ -82,7 +82,7 @@ class DefaultController extends AbstractController
   }
 
   #[Route('/article/{article_slug}')]
-  #[Entity('article', expr='repository.findOneBySlug(article_slug)')]
+  #[Entity('article', expr: 'repository.findOneBySlug(article_slug)')]
   public function article(Article $article)
   {
   }
@@ -159,14 +159,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class Foobar
 {
-  #[Assert\Collection(fields=[
+  #[Assert\Collection(fields: [
     'email' => [
       new Assert\NotBlank,
       new Assert\Email,
     ],
     'description' => [
       new Assert\NotBlank,
-      new Assert\Length(min=10, max=255, message="Lorem ipsum")
+      new Assert\Length(min: 10, max: 255, message: "Lorem ipsum")
     ]
   ]]
   protected $contact;

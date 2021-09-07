@@ -1,6 +1,6 @@
 export default class Pixel {
     static getRandomPoint(size) {
-        return Math.floor(Math.random() * size);
+        return Math.floor(Math.random() * (size + 1));
     }
 
     constructor(x, y) {

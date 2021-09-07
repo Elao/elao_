@@ -11,7 +11,7 @@ banner:             "images/posts/headers/bridge.jpg"
 tags:               ["Nginx", "Reverse", "Proxy", "Cors"]
 categories:         ["Infra", "nginx", "javascript"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 ## Introduction

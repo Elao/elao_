@@ -8,7 +8,7 @@ description:        "Notre compte-rendu du deuxième jour de l'Afup Day, éditio
 thumbnail:          "images/posts/2021/afup-day-2021/afup-day-2021-2.png"
 tags:               ["Développement", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
-author:             ["bleveque"]
+authors:            ["bleveque"]
 ---
 
 Le deuxième jour de conférence de l'AFUP Day a eu lieu le 11 juin 2021, entièrement en ligne. Nous avons pu ainsi suivre les conférences organisées par les antennes locales de Toulouse et Tours. Bravo à eux et à toute l'équipe de l'AFUP pour cette édition très bien organisée qui, malgré la distance, parvient à donner le sourire :).  

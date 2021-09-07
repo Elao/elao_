@@ -11,7 +11,7 @@ banner:             "images/posts/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "Mix-IT 2015"]
 categories:         ["Dev", "Web", "conference", "Javascript", "NodeJS"]
 
-author:    "elao"
+authors:            ["elao"]
 ---
 
 Élao avait l'immense plaisir d’être présent à l’édition 2015 du Mix-IT qui s’est déroulée les 16 et 17 avril derniers au CPE de Lyon (Ecole Supérieure de Chimie Physique Electronique). Outre notre présence parmi les sponsors, nous avons également tenu un stand proposant de s’initier à [Curvytron](http://www.curvytron.com/#/), le jeu vidéo développé par notre équipe.

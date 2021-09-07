@@ -1534,12 +1534,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "341ffb67c9da2d136ba909775e1fc21ee8eaaa3b"
+                "reference": "ec96497c2a3e4415a5034aee55842ea1e2ad1df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/341ffb67c9da2d136ba909775e1fc21ee8eaaa3b",
-                "reference": "341ffb67c9da2d136ba909775e1fc21ee8eaaa3b",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/ec96497c2a3e4415a5034aee55842ea1e2ad1df7",
+                "reference": "ec96497c2a3e4415a5034aee55842ea1e2ad1df7",
                 "shasum": ""
             },
             "require": {
@@ -1567,13 +1567,14 @@
                 "twig/twig": "^2.12|^3.0"
             },
             "require-dev": {
-                "ekino/phpstan-banned-code": "^0.3.1",
+                "ekino/phpstan-banned-code": "^0.4",
                 "friendsofphp/php-cs-fixer": "^2.16",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/phpstan": "^0.12.32",
                 "symfony/browser-kit": "^5.1",
                 "symfony/expression-language": "^5.1",
                 "symfony/framework-bundle": "^5.1",
+                "symfony/monolog-bundle": "^3.7",
                 "symfony/phpunit-bridge": "^5.1",
                 "symfony/twig-bridge": "^5.1",
                 "symfony/twig-bundle": "^5.1"
@@ -1620,7 +1621,7 @@
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
                 "source": "https://github.com/StenopePHP/Stenope/tree/master"
             },
-            "time": "2021-06-29T08:23:11+00:00"
+            "time": "2021-07-19T12:33:30+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7817,5 +7818,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }

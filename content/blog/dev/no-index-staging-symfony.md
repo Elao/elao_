@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/judging-sardine-small.jpg"
 banner:             "images/posts/headers/judging-sardine-large.jpg"
 tags:               ["Symfony", "seo", "no-index"]
 categories:         ["Dev", "Symfony", "seo"]
-author:             ["mcolin", "aldeboissieu"]
+authors:            ["mcolin", "aldeboissieu"]
 
 ---
 L'indexation par les robots des moteurs de recherche des urls de staging ou de démonstration sont des cas classiques de [#SEOHorrorStories](https://www.webrankinfo.com/dossiers/conseils/horreurs-du-seo). En effet, cette situation est gênante, pour deux raisons :

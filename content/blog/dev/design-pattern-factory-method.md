@@ -11,7 +11,7 @@ banner:     "images/posts/headers/scientist.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
-author:    "xavierr"
+authors:            ["xavierr"]
 
 ---
 

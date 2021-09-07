@@ -11,7 +11,7 @@ banner:             "images/posts/headers/obfuscation.jpg"
 tags:               ["Securite","PHP","Symfony","Framework"]
 categories:         ["Dev", "Symfony"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 L'une des pratiques les plus courantes du web pour accéder à un contenu de base de données est d'inclure l'identifiant (`ID`) de celui-ci dans l'url. Cet identifiant est dans la grande majorité des cas un entier positif auto-incrémenté par la base de données. Cet identifiant se retrouve ainsi exposé dans les urls. Bien qu'elle pose un certain nombre de problèmes, cette pratique est très simple et très répandue.

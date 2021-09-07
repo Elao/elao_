@@ -11,7 +11,7 @@ banner:     "images/posts/headers/elao_team_front.jpg"
 tags:           ["agile", "user stories", "specifications"]
 categories:     ["methodo"]
 
-author:    "ssolere"
+authors:            ["ssolere"]
 
 ---
 

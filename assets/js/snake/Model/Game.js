@@ -2,7 +2,7 @@ import Snake from 'snake/Model/Snake';
 import Pixel from 'snake/Model/Pixel';
 
 export default class Game {
-    constructor(period = 200, size = 16) {
+    constructor(period = 225, size = 16) {
         this.period = period;
         this.size = size;
         this.snake = new Snake();
@@ -67,7 +67,7 @@ export default class Game {
     hasCollision(x, y) {
         const tail = this.snake.getNextTail();
 
-        return x < 0 || x > this.size || y < 0 || y > this.size || tail.some(([tx, ty]) => tx === x && ty === y);
+        return x < 0 || x >= this.size || y < 0 || y >= this.size || tail.some(([tx, ty]) => tx === x && ty === y);
     }
 
     generatePixel(maxTry = 100) {

@@ -11,7 +11,7 @@ banner:             "images/posts/headers/php_forum_team_elao.jpg"
 tags:               ["Tips", "Twig", "Symfony 2"]
 categories:         ["Tips", "Twig", "Symfony"]
 
-author:    "tjarrand"
+authors:            ["tjarrand"]
 ---
 
 ### Isoler les "include"

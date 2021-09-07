@@ -7,7 +7,7 @@ namespace App\Controller;
 use App\Model\Article;
 use App\Model\CaseStudy;
 use App\Model\Technology;
-use Stenope\Bundle\ContentManager;
+use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,9 +17,9 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class TechnologyController extends AbstractController
 {
-    private ContentManager $manager;
+    private ContentManagerInterface $manager;
 
-    public function __construct(ContentManager $manager)
+    public function __construct(ContentManagerInterface $manager)
     {
         $this->manager = $manager;
     }

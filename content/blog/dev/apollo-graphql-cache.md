@@ -11,7 +11,7 @@ banner:             "images/posts/headers/graphql-apollo.jpg"
 tags:               ["GraphQL","Cache","Apollo","Javascript","API"]
 categories:         ["Dev", "Javascript"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 ## Introduction

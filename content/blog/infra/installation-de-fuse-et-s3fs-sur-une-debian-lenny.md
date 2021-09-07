@@ -10,7 +10,7 @@ thumbnail:          "images/posts/thumbnails/danbo_on_drops.jpg"
 tags:               ["Linux", "FUSE", "s3fs"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 ---
 
 Aujourd'hui nous allons installer s3fs sur nos serveurs.

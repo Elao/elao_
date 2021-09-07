@@ -11,7 +11,7 @@ thumbnail:          "images/posts/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
 categories:         ["Infra", "Linux"]
 
-author:    "gfaivre"
+authors:            ["gfaivre"]
 
 ---
 
@@ -116,9 +116,7 @@ Listening on 127.0.0.1:5555
 
 Pour finir supervisor fournit également une interface web qui est activable via la section ``[inet_http_server]`` et qui permet de gérer les services de la même façon que le client en console.
 
-<p class="text-center">
 ![Supervisor - Interface web supervisor](images/posts/2014/supervisor_web.png)
-</p>
 
 Il suffit de créer un nouveau fichier dans ```/etc/supervisor/conf.d``` s'appelant par exemple ```inet_http_server.conf``` et d'y recopier le contenu suivant :
 

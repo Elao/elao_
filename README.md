@@ -7,7 +7,7 @@ The Elao website.
 Either:
 
 - Docker
-- or a local Node 12+, PHP 8.0+ & Symfony CLI install
+- or a local Node 16+, PHP 8.0+ & Symfony CLI install
 
 ## Setup
 

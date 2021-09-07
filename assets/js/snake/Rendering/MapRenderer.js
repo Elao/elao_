@@ -8,8 +8,8 @@ export default class MapRenderer {
         this.element.setAttribute('stroke', 'none');
         this.element.setAttribute('x', -this.border);
         this.element.setAttribute('y', -this.border);
-        this.element.setAttribute('width', this.size + 2 * this.border);
-        this.element.setAttribute('height', this.size + 2 * this.border);
+        this.element.setAttribute('width', this.size - 1 + 2 * this.border);
+        this.element.setAttribute('height', this.size - 1 + 2 * this.border);
     }
 
     attach(container) {

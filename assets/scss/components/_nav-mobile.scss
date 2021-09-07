@@ -70,6 +70,30 @@
     }
   }
 
+  .nav-mobile__item--active {
+    a {
+      font-family: 'antikor bold';
+
+      span {
+        &:before,
+        &:after {
+          position: relative; 
+        }
+
+        &:before {
+          content: '[';
+          left: -10px;
+        }
+
+        &:after {
+          content: ']';
+          right: -10px; 
+        }
+      }
+    }
+
+  }
+
   .nav-mobile__item--large {
     margin: 35px 0 0;
     width: 100%;

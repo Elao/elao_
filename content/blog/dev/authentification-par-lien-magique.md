@@ -11,7 +11,7 @@ banner:             "images/posts/headers/magic-link.jpg"
 tags:               ["Authentification", "Email", "Sécurité", "MagicLink"]
 categories:         ["Dev"]
 
-author:    "mcolin"
+authors:            ["mcolin"]
 ---
 
 # Lien magique

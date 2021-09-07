@@ -11,7 +11,7 @@ banner:     "images/posts/2016/equipe-projet/equipe.jpg"
 tags:           ["agile", "user stories"]
 categories:     ["methodo"]
 
-author: "rhanna"
+authors:        ["rhanna"]
 
 ---
 

@@ -29,7 +29,7 @@ C'est une phase qui peut faire peur, à plusieurs titres :
 ## Notre méthode
 
 Un projet de constrution d'application dure, chez nous, entre 3 et 6 mois. Pendant cette phase, qu'on appelle "la phase de build", une équipe technique (deux à trois développeurs et une intégratrice) est dédiée au projet. 
-Dédiée, ça veut dire qu'elle passe 80 % de son temps staffée sur ce projet (les 20 % restant, c'est pour gérer les urgences, faire de la veille, avancer sur des projets de R&D internes…). 
+Dédiée, ça veut dire qu'elle passe 80 % de son temps staffée sur ce projet (les 20 % restant, c'est pour traiter la maintenance ou les évolutions sur les autres projets, faire de la veille, avancer sur des projets de R&D internes…). 
 
 Cette phase de build est toujours précédée d'une phase d'avant-vente, évidemment, et d'une phase de préparation. La plupart du temps, les développeurs arrivent très tôt dans le projet, au moment des estimations de l'avant-vente, afin que nous puissions rapidement cerner les besoins et les technos à mettre en face. 
 

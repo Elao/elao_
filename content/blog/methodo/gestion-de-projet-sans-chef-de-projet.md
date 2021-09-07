@@ -8,8 +8,8 @@ description:        "Nous avons construit plus de 200 applications en nous appuy
 
 thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
 credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
-tags:               ["Tag 1", "Tag 2"]
-categories:         ["Organisation agile", "Gestion de projet"]
+tags:               ["Organisation agile", "Gestion de projet"]
+categories:         ["methodo"]
 authors:            ["cmozzati"]
 tweetId: "1369737350830583811"
 ---

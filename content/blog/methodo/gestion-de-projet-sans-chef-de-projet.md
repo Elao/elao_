@@ -70,7 +70,7 @@ C'est là que nous pilotons plus finement les plannings, avec projection à moye
 
 Notre organisation interne nous pousse à chercher des développeurs qui ont envie de traiter en direct avec le client, d'assister à des ateliers de brainstorming fonctionnel, de participer à des réunions de chiffrage, de se projeter sur des éléments qui sont parfois encore un peu nébuleux. 
 
-Ce n'est pas toujours facile de trouver de ce genre de perle, d'autant plus dans un marché tendu comme celui du recrutement dév :) Par chance, la plupart de notre équipe technique est là depuis longtemps (<3) et pousse naturellement les nouvelles recrues à prendre confiance et à monter en compétences, petit à petit, sur ces sujets. 
+Ce n'est pas toujours facile de trouver ce genre de perle, d'autant plus dans un marché tendu comme celui du recrutement dév :) Par chance, la plupart de notre équipe technique est là depuis longtemps (<3) et pousse naturellement les nouvelles recrues à prendre confiance et à monter en compétences, petit à petit, sur ces sujets. 
 
 ### Quand la responsabilité est partagée, personne n'est responsable ?
 

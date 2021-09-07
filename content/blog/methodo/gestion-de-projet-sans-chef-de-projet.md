@@ -6,8 +6,8 @@ tableOfContent:     2
 
 description:        "Nous avons construit plus de 200 applications en nous appuyant essentiellement sur notre équipe technique. Comment ?"
 
-thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
-credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
+thumbnail:          images/posts/headers/whiteboard-product-roadmap.jpg
+credits:            { name: "slidebean", url: "https://unsplash.com/@slidebean" }
 tags:               ["Organisation agile", "Gestion de projet"]
 categories:         ["methodo"]
 authors:            ["cmozzati"]

@@ -4,7 +4,7 @@ date:               "2021-09-09"
 lastModified:       ~ 
 tableOfContent:     3
 
-description:        "Nous avons construits plus de 200 applications en nous appuyant essentiellement sur notre équipe technique. Comment ?"
+description:        "Nous avons construit plus de 200 applications en nous appuyant essentiellement sur notre équipe technique. Comment ?"
 
 thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60
 credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
@@ -32,6 +32,8 @@ Cette phase de build est toujours précédée d'une phase d'avant-vente, évidem
 
 Tout au long du projet, et dès les premiers échanges, les développeurs sont en direct avec le client, afin qu'ils aient un maximum d'informations pour faire les meilleurs choix techniques et des propositions fonctionnelles pertinentes.
 
+Le gain d'un point de vue efficacité est réellement palpable. Les équipes ayant toutes les bonnes clés sont plus pertinentes sur la proposition fonctionnelle et sur la priorisation des tâches. Elles ont ainsi une vision directe sur la création de valeur pour le projet pour un budget donné.
+
 ### Une équipe de concepteurs, avant d'être des développeurs  
 
 Alors oui, parfois il serait plus "productif" / "rentable" de n'engager les développeurs que sur de la production, mais c'est sans compter sur l'appétence de l'équipe à aller comprendre, creuser, entrer dans le métier du client afin de comprendre comment satisfaire les utilisateurs. 
@@ -47,7 +49,7 @@ Par ailleurs, on s'affranchit ainsi de la crainte de voir partir en congés la p
 
 Chez Elao, les seuls postes qui pourraient se rapprocher d'un rôle de gestion de projet sont ceux de facilitateurs, dont je fais partie avec Xavier.
 
-Notre mission, c'est de mettre de l'huile dans les rouages quand c'est nécessaire. Ce dernier point, "quand c'est nécessaire" est très important, car la plupart du temps, ça roule tout seul et c'est tant mieux. Quand les dév ont une questions, ils la posent directement au client et vice-versa. 
+Notre mission, c'est de mettre de l'huile dans les rouages quand c'est nécessaire. Ce dernier point, "quand c'est nécessaire" est très important, car la plupart du temps, ça roule tout seul et c'est tant mieux. Quand les développeurs ont une question, ils la posent directement au client et vice-versa. 
 
 Notre intervention est importante en phase de préparation, c'est-à-dire celle qui précède la phase de build, notamment parce que les développeurs ne sont pas encore dédiés au projet. Ils sont sollicités régulièrement lors de cette phase mais on ne leur demande pas une plongée à temps plein, qui serait contre-productive à ce stade.
 

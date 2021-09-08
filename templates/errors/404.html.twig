@@ -8,37 +8,39 @@
 {% endblock %}
 
 {% block content %}
-    <div class="banner-error">
-        <h1 class="banner-error__title" data-aos="fade-right">
-            Erreur
-            <span>404</span>
-        </h1>
-        <div class="banner-error__content">
-            <div class="info" data-aos="fade-in">
-                <p>La page que vous recherchez n'existe pas ou a été supprimée.</p>
-                <p><strong>Que voulez-vous faire ?</strong></p>
+    <div class="container">
+        <div class="banner-error">
+            <h1 class="banner-error__title" data-aos="fade-right">
+                Erreur
+                <span>404</span>
+            </h1>
+            <div class="banner-error__content">
+                <div class="info" data-aos="fade-in">
+                    <p>La page que vous recherchez n'existe pas ou a été supprimée.</p>
+                    <p><strong>Que voulez-vous faire ?</strong></p>
+                </div>
+                <img src="{{ asset('build/images/pages/error/error.svg') }}" alt="" data-aos="zoom-in-left">
             </div>
-            <img src="{{ asset('build/images/pages/error/error.svg') }}" alt="" data-aos="zoom-in-left">
-        </div>
-        <div class="banner-error__action">
-            <a href="{{ path('homepage') }}" class="btn btn--secondary btn--animated">
-                <span>
-                    Retourner à l'accueil
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
-                        <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
-                        <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
-                    </svg>
-                </span>
-            </a>
-            <a href="{{ path('blog') }}" class="btn btn--primary btn--animated">
-                <span>
-                    Lire nos articles
-                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
-                        <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
-                        <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
-                    </svg>
-                </span>
-            </a>
+            <div class="banner-error__action">
+                <a href="{{ path('homepage') }}" class="btn btn--secondary btn--animated">
+                    <span>
+                        Retourner à l'accueil
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                            <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                            <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="{{ path('blog') }}" class="btn btn--primary btn--animated">
+                    <span>
+                        Lire nos articles
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
+                            <path class="tip" d="M21,2.7 28.2,10.3 21,17.4"/>
+                            <path class="base" d="M28.2,10.3c-0.1,0-18.3,0-27.8,0"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}

@@ -71,6 +71,7 @@ html.no-js [data-aos] {
 @import "components/_gallery";
 @import "components/glossary";
 @import "components/glossary-list";
+@import "components/hero";
 @import "components/_kudo";
 @import "components/_link";
 @import "components/_list-inline";
@@ -79,11 +80,13 @@ html.no-js [data-aos] {
 @import "components/_miniature-inline";
 @import "components/_miniature-highlight";
 @import "components/_modal";
+@import "components/notice";
 @import "components/_pagination";
 @import "components/_planning-steps";
 @import "components/_preview";
 @import "components/_process";
 @import "components/_project-team";
+@import "components/prospect-contact";
 @import "components/_section-home";
 @import "components/_socials";
 @import "components/_statistics";
@@ -92,6 +95,7 @@ html.no-js [data-aos] {
 @import "components/_tag-list";
 @import "components/_team";
 @import "components/_technologies";
+@import "components/thumbnail";
 @import "components/_tile";
 @import "components/_titles";
 @import "components/_values";
@@ -120,3 +124,4 @@ html.no-js [data-aos] {
 @import "pages/_page-signature";
 @import "pages/_page-jobs";
 @import "pages/_page-job-posting";
+@import "pages/page-innovation-workshop";

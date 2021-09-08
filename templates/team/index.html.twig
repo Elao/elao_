@@ -7,101 +7,103 @@
 {% block twitter_image absolute_url(asset('social/elao-ogimage-twitter2.jpg'))  %}
 
 {% block content %}
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">La tribu</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
-
-    <div class="page-team">
-        <div class="banner-team">
-            <div class="banner-team__title" data-aos="fade-right">
-                <h1>Ce qui fait notre force : <span>notre tribu</span></h1>
-            </div>
-            <div class="banner-team__content">
-                <img {{ macros.imageSrcset('/images/members/elao-team-banner.jpg', 'tribe_banner') }} alt="" data-aos="fade-in">
-                {# TODO: once jobs are ready, wire back#}
-{#                <a href="#" class="recruitment">#}
-{#                    <img src="{{ asset('build/images/tipi.svg') }}" alt="">#}
-{#                    <span class="recruitment__content">#}
-{#                        <span class="title">Rejoindre la tribu</span>#}
-{#                        3 offres#}
-{#                    </span>#}
-{#                    <i class="icon icon--square-bracket-right" aria-hidden="true"></i>#}
-{#                    <i class="icon icon--semicolon" aria-hidden="true"></i>#}
-{#                </a>#}
-            </div>
-        </div>
-
-        <div class="container--narrow">
-            <h2 class="h2--dash">Nos valeurs</h2>
-            <div class="values">
-                {% with { duration: 600, delayGap: 200, delay: 0 } %}
-                    <span class="values__item values__item--info"
-                        data-aos="fade-up"
-                        data-aos-duration="{{ duration }}"
-                        data-aos-delay="{{ delay }}"
-                    >
-                        <i class="icon icon--quote" aria-hidden="true"></i>
-                        L'humain avant tout
-                    </span>
-                    {% set delay = delay + delayGap %}
-                    <span class="values__item values__item--tertiary"
-                        data-aos="fade-up"
-                        data-aos-duration="{{ duration }}"
-                        data-aos-delay="{{ delay }}"
-                    >
-                        <i class="icon icon--quote" aria-hidden="true"></i>
-                        Rester humble et apprendre de ses erreurs
-                    </span>
-                    {% set delay = delay + delayGap %}
-                    <span class="values__item values__item--primary"
-                        data-aos="fade-up"
-                        data-aos-duration="{{ duration }}"
-                        data-aos-delay="{{ delay }}"
-                    >
-                        <i class="icon icon--quote" aria-hidden="true"></i>
-                        S'ouvrir, partager, ne rien garder pour soi
-                    </span>
-                {% endwith %}
-                <a href="{{ path('values') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
-                    <span>
-                        Découvrir nos valeurs
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
                 </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">La tribu</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+
+        <div class="page-team">
+            <div class="banner-team">
+                <div class="banner-team__title" data-aos="fade-right">
+                    <h1>Ce qui fait notre force : <span>notre tribu</span></h1>
+                </div>
+                <div class="banner-team__content">
+                    <img {{ macros.imageSrcset('/images/members/elao-team-banner.jpg', 'tribe_banner') }} alt="" data-aos="fade-in">
+                    {# TODO: once jobs are ready, wire back#}
+    {#                <a href="#" class="recruitment">#}
+    {#                    <img src="{{ asset('build/images/tipi.svg') }}" alt="">#}
+    {#                    <span class="recruitment__content">#}
+    {#                        <span class="title">Rejoindre la tribu</span>#}
+    {#                        3 offres#}
+    {#                    </span>#}
+    {#                    <i class="icon icon--square-bracket-right" aria-hidden="true"></i>#}
+    {#                    <i class="icon icon--semicolon" aria-hidden="true"></i>#}
+    {#                </a>#}
+                </div>
             </div>
 
-            <h2 class="h2--dash">L'équipe</h2>
-            <ul class="team">
-                {% for member in members %}
-                    <li class="team__member" data-aos="fade-in">
-                        <a href="{{ path('team_member', { member: member.slug }) }}">
-                            <span class="image">
-                                 <span style=" {{ macros.backgroundImageSrcset(member.tribePicture, 'tribe_picture.list') }}"></span>
-                            </span>
-                            <span class="name">{{ member.name }}</span>
-                            <span class="job">{{ member.position|nl2br }}</span>
-                            {% for c in member.certifications|filter(c => c in ['symfony', 'opquast'])[0:1] %}
-                                {% set certif = content_get('App\\Model\\Certification', c) %}
-                                <span class="certification">
-                                    <img src="{{ asset(certif.logoPath) }}" alt="" />
-                                    <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+            <div class="container--narrow">
+                <h2 class="h2--dash">Nos valeurs</h2>
+                <div class="values">
+                    {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                        <span class="values__item values__item--info"
+                            data-aos="fade-up"
+                            data-aos-duration="{{ duration }}"
+                            data-aos-delay="{{ delay }}"
+                        >
+                            <i class="icon icon--quote" aria-hidden="true"></i>
+                            L'humain avant tout
+                        </span>
+                        {% set delay = delay + delayGap %}
+                        <span class="values__item values__item--tertiary"
+                            data-aos="fade-up"
+                            data-aos-duration="{{ duration }}"
+                            data-aos-delay="{{ delay }}"
+                        >
+                            <i class="icon icon--quote" aria-hidden="true"></i>
+                            Rester humble et apprendre de ses erreurs
+                        </span>
+                        {% set delay = delay + delayGap %}
+                        <span class="values__item values__item--primary"
+                            data-aos="fade-up"
+                            data-aos-duration="{{ duration }}"
+                            data-aos-delay="{{ delay }}"
+                        >
+                            <i class="icon icon--quote" aria-hidden="true"></i>
+                            S'ouvrir, partager, ne rien garder pour soi
+                        </span>
+                    {% endwith %}
+                    <a href="{{ path('values') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Découvrir nos valeurs
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+
+                <h2 class="h2--dash">L'équipe</h2>
+                <ul class="team">
+                    {% for member in members %}
+                        <li class="team__member" data-aos="fade-in">
+                            <a href="{{ path('team_member', { member: member.slug }) }}">
+                                <span class="image">
+                                     <span style=" {{ macros.backgroundImageSrcset(member.tribePicture, 'tribe_picture.list') }}"></span>
                                 </span>
-                            {% endfor %}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
+                                <span class="name">{{ member.name }}</span>
+                                <span class="job">{{ member.position|nl2br }}</span>
+                                {% for c in member.certifications|filter(c => c in ['symfony', 'opquast'])[0:1] %}
+                                    {% set certif = content_get('App\\Model\\Certification', c) %}
+                                    <span class="certification">
+                                        <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                        <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+                                    </span>
+                                {% endfor %}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}

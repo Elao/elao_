@@ -1,0 +1,181 @@
+.hero {
+  margin: 0 0 150px;
+  padding: 170px 0 0;
+  position: relative;
+  background: $color-primary;
+
+  .container {
+    padding-bottom: 80px;
+    position: relative;
+  }
+
+  .prospect-contact {
+    position: absolute;
+    bottom: -95px;
+    right: 0;
+  }
+}
+
+.hero__image {
+  margin: unset;
+  margin-left: 40px;
+  width: calc(50% + 110px);
+  height: 415px;
+  position: absolute;
+  top: 115px;
+  right: 0;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+}
+
+.hero__intro {
+  width: 510px;
+
+  h1 {
+    margin: unset;
+    margin-bottom: 20px;
+    color: #fff;
+
+    span {
+      color: $color-tertiary;
+
+      &:last-of-type {
+        &:after {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  strong {
+    font-family: "faktum bold";
+  }
+
+  .catchphrase {
+    font-size: 18px;
+    font-family: "antikor bold";
+    color: $color-tertiary;
+  }
+
+  .description {
+    color: #fff;
+    margin-bottom: 70px;
+  }
+}
+
+.hero__content {
+  width: 620px;
+
+  ul {
+    color: #fff;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .hero {
+    padding: 80px 0 0;
+
+    .container {
+      padding-bottom: 0;
+    }
+
+    .prospect-contact {
+      position: relative;
+      margin: 0 auto;
+
+      &:before,
+      &:after {
+        font-family: "icomoon";
+        position: absolute;
+        color: $color-tertiary;
+      }
+
+      &:before {
+        top: -60px;
+        left: -150px;
+        font-size: 75px;
+        content: '\e90c';
+      }
+
+      &:after {
+        right: -150px;
+        bottom: 43px;
+        font-size: 90px;
+        content: '\e917';
+      }
+    }
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__intro,
+  .hero__content {
+    width: unset;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    * {
+      grid-column: 2 / 12;
+    }
+  }
+
+  .hero__intro {
+    h1 {
+      font-size: 40px;
+    }
+
+    .description {
+      margin: 30px 0 50px;
+      font-size: 27px;
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .hero {
+    margin: 0 0 80px;
+    padding: 60px 0 0;
+
+    .prospect-contact {
+      bottom: -50px;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  .hero__intro,
+  .hero__content {
+    * {
+      grid-column: 1 / 13;
+    }
+  }
+
+  .hero__intro {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 35px;
+    }
+
+    .description {
+      font-size: 18px;
+      margin: 20px 0 30px;
+      padding: 0;
+    }
+  }
+
+  .hero__content {
+    font-size: 16px;
+
+    ul {
+      margin: 0;
+    }
+  }
+}
+
+

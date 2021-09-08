@@ -58,7 +58,31 @@
   }
 }
 
-@media (max-width: $screen-md) {
+.project-team__member--large {
+  width: calc(50% - 30px);
+  max-width: calc(50% - 30px);
+
+  a {
+    img {
+      margin: 0 30px 0 0;
+    }
+
+    .presentation {
+      font-family: "faktum regular";
+    }
+
+    .member-header {
+      display: flex;
+      margin-bottom: 30px;
+
+      .info {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
   .project-team {
     margin-left: -5px;
     margin-right: -5px;
@@ -72,6 +96,11 @@
     a {
       min-height: 250px;
     }
+  }
+
+  .project-team__member--large {
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 }
 
@@ -98,6 +127,17 @@
       .name {
         margin: 0 0 5px;
       }
+    }
+  }
+
+  .project-team__member--large {
+    width: calc(100% - 10px);
+    max-width: calc(100% - 10px);
+
+    .member-header {
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
     }
   }
 }

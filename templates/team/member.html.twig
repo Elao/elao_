@@ -9,162 +9,164 @@
 {% block twitter_image absolute_url(asset(member.tribePicture|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('team') }}">
-                <span itemprop="name">La tribu</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">{{ member.pseudo ?? member.name }}</span>
-            </a>
-            <meta itemprop="position" content="3" />
-        </li>
-    </ol>
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('team') }}">
+                    <span itemprop="name">La tribu</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">{{ member.pseudo ?? member.name }}</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
 
-    <div class="member">
-        <div class="member__infos">
-            <h1 data-aos="fade-right">
-                Découvrez
-                <span>{{ member.name }}</span>
-            </h1>
+        <div class="member">
+            <div class="member__infos">
+                <h1 data-aos="fade-right">
+                    Découvrez
+                    <span>{{ member.name }}</span>
+                </h1>
 
-            <div class="member__image member__image--mobile">
-                {% block memberImage %}
-                <!-- image de profil : 500 x 680px -->
-                <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
-                <div class="seniority" data-aos="zoom-in">
-                    {% set interval = date('now').diff(member.integrationDate) %}
-                    {% set numberYear = interval.y %}
-                    {% set numberMonth= interval.m %}
-                    <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
-                    dans la tribu Elao <3
+                <div class="member__image member__image--mobile">
+                    {% block memberImage %}
+                    <!-- image de profil : 500 x 680px -->
+                    <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
+                    <div class="seniority" data-aos="zoom-in">
+                        {% set interval = date('now').diff(member.integrationDate) %}
+                        {% set numberYear = interval.y %}
+                        {% set numberMonth= interval.m %}
+                        <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
+                        dans la tribu Elao <3
+                    </div>
+                    {% endblock %}
                 </div>
-                {% endblock %}
-            </div>
 
-            <p class="job">{{ member.position }}</p>
+                <p class="job">{{ member.position }}</p>
 
-            <div class="description" data-aos="fade-in">
-                {{ member.bio|nl2br|markdownify|raw }}
-            </div>
+                <div class="description" data-aos="fade-in">
+                    {{ member.bio|nl2br|markdownify|raw }}
+                </div>
 
-            <div class="socials socials--inline" data-aos="fade-in">
-                <ul>
-                    {% if member.website %}
-                        <li>
-                            <a href="{{ member.website }}" target="_blank">
-                                <i class="icon icon--website" aria-hidden="true"></i>
-                                <span class="screen-reader">Site personnel de {{ member.name }}</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if member.twitter %}
-                        <li>
-                            <a href="https://twitter.com/{{ member.twitter }}" target="_blank">
-                                <i class="icon icon--twitter" aria-hidden="true"></i>
-                                <span class="screen-reader">Compte Twitter de {{ member.name }}</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if member.github %}
-                        <li>
-                            <a href="https://github.com/{{ member.github }}" target="_blank">
-                                <i class="icon icon--github" aria-hidden="true"></i>
-                                <span class="screen-reader">Compte Github de {{ member.name }}</span>
-                            </a>
-                        </li>
-                    {% endif %}
-                    {% if member.linkedIn %}
-                    <li>
-                        <a href="https://www.linkedin.com/in/{{ member.linkedIn }}" target="_blank">
-                            <i class="icon icon--linkedin" aria-hidden="true"></i>
-                            <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
-                        </a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-
-            <!-- Facultatif -->
-            {% if member.certifications is not empty %}
-                <div class="certification-list" data-aos="zoom-in">
+                <div class="socials socials--inline" data-aos="fade-in">
                     <ul>
-                        {% for c in member.certifications %}
-                            {% set certif = content_get('App\\Model\\Certification', c) %}
-                            <li class="certification">
-                                <img src="{{ asset(certif.logoPath) }}" alt="" />
-                                <p>
-                                    {{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span>
-                                </p>
+                        {% if member.website %}
+                            <li>
+                                <a href="{{ member.website }}" target="_blank">
+                                    <i class="icon icon--website" aria-hidden="true"></i>
+                                    <span class="screen-reader">Site personnel de {{ member.name }}</span>
+                                </a>
                             </li>
-                        {% endfor %}
+                        {% endif %}
+                        {% if member.twitter %}
+                            <li>
+                                <a href="https://twitter.com/{{ member.twitter }}" target="_blank">
+                                    <i class="icon icon--twitter" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte Twitter de {{ member.name }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if member.github %}
+                            <li>
+                                <a href="https://github.com/{{ member.github }}" target="_blank">
+                                    <i class="icon icon--github" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte Github de {{ member.name }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if member.linkedIn %}
+                        <li>
+                            <a href="https://www.linkedin.com/in/{{ member.linkedIn }}" target="_blank">
+                                <i class="icon icon--linkedin" aria-hidden="true"></i>
+                                <span class="screen-reader">Compte Linkedin de {{ member.name }}</span>
+                            </a>
+                        </li>
+                        {% endif %}
                     </ul>
                 </div>
-            {% endif %}
-
-            {% if member.emojis is not empty %}
-                <ul class="interests" data-aos="fade-in">
-                    {% for emoji in member.emojis %}
-                        <li>{{ emoji }}</li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-        </div>
-
-        <div class="member__image" data-aos="fade-left">
-            {{ block('memberImage') }}
-        </div>
-
-        {% if articles is not empty or projects is not empty%}
-            <div class="member__contributions">
-                {% if projects is not empty %}
-                    <div class="article-list">
-                        <h2 class="h2--dash">Ses derniers projets</h2>
-                        {% for project in projects %}
-                            <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
-                                <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="miniature-inline__image">
-                                    <span class="image" style="{{ macros.backgroundImageSrcset(project.images|first, 'case_study_thumbnail.xs') }}"></span>
-                                </a>
-                                <div class="miniature-inline__content">
-                                    <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="title">{{ project.title }}</a>
-                                </div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
 
                 <!-- Facultatif -->
-                {% if articles is not empty %}
-                    <div class="article-list">
-                        <h2 class="h2--dash">Ses derniers articles</h2>
-                        {% for article in articles %}
-                            <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
-                                <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                                    <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs') }}"></span>
-                                </a>
-                                <div class="miniature-inline__content">
-                                    <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
-                                </div>
-                            </div>
-                        {% endfor %}
+                {% if member.certifications is not empty %}
+                    <div class="certification-list" data-aos="zoom-in">
+                        <ul>
+                            {% for c in member.certifications %}
+                                {% set certif = content_get('App\\Model\\Certification', c) %}
+                                <li class="certification">
+                                    <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                    <p>
+                                        {{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span>
+                                    </p>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 {% endif %}
+
+                {% if member.emojis is not empty %}
+                    <ul class="interests" data-aos="fade-in">
+                        {% for emoji in member.emojis %}
+                            <li>{{ emoji }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
             </div>
-        {% endif %}
 
+            <div class="member__image" data-aos="fade-left">
+                {{ block('memberImage') }}
+            </div>
+
+            {% if articles is not empty or projects is not empty%}
+                <div class="member__contributions">
+                    {% if projects is not empty %}
+                        <div class="article-list">
+                            <h2 class="h2--dash">Ses derniers projets</h2>
+                            {% for project in projects %}
+                                <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
+                                    <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="miniature-inline__image">
+                                        <span class="image" style="{{ macros.backgroundImageSrcset(project.images|first, 'case_study_thumbnail.xs') }}"></span>
+                                    </a>
+                                    <div class="miniature-inline__content">
+                                        <a href="{{ path('case_study', { caseStudy: project.slug }) }}" class="title">{{ project.title }}</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <!-- Facultatif -->
+                    {% if articles is not empty %}
+                        <div class="article-list">
+                            <h2 class="h2--dash">Ses derniers articles</h2>
+                            {% for article in articles %}
+                                <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
+                                    <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
+                                        <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs') }}"></span>
+                                    </a>
+                                    <div class="miniature-inline__content">
+                                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}
+
+        </div>
+
+        <aside class="bricks">
+            {% include 'partials/brick-visit.html.twig' %}
+            {% include 'partials/brick-contact.html.twig' %}
+        </aside>
     </div>
-
-    <aside class="bricks">
-        {% include 'partials/brick-visit.html.twig' %}
-        {% include 'partials/brick-contact.html.twig' %}
-    </aside>
 {% endblock %}

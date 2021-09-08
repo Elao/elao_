@@ -55,6 +55,18 @@
   }
 }
 
+.btn--light {
+  color: #fff;
+  background: $color-light;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: darken($color-light, 5%);
+  }
+
+}
+
 .btn--animated {
   .icon {
     width: 40px;
@@ -115,6 +127,13 @@
     .icon .base,
     .icon .tip {
       stroke: $color-primary;
+    }
+  }
+
+  &.btn--light {
+    .icon .base,
+    .icon .tip {
+      stroke: $color-brand;
     }
   }
 }

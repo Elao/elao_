@@ -37,16 +37,16 @@
             {% endif %}
         {% endfor %}
         </h1>
-
+        
         {% if term.logo is not empty %}
             <div class="banner-technology__image">
                 <img src="{{ asset(term.logo) }}" alt="logo de {{ term.name }}" class="logo">
             </div>
         {% endif %}
+          
     </div>
 
     <div class="page-technology">
-
         {{ term.content|raw }}
 
         {% if caseStudies is not empty %}
@@ -85,10 +85,8 @@
                 {% endfor %}
             </ul>
         {% endif %}
-
         <div class="bricks">
             {% include 'partials/brick-development.html.twig' %}
         </div>
     </div>
-
 {% endblock content %}

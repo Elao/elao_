@@ -11,7 +11,7 @@ credits:            { name: "slidebean", url: "https://unsplash.com/@slidebean" 
 tags:               ["Organisation agile", "Gestion de projet"]
 categories:         ["methodo"]
 authors:            ["cmozzati"]
-tweetId:            ""
+tweetId:            "1435891278315671554"
 ---
 
 ## Pas de chef·fe de projet, vraiment ?

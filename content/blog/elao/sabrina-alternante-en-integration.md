@@ -22,9 +22,13 @@ Après avoir explorer en autodidacte pendant plusieurs mois, j'ai intégrer une 
 
 ## Qu'est ce qui t'a donné envie de faire du web ?
 
+J’ai d’abord commencé par compléter le maximum de cours sur Khan Academy avant de décider de me former et d’en faire mon métier. En prenant le temps d’explorer la programmation informatique à mon rythme, j’ai compris que c’était un domaine tout aussi créatif que le cinéma ou le théâtre. De plus, les technologies et les outils que nous utilisons changent constamment et donc d'être continuellement en apprentissage.
+
+Ayant vécu une grande partie de ma jeunesse dans divers pays africains, j'ai été sensible au fait que les filles/femmes doivent surmonter de nombreux obstacles rien que pour avoir l'opportunité d'aller à l'école. Plus important encore, le domaine de la technologie et l'informatique sont des domaines qui sont rarement associés aux femmes. C'est aussi avec un devoir d'émancipation et de progrès social que je me lance dans le web, et j'espère inspirer à casser les codes et se lancer.
+
+Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection?🤓
+
 <video src="https://media.giphy.com/media/55zYS1qxfTXFe/giphy.mp4?cid=ecf05e47lmw7xgbjs2pislcy4b0k5rh5mf4gx94lgzvrxc0p&rid=giphy.mp4&ct=g" autoplay loop></video>
-
-
 
 
 ## Qu'est-ce que tu fais au quotidien chez Elao ?

@@ -1,0 +1,17 @@
+.banner-glossary {
+  display: flex;
+}
+
+.banner-glossary__content {
+  h1 {
+    margin-left: 0;
+  }
+}
+
+.banner-glossary__image {
+  margin-left: 40px;
+
+  // Todo : remove width and min-width (here for placeholder purposes)
+  min-width: 620px;
+}
+

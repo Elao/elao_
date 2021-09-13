@@ -1,0 +1,51 @@
+.glossary-list {
+  margin: 0;
+  padding: 0;
+}
+
+.glossary-list__item {
+  display: flex;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  a {
+    font-family: 'Antikor Bold';
+    font-size: 20px;
+    color: $color-info;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-dark;
+    }
+  }
+}
+
+// [class^="glossary-list__item--"],
+// [class*=" glossary-list__item--"] {
+//   &:first-of-type {
+//     background-color: tomato;
+//   }
+// }
+
+// .glossary-list__item--a {
+//   &:first-of-child { background-color: gold }
+
+// }
+
+.glossary-list__item--0,
+.glossary-list__item--0 ~ .glossary-list__item--a,
+.glossary-list__item--a ~ .glossary-list__item--b,
+.glossary-list__item--b ~ .glossary-list__item--c,
+.glossary-list__item--c ~ .glossary-list__item--d,
+.glossary-list__item--d ~ .glossary-list__item--e,
+.glossary-list__item--e ~ .glossary-list__item--f,
+.glossary-list__item--f ~ .glossary-list__item--g,
+.glossary-list__item--g ~ .glossary-list__item--h,
+.glossary-list__item--h ~ .glossary-list__item--i {
+  background-color: tomato;
+}

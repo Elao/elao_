@@ -1,9 +1,11 @@
 .glossary-list {
   margin: 0;
   padding: 0;
+  min-width: 33.33%;
 }
 
 .glossary-list__item {
+  padding-left: 100px;
   display: flex;
 
   &:before,
@@ -11,10 +13,15 @@
     display: none;
   }
 
+  &:first-of-type {
+    margin-top: 0 !important;
+  }
+
   a {
     font-family: 'Antikor Bold';
     font-size: 20px;
     color: $color-info;
+    line-height: 1.8;
     border: none;
 
     &:hover,
@@ -25,27 +32,72 @@
   }
 }
 
-// [class^="glossary-list__item--"],
-// [class*=" glossary-list__item--"] {
-//   &:first-of-type {
-//     background-color: tomato;
-//   }
-// }
+[class*="glossary-list__item--"] {
+  margin-top: 50px !important;
+  position: relative;
 
-// .glossary-list__item--a {
-//   &:first-of-child { background-color: gold }
+  &:before {
+    height: unset;
+    width: unset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    font-family: 'faktum bold';
+    font-size: 72px;
+    color: $color-secondary;
+    line-height: 1;
+    text-transform: uppercase;
+    border: none;
+  }
+}
 
-// }
+$characters: (
+  0: '#',
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  e: 'e',
+  f: 'f',
+  g: 'g',
+  h: 'h',
+  i: 'i',
+  j: 'j',
+  k: 'k',
+  l: 'l',
+  m: 'm',
+  n: 'n',
+  o: 'o',
+  p: 'p',
+  q: 'q',
+  r: 'r',
+  s: 's',
+  t: 't',
+  u: 'u',
+  v: 'v',
+  w: 'w',
+  x: 'x',
+  y: 'y',
+  z: 'z'
+);
 
-.glossary-list__item--0,
-.glossary-list__item--0 ~ .glossary-list__item--a,
-.glossary-list__item--a ~ .glossary-list__item--b,
-.glossary-list__item--b ~ .glossary-list__item--c,
-.glossary-list__item--c ~ .glossary-list__item--d,
-.glossary-list__item--d ~ .glossary-list__item--e,
-.glossary-list__item--e ~ .glossary-list__item--f,
-.glossary-list__item--f ~ .glossary-list__item--g,
-.glossary-list__item--g ~ .glossary-list__item--h,
-.glossary-list__item--h ~ .glossary-list__item--i {
-  background-color: tomato;
+@each $character, $character-icon in $characters {
+  .glossary-list__item--#{$character} {
+    &:before {
+      content: $character-icon;
+    }
+  }
+}
+
+@media(max-width: $screen-sm) {
+  .glossary-list {
+    min-width: 100%;
+  }
+
+  [class*="glossary-list__item--"] {
+    &:first-of-type {
+      margin-top: 50px !important;
+    }
+  }
 }

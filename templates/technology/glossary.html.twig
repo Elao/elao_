@@ -1,57 +1,188 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">Glossaire</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
+    <div class="page-glossary">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Glossaire</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
 
-    <div class="banner-glossary">
-        <div class="banner-glossary__content">
-            <h1>
-                Glossaire
-                <span>des projets web</span>
-            </h1>
-            <p>Notre quotidien est fait de termes qui le rendent parfois un peu inaccessible. Si c’est un peu comme notre deuxième langue (et encore, il n’est pas impossible qu’on n’arrive pas toujours à se comprendre 🙈), ce n’est pas nécessairement le cas de nos clients.</p>
+        <div class="banner-glossary">
+            <div class="banner-glossary__content">
+                <h1>
+                    Glossaire
+                    <span>des projets web</span>
+                </h1>
+                <p>Notre quotidien est fait de termes qui le rendent parfois un peu inaccessible. Si c’est un peu comme notre deuxième langue (et encore, il n’est pas impossible qu’on n’arrive pas toujours à se comprendre 🙈), ce n’est pas nécessairement le cas de nos clients.</p>
+            </div>
+            <img src="https://media.giphy.com/media/IbI3nr80Xo3Hq/giphy.gif?cid=ecf05e47fcsgvq6wyfbdbmhmqonqznd8duixqvi7gisys084&rid=giphy.gif&ct=g" alt="" class="banner-glossary__image">
         </div>
-        <img src="https://media.giphy.com/media/IbI3nr80Xo3Hq/giphy.gif?cid=ecf05e47fcsgvq6wyfbdbmhmqonqznd8duixqvi7gisys084&rid=giphy.gif&ct=g" alt="" class="banner-glossary__image">
-    </div>
 
-    <div class="glossary">
-        <ul class="glossary-list">
-            <li class="glossary-list__item glossary-list__item--0">
-                <a href="#">2FA</a>
+        <!--
+            Todo glossaire :
+
+            - séparer .glossary en 3 blocs qui contiennent le même nombre d'item
+            - si le nombre d'items n'est pas divisible par 3, la 3e colonne est celle qui aura le moins d'items
+            - ajouter la classe .glossary-list__item--0, glossary-list__item--a, etc. sur le premier item commençant par la lettre
+
+            Wishlist 🎩✨ :
+            - Est-ce que c'est possible d'éviter de couper à l'intérieur d'un groupe de lettre ? L'idéal serait de toujours commencer une nouvelle colonne par une nouvelle lettre (maquette : https://projects.invisionapp.com/d/?origin=v7?origin=v7?origin=v7#/console/21646301/458112030/preview?scrollOffset=0)
+            - Du coup ça serait moins grave si les 3 colonnes ne sont pas égales
+
+            Exemple :
+            A  Accessibilité     C  Cahier des charges     E  Edge case
+               Accesseo             Cookie                    ElasticSearch
+               Algolia           D  Docker                 F  ...
+            B  Backlog              Deploy                    ...
+               Build                DevOps
+               Back-office
+               BEM
+        -->
+
+        <div class="glossary">
+            <ul class="glossary-list">
+                <li class="glossary-list__item glossary-list__item--0">
+                    <a href="#">2FA</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--a">
+                    <a href="#">Accessibilité</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Accesseo</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--b">
+                    <a href="#">Backlog</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Build</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--c">
+                    <a href="#">Cahier des charges</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Cookie</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--d">
+                    <a href="#">Docker</a>
+                </li>
+            </ul>
+            <ul class="glossary-list">
+                <li class="glossary-list__item">
+                    <a href="#">Deploy</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">DevOps</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Docker</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--e">
+                    <a href="#">Edge case</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Elastic search</a>
+                </li>
+                <li class="glossary-list__item glossary-list__item--e">
+                    <a href="#">Edge case</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Elastic search</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Edge case</a>
+                </li>
+            </ul>
+            <ul class="glossary-list">
+                <li class="glossary-list__item glossary-list__item--f">
+                    <a href="#">Front-office</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Front-office</a>
+                </li>
+                <li class="glossary-list__item">
+                    <a href="#">Front-office</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="need-accompaniement">
+            Besoin d'accompagnement pour vos projets web ?
+            <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
+                <span>
+                    Nous contacter
+                    {% include 'partials/svg-arrow.html.twig' %}
+                </span>
+            </a>
+        </div>
+
+        <h2 class="h2--dash">Pour aller encore plus loin dans le quotidien d'un projet web, découvrez notre blog</h2>
+
+        <ul class="article-list">
+            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
+                <a href="#" class="miniature__image">
+                    <span class="image" style="background: #f1f1f1 url();
+                                               background: #f1f1f1 -webkit-image-set();
+                                               background: #f1f1f1 -moz-image-set();
+                                               background: #f1f1f1 -ms-image-set();
+                                               background: #f1f1f1 image-set();">
+                    </span>
+                </a>
+                <div class="miniature__content">
+                    <a href="#" class="title">Article</a>
+                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
+                </div>
             </li>
-            <li class="glossary-list__item glossary-list__item--a">
-                <a href="#">Accessibilité</a>
+            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
+                <a href="#" class="miniature__image">
+                    <span class="image" style="background: #f1f1f1 url();
+                                               background: #f1f1f1 -webkit-image-set();
+                                               background: #f1f1f1 -moz-image-set();
+                                               background: #f1f1f1 -ms-image-set();
+                                               background: #f1f1f1 image-set();">
+                    </span>
+                </a>
+                <div class="miniature__content">
+                    <a href="#" class="title">Article</a>
+                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
+                </div>
             </li>
-            <li class="glossary-list__item">
-                <a href="#">Accesseo</a>
+            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
+                <a href="#" class="miniature__image">
+                    <span class="image" style="background: #f1f1f1 url();
+                                               background: #f1f1f1 -webkit-image-set();
+                                               background: #f1f1f1 -moz-image-set();
+                                               background: #f1f1f1 -ms-image-set();
+                                               background: #f1f1f1 image-set();">
+                    </span>
+                </a>
+                <div class="miniature__content">
+                    <a href="#" class="title">Article</a>
+                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
+                </div>
             </li>
-            <li class="glossary-list__item">
-                <a href="#">Algolia</a>
-            </li>
-            <li class="glossary-list__item glossary-list__item--b">
-                <a href="#">Backlog</a>
-            </li>
-            <li class="glossary-list__item">
-                <a href="#">Back-office</a>
-            </li>
-            <li class="glossary-list__item">
-                <a href="#">BEM</a>
-            </li>
-            <li class="glossary-list__item">
-                <a href="#">Build</a>
+            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
+                <a href="#" class="miniature__image">
+                    <span class="image" style="background: #f1f1f1 url();
+                                               background: #f1f1f1 -webkit-image-set();
+                                               background: #f1f1f1 -moz-image-set();
+                                               background: #f1f1f1 -ms-image-set();
+                                               background: #f1f1f1 image-set();">
+                    </span>
+                </a>
+                <div class="miniature__content">
+                    <a href="#" class="title">Article</a>
+                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
+                </div>
             </li>
         </ul>
     </div>

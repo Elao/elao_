@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Glossaire</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+
+    <div class="banner-glossary">
+        <div class="banner-glossary__content">
+            <h1>
+                Glossaire
+                <span>des projets web</span>
+            </h1>
+            <p>Notre quotidien est fait de termes qui le rendent parfois un peu inaccessible. Si c’est un peu comme notre deuxième langue (et encore, il n’est pas impossible qu’on n’arrive pas toujours à se comprendre 🙈), ce n’est pas nécessairement le cas de nos clients.</p>
+        </div>
+        <img src="https://media.giphy.com/media/IbI3nr80Xo3Hq/giphy.gif?cid=ecf05e47fcsgvq6wyfbdbmhmqonqznd8duixqvi7gisys084&rid=giphy.gif&ct=g" alt="" class="banner-glossary__image">
+    </div>
+
+    <div class="glossary">
+        <ul class="glossary-list">
+            <li class="glossary-list__item glossary-list__item--0">
+                <a href="#">2FA</a>
+            </li>
+            <li class="glossary-list__item glossary-list__item--a">
+                <a href="#">Accessibilité</a>
+            </li>
+            <li class="glossary-list__item">
+                <a href="#">Accesseo</a>
+            </li>
+            <li class="glossary-list__item">
+                <a href="#">Algolia</a>
+            </li>
+            <li class="glossary-list__item glossary-list__item--b">
+                <a href="#">Backlog</a>
+            </li>
+            <li class="glossary-list__item">
+                <a href="#">Back-office</a>
+            </li>
+            <li class="glossary-list__item">
+                <a href="#">BEM</a>
+            </li>
+            <li class="glossary-list__item">
+                <a href="#">Build</a>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

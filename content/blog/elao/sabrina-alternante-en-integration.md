@@ -42,6 +42,13 @@ On aime travailler en équipe chez Elao, alors je sollicite l'aide de Amélire p
 
 ### Et quand tu ne travailles pas ?
 
+Lorsque je ne travaille pas, j’aime faire des activités qui s’éloignent le plus possible de l’utilisation d’un écran.
+
+<video src="https://media.giphy.com/media/l0ExwVI5tTEnmGIaQ/giphy.mp4?cid=ecf05e47v5s9pnwms5kh34aqk6g08mi43dvnfpa7rzryktp8&rid=giphy.mp4&ct=g" autoplay loop></video>
+
+Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoir méditer dans un coin du bureau. Je chante souvent, mais surtout lorsque personne ne m’observe ( je suis un peu timide 🙈).
+
+Je me suis récemment remise à dessiner car j’aime utiliser mes mains pour créer.
 
 ## L'interview :fast-parrot:
 

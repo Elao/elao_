@@ -1,4 +1,5 @@
 .banner-glossary {
+  margin: 0 0 100px;
   display: flex;
 }
 
@@ -10,8 +11,35 @@
 
 .banner-glossary__image {
   margin-left: 40px;
-
-  // Todo : remove width and min-width (here for placeholder purposes)
-  min-width: 620px;
 }
 
+@media (max-width: $screen-md) {
+  .banner-glossary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-glossary__content {
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-glossary__image {
+    margin: 0;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner-glossary {
+    margin: 0 0 30px;
+  }
+
+  .banner-glossary__image {
+    width: 100%;
+
+    // remove when placeholder has been replaced
+    min-width: unset !important;
+  }
+}

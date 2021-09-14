@@ -1,10 +1,13 @@
 .glossary-list {
   margin: 0;
   padding: 0;
+  width: 33.33%;
   min-width: 33.33%;
 }
 
 .glossary-list__item {
+  margin-bottom: 15px;
+  padding-right: 30px;
   padding-left: 100px;
   display: flex;
 
@@ -21,7 +24,7 @@
     font-family: 'Antikor Bold';
     font-size: 20px;
     color: $color-info;
-    line-height: 1.8;
+    line-height: 1.3;
     border: none;
 
     &:hover,
@@ -90,8 +93,25 @@ $characters: (
   }
 }
 
-@media(max-width: $screen-sm) {
+@media(max-width: $screen-md) {
+  .glossary-list__item {
+    padding-left: 60px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  [class*="glossary-list__item--"] {
+    &:before {
+      font-size: 40px;
+    }
+  }
+}
+
+@media(max-width: $screen-xs) {
   .glossary-list {
+    width: 100%;
     min-width: 100%;
   }
 

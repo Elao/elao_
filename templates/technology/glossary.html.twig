@@ -25,8 +25,12 @@
                 </h1>
                 <p>Notre quotidien est fait de termes qui le rendent parfois un peu inaccessible. Si c’est un peu comme notre deuxième langue (et encore, il n’est pas impossible qu’on n’arrive pas toujours à se comprendre 🙈), ce n’est pas nécessairement le cas de nos clients.</p>
             </div>
-            <img src="https://media.giphy.com/media/IbI3nr80Xo3Hq/giphy.gif?cid=ecf05e47fcsgvq6wyfbdbmhmqonqznd8duixqvi7gisys084&rid=giphy.gif&ct=g" alt="" class="banner-glossary__image">
+            <img src="https://media.giphy.com/media/IbI3nr80Xo3Hq/giphy.gif?cid=ecf05e47fcsgvq6wyfbdbmhmqonqznd8duixqvi7gisys084&rid=giphy.gif&ct=g"
+                 alt=""
+                 class="banner-glossary__image"
+                 style="min-width: 620px;">
         </div>
+        <!-- Todo : remove placeholder inline-style ⬆ -->
 
         <!--
             Todo glossaire :
@@ -37,7 +41,7 @@
 
             Wishlist 🎩✨ :
             - Est-ce que c'est possible d'éviter de couper à l'intérieur d'un groupe de lettre ? L'idéal serait de toujours commencer une nouvelle colonne par une nouvelle lettre (maquette : https://projects.invisionapp.com/d/?origin=v7?origin=v7?origin=v7#/console/21646301/458112030/preview?scrollOffset=0)
-            - Du coup ça serait moins grave si les 3 colonnes ne sont pas égales
+            - Du coup ça serait moins grave si les 3 colonnes ne sont pas tout à fait égales
 
             Exemple :
             A  Accessibilité     C  Cahier des charges     E  Edge case
@@ -185,5 +189,12 @@
                 </div>
             </li>
         </ul>
+
+        <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
+            <span>
+                Tous les articles
+                {% include 'partials/svg-arrow.html.twig' %}
+            </span>
+        </a>
     </div>
 {% endblock %}

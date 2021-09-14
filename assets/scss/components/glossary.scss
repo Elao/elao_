@@ -3,3 +3,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+@media (max-width: $screen-xs) {
+  .glossary {
+    margin: 0 0 50px;
+  }
+}

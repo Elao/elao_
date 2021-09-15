@@ -22,9 +22,9 @@ Après avoir explorer en autodidacte pendant plusieurs mois, j'ai intégrer une 
 
 ## Qu'est ce qui t'a donné envie de faire du web ?
 
-J’ai d’abord commencé par compléter le maximum de cours sur Khan Academy avant de décider de me former et d’en faire mon métier. En prenant le temps d’explorer la programmation informatique à mon rythme, j’ai compris que c’était un domaine tout aussi créatif que le cinéma ou le théâtre. De plus, les technologies et les outils que nous utilisons changent constamment et donc d'être continuellement en apprentissage.
+J’ai d’abord commencé par compléter le maximum de cours sur Khan Academy avant de décider de me former et d’en faire mon métier. En prenant le temps d’explorer la programmation informatique à mon rythme, j’ai compris que c’était un domaine tout aussi créatif que le cinéma ou le théâtre. De plus, les technologies et les outils que nous utilisons changent constamment, ce qui me permet d'être continuellement en apprentissage.
 
-Ayant vécu une grande partie de ma jeunesse dans divers pays africains, j'ai été sensible au fait que les filles/femmes doivent surmonter de nombreux obstacles rien que pour avoir l'opportunité d'aller à l'école. Plus important encore, le domaine de la technologie et l'informatique sont des domaines qui sont rarement associés aux femmes. C'est aussi avec un devoir d'émancipation et de progrès social que je me lance dans le web, et j'espère inspirer à casser les codes et se lancer.
+Ayant vécu une grande partie de ma vie dans divers pays africains, j'ai été sensible au fait que les femmes doivent surmonter de nombreux obstacles rien que pour avoir l'opportunité d'étudier. Plus important encore, le domaine de la technologie et l'informatique sont des domaines qui sont rarement associés aux femmes. C'est aussi avec un devoir d'émancipation et de progrès social que je me lance dans le web. J'espère inspirer, casser les codes et motiver d'autres à se lancer.
 
 Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection?🤓
 
@@ -44,17 +44,26 @@ On aime travailler en équipe chez Elao, alors je sollicite l'aide de Amélire p
 
 Lorsque je ne travaille pas, j’aime faire des activités qui s’éloignent le plus possible de l’utilisation d’un écran.
 
-<video src="https://media.giphy.com/media/l0ExwVI5tTEnmGIaQ/giphy.mp4?cid=ecf05e47v5s9pnwms5kh34aqk6g08mi43dvnfpa7rzryktp8&rid=giphy.mp4&ct=g" autoplay loop></video>
-
 Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoir méditer dans un coin du bureau. Je chante souvent, mais surtout lorsque personne ne m’observe ( je suis un peu timide 🙈).
 
-Je me suis récemment remise à dessiner car j’aime utiliser mes mains pour créer.
+Je me suis récemment remise à dessiner car j’aime utiliser des mains et divers outils (crayon, stylo, aquarelle, etc...) pour créer.
+
+![](images/posts/2021/interview/sab-ludo-dessin.jpg)
 
 ## L'interview :fast-parrot:
 
 ### Tes 3 emojis préf du Slack
 
+Mon émoji préféré est "amaze face", il représente l'étonnement et je l'utilise souvent parce que j'apprends plein de choses avec l'équipe d'Elao.
+
+Mes deux autres émojis préferés font référence à des blagues internes que je ne peux divulguer. It's top secret.
+
+<video src="https://media.giphy.com/media/NdKVEei95yvIY/giphy.mp4?cid=ecf05e47p9x7qmntm1wr78h6jl7rea8gbss2tkt2h0jkqvvj&rid=giphy.mp4&ct=g" autoplay loop></video>
+
 ### Les 3 trucs qui traînent toujours autour de ton bureau
+
+On peut toujours trouver une bouteille d'eau, un éléphant en perles, une petite plante, des posts-its et des stylos.
+Quand j'ai besoin de faire beaucoup de pauses créatives, on y trouve un livre de coloriage, des feutres ou des crayons.
 
 ### Le projet sur lequel tu aimerais vraiment travailler
 

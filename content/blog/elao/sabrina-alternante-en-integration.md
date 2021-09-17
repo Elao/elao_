@@ -46,7 +46,7 @@ Lorsque je ne travaille pas, j’aime faire des activités qui s’éloignent le
 
 Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoir méditer dans un coin du bureau. Je chante souvent, mais surtout lorsque personne ne m’observe ( je suis un peu timide 🙈).
 
-Je me suis récemment remise à dessiner car j’aime utiliser des mains et divers outils (crayon, stylo, aquarelle, etc...) pour créer.
+Je me suis récemment remise à dessiner car j’aime utiliser mes mains et divers outils (crayon, stylo, aquarelle, etc...) pour créer.
 
 ![](images/posts/2021/interview/sab-ludo-dessin.jpg)
 
@@ -65,13 +65,16 @@ Mes deux autres émojis préferés font référence à des blagues internes que 
 On peut toujours trouver une bouteille d'eau, un éléphant en perles, une petite plante, des posts-its et des stylos.
 Quand j'ai besoin de faire beaucoup de pauses créatives, on y trouve un livre de coloriage, des feutres ou des crayons.
 
-### Le projet sur lequel tu aimerais vraiment travailler
-
 ### Plutôt Slack ou call ?
+
+Les deux !
 
 ### Thé ou Café ?
 
+<video src="https://media.giphy.com/media/S6TqDjp87DgYeFKZLc/giphy.mp4?cid=ecf05e47oct3jpb0ghwqnbk7rqntrq1d0t7l5tdxatuwsysd&rid=giphy.mp4&ct=g" autoplay loop></video>
+
 ### PHP ou JS ?
 
+Team intégration web
 
 Merci Sabrina, de t'être prêtée au jeu de l'interview et bienvenue chez nous !

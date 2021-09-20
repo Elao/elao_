@@ -30,7 +30,6 @@ Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la
 
 <video src="https://media.giphy.com/media/55zYS1qxfTXFe/giphy.mp4?cid=ecf05e47lmw7xgbjs2pislcy4b0k5rh5mf4gx94lgzvrxc0p&rid=giphy.mp4&ct=g" autoplay loop></video>
 
-
 ## Qu'est-ce que tu fais au quotidien chez Elao ?
 
 Généralement, je reçois une maquette de la part de Amélie ou de Christelle, que je vais ensuite intégrer avec du HTML et du CSS.

@@ -26,7 +26,7 @@ J’ai d’abord commencé par compléter le maximum de cours sur Khan Academy a
 
 Ayant vécu une grande partie de ma vie dans divers pays africains, j'ai été sensible au fait que les femmes doivent surmonter de nombreux obstacles rien que pour avoir l'opportunité d'étudier. Plus important encore, le domaine de la technologie et l'informatique sont des domaines qui sont rarement associés aux femmes. C'est aussi avec un devoir d'émancipation et de progrès social que je me lance dans le web. J'espère inspirer, casser les codes et motiver d'autres à se lancer.
 
-Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection?🤓
+Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection? 🤓
 
 <video src="https://media.giphy.com/media/55zYS1qxfTXFe/giphy.mp4?cid=ecf05e47lmw7xgbjs2pislcy4b0k5rh5mf4gx94lgzvrxc0p&rid=giphy.mp4&ct=g" autoplay loop></video>
 

@@ -18,7 +18,7 @@ Bienvenue sur ma page de présentation!🪴
 <video src="https://media.giphy.com/media/yyVph7ANKftIs/giphy.mp4?cid=ecf05e47jbcbrar37xaidtdgp1w0pro1qg2ry7az1t37oksp&rid=giphy.mp4&ct=g" autoplay loop></video>
 
 Avant l'informatique j'étais dans le domaine du théâtre et du cinéma. J'ai écris ma première ligne de code en mars 2020, au début du premier confinement.
-Après avoir explorer en autodidacte pendant plusieurs mois, j'ai intégrer une école et compléter une formation socle de trois mois centrée sur l'apprentissage de l'environnement JavaScript et la réalisation de projets.
+Après avoir exploré en autodidacte pendant plusieurs mois, j'ai intégré une école et complété une formation socle de trois mois centrée sur l'apprentissage de l'environnement JavaScript et la réalisation de projets.
 
 ## Qu'est ce qui t'a donné envie de faire du web ?
 

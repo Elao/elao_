@@ -44,7 +44,7 @@ On aime travailler en équipe chez Elao, alors je sollicite l'aide de Amélire p
 
 Lorsque je ne travaille pas, j’aime faire des activités qui s’éloignent le plus possible de l’utilisation d’un écran.
 
-Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoir méditer dans un coin du bureau. Je chante souvent, mais surtout lorsque personne ne m’observe ( je suis un peu timide 🙈).
+Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoir méditer dans un coin du bureau. Je chante souvent, mais surtout lorsque personne ne m’observe (je suis un peu timide 🙈).
 
 Je me suis récemment remise à dessiner car j’aime utiliser mes mains et divers outils (crayon, stylo, aquarelle, etc...) pour créer.
 

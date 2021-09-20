@@ -37,7 +37,7 @@ Je dois faire attention à respecter la charte graphique fournie lors de cette �
 
 Ensuite, je m’assure de la validité du code HTML et CSS ainsi que de sa compatibilité avec tous les navigateurs et formats d’écran (les ordinateurs de bureau, les smartphones, les tablettes, etc…).
 
-On aime travailler en équipe chez Elao, alors je sollicite l'aide de Amélire pour peaufiner l’intégration et vérifier l’accessibilité avant de passer la main aux développeurs qui s’occuperont de câbler tout ça avec des données.
+On aime travailler en équipe chez Elao, alors je sollicite l'aide de Amélie pour peaufiner l’intégration et vérifier l’accessibilité avant de passer la main aux développeurs qui s’occuperont de câbler tout ça avec des données.
 
 ### Et quand tu ne travailles pas ?
 

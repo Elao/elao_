@@ -61,7 +61,7 @@ Mes deux autres émojis préferés font référence à des blagues internes que 
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 
-On peut toujours trouver une bouteille d'eau, un éléphant en perles, une petite plante, des posts-its et des stylos.
+On peut toujours trouver une bouteille d'eau, un éléphant en perles, une petite plante, des post-it et des stylos.
 Quand j'ai besoin de faire beaucoup de pauses créatives, on y trouve un livre de coloriage, des feutres ou des crayons.
 
 ### Plutôt Slack ou call ?

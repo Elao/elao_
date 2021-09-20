@@ -5,7 +5,7 @@ lastModified: ~
 description: ''
 authors: [cmozzati, sludovicdelys]
 tags: [elao, team]
-thumbnail: images/posts/thumbnails/trame-itw.jpg
+thumbnail: images/posts/thumbnails/sabrina-ludo-samoens.jpg
 tweetId: ~
 ---
 

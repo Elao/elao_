@@ -10,7 +10,7 @@ websiteUrl: http://www.curvytron.com
 clients: Elao + BlendWebMix
 size: 2 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["nodejs", "javascript"]
+terms: ["nodejs", "javascript"]
 members: ["tjarrand"]
 images: ["images/casestudies/headers/curvytron-banner.jpg"]
 ---

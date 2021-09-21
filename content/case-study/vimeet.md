@@ -10,7 +10,7 @@ websiteUrl: https://vimeet.events
 clients: Proximum Group
 size: 2 ans
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "elasticsearch", "vue-js"]
+terms: ["symfony", "elasticsearch", "vue-js"]
 members: ["mcolin", "ndievart", "rhanna"]
 images: ["images/casestudies/headers/vimeet-banner.jpg"]
 ---

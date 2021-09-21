@@ -10,7 +10,7 @@ websiteUrl: http://sortir.orleans-metropole.fr/
 clients: Mairie d'Orléans
 size: 2 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "vue-js", "html", "css"]
+terms: ["symfony", "vue-js", "html", "css"]
 members: ["mcolin"]
 images: ["images/casestudies/headers/onsort-banner.jpg"]
 ---

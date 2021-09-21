@@ -11,7 +11,7 @@ shortDescription: "Librairie musicale pour les professionnels"
 clients: Musique & Music
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html", "css", "svg"]
+terms: ["symfony", "react", "html", "css", "svg"]
 members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
 images: ["images/casestudies/headers/musique-music-banner.jpg"]
 ---

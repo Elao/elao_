@@ -97,24 +97,10 @@
                 </li>
                 <li class="tile tile--large" data-aos="zoom-in-down">
                     <small>Technologies</small>
-                    <ul class="technologies technologies--light">
-                        {% for technologySlug in caseStudy.technologies %}
-                            {% set technology = content_get('App\\Model\\Technology', technologySlug) %}
-                            <li>
-                            {% if technology.show %}
-                                <a href="{{ path('technology', { technology: technology.slug })}}" class="technologies__item">
-                                    <img src="{{ asset(technology.logo) }}" alt="Logo {{ technology.logo }}">
-                                    {{ technology.name }}
-                                </a>
-                            {% else %}
-                                <div class="technologies__item">
-                                    <img src="{{ asset(technology.logo) }}" alt="Logo {{ technology.logo }}">
-                                    {{ technology.name }}
-                                </div>
-                            {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
+                    {% include "glossary/term_list.html.twig" with {
+                        terms: caseStudy.terms,
+                        list_class: 'technologies technologies--light'
+                    } only %}
                 </li>
             </ul>
         </div>

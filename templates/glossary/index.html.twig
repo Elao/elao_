@@ -29,91 +29,24 @@
         </div>
         <!-- Todo : remove placeholder inline-style ⬆ -->
 
-        <!--
-            Todo glossaire :
-
-            - séparer .glossary en 3 blocs qui contiennent le même nombre d'item
-            - si le nombre d'items n'est pas divisible par 3, la 3e colonne est celle qui aura le moins d'items
-            - ajouter la classe .glossary-list__item--0, glossary-list__item--a, etc. sur le premier item commençant par la lettre
-
-            Wishlist 🎩✨ :
-            - Est-ce que c'est possible d'éviter de couper à l'intérieur d'un groupe de lettre ? L'idéal serait de toujours commencer une nouvelle colonne par une nouvelle lettre (maquette : https://projects.invisionapp.com/d/?origin=v7?origin=v7?origin=v7#/console/21646301/458112030/preview?scrollOffset=0)
-            - Du coup ça serait moins grave si les 3 colonnes ne sont pas tout à fait égales
-
-            Exemple :
-            A  Accessibilité     C  Cahier des charges     E  Edge case
-               Accesseo             Cookie                    ElasticSearch
-               Algolia           D  Docker                 F  ...
-            B  Backlog              Deploy                    ...
-               Build                DevOps
-               Back-office
-               BEM
-        -->
-
         <div class="glossary">
-            <ul class="glossary-list">
-                <li class="glossary-list__item glossary-list__item--0">
-                    <a href="#">2FA</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--a">
-                    <a href="#">Accessibilité</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Accesseo</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--b">
-                    <a href="#">Backlog</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Build</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--c">
-                    <a href="#">Cahier des charges</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Cookie</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--d">
-                    <a href="#">Docker</a>
-                </li>
-            </ul>
-            <ul class="glossary-list">
-                <li class="glossary-list__item">
-                    <a href="#">Deploy</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">DevOps</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Docker</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--e">
-                    <a href="#">Edge case</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Elastic search</a>
-                </li>
-                <li class="glossary-list__item glossary-list__item--e">
-                    <a href="#">Edge case</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Elastic search</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Edge case</a>
-                </li>
-            </ul>
-            <ul class="glossary-list">
-                <li class="glossary-list__item glossary-list__item--f">
-                    <a href="#">Front-office</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Front-office</a>
-                </li>
-                <li class="glossary-list__item">
-                    <a href="#">Front-office</a>
-                </li>
-            </ul>
+            {% for column in glossary %}
+                <ul class="glossary-list">
+                    {% for letter, group in column %}
+                        {% for term in group %}
+                            <li class="glossary-list__item {{ loop.first ? 'glossary-list__item--' ~ letter : '' }}">
+                                {% if term.show %}
+                                    <a href="{{ path('glossary_term', { term: term.slug })}}">
+                                        {{ term.name }}
+                                    </a>
+                                {% else %}
+                                    {{ term.name }}
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            {% endfor %}
         </div>
 
         <div class="need-accompaniement">

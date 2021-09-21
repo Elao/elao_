@@ -10,7 +10,7 @@ websiteUrl: http://www.ngtvexperience.com/
 clients: NGTV
 size: 6 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony"]
+terms: ["symfony"]
 members: ["adefrance", "bleveque", "xavierr"]
 images: ["images/casestudies/headers/ngtv-banner.jpg"]
 ---

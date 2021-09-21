@@ -10,7 +10,7 @@ websiteUrl: ~
 clients: Université de Bordeaux
 size: 4 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony"]
+terms: ["symfony"]
 members: ["mcolin", "tjarrand"]
 images: ["images/casestudies/headers/spine-banner.jpg"]
 ---

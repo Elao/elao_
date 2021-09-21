@@ -10,7 +10,7 @@ websiteUrl: https://www.climapp.dehon.com/
 clients: "Climalife Dehon / Gestimat"
 size: "8 mois"
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "react-native"]
+terms: ["symfony", "react", "react-native"]
 members: ["msteinhausser", "abenassy", "tjarrand", "cmeiller"]
 images: ["images/casestudies/headers/climapp-banner.jpg"]
 ---

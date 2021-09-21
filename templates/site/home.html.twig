@@ -126,30 +126,12 @@
                 <div class="dash" aria-hidden="true"></div>
                 <h2>Faire des choix pérennes et pragmatiques</h2>
                 <p>Nous faisons le choix de <strong>technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles </strong>en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
-                <ul class="technologies">
-                    {% set technos = [
-                        { id: 'symfony', alt: 'logo Symfony' },
-                        { id: 'vue-js', alt: 'logo Vue.js' },
-                        { id: 'react', alt: 'logo React' },
-                        { id: 'react-native', alt: 'logo React Native' },
-                    ] %}
-                    {% for item in technos %}
-                        {% set techno = content_get('App\\Model\\Technology', item.id) %}
-                        <li>
-                        {% if techno.show %}
-                            <a href="{{ path('technology', { technology: techno.slug })}}" class="technologies__item">
-                                <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
-                                {{ techno.name }}
-                            </a>
-                        {% else %}
-                            <div class="technologies__item">
-                                <img src="{{ asset(techno.logo) }}" alt="{{ item.alt }}">
-                                {{ techno.name }}
-                            </div>
-                        {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
+                {% include "glossary/term_list.html.twig" with { terms: [
+                    'symfony',
+                    'vue-js',
+                    'react',
+                    'react-native',
+                ] } only %}
             </div>
         </section>
 

@@ -11,7 +11,7 @@ shortDescription: "Solution de gestion de déchets en entreprise"
 clients: Tribü
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react", "html", "css", "svg"]
+terms: ["symfony", "react", "html", "css", "svg"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "xgorse"]
 images: ["images/casestudies/headers/tribu-banner.jpg"]
 ---

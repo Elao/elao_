@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Model;
+namespace App\Model\Glossary;
 
-class Technology
+class Term
 {
     public string $name;
     public ?string $logo = null;

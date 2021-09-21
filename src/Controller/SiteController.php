@@ -90,12 +90,4 @@ class SiteController extends AbstractController
     {
         return $this->render('site/social.html.twig');
     }
-
-    #[Route('/glossary', name: 'glossary', options: [
-        'stenope' => ['sitemap' => false],
-    ])]
-    public function glossary(): Response
-    {
-        return $this->render('technology/glossary.html.twig');
-    }
 }

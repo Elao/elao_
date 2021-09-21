@@ -9,7 +9,7 @@ websiteUrl: https://cirano.io/
 clients: Businove
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "bootstrap", "vue-js"]
+terms: ["symfony", "bootstrap", "vue-js"]
 members: ["xavierr", "mbernard", "adefrance"]
 images: ["images/casestudies/headers/cirano-banner.jpg"]
 ---

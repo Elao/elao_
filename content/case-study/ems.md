@@ -10,7 +10,7 @@ websiteUrl: https://www.exemple.com/
 clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony"]
+terms: ["symfony"]
 members: ["mcolin", "tjarrand"]
 images: ["images/etudes-de-cas/ems_mockup1.png"]
 enabled: false

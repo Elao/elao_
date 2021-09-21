@@ -10,7 +10,7 @@ websiteUrl: https://www.exemple.com/
 clients: Example Corp.
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "algolia", "vue-js"]
+terms: ["symfony", "algolia", "vue-js"]
 members: ["mcolin", "tjarrand"]
 images: ["http://placekitten.com/630/380", "http://placekitten.com/240/160", "http://placekitten.com/240/160"]
 ---

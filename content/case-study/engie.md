@@ -10,7 +10,7 @@ websiteUrl: https://particuliers.engie.fr/
 clients: EDF
 size: 2 ans
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony"]
+terms: ["symfony"]
 members: ["mcolin"]
 images: ["images/casestudies/headers/engie-banner.jpg"]
 ---

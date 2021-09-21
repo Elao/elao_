@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Model\Glossary\Term;
+
 class CaseStudy
 {
     use MetaTrait;
@@ -20,7 +22,7 @@ class CaseStudy
     public string $size;
     public array $services = [];
     public array $images = [];
-    public array $technologies = [];
+    public array $terms = [];
     public array $members = [];
     public bool $enabled = true;
 
@@ -29,8 +31,8 @@ class CaseStudy
         return \in_array($member->slug, $this->members, true);
     }
 
-    public function hasTechnology(Technology $technology): bool
+    public function hasTerm(Term $term): bool
     {
-        return \in_array($technology->slug, $this->technologies, true);
+        return \in_array($term->slug, $this->terms, true);
     }
 }

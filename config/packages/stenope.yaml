@@ -14,11 +14,11 @@ stenope:
         App\Model\Job: '%kernel.project_dir%/content/job'
         App\Model\CaseStudy: '%kernel.project_dir%/content/case-study'
         App\Model\Member: '%kernel.project_dir%/content/member'
-        App\Model\Technology: '%kernel.project_dir%/content/technologies'
+        App\Model\Glossary\Term: '%kernel.project_dir%/content/term'
         App\Model\Misc: '%kernel.project_dir%/content/misc'
 
     resolve_links:
         App\Model\Member: { route: 'team_member', slug: 'member' }
         App\Model\Article: { route: 'blog_article', slug: 'article' }
         App\Model\CaseStudy: { route: 'case_study', slug: 'caseStudy' }
-        App\Model\Technology: { route: 'technology', slug: 'technology' }
+        App\Model\Glossary\Term: { route: 'glossary_term', slug: 'term' }

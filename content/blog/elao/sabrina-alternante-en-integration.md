@@ -15,7 +15,7 @@ Nous sommes ravis de vous présenter Sabrina, qui a récemment entamé une recon
 
 Bienvenue sur ma page de présentation!🪴
 
-<video src="https://media.giphy.com/media/yyVph7ANKftIs/giphy.mp4?cid=ecf05e47jbcbrar37xaidtdgp1w0pro1qg2ry7az1t37oksp&rid=giphy.mp4&ct=g" autoplay loop></video>
+![](images/posts/2021/itw-sabrina/hello-sailor-moon.gif)
 
 Avant l'informatique j'étais dans le domaine du théâtre et du cinéma. J'ai écris ma première ligne de code en mars 2020, au début du premier confinement.
 Après avoir exploré en autodidacte pendant plusieurs mois, j'ai intégré une école et complété une formation socle de trois mois centrée sur l'apprentissage de l'environnement JavaScript et la réalisation de projets.
@@ -28,7 +28,7 @@ Ayant vécu une grande partie de ma vie dans divers pays africains, j'ai été s
 
 Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection? 🤓
 
-<video src="https://media.giphy.com/media/55zYS1qxfTXFe/giphy.mp4?cid=ecf05e47lmw7xgbjs2pislcy4b0k5rh5mf4gx94lgzvrxc0p&rid=giphy.mp4&ct=g" autoplay loop></video>
+![](images/posts/2021/itw-sabrina/working-star-wars.gif)
 
 ## Qu'est-ce que tu fais au quotidien chez Elao ?
 
@@ -57,7 +57,7 @@ Mon émoji préféré est "amaze face", il représente l'étonnement et je l'uti
 
 Mes deux autres émojis préferés font référence à des blagues internes que je ne peux divulguer. It's top secret.
 
-<video src="https://media.giphy.com/media/NdKVEei95yvIY/giphy.mp4?cid=ecf05e47p9x7qmntm1wr78h6jl7rea8gbss2tkt2h0jkqvvj&rid=giphy.mp4&ct=g" autoplay loop></video>
+![](images/posts/2021/itw-sabrina/secret-the-office.gif)
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 
@@ -70,7 +70,7 @@ Les deux !
 
 ### Thé ou Café ?
 
-<video src="https://media.giphy.com/media/S6TqDjp87DgYeFKZLc/giphy.mp4?cid=ecf05e47oct3jpb0ghwqnbk7rqntrq1d0t7l5tdxatuwsysd&rid=giphy.mp4&ct=g" autoplay loop></video>
+![](images/posts/2021/itw-sabrina/bugs-bunny-coffee.gif)
 
 ### PHP ou JS ?
 

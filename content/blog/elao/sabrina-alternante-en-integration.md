@@ -6,7 +6,7 @@ description: ''
 authors: [cmozzati, sludovicdelys]
 tags: [elao, team]
 thumbnail: images/posts/thumbnails/sabrina-ludo-samoens.jpg
-tweetId: ~
+tweetId: "1440962443228889090"
 ---
 
 Nous sommes ravis de vous présenter Sabrina, qui a récemment entamé une reconversion et vient d'arriver dans l'équipe en tant qu'alternante en intégration.

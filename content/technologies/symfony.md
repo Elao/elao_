@@ -24,13 +24,13 @@ Pour nos développements backend, nous nous appuyons sur **Symfony, un framework
 
 ## Notre premier site web avec Symfony : 2007 !
 
-**Notre histoire avec Symfony a démarré en 2007**, avec la version 1.0, pour la création de sites web. Le premier site développé sous Symfony chez Elao concernait un site communautaire de loisirs créatifs, avec énormément de fonctionnalités telles qu’un forum, des galeries photos, un catalogue produit, etc. Que de chemins et de versions parcourues depuis !
+**Notre histoire avec Symfony a démarré en 2007**, avec la version 1.0, pour la création de sites web. Le premier site développé sous Symfony chez Elao concernait un site communautaire de loisirs créatifs, avec énormément de fonctionnalités telles qu’un forum, des galeries photos, un catalogue produit, etc. Que de chemins et de versions parcourus depuis !
 
-Forts de ces nombreuses années à utiliser Symfony, nous avons développé une expertise qui nous permet de **conduire des audits de sites Symfony, des montées de versions, des refontes, et bien entendu des créations de sites e-commerce ou d'applications métier.** Bien entendu, nous ne sommes pas fermés à l’utilisation d’autres frameworks PHP comme par exemple Laravel.
+Forts de ces nombreuses années à utiliser Symfony, nous avons développé une expertise qui nous permet de **conduire des audits de sites Symfony, des montées de versions, des refontes, et bien entendu des créations de sites e-commerce ou d'applications métier.** Nous avons déjà participé à des projets avec d’autres frameworks PHP, comme Laravel par exemple, mais notre expertise se situe sur Symfony. C’est un peu notre langue maternelle chez Elao.
 
 ## Nous contribuons aussi à Symfony
 
-**Une grande communauté s’est développée et échange autour de ce framework**, et nous y contribuons activement. Ainsi, fin 2019, Symfony affichait 3000 contributeurs au projet, **600 000 développeurs Symfony** et 48 000 000 de téléchargements par mois.
+**Une grande communauté s’est développée et échange autour de ce framework**, et nous y contribuons activement. Ainsi, en 2021, Symfony affichait 3000 contributeurs au projet, **600 000 développeurs Symfony** et 200 000 000 de téléchargements par mois.
 
 Nous contribuons directement au code de Symfony en proposant des améliorations ou des évolutions qui servent à la communauté.
 

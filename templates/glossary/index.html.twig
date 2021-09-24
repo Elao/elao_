@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% import "macros.html.twig" as macros %}
 
 {% block content %}
     <div class="page-glossary">
@@ -62,62 +63,19 @@
         <h2 class="h2--dash">Pour aller encore plus loin dans le quotidien d'un projet web, découvrez notre blog</h2>
 
         <ul class="article-list">
-            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
-                <a href="#" class="miniature__image">
-                    <span class="image" style="background: #f1f1f1 url();
-                                               background: #f1f1f1 -webkit-image-set();
-                                               background: #f1f1f1 -moz-image-set();
-                                               background: #f1f1f1 -ms-image-set();
-                                               background: #f1f1f1 image-set();">
-                    </span>
-                </a>
-                <div class="miniature__content">
-                    <a href="#" class="title">Article</a>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
-                </div>
-            </li>
-            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
-                <a href="#" class="miniature__image">
-                    <span class="image" style="background: #f1f1f1 url();
-                                               background: #f1f1f1 -webkit-image-set();
-                                               background: #f1f1f1 -moz-image-set();
-                                               background: #f1f1f1 -ms-image-set();
-                                               background: #f1f1f1 image-set();">
-                    </span>
-                </a>
-                <div class="miniature__content">
-                    <a href="#" class="title">Article</a>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
-                </div>
-            </li>
-            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
-                <a href="#" class="miniature__image">
-                    <span class="image" style="background: #f1f1f1 url();
-                                               background: #f1f1f1 -webkit-image-set();
-                                               background: #f1f1f1 -moz-image-set();
-                                               background: #f1f1f1 -ms-image-set();
-                                               background: #f1f1f1 image-set();">
-                    </span>
-                </a>
-                <div class="miniature__content">
-                    <a href="#" class="title">Article</a>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
-                </div>
-            </li>
-            <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="150">
-                <a href="#" class="miniature__image">
-                    <span class="image" style="background: #f1f1f1 url();
-                                               background: #f1f1f1 -webkit-image-set();
-                                               background: #f1f1f1 -moz-image-set();
-                                               background: #f1f1f1 -ms-image-set();
-                                               background: #f1f1f1 image-set();">
-                    </span>
-                </a>
-                <div class="miniature__content">
-                    <a href="#" class="title">Article</a>
-                    <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, unde magni voluptatem perferendis excepturi, distinctio labore.</p>
-                </div>
-            </li>
+            {% for article in articles %}
+                {% set url = path('blog_article', { article: article.slug }) %}
+                <li class="miniature aos-init aos-animate fade-in" data-aos="fade-in" data-aos-delay="{{ (loop.index / loop.length)|round(0, 'ceil') * 150 }}">
+                    <a href="{{ url }}" class="miniature__image">
+                        <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}">
+                        </span>
+                    </a>
+                    <div class="miniature__content">
+                        <a href="{{ url }}" class="title">{{ article.title }}</a>
+                        <p class="description">{{ article.description }}</p>
+                    </div>
+                </li>
+            {% endfor %}
         </ul>
 
         <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">

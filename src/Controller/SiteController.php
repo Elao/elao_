@@ -33,6 +33,12 @@ class SiteController extends AbstractController
         return $this->render('site/services.html.twig');
     }
 
+    #[Route('/conception-ux-ui', name: 'ux-ui-design')]
+    public function uxUiDesign(): Response
+    {
+        return $this->render('site/ux-ui-design.html.twig');
+    }
+
     #[Route('/methodologie', name: 'methodology')]
     public function methodology(): Response
     {

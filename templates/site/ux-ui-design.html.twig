@@ -1,5 +1,38 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Conception UX UI</h1>
+    <div class="page-ux-ui">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ path('homepage') }}" itemprop="item">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Nos services</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Conception UX/UI</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+    </div>
+    <div class="banner-ux-ui">
+        <h1 class="banner-ux-ui__title">
+            Nous concevons
+            <span>les interfaces de vos applications</span>
+        </h1>
+        <div class="banner-ux-ui__content">
+            <div class="spotlight">
+                <p>Conception UX/UI</p>
+                <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
 {% endblock %}

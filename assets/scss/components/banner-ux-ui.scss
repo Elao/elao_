@@ -1,0 +1,23 @@
+.banner-ux-ui {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-ux-ui__title {
+  margin-left: 110px;
+}
+
+.banner-ux-ui__content {
+  display: flex;
+  /* position: relative; */
+}
+
+.spotlight {
+  background: $color-dark;
+  color: #fff;
+  padding: 0 90px;
+  display: flex;
+  align-items: center;
+  width: 620px;
+}
+

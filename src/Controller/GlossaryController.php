@@ -31,7 +31,7 @@ class GlossaryController extends AbstractController
 
         return $this->render('glossary/index.html.twig', [
             'glossary' => $builder->build($terms),
-            'articles' => array_slice($articles, 0, 4),
+            'articles' => \array_slice($articles, 0, 4),
         ]);
     }
 

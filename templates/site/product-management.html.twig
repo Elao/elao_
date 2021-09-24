@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Nos services</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Product Management</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+    <div class="banner-subservices">
+        <h1 class="banner-subservices__title">
+            Nous vous aidons à construire
+            <span>votre stratégie produit</span>
+        </h1>
+        <div class="banner-subservices__content">Product Management</div>
+        <div class="banner-subservices__image" style="background: url(https://via.placeholder.com/150);"></div>
+    </div>
+    <div class="page-subservices">
+        <p class="offset"><strong>Le rôle d’un·e PO/PM (Product Owner / Product Manager) est clé pour un projet : c’est la personne qui fait le lien entre tous les acteurs. Elle porte la vision produit, ce cap que chacun·e doit avoir en tête pour prendre des décisions éclairées et cohérentes.</strong></p>
+        <p class="offset">C’est un rôle qui peut tantôt être porté par le client (ce que nous incitons fortement), tantôt par quelqu’un de l’équipe Elao (on parle alors de Proxy PO, un externe à la société éditrice du projet qui a pour objectif de faciliter la prise en main du rôle de PO au client). Nous poussons les clients à endosser ce rôle car il est majeur dans la construction d’une solution numérique qui est amenée à vivre à long terme. Ses compétences sont nécessaires car c’est lui qui va petit à petit faire le chef d’orchestre entre les retours utilisateurs, les besoins clients, les enjeux commerciaux et l’équipe technique (product designers et développeurs). Ceci étant dit, nous prenons plaisir à prendre ce rôle pour nos partenaires qui peuvent être moins à l’aise avec le sujet et petit à petit, de les accompagner vers plus d’autonomie.</p>
+        <h2 class="h2--dash offset">De la stratégie produit à l’opérationnel</h2>
+        <p class="offset"><strong>Chez Elao, il nous tient à cœur de vous accompagner non pas uniquement sur la technique, mais également de vous apporter notre expérience de plus de 200 projets pour vous aider à concrétiser vos idées.</strong></p>
+        <p class="offset">Notre objectif est que ne développiez que ce qui est absolument nécessaire et indispensable à l’atteinte de vos objectifs. Si nous avons l’impression que vous vous éparpillez, on n’hésitera pas à vous le dire. Et si vous êtes sûr·e que nous avons tort, alors vous avez toute notre confiance et nous vous suivrons dans vos idées. Quoi qu’il en soit, nous ne nous positionnons pas en exécutants : nous serons toujours là pour vous challenger.</p>
+        <blockquote class="offset">Nous ne sommes pas très friands des gros cahiers des charges, mais plutôt des grandes idées.</blockquote>
+        <h2 class="h2--dash offset">Concrètement, ce que nous offrons</h2>
+        <h3 class="h2 h2--ordered offset">
+            <span>I.</span> Animation d’ateliers de conception et d’innovation
+        </h3>
+        <div class="horizontal-content horizontal-content--left">
+            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <div class="horizontal-content__info">
+                <p>Dans la vie d’un projet, nous allons nous rencontrer, beaucoup. Dans notre besace, nous avons différents formats d’ateliers qui vous aideront à dessiner un périmètre fonctionnel qui liera les deux composantes de votre projet : satisfaire vos utilisateurs, aussi bien que servir votre business.</p>
+                <h3>En fonction des ateliers, nous avons ces objectifs :</h3>
+                 <ul>
+                    <li><strong>Concrétiser :</strong> transformer un besoin et une idée en fonctionnalité.</li>
+                    <li><strong>Prioriser :</strong> mettre en balance les bénéfices et le coût de chaque fonctionnel pour réussir à les prioriser sur une feuille de route.</li>
+                    <li><strong>Formaliser :</strong> trouver les bons mots, livrables et documents pour aboutir à une solution prête à être développée.</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="h2 h2--ordered offset">
+            <span>II.</span> Mise en place de votre feuille de route (product roadmap)
+        </h3>
+        <div class="horizontal-content horizontal-content--right">
+            <div class="horizontal-content__info">
+                <h3>Du recueil du besoin à la proposition de solutions</h3>
+                <p><strong>À travers nos ateliers de conception UX, nous vous aidons à aller recueillir le besoin auprès de vos utilisateurs puis à construire petit à petit la meilleure solution pour y répondre.</strong></p>
+            </div>
+            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+        </div>
+        <div class="horizontal-content horizontal-content--left">
+            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <div class="horizontal-content__info">
+                <h3>Du recueil du besoin à la proposition de solutions</h3>
+                <p><strong>À travers nos ateliers de conception UX, nous vous aidons à aller recueillir le besoin auprès de vos utilisateurs puis à construire petit à petit la meilleure solution pour y répondre.</strong></p>
+            </div>
+        </div>
+        <h3 class="offset">Des outils de suivi des usages au quotidien, pour une amélioration continue</h3>
+        <h4 class="offset">Rester proche de vos utilisateurs au jour le jour</h4>
+        <p class="offset">Vous aider à identifier les bons outils pour comprendre comment vos utilisateurs se servent de votre outil, particulièrement quand ils ne sont pas à proximité, afin d’avoir une vision complète et objective de l’usage qui en est fait.</p>
+        <h4 class="offset">Rester proche de vos utilisateurs au jour le jour</h4>
+        <p class="offset"><strong>Vous avez sûrement une “north star metric”, un indicateur clé de croissance que vous suivez absolument.</strong></p>
+        <p class="offset">Pour certains, il s’agit du CA, pour d’autres du nombre de nouveaux utilisateurs, pour d’autres encore la satisfaction client (via une mesure du NPS par exemple). Par ailleurs, il existe très certainement dans votre business, nombre de métriques importantes qui nécessitent d’être suivies attentivement. Nous vous aidons à mettre en place les bons indicateurs et bons tableaux de bord pour les suivre au jour le jour.</p>
+        <h3 class="h2 h2--ordered offset">
+            <span>III.</span> Vous donner les bonnes informations pour prioriser votre backlog et construire votre roadmap
+        </h3>
+        <div class="subservices-image">
+            <div class="image"></div>
+        </div>
+        <p class="offset">Dans le développement produit, il y a toujours beaucoup d’idées et jamais assez de temps / ressources pour toutes les réaliser : le backlog se remplit plus vite que l’équipe technique n’est en capacité de l’absorber. C’est le signe d’un produit en bonne santé ! Nous vous aidons à prioriser les bonnes fonctionnalités, au bon moment, selon vos enjeux business, votre vision produit et les retours de vos utilisateurs.</p>
+        <h3 class="h2 h2--ordered offset">
+            <span>IV.</span> Conseil en stratégie produit
+        </h3>
+        <p class="offset"><strong>Nous avons également l’expertise pour intervenir sur des missions qui ne nécessitent pas de développement :</strong></p>
+        <ul class="offset">
+            <li>Définir vos prochaines priorités</li>
+            <li>Mettre en place les bons indicateurs et les bons outils de suivi</li>
+            <li>Vous aider à construire / animer votre équipe produit</li>
+            <li>Trouver les bons prestataires pour vous accompagner pour l’atteinte de vos objectifs</li>
+        </ul>
+        <h2 class="h2--dash offset">L’équipe Produit chez Elao</h2>
+        <ul class="project-team offset">
+            <li class="project-team__member">
+                <a href="#">
+                    <img src="https://via.placeholder.com/100x100">
+                    <span class="name">Amélie Defrance</span>
+                    <span class="job">Intégratrice HTML/CSS</span>
+                </a>
+            </li>
+             <li class="project-team__member">
+                <a href="#">
+                    <img src="https://via.placeholder.com/100x100">
+                    <span class="name">Amélie Defrance</span>
+                    <span class="job">Intégratrice HTML/CSS</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bricks">
+            {% include 'partials/brick-ux-ui.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

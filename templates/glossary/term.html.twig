@@ -1,5 +1,7 @@
-{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
+
+{% import "macros.html.twig" as macros %}
+
 {% block meta_title term.titleSeo ?? term.fullTitle %}
 {% block meta_description term.metaDescription ?? term.fullTitle %}
 
@@ -51,14 +53,15 @@
             <h2 class="h2--dash">Projets créés avec {{ term.name }}</h2>
             <ul class="article-list">
                 {% for caseStudy in caseStudies %}
+                    {% set url = path('case_study', { caseStudy: caseStudy.slug }) %}
                     <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
-                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="miniature__image">
+                        <a href="{{ url }}" class="miniature__image">
                             <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
                         </a>
                         <div class="miniature__content">
-                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="title">{{ caseStudy.title }}</a>
+                            <a href="{{ url }}" class="title">{{ caseStudy.title }}</a>
                             <p class="description">{{ caseStudy.description }}</p>
-                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="link link--brand">Lire l'article</a>
+                            <a href="{{ url }}" class="link link--brand">Lire l'étude de cas</a>
                         </div>
                     </li>
                 {% endfor %}
@@ -69,13 +72,14 @@
             <h2 class="h2--dash">Articles liés à {{ term.name }}</h2>
             <ul class="article-list">
                 {% for article in articles %}
+                    {% set url = path('blog_article', { article: article.slug }) %}
                     <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
-                    <a href="#" class="miniature__image">
+                    <a href="{{ url }}" class="miniature__image">
                         <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
                     </a>
                     <div class="miniature__content">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                        <a href="{{ url }}" class="title">{{ article.title }}</a>
+                        <a href="{{ url }}" class="link link--brand">Lire l'article</a>
                     </div>
                 </li>
                 {% endfor %}

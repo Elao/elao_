@@ -27,9 +27,11 @@ class GlossaryController extends AbstractController
     public function glossary(GlossaryBuilder $builder): Response
     {
         $terms = $this->manager->getContents(Term::class, 'name', ['show' => true]);
+        $articles = $this->manager->getContents(Article::class, ['date' => false]);
 
         return $this->render('glossary/index.html.twig', [
             'glossary' => $builder->build($terms),
+            'articles' => array_slice($articles, 0, 4),
         ]);
     }
 

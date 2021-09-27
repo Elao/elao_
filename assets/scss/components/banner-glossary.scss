@@ -10,7 +10,10 @@
 }
 
 .banner-glossary__image {
+  margin: 0;
   margin-left: 40px;
+  min-width: 450px;
+  max-width: 500px;
 }
 
 @media (max-width: $screen-md) {
@@ -38,8 +41,5 @@
 
   .banner-glossary__image {
     width: 100%;
-
-    // remove when placeholder has been replaced
-    min-width: unset !important;
   }
 }

@@ -1,0 +1,29 @@
+.content-ux-ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .project-team {
+    margin-bottom: 145px;
+
+  }
+}
+
+.context-ux-ui__experience {
+  border-bottom: 0;
+}
+
+.details-ux-ui {
+  display: flex;
+  align-items: center;
+}
+
+.details-ux-ui__image + .details-ux-ui__content {
+  margin-left: 90px;
+}
+
+.details-ux-ui__content + .details-ux-ui__image {
+  margin-left: 90px;
+}
+
+

@@ -26,4 +26,34 @@
   margin-left: 90px;
 }
 
+.content-ux-ui__banner {
+  .pink {
+    background: $color-secondary;
+    width: 730px;
+    height: 187px;
+  }
+
+  .red {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: $color-brand;
+    width: 230px;
+    height: 95px;
+    top: -140px;
+    left: 905px;
+
+    &:after {
+      content: '\e914';
+      position: absolute;
+      color: $color-secondary;
+      font-family: 'icomoon';
+      font-size: 93px;
+      bottom: -36px;
+      right: 76px;
+      line-height: 1;
+    }
+  }
+}
+
 

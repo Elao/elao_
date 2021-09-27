@@ -43,7 +43,7 @@
     height: unset;
     width: unset;
     position: absolute;
-    top: 0;
+    top: -8px;
     left: 0;
     display: flex;
     font-family: 'faktum bold';
@@ -104,6 +104,7 @@ $characters: (
 
   [class*="glossary-list__item--"] {
     &:before {
+      top: -1px;
       font-size: 40px;
     }
   }

@@ -11,7 +11,7 @@ shortDescription: "Les panneaux municipaux dans la poche"
 clients: PanneauPocket
 size: 3 mois
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "react-native"]
+terms: ["symfony", "react-native"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "cmeiller", "xgorse"]
 images: ["images/casestudies/headers/panneaupocket-banner.jpg"]
 ---

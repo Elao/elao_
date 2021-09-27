@@ -1,0 +1,124 @@
+.glossary-list {
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  min-width: 33.33%;
+}
+
+.glossary-list__item {
+  margin-bottom: 15px;
+  padding-right: 30px;
+  padding-left: 100px;
+  display: flex;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  &:first-of-type {
+    margin-top: 0 !important;
+  }
+
+  a {
+    font-family: 'Antikor Bold';
+    font-size: 20px;
+    color: $color-info;
+    line-height: 1.3;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-dark;
+    }
+  }
+}
+
+[class*="glossary-list__item--"] {
+  margin-top: 50px !important;
+  position: relative;
+
+  &:before {
+    height: unset;
+    width: unset;
+    position: absolute;
+    top: -8px;
+    left: 0;
+    display: flex;
+    font-family: 'faktum bold';
+    font-size: 72px;
+    color: $color-secondary;
+    line-height: 1;
+    text-transform: uppercase;
+    border: none;
+  }
+}
+
+$characters: (
+  0: '#',
+  a: 'a',
+  b: 'b',
+  c: 'c',
+  d: 'd',
+  e: 'e',
+  f: 'f',
+  g: 'g',
+  h: 'h',
+  i: 'i',
+  j: 'j',
+  k: 'k',
+  l: 'l',
+  m: 'm',
+  n: 'n',
+  o: 'o',
+  p: 'p',
+  q: 'q',
+  r: 'r',
+  s: 's',
+  t: 't',
+  u: 'u',
+  v: 'v',
+  w: 'w',
+  x: 'x',
+  y: 'y',
+  z: 'z'
+);
+
+@each $character, $character-icon in $characters {
+  .glossary-list__item--#{$character} {
+    &:before {
+      content: $character-icon;
+    }
+  }
+}
+
+@media(max-width: $screen-md) {
+  .glossary-list__item {
+    padding-left: 60px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  [class*="glossary-list__item--"] {
+    &:before {
+      top: -1px;
+      font-size: 40px;
+    }
+  }
+}
+
+@media(max-width: $screen-xs) {
+  .glossary-list {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  [class*="glossary-list__item--"] {
+    &:first-of-type {
+      margin-top: 50px !important;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.banner-glossary {
+  margin: 0 0 100px;
+  display: flex;
+}
+
+.banner-glossary__content {
+  h1 {
+    margin-left: 0;
+  }
+}
+
+.banner-glossary__image {
+  margin: 0;
+  margin-left: 40px;
+  min-width: 450px;
+  max-width: 500px;
+}
+
+@media (max-width: $screen-md) {
+  .banner-glossary {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-glossary__content {
+    margin: 0 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-glossary__image {
+    margin: 0;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .banner-glossary {
+    margin: 0 0 30px;
+  }
+
+  .banner-glossary__image {
+    width: 100%;
+  }
+}

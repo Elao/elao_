@@ -9,7 +9,7 @@ websiteUrl: https://www.chalkboard.education/
 clients: Chaklboard Education
 size: 3 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "graphql", "react"]
+terms: ["symfony", "graphql", "react"]
 members: ["ndievart", "rhanna"]
 images: ["images/casestudies/headers/chalkboardeducation-banner.jpg"]
 ---

@@ -10,7 +10,7 @@ websiteUrl: https://www.geant-beaux-arts.fr/
 clients: Jetpulp
 size: 8 months
 services: ["Accompagnement", "Développement"]
-technologies: ["symfony", "algolia", "vue-js"]
+terms: ["symfony", "algolia", "vue-js"]
 members: ["msteinhausser", "xavierr", "bleveque", "yheitz"]
 images: ["images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
 ---

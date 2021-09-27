@@ -1,0 +1,18 @@
+<ul class="{{ list_class|default('technologies') }}">
+    {% for slug in terms %}
+        {% set term = content_get('App\\Model\\Glossary\\Term', slug) %}
+        <li>
+            {% if term.show %}
+                <a href="{{ path('glossary_term', { term: term.slug })}}" class="{{ item_class|default('technologies__item') }}">
+                    <img src="{{ asset(term.logo) }}" alt="Logo {{ term.logo }}">
+                    {{ term.name }}
+                </a>
+            {% else %}
+                <div class="{{ item_class|default('technologies__item') }}">
+                    <img src="{{ asset(term.logo) }}" alt="Logo {{ term.logo }}">
+                    {{ term.name }}
+                </div>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>

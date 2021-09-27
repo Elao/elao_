@@ -1,0 +1,28 @@
+.page-glossary {
+  .need-accompaniement {
+    padding: 50px 40px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'faktum bold';
+    font-size: 32px;
+    color: #fff;
+    background: $color-dark;
+
+    .btn {
+      margin-top: 30px;
+    }
+  }
+
+  .article-list {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: $screen-xxs) {
+  .page-glossary {
+    .need-accompaniement {
+      font-size: 21px;
+    }
+  }
+}

@@ -19,6 +19,9 @@ L'étape de spécifications fonctionnelles arrive quand une solution émerge et 
 Les spécifications fonctionnelles déterminent un périmètre fonctionnel précis, balayant les différents cas fonctionnels et peut prendre des formes très différentes selon les besoins. 
 Le niveau de détail dépendra notamment de la taille et de la complexité de la fonctionnalité. 
 
+!!! 🎁
+    À la fin de cette page, vous trouverez le modèle de spécifications fonctionnelles que nous utilisons quotidiennement.
+
 ## À quoi ressemblent des spécifications fonctionnelles ? 
 
 Si l'on a l'habitude de les envisager sous forme de document (hérité des cahiers des charges), elles peuvent prendre plusieurs formes qui se complètent :
@@ -49,4 +52,4 @@ Par contre, il faut garder une certaine rigueur pour le tenir à jour.
 
 ### Un document modèle de spécifications fonctionnelles
 
-Voici [un modèle éprouvé](https://docs.google.com/document/d/1v2g7SwKUknlKw42VCQCy8s9ptWb9HfLvmbrHiN_gyB4/edit?usp=sharing) que nous utilisons systématiquement pour de grosses fonctionnalités avec nos clients. À vous de vous l'approprier ! 
+🎁 Voici [un modèle éprouvé](https://docs.google.com/document/d/1v2g7SwKUknlKw42VCQCy8s9ptWb9HfLvmbrHiN_gyB4/edit?usp=sharing) que nous utilisons systématiquement pour de grosses fonctionnalités avec nos clients. À vous de vous l'approprier ! 

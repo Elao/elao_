@@ -1,5 +1,5 @@
 ---
-name: "Paiement"
+name: "Paiement en ligne"
 title: 
  - "Intégration d'une solution de paiement en ligne" 
  - "pour votre application"

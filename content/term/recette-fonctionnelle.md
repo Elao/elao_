@@ -16,7 +16,7 @@ Le développement d'une fonctionnalité comprend plusieurs étapes :
 - Mise en production
 
 La recette est la dernière étape de développement de fonctionnalité : c'est celle où l'on vérifie que tout fonctionne correctement avant de livrer à l'utilisateur final. Elle se déroule généralement dans un environnement de "staging" ou "pré-production", au plus proche du serveur de production mais avec ses propres bases de données, ce qui nous permet de maltraiter un peu l'application lors des tests 😈.
-L'étape de recette permet de s'assurer que le développement réalisé correspond au périmètre défini dans les spécifications fonctionnelles. 
+L'étape de recette permet de s'assurer que le développement réalisé correspond au périmètre défini dans les [spécifications fonctionnelles](./specifications-fonctionnelles.md). 
 
 ## Qui doit réaliser la recette fonctionnelle ? 
 

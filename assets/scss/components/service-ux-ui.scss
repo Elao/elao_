@@ -27,10 +27,57 @@
 }
 
 .content-ux-ui__banner {
-  .pink {
+  margin: 60px 0 70px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 0;
     background: $color-secondary;
     width: 730px;
-    height: 187px;
+    height: 190px;
+    z-index: 0;
+  }
+
+  .image {
+    position: relative;
+    background: url(https://via.placeholder.com/950x337);
+    width: 950px;
+    height: 337px;
+    margin-left: 110px;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: $color-brand;
+      width: 230px;
+      height: 95px;
+      right: -40px;
+      bottom: 13px;
+    }
+
+    &:after {
+      content: '\e914';
+      position: absolute;
+      color: $color-secondary;
+      font-family: 'icomoon';
+      font-size: 93px;
+      bottom: -22px;
+      right: 14px;
+      line-height: 1;
+    }
+  }
+}
+/*
+  .pink {
+
+  }
+
+  .image {
+    position: absolute;
   }
 
   .red {
@@ -42,6 +89,7 @@
     height: 95px;
     top: -140px;
     left: 905px;
+  }
 
     &:after {
       content: '\e914';
@@ -53,7 +101,6 @@
       right: 76px;
       line-height: 1;
     }
-  }
-}
+*/
 
 

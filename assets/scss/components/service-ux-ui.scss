@@ -18,12 +18,21 @@
   align-items: center;
 }
 
-.details-ux-ui__image + .details-ux-ui__content {
-  margin-left: 90px;
+.details-ux-ui__content {
+  h3 {
+    margin-top: 0;
+  }
+}
+.details-ux-ui--left {
+  .details-ux-ui__content {
+    margin-left: 90px;
+  }
 }
 
-.details-ux-ui__content + .details-ux-ui__image {
-  margin-left: 90px;
+.details-ux-ui--right {
+  .details-ux-ui__content {
+    margin-right: 90px;
+  }
 }
 
 .content-ux-ui__banner {
@@ -44,6 +53,8 @@
   .image {
     position: relative;
     background: url(https://via.placeholder.com/950x337);
+    background-size: cover;
+    background-position: center;
     width: 950px;
     height: 337px;
     margin-left: 110px;
@@ -71,36 +82,83 @@
     }
   }
 }
-/*
-  .pink {
 
-  }
+@media (max-width: $screen-md) {
+  .content-ux-ui__banner {
+    .image {
+      width: calc(100% - 110px);
 
-  .image {
-    position: absolute;
-  }
-
-  .red {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: $color-brand;
-    width: 230px;
-    height: 95px;
-    top: -140px;
-    left: 905px;
-  }
-
-    &:after {
-      content: '\e914';
-      position: absolute;
-      color: $color-secondary;
-      font-family: 'icomoon';
-      font-size: 93px;
-      bottom: -36px;
-      right: 76px;
-      line-height: 1;
+      &:before,
+      &:after {
+        display: none;
+      }
     }
-*/
+  }
+}
+
+@media (max-width: $screen-sm) {
+
+  .details-ux-ui {
+    align-items: flex-start;
+    margin-bottom: 70px;
+  }
+
+  .details-ux-ui__image {
+    max-width: 250px;
+    margin-top: 10px;
+  }
+
+  .details-ux-ui--left {
+    .details-ux-ui__content {
+      margin-left: 40px;
+    }
+  }
+
+  .details-ux-ui--right {
+    .details-ux-ui__content {
+      margin-right: 40px;
+    }
+  }
+
+  .content-ux-ui__banner {
+    margin-top: 0;
+
+    &:before {
+      display: none;
+    }
+
+    .image {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .details-ux-ui {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .details-ux-ui__image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .details-ux-ui__content,
+  .details-ux-ui__image {
+    margin: 0 0 30px;
+  }
+
+  .details-ux-ui--left{
+    .details-ux-ui__content {
+      order: 1;
+    }
+
+    .details-ux-ui__image {
+      order: 2;
+    }
+  }
+}
 
 

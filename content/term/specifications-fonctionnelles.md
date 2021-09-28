@@ -32,7 +32,7 @@ Si l'on a l'habitude de les envisager sous forme de document (hérité des cahie
 - Un peu de tout ça :)
 Pour des fonctionnalités simples, nécessitant quelques heures à quelques jours de développement, détailler précisément des spécifications dans un gestionnaire de tickets peut suffire. Par contre, quand il s'agit de gros pans fonctionnels, cela pose ses limites.
 
-Chez Elao, nous combinons un peu tout ça dans un seul document complet qui va suivre toute la vie de la fonctionnalité, de sa conceptualisation au développement, jusqu'à la [recette](./recette.md) puis la mise en production. Ce document comprend :
+Chez Elao, nous combinons un peu tout ça dans un seul document complet qui va suivre toute la vie de la fonctionnalité, de sa conceptualisation au développement, jusqu'à la [recette](./recette-fonctionnelle.md) puis la mise en production. Ce document comprend :
 - Des informations sur le contexte :
     - Quel est le problème que l'on résout ?
     - Pourquoi c'est important ?

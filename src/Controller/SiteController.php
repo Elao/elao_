@@ -38,6 +38,8 @@ class SiteController extends AbstractController
     {
         return $this->render('site/ux-ui-design.html.twig');
 
+    }
+
     #[Route('/strategie-produit', name: 'product-management')]
     public function productManagement(): Response
     {

@@ -1,87 +1,85 @@
-.content-ux-ui {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
+.page-ux-ui {
   .project-team {
     margin-bottom: 145px;
-
   }
-}
 
-.context-ux-ui__experience {
-  border-bottom: 0;
-}
-
-.details-ux-ui {
-  display: flex;
-  align-items: center;
-}
-
-.details-ux-ui__content {
-  h3 {
-    margin-top: 0;
+  .bold {
+    font-weight: bold;
   }
-}
-.details-ux-ui--left {
+
+  .details-ux-ui {
+    display: flex;
+    align-items: center;
+  }
+
   .details-ux-ui__content {
-    margin-left: 90px;
-  }
-}
-
-.details-ux-ui--right {
-  .details-ux-ui__content {
-    margin-right: 90px;
-  }
-}
-
-.content-ux-ui__banner {
-  margin: 60px 0 70px;
-  position: relative;
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: 0;
-    background: $color-secondary;
-    width: 730px;
-    height: 190px;
-    z-index: 0;
+    h3 {
+      margin-top: 10px;
+    }
   }
 
-  .image {
+  .details-ux-ui--left {
+    .details-ux-ui__content {
+      margin-left: 90px;
+    }
+  }
+
+  .details-ux-ui--right {
+    .details-ux-ui__content {
+      margin-right: 90px;
+    }
+  }
+
+  .content-ux-ui__banner {
+    margin: 60px 0 70px;
     position: relative;
-    background: url(https://via.placeholder.com/950x337);
-    background-size: cover;
-    background-position: center;
-    width: 950px;
-    height: 337px;
-    margin-left: 110px;
-    z-index: 1;
 
     &:before {
       content: '';
       position: absolute;
-      background: $color-brand;
-      width: 230px;
-      height: 95px;
-      right: -40px;
-      bottom: 13px;
+      top: -60px;
+      left: 0;
+      background: $color-secondary;
+      width: 730px;
+      height: 190px;
+      z-index: 0;
     }
 
-    &:after {
-      content: '\e914';
-      position: absolute;
-      color: $color-secondary;
-      font-family: 'icomoon';
-      font-size: 93px;
-      bottom: -22px;
-      right: 14px;
-      line-height: 1;
+    .image {
+      position: relative;
+      background: url(https://via.placeholder.com/950x337);
+      background-size: cover;
+      background-position: center;
+      width: 950px;
+      height: 337px;
+      margin-left: 110px;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        background: $color-brand;
+        width: 230px;
+        height: 95px;
+        right: -40px;
+        bottom: 13px;
+      }
+
+      &:after {
+        content: '\e914';
+        position: absolute;
+        color: $color-secondary;
+        font-family: 'icomoon';
+        font-size: 93px;
+        bottom: -22px;
+        right: 14px;
+        line-height: 1;
+      }
     }
   }
 }
+
+
 
 @media (max-width: $screen-md) {
   .content-ux-ui__banner {
@@ -97,7 +95,6 @@
 }
 
 @media (max-width: $screen-sm) {
-
   .details-ux-ui {
     align-items: flex-start;
     margin-bottom: 70px;

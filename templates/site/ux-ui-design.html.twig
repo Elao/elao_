@@ -1,56 +1,45 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Nos services</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Conception UX/UI</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
     <div class="page-ux-ui">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a href="{{ path('homepage') }}" itemprop="item">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Nos services</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Conception UX/UI</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
-    </div>
-    <div class="banner-ux-ui">
-        <h1 class="banner-ux-ui__title">
-            Nous concevons
-            <span>les interfaces de vos applications</span>
-        </h1>
-        <div class="banner-ux-ui__content">
-            Conception UX/UI
+        <div class="banner-ux-ui">
+            <h1 class="banner-ux-ui__title">
+                Nous concevons
+                <span>les interfaces de vos applications</span>
+            </h1>
+            <div class="banner-ux-ui__content">Conception UX/UI</div>
+            <div class="banner-ux-ui__image"></div>
         </div>
-        <div class="banner-ux-ui__image"></div>
-    </div>
-    <div class= "content-ux-ui">
-        <p>
-            <strong>Qui n’a jamais râlé devant une interface trop vieillotte, mal pensée, où tout s’enchaîne sans fluidité ? Ou à un service utile voire nécessaire, mais plein de bugs ?</strong>
-            Une bonne application technique n’est rien si son parcours n’est pas pensé et réfléchi pour l’utilisateur. Poussons même un peu plus loin : une application techniquement parfaite ne sert à rien si elle n’est pas utilisée.<br>
-            C’est un élément qu’on ne doit pas négliger. Créer un nouvel outil, oui. Affiner au maximum l’expérience utilisateur, c’est ce qui vous démarquera face à votre concurrence. Trouver la bonne balance entre une automatisation maximale de vos tâches répétitives tout en gardant une proximité avec vos utilisateurs.
-            Les meilleurs services ayant émergé ces dernières années ont tous un point commun : ils sont “user centric” ou “centrés utilisateurs” par opposition à “business centric”.<br>
-            Être centré utilisateur, c’est évidemment penser à ce à quoi va ressembler votre application mais surtout, et avant tout, au contexte d’usage en se posant les bonnes questions : qui va l’utiliser ? Dans quelle situation ? Dans quel état d’esprit ? Que cherche-t-il à accomplir ?
-        </p>
+        <p class="bold">Qui n’a jamais râlé devant une interface trop vieillotte, mal pensée, où tout s’enchaîne sans fluidité ? Ou à un service utile voire nécessaire, mais plein de bugs ?</p>
+        <p>Une bonne application technique n’est rien si son parcours n’est pas pensé et réfléchi pour l’utilisateur. Poussons même un peu plus loin : une application techniquement parfaite ne sert à rien si elle n’est pas utilisée.</p>
+        <p>C’est un élément qu’on ne doit pas négliger. Créer un nouvel outil, oui. Affiner au maximum l’expérience utilisateur, c’est ce qui vous démarquera face à votre concurrence. Trouver la bonne balance entre une automatisation maximale de vos tâches répétitives tout en gardant une proximité avec vos utilisateurs.</p>
+        <p>Les meilleurs services ayant émergé ces dernières années ont tous un point commun : ils sont “user centric” ou “centrés utilisateurs” par opposition à “business centric”.</p>
+        <p>Être centré utilisateur, c’est évidemment penser à ce à quoi va ressembler votre application mais surtout, et avant tout, au contexte d’usage en se posant les bonnes questions : qui va l’utiliser ? Dans quelle situation ? Dans quel état d’esprit ? Que cherche-t-il à accomplir ?</p>
         <h2 class="h2--dash">
             Comprendre, proposer, tester, ajuster, pour arriver à la meilleure expérience possible
         </h2>
-        <p>
-            <strong>
-                Chez Elao, nous mettons la même exigence de qualité à tous les niveaux du projet, de la technique à la créa, toujours dans la même culture itérative, profondément ancrée dans l’équipe : on propose, on teste avec les utilisateurs, on ajuste, pour arriver à la meilleure expérience possible. Rien n’est figé.
-            </strong><br>
-            C’est tout aussi vrai pour un parcours complexe, incluant des services en face-à-face, pour s’interfacer au mieux avec le besoin des parties prenantes, que pour un simple parcours de création de compte.
-            Notre culture de l’expérience utilisateur et du développement d’application sur-mesure nous permet d’éviter de réinventer la roue, ce qui donne des expériences fluides et cohérentes pour tous les groupes d’utilisateurs concernés.
-        </p>
+        <p class="bold">Chez Elao, nous mettons la même exigence de qualité à tous les niveaux du projet, de la technique à la créa, toujours dans la même culture itérative, profondément ancrée dans l’équipe : on propose, on teste avec les utilisateurs, on ajuste, pour arriver à la meilleure expérience possible. Rien n’est figé.</p>
+        <p> C’est tout aussi vrai pour un parcours complexe, incluant des services en face-à-face, pour s’interfacer au mieux avec le besoin des parties prenantes, que pour un simple parcours de création de compte. Notre culture de l’expérience utilisateur et du développement d’application sur-mesure nous permet d’éviter de réinventer la roue, ce qui donne des expériences fluides et cohérentes pour tous les groupes d’utilisateurs concernés.</p>
         <blockquote>
             Être « agile », c’est avant tout savoir réagir vite aux retours des utilisateurs.
         </blockquote>
@@ -78,7 +67,7 @@
         <div class="details-ux-ui details-ux-ui--right">
             <div class="details-ux-ui__content">
                 <h3>Des entretiens utilisateurs, pour comprendre réellement leurs besoins</h3>
-                <strong>Les entretiens utilisateurs nous permettent d’aller à la rencontrer des personas clé de votre solution, ceux qui seront directement impactés et par conséquent, qui nous aideront à construire la meilleure application possible.</strong>
+                <p class="bold">Les entretiens utilisateurs nous permettent d’aller à la rencontrer des personas clé de votre solution, ceux qui seront directement impactés et par conséquent, qui nous aideront à construire la meilleure application possible.</p>
                 <p>Lors de sessions d’échanges de 20 à 30 minutes avec une dizaine d’utilisateurs, nous allons explorer en profondeur leurs motivations et points de douleurs.</p>
             </div>
             <img src="https://via.placeholder.com/400x530" alt="" class="details-ux-ui__image" />
@@ -96,10 +85,9 @@
         <div class="details-ux-ui details-ux-ui--right">
             <div class="details-ux-ui__content">
                 <h3>Le « Gemba Walk », pour s’imprégner du quotidien de vos utilisateurs</h3>
-                <p>
-                Mot japonais, Gemba signifie « le véritable endroit », « là où se trouve la réalité », le « terrain » ou encore « l’endroit où la valeur client est ajoutée ». Il s’agit d’aller voir sur le terrain, là où sont réellement vos utilisateurs pour les observer, apprendre d’eux en leurs posant les bonnes questions et comprendre quels sont leurs points de friction quotidiens.
-                <strong>C’est une technique qui porte ses fruits notamment dans la conception d’une application métier dédiée à simplifier et améliorer des processus.</strong>
-                </p>
+                <p>Mot japonais, Gemba signifie « le véritable endroit », « là où se trouve la réalité », le « terrain » ou encore « l’endroit où la valeur client est ajoutée ».
+                <p>Il s’agit d’aller voir sur le terrain, là où sont réellement vos utilisateurs pour les observer, apprendre d’eux en leurs posant les bonnes questions et comprendre quels sont leurs points de friction quotidiens.</p>
+                <p class="bold">C’est une technique qui porte ses fruits notamment dans la conception d’une application métier dédiée à simplifier et améliorer des processus.</p>
             </div>
             <img src="https://via.placeholder.com/400x530" alt="" class="details-ux-ui__image" />
         </div>
@@ -107,8 +95,7 @@
             <span>III.</span> Construction de parcours utilisateurs (UX)
         </h3>
         <div class="content-ux-ui__banner">
-            <div class="image">
-            </div>
+            <div class="image"></div>
         </div>
         <p>Wireframes, zoning, storymapping, mindmapping font partie de notre jargon quotidien. Ces outils nous servent avant tout de <strong>plateforme de communication</strong> entre les différentes parties prenantes du projet, nous permettant d’aligner notre vision de la solution finale. Selon vos besoins, vos idées, les nôtres, nous vous aidons à les mettre en forme rapidement pour qu’ils représentent au mieux ce que vous avez en tête, afin de partir sur une base partagée et qu’ils puissent être soumis rapidement à l’utilisateur final.</p>
         <h3 class="h2 h2--ordered">
@@ -121,7 +108,7 @@
         <div class="details-ux-ui details-ux-ui--left">
             <img src="https://via.placeholder.com/400x530" alt="" class="details-ux-ui__image" />
             <div class="details-ux-ui__content">
-                <strong>Nous avons également l’expertise pour intervenir sur des missions qui ne nécessitent pas de développement, centrées exclusivement sur vos utilisateurs et l’optimisation de vos parcours.</strong>
+                <p class="bold">Nous avons également l’expertise pour intervenir sur des missions qui ne nécessitent pas de développement, centrées exclusivement sur vos utilisateurs et l’optimisation de vos parcours.</p>
                 <h4>Vous avez une application et souhaitez la confronter à vos utilisateurs ?</h4>
                 <p>Nous vous aidons à trouver la bonne méthode pour y arriver.</p>
                 <h4>Vous avez déjà des retours utilisateurs mais ne savez pas comment les traiter, quelles solutions mettre en face ?</h4>
@@ -158,4 +145,5 @@
             {% include 'partials/brick-ux-ui.html.twig' %}
         </div>
     </div>
+
 {% endblock %}

@@ -3,6 +3,7 @@ name: "Recette fonctionnelle"
 title: 
     - "Recette" 
     - "fonctionnelle"
+title-seo: "Recette fonctionnelle : définition"
 metaDescription : "La recette fonctionnelle est une étape indispensable dans le développement d'applications web et mobiles. Découvrez comment ça marche."
 ---
 

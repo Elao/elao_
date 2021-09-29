@@ -3,7 +3,8 @@ name: "Spécifications fonctionnelles"
 title: 
     - "Spécifications" 
     - "fonctionnelles"
-metaDescription : "Les spécifications fonctionnelles encadrent et déterminent le périmètre d'une fonctionnalité dans le cadre du développement d'une application web ou mobile."
+title-seo: "Spécifications fonctionnelles : définition"
+metaDescription : "Les spécifications fonctionnelles déterminent le périmètre d'une fonctionnalité dans le cadre du développement d'une application web ou mobile."
 ---
 
 Le développement d'une fonctionnalité comprend plusieurs étapes :

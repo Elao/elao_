@@ -47,6 +47,7 @@ html.no-js [data-aos] {
 @import "components/_banner-services";
 @import "components/_banner-team";
 @import "components/_banner-technology";
+@import "components/banner-ux-ui";
 @import "components/_banner-values";
 @import "components/_breadcrumb";
 @import "components/_brick";
@@ -93,8 +94,6 @@ html.no-js [data-aos] {
 @import "components/_titles";
 @import "components/_values";
 @import "components/_social-post";
-@import "components/service-ux-ui";
-@import "components/banner-ux-ui";
 
 // generic
 @import "generic/_a";
@@ -118,3 +117,4 @@ html.no-js [data-aos] {
 @import "pages/_page-signature";
 @import "pages/_page-jobs";
 @import "pages/_page-job-posting";
+@import "pages/page-ux-ui";

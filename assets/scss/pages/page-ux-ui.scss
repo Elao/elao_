@@ -3,10 +3,6 @@
     margin-bottom: 145px;
   }
 
-  .bold {
-    font-weight: bold;
-  }
-
   .details-ux-ui {
     display: flex;
     align-items: center;
@@ -78,8 +74,6 @@
     }
   }
 }
-
-
 
 @media (max-width: $screen-md) {
   .content-ux-ui__banner {

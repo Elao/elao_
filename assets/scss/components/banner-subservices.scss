@@ -1,15 +1,15 @@
-.banner-ux-ui {
+.banner-subservices {
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-bottom: 493px;
 }
 
-.banner-ux-ui__title {
+.banner-subservices__title {
   margin: 0 0 55px 110px;
 }
 
-.banner-ux-ui__content {
+.banner-subservices__content {
   display: flex;
   align-items: center;
   position: relative;
@@ -30,7 +30,7 @@
   }
 }
 
-.banner-ux-ui__image {
+.banner-subservices__image {
   background: url(https://via.placeholder.com/150);
   width: 1060px;
   background-repeat: no-repeat;
@@ -42,22 +42,22 @@
 }
 
 @media (max-width: $screen-lg) {
-  .banner-ux-ui {
+  .banner-subservices {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0;
   }
 
-  .banner-ux-ui__title {
+  .banner-subservices__title {
     margin-left: 0;
   }
 
-  .banner-ux-ui__content {
+  .banner-subservices__content {
     display: none;
   }
 
-  .banner-ux-ui__image {
+  .banner-subservices__image {
     position: relative;
     bottom: unset;
     width: 100%;
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: $screen-xs) {
-  .banner-ux-ui__image {
+  .banner-subservices__image {
     height: 300px;
     margin-bottom: 20px;
   }

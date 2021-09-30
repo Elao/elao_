@@ -32,7 +32,7 @@ L'idéal pour ne rien oublier est d'avoir prévu les différents cas lors de la 
 
 ### La checklist de base
 
-- En web, tester la fonctionnalité sur différents navigateurs ainsi que sur mobile pour valider que tout s'affiche correctement dans tous les contextes (responsive et vieux navigateurs — _brrr, je te regarde, IE6_) ;
+- En web, tester la fonctionnalité sur différents navigateurs ainsi que sur mobile pour valider que tout s'affiche correctement dans tous les contextes ;
 - Formulaire : tester des éléments valides et non valides, un remplissage partiel, pour valider que la gestion des erreurs a bien été réalisée ;
 - Gestion des droits : si une fonctionnalité n'est accessible qu'à un groupe d'utilisateurs (par exemple, les administrateurs d'une solution), s'assurer que les autres groupes (utilisateurs simples) n'y ont pas accès ;
 — Tester une liste ou une page vide, sans les items prévus. 

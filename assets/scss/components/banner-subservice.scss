@@ -1,15 +1,15 @@
-.banner-subservices {
+.banner-subservice {
   display: flex;
   justify-content: space-between;
   position: relative;
-  margin-bottom: 493px;
+  margin-bottom: 490px;
 }
 
-.banner-subservices__title {
+.banner-subservice__title {
   margin: 0 0 55px 110px;
 }
 
-.banner-subservices__content {
+.banner-subservice__content {
   display: flex;
   align-items: center;
   position: relative;
@@ -30,7 +30,7 @@
   }
 }
 
-.banner-subservices__image {
+.banner-subservice__image {
   background: url(https://via.placeholder.com/150);
   width: 1060px;
   background-repeat: no-repeat;
@@ -42,22 +42,22 @@
 }
 
 @media (max-width: $screen-lg) {
-  .banner-subservices {
+  .banner-subservice {
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 70px;
   }
 
-  .banner-subservices__title {
+  .banner-subservice__title {
     margin-left: 0;
   }
 
-  .banner-subservices__content {
+  .banner-subservice__content {
     display: none;
   }
 
-  .banner-subservices__image {
+  .banner-subservice__image {
     position: relative;
     bottom: unset;
     width: 100%;
@@ -65,7 +65,7 @@
 }
 
 @media (max-width: $screen-xs) {
-  .banner-subservices__image {
+  .banner-subservice__image {
     height: 300px;
     margin-bottom: 20px;
   }

@@ -2,17 +2,12 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 
-  p,
-  h2,
-  h3,
-  h4,
-  ul,
-  blockquote {
-    grid-column: 2 / 12;
-  }
-
   * {
     grid-column: 1 / 13;
+  }
+
+  .offset {
+    grid-column: 2 / 12;
   }
 
   .project-team {
@@ -109,12 +104,7 @@
 
 @media (max-width: $screen-sm) {
   .page-subservice {
-    p,
-    h2,
-    h3,
-    h4,
-    ul,
-    blockquote {
+    .offset {
       grid-column: 1 / 13;
     }
 

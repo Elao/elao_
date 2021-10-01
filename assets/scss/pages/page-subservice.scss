@@ -1,4 +1,20 @@
 .page-subservice {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  p,
+  h2,
+  h3,
+  h4,
+  ul,
+  blockquote {
+    grid-column: 2 / 12;
+  }
+
+  * {
+    grid-column: 1 / 13;
+  }
+
   .project-team {
     margin-bottom: 145px;
   }
@@ -27,13 +43,14 @@
   }
 
   .subservice-banner {
-    margin: 60px 0 70px;
+    margin-bottom: 70px;
     position: relative;
+    padding-top: 60px;
 
     &:before {
       content: '';
       position: absolute;
-      top: -60px;
+      top: 0;
       left: 0;
       background: $color-secondary;
       width: 730px;
@@ -76,78 +93,112 @@
 }
 
 @media (max-width: $screen-md) {
-  .subservice-banner{
-    .image {
-      width: calc(100% - 110px);
+  .page-subservice {
+    .subservice-banner {
+      .image {
+        width: calc(100% - 110px);
 
-      &:before,
-      &:after {
-        display: none;
+        &:before,
+        &:after {
+          display: none;
+        }
       }
     }
   }
 }
 
 @media (max-width: $screen-sm) {
-  .details-subservice {
-    align-items: flex-start;
-    margin-bottom: 70px;
-  }
-
-  .details-ux-ui__image {
-    max-width: 250px;
-    margin-top: 10px;
-  }
-
-  .horizontal-content--left {
-    .horizontal-content {
-      margin-left: 40px;
-    }
-  }
-
-  .horizontal-content--right {
-    .horizontal-content {
-      margin-right: 40px;
-    }
-  }
-
-  .subservice-banner {
-    margin-top: 0;
-
-    &:before {
-      display: none;
+  .page-subservice {
+    p,
+    h2,
+    h3,
+    h4,
+    ul,
+    blockquote {
+      grid-column: 1 / 13;
     }
 
-    .image {
-      margin: 0;
-      width: 100%;
+    .details-subservice {
+      align-items: flex-start;
+      margin-bottom: 70px;
+    }
+
+    .details-ux-ui__image {
+      max-width: 250px;
+      margin-top: 10px;
+    }
+
+    .horizontal-content--left {
+      .horizontal-content {
+        margin-left: 40px;
+      }
+    }
+
+    .horizontal-content--right {
+      .horizontal-content {
+        margin-right: 40px;
+      }
+    }
+
+    .subservice-banner {
+      margin-top: 0;
+
+      &:before {
+        display: none;
+      }
+
+      .image {
+        margin: 0;
+        width: 100%;
+      }
     }
   }
 }
 
 @media (max-width: $screen-xs) {
-  .details-subservice {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .details-ux-ui__image {
-    max-width: 100%;
-    width: 100%;
-  }
-
-  .horizontal-content,
-  .details-ux-ui__image {
-    margin: 0 0 30px;
-  }
-
-  .horizontal-content--left{
-    .horizontal-content {
-      order: 1;
+  .page-subservice {
+    .details-subservice {
+      flex-direction: column;
+      align-items: center;
     }
 
     .details-ux-ui__image {
-      order: 2;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .horizontal-content,
+    .details-ux-ui__image {
+      margin: 0 0 30px;
+    }
+
+    .horizontal-content--left {
+      .horizontal-content {
+        order: 1;
+      }
+
+      .details-ux-ui__image {
+        order: 2;
+      }
+    }
+
+    .horizontal-content--left,
+    .horizontal-content--right {
+      .horizontal-content {
+        margin: 0 0 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xxs) {
+  .page-subservice {
+    .project-team {
+      margin-bottom: 40px;
+    }
+
+    .details-ux-ui__image {
+      margin: 0;
     }
   }
 }

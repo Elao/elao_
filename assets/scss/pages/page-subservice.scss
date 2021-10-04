@@ -14,30 +14,28 @@
     margin-bottom: 145px;
   }
 
-  .details-subservice {
+  .horizontal-content {
     display: flex;
     align-items: center;
-  }
 
-  .horizontal-content {
     h3 {
       margin-top: 10px;
     }
   }
 
   .horizontal-content--left {
-    .horizontal-content {
+    .horizontal-content__info {
       margin-left: 90px;
     }
   }
 
   .horizontal-content--right {
-    .horizontal-content {
+    .horizontal-content__info {
       margin-right: 90px;
     }
   }
 
-  .subservice-banner {
+  .subservice-image {
     margin-bottom: 70px;
     position: relative;
     padding-top: 60px;
@@ -89,7 +87,7 @@
 
 @media (max-width: $screen-md) {
   .page-subservice {
-    .subservice-banner {
+    .subservice-image {
       .image {
         width: calc(100% - 110px);
 
@@ -108,29 +106,29 @@
       grid-column: 1 / 13;
     }
 
-    .details-subservice {
+    .horizontal-content {
       align-items: flex-start;
       margin-bottom: 70px;
     }
 
-    .details-ux-ui__image {
+    .horizontal-content__image {
       max-width: 250px;
       margin-top: 10px;
     }
 
     .horizontal-content--left {
-      .horizontal-content {
+      .horizontal-content__info {
         margin-left: 40px;
       }
     }
 
     .horizontal-content--right {
-      .horizontal-content {
+      .horizontal-content__info {
         margin-right: 40px;
       }
     }
 
-    .subservice-banner {
+    .subservice-image {
       margin-top: 0;
 
       &:before {
@@ -147,34 +145,34 @@
 
 @media (max-width: $screen-xs) {
   .page-subservice {
-    .details-subservice {
+    .horizontal-content {
       flex-direction: column;
       align-items: center;
     }
 
-    .details-ux-ui__image {
+    .horizontal-content__image {
       max-width: 100%;
       width: 100%;
     }
 
-    .horizontal-content,
-    .details-ux-ui__image {
+    .horizontal-content__info,
+    .horizontal-content__image {
       margin: 0 0 30px;
     }
 
     .horizontal-content--left {
-      .horizontal-content {
+      .horizontal-content__info {
         order: 1;
       }
 
-      .details-ux-ui__image {
+      .horizontal-content__image {
         order: 2;
       }
     }
 
     .horizontal-content--left,
     .horizontal-content--right {
-      .horizontal-content {
+      .horizontal-content__info {
         margin: 0 0 30px;
       }
     }
@@ -187,7 +185,7 @@
       margin-bottom: 40px;
     }
 
-    .details-ux-ui__image {
+    .horizontal-content__image {
       margin: 0;
     }
   }

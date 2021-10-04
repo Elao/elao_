@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-md) {
   .project-team {
     margin-left: -5px;
     margin-right: -5px;
@@ -76,16 +76,27 @@
 }
 
 @media (max-width: $screen-xs) {
+  .project-team {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .project-team__member {
-    width: calc(50% - 10px);
-    max-width: calc(50% - 10px);
+    width: 100%;
+    max-width: 100%;
 
     a {
       padding: 20px;
+      min-height: unset;
+      text-align: center;
 
       img {
-        width: 60px;
+        width: 70px;
         margin: 0 auto 25px;
+      }
+
+      .name {
+        margin: 0 0 5px;
       }
     }
   }

@@ -13,6 +13,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+b,
+strong {
+  font-family: 'faktum semibold';
+}
+
 ::selection {
   color: $color-secondary;
   background-color: $color-brand;

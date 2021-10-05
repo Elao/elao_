@@ -47,7 +47,8 @@
 
 @media (max-width: $screen-lg) {
   .tile-list {
-    width: 100%;
+    margin-left: -5px;
+    margin-right: -5px;
     justify-content: flex-start;
   }
 
@@ -66,11 +67,18 @@
 
 @media (max-width: $screen-xs) {
   .tile-list {
+    margin-left: 0;
+    margin-right: 0;
     flex-direction: column;
   }
 
   .tile {
     margin: 0 0 10px;
+    font-size: 20px;
     width: 100%;
+
+    small {
+      margin: 0 0 10px;
+    }
   }
 }

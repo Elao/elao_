@@ -14,19 +14,6 @@
   font-size: 20px;
   line-height: 32px;
 
-  h2 {
-    margin-top: 0;
-  }
-
-  .dash {
-    width: 50px;
-    height: 12px;
-    position: absolute;
-    top: -50px;
-    left: 0;
-    background: $color-tertiary;
-  }
-
   .btn {
     margin-top: 40px;
   }
@@ -124,10 +111,6 @@
       width: 100%;
       max-width: 400px;
       justify-content: center;
-    }
-
-    .dash {
-      top: 0;
     }
   }
 

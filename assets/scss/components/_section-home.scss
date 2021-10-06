@@ -1,18 +1,15 @@
 .section-home {
   margin: 0 0 180px;
   display: flex;
+  align-items: flex-start;
 }
 
 .section-home__content {
-  margin-left: 110px;
-  margin-right: 40px;
+  margin-right: 80px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: $color-text;
-  font-size: 20px;
-  line-height: 32px;
 
   .btn {
     margin-top: 40px;
@@ -25,7 +22,7 @@
 
   &:before {
     position: absolute;
-    bottom: 40px;
+    bottom: 30px;
     right: -20px;
     content: '';
     height: 100px;
@@ -61,8 +58,7 @@
 
 .section-home--reverse {
   .section-home__content {
-    margin-right: 110px;
-    margin-left: 40px;
+    margin-left: 80px;
   }
 
   .section-home__image {
@@ -79,13 +75,22 @@
 }
 
 @media (max-width: $screen-md) {
+  // .section-home,
+  // .section-home--reverse {
+  //   max-width: 600px;
+  // }
+
   .section-home {
-    margin: 0 0 60px;
+    margin: 0 0 70px;
     flex-direction: column-reverse;
   }
 
+  .section-home--reverse {
+    margin: 0 0 45px;
+  }
+
   .section-home__image {
-    margin: 0 0 40px;
+    margin-bottom: 40px;
     width: 100%;
     min-width: unset;
 
@@ -103,28 +108,15 @@
 
   .section-home__content {
     margin: 0;
-    font-size: 16px;
-    line-height: 1.5;
-
-    .btn {
-      margin: 20px auto 0;
-      width: 100%;
-      max-width: 400px;
-      justify-content: center;
-    }
   }
 
   .section-home__links {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 70px;
     min-width: unset;
-    flex-wrap: nowrap;
-    flex-direction: column;
-
-    .animated-block {
-      margin: 5px 0;
-      width: 100%;
-    }
+    width: 100%;
   }
 
   .section-home--reverse,
@@ -137,14 +129,18 @@
   }
 }
 
+@media (max-width: $screen-sm) {
+  .section-home {
+    max-width: unset;
+  }
+}
+
 @media(max-width: $screen-xs) {
   .section-home {
-    margin: 0 0 40px;
+    max-width: unset;
   }
 
   .section-home--reverse {
-    margin: 0;
-
     .section-home__image {
       &:before {
         left: -5px;
@@ -172,8 +168,23 @@
 
   .section-home__content {
     .btn {
+      margin-left: auto;
+      margin-right: auto;
       width: 100%;
-      max-width: unset;
+      max-width: 400px;
+      justify-content: center;
+    }
+  }
+
+  .section-home__links {
+    margin-left: 0;
+    margin-right: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    .animated-block {
+      margin: 5px 0;
+      width: 100%;
     }
   }
 }

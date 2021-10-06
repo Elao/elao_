@@ -88,6 +88,14 @@
             </div>
             <div class="section-home__image">
                 <picture>
+                    <source type="image/webp"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/code-responsive.webp') }}"
+                    >
+                    <source type="image/jpeg"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/code-responsive.jpg') }}"
+                    >
                     <source
                         type="image/webp"
                         srcset="{{ asset('build/images/pages/home/code.webp') }} 1x,
@@ -107,6 +115,14 @@
         <section class="section-home section-home--reverse" data-aos="fade-right">
             <div class="section-home__image">
                 <picture>
+                    <source type="image/webp"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/workshop-team-responsive.webp') }}"
+                    >
+                    <source type="image/jpeg"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/workshop-team-responsive.jpg') }}"
+                    >
                     <source
                         type="image/webp"
                         srcset="{{ asset('build/images/pages/home/workshop-team.webp') }} 1x,
@@ -146,6 +162,14 @@
             </div>
             <div class="section-home__image">
                 <picture>
+                    <source type="image/webp"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/workshop-talk-responsive.webp') }}"
+                    >
+                    <source type="image/jpeg"
+                            media="(min-width: 760px) and (max-width: 1220px)"
+                            srcset="{{ asset('build/images/pages/home/workshop-talk-responsive.jpg') }}"
+                    >
                     <source
                         type="image/webp"
                         srcset="{{ asset('build/images/pages/home/workshop-talk.webp') }} 1x,
@@ -156,7 +180,7 @@
                         srcset="{{ asset('build/images/pages/home/workshop-talk.jpg') }} 1x,
                                 {{ asset('build/images/pages/home/workshop-talk@2x.jpg') }} 2x"
                     >
-                    <img src="{{ asset('build/images/pages/home/workshop-talk.jpg') }}" alt=""/>
+                    <img srcset="{{ asset('build/images/pages/home/workshop-talk.jpg') }}" alt=""/>
                 </picture>
                 <i class="icon icon--brackets-left" aria-hidden="true"></i>
             </div>

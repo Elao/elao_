@@ -21,7 +21,7 @@ L'étape de recette permet de s'assurer que le développement réalisé correspo
 
 ## Qui doit réaliser la recette fonctionnelle ? 
 
-Idéalement, le plus de personnes possibles afin de multiplier les chances de débusquer d'éventuels dysfonctionnements. En général :
+Idéalement, le plus de personnes possible afin de multiplier les chances de débusquer d'éventuels dysfonctionnements. En général :
 - Le développeur : la personne qui a développé la fonctionnalité, d'abord, est la première personne qui la teste. 
 - Généralement, un regard externe est plus que favorable. Chez Elao, une tierce personne de l'équipe réalise la recette avant de proposer la fonctionnalité au client. 
 - Le PO (Product Owner) ou porteur de projet fait la dernière passe et si tout est conforme, donne le _go_ pour sa mise en production. 

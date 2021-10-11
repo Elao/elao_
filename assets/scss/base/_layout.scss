@@ -13,6 +13,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+b,
+strong {
+  font-family: 'faktum semibold';
+  font-weight: unset;
+}
+
 ::selection {
   color: $color-secondary;
   background-color: $color-brand;
@@ -59,5 +65,11 @@ body {
       font-size: 20px;
       line-height: 26px;
     }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  body {
+    font-size: 18px;
   }
 }

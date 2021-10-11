@@ -138,18 +138,23 @@ h6, .h6 {
   }
 }
 
-@media (max-width: $screen-xs) {
+@media (max-width: $screen-sm) {
   h1, .h1 {
     font-size: 27px;
   }
 
-  h2, .h2 {
-    font-size: 22px;
-    line-height: 1.6 !important;
+  h2, .h2,
+  .h2--dash,
+  .h2--ordered {
+    font-size: 26px;
+    line-height: 1.4 !important;
   }
 
-  .h2--dash {
-    font-size: 32px;
-    line-height: 1.4 !important;
+  h3, .h3 {
+    font-size: 21px;
+  }
+
+  h4, .h4 {
+    font-size: 19px;
   }
 }

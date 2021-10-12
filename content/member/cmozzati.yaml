@@ -1,6 +1,6 @@
 active: true
 🚲: true
-anonymousTribePicture: true # until we have a picture
+anonymousTribePicture: false # until we have a picture
 
 name: Christelle Mozzati
 pseudo: ~

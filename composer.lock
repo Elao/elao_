@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d425af6cf79f807b683e3020182361b7",
+    "content-hash": "bf0abc36de572839aabded1e1ca9fe2d",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -6940,16 +6940,16 @@
         },
         {
             "name": "elao/accesseo",
-            "version": "dev-master",
+            "version": "v1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Elao/accesseo.git",
-                "reference": "fedf98d4d69cf0306afcedaae3995d8477eb214f"
+                "reference": "57479343a10c3f4aa10a11bc5e021233c32f8247"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Elao/accesseo/zipball/fedf98d4d69cf0306afcedaae3995d8477eb214f",
-                "reference": "fedf98d4d69cf0306afcedaae3995d8477eb214f",
+                "url": "https://api.github.com/repos/Elao/accesseo/zipball/57479343a10c3f4aa10a11bc5e021233c32f8247",
+                "reference": "57479343a10c3f4aa10a11bc5e021233c32f8247",
                 "shasum": ""
             },
             "require": {
@@ -6976,7 +6976,6 @@
             "suggest": {
                 "symfony/http-client": "HTTP Client implementation, used for broken link detection."
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -7018,9 +7017,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Elao/accesseo/issues",
-                "source": "https://github.com/Elao/accesseo/tree/master"
+                "source": "https://github.com/Elao/accesseo/tree/v1.0.0-beta.2"
             },
-            "time": "2021-10-22T05:58:28+00:00"
+            "time": "2021-12-09T10:15:18+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
@@ -7929,7 +7928,7 @@
     "stability-flags": {
         "elao/enum": 10,
         "stenope/stenope": 20,
-        "elao/accesseo": 20
+        "elao/accesseo": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

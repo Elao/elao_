@@ -40,6 +40,7 @@ twig:
                     - { path: 'values', label: 'Valeurs' }
                     - { path: 'team', label: 'La tribu' }
                     - { path: 'blog', label: 'Blog' }
+                    - { path: 'blog_rss', label: 'RSS' }
                 -
                     - { path: 'contact', label: 'Contact' }
 

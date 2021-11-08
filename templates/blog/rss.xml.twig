@@ -4,13 +4,13 @@
         <title>Le blog de l'équipe d'Elao</title>
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
-        <link>{{ url('blog_rss') }}</link>
+        <link>{{ url('blog') }}</link>
         <pubDate>{{ 'now'|date(constant('DATE_RFC2822')) }}</pubDate>
         <language>fr</language>
         <image>
             <url>{{ absolute_url(asset('apple-touch-icon.png')) }}</url>
-            <title>Elao</title>
-            <link>https://www.elao.com/</link>
+            <title>Le blog de l'équipe d'Elao</title>
+            <link>{{ url('blog') }}</link>
         </image>
         <atom:link href="{{ url('blog_rss') }}" rel="self" type="application/rss+xml"/>
         {% for article in articles %}

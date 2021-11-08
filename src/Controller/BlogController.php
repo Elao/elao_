@@ -57,11 +57,12 @@ class BlogController extends AbstractController
         ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
-    #[Route('/rss.xml', name: 'blog_rss')]
+    #[Route('/rss.xml', name: 'blog_rss', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function rss(): Response
     {
-        $articles = $this->manager->getContents(Article::class, ['date' => false]);
-        $articles = array_filter($articles, fn (Article $article) => $article->date > new \DateTime('-6 months'));
+        $articles = $this->manager->getContents(Article::class, ['date' => false], '_.date > date("-6 months")');
 
         $response = new Response();
         $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');

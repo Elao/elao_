@@ -8,6 +8,8 @@ use Elao\Enum\AutoDiscoveredValuesTrait;
 use Elao\Enum\ReadableEnum;
 
 /**
+ * @extends ReadableEnum<string>
+ *
  * @method static JobContractType CDI()
  * @method static JobContractType CDD()
  * @method static JobContractType INTERNSHIP()
@@ -15,6 +17,7 @@ use Elao\Enum\ReadableEnum;
  */
 class JobContractType extends ReadableEnum
 {
+    /** @use AutoDiscoveredValuesTrait<string> */
     use AutoDiscoveredValuesTrait;
 
     public const CDI = 'CDI';
@@ -22,6 +25,9 @@ class JobContractType extends ReadableEnum
     public const INTERNSHIP = 'INTERNSHIP';
     public const WORK_STUDY = 'WORK-STUDY';
 
+    /**
+     * @return array<string, string>
+     */
     public static function readables(): array
     {
         return [

@@ -17,7 +17,7 @@ class GlideExtension extends AbstractExtension
         $this->resizedUrlGenerator = $resizer;
     }
 
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter('glide_image_resize', \Closure::fromCallable([$this, 'resizeImage'])),

@@ -46,7 +46,7 @@
     },
     "require-dev": {
         "ekino/phpstan-banned-code": "^0.4",
-        "elao/accesseo": "1.x-dev",
+        "elao/accesseo": "dev-master#fedf98d4d69cf0306afcedaae3995d8477eb214f",
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^0.12.42",
         "phpstan/phpstan-strict-rules": "^0.12.5",
@@ -105,12 +105,6 @@
         "symfony": {
             "allow-contrib": false,
             "require": "5.3.*"
-        }
-    },
-    "repositories": {
-        "elao/accesseo": {
-            "type": "vcs",
-            "url": "https://github.com/Elao/accesseo.git"
         }
     },
     "prefer-stable": true,

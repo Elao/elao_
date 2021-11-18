@@ -1,4 +1,10 @@
 {
+    "brick/schema": {
+        "version": "0.1.1"
+    },
+    "brick/structured-data": {
+        "version": "0.1.1"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99"
     },
@@ -119,6 +125,9 @@
     "psr/event-dispatcher": {
         "version": "1.0.0"
     },
+    "psr/http-factory": {
+        "version": "1.0.1"
+    },
     "psr/http-message": {
         "version": "1.0.1"
     },
@@ -130,6 +139,9 @@
     },
     "ralouphie/getallheaders": {
         "version": "3.0.3"
+    },
+    "sabre/uri": {
+        "version": "2.2.2"
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",

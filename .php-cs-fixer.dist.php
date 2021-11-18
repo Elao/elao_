@@ -13,6 +13,10 @@ return (new PhpCsFixer\Config())
         '@Symfony' => true,
         'array_syntax' => ['syntax' => 'short'],
         'concat_space' => ['spacing' => 'one'],
+        'phpdoc_to_comment' => ['ignored_tags' => [
+            // https://github.com/phpstan/phpstan/issues/5465
+            'use',
+        ]],
         'declare_strict_types' => true,
         'native_function_invocation' => ['include' => ['@compiler_optimized']],
         'no_superfluous_phpdoc_tags' => true,

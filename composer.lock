@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ada12af342206d1fff509b15011c6ba7",
+    "content-hash": "d425af6cf79f807b683e3020182361b7",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1574,16 +1574,16 @@
         },
         {
             "name": "stenope/stenope",
-            "version": "dev-sf-upgrades",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StenopePHP/Stenope.git",
-                "reference": "e6750e54cee4b5cbc13a37c026c9ea32810e3387"
+                "reference": "0fe2c1047aebfce8823440d836cd0b318926133a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/e6750e54cee4b5cbc13a37c026c9ea32810e3387",
-                "reference": "e6750e54cee4b5cbc13a37c026c9ea32810e3387",
+                "url": "https://api.github.com/repos/StenopePHP/Stenope/zipball/0fe2c1047aebfce8823440d836cd0b318926133a",
+                "reference": "0fe2c1047aebfce8823440d836cd0b318926133a",
                 "shasum": ""
             },
             "require": {
@@ -1625,6 +1625,7 @@
                 "symfony/twig-bridge": "^5.1|^6.0",
                 "symfony/twig-bundle": "^5.1|^6.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -1664,9 +1665,9 @@
             ],
             "support": {
                 "issues": "https://github.com/StenopePHP/Stenope/issues",
-                "source": "https://github.com/StenopePHP/Stenope/tree/sf-upgrades"
+                "source": "https://github.com/StenopePHP/Stenope/tree/v0.7.0"
             },
-            "time": "2021-11-17T17:47:02+00:00"
+            "time": "2021-11-18T09:50:02+00:00"
         },
         {
             "name": "symfony/asset",

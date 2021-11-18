@@ -47,3 +47,7 @@ twig:
             home:
                 highlights:
                     caseStudy: tribu
+
+when@test:
+    twig:
+        strict_variables: true

@@ -20,7 +20,7 @@ class ExternalUrlExtension extends AbstractExtension
         $this->urlGenerator = $urlGenerator;
     }
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('external_url', [$this, 'generateExternalUrl']),

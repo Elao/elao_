@@ -21,7 +21,7 @@ class StdClassDenormalizer implements ContextAwareDenormalizerInterface, Denorma
         $this->propertyAccessor = $propertyAccessor;
     }
 
-    public function denormalize($data, string $type, string $format = null, array $context = [])
+    public function denormalize($data, string $type, string $format = null, array $context = []): mixed
     {
         $context[self::PROCESSING] = true;
 
@@ -37,7 +37,7 @@ class StdClassDenormalizer implements ContextAwareDenormalizerInterface, Denorma
         return $object;
     }
 
-    public function supportsDenormalization($data, string $type, string $format = null, array $context = [])
+    public function supportsDenormalization($data, string $type, string $format = null, array $context = []): bool
     {
         if (isset($context[self::PROCESSING])) {
             return false;

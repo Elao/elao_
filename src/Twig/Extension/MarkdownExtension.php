@@ -17,7 +17,7 @@ class MarkdownExtension extends AbstractExtension
         $this->parsedown = $parsedown;
     }
 
-    public function getFilters()
+    public function getFilters(): array
     {
         return [
             new TwigFilter('markdownify', [$this->parsedown, 'parse']),

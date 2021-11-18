@@ -21,7 +21,7 @@
                     <a href="{{ path('jobs') }}">
                         Nous recrutons
                         {% if count %}
-                            <span class="bullet">{{ count }}</span>
+                            <span class="bullet" aria-hidden="true">{{ count }}</span>
                         {% endif %}
                     </a>
                 </li>
@@ -37,19 +37,19 @@
             <ul>
                 <li>
                     <a href="{{ site.social.github }}" target="_blank">
-                        <i class="icon icon--github"></i>
+                        <i class="icon icon--github" aria-hidden="true"></i>
                         Github
                     </a>
                 </li>
                 <li>
                     <a href="{{ site.social.twitter }}" target="_blank">
-                        <i class="icon icon--twitter"></i>
+                        <i class="icon icon--twitter" aria-hidden="true"></i>
                         Twitter
                     </a>
                 </li>
                 <li>
                     <a href="{{ site.social.instagram }}" target="_blank">
-                        <i class="icon icon--instagram"></i>
+                        <i class="icon icon--instagram" aria-hidden="true"></i>
                         Instagram
                     </a>
                 </li>

@@ -27,20 +27,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ path('elaomojis') }}">Elaomojis 🎉</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                        <a href="{{ path('jobs') }}">
-                            Nous recrutons
-                            {% if count %}
-                                <span class="bullet">{{ count }}</span>
-                            {% endif %}
-                        </a>
-                    </li>
-                    <li>
                         <a href="{{ path('glossary') }}">Glossaire 🧐</a>
                     </li>
                     <li>

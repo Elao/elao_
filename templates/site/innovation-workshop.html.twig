@@ -1,3 +1,5 @@
+{% import "macros.html.twig" as macros %}
+
 {% extends 'base.html.twig' %}
 
 {% block header %}{% endblock %}
@@ -73,12 +75,13 @@
             </ul>
             <h2>Les agitateurs</h2>
             <ul class="project-team">
+                {% set member = content_get('App\\Model\\Member', 'xgorse') %}
                 <li class="project-team__member project-team__member--large">
-                    <a href="{{ path('team_member', { member: 'xgorse' }) }}">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
                         <div class="member-header">
-                            <img src="{{ asset('images/members/avatars/xgorse.jpg') }}" alt="avatar de Xavier Gorse"/>
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}"/>
                             <div class="info">
-                                <span class="name">Xavier Gorse</span>
+                                <span class="name">{{ member.name }}</span>
                                 <span class="job">Co-fondateur d’Elao, <br>facilitateur et expert technique</span>
                             </div>
                         </div>
@@ -87,12 +90,13 @@
                         </div>
                     </a>
                 </li>
+                {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
                 <li class="project-team__member project-team__member--large">
-                    <a href="{{ path('team_member', { member: 'cmozzati' }) }}">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
                         <div class="member-header">
-                            <img src="{{ asset('images/members/avatars/cmozzati.jpg') }}" alt="Avatar de Christelle Mozzati"/>
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="Avatar de {{ member.name }}"/>
                             <div class="info">
-                                <span class="name">Christelle Mozzati</span>
+                                <span class="name">{{ member.name }}</span>
                                 <span class="job">Facilitatrice et experte UX</span>
                             </div>
                         </div>

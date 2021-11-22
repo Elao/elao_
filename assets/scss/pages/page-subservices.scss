@@ -39,7 +39,7 @@
     }
   }
 
-  .subservices-image {
+  .backlog-banner {
     margin-bottom: 70px;
     position: relative;
     padding-top: 60px;
@@ -54,51 +54,48 @@
       height: 190px;
       z-index: 0;
     }
+  }
 
-    .image {
-      position: relative;
-      background: url(https://via.placeholder.com/950x337);
-      background-size: cover;
-      background-position: center;
-      width: 950px;
-      height: 337px;
-      margin-left: 110px;
-      z-index: 1;
+  .backlog-banner__image {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    width: 950px;
+    height: 335px;
+    margin-left: 110px;
+    z-index: 1;
 
-      &:before {
-        content: '';
-        position: absolute;
-        background: $color-brand;
-        width: 230px;
-        height: 95px;
-        right: -40px;
-        bottom: 13px;
-      }
+    &:before {
+      content: '';
+      position: absolute;
+      background: $color-brand;
+      width: 230px;
+      height: 95px;
+      right: -40px;
+      bottom: 13px;
+    }
 
-      &:after {
-        content: '\e914';
-        position: absolute;
-        color: $color-secondary;
-        font-family: 'icomoon';
-        font-size: 93px;
-        bottom: -22px;
-        right: 14px;
-        line-height: 1;
-      }
+    &:after {
+      content: '\e914';
+      position: absolute;
+      color: $color-secondary;
+      font-family: 'icomoon';
+      font-size: 93px;
+      bottom: -22px;
+      right: 14px;
+      line-height: 1;
     }
   }
 }
 
 @media (max-width: $screen-md) {
   .page-subservices {
-    .subservices-image {
-      .image {
-        width: calc(100% - 110px);
+    .backlog-banner__image {
+      width: calc(100% - 110px);
 
-        &:before,
-        &:after {
-          display: none;
-        }
+      &:before,
+      &:after {
+        display: none;
       }
     }
   }
@@ -132,17 +129,17 @@
       }
     }
 
-    .subservices-image {
+    .backlog-banner {
       margin-top: 0;
 
       &:before {
         display: none;
       }
+    }
 
-      .image {
-        margin: 0;
-        width: 100%;
-      }
+    .backlog-banner__image {
+      margin: 0;
+      width: 100%;
     }
   }
 }

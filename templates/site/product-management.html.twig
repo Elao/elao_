@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
@@ -27,7 +28,7 @@
             <span>votre stratégie produit</span>
         </h1>
         <div class="banner-subservices__content">Product Management</div>
-        <div class="banner-subservices__image" style="background: url(https://via.placeholder.com/150);"></div>
+        <div class="banner-subservices__image" style="background: url('{{ asset('build/images/pages/product-strategy/banner.jpg') }}')"></div>
     </div>
     <div class="page-subservices">
         <p class="offset"><strong>Le rôle d’un·e PO/PM (Product Owner / Product Manager) est clé pour un projet : c’est la personne qui fait le lien entre tous les acteurs. Elle porte la vision produit, ce cap que chacun·e doit avoir en tête pour prendre des décisions éclairées et cohérentes.</strong></p>
@@ -41,7 +42,19 @@
             <span>I.</span> Animation d’ateliers de conception et d’innovation
         </h3>
         <div class="horizontal-content horizontal-content--left">
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/product-strategy/conception-workshop.webp') }} 1x,
+                            {{ asset('build/images/pages/product-strategy/conception-workshop@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/product-strategy/conception-workshop.jpg') }} 1x,
+                            {{ asset('build/images/pages/product-strategy/conception-workshop@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/product-strategy/conception-workshop.jpg') }}" alt="" />
+            </picture>
             <div class="horizontal-content__info">
                 <p>Dans la vie d’un projet, nous allons nous rencontrer, beaucoup. Dans notre besace, nous avons différents formats d’ateliers qui vous aideront à dessiner un périmètre fonctionnel qui liera les deux composantes de votre projet : satisfaire vos utilisateurs, aussi bien que servir votre business.</p>
                 <h3>En fonction des ateliers, nous avons ces objectifs :</h3>
@@ -60,14 +73,19 @@
                 <h3>Du recueil du besoin à la proposition de solutions</h3>
                 <p><strong>À travers nos ateliers de conception UX, nous vous aidons à aller recueillir le besoin auprès de vos utilisateurs puis à construire petit à petit la meilleure solution pour y répondre.</strong></p>
             </div>
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
-        </div>
-        <div class="horizontal-content horizontal-content--left">
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
-            <div class="horizontal-content__info">
-                <h3>Du recueil du besoin à la proposition de solutions</h3>
-                <p><strong>À travers nos ateliers de conception UX, nous vous aidons à aller recueillir le besoin auprès de vos utilisateurs puis à construire petit à petit la meilleure solution pour y répondre.</strong></p>
-            </div>
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/product-strategy/roadmap.webp') }} 1x,
+                            {{ asset('build/images/pages/product-strategy/roadmap@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/product-strategy/roadmap.jpg') }} 1x,
+                            {{ asset('build/images/pages/product-strategy/roadmap@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/product-strategy/roadmap.jpg') }}" alt="" />
+            </picture>
         </div>
         <h3 class="offset">Des outils de suivi des usages au quotidien, pour une amélioration continue</h3>
         <h4 class="offset">Rester proche de vos utilisateurs au jour le jour</h4>
@@ -78,8 +96,8 @@
         <h3 class="h2 h2--ordered offset">
             <span>III.</span> Vous donner les bonnes informations pour prioriser votre backlog et construire votre roadmap
         </h3>
-        <div class="subservices-image">
-            <div class="image"></div>
+        <div class="backlog-banner">
+            <div class="backlog-banner__image" style="background-image: url('{{ asset('build/images/pages/product-strategy/backlog.jpg') }}')"></div>
         </div>
         <p class="offset">Dans le développement produit, il y a toujours beaucoup d’idées et jamais assez de temps / ressources pour toutes les réaliser : le backlog se remplit plus vite que l’équipe technique n’est en capacité de l’absorber. C’est le signe d’un produit en bonne santé ! Nous vous aidons à prioriser les bonnes fonctionnalités, au bon moment, selon vos enjeux business, votre vision produit et les retours de vos utilisateurs.</p>
         <h3 class="h2 h2--ordered offset">
@@ -94,18 +112,20 @@
         </ul>
         <h2 class="h2--dash offset">L’équipe Produit chez Elao</h2>
         <ul class="project-team offset">
+            {% set member = content_get('App\\Model\\Member', 'xgorse') %}
             <li class="project-team__member">
-                <a href="#">
-                    <img src="https://via.placeholder.com/100x100">
-                    <span class="name">Amélie Defrance</span>
-                    <span class="job">Intégratrice HTML/CSS</span>
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
                 </a>
             </li>
-             <li class="project-team__member">
-                <a href="#">
-                    <img src="https://via.placeholder.com/100x100">
-                    <span class="name">Amélie Defrance</span>
-                    <span class="job">Intégratrice HTML/CSS</span>
+            {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
+            <li class="project-team__member">
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
                 </a>
             </li>
         </ul>

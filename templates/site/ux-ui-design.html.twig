@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block content %}
@@ -27,7 +28,7 @@
             <span>les interfaces de vos applications</span>
         </h1>
         <div class="banner-subservices__content">Conception UX/UI</div>
-        <div class="banner-subservices__image" style="background: url(https://via.placeholder.com/150);"></div>
+        <div class="banner-subservices__image" style="background: url({{ asset('build/images/pages/ux-ui/banner.jpg') }}"></div>
     </div>
     <div class="page-subservices">
         <p class="offset"><strong>Qui n’a jamais râlé devant une interface trop vieillotte, mal pensée, où tout s’enchaîne sans fluidité ? Ou à un service utile voire nécessaire, mais plein de bugs ?</strong></p>
@@ -44,7 +45,19 @@
             <span>I.</span> Animation d’ateliers de conception UX
         </h3>
         <div class="horizontal-content horizontal-content--left">
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/conception-workshop.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/conception-workshop@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/conception-workshop.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/conception-workshop@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/conception-workshop.jpg') }}" alt="" />
+            </picture>
             <div class="horizontal-content__info">
                 <p>Les ateliers UX peuvent se faire aussi bien avec vous qu’avec vos utilisateurs, en fonction des objectifs et livrables attendus, différents formats pourront vous être proposés.</p>
                 <h3>Dans tous nos ateliers, nous avons 3 objectifs :</h3>
@@ -64,10 +77,34 @@
                 <p><strong>Les entretiens utilisateurs nous permettent d’aller à la rencontrer des personas clé de votre solution, ceux qui seront directement impactés et par conséquent, qui nous aideront à construire la meilleure application possible.</strong></p>
                 <p>Lors de sessions d’échanges de 20 à 30 minutes avec une dizaine d’utilisateurs, nous allons explorer en profondeur leurs motivations et points de douleurs.</p>
             </div>
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-discussion.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-discussion@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-discussion.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-discussion@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/user-discussion.jpg') }}" alt="" />
+            </picture>
         </div>
         <div class="horizontal-content horizontal-content--left">
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-testing.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-testing@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-testing.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-testing@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/user-testing.jpg') }}" alt="" />
+            </picture>
             <div class="horizontal-content__info">
                 <h3>Des tests utilisateurs, pour analyser leurs comportements face à une solution fonctionnelle</h3>
                 <h4>Depuis un prototype, pour le valider</h4>
@@ -83,7 +120,19 @@
                 <p>Il s’agit d’aller voir sur le terrain, là où sont réellement vos utilisateurs pour les observer, apprendre d’eux en leurs posant les bonnes questions et comprendre quels sont leurs points de friction quotidiens.</p>
                 <p><strong>C’est une technique qui porte ses fruits notamment dans la conception d’une application métier dédiée à simplifier et améliorer des processus.</strong></p>
             </div>
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/gemba-walk.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/gemba-walk@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/gemba-walk.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/gemba-walk@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/gemba-walk.jpg') }}" alt="" />
+            </picture>
         </div>
         <h3 class="h2 h2--ordered offset">
             <span>III.</span> Construction de parcours utilisateurs (UX)
@@ -100,7 +149,19 @@
             <span>V.</span> Conseil et accompagnement en UX
         </h3>
         <div class="horizontal-content horizontal-content--left">
-            <img src="https://via.placeholder.com/400x530" alt="" class="horizontal-content__image" />
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/expertise.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/expertise@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/expertise.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/expertise@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/expertise.jpg') }}" alt="" />
+            </picture>
             <div class="horizontal-content__info">
                 <p><strong>Nous avons également l’expertise pour intervenir sur des missions qui ne nécessitent pas de développement, centrées exclusivement sur vos utilisateurs et l’optimisation de vos parcours.</strong></p>
                 <h4>Vous avez une application et souhaitez la confronter à vos utilisateurs ?</h4>
@@ -111,25 +172,20 @@
         </div>
         <h2 class="h2--dash offset">L’équipe UX chez Elao</h2>
         <ul class="project-team offset">
+            {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
             <li class="project-team__member">
-                <a href="#">
-                    <img src="https://via.placeholder.com/100x100">
-                    <span class="name">Amélie Defrance</span>
-                    <span class="job">Intégratrice HTML/CSS</span>
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
                 </a>
             </li>
+            {% set member = content_get('App\\Model\\Member', 'adefrance') %}
             <li class="project-team__member">
-                <a href="#">
-                    <img src="https://via.placeholder.com/100x100">
-                    <span class="name">Amélie Defrance</span>
-                    <span class="job">Intégratrice HTML/CSS</span>
-                </a>
-            </li>
-            <li class="project-team__member">
-                <a href="#">
-                    <img src="https://via.placeholder.com/100x100">
-                    <span class="name">Amélie Defrance</span>
-                    <span class="job">Intégratrice HTML/CSS</span>
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
                 </a>
             </li>
         </ul>

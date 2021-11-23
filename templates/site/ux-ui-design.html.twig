@@ -1,0 +1,196 @@
+{% import "macros.html.twig" as macros %}
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Nos services</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Conception UX/UI</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+    </ol>
+    <div class="banner-subservices">
+        <h1 class="banner-subservices__title">
+            Nous concevons
+            <span>les interfaces de vos applications</span>
+        </h1>
+        <div class="banner-subservices__content">Conception UX/UI</div>
+        <div class="banner-subservices__image" style="background: url({{ asset('build/images/pages/ux-ui/banner.jpg') }})"></div>
+    </div>
+    <div class="page-subservices">
+        <p class="offset"><strong>Qui n’a jamais râlé devant une interface trop vieillotte, mal pensée, où tout s’enchaîne sans fluidité ? Ou à un service utile voire nécessaire, mais plein de bugs ?</strong></p>
+        <p class="offset">Une bonne application technique n’est rien si son parcours n’est pas pensé et réfléchi pour l’utilisateur. Poussons même un peu plus loin : une application techniquement parfaite ne sert à rien si elle n’est pas utilisée.</p>
+        <p class="offset">C’est un élément qu’on ne doit pas négliger. Créer un nouvel outil, oui. Affiner au maximum l’expérience utilisateur, c’est ce qui vous démarquera face à votre concurrence. Trouver la bonne balance entre une automatisation maximale de vos tâches répétitives tout en gardant une proximité avec vos utilisateurs.</p>
+        <p class="offset">Les meilleurs services ayant émergé ces dernières années ont tous un point commun : ils sont “user centric” ou “centrés utilisateurs” par opposition à “business centric”.</strong></p>
+        <p class="offset">Être centré utilisateur, c’est évidemment penser à ce à quoi va ressembler votre application mais surtout, et avant tout, au contexte d’usage en se posant les bonnes questions : qui va l’utiliser ? Dans quelle situation ? Dans quel état d’esprit ? Que cherche-t-il à accomplir ?</p>
+        <h2 class="h2--dash offset">Comprendre, proposer, tester, ajuster, pour arriver à la meilleure expérience possible</h2>
+        <p class="offset"><strong>Chez Elao, nous mettons la même exigence de qualité à tous les niveaux du projet, de la technique à la créa, toujours dans la même culture itérative, profondément ancrée dans l’équipe : on propose, on teste avec les utilisateurs, on ajuste, pour arriver à la meilleure expérience possible. Rien n’est figé.</strong></p>
+        <p class="offset"> C’est tout aussi vrai pour un parcours complexe, incluant des services en face-à-face, pour s’interfacer au mieux avec le besoin des parties prenantes, que pour un simple parcours de création de compte. Notre culture de l’expérience utilisateur et du développement d’application sur-mesure nous permet d’éviter de réinventer la roue, ce qui donne des expériences fluides et cohérentes pour tous les groupes d’utilisateurs concernés.</p>
+        <blockquote class="offset">Être « agile », c’est avant tout savoir réagir vite aux retours des utilisateurs.</blockquote>
+        <h2 class="h2--dash offset">Concrètement, ce que nous offrons</h2>
+        <h3 class="h2 h2--ordered offset">
+            <span>I.</span> Animation d’ateliers de conception UX
+        </h3>
+        <div class="horizontal-content horizontal-content--left">
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/conception-workshop.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/conception-workshop@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/conception-workshop.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/conception-workshop@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/conception-workshop.jpg') }}" alt="" />
+            </picture>
+            <div class="horizontal-content__info">
+                <p>Les ateliers UX peuvent se faire aussi bien avec vous qu’avec vos utilisateurs, en fonction des objectifs et livrables attendus, différents formats pourront vous être proposés.</p>
+                <h3>Dans tous nos ateliers, nous avons 3 objectifs :</h3>
+                <ul>
+                    <li><strong>Simplifier :</strong> ensemble, concevons votre application, à travers des ateliers où nous rentrons dans votre métier pour en dégager l’essence.</li>
+                    <li><strong>Donner du sens :</strong> nous vous aidons à penser fonctionnel à travers des parcours utilisateurs, plutôt qu’une accumulation de tickets dans un backlog qui n’a de sens que pour la personne qui l’a créée.</li>
+                    <li><strong>Trouver la meilleure balance impact utilisateur / coût</strong> de chaque solution envisagée.</li>
+                </ul>
+            </div>
+        </div>
+        <h3 class="h2 h2--ordered offset">
+            <span>II.</span> Rencontrer vos utilisateurs
+        </h3>
+        <div class="horizontal-content horizontal-content--right ">
+            <div class="horizontal-content__info">
+                <h3>Des entretiens utilisateurs, pour comprendre réellement leurs besoins</h3>
+                <p><strong>Les entretiens utilisateurs nous permettent d’aller à la rencontrer des personas clé de votre solution, ceux qui seront directement impactés et par conséquent, qui nous aideront à construire la meilleure application possible.</strong></p>
+                <p>Lors de sessions d’échanges de 20 à 30 minutes avec une dizaine d’utilisateurs, nous allons explorer en profondeur leurs motivations et points de douleurs.</p>
+            </div>
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-discussion.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-discussion@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-discussion.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-discussion@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/user-discussion.jpg') }}" alt="" />
+            </picture>
+        </div>
+        <div class="horizontal-content horizontal-content--left">
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-testing.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-testing@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/user-testing.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/user-testing@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/user-testing.jpg') }}" alt="" />
+            </picture>
+            <div class="horizontal-content__info">
+                <h3>Des tests utilisateurs, pour analyser leurs comportements face à une solution fonctionnelle</h3>
+                <h4>Depuis un prototype, pour le valider</h4>
+                <p><strong>Un premier prototype est disponible, et vous souhaitez le confronter à vos utilisateurs</strong> pour anticiper au mieux leurs premiers retours ?</p>
+                <h4>Depuis une application en ligne, pour l’optimiser</h4>
+                <p><strong>Vous avez déjà une application (web, mobile, métier) et souhaitez comprendre</strong> où vos utilisateurs se perdent ?</p>
+            </div>
+        </div>
+        <div class="horizontal-content horizontal-content--right">
+            <div class="horizontal-content__info">
+                <h3>Le « Gemba Walk », pour s’imprégner du quotidien de vos utilisateurs</h3>
+                <p>Mot japonais, Gemba signifie « le véritable endroit », « là où se trouve la réalité », le « terrain » ou encore « l’endroit où la valeur client est ajoutée ».
+                <p>Il s’agit d’aller voir sur le terrain, là où sont réellement vos utilisateurs pour les observer, apprendre d’eux en leurs posant les bonnes questions et comprendre quels sont leurs points de friction quotidiens.</p>
+                <p><strong>C’est une technique qui porte ses fruits notamment dans la conception d’une application métier dédiée à simplifier et améliorer des processus.</strong></p>
+            </div>
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/gemba-walk.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/gemba-walk@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/gemba-walk.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/gemba-walk@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/gemba-walk.jpg') }}" alt="" />
+            </picture>
+        </div>
+        <h3 class="h2 h2--ordered offset">
+            <span>III.</span> Construction de parcours utilisateurs (UX)
+        </h3>
+        <div class="subservices-banner">
+            <div class="image"></div>
+        </div>
+        <p class="offset">Wireframes, zoning, storymapping, mindmapping font partie de notre jargon quotidien. Ces outils nous servent avant tout de <strong>plateforme de communication</strong> entre les différentes parties prenantes du projet, nous permettant d’aligner notre vision de la solution finale. Selon vos besoins, vos idées, les nôtres, nous vous aidons à les mettre en forme rapidement pour qu’ils représentent au mieux ce que vous avez en tête, afin de partir sur une base partagée et qu’ils puissent être soumis rapidement à l’utilisateur final.</p>
+        <h3 class="h2 h2--ordered offset">
+            <span>IV.</span> Création graphique de vos interfaces utilisateur (UI)
+        </h3>
+        <p class="offset">En nous entourant de product designers ayant une grande expérience, nous tirons le maximum de valeur de “la phase de créa”, celle où l’on pose un univers graphique, là où votre application prend vie. Nous considérons une maquette comme un élément organique, amené à vivre avec le projet. <strong>À ce titre, nous souhaitons que les designers nous accompagnent tout au long de la phase de build du projet pour assurer la cohérence graphique de chacun des composants de votre application, et non pas uniquement au début</strong> comme on peut avoir l’habitude de le voir dans une gestion de projet classique.</p>
+        <h3 class="h2 h2--ordered offset">
+            <span>V.</span> Conseil et accompagnement en UX
+        </h3>
+        <div class="horizontal-content horizontal-content--left">
+            <picture class="horizontal-content__image">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/ux-ui/expertise.webp') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/expertise@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/ux-ui/expertise.jpg') }} 1x,
+                            {{ asset('build/images/pages/ux-ui/expertise@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/ux-ui/expertise.jpg') }}" alt="" />
+            </picture>
+            <div class="horizontal-content__info">
+                <p><strong>Nous avons également l’expertise pour intervenir sur des missions qui ne nécessitent pas de développement, centrées exclusivement sur vos utilisateurs et l’optimisation de vos parcours.</strong></p>
+                <h4>Vous avez une application et souhaitez la confronter à vos utilisateurs ?</h4>
+                <p>Nous vous aidons à trouver la bonne méthode pour y arriver.</p>
+                <h4>Vous avez déjà des retours utilisateurs mais ne savez pas comment les traiter, quelles solutions mettre en face ?</h4>
+                <p>Nous vous aidons à centraliser, rationaliser à travers nos ateliers d’innovation.</p>
+            </div>
+        </div>
+        <h2 class="h2--dash offset">L’équipe UX chez Elao</h2>
+        <ul class="project-team offset">
+            {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
+            <li class="project-team__member">
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
+                </a>
+            </li>
+            {% set member = content_get('App\\Model\\Member', 'adefrance') %}
+            <li class="project-team__member">
+                <a href="{{ path('team_member', { member: member.slug }) }}">
+                    <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}">
+                    <span class="name">{{ member.name }}</span>
+                    <span class="job">{{ member.position }}</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bricks">
+            {% include 'partials/brick-ux-ui.html.twig' %}
+        </div>
+    </div>
+{% endblock %}

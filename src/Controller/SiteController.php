@@ -63,7 +63,11 @@ class SiteController extends AbstractController
         return $this->render('site/legal.html.twig');
     }
 
-    #[Route('/atelier-innovation', name: 'innovation-workshop')]
+    #[Route('/atelier-innovation', name: 'innovation-workshop', options: [
+        'stenope' => [
+            'sitemap' => false,
+        ],
+    ])]
     public function innovationWorkshop(): Response
     {
         return $this->render('site/innovation-workshop.html.twig');

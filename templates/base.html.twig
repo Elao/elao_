@@ -84,9 +84,9 @@
         <meta name="see_style" content="{{ encore_entry_css_files('see_style')|json_encode|escape('html_attr') }}">
     </head>
     <body>
-        <header class="header">
-            <div class="container">
-                {% block header %}
+        {% block header %}
+            <header class="header">
+                <div class="container">
                     <!--
                         Todo :
                         - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
@@ -108,65 +108,63 @@
                             </svg>
                         {% endblock %}
                     </a>
-                {% endblock %}
 
-                {% block desktop_nav %}
-                    <!-- Desktop nav -->
-                    <nav class="nav">
-                        <ul>
-                            {% for item in site.menu|filter(item => item.desktop ?? true) %}
-                                <li class="nav__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav__item--active' }}">
-                                    <a href="{{ path(item.path) }}">
-                                        {% if item.icon ?? false %}
-                                            <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
-                                        {% endif %}
-                                        <span>{{ item.label }}</span>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                {% endblock %}
+                    {% block desktop_nav %}
+                        <!-- Desktop nav -->
+                        <nav class="nav">
+                            <ul>
+                                {% for item in site.menu|filter(item => item.desktop ?? true) %}
+                                    <li class="nav__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav__item--active' }}">
+                                        <a href="{{ path(item.path) }}">
+                                            {% if item.icon ?? false %}
+                                                <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
+                                            {% endif %}
+                                            <span>{{ item.label }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                    {% endblock %}
 
-                {% block mobile_nav %}
-                    <!-- Mobile nav -->
-                    <nav class="nav-mobile">
-                        <div class="nav-mobile__header">
-                            <a href="{{ path('homepage') }}">
-                                {{ block('logo') }}
-                            </a>
-                            <button class="nav-toggle nav-toggle--close">
-                                <i class="icon icon--close" aria-hidden="true"></i>
-                                <span class="screen-reader">Fermer le menu</span>
-                            </button>
-                        </div>
-                        <ul>
-                            {% for item in site.menu|filter(item => item.mobile ?? true) %}
-                                <li class="nav-mobile__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav-mobile__item--active' }} {{ item.mobileClass|default('') }}">
-                                    <a href="{{ path(item.path) }}">
-                                        {% if item.icon ?? false %}
-                                            <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
-                                        {% endif %}
-                                        <span>{{ item.label }}</span>
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </nav>
-                    <button class="nav-toggle nav-toggle--open">
-                        <i class="icon icon--hamburger" aria-hidden="true"></i>
-                        <span class="screen-reader">Ouvrir le menu</span>
-                    </button>
-                {% endblock %}
-            </div>
-        </header>
-        <div class="container">
-            <main>
-                {% block content %}{% endblock %}
-            </main>
-            {% block footer %}
-                {{ include('footer.html.twig') }}
-            {% endblock %}
-        </div>
+                    {% block mobile_nav %}
+                        <!-- Mobile nav -->
+                        <nav class="nav-mobile">
+                            <div class="nav-mobile__header">
+                                <a href="{{ path('homepage') }}">
+                                    {{ block('logo') }}
+                                </a>
+                                <button class="nav-toggle nav-toggle--close">
+                                    <i class="icon icon--close" aria-hidden="true"></i>
+                                    <span class="screen-reader">Fermer le menu</span>
+                                </button>
+                            </div>
+                            <ul>
+                                {% for item in site.menu|filter(item => item.mobile ?? true) %}
+                                    <li class="nav-mobile__item {{ app.request.attributes.get( '_route' ) == item.path ? 'nav-mobile__item--active' }} {{ item.mobileClass|default('') }}">
+                                        <a href="{{ path(item.path) }}">
+                                            {% if item.icon ?? false %}
+                                                <i class="icon icon--{{ item.icon }}" aria-hidden="true"></i>
+                                            {% endif %}
+                                            <span>{{ item.label }}</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </nav>
+                        <button class="nav-toggle nav-toggle--open">
+                            <i class="icon icon--hamburger" aria-hidden="true"></i>
+                            <span class="screen-reader">Ouvrir le menu</span>
+                        </button>
+                    {% endblock %}
+                </div>
+            </header>
+        {% endblock %}
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        {% block footer %}
+            {{ include('partials/footer.html.twig') }}
+        {% endblock %}
     </body>
 </html>

@@ -1,0 +1,80 @@
+.prospect-contact {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-dark;
+  padding: 50px 30px 50px;
+  width: 510px;
+
+  .btn {
+    justify-content: center;
+  }
+}
+
+.prospect-contact__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: "antikor bold";
+  font-size: 18px;
+  color: $color-light;
+  margin-bottom: 34px;
+
+  .title {
+    font-family: "faktum bold";
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+}
+
+.prospect-contact__form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input {
+    min-width: 100%;
+    border: 1px solid #979797;
+    height: 50px;
+    padding: 0 22px;
+    font-family: 'antikor medium';
+    font-size: 16px;
+    color: #9C9C9C;
+    margin-bottom: 14px;
+  }
+
+  .inline {
+    min-width: calc(50% - 7px);
+    width: calc(50% - 7px);
+
+    &:nth-of-type(odd) {
+      margin-right: 7px;
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 7px;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .prospect-contact {
+    width: 100%;
+  }
+
+  .prospect-contact__form {
+    .inline {
+      min-width: 100%;
+      width: 100%;
+
+      &:nth-of-type(odd),
+      &:nth-of-type(even) {
+        margin: 0 0 14px;
+      }
+    }
+  }
+}

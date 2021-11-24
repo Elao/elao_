@@ -1,0 +1,106 @@
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  color: $color-brand;
+  padding: 45px 25px 25px 35px;
+  height: 260px;
+  width: 290px;
+  font-family: "faktum regular";
+  font-size: 20px;
+  line-height: 1;
+  background-color: $color-secondary;
+  margin-left: 40px;
+
+  small {
+    font-size: 16px;
+    margin-top: 7px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    border: none;
+    font-family: 'antikor bold';
+    color: $color-primary;
+    font-size: 18px;
+    margin-top: auto;
+    align-self: flex-end;
+
+    &:hover,
+    &:active,
+    &:focus {
+      .icon {
+        transform: translateX(10px);
+      }
+    }
+  }
+
+  .icon {
+    margin-left: 13px;
+    color: $color-tertiary;
+    transition: transform ease-in .2s;
+  }
+
+  .number {
+    display: flex;
+    font-family: "antikor medium";
+    color: $color-primary;
+    font-size: 76px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $screen-md) {
+  .thumbnail {
+    margin: unset;
+    margin-bottom: 25px;
+    padding: 50px 45px;
+    height: unset;
+    width: unset;
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    .number {
+      margin: 0;
+      margin-right: 10px;
+    }
+
+    .detail {
+      margin-bottom: 7px;
+      max-width: 200px;
+      font-size: 22px;
+    }
+
+    a {
+      margin-top: 20px;
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .thumbnail {
+    padding: 50px 35px;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .number {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+
+    .detail {
+      max-width: unset;
+    }
+
+    a {
+      justify-content: flex-start;
+      align-self: flex-start;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+  }
+}

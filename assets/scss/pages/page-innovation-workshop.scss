@@ -1,0 +1,89 @@
+.page-innovation-workshop {
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    * {
+      grid-column: 3 / 11;
+    }
+
+    .project-team,
+    .notice {
+      grid-column: 2 / 12;
+    }
+  }
+
+  aside {
+    grid-column: 1 / 13;
+    display: flex;
+    flex-direction: column;
+    background: $color-primary;
+    position: relative;
+    margin-top: 95px;
+    align-items: center;
+
+    &:after {
+      position: absolute;
+      background: transparent;
+      color: $color-tertiary;
+      content: "\e917";
+      font-family: "icomoon";
+      font-size: 90px;
+      align-self: flex-end;
+      bottom: -56px;
+      right: 99px;
+    }
+
+    .prospect-contact {
+      width: 1100px;
+      max-width: 100%;
+      position: relative;
+      top: -96px;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-innovation-workshop {
+    .main-content {
+      * {
+        grid-column: 2 / 12;
+      }
+
+      .project-team,
+      .notice {
+        grid-column: 1 / 13;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .page-innovation-workshop {
+    .main-content {
+      * {
+        grid-column: 1 / 13;
+      }
+    }
+
+    aside {
+      &:before,
+      &:after {
+        display:none;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .page-innovation-workshop {
+    aside {
+      background: transparent;
+      margin-top: unset;
+
+      .prospect-contact {
+        top: 0;
+      }
+    }
+  }
+}

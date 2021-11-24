@@ -1,0 +1,155 @@
+{% import "macros.html.twig" as macros %}
+
+{% extends 'base.html.twig' %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+    <div class="page-innovation-workshop">
+        <div class="hero">
+            <div class="hero__image" style="background: url({{ asset('build/images/pages/services/software-engineering.jpg') }})"></div>
+            <div class="container">
+                <div class="hero__intro">
+                    <h1>
+                        L'atelier d'innovation,
+                        <span>par Elao</span>
+                    </h1>
+                    <p class="catchphrase">Agitons votre business</p>
+                    <h2 class="description">Une plongée dans votre quotidien pour optimiser vos pratiques</h2>
+                </div>
+                <div class="hero__content">
+                    <ul>
+                        <li>2 h de bouillonnement pour identifier les zones de votre business à améliorer ou à optimiser</li>
+                        <li>Avec Xavier (expert technique) et Christelle (experte UX) de Elao</li>
+                        <li>Chez vous ou chez nous (si vous êtes en région Rhône-Alpes)</li>
+                        <li><strong>Gratuit</strong></li>
+                        <li><strong>Sans aucun engagement</strong></li>
+                    </ul>
+                </div>
+                <div class="prospect-contact">
+                    <div class="prospect-contact__info">
+                        <span class="title">Intéressé·e ?</span>
+                        <p>Prenez un premier rendez-vous téléphonique pour faire connaissance et définir une date ensemble</p>
+                        <!-- Début de widget de lien Calendly -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                            <button class="btn btn--light btn--animated" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elao_/atelier-innovation?hide_gdpr_banner=1&primary_color=0d3a5a'});return false;">
+                                <span>
+                                    Prendre rendez-vous
+                                    {% include 'partials/svg-arrow.html.twig' %}
+                                </span>
+                            </button>
+                        <!-- Fin de widget de lien Calendly -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container main-content">
+            <h2>Pour qui ?</h2>
+            <h3>Porteurs et porteuses de projets d’applications web / mobile</h3>
+            <ul>
+                <li>Confronter vos idées à la réalité du développement numérique</li>
+                <li>Vous accompagner dans la recherche de solutions (fonctionnelles ou techniques)</li>
+                <li>Imaginer un premier prototype pour le confronter à vos utilisateurs</li>
+                <li>Vous aider à monter votre équipe technique</li>
+                <li>Vous guider pour trouver les bons prestataires</li>
+            </ul>
+            <h3>Dirigeants et dirigeantes souhaitant aller vers une transformation numérique de vos pratiques</h3>
+            <ul>
+                <li>Identifier les points de friction de votre quotidien</li>
+                <li>Automatiser les tâches répétitives de vos collaborateurs</li>
+                <li>Simplifier / fluidifier la saisie et le traitement de vos données</li>
+                <li>Vous accompagner dans la recherche de solutions (fonctionnelles ou techniques) et d’outils</li>
+                <li>Vous guider pour trouver les bons prestataires</li>
+            </ul>
+            <h2>Ce que vous y gagnez ?</h2>
+            <ul>
+                <li>De nouvelles perspectives</li>
+                <li>Une mine d’or de solutions concrètes à mettre en œuvre</li>
+                <li>Un livrable de nos échanges pour que vous puissiez capitaliser dessus par la suite</li>
+            </ul>
+            <h2>Ce qu'on y gagne ?</h2>
+            <ul>
+                <li>La richesse d’une belle rencontre, la découverte d’un nouveau contexte assurément.</li>
+                <li>Et peut-être la perspective d’un partenariat pour vous aider à mettre en œuvre les idées d’outils qui ont émergé pendant l’atelier ?</li>
+            </ul>
+            <h2>Les agitateurs</h2>
+            <ul class="project-team">
+                {% set member = content_get('App\\Model\\Member', 'xgorse') %}
+                <li class="project-team__member project-team__member--large">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
+                        <div class="member-header">
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}"/>
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                <span class="job">Co-fondateur d’Elao, <br>facilitateur et expert technique</span>
+                            </div>
+                        </div>
+                        <div class="presentation">
+                            <p>Depuis plus de 15 ans, Xavier agite les entrepreneurs pour les aider à trouver les meilleurs leviers d’optimisation et les meilleurs compromis pour leur permettre d’atteindre leurs objectifs.</p>
+                        </div>
+                    </a>
+                </li>
+                {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
+                <li class="project-team__member project-team__member--large">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
+                        <div class="member-header">
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="Avatar de {{ member.name }}"/>
+                            <div class="info">
+                                <span class="name">{{ member.name }}</span>
+                                <span class="job">Facilitatrice et experte UX</span>
+                            </div>
+                        </div>
+                        <div class="presentation">
+                            <p>Passionnée par l’optimisation et la simplification, Christelle a une empathie et une expérience du développement applicatif lui permettant d’aider les porteurs de projet à affiner leur vision pour répondre aux mieux à leurs objectifs business et ceux de leurs clients.</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <h2>À propos d’Elao</h2>
+            <div class="notice">
+                <div class="notice__content">
+                    <span>elao_</span>
+                    <p>Depuis plus de 15 ans à Lyon, Elao développe des applications web et mobiles et aide ses clients à mûrir, à prendre du recul et à révéler les pépites insoupçonnées de leur quotidien. Par un regard extérieur constructif et bienveillant et surtout, une expertise dans l’innovation.</p>
+                </div>
+                <div class="notice__thumbnails">
+                    <div class="thumbnail">
+                        <span class="number">16</span>
+                        <span class="detail">
+                            ans d'expérience
+                            <small>(et d'expérimentations)</small>
+                        </span>
+                    </div>
+                    <div class="thumbnail">
+                        <span class="number">15</span>
+                        <span class="detail">expert·e·s passionné·e·s</span>
+                        <a href="#">
+                            La tribu elao
+                            <i class="icon icon--arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="thumbnail">
+                        <span class="number">200+</span>
+                        <span class="detail">projets</span>
+                        <a href="#">
+                            Nos études de cas
+                            <i class="icon icon--arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <aside>
+            <div class="prospect-contact">
+                <div class="prospect-contact__info">
+                    <span class="title">Intéressé·e ?</span>
+                    <p>Prenez un premier rendez-vous téléphonique pour faire connaissance et définir une date ensemble</p>
+                </div>
+                <!-- Début de widget en ligne Calendly -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/elao_/atelier-innovation?hide_landing_page_details=0&hide_gdpr_banner=1&background_color=ffffff&text_color=000000&primary_color=2ECCCB" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Fin de widget en ligne Calendly -->
+            </div>
+        </aside>
+    </div>
+{% endblock %}

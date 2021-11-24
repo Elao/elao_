@@ -135,8 +135,6 @@ categories:
                   path: judging/judgemental-shoelace.png
           - title: 'Bonus : la happy team'
             emojis:
-                - code: ":alyona-happy:"
-                  path: happy/alyona-happy.gif
                 - code: ":amelie-happy:"
                   path: happy/amelie-happy.gif
                 - code: ":anne-laure-happy:"
@@ -157,6 +155,8 @@ categories:
                   path: happy/max-happy.gif
                 - code: ":ogi-happy:"
                   path: happy/ogi-happy.gif
+                - code: ":sabrina-happy:"
+                  path: happy/sabrina-happy.gif
                 - code: ":tom-happy:"
                   path: happy/tom-happy.gif
                 - code: ":xavg-happy:"

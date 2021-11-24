@@ -1,3 +1,5 @@
+{% import "macros.html.twig" as macros %}
+
 {% extends 'base.html.twig' %}
 
 {% block header %}{% endblock %}
@@ -27,26 +29,18 @@
                 <div class="prospect-contact">
                     <div class="prospect-contact__info">
                         <span class="title">Intéressé·e ?</span>
-                        <p>Laissez-nous vos coordonnées et nous vous recontactons pour définir ensemble un créneau</p>
+                        <p>Prenez un premier rendez-vous téléphonique pour faire connaissance et définir une date ensemble</p>
+                        <!-- Début de widget de lien Calendly -->
+                            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                            <button class="btn btn--light btn--animated" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/elao_/atelier-innovation?hide_gdpr_banner=1&primary_color=0d3a5a'});return false;">
+                                <span>
+                                    Prendre rendez-vous
+                                    {% include 'partials/svg-arrow.html.twig' %}
+                                </span>
+                            </button>
+                        <!-- Fin de widget de lien Calendly -->
                     </div>
-                    <div class="prospect-contact__form">
-                        <label for="surname" class="screen-reader">Nom</label>
-                        <input type="text" placeholder="Nom*" id="surname" class="inline">
-                        <label for="name" class="screen-reader">Prénom</label>
-                        <input type="text" placeholder="Prénom" id="name"  class="inline">
-                        <label for="company" class="screen-reader">Société</label>
-                        <input type="text" placeholder="Société*" id="company">
-                        <label for="email" class="screen-reader">Email</label>
-                        <input type="email" placeholder="Adresse e-mail*" id="email">
-                        <label for="telephone" class="screen-reader">Numéro de téléphone</label>
-                        <input type="tel" placeholder="Numéro de téléphone" id="telephone">
-                    </div>
-                    <button class="btn btn--light btn--animated">
-                        <span>
-                            Envoyer
-                            {% include 'partials/svg-arrow.html.twig' %}
-                        </span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -81,12 +75,13 @@
             </ul>
             <h2>Les agitateurs</h2>
             <ul class="project-team">
+                {% set member = content_get('App\\Model\\Member', 'xgorse') %}
                 <li class="project-team__member project-team__member--large">
-                    <a href="#">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
                         <div class="member-header">
-                            <img src="https://picsum.photos/id/238/100/100" alt=""/>
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="avatar de {{ member.name }}"/>
                             <div class="info">
-                                <span class="name">Xavier Gorse</span>
+                                <span class="name">{{ member.name }}</span>
                                 <span class="job">Co-fondateur d’Elao, <br>facilitateur et expert technique</span>
                             </div>
                         </div>
@@ -95,12 +90,13 @@
                         </div>
                     </a>
                 </li>
+                {% set member = content_get('App\\Model\\Member', 'cmozzati') %}
                 <li class="project-team__member project-team__member--large">
-                    <a href="#">
+                    <a href="{{ path('team_member', { member: member.slug }) }}">
                         <div class="member-header">
-                            <img src="https://picsum.photos/id/237/100/100" alt=""/>
+                            <img {{ macros.imageSrcset(member.avatar(), 'author_avatar') }} alt="Avatar de {{ member.name }}"/>
                             <div class="info">
-                                <span class="name">Christelle Mozzati</span>
+                                <span class="name">{{ member.name }}</span>
                                 <span class="job">Facilitatrice et experte UX</span>
                             </div>
                         </div>
@@ -147,26 +143,12 @@
             <div class="prospect-contact">
                 <div class="prospect-contact__info">
                     <span class="title">Intéressé·e ?</span>
-                    <p>Laissez-nous vos coordonnées et nous vous recontactons pour définir ensemble un créneau</p>
+                    <p>Prenez un premier rendez-vous téléphonique pour faire connaissance et définir une date ensemble</p>
                 </div>
-                <div class="prospect-contact__form">
-                    <label for="surname" class="screen-reader">Nom</label>
-                    <input type="text" placeholder="Nom*" id="surname" class="inline">
-                    <label for="name" class="screen-reader">Prénom</label>
-                    <input type="text" placeholder="Prénom" id="name"  class="inline">
-                    <label for="company" class="screen-reader">Société</label>
-                    <input type="text" placeholder="Société*" id="company">
-                    <label for="email" class="screen-reader">Email</label>
-                    <input type="email" placeholder="Adresse e-mail*" id="email">
-                    <label for="telephone" class="screen-reader">Numéro de téléphone</label>
-                    <input type="tel" placeholder="Numéro de téléphone" id="telephone">
-                </div>
-                <button class="btn btn--light btn--animated">
-                    <span>
-                        Envoyer
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </button>
+                <!-- Début de widget en ligne Calendly -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/elao_/atelier-innovation?hide_landing_page_details=0&hide_gdpr_banner=1&background_color=ffffff&text_color=000000&primary_color=2ECCCB" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Fin de widget en ligne Calendly -->
             </div>
         </aside>
     </div>

@@ -22,17 +22,6 @@
     margin-top: 95px;
     align-items: center;
 
-    &:before {
-      position: absolute;
-      background: transparent;
-      color: $color-tertiary;
-      content: "\e90c";
-      font-family: "icomoon";
-      font-size: 90px;
-      top: -56px;
-      left: 110px;
-    }
-
     &:after {
       position: absolute;
       background: transparent;
@@ -46,6 +35,8 @@
     }
 
     .prospect-contact {
+      width: 1100px;
+      max-width: 100%;
       position: relative;
       top: -96px;
     }

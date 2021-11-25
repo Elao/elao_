@@ -150,11 +150,3 @@ __Yves__ : N'hésitez pas à consulter la liste des headers HTTP natifs. Nous co
 <div class="aside-note">
     Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">liste complète des headers HTTP</a>
 </div>
-
-<style>
-    .aside-note {
-        border-left: 5px solid #ffa600;
-        padding: 20px;
-        margin: 20px 0;
-    }
-</style>

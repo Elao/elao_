@@ -41,6 +41,17 @@
       margin: 0;
     }
   }
+
+  a {
+    font-family: 'antikor bold';
+    border-bottom-color: $color-dark;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-dark;
+    }
+  }
 }
 
 .admonition-title {
@@ -59,6 +70,17 @@
   &:after {
     content: '\e928';
   }
+
+  a {
+    color: darken(#3ec789, 40%);
+    border-bottom-color: darken(#3ec789, 40%);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken(#3ec789, 40%);
+    }
+  }
 }
 
 .admonition.danger {
@@ -71,5 +93,16 @@
 
   &:after {
     content: '\e927';
+  }
+
+  a {
+    color: $color-text;
+    border-bottom-color: $color-text;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $color-text;
+    }
   }
 }

@@ -37,9 +37,8 @@ __Maxime S.__ : Yves m'a fait découvrir le code 422, qui est le principal code 
 
 __Nicolas__ : J'utilise également assez régulièrement le code 422 pour les APIs REST. Par contre, pour le développement d'API GraphQL, il est beaucoup plus difficile de retourner des codes spécifiques étant donné la nature même de GraphQL qui permet de faire plusieurs requêtes simultanées. Donc le code ne serait pas pertinent si une partie des requêtes arrive à leur terme.
 
-<div class="aside-note">
-    Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">liste complète des codes HTTP</a>
-</div>
+!!! note ""
+    Voir la [liste complète des codes HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## Choisir entre les méthodes `POST`/`PATCH`/`PUT` : conseils, critères de choix ?
 
@@ -147,14 +146,5 @@ __Nicolas__ : Je pense que Yves et Maxime S. ont bien résumé ce que j'aurais p
 
 __Yves__ : N'hésitez pas à consulter la liste des headers HTTP natifs. Nous connaissons tous les headers d'authentification, mais il en existe bien d'autres qui peuvent être tout-à-fait adaptés aux informations que l'on souhaite retourner. Exemples : les headers d'authentification, les headers de langue et d'internationalisation. Il faut également savoir qu'il existe des headers proposés par des extensions HTTP et il arrive parfois que ces headers entrent dans la spécification HTTP (comme par exemple le header `x-forwarded-by` objet de la RFC 7239). En revanche, avant d'adopter un header, qu'il soit standard ou extrait d'une extension, assurez-vous que vos proxies HTTP les supportent. On peut parfois être amené à enfreindre des standards lorsque l'outillage ou l'infrastructure nous y contraint. En résumé, il ne faut jamais perdre de vue l'infrastructure qui accueillera votre API au moment de la concevoir et c'est un piège que l'on a souvent tendance à négliger.
 
-<div class="aside-note">
-    Voir la <a href="https://en.wikipedia.org/wiki/List_of_HTTP_header_fields" target="_blank">liste complète des headers HTTP</a>
-</div>
-
-<style>
-    .aside-note {
-        border-left: 5px solid #ffa600;
-        padding: 20px;
-        margin: 20px 0;
-    }
-</style>
+!!! note ""
+    Voir la [liste complète des headers HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)

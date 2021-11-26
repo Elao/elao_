@@ -72,13 +72,13 @@ Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 !!! success "Titre"
-    Le même composant dans le style "success".
+    Le même [composant](https://www.elao.com) dans le style "success".
 
 Excepteur sint occaecat cupidatat non
 proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 !!! danger "Titre"
-    Le même composant dans le style "danger".
+    Le même [composant](https://www.elao.com) dans le style "danger".
 
 
 ### Les images

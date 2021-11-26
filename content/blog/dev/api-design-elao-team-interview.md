@@ -149,4 +149,3 @@ __Yves__ : N'hésitez pas à consulter la liste des headers HTTP natifs. Nous co
 
 !!! note ""
     Voir la [liste complète des headers HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-

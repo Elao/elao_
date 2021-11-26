@@ -40,7 +40,6 @@ __Nicolas__ : J'utilise également assez régulièrement le code 422 pour les AP
 !!! note ""
     Voir la [liste complète des codes HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-
 ## Choisir entre les méthodes `POST`/`PATCH`/`PUT` : conseils, critères de choix ?
 
 __Yves__ : J'utilise souvent la méthode `PUT` dans le cadre d'une relation 0:1 : si la ressource n'existe pas, elle est créée, dans le cas contraire, la totalité de la ressources est mise à jour. Cela permet d'implémenter pleinement l'idempotence de la méthode `PUT` (l'URI peut être appelée plusieurs fois, elle laissera toujours la ressource dans le même état). J'essaie dans la mesure du possible d'éviter l'utilisation de la méthode `PATCH`, car c'est un format d'opération somme toute assez complexe (cf. [RFC 6902](https://tools.ietf.org/html/rfc6902#section-4)). Quant à la méthode `POST`, je l'utilise pour la création de ressource, comme une méthode _factory_. Noter d'ailleurs que je m'autorise parfois quelques infractions aux principes REST, mais sans en abuser. Il m'arrive par exemple d'utiliser la méthode `POST` avec une URI qui comporte un verbe, même s'il ne s'agit pas à proprement parler d'une création de ressource. Exemple : `POST  /ma-resource/{id}/change-address`. Je m'autorise cette infraction lorsque j'estime qu'elle apporte une meilleure compréhension du métier, et également pour obtenir des logs plus parlants.

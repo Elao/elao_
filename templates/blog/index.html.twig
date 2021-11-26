@@ -5,6 +5,7 @@
 {% block meta_description "Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !" %}
 
 {% block content %}
+    <div class="container">
     {% block articles %}
         <ul class="article-list">
             {% for article in articles %}
@@ -91,6 +92,7 @@
                 {% endif %}
             {% endfor %}
         </ul>
+    </div>
     {% endblock %}
 
     {% include 'blog/pagination.html.twig' with {

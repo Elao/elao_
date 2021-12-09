@@ -10,7 +10,7 @@
         "ext-iconv": "*",
         "ext-json": "*",
         "composer/package-versions-deprecated": "^1.11",
-        "elao/enum": "^1.17@beta",
+        "elao/enum": "^1.17",
         "league/glide-symfony": "^1.0",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",
@@ -106,6 +106,5 @@
             "require": "5.4.*"
         }
     },
-    "prefer-stable": true,
-    "minimum-stability": "dev"
+    "prefer-stable": true
 }

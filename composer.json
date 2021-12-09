@@ -45,7 +45,7 @@
     },
     "require-dev": {
         "ekino/phpstan-banned-code": "^0.4",
-        "elao/accesseo": "dev-master#fedf98d4d69cf0306afcedaae3995d8477eb214f",
+        "elao/accesseo": "^1.0@beta",
         "friendsofphp/php-cs-fixer": "^3.0",
         "phpstan/phpstan": "^0.12.42",
         "phpstan/phpstan-strict-rules": "^0.12.5",

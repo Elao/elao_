@@ -70,7 +70,7 @@ class GenerateArticleCommand extends Command
         $description = $io->ask('Description');
         /** @var string $tags */
         $tags = $io->ask('Tags (séparés par des virgules)') ?? '';
-        $tags = array_filter(array_map('trim', explode(',', $tags)));
+        $tags = array_filter(array_map(trim(...), explode(',', $tags)));
         $thumbnail = $io->ask('Miniature', "images/posts/thumbnails/$slug.jpg");
 
         $io->definitionList(

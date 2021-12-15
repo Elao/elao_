@@ -11,7 +11,7 @@ printf "\033[34m    =- =- -=.--\"\033[0m\n"
 
 printf "\n"
 printf " \033[36m‣ nginx \033[35m1.18\033[0m\n"
-printf " \033[36m‣ php \033[35m8.0\033[0m\n"
+printf " \033[36m‣ php \033[35m8.1\033[0m\n"
 printf " \033[36m‣ nodejs \033[35m16\033[0m\n"
 
 printf "\n"

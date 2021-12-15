@@ -4,37 +4,24 @@ declare(strict_types=1);
 
 namespace App\Model;
 
-use Elao\Enum\AutoDiscoveredValuesTrait;
-use Elao\Enum\ReadableEnum;
+use Elao\Enum\Attribute\EnumCase;
+use Elao\Enum\ReadableEnumInterface;
+use Elao\Enum\ReadableEnumTrait;
 
-/**
- * @extends ReadableEnum<string>
- *
- * @method static JobContractType CDI()
- * @method static JobContractType CDD()
- * @method static JobContractType INTERNSHIP()
- * @method static JobContractType WORK_STUDY()
- */
-class JobContractType extends ReadableEnum
+enum JobContractType: string implements ReadableEnumInterface
 {
-    /** @use AutoDiscoveredValuesTrait<string> */
-    use AutoDiscoveredValuesTrait;
+    use ReadableEnumTrait;
 
-    public const CDI = 'CDI';
-    public const CDD = 'CDD';
-    public const INTERNSHIP = 'INTERNSHIP';
-    public const WORK_STUDY = 'WORK-STUDY';
+    #[EnumCase('CDI')]
+    case CDI = 'CDI';
 
-    /**
-     * @return array<string, string>
-     */
-    public static function readables(): array
-    {
-        return [
-            self::CDI => 'CDI',
-            self::CDD => 'CDD',
-            self::INTERNSHIP => 'Stage',
-            self::WORK_STUDY => 'Alternance',
-        ];
-    }
+    #[EnumCase('CDD')]
+    case CDD = 'CDD';
+
+    #[EnumCase('Stage')]
+    case Internship = 'INTERNSHIP';
+
+    #[EnumCase('Alternance')]
+    case WorkStudy = 'WORK-STUDY';
+
 }

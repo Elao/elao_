@@ -2,11 +2,11 @@ version: "3.7"
 
 services:
 
-  ##########
-  # System #
-  ##########
+    ##########
+    # System #
+    ##########
 
-  system:
-    environment:
-      # Php - XDebug
-      PHP_XDEBUG_CLIENT_HOST: host.docker.internal
+    system:
+        environment:
+            # Php - XDebug
+            PHP_XDEBUG_CLIENT_HOST: host.docker.internal

@@ -39,7 +39,8 @@ class Job
     public function __construct()
     {
         // Defaults to CDI
-        $this->contractType = JobContractType::CDI();
+        /* @phpstan-ignore-next-line */ // Not ready yet for enums? https://phpstan.org/blog/plan-to-support-php-8-1
+        $this->contractType = JobContractType::CDI;
         // Default social images
         $this->ogImage = $this->twitterImage = self::DEFAULT_SOCIAL_IMG;
     }

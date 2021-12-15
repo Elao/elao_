@@ -38,6 +38,7 @@ class ResizeImageController
         }
 
         try {
+            /* @phpstan-ignore-next-line */
             return $this->server->getImageResponse($path, $request->query->all());
         } catch (FileNotFoundException $exception) {
             throw new NotFoundHttpException(sprintf('Image at path "%s" not found', $path));

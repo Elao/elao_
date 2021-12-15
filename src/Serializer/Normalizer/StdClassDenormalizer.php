@@ -28,6 +28,8 @@ class StdClassDenormalizer implements ContextAwareDenormalizerInterface, Denorma
         /** @var \stdClass $object */
         $object = $this->denormalizer->denormalize($data, $type, $format, $context);
 
+        \assert(\is_array($data));
+
         foreach ($data as $key => $value) {
             if (!$this->propertyAccessor->isReadable($object, $key)) {
                 $object->$key = $value;

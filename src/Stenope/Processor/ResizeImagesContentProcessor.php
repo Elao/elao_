@@ -51,7 +51,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
-        /** @var \DomElement $element * */
+        /** @var \DOMElement $element */
         foreach ($crawler->filter('img') as $element) {
             $this->processImage($element);
         }

@@ -32,7 +32,8 @@ class FilteringArticlesContentManager implements ContentManagerInterface
             return $contents;
         }
 
-        return array_filter($contents, static fn (Article $article) => $article->isPublished());
+        /* @phpstan-ignore-next-line */
+        return array_filter($contents, static fn (Article $article): bool => $article->isPublished());
     }
 
     public function getContent(string $type, string $id): object

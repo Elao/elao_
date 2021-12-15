@@ -46,24 +46,31 @@ class GenerateArticleCommand extends Command
 
         $io->title('Création d\'un nouvel article');
 
+        /** @var string $title */
         $title = $io->ask('Titre', null, Validation::createCallable(new NotBlank([
             'message' => 'Le titre est obligatoire.',
         ])));
 
+        /** @var string $slug */
         $slug = $io->ask('Slug', $this->getSlug($title));
+        /** @var string $category */
         $category = $io->choice('Catégorie', $this->listCategories(), 'dev');
 
         if ($this->exists($category, $slug)) {
             throw new \RuntimeException(sprintf('L\'article "%s/%s" existe déjà.', $category, $slug));
         }
 
+        /** @var string[] $authors */
         $authors = $io->askQuestion(
             (new ChoiceQuestion('Auteur(e)s (séparé(e)s par des virgules)', $this->listAuthors()))->setMultiselect(true)
         );
 
         $date = $io->ask('Date de publication', (new \DateTimeImmutable())->format('Y-m-d'));
+        /** @var string $description */
         $description = $io->ask('Description');
-        $tags = array_filter(array_map('trim', explode(',', $io->ask('Tags (séparés par des virgules)') ?? '')));
+        /** @var string $tags */
+        $tags = $io->ask('Tags (séparés par des virgules)') ?? '';
+        $tags = array_filter(array_map('trim', explode(',', $tags)));
         $thumbnail = $io->ask('Miniature', "images/posts/thumbnails/$slug.jpg");
 
         $io->definitionList(
@@ -125,6 +132,9 @@ class GenerateArticleCommand extends Command
         return 0;
     }
 
+    /**
+     * @return string[]
+     */
     private function listCategories(): array
     {
         $finder = new Finder();

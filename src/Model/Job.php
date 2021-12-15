@@ -39,7 +39,7 @@ class Job
     public function __construct()
     {
         // Defaults to CDI
-        $this->contractType = JobContractType::CDI();
+        $this->contractType = JobContractType::CDI;
         // Default social images
         $this->ogImage = $this->twitterImage = self::DEFAULT_SOCIAL_IMG;
     }

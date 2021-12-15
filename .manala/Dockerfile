@@ -1,4 +1,4 @@
-ARG DEBIAN=buster
+ARG DEBIAN=bullseye
 
 ########
 # Base #
@@ -10,9 +10,9 @@ ARG DEBIAN
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 ARG S6_OVERLAY_VERSION=2.2.0.3
-ARG GOSU_VERSION=1.13
-ARG GOMPLATE_VERSION=3.9.0
-ARG STARSHIP_VERSION=0.56.0
+ARG GOSU_VERSION=1.14
+ARG GOMPLATE_VERSION=3.10.0
+ARG STARSHIP_VERSION=0.58.0
 
 # The 'container' environment variable tells systemd that it's running inside a
 # Docker container environment.
@@ -20,13 +20,15 @@ ARG STARSHIP_VERSION=0.56.0
 ENV container="docker"
 
 RUN \
-    apt-get update \
+    # Backports
+    printf "deb http://deb.debian.org/debian ${DEBIAN}-backports main" > /etc/apt/sources.list.d/backports.list \
+    && apt-get update \
     && apt-get install --yes --no-install-recommends \
         sudo \
         curl \
         ca-certificates \
         gnupg \
-        bsdtar bzip2 \
+        libarchive-tools bzip2 \
         bash-completion \
         make \
         less \
@@ -84,21 +86,21 @@ RUN \
         -o /etc/apt/trusted.gpg.d/php.gpg \
     && apt-get update \
     && apt-get install --yes --no-install-recommends \
-        php8.0-cli \
-        php8.0-fpm \
-        php8.0-opcache \
-        php8.0-xdebug \
+        php8.1-cli \
+        php8.1-fpm \
+        php8.1-opcache \
+        php8.1-xdebug \
         # Symfony
-        php8.0-intl \
-        php8.0-curl \
-        php8.0-mbstring \
-        php8.0-xml \
+        php8.1-intl \
+        php8.1-curl \
+        php8.1-mbstring \
+        php8.1-xml \
         # Project
-        php8.0-gd \
+        php8.1-gd \
     && phpdismod xdebug \
     && mkdir /run/php \
-    && update-alternatives --install /usr/sbin/php-fpm php-fpm /usr/sbin/php-fpm8.0 1 \
-    && update-alternatives --install /etc/php/default php-config-default /etc/php/8.0 1 \
+    && update-alternatives --install /usr/sbin/php-fpm php-fpm /usr/sbin/php-fpm8.1 1 \
+    && update-alternatives --install /etc/php/default php-config-default /etc/php/8.1 1 \
     # Composer
     && curl -sSL https://getcomposer.org/installer \
         | php -- --install-dir /usr/local/bin --filename composer \

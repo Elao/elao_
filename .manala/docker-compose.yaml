@@ -2,24 +2,24 @@ version: '3.5'
 
 services:
 
-  ##########
-  # System #
-  ##########
+    ##########
+    # System #
+    ##########
 
-  system:
-    hostname: elao
-    build:
-      context: .
-      target: system
-    image: elao:20210803114530
-    restart: always
-    ports:
-      - 8000:80
-      - 8080:8080
-    volumes:
-      - ..:${DIR}
-    environment:
-      DIR: ${DIR}
-      CACHE_DIR: ${CACHE_DIR}
-    working_dir: ${DIR}
-    entrypoint: .manala/docker/entrypoint
+    system:
+        hostname: elao
+        build:
+            context: .
+            target: system
+        image: elao:20211215101206
+        restart: always
+        ports:
+            - 8000:80
+            - 8080:8080
+        volumes:
+            - ..:${DIR}
+        environment:
+            DIR: ${DIR}
+            CACHE_DIR: ${CACHE_DIR}
+        working_dir: ${DIR}
+        entrypoint: .manala/docker/entrypoint

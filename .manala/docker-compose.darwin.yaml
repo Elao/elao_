@@ -2,14 +2,14 @@ version: "3.7"
 
 services:
 
-  ##########
-  # System #
-  ##########
+    ##########
+    # System #
+    ##########
 
-  system:
-    volumes:
-      - /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock
-    environment:
-      SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
-      # Php - XDebug
-      PHP_XDEBUG_CLIENT_HOST: host.docker.internal
+    system:
+        volumes:
+            - /run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock
+        environment:
+            SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
+            # Php - XDebug
+            PHP_XDEBUG_CLIENT_HOST: host.docker.internal

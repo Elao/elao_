@@ -4,6 +4,7 @@ $finder = (new PhpCsFixer\Finder())
     ->in(__DIR__)
     ->exclude('var')
     ->exclude('node_modules')
+    ->notPath('src/Model/JobContractType.php') // cs-fixer not ready yet for enums with traits
 ;
 
 return (new PhpCsFixer\Config())

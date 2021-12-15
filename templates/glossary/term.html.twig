@@ -6,87 +6,89 @@
 {% block meta_description term.metaDescription ?? term.fullTitle %}
 
 {% block content %}
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('glossary') }}">
-                <span itemprop="name">Glossaire</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">{{ term.name }}</span>
-            </a>
-            <meta itemprop="position" content="3" />
-        </li>
-    </ol>
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('glossary') }}">
+                    <span itemprop="name">Glossaire</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">{{ term.name }}</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
 
-    <div class="banner-technology">
-        <h1 class="banner-technology__title">
-        {% for title in term.title %}
-            {% if loop.first %}
-                {{ title }}
-            {% else %}
-                <span>{{ title }}</span>
+        <div class="banner-technology">
+            <h1 class="banner-technology__title">
+            {% for title in term.title %}
+                {% if loop.first %}
+                    {{ title }}
+                {% else %}
+                    <span>{{ title }}</span>
+                {% endif %}
+            {% endfor %}
+            </h1>
+
+            {% if term.logo is not empty %}
+                <div class="banner-technology__image">
+                    <img src="{{ asset(term.logo) }}" alt="logo de {{ term.name }}" class="logo">
+                </div>
             {% endif %}
-        {% endfor %}
-        </h1>
-        
-        {% if term.logo is not empty %}
-            <div class="banner-technology__image">
-                <img src="{{ asset(term.logo) }}" alt="logo de {{ term.name }}" class="logo">
-            </div>
-        {% endif %}
-          
-    </div>
 
-    <div class="page-technology">
-        {{ term.content|raw }}
+        </div>
 
-        {% if caseStudies is not empty %}
-            <h2 class="h2--dash">Projets créés avec {{ term.name }}</h2>
-            <ul class="article-list">
-                {% for caseStudy in caseStudies %}
-                    {% set url = path('case_study', { caseStudy: caseStudy.slug }) %}
-                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
+        <div class="page-technology">
+            {{ term.content|raw }}
+
+            {% if caseStudies is not empty %}
+                <h2 class="h2--dash">Projets créés avec {{ term.name }}</h2>
+                <ul class="article-list">
+                    {% for caseStudy in caseStudies %}
+                        {% set url = path('case_study', { caseStudy: caseStudy.slug }) %}
+                        <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
+                            <a href="{{ url }}" class="miniature__image">
+                                <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
+                            </a>
+                            <div class="miniature__content">
+                                <a href="{{ url }}" class="title">{{ caseStudy.title }}</a>
+                                <p class="description">{{ caseStudy.description }}</p>
+                                <a href="{{ url }}" class="link link--brand">Lire l'étude de cas</a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+            {% if articles is not empty %}
+                <h2 class="h2--dash">Articles liés à {{ term.name }}</h2>
+                <ul class="article-list">
+                    {% for article in articles %}
+                        {% set url = path('blog_article', { article: article.slug }) %}
+                        <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
                         <a href="{{ url }}" class="miniature__image">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
+                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
                         </a>
                         <div class="miniature__content">
-                            <a href="{{ url }}" class="title">{{ caseStudy.title }}</a>
-                            <p class="description">{{ caseStudy.description }}</p>
-                            <a href="{{ url }}" class="link link--brand">Lire l'étude de cas</a>
+                            <a href="{{ url }}" class="title">{{ article.title }}</a>
+                            <a href="{{ url }}" class="link link--brand">Lire l'article</a>
                         </div>
                     </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-
-        {% if articles is not empty %}
-            <h2 class="h2--dash">Articles liés à {{ term.name }}</h2>
-            <ul class="article-list">
-                {% for article in articles %}
-                    {% set url = path('blog_article', { article: article.slug }) %}
-                    <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
-                    <a href="{{ url }}" class="miniature__image">
-                        <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
-                    </a>
-                    <div class="miniature__content">
-                        <a href="{{ url }}" class="title">{{ article.title }}</a>
-                        <a href="{{ url }}" class="link link--brand">Lire l'article</a>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-        <div class="bricks">
-            {% include 'partials/brick-development.html.twig' %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            <div class="bricks">
+                {% include 'partials/brick-development.html.twig' %}
+            </div>
         </div>
     </div>
 {% endblock content %}

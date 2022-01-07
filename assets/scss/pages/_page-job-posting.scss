@@ -2,6 +2,10 @@
 
 .page-job-posting__content {
   padding-left: 200px;
+
+  p {
+    margin: 0 0 30px;
+  }
 }
 
 @media (max-width: $screen-md) {

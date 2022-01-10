@@ -7,8 +7,8 @@ namespace App\Bridge\Glide\Bundle\DependencyInjection;
 use App\Bridge\Glide\Bundle\Controller\ResizeImageController;
 use App\Bridge\Glide\Bundle\GlideUrlBuilder;
 use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
-use League\Flysystem\Adapter\Local;
 use League\Flysystem\Filesystem;
+use League\Flysystem\Local\LocalFilesystemAdapter;
 use League\Glide\Responses\SymfonyResponseFactory;
 use League\Glide\Server;
 use Symfony\Component\Config\FileLocator;
@@ -76,8 +76,8 @@ class GlideExtension extends Extension
         bool $groupCacheInFolders,
         array $presets = []
     ): void {
-        $container->register('glide_source', Local::class)->setArguments([$source]);
-        $container->register('glide_cache', Local::class)->setArguments([$cache]);
+        $container->register('glide_source', LocalFilesystemAdapter::class)->setArguments([$source]);
+        $container->register('glide_cache', LocalFilesystemAdapter::class)->setArguments([$cache]);
 
         $container->register('glide_source_fs', Filesystem::class)->setArgument(0, new Reference('glide_source'));
         $container->register('glide_cache_fs', Filesystem::class)->setArgument(0, new Reference('glide_cache'));

@@ -50,14 +50,14 @@ build-content: export APP_ENV = prod
 build-content:
 	rm -rf public/resized
 	symfony console cache:clear
-	symfony console stenope:build
+	ulimit -S -n 2048 && symfony console stenope:build
 
 ## Build static site without resizing images, for moar speed
 build-content-without-images: export APP_ENV = prod
 build-content-without-images: export GLIDE_PRE_GENERATE_CACHE = 0
 build-content-without-images:
 	symfony console cache:clear
-	symfony console stenope:build
+	ulimit -S -n 2048 && symfony console stenope:build
 
 ## Build static site with assets
 build-static: build build-content
@@ -74,7 +74,7 @@ build-subdir: export ROUTER_DEFAULT_URI = http://localhost:8001/elao_
 build-subdir: clear build
 	rm -rf public/resized
 	symfony console cache:clear
-	symfony console stenope:build build/elao_
+	ulimit -S -n 2048 && symfony console stenope:build build/elao_
 
 ## Serve the static version of the site from a subdir / with base url
 serve-static-subdir:

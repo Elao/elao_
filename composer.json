@@ -11,7 +11,7 @@
         "ext-json": "*",
         "composer/package-versions-deprecated": "^1.11",
         "elao/enum": "2.x-dev",
-        "league/glide-symfony": "^1.0",
+        "league/glide-symfony": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.2",
         "sensio/framework-extra-bundle": "^6.1",
         "stenope/stenope": "0.x-dev",

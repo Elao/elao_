@@ -28,7 +28,7 @@ Nous parcourons en détail notre organisation sans chef·fe de projet dans [**ce
 
 Il s'agira d'épauler aussi bien l'équipe de dev que les clients :
 
- * En challengant avec l'équipe les besoins client en amont, en **l'aidant à prioriser** ses attentes, ou bien en le **rassurant** et en l'accompagnant dans sa découverte de la réalisation de projet en mode itératif.
+ * En challengeant avec l'équipe les besoins client en amont, en **l'aidant à prioriser** ses attentes, ou bien en le **rassurant** et en l'accompagnant dans sa découverte de la réalisation de projet en mode itératif.
  * Vous serez là aussi pour aider l'équipe à prendre du recul sur la **vision projet** lorsque la technique prend trop le pas sur le métier.
  * Pour fluidifier les échanges entre le besoin et la solution. Tout ceci en garantissant que **l'utilisateur final** du produit reste bien au centre des priorités dans la réalisation du **produit**.
 

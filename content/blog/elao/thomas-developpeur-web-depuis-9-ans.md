@@ -2,7 +2,7 @@
 title: 'Thomas, lead developpeur web chez Elao depuis 9 ans'
 date: '2022-01-28' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
-description: "Le tout premier cycliste d'élao 🚲"
+description: "Le tout premier cycliste d'Elao 🚲"
 authors: [cmozzati, tjarrand] # multiple acceptés
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team]
@@ -22,9 +22,9 @@ J'ai commencé mon premier job de développeur web en 2010 (ouch), à Grenoble (
 
 Je suis ensuite parti 1 an en Australie où j'ai bossé en anglais cette fois ci, toujours en tant que développeur web.
 
-Puis je suis revenu m'installer à Lyon en 2013, en postulant chez une agence web spécialisée dans le Symfony, une certaine ... "élao". 😇
+Puis je suis revenu m'installer à Lyon en 2013, en postulant chez une agence web spécialisée dans le Symfony, une certaine ... "Elao". 😇
 
-Mes compétences et mon rôle au sein d'élao ont bien évolué depuis, grace à un environnement de travail super stimulant, une niveau technique au top et une équipe pour laquelle l'entraide vient naturellement. 🙂
+Mes compétences et mon rôle au sein d'Elao ont bien évolué depuis, grace à un environnement de travail super stimulant, une niveau technique au top et une équipe pour laquelle l'entraide vient naturellement. 🙂
 
 ## C'est quoi que tu préfères dans le quotidien de ton métier ?
 

@@ -30,6 +30,12 @@ jobs:
           ini-values: "memory_limit=-1"
           php-version: "8.1"
 
+      - name: 'Cache resized images'
+        uses: actions/cache@v2
+        with:
+          path: public/resized
+          key: resized-images-${{ github.workflow }}-${{ secrets.CACHE_VERSION }}
+
       - name: 'Determine composer cache directory'
         id: composer-cache
         run: echo "::set-output name=directory::$(composer config cache-dir)"

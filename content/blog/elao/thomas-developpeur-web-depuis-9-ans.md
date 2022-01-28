@@ -22,9 +22,9 @@ J'ai commencé mon premier job de développeur web en 2010 (ouch), à Grenoble (
 
 Je suis ensuite parti 1 an en Australie où j'ai bossé en anglais cette fois ci, toujours en tant que développeur web.
 
-Puis je suis revenu m'installer à Lyon en 2013, en postulant chez une agence web spécialisée dans le Symfony, une certaine ... "Elao". 😇
+Puis je suis revenu m'installer à Lyon en 2013, en postulant chez une agence web spécialisée en [Symfony](../../term/symfony.md), une certaine… "Elao". 😇
 
-Mes compétences et mon rôle au sein d'Elao ont bien évolué depuis, grace à un environnement de travail super stimulant, une niveau technique au top et une équipe pour laquelle l'entraide vient naturellement. 🙂
+Mes compétences et mon rôle au sein d'Elao ont bien évolués depuis, grace à un environnement de travail super stimulant, une niveau technique au top et une équipe pour laquelle l'entraide vient naturellement. 🙂
 
 ## C'est quoi que tu préfères dans le quotidien de ton métier ?
 
@@ -34,10 +34,10 @@ Je prends toujours du plaisir dans la phase de production, dans le code lui mêm
 
 ## Qu'est-ce que tu fais quand tu ne travailles pas ?
 
-Je m'occupe de mes plantes, je pars sillonner la campagne française à vélo, bivouaquer dans les Alpes ou plonger en Méditerranée, ... Le truc c'est de trouver suffisamment de temps libre pour faire tout ça 😊
+Je m'occupe de mes plantes, je pars sillonner la campagne française à vélo, bivouaquer dans les Alpes ou plonger en Méditerranée, … Le truc c'est de trouver suffisamment de temps libre pour faire tout ça 😊
 
-Ma dernière passion en date : le longboard de descente ! Ça consiste à descendre des routes sinueuse en longboard, en slidant pour freiner, et rester sur sa planche jusqu'en bas et en un seul morceau de préference.
-Je m'entraine dans le pentes de la Croix-Rousse depuis bientôt 1 an, et cet été baptême du feu avec une première compétition en conditions réelles. 😅 Wish me luck 🤞
+Ma dernière passion en date : le longboard de descente ! Ça consiste à descendre des routes sinueuses en longboard, en slidant pour freiner, et rester sur sa planche jusqu'en bas et en un seul morceau de préférence.
+Je m'entraine dans les pentes de la Croix-Rousse depuis bientôt 1 an, et cet été, baptême du feu avec une première compétition en conditions réelles. 😅 Wish me luck 🤞
 
 
 ## L'interview :fast-parrot: 

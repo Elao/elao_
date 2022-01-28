@@ -47,8 +47,8 @@ Je m'entraine dans le pentes de la Croix-Rousse depuis bientôt 1 an, et cet ét
 Sans hésitation :
 
 1. La "chicky" lune : 🌝
-2. Le ultra-fast parrot : <img class="emoji" src="build/images/elaomojis/parrots/ultra-fast-parrot.gif" />
-3. Le "Ah!" de Denis Brogniart : <img class="emoji" src="build/images/elaomojis/ah/ah.png" />
+2. Le ultra-fast parrot : :ultra-fast-parrot:
+3. Le "Ah!" de Denis Brogniart : :ah:
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 
@@ -75,4 +75,6 @@ Je code des deux côtés de la requête HTTP ! C'est au cœur de ce qui m'intér
 Déjà parce que je m'éclate dans ces deux languages, je ne me vois pas arrêter de faire l'un ou l'autre.
 
 Mais en plus parce que je cultive cette compréhension d'ensemble de la stack.
-Ça me permet de concevoir de meilleures architectures techniques : en choissant où placer la complexité (back ou front) en fonction du contexte par exemple, en trouvant la meilleure manière de faire tourner ces deux rouages (client et serveur) l'un dans l'autre pour répondre efficacement au besoin.
+Ça me permet de concevoir de meilleures architectures techniques : en choisissant où placer la complexité (back ou front) en fonction du contexte par exemple, en trouvant la meilleure manière de faire tourner ces deux rouages (client et serveur) l'un dans l'autre pour répondre efficacement au besoin.
+
+:tom-happy:

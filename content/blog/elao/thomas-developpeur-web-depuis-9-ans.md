@@ -20,7 +20,7 @@ Aujourd'hui, on vous présente [Prénom], dév chez Elao depuis [X] ans.
 
 J'ai commencé mon premier job de développeur web en 2010 (ouch), à Grenoble (mes terres natales), dans une petite agence web touche à tout où j'ai pu faire mes classes.
 
-Je suis ensuite parti 1 an en Australie où j'ai bossé en anglais cette fois ci, toujours en tant que développeur web.
+Je suis ensuite parti 1 an en Australie où j'ai bossé en anglais cette fois-ci, toujours en tant que développeur web.
 
 Puis je suis revenu m'installer à Lyon en 2013, en postulant chez une agence web spécialisée en [Symfony](../../term/symfony.md), une certaine… "Elao". 😇
 
@@ -30,7 +30,7 @@ Mes compétences et mon rôle au sein d'Elao ont bien évolués depuis, grace à
 
 Ce qui marche bien, c'est quand j'arrive à bosser en direct avec un client, comprendre son besoin et concevoir des solutions qui automatisent et fluidifient les aspects fastidieux de son quotidien.
 
-Je prends toujours du plaisir dans la phase de production, dans le code lui même quoi, mais voir des clients enthousiastes réaliser qu'un seul clic leur génère un document sur lesquels ils devaient auparavant passer une matinée, c'est vraiment ce qui me plait.
+Je prends toujours du plaisir dans la phase de production, dans le code lui même quoi, mais voir des clients enthousiastes réaliser qu'un seul clic leur génère un document sur lequel ils devaient auparavant passer une matinée, c'est vraiment ce qui me plaît.
 
 ## Qu'est-ce que tu fais quand tu ne travailles pas ?
 

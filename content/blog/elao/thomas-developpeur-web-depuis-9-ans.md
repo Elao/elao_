@@ -72,7 +72,7 @@ Une V2 pour [Curvytron](http://curvytron.com) ? 🌝
 
 Je code des deux côtés de la requête HTTP ! C'est au cœur de ce qui m'intéresse dans mon métier.
 
-Déjà parce que je m'éclate dans ces deux languages, je ne me vois pas arrêter de faire l'un ou l'autre.
+Déjà parce que je m'éclate dans ces deux langages, je ne me vois pas arrêter de faire l'un ou l'autre.
 
 Mais en plus parce que je cultive cette compréhension d'ensemble de la stack.
 Ça me permet de concevoir de meilleures architectures techniques : en choisissant où placer la complexité (back ou front) en fonction du contexte par exemple, en trouvant la meilleure manière de faire tourner ces deux rouages (client et serveur) l'un dans l'autre pour répondre efficacement au besoin.

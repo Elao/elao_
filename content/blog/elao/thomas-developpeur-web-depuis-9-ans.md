@@ -9,7 +9,7 @@ tags: [elao, team]
 thumbnail: images/posts/2022/itw-thomas/header.jpg
 banner: images/posts/2022/itw-thomas/header.jpg # Uniquement si différent de la minitature (thumbnail)
 credit: { name: 'Benjamin Lévèque', url: 'https://www.flickr.com/people/99511626@N04' } # Pour créditer la photo utilisée en miniature
-#tweetId: ~ # Ajouter l'id du Tweet après publication.
+tweetId: '1488448460416299009'
 ---
 
 <!-- INTRO 

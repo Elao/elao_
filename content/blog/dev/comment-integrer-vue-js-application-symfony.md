@@ -237,32 +237,33 @@ Vous pouvez également injecter des données complexes en *JSON* :
 
 Très pratique pour ajouter une petite touche de **Vue.js** par endroit, je ne recommande pas ces méthodes pour créer une application complexe.
 
-<div style="border-left: 5px solid #00a6ff;padding: 20px;margin: 20px 0;">
-  Si vous souhaitez tout de même changer les délimiteurs, sur une instance de Vue :
+!!! info ""
+    Si vous souhaitez tout de même changer les délimiteurs, sur une instance de Vue :
 
-  ```javascript
-  new Vue({
-    delimiters: ['${', '}']
-  })
-  ```
+```javascript
+new Vue({
+  delimiters: ['${', '}']
+})
+```
+    
+ou globalement pour toutes les instances de Vue :
 
-  ou globalement pour toutes les instances de Vue :
+```javascript
+Vue.config.delimiters = ['${', '}'];
+```
 
-  ```javascript
-  Vue.config.delimiters = ['${', '}'];
-  ```
+Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
 
-  Vous pourrez ainsi utiliser conjointement les deux moteurs de templates :
+```html
+<h1>{{ variable_twig }}</h1>
+<p>${ variable_vue }<p>
+```
 
-  ```html
-  <h1>{{ variable_twig }}</h1>
-  <p>${ variable_vue }<p>
-  ```
-</div>
+!!! danger ""
+    Attention néanmoins, le changement de délimiteurs de façon globale
+    peut vous couper des composants tiers que vous pourriez installer et qui
+    embarqueraient leur template avec les anciens délimiteurs.
 
-<div style="border-left: 5px solid #ffa600;padding: 20px;margin: 20px 0;">
-    Attention néanmoins, le changement de délimiteurs de façon globale peut vous couper des composants tiers que vous pourriez installer et qui embarqueraient leur template avec les anciens délimiteurs.
-</div>
 
 ### Single File Component
 

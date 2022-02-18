@@ -4,6 +4,12 @@
 {% block meta_title "Le blog de l'équipe d'Elao" %}
 {% block meta_description "Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !" %}
 
+{% block meta %}
+    {{ parent() }}
+
+    <link rel="alternate" type="application/rss+xml" href="{{ path('blog_rss') }}" title="Le blog de l'équipe d'Elao" />
+{% endblock %}
+
 {% block content %}
     <div class="container">
     {% block articles %}

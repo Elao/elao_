@@ -9,6 +9,12 @@
 {% block og_image asset(article.thumbnail|glide_image_preset('opengraph_image')) %}
 {% block twitter_image absolute_url(asset(article.thumbnail|glide_image_preset('twitter_card'))) %}
 
+{% block meta %}
+    {{ parent() }}
+
+    <link rel="alternate" type="application/rss+xml" href="{{ path('blog_rss') }}" title="Le blog de l'équipe d'Elao" />
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">

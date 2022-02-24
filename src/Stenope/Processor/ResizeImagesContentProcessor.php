@@ -23,9 +23,12 @@ class ResizeImagesContentProcessor implements ProcessorInterface
     private string $property;
     private MimeTypes $mimeTypes;
 
+    private string $source;
+
     public function __construct(
         ResizedUrlGenerator $resizedUrlGenerator,
         HtmlCrawlerManagerInterface $crawlers,
+        string $source,
         string $type,
         string $preset,
         string $property = 'content'
@@ -36,6 +39,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
         $this->preset = $preset;
         $this->property = $property;
         $this->mimeTypes = new MimeTypes();
+        $this->source = $source;
     }
 
     public function __invoke(array &$data, Content $content): void
@@ -73,6 +77,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
         // Ignore unsupported image formats
         if (!$this->isSupported($source)) {
+            // need to retrieve those as they are not in the public directory
             return;
         }
 
@@ -88,6 +93,8 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
     private function isSupported(string $url): bool
     {
+        $url = $this->source . $url;
+
         try {
             $mimeType = $this->mimeTypes->guessMimeType($url);
         } catch (\InvalidArgumentException $exception) {

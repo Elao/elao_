@@ -18,7 +18,7 @@
                 {% if page == minPage and loop.first %}
                     <li class="miniature-highlight">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-highlight__image" data-aos="fade-down">
-                            <span class="image" style="background: url('{{ asset(article.thumbnail) }}')"></span>
+                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.lg') }}"></span>
                         </a>
                         <div class="miniature-highlight__content" data-aos="zoom-in">
                             <div class="info">

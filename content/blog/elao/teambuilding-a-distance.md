@@ -134,7 +134,7 @@ Les moments informels sont aussi importants que les ateliers. Il existe pléthor
 * [Gartic Phone](https://garticphone.com/fr), un Esquissé en ligne
 * [Wolfy](https://wolfy.fr/), un Loup-Garou de Thiercelieux en ligne
 * [Curvytron](http://www.curvytron.com/#/), un snake [fait-maison](../../case-study/curvytron.md)
-* [WhatTheTune](https://whatthetune.com/), un blind-test réalisé par [Tom](../../member/tjarrand.yml), notre game designer préféré
+* [WhatTheTune](https://whatthetune.com/), un blind-test réalisé par [Tom](../../member/tjarrand.yaml), notre game designer préféré
 * [Skribbl](https://skribbl.io/), un Pictionary en ligne
 
 Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…

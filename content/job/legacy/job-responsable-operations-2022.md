@@ -4,7 +4,7 @@ title:
     - "un·e Responsable des Opérations"
 description:  "Une position clé pour nous accompagner dans le quotidien des projets aussi bien que dans l'organisation globale de l'équipe."
 date:         "2022-01-10"
-active:       true
+active:       false
 contractType: CDI
 place:        "Lyon, télétravail partiel possible"
 hiringDate:   ~
@@ -12,6 +12,8 @@ formation:    ~
 experience:   "> 5 ans"
 remuneration: "50 à 55 k €"
 ---
+
+> <strong class="disclaimer__title">Avertissement : </strong>Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces plus récentes.
 
 Je m'appelle [**Xavier**](../member/xgorse.yml) et j'ai besoin d'un coup de main. Mon quotidien est de tout mettre en œuvre pour que les projets qu'on réalise chez **Elao** se passent le mieux possible. Aujourd'hui le nombre de projets simultanés que l'on traite ne me permet pas d'être **efficace** et m'oblige trop souvent à intervenir en **curatif** sur certains sujets alors qu'il serait beaucoup plus efficace d'intervenir de façon **proactive**.
 

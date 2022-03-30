@@ -34,20 +34,48 @@
                     <p>Nous sommes en recherche perpétuelle de nouveaux talents.</p>
                 </div>
             </div>
+            <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
+            {% if jobs is not empty %}
+                <ul class="article-list">
+                    {% for job in jobs %}
+                        <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
+                            <div class="miniature-inline__content">
+                                <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
+                                    {{ job.fullTitle }}
+                                </a>
+                                <p class="description" itemprop="description">
+                                    {{ job.description }}
+                                </p>
+                                <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
+                                    <span>
+                                        Voir le post
+                                        {% include 'partials/svg-arrow.html.twig' %}
+                                    </span>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <ul class="article-list">
+                    <li class="miniature-inline miniature-inline--small no-result" data-aos="fade-up-left">
+                        <div class="miniature-inline__content">
+                            <span class="title">Nous n'avons aucun poste ouvert en ce moment. Vous souhaitez nous envoyer une candidature spontanée ?</span>
+                            <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Envoyez nous un message
+                                    {% include 'partials/svg-arrow.html.twig' %}
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            {% endif %}
 
-            <h2 class="h2--dash">D'un point de vue personnel</h2>
+            <h2 class="h2--dash">Mais pourquoi venir travailler avec nous ?</h2>
             <div class="offset-content">
+                <p>Vous êtes interessé·e mais vous ne savez pas encore à quoi vous attendre ? Petit tour d'horizon...</p>
                 <blockquote>Adeptes de l'adage « le talent, c’est d’avoir envie de faire quelque chose », nous privilégions toute personnalité volontaire et motivée par la <strong>soif de nouveaux challenges techniques</strong> au sein d’une <strong>équipe unie.</strong></blockquote>
-                <p>Ce sont ces éléments qui assurent aujourd’hui notre réussite. Laissez-nous vous convaincre...</p>
-            </div>
-
-            <div class="call-to-action">
-                <a href="#offers" class="btn btn--primary btn--animated">
-                    <span>
-                        Accéder directement aux offres d'emploi
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </a>
             </div>
 
             <h2 class="h2--dash">D'un point de vue technique</h2>
@@ -144,7 +172,7 @@
                 <ul>
                     <li>Nos bureaux sont situés à Lyon, à côté de Charpennes, dans une résidence calme, à proximité des commerces, des principales lignes de transport (bus, métro, tramways, SNCF), des lieux de restauration, et à 15 minutes à pied du Parc de la Tête d'or.</li>
                     <li>Notre open space, à taille humaine, n'a rien d'un hall de gare.</li>
-                    <li>Postes de travail : Mac OSX, virtualisation (Vagrant, Docker), Slack ...</li>
+                    <li>Postes de travail : Mac OSX, Linux, virtualisation (Vagrant, Docker), Slack ...</li>
                 </ul>
             </div>
             <div class="check-block check-block--right" data-aos="zoom-in-left">
@@ -156,50 +184,11 @@
                     <li>Forfait mobilité de 40€ tous les mois</li>
                     <li>Un abonnement famille au gestionnaire de mots de passe 1Password (Jusqu'à 5 personnes)</li>
                     <li>Une cagnotte annuelle personnelle est disponible pour vos dépenses d'équipement ou de formation (participation aux événements web, matériel spécifique, licences…)</li>
-                    <li>Du thé et une machine à café sont en libre service</li>
                 </ul>
             </div>
-
-            <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
-            {% if jobs is not empty %}
-                <ul class="article-list">
-                    {% for job in jobs %}
-                        <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
-                            <div class="miniature-inline__content">
-                                <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
-                                    {{ job.fullTitle }}
-                                </a>
-                                <p class="description" itemprop="description">
-                                    {{ job.description }}
-                                </p>
-                                <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
-                                    <span>
-                                        Voir le post
-                                        {% include 'partials/svg-arrow.html.twig' %}
-                                    </span>
-                                </a>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-                <aside class="bricks">
-                    {% include 'partials/brick-application.html.twig' %}
-                </aside>
-            {% else %}
-                <ul class="article-list">
-                    <li class="miniature-inline miniature-inline--small no-result" data-aos="fade-up-left">
-                        <div class="miniature-inline__content">
-                            <span class="title">Nous n'avons aucun poste ouvert en ce moment. Vous souhaitez nous envoyer une candidature spontanée ?</span>
-                            <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
-                                <span>
-                                    Envoyez nous un message
-                                    {% include 'partials/svg-arrow.html.twig' %}
-                                </span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            {% endif %}
+            <aside class="bricks">
+                {% include 'partials/brick-application.html.twig' %}
+            </aside>
         </div>
     </div>
 {% endblock %}

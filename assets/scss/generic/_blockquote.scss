@@ -18,6 +18,10 @@ blockquote {
     line-height: 1;
   }
 
+  strong {
+    font-family: 'antikor bold';
+  }
+
   cite {
     margin-top: 15px;
     display: block;
@@ -37,6 +41,10 @@ blockquote:nth-of-type(even),
     top: -45px;
     left: 40px;
     font-size: 65px;
+  }
+
+  strong {
+    font-family: 'faktum bold';
   }
 
   cite {

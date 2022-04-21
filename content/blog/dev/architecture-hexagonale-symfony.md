@@ -52,7 +52,7 @@ Afin d'aller encore un peu plus loin dans le découplage de mon code et de me do
 
 Ces deux architectures séparent le code en différentes couches imbriquées. Le nombre de couches dépendra de la complexité de votre application et jusqu'où vous souhaitez pousser le découplage.
 
-Pour ma part je suis partie sur les quatres couches suivantes qui représentes assez bien les différentes parties d'une application **Symfony** (de la plus profonde à la moins profonde) :
+Pour ma part je suis partie sur les quatres couches suivantes qui représentent assez bien les différentes parties d'une application **Symfony** (de la plus profonde à la moins profonde) :
 
 * Domain
 * Application

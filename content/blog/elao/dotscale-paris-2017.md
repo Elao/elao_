@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Aperçu du DotScale Paris 2017"
 
-thumbnail:          "images/posts/thumbnails/dotscale.jpg"
-banner:             "images/posts/headers/dotscale.jpg"
+thumbnail:          "content/images/blog/thumbnails/dotscale.jpg"
+banner:             "content/images/blog/headers/dotscale.jpg"
 tags:               ["DevOps", "SysAdmin", "Infrastructure", "Conférence", "Scalabilité"]
 categories:         ["conference"]
 authors:            ["gfaivre"]
@@ -25,7 +25,7 @@ Dans le cadre du DotScale, les sujets vont de la supervision de parcs de serveur
 
 Comme dit précédemment, les DotScale 2017 se sont déroulées au <a href="http://www.theatredeparis.com/le-theatre/histoire-du-lieu" target="_blank">Théâtre de Paris</a>, dans le 9eme arrondissement de la ville lumière. Un théâtre du 19ème siècle absolument magnifique. J'en profite d'ailleurs pour saluer le choix de cette salle, sa configuration avec sa scène, ses balcons et ses décors donnent une ambiance très intimiste et chaleureuse. Le confort des balcons est tout relatif (particulièrement pour les personnes de grande taille) mais est largement compensé par l'atmosphère qui se dégage de la salle.
 
-![Théâtre](images/posts/2017/dotscale/theatre.jpg)
+![Théâtre](content/images/blog/2017/dotscale/theatre.jpg)
 
 # L'organisation
 
@@ -37,7 +37,7 @@ A l'issue de chaque conférence, l'intervenant est invité à s'assoir quelques 
 
 En bref, comme bien souvent, ce que l'on gagne en professionalisme on le perd un peu en spontanéité, il n'en demeure pas moins que l'organisation est rodée et très juste, tant en termes de rythme que de respect du planning.
 
-![Miam!](images/posts/2017/dotscale/miam.jpg)
+![Miam!](content/images/blog/2017/dotscale/miam.jpg)
 
 # Les conférences
 

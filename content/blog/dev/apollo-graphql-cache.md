@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Découverte du fonctionnement du cache du client GraphQL Apollo."
 
-thumbnail:          "images/posts/thumbnails/graphql-apollo.jpg"
-banner:             "images/posts/headers/graphql-apollo.jpg"
+thumbnail:          "content/images/blog/thumbnails/graphql-apollo.jpg"
+banner:             "content/images/blog/headers/graphql-apollo.jpg"
 tags:               ["GraphQL","Cache","Apollo","Javascript","API"]
 categories:         ["Dev", "Javascript"]
 

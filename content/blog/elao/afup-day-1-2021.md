@@ -5,7 +5,7 @@ date:               "2021-06-03"
 lastModified:       ~
 
 description:        "Notre compte-rendu du premier jour de l'Afup Day, édition 2021, à distance !"
-thumbnail:          "images/posts/2021/afup-day-2021/afup-day-2021.png"
+thumbnail:          "content/images/blog/2021/afup-day-2021/afup-day-2021.png"
 tags:               ["Développement", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
 authors:            ["aldeboissieu", "bleveque"]

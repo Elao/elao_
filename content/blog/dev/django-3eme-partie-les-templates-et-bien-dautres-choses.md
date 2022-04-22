@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Django (3ème partie) : les templates, et bien d'autres choses ..."
 
-thumbnail:          "images/posts/thumbnails/django.jpg"
+thumbnail:          "content/images/blog/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
@@ -21,9 +21,7 @@ En effet, nous allons enrichir le projet initié lors de notre <a href="/blog/dj
 
 Voici le résultat à atteindre :
 
-<div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_index_vfinale.png)
-</div>
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](content/images/blog/2010/elao_shop_index_vfinale.png)
 
 
 Tout au long de cet article, nous allons travailler principalement sur trois fichiers : la template globale (**base.html**), la template correspondant à la page d'accueil (**index.html**) et le fichier **shop/views.py**. A mesure que nous avancerons en fonctionnalités, nous compléterons le code de chacun de ces fichiers. Toutefois, si à un moment ou un autre, vous êtiez perdu(e)s, voici une archive contenant le projet obtenu lorsque toutes les étapes décrites dans cet article ont été réalisées (codes, feuilles de style, images, fixtures …) : <a href="http://www.elao.org/wp-content/uploads/2010/10/django_shop_v1.zip">Elao shop - code source - part 3</a>. Quoi qu'il en soit, pour tirer pleinement profit de cet article, je vous encourage plutôt à suivre chacune des étapes décrites ci-après, à ne télécharger cette archive que pour récupérer les fixtures, les styles et les images, et à ne consulter le code qu'en cas de difficulté à "reconstituer le puzzle". Bien entendu, le code fourni ne sert qu'à des fins didactiques et ne devrait en aucun cas être utilisé tel quel en production. Ce code est sans nul doute perfectible à bien des égards, et toute critique constructive pour l'améliorer est évidemment la bienvenue.
@@ -148,10 +146,7 @@ A présent, pour que notre page **index.html** soit incluse dans le layout globa
 
 Si vous avez récupéré la feuille de style et les images que je vous proposais, la page d'accueil <a href="http://localhost:8000/" target="_blank">http://localhost:8000/</a> devrait désormais ressembler à ceci :
 
-
-<div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_index_v1.png)
-</div>
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](content/images/blog/2010/elao_shop_index_v1.png)
 
 Bon, tout cela commence à prendre forme, à présent, nous allons afficher nos articles dans notre template fraichement créée !
 
@@ -295,9 +290,7 @@ Dernière remarque : nous protégeons notre formulaire des attaques CSRF à l'ai
 A présent, si vous soumettez le formulaire de recherche, Django vous gratifiera d'une erreur 403 **Forbidden** ; il a même la gentillesse de vous indiquer la marche à suivre, en trois points :
 
 
-<div style="text-align:center;">
-![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](images/posts/2010/elao_shop_csrf_403.png)
-</div>
+![elao shop index vfinale Django (3ème partie) : les templates, et bien dautres choses ...](content/images/blog/2010/elao_shop_csrf_403.png)
 
 Concernant les deux derniers points, nous sommes "**dans les clous**". En particulier, la classe **CsrfViewMiddleware** est bien déclarée par défaut dans notre fichier **settings.py**. En revanche, concernant le premier point, nous devons modifier notre méthode **index** pour passer à la méthode **render_to_response** un troisième paramètre de type **RequestContext**. Nous allons donc nous exécuter :
 

@@ -12,7 +12,7 @@ size: 8 months
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "algolia", "vue-js"]
 members: ["msteinhausser", "xavierr", "bleveque", "yheitz"]
-images: ["images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
+images: ["content/images/casestudies/headers/geantdesbeauxarts-banner.jpg"]
 ---
 
 ## Expertise développement

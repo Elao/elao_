@@ -6,8 +6,8 @@ description: 'petite phrase sympa sur la personne'
 authors: [cmozzati] # multiple acceptés
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team]
-thumbnail: images/posts/thumbnails/trame-itw.jpg
-#banner: images/posts/headers/trame-itw.jpg # Uniquement si différent de la minitature (thumbnail)
+thumbnail: content/images/blog/interviews/trame-itw.jpg
+#banner: content/images/blog/interviews/banners/trame-itw.jpg # Uniquement si différent de la minitature (thumbnail)
 #credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---

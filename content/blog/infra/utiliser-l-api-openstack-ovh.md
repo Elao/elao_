@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Préparer son environnement pour utiliser l'API openstack d'OVH, pré-requis et installation du client"
 
-thumbnail:          "images/posts/thumbnails/openstack.png"
-banner:             "images/posts/headers/facade.jpg"
+thumbnail:          "content/images/blog/thumbnails/openstack.png"
+banner:             "content/images/blog/headers/facade.jpg"
 tags:               ["ovh","openstack","docker","infra","api"]
 categories:         ["Infra", "openstack", "ovh"]
 
@@ -81,7 +81,7 @@ Vous trouverez au niveau de vos différents environnements une entrée «OpenSta
 * de (re)générer un token OpenStack
 
 <div class="text-center">
-    <img src="images/posts/2016/ovh-openstack/ovh-os.png" alt="API OpenStack OVH" />
+    <img src="content/images/blog/2016/ovh-openstack/ovh-os.png" alt="API OpenStack OVH" />
 </div>
 
 Une fois que vous avez créé un utilisateur, récupérez votre fichier de configuration (il s'agit en fait d'un simple fichier qui exporte les variables utilisées par le client OpenStack pour établir sa connexion) et «sourcez» le:

@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "Nouvel article consacré aux Design Patterns. Aujourd'hui : le pattern Chain of Responsibility"
 
-thumbnail:      "images/posts/thumbnails/chaplin-assembly-line.jpeg"
-banner:     "images/posts/headers/chaplin-assembly-line.jpg"
+thumbnail:      "content/images/blog/thumbnails/chaplin-assembly-line.jpeg"
+banner:     "content/images/blog/headers/chaplin-assembly-line.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
@@ -45,7 +45,7 @@ Voici les différentes situations que référence le _GoF_ :
 ## Diagramme du Design pattern `Chain of Responsibility`
 
 <figure>
-    <img src="images/posts/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility'">
+    <img src="content/images/blog/design-pattern/behavior-cor.gif" alt="Le Design Pattern 'Chain of Responsibility'">
     <figcaption>
       <span class="figure__legend">Diagramme du Design Pattern 'Chain of Responsility'</span>
     </figcaption>

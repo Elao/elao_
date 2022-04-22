@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Bonnes pratiques Symfony2 : notre condensé !"
 
-thumbnail:          "images/posts/thumbnails/kafeine.png"
-banner:             "images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "content/images/blog/thumbnails/kafeine.png"
+banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
 categories:         ["Tips", "Symfony"]
 

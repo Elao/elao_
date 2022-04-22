@@ -7,7 +7,7 @@ lastModified:       ~
 
 description:        "Supervisor est un système de contrôle des processus/services applicatifs destiné aux systèmes de types UNIX."
 
-thumbnail:          "images/posts/thumbnails/ice_bulb.jpg"
+thumbnail:          "content/images/blog/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
 categories:         ["Infra", "Linux"]
 
@@ -91,7 +91,7 @@ blogd: started
 ```bash
 supervisor> tail -f blogd
 ==> Press Ctrl-C to exit <==
-var/blog/content/posts/images/ => web/blog/medias
+var/blog/content/blog/images/ => web/blog/medias
 [ASSETS] Copying folders succeed
 Assets copied
 Listening on 127.0.0.1:5555
@@ -105,7 +105,7 @@ Loading tags...
 Checking data...
 Data checked status success
 Copying assets
-[ASSETS] from var/blog/content/posts/images/ => web/blog/medias
+[ASSETS] from var/blog/content/blog/images/ => web/blog/medias
 [ASSETS] Copying folders succeed
 Assets copied
 Listening on 127.0.0.1:5555
@@ -116,7 +116,7 @@ Listening on 127.0.0.1:5555
 
 Pour finir supervisor fournit également une interface web qui est activable via la section ``[inet_http_server]`` et qui permet de gérer les services de la même façon que le client en console.
 
-![Supervisor - Interface web supervisor](images/posts/2014/supervisor_web.png)
+![Supervisor - Interface web supervisor](content/images/blog/2014/supervisor_web.png)
 
 Il suffit de créer un nouveau fichier dans ```/etc/supervisor/conf.d``` s'appelant par exemple ```inet_http_server.conf``` et d'y recopier le contenu suivant :
 

@@ -12,7 +12,7 @@ size: 2 ans
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "elasticsearch", "vue-js"]
 members: ["mcolin", "ndievart", "rhanna"]
-images: ["images/casestudies/headers/vimeet-banner.jpg"]
+images: ["content/images/casestudies/headers/vimeet-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -89,7 +89,7 @@ Une fois inscrits, les participants devaient avoir accès, avant l'événement, 
 * Gestion de prise de rendez-vous avec des créneaux, des indisponibilités et des annulations.
 
 <figure>
-    <img src="images/casestudies/vimeet-catalogue.png" alt="Liste des rendez-vous">
+    <img src="content/images/casestudies/vimeet-catalogue.png" alt="Liste des rendez-vous">
     <figcaption>
       <span class="figure__legend">La liste des rendez-vous possibles dans un événement géré par Vimeet</span>
     </figcaption>
@@ -110,7 +110,7 @@ Nous avons choisi de développer cette application à partir de la solution Open
 [Notre article sur OptaPlanner](../blog/dev/planification-de-rdv-avec-optaplanner.md)
 
 <figure>
-    <img src="images/casestudies/vimeet-gdr.png" alt="Gestion des rendez-vous">
+    <img src="content/images/casestudies/vimeet-gdr.png" alt="Gestion des rendez-vous">
     <figcaption>
       <span class="figure__legend">Proposition de rendez-vous dans un événement géré par Vimeet</span>
     </figcaption>
@@ -154,7 +154,7 @@ Pendant le déroulement de l'événement, chaque participant dispose d'un emploi
 * Afficher les rendez-vous de chaque participant
 
 <figure>
-    <img src="images/casestudies/vimeet-mobile.png" alt="Agenda">
+    <img src="content/images/casestudies/vimeet-mobile.png" alt="Agenda">
     <figcaption>
       <span class="figure__legend">L'agenda d'un participant</span>
     </figcaption>

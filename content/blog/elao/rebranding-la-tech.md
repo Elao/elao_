@@ -8,7 +8,7 @@ tableOfContent:     2
 
 description:        "On s'outille."
 
-thumbnail:          "images/posts/headers/elao-rebrand-banner-tech.jpg"
+thumbnail:          "content/images/blog/headers/elao-rebrand-banner-tech.jpg"
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["tjarrand", "msteinhausser", "adefrance", "aldeboissieu"]
@@ -50,7 +50,7 @@ Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 - Stenope vous donne un grand contrôle sur la manière dont sont récupérés et hydratés ces contenus.
 - Il ne vous reste qu'à utiliser vos objets métier comme bon vous semble, par exemple dans des controllers et des templates twig.
 
-![stenope-cli](images/posts/2021/rebranding-la-tech/stenope.png)
+![stenope-cli](content/images/blog/2021/rebranding-la-tech/stenope.png)
 
 Stenope n'est pas un générateur de site statique prêt à l'emploi (l'open-source compte déjà de nombreux projets de qualité répondant à ce besoin) : Stenope c'est un ensemble d'outils pour générer des sites statiques sur-mesure dans Symfony !
 
@@ -84,7 +84,7 @@ Afin de faciliter cette mise en oeuvre qui peut être laborieuse, nous avons dé
 
 Cet outil s'appelle Accesseo, il fait encore l'objet de quelques ajustements à la suite du test intensif qu'il a subi. Nous le rendrons bientôt accessible, et espérons qu'il vous servira peut-être !
 
-![](images/posts/2021/rebranding-la-tech/accesseo.png)
+![](content/images/blog/2021/rebranding-la-tech/accesseo.png)
 
 
 ## Images et performances
@@ -111,7 +111,7 @@ Les navigateurs qui ne supportent par le WebP verront quand même les images en 
 
 Par nature, le déploiement d'un site statique est simple et sans prise de tête (💘) : on build, et déploie les fichiers statiques sur un serveur en SSH (via `scp` ou `rsync`). Il est alors aisé de mettre en place un [workflow Github](https://github.com/Elao/elao_/blob/master/.github/workflows/deploy.yaml) pour faire ce travail pour nous. Nous avons même poussé pour obtenir un deploy directement sur Github Pages avec un aperçu par Pull Request, ce qui est fortement appréciable pour commenter en équipe un rendu ou un contenu avant de le merger.
 
-![](images/posts/2021/rebranding-la-tech/github-workflow.png)
+![](content/images/blog/2021/rebranding-la-tech/github-workflow.png)
 
 ## Sources
 

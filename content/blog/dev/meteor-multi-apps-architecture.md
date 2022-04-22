@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Architecture d'une application Meteor décomposée en plusieurs sous-applications connectées à la même base de données MongoDb."
 
-thumbnail:          "images/posts/thumbnails/beer.jpg"
-banner:             "images/posts/headers/elephpant_elao.jpg"
+thumbnail:          "content/images/blog/thumbnails/beer.jpg"
+banner:             "content/images/blog/headers/elephpant_elao.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
 categories:         ["Web", "Meteor"]
 

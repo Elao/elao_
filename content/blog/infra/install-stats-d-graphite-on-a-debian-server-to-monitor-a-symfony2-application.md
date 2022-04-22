@@ -8,8 +8,8 @@ lang:               "en"
 description:        "Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application."
 
 language:           "en"
-thumbnail:          "images/posts/thumbnails/rocket.jpg"
-banner:             "images/posts/headers/minions.jpg"
+thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
+banner:             "content/images/blog/headers/minions.jpg"
 tags:               ["Linux","Monitoring","Symfony"]
 categories:         ["Infra", "Monitoring"]
 
@@ -26,9 +26,9 @@ During this tutorial, we will install Stats.d and Graphite on the same server ou
 
 
 **Here's the result we'll have at the end (screenshot from a personal web application) :**
-<img src="/en/images/posts/2012/memory_usage.png" alt="graphite" class="outside-left">
-<img src="/en/images/posts/2012/users.png" alt="graphite" class="">
-<img src="/en/images/posts/2012/memory_usage.png" alt="graphite" class="outside-right">
+<img src="content/images/blog/2012/memory_usage.png" alt="graphite" class="outside-left">
+<img src="content/images/blog/2012/users.png" alt="graphite" class="">
+<img src="content/images/blog/2012/memory_usage.png" alt="graphite" class="outside-right">
 
 # Install Graphite
 

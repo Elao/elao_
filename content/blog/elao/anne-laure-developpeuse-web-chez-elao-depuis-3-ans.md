@@ -5,7 +5,7 @@ lastModified: ~
 description: ''
 authors: [cmozzati, aldeboissieu]
 tags: [elao, team]
-thumbnail: images/posts/2021/itw-2b.jpeg
+thumbnail: content/images/blog/2021/itw-2b.jpeg
 tweetId: '1413061065374580737'
 ---
 

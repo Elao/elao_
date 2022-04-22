@@ -13,7 +13,7 @@ size: 6 mois
 services: ["Refonte", "Développement"]
 terms: ["symfony", "elasticsearch", "vue-js", "html", "css"]
 members: ["mcolin", "adefrance"]
-images: ["images/casestudies/headers/mjc-banner.jpg"]
+images: ["content/images/casestudies/headers/mjc-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -57,7 +57,7 @@ L'autre enjeu était la qualité des offres proposées sur la plateforme. Grâce
 * Une gestion des candidatures la plus fluide possible.
 
 <figure>
-    <img src="images/casestudies/mjc-recruteur-mes-offres.png" alt="Recruteur - Mes offres d'emploi">
+    <img src="content/images/casestudies/mjc-recruteur-mes-offres.png" alt="Recruteur - Mes offres d'emploi">
     <figcaption>
       <span class="figure__legend">Recruteur - Mes offres d'emploi</span>
     </figcaption>
@@ -75,7 +75,7 @@ Le coopteur devait pouvoir accéder aux offres d'emploi grâce à un moteur de r
 Pour le moteur de recherche, nous avons utilisé [ElasticSearch](../technologies/elasticsearch.md) qui permet à la fois une recherche par pertinence et une recherche par géolocalisation.
 
 <figure>
-    <img src="images/casestudies/mjc-coopteur-recherche.png" alt="Coopteur - Moteur de recherche">
+    <img src="content/images/casestudies/mjc-coopteur-recherche.png" alt="Coopteur - Moteur de recherche">
     <figcaption>
       <span class="figure__legend">Coopteur - Moteur de recherche</span>
     </figcaption>
@@ -90,7 +90,7 @@ Les candidats devaient également pouvoir suivre leurs candidatures et pouvoir u
 * Trouver facilement une offre d'emploi grâce au moteur de recherche.
 
 <figure>
-    <img src="images/casestudies/mjc-candidat-suivi.png" alt="Candidat - Suivi de la candidature">
+    <img src="content/images/casestudies/mjc-candidat-suivi.png" alt="Candidat - Suivi de la candidature">
     <figcaption>
       <span class="figure__legend">Candidat - Suivi de la candidature</span>
     </figcaption>

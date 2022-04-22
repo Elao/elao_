@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Retour d'expérience sur le framework frontend Vue.js et pourquoi l'utiliser"
 
-thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-banner:             "images/posts/headers/vuejs.jpg"
+thumbnail:          "content/images/blog/thumbnails/vuejs.jpg"
+banner:             "content/images/blog/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
 categories:         ["Dev", "Vuejs", "Javascript"]
 

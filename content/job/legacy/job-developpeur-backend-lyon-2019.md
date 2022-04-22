@@ -5,8 +5,8 @@ date:           "2019-11-12"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/2019/dev-back-nov-2019/image-full.jpg"
-header_img:     "images/posts/2019/dev-back-nov-2019/image-banner.jpg"
+thumbnail:      "content/images/blog/2019/dev-back-nov-2019/image-full.jpg"
+header_img:     "content/images/blog/2019/dev-back-nov-2019/image-banner.jpg"
 tags:           ["job", "web", "lyon", "backend", "symfony", "PHP", "Javascript"]
 categories:     ["elao", "recrutement", "Symfony"]
 

@@ -5,8 +5,8 @@ date:           "2017-01-20"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/boy.png"
-header_img:     "images/posts/headers/JobLyon.jpg"
+thumbnail:      "content/images/blog/thumbnails/boy.png"
+header_img:     "content/images/blog/headers/JobLyon.jpg"
 tags:           ["recrutement", "jobs", "integration", "lyon"]
 categories:     ["elao", "jobs", "recrutement"]
 

@@ -12,7 +12,7 @@ size: 6 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony"]
 members: ["adefrance", "bleveque", "xavierr"]
-images: ["images/casestudies/headers/ngtv-banner.jpg"]
+images: ["content/images/casestudies/headers/ngtv-banner.jpg"]
 ---
 
 ## Expertise développement

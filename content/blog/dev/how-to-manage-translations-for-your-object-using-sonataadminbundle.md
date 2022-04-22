@@ -7,7 +7,7 @@ lang:               "en"
 
 description:        "How to manage translations for your object using SonataAdminBundle"
 
-thumbnail:          "images/posts/thumbnails/rocket.jpg"
+thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
 categories:         ["Dev", Symfony", "PHP"]
 
@@ -16,7 +16,6 @@ authors:            ["tbessoussa"]
 
 
 Many of us asked themselves **how to add dynamically translations to I18n fields  - object using `SonataAdminBundle` and `DoctrineExtensions`**.
-</p>
 
 Thanks to <a href="http://gediminasm.org/" target="_blank">Gedmo</a> and his wonderful <a href="https://github.com/l3pp4rd/DoctrineExtensions" target="_blank">DoctrineExtensions</a> on which he added a feature called "Personal Translations" that simplifies the whole translation management process.
 
@@ -281,9 +280,7 @@ You wanna see the result ? Well, you are free to propose a gist in the comment s
 
 **EDIT **The Bundle has been updated and now has a splitted view and tabbed view per locale.
 
-<div style="text-align:center;">
-{{< figure src="images/posts/2012/translations.png"  alt="translations 285x300 How to manage translations for your object using SonataAdminBundle" width="285" height="300">}}
-</div>
+![translations 285x300 How to manage translations for your object using SonataAdminBundle](content/images/blog/2012/translations.png)
 
 **So what does the bundle <a href="https://github.com/a2lix/TranslationFormBundle" target="_blank">TranslationFormBundle</a> ?**
 

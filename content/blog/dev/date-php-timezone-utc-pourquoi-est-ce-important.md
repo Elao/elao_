@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Mise au point sur les problématiques de timezone avec les dates PHP."
 
-thumbnail:          "images/posts/thumbnails/time.jpg"
-banner:             "images/posts/headers/time.jpg"
+thumbnail:          "content/images/blog/thumbnails/time.jpg"
+banner:             "content/images/blog/headers/time.jpg"
 tags:               ["Symfony", "PHP","Datetime", "Timezone"]
 categories:         ["Dev", "Symfony", "PHP"]
 

@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a retenu."
 
-thumbnail:          "images/posts/thumbnails/haphpybirthday.jpg"
-banner:             "images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "content/images/blog/thumbnails/haphpybirthday.jpg"
+banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
 categories:         ["conference"]
 
@@ -22,7 +22,7 @@ Lerdorf.
 Et pour cause ! Nous fêtons les 15 ans de l'association et les 20 ans du langage. Cerise sur le gâteau, nous fêtons
 également la sortie de PHP7, une version majeure déjà plébiscitée pour les gains en performance par rapport à PHP5.
 
-<img src="images/posts/2015/haphpybirthday.jpg" class="text-center">
+<img src="content/images/blog/2015/haphpybirthday.jpg" class="text-center">
 
 Point d'orgue de la keynote d'ouverture, diffusion en avant première mondiale de la vidéo
 ["Haphpy Birthday"](https://www.youtube.com/watch?v=tHlCsZf3nmA),

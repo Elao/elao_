@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l'occasion l'Afup et Clermont'ech ont à nouveau réuni la communauté open source PHP."
 
-thumbnail:          "images/posts/thumbnails/phptour-thumbnail.jpg"
-banner:             "images/posts/headers/phptour-2016.jpg"
+thumbnail:          "content/images/blog/thumbnails/phptour-thumbnail.jpg"
+banner:             "content/images/blog/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "conférence", "afup", "clermont'ech"]
 categories:         ["Actualité", "Web", "conference"]
 
@@ -19,7 +19,7 @@ Ces 23 et 24 mai derniers, l’équipe [Clermont'ech](http://clermontech.org/) e
 
 Destination :  Clermont-Ferrand
 
-{{< figure src="images/posts/2016/phptour.jpg" alt="Début de la conférence">}}
+![Début de la conférence](content/images/blog/2016/phptour.jpg)
 
 Cet évènement devenu un incontournable a proposé un cycle de conférences sur le thème de la **performance**.
 
@@ -62,14 +62,9 @@ La Team Elao (ThomasJ, BenjaminL, MaximeS, ArnaudB, XavierR, YvesH et LaurenceH)
 - ArnaudB - qui a relevé le défi de la sucette Afup
 - Afup - communication twitter - qui nous a gifisés
 
-<div class="row" style="text-align: center">
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        {{< figure src="images/posts/2016/phptour-arnaudb.jpg" alt="Arnaud & sa sucette Afup">}}
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-        {{< figure src="images/posts/2016/phptour-extra.gif" alt="\o/">}}
-    </div>
-</div>
+| Arnaud & sa sucette Afup | \o/ |
+| - | - |
+| ![Arnaud & sa sucette Afup](content/images/blog/2016/phptour-arnaudb.jpg) | ![\o/](content/images/blog/2016/phptour-extra.gif) |
 
 Quelques bémols qui n’ont pas entamé la bonne humeur :
 

@@ -5,7 +5,7 @@ lastModified: ~
 description: ''
 authors: ["cmozzati", "mcolin"] # author|authors (multiple acceptés)
 tags: [elao, team]
-thumbnail: images/posts/2021/itw-max.jpeg
+thumbnail: content/images/blog/2021/itw-max.jpeg
 tweetId: '1427551760139366403'
 ---
 
@@ -31,11 +31,11 @@ Quand je ne travaille pas, je code 😅 Paradoxalement coder me relaxe, hors du 
 
 J'ai également des "vrais" loisirs comme [la photographie](https://photo.maximecolin.fr/) que je pratique dès que je peux. Auparavant je faisais surtout du paysage, mais depuis quelques années je fais également un peu d'animalier et c'est vraiment très grisant de réussir à saisir les moments de vie d'animaux sauvages. J'aime également faire un peu de reportage et de photographie sociale de temps en temps. J'ai photographié des concerts, des mariages, des conférences, des portraits, bref, comme dans le code, je suis un peu touche à tout 😅. D'ailleurs deux autres de mes loisirs me permettent de prendre de belles photos, la randonnées que je pratique régulièrement les week-ends et les voyages en mode road trip et camping. L'Ecosse et l'Islande sont les deux destinations que j'ai préféré, tant pour la photo que pour les vacances et je rêve d'une croisière en voilier pour aller photographier des contrées nordiques.
 
-![Maxime Colin Photographe](images/posts/2021/interview/max-colin-photo.jpg)
+![Maxime Colin Photographe](content/images/blog/2021/interview/max-colin-photo.jpg)
 
 Je suis également un grand passionné de jeux vidéo auxquels je joue depuis mon plus jeune âge. J'aime beaucoup les FPS solo avec une réelle ambiance et une histoire intéressente (Prey, Dishonored, Metro, Dying Light, Deux Ex) et les jeux de rôles (Fallout, The Witcher, Skyrim) et les jeux de stratégie (Frostpunk, Heroes of Might and Magic). J'ai également eu une longue période WoW. Globalement je peux passer des heures dans n'importe quel jeu qui me propose d'explorer, ramasser des trucs, crafter et marcher lentement parce que mon inventaire est encombré.
 
-![Yo mama's so fat she can't even fast travel](images/posts/2021/interview/fast-travel.jpg)
+![Yo mama's so fat she can't even fast travel](content/images/blog/2021/interview/fast-travel.jpg)
 
 ## L'interview :fast-parrot:
 

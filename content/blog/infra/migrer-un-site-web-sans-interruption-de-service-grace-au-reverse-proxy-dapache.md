@@ -7,8 +7,8 @@ lastModified:       ~
 
 description:        "Migrer un site web sans interruption de service grâce au reverse proxy d'Apache."
 
-thumbnail:          "images/posts/thumbnails/pulp_starwars.png"
-banner:             "images/posts/headers/php_elao_code.jpg"
+thumbnail:          "content/images/blog/thumbnails/pulp_starwars.png"
+banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Apache","Linux","Trucs et astuces"]
 categories:         ["Infra", "Linux"]
 

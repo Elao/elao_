@@ -5,8 +5,7 @@ date:           "2018-02-27"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/back.jpg"
-header_img:     "images/posts/headers/back.jpg"
+thumbnail:      "content/images/blog/thumbnails/back.jpg"
 tags:           ["job", "web", "mobile", "lyon", "paris", "backend", "symfony", "PHP"]
 categories:     ["elao", "recrutement", "Symfony"]
 

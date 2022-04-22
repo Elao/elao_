@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "Présentation du pattern 'Decorator' dans le cadre d'une série consacrée aux Design Patterns"
 
-thumbnail:      "images/posts/thumbnails/decorator_pattern.jpg"
-banner:     "images/posts/headers/decorator_pattern.jpg"
+thumbnail:      "content/images/blog/thumbnails/decorator_pattern.jpg"
+banner:     "content/images/blog/headers/decorator_pattern.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
@@ -38,7 +38,7 @@ Noter que le terme `Wrapper` est un synonyme de `Decorator` (GoF).
 ## Diagramme du Design pattern `Decorator`
 
 <figure>
-    <img src="images/posts/design-pattern/structural-decorator.jpg" alt="Le Design Pattern 'Decorator'">
+    <img src="content/images/blog/design-pattern/structural-decorator.jpg" alt="Le Design Pattern 'Decorator'">
     <figcaption>
       <span class="figure__legend">Le Design Pattern 'Decorator'</span>
     </figcaption>

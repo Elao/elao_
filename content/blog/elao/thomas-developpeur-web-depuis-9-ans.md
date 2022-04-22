@@ -6,8 +6,8 @@ description: "Le tout premier cycliste d'Elao 🚲"
 authors: [cmozzati, tjarrand] # multiple acceptés
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team]
-thumbnail: images/posts/2022/itw-thomas/header.jpg
-banner: images/posts/2022/itw-thomas/header.jpg # Uniquement si différent de la minitature (thumbnail)
+thumbnail: content/images/blog/2022/itw-thomas/header.jpg
+banner: content/images/blog/2022/itw-thomas/header.jpg # Uniquement si différent de la minitature (thumbnail)
 credit: { name: 'Benjamin Lévèque', url: 'https://www.flickr.com/people/99511626@N04' } # Pour créditer la photo utilisée en miniature
 tweetId: '1488448460416299009'
 ---
@@ -62,13 +62,13 @@ Une V2 pour [Curvytron](http://curvytron.com) ? 🌝
 
 ### Thé ou Café ?
 
-![](images/posts/2022/itw-thomas/awake.jpeg)
+![](content/images/blog/2022/itw-thomas/awake.jpeg)
 
 Ça répond à la question ? 😅
 
 ### PHP ou JS ?
 
-![](images/posts/2022/itw-thomas/both.gif)
+![](content/images/blog/2022/itw-thomas/both.gif)
 
 Je code des deux côtés de la requête HTTP ! C'est au cœur de ce qui m'intéresse dans mon métier.
 

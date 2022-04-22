@@ -6,7 +6,7 @@ tableOfContent:     2
 
 description:        "Pour la première fois dans l'histoire d'Elao, nous avons fait notre teambuilding à distance."
 
-thumbnail:          images/posts/2021/teambuilding/workadventure.png
+thumbnail:          content/images/blog/2021/teambuilding/workadventure.png
 tags:               ["Team building", "Télétravail"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
@@ -36,7 +36,7 @@ Nous sommes en mai, il était donc plus que temps de se retrouver, même à dist
 Quand la date a été définie, nous avons demandé à l'équipe de garder 2 jours dans leur agenda, sans prévoir de call ni de rendez-vous client et si possible, de rester sur Lyon. Ça nous permettait d'être libre sur nos possibilités, d'envisager un rassemblement si la situation nous le permettait (spoiler alert : hélas, ça n'a pas été le cas).
 
 <figure>
-    <img src="images/posts/2021/teambuilding/savethedate.png">
+    <img src="content/images/blog/2021/teambuilding/savethedate.png">
     <figcaption>
       <span class="figure__legend">Oui, on a un emoji :moule:, on vous en parlera plus tard…</span>
     </figcaption>
@@ -46,7 +46,7 @@ Quand la date a été définie, nous avons demandé à l'équipe de garder 2 jou
 Même si nous avions déjà notre petite idée, l'équipe a été sondée de manière anonyme sur les sujets qu'elle aimerait voir aborder lors du séminaire. Ça permet de voir les redondances, les réelles préoccupations et de ne rien laisser sous le tapis.
 
 <figure>
-    <img src="images/posts/2021/teambuilding/form-sujets.png">
+    <img src="content/images/blog/2021/teambuilding/form-sujets.png">
     <figcaption>
       <span class="figure__legend">Le formulaire envoyé à l'ensemble de l'équipe</span>
     </figcaption>
@@ -56,13 +56,13 @@ Même si nous avions déjà notre petite idée, l'équipe a été sondée de man
 
 Soyons réalistes, personne n'a envie d'enchaîner des réunions Zoom à écouter des présentations descendantes des chiffres de l'année. C'est le meilleur moyen pour finir comme ça 👇
 
-![](images/posts/2021/teambuilding/dodo.gif)
+![](content/images/blog/2021/teambuilding/dodo.gif)
 
 Bon, je vous avoue qu'on en a quand même fait une, de présentation descendante. Fort heureusement, elle était attendue et semi-interactive, avec des questions à la volée, sans attendre une phase finale de Q&A. Ça a permis de rendre l'ensemble plus vivant. 
 
 **Petite astuce :** pour réveiller les esprits, sans en abuser, ça peut être amusant de commencer par un ice-breaker. Pour l'un des ateliers, tout le monde est allé chercher une peluche de son appart. Ça a le mérite de faire ouvrir sa cam à tout le monde et de faire sourire. Surtout quand on a un très très gros panda (argh, j'aurais tellement dû faire une capture d'écran de ce moment).
 Ça permet d'éviter ça :
-![](images/posts/2021/teambuilding/jitsi.png)
+![](content/images/blog/2021/teambuilding/jitsi.png)
 
 
 ### Privilégier des ateliers en groupe
@@ -77,24 +77,24 @@ De notre côté, nous avons fait 2 ateliers, l'un individuel avec une mise en co
 
 Un premier atelier que je qualifierais d'« introspectif », dans le sens où il s'agit de faire un petit test qui permet de mieux se connaître et surtout de mieux connaître les autres. En quelques questions, le test permet de savoir quel élément de notre personnalité est prépondérant entre ces 4 : Rationnel, Méthodique, Créatif·ve, Affectif·ve. 
 
-![](images/posts/2021/teambuilding/monmoi.png)
+![](content/images/blog/2021/teambuilding/monmoi.png)
 
 L'intérêt de ce test est de comprendre pourquoi chacun·e a une perception différente d'une même situation, selon son prisme propre et sa sensibilité. 
 
 À la fin, on a partagé nos petits diagrammes et nous nous sommes placés sur un tableau blanc numérique préparé au préalable. Un atelier qui aurait mérité un petit débrief informel autour d'une bière ou d'un Perrier citron. 
 
 <figure>
-    <img src="images/posts/2021/teambuilding/hbdi.png">
+    <img src="content/images/blog/2021/teambuilding/hbdi.png">
     <figcaption>
       <span class="figure__legend">Les résultats de notre test HBDI. En voilà une équipe très complémentaire !</span>
     </figcaption>
 </figure>
 
 Pour la petite histoire, la majorité de notre équipe de techs ressemblait à ça :
-![](images/posts/2021/teambuilding/hbdi-ingenieur.png)
+![](content/images/blog/2021/teambuilding/hbdi-ingenieur.png)
 
 Alors que Xavier, fondateur d'Elao, était plus proche de celui-là :
-![](images/posts/2021/teambuilding/hbdi-entrepreneur.png)
+![](content/images/blog/2021/teambuilding/hbdi-entrepreneur.png)
 
 Bref, tout ceci semble bien cohérent !
 
@@ -105,9 +105,9 @@ Le second atelier faisait l'objet d'un brainstorming en groupe afin de trouver d
 Plein de très bonnes idées en sont ressorties, que vous ne manquerez pas de voir prochainement prendre vie (enfin, on l'espère !).
 
 Voici une petite sélection de présentations d'idées, à vous de deviner de quoi il s'agit…
-![](images/posts/2021/teambuilding/solution3.jpg)
-![](images/posts/2021/teambuilding/solution2.jpg)
-![](images/posts/2021/teambuilding/solution5.jpg)
+![](content/images/blog/2021/teambuilding/solution3.jpg)
+![](content/images/blog/2021/teambuilding/solution2.jpg)
+![](content/images/blog/2021/teambuilding/solution5.jpg)
 
 
 #### Troisième atelier : séance de Q&A
@@ -139,28 +139,28 @@ Les moments informels sont aussi importants que les ateliers. Il existe pléthor
 
 Nous, on a surtout joué à Gartic Phone, voici quelques souvenirs…
 
-<video loop muted playsinline controls poster="images/posts/2021/teambuilding/canard-banane.jpeg">
-    <source type="video/webm" src="images/posts/2021/teambuilding/canard-banane.webm">
-    <source type="video/mp4" src="images/posts/2021/teambuilding/canard-banane.mp4">
-    <img src="images/posts/2021/teambuilding/canard-banane.gif"/>
+<video loop muted playsinline controls poster="content/images/blog/2021/teambuilding/canard-banane.jpeg">
+    <source type="video/webm" src="resources/blog/2021/teambuilding/canard-banane.webm">
+    <source type="video/mp4" src="resources/blog/2021/teambuilding/canard-banane.mp4">
+    <img src="content/images/blog/2021/teambuilding/canard-banane.gif"/>
 </video>
 
-<video loop muted playsinline controls poster="images/posts/2021/teambuilding/ananas.jpeg">
-    <source type="video/webm" src="images/posts/2021/teambuilding/ananas.webm">
-    <source type="video/mp4" src="images/posts/2021/teambuilding/ananas.mp4">
-    <img src="images/posts/2021/teambuilding/ananas.gif"/>
+<video loop muted playsinline controls poster="content/images/blog/2021/teambuilding/ananas.jpeg">
+    <source type="video/webm" src="resources/blog/2021/teambuilding/ananas.webm">
+    <source type="video/mp4" src="resources/blog/2021/teambuilding/ananas.mp4">
+    <img src="content/images/blog/2021/teambuilding/ananas.gif"/>
 </video>
 
-<video loop muted playsinline controls poster="images/posts/2021/teambuilding/chataigne.jpeg">
-    <source type="video/webm" src="images/posts/2021/teambuilding/chataigne.webm">
-    <source type="video/mp4" src="images/posts/2021/teambuilding/chataigne.mp4">
-    <img src="images/posts/2021/teambuilding/chataigne.gif"/>
+<video loop muted playsinline controls poster="content/images/blog/2021/teambuilding/chataigne.jpeg">
+    <source type="video/webm" src="resources/blog/2021/teambuilding/chataigne.webm">
+    <source type="video/mp4" src="resources/blog/2021/teambuilding/chataigne.mp4">
+    <img src="content/images/blog/2021/teambuilding/chataigne.gif"/>
 </video>
 
-<video loop muted playsinline controls poster="images/posts/2021/teambuilding/cochon.jpeg">
-    <source type="video/webm" src="images/posts/2021/teambuilding/cochon.webm">
-    <source type="video/mp4" src="images/posts/2021/teambuilding/cochon.mp4">
-    <img src="images/posts/2021/teambuilding/cochon.gif"/>
+<video loop muted playsinline controls poster="content/images/blog/2021/teambuilding/cochon.jpeg">
+    <source type="video/webm" src="resources/blog/2021/teambuilding/cochon.webm">
+    <source type="video/mp4" src="resources/blog/2021/teambuilding/cochon.mp4">
+    <img src="content/images/blog/2021/teambuilding/cochon.gif"/>
 </video>
 
 ### Laisser mûrir et (espérer) se retrouver en extérieur

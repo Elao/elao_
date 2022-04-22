@@ -7,7 +7,7 @@ lastModified:       ~
 
 description:        "Comment bien préparer sa conférence ?"
 
-thumbnail:          "images/posts/thumbnails/yosemite.jpg"
+thumbnail:          "content/images/blog/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
 categories:         ["Actualité", "Communication", "conference"]
 
@@ -23,9 +23,7 @@ Vous avez du mal à <strong>accrocher l’attention de votre auditoire</strong> 
 
 ## Ce qu’il ne faut pas faire
 
-<div class="pull-left">
-{{< figure src="images/posts/2014/obama.jpg"  alt="Hors sujet n°1 - Comment bien préparer sa conférence ?" width="450" height="300">}}
-</div>
+![Hors sujet n°1 - Comment bien préparer sa conférence ?](content/images/blog/2014/obama.jpg)
 
 Arriver en mode YOLO. Quelques slides et votre grand pouvoir d’improvisation risquent de ne pas être suffisant pour les speakers débutants. Je vous conseille donc de vous <strong>préparer un minimum</strong> : commencer par écrire son texte, le faire évaluer par ses proches, et surtout <strong>répéter une bonne dizaine de fois sa présentation</strong> ! Un éventuel plan pourra aussi être utile pour s’assurer de la fluidité du déroulement de votre conférence.
 
@@ -39,9 +37,7 @@ Si possible, <strong>éteignez votre téléphone</strong>. Au pire, vous avez le
 
 ## Ce que je vous conseille de faire
 
-<div class="pull-left">
-{{< figure src="images/posts/2014/tom-300x300.jpg" alt="Tom 300x300 Hors sujet n°1 Comment bien préparer sa conférence ?" width="300" height="300">}}
-</div>
+![Tom 300x300 Hors sujet n°1 Comment bien préparer sa conférence ?](content/images/blog/2014/tom-300x300.jpg)
 
 <strong>Travaillez votre voix</strong>. Ça peut paraître anodin, mais c’est l’un des axes les plus importants. Les principaux points à regarder concernant votre voix sont les suivants :
 

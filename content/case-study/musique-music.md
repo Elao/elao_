@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react", "html", "css", "svg"]
 members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
-images: ["images/casestudies/headers/musique-music-banner.jpg"]
+images: ["content/images/casestudies/headers/musique-music-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -41,7 +41,7 @@ C'est avec Anne-Laure et Xavier qu'Antoine, CTO de Musique & Music, a mené tout
 Depuis la mise en production de ses applications, Musique & Music fait appel à Elao de façon régulière pour faire évoluer son produit en fonction des besoins remontés par ses équipes et ses utilisateurs. Parmi les quelques évolutions, nous avons automatisé un grand nombre d'imports et d'exports, aussi bien pour de l'interne que pour des services tiers.
 
 <figure>
-    <img src="images/casestudies/musique-music-homepage.jpg" alt="Accueil de l'application Musique & Music">
+    <img src="content/images/casestudies/musique-music-homepage.jpg" alt="Accueil de l'application Musique & Music">
     <figcaption>
       <span class="figure__legend">Page d'accueil</span>
     </figcaption>
@@ -56,7 +56,7 @@ Musique & Music met un point d'honneur à proposer les interfaces les plus fluid
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Musique & Music, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, couplé à une API GraphQL, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**.
 
 <figure>
-    <img src="images/casestudies/musique-music-results.jpg" alt="La recherche Musique & Music">
+    <img src="content/images/casestudies/musique-music-results.jpg" alt="La recherche Musique & Music">
     <figcaption>
       <span class="figure__legend">La recherche Musique & Music</span>
     </figcaption>
@@ -71,7 +71,7 @@ Ainsi, toutes les pages sont servies avec leurs contenus et leurs méta-données
 L'équipe de Musique & Music utilise au quotidien l'espace administrateurs : les commerciaux ont un œil sur les nouveaux inscrits, les responsables de production ajoutent quotidiennement de nouvelles playlists et de nouveaux albums. **Il leur fallait un espace d'administration leur permettant d'effectuer toutes ces tâches.**
 
 <figure>
-    <img src="images/casestudies/musique-music-playlists.jpg" alt="Les playlists Musique & Music">
+    <img src="content/images/casestudies/musique-music-playlists.jpg" alt="Les playlists Musique & Music">
     <figcaption>
       <span class="figure__legend">Les playlists Musique & Music</span>
     </figcaption>

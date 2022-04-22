@@ -7,8 +7,8 @@ lang:               "en"
 
 description:        "Monitor your Symfony2 application via Stats.d and Graphite Part. 2"
 
-thumbnail:          "images/posts/thumbnails/rocket.jpg"
-banner:             "images/posts/headers/minions.jpg"
+thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
+banner:             "content/images/blog/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]
 categories:         ["Infra", "Monitoring"]
 
@@ -17,7 +17,7 @@ authors:            ["tbessoussa"]
 
 *This article is the last part of[ Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application ( 1/2 )](/en/infra/feedback-monitor-your-symfony2-application-via-stats-d-and-graphite/).*
 
-<img src="/en/images/posts/2012/users.png" alt="graphite" class="outside-left">
+<img src="content/images/blog/2012/users.png" alt="graphite" class="outside-left">
 Last week, we saw that [StatsDClientBundle](https://github.com/liuggio/StatsDClientBundle) provides great metrics for your application,. But what if I want to monitor my own things in my application ? During the last part of this tutorial, we will see **how to monitor our own application events**. I'll assume you did the first part of the tutorial.
 
 In my personnal application (named Seek Team), gamers can purchase a premium account in order to unlock additional features on the website.

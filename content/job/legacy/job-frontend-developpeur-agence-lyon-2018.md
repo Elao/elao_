@@ -5,8 +5,8 @@ date:           "2018-02-27"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/Chatfocus.jpg"
-header_img:     "images/posts/headers/Chatfocus.jpg"
+thumbnail:      "content/images/blog/thumbnails/Chatfocus.jpg"
+header_img:     "content/images/blog/thumbnails/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
 categories:     ["jobs", "recrutement"]
 

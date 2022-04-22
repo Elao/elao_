@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        ""
 
-thumbnail:          "images/posts/thumbnails/pre-blend-2017.jpg"
-banner:             "images/posts/headers/pre-blend-2017.jpg"
+thumbnail:          "content/images/blog/thumbnails/pre-blend-2017.jpg"
+banner:             "content/images/blog/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
 categories:         ["Actualité", "Web", "conference"]
 

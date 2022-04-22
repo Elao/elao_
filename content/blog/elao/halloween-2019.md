@@ -7,8 +7,8 @@ tableOfContent:     2
 
 description:        "Quelques idées pour rendre votre soirée d'Halloween un peu plus effrayante ou étrange ... 👻"
 
-thumbnail:          "images/posts/thumbnails/halloween-2019.jpg"
-banner:             "images/posts/headers/halloween-2019.jpg"
+thumbnail:          "content/images/blog/thumbnails/halloween-2019.jpg"
+banner:             "content/images/blog/headers/halloween-2019.jpg"
 tags:               ["Halloween", "cinema"]
 categories:         ["elao"]
 
@@ -21,7 +21,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Anne-Laure
 
-![](images/posts/2019/halloween/anne-laure.jpg)
+![](content/images/blog/2019/halloween/anne-laure.jpg)
 
 ### Films qui font plus ou moins peur :
 
@@ -39,7 +39,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Amélie
 
-![](images/posts/2019/halloween/amelie.jpg)
+![](content/images/blog/2019/halloween/amelie.jpg)
 
 ### Films pas assez connus / un peu expérimentaux / un peu weird :
 
@@ -56,7 +56,7 @@ Chez Elao, nous aimons deux choses : le cinéma et Halloween. Bien entendu, nous
 
 ## Thomas
 
-![](images/posts/2019/halloween/thomas.jpg)
+![](content/images/blog/2019/halloween/thomas.jpg)
 
 ###  "Horreur d'auteur"
 
@@ -80,7 +80,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Florian
 
-![](images/posts/2019/halloween/flo.jpg)
+![](content/images/blog/2019/halloween/flo.jpg)
 
 ### Les films dont ça fait 10 ans que je recherche désespérément le titre
 - __Dead end__, Jean-Baptiste Andrea (2003)
@@ -90,7 +90,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Guewen
 
-![](images/posts/2019/halloween/guewen.jpg)
+![](content/images/blog/2019/halloween/guewen.jpg)
 
 ### Les classiques
 
@@ -117,7 +117,7 @@ Si vous les avez loupé à l'époque ...
 
 ## Maxime
 
-![](images/posts/2019/halloween/maxime.jpg)
+![](content/images/blog/2019/halloween/maxime.jpg)
 
 Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pas (tros) peur mais quand même avec des fantômes, vampires, monstres et autres étrangetés dignes d'Halloween.
 
@@ -146,7 +146,7 @@ Je n'y connais rien en film d'horreur alors je vais mettre des films qui font pa
 
 ## Ogi (Maxime.S)
 
-![](images/posts/2019/halloween/ogi.jpg)
+![](content/images/blog/2019/halloween/ogi.jpg)
 
 Sans prétention aucune, surtout adepte de séries, voici ma liste pour une ambiance comfy Halloween.
 

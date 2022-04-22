@@ -1,6 +1,6 @@
-active: true 
+active: true
 
-name: Sabrina Ludovic de Lys 
+name: Sabrina Ludovic de Lys
 pseudo: Sabrina Ludovic de Lys
 position: Alternante en intégration
 integrationDate: 16-08-2021
@@ -9,11 +9,11 @@ website: ~
 twitter: ~
 github: sludovicdelys
 email: sabrina.ludovicdelys@elao.com
-avatar: images/members/avatars/sludovicdelys.jpg
+avatar: content/images/members/avatars/sludovicdelys.jpg
 
 emojis:
     - ☕️
     - 🎬
     - 🧘🏽‍♀️
     - 🪴
-    
+

@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Introduction aux principes de base de l'approvisionnement (ou provisoning) d'environnements de développement, d'exécution, de production ou encore de test"
 
-thumbnail:          "images/posts/thumbnails/puppet.jpg"
-banner:             "images/posts/headers/php_elao_code.jpg"
+thumbnail:          "content/images/blog/thumbnails/puppet.jpg"
+banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Ansible", "Linux", "Virtualisation"]
 categories:         ["Infra", "Virtualisation", "Provisioning", "Ansible"]
 

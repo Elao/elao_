@@ -7,8 +7,8 @@ lastModified:       ~
 description:        "Test Driven Development c'est bien mais comment commencer à en faire ?"
 tableOfContent:     2
 
-thumbnail:          "images/posts/thumbnails/tdd.jpg"
-banner:             "images/posts/headers/tdd.jpg"
+thumbnail:          "content/images/blog/thumbnails/tdd.jpg"
+banner:             "content/images/blog/headers/tdd.jpg"
 tags:               ["PHP", "Test", "TDD"]
 categories:         ["Dev", "PHP"]
 

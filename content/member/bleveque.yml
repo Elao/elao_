@@ -1,5 +1,5 @@
 active: true
-anonymousTribePicture: true 
+anonymousTribePicture: true
 
 name: Benjamin Lévêque
 position: "Responsable Technique"
@@ -11,7 +11,7 @@ twitter: benji__07
 github: benji07
 linkedIn: ~
 email: benjamin.leveque@elao.com
-avatar: images/members/avatars/bleveque.jpg
+avatar: content/images/members/avatars/bleveque.jpg
 
 certifications:
     - symfony

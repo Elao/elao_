@@ -11,7 +11,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "bootstrap", "vue-js"]
 members: ["xavierr", "mbernard", "adefrance"]
-images: ["images/casestudies/headers/cirano-banner.jpg"]
+images: ["content/images/casestudies/headers/cirano-banner.jpg"]
 ---
 
 ## Taille de l’équipe 

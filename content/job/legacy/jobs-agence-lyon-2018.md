@@ -5,8 +5,8 @@ date:           "2018-02-28"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/stand-up.jpg"
-header_img:     "images/posts/headers/stand-up.jpg"
+thumbnail:      "content/images/blog/thumbnails/stand-up.jpg"
+header_img:     "content/images/blog/headers/stand-up.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]
 categories:     ["recrutement", "elao"]
 

@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Syntaxe des enregistrements SPF, cas d'utilisation et options de configuration."
 
-thumbnail:          "images/posts/thumbnails/mail_bottle.jpeg"
+thumbnail:          "content/images/blog/thumbnails/mail_bottle.jpeg"
 tags:               ["Linux", "Tips", "SPF"]
 categories:         ["Infra", "Linux"]
 

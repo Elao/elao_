@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Elao recherche des passionnés pour développer la tribu parisienne. A travers cette présentation d'Elao à Paris, nous espérons vous donner de bonnes raisons de nous rejoindre."
 
-thumbnail:          "images/posts/thumbnails/haphpybirthday.jpg"
-banner:             "images/posts/headers/elephpant_elao_family.jpg"
+thumbnail:          "content/images/blog/thumbnails/haphpybirthday.jpg"
+banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
 categories:         ["elao", "methodo"]
 
@@ -37,7 +37,7 @@ Cette connaissance du produit nous permet de mieux répondre à nos clients. L'�
 Notre socle technique backend est basé **depuis 2006** sur PHP et le framework **Symfony** sur lequel nous avons beaucoup investi. Pour le frontend, après être passé par EmberJS et Meteor, nous avons sélectionné dans l'écosystème JavaScript, **React / ReactNative**.
 
 <figure>
-    <img alt="Développeur Elao" src="images/posts/2016/tech-environment-1.jpg" />
+    <img alt="Développeur Elao" src="content/images/blog/2016/tech-environment-1.jpg" />
 </figure>
 
 Notre positionnement historique sur Symfony nous confronte à des projets techniquement complexes. Chaque projet est unique. Nous faisons des **applications web et mobile métier sur mesure**. Si nous estimons qu'une technologie peut être plus efficace pour un projet et que nous avons la capacité à monter en compétence dessus, nous n'hésiterons pas à le faire ensemble.
@@ -47,7 +47,7 @@ Cette appétence technique et notre recherche de l'efficacité nous ont très ra
 Nous sommes des **artisans passionnés** par ces écosystèmes qui avancent vite… très vite.
 
 <figure>
-    <img alt="Développeurs Elao" src="images/posts/2016/tech-environment-2.jpg" />
+    <img alt="Développeurs Elao" src="content/images/blog/2016/tech-environment-2.jpg" />
 </figure>
 
 ## Une culture de l’ingénierie logicielle
@@ -71,7 +71,7 @@ Nous sommes conscients que les technologies avancent rapidement. Nous souhaitons
 Nous appliquons aussi cette recette sur des projets internes. Notre jeu **[LazerDrive](http://www.lazerdrive.io/)** est né comme un **projet de R&D** sous le nom de **[Curvytron](http://www.curvytron.com)** avant de prendre son envol en tant que projet à part entière. Nous avons aussi **participé aux lancements de startups**.
 
 <figure>
-    <img alt="Présentation du jeu Lazerdrive au Blend Web Mix" src="images/posts/2016/lazerdrive-blend.jpg" />
+    <img alt="Présentation du jeu Lazerdrive au Blend Web Mix" src="content/images/blog/2016/lazerdrive-blend.jpg" />
     <figcaption>
       <span class="figure__legend">Présentation du jeu Lazerdrive au <a href="https://www.blendwebmix.com/">Blend Web Mix</a></span>
     </figcaption>
@@ -82,7 +82,7 @@ Vous pouvez nous croiser sur les **conférences techniques et agilité** où nou
 Nous rendons aussi au monde de l'Open Source ce qu'il nous apporte. Nous partageons du code comme nos librairies ([PhpEnums](https://github.com/Elao/PhpEnums), [ReactNativeRealmConnect](https://github.com/Elao/ReactNativeRealmConnect), [Github Agile Dashboard](https://github.com/Elao/github-agile-dashboard) ou nos **[rôles Ansible](https://github.com/Manala)**).
 
 <figure>
-    <img alt="Xavier Gorse au Blend Web Mix" src="images/posts/2016/xgorse-talk.jpg" />
+    <img alt="Xavier Gorse au Blend Web Mix" src="content/images/blog/2016/xgorse-talk.jpg" />
     <figcaption>
       <span class="figure__legend">Xavier Gorse au <a href="https://www.blendwebmix.com/">Blend Web Mix</a></span>
     </figcaption>

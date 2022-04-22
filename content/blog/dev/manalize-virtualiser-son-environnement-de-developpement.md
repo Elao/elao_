@@ -6,8 +6,8 @@ lastModified:       "2021-06-18"
 tableOfContent:     2
 
 description:        "Virtualiser son environnement de développement avec Manalize ✨"
-banner:             "images/posts/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
-thumbnail:          "images/posts/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
+banner:             "content/images/blog/headers/manalize-virtualiser-son-environnement-de-developpement.jpg"
+thumbnail:          "content/images/blog/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
 credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
 categories:         ["Dev"]
@@ -78,8 +78,8 @@ symfony new --full acme
 cd acme
 ```
 
-![](images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project.png)
-![](images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project_browser.png)
+![](content/images/blog/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project.png)
+![](content/images/blog/2019/manalize-virtualiser-son-environnement-de-developpement/empty_symfony_project_browser.png)
 
 Puis créer un environnement virtuel Manala pour cette application :
 
@@ -91,7 +91,7 @@ manalize setup .
 
 Puisque nous travaillons beaucoup avec Symfony chez élao, Manala propose une pré-configuration adaptée aux projets Symfony, embarquant entre autres PHP et Mysql. C'est ce que j'utiliserai ici :
 
-![](images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/setup.png)
+![](content/images/blog/2019/manalize-virtualiser-son-environnement-de-developpement/setup.png)
 
 _💡 Qu'est-ce qui est créé ?_
 
@@ -122,7 +122,7 @@ vagrant up
 
 Mon app est maintenant disponible à l'adresse suivante : http://acme.vm
 
-![](images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/symfony_in_vm.png)
+![](content/images/blog/2019/manalize-virtualiser-son-environnement-de-developpement/symfony_in_vm.png)
 
 Mission accomplie ! 🎉
 
@@ -140,7 +140,7 @@ vagrant ssh
 
 Une fois connecté, je suis dans le répertoire de mon application et peux accéder à la console Symfony :
 
-![](images/posts/2019/manalize-virtualiser-son-environnement-de-developpement/symfony_cli_in_vm.png)
+![](content/images/blog/2019/manalize-virtualiser-son-environnement-de-developpement/symfony_cli_in_vm.png)
 
 _💡 Notez le chemin du répertoire courant :_ je suis dans le système de fichiers de la VM, plus sur ma machine !
 

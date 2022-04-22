@@ -7,8 +7,8 @@ tableOfContent:     2
 
 description:        "Chez Elao, nous mesurons désormais l'audience de nos propres sites grâce à Matomo. Retour d'expérience. "
 
-thumbnail:          "images/posts/thumbnails/matomo.jpg"
-banner:             "images/posts/headers/matomo.jpg"
+thumbnail:          "content/images/blog/thumbnails/matomo.jpg"
+banner:             "content/images/blog/headers/matomo.jpg"
 tags:               ["Seo", "RGPD", "Matomo"]
 categories:         ["Dev", "Web"]
 
@@ -25,7 +25,7 @@ Tout comme Google Analytics, Matomo permet de mieux comprendre la façon dont le
 - Toutes les données collectées sont stockées sur votre serveur et sont soumises à votre contrôle. Ainsi, **les informations de suivi de chaque visiteur ne sont pas partagées avec des tiers** contrairement à Google Analytics;
 - Matomo peut être utilisé pour tous vos sites web, extranet et intranet.
 
-![Matomo](images/posts/2019/matomo/logo-matomo.jpg)
+![Matomo](content/images/blog/2019/matomo/logo-matomo.jpg)
 
 ## De quoi aurez-vous besoin pour installer Matomo ?
 
@@ -47,7 +47,7 @@ Faites vos choix :
 
 Matomo indique quelques conseils pour [optimiser son infrastructure](https://matomo.org/docs/optimize/) pour les sites à très fort trafic / volumétrie. Bref, cette solution semble s'appliquer à toutes sortes de besoins.
 
-![Installation de Matomo](images/posts/2019/matomo/install-matomo.png)
+![Installation de Matomo](content/images/blog/2019/matomo/install-matomo.png)
 
 
 
@@ -90,7 +90,7 @@ Les réglages possibles concernent :
 
 Pour les habitués de Google Analytics, le passage à une nouvelle ergonomie n'est pas évidente. En comparant deux périodes sur l'année, nous avons déjà pu nous assurer qu'aucun visiteur n'est laissé au bord de la route : les données semblent cohérentes.
 
-![Evolution de traffic](images/posts/2019/matomo/Evolution-trafic-matomo.png)
+![Evolution de traffic](content/images/blog/2019/matomo/Evolution-trafic-matomo.png)
 
 On retrouve les fondamentaux :
 
@@ -100,7 +100,7 @@ On retrouve les fondamentaux :
 - **Les informations concernant le comportement des visiteurs** : les pages d'entrées, de sorties, etc.
 - **La mise en place d'objectifs** et les informations qui en résultent.
 
-![Canaux d'acquisition](images/posts/2019/matomo/canaux-matomo.png)
+![Canaux d'acquisition](content/images/blog/2019/matomo/canaux-matomo.png)
 
 On peut noter quelques fonctionnalités remarquables de Matomo  :
 
@@ -117,7 +117,7 @@ A noter :
 
 - Matomo propose depuis peu un [Tag Manager](https://matomo.org/docs/tag-manager/), qui permet de mettre en place un plan de marquage, d'ajouter des scripts de tracking ou encore des liens d'affiliation, par exemple, depuis la même interface.
 
-![Fonctionnalités de Matomo](images/posts/2019/matomo/features-analytics.png)
+![Fonctionnalités de Matomo](content/images/blog/2019/matomo/features-analytics.png)
 
 ## Fonctionnalités payantes
 

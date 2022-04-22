@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "La quinzième édition de la Nuit Du Hack (#NDHXV) s'est tenue le Samedi 24 Juin 2017 en région parisienne."
 
-thumbnail:          "images/posts/thumbnails/ndhxv.png"
-banner:             "images/posts/headers/ndhxv.jpg"
+thumbnail:          "content/images/blog/thumbnails/ndhxv.png"
+banner:             "content/images/blog/headers/ndhxv.jpg"
 tags:               ["SysAdmin", "Sécurité", "Conférence", "Hacking"]
 categories:         ["conference"]
 authors:            ["gfaivre"]
@@ -28,7 +28,7 @@ La convention s'étend sur près de 6000 m2 pour environ 2000 participants ce qu
 Divisé en plusieurs « zones », l'évènement offre la possibilité à chacun de découvrir l'ensemble des activités qui gravitent autour du milieu du hacking.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/map.png" alt="Carte de la conférence">
+    <img src="content/images/blog/2017/ndhxv/map.png" alt="Carte de la conférence">
     <figcaption>
       <span class="figure__legend">Carte de la conférence</span>
     </figcaption>
@@ -54,7 +54,7 @@ On sent également la professionalisation du métier et l'intérêt, plus qu'ide
 J'ai malheureusement raté la keynote de Guillaume aka [free\_man\_](https://twitter.com/free_man_), trop occupé à échanger avec l'ami Korben sur son projet « [Yes we hack](https://yeswehack.com) », mais j'ai réussi à suivre le reste des conférences malgré la diversité des ateliers, des exposants, des challenges et des personnes. Mention spéciale à Gael aka [RatZillaS](https://twitter.com/RatZillaS) qui a fait le show avec ses Tesla et [Virtualabs](https://twitter.com/virtualabs), drôle, utile et très pédagogue.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/bbrown.jpg" alt="Conférence de Benjamin Brown">
+    <img src="content/images/blog/2017/ndhxv/bbrown.jpg" alt="Conférence de Benjamin Brown">
     <figcaption>
       <span class="figure__legend">Benjamin Brown</span>
     </figcaption>
@@ -69,7 +69,7 @@ Beaucoup de conférences plus ou moins techniques s'enchainent ensuite. Parmi el
 Présentation pleine d'entrain et d'humour qui fait un tour rapide de tout ce qu'il est possible de « hacker » chez soi, la télécommande, la clé média verrouillée de son FAI préféré, d'anciens objets électroniques jugés obsolètes mais qui peuvent trouver une seconde vie voire d'autre utilité au prix d'un petit effort de « reverse engineering » et de re-programmation.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/virtualabs.jpg" alt="Conférence de Damien CAUQUIL">
+    <img src="content/images/blog/2017/ndhxv/virtualabs.jpg" alt="Conférence de Damien CAUQUIL">
     <figcaption>
       <span class="figure__legend">Make hardware great again !</span>
       <span class="figure__credits">Damien CAUQUIL aka <a href="https://twitter.com/virtualabs">Virtualabs</a></span>
@@ -81,7 +81,7 @@ Présentation pleine d'entrain et d'humour qui fait un tour rapide de tout ce qu
 Point intéressant sur le fonctionnement du système de fichier NTFS, la façon dont il stocke les données et surtout comment exploiter sa structure de stockage pour corrompre, récupérer et/ou crypter les données présentes sur le disque. C'est à la fois surprenant et intéressant de voir que même un système de fichier dont la première version remonte à près de 25 ans est toujours exploitable et faillible (souvent pour des raisons de rétro compatibilité). On y apprend notamment comment certains « malwares » s'y prennent pour corrompre les données.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/ntfs.jpg" alt="NTFS, Forensics, malwares and vulnerabilities">
+    <img src="content/images/blog/2017/ndhxv/ntfs.jpg" alt="NTFS, Forensics, malwares and vulnerabilities">
     <figcaption>
       <span class="figure__legend">NTFS, Forensics, malwares and vulnerabilities</span>
       <span class="figure__credits">Stéfan LE BERRE aka <a href="https://twitter.com/heurs">HEURS</a></span>
@@ -94,7 +94,7 @@ Avocat de l'EFF et spécialiste de la vie privée et des problèmes de libertés
 Amateurs de Minority Report bienvenus ;)
 
 <figure>
-    <img src="images/posts/2017/ndhxv/jlynch.jpg" alt="The new sheriff in town is a machine">
+    <img src="content/images/blog/2017/ndhxv/jlynch.jpg" alt="The new sheriff in town is a machine">
     <figcaption>
       <span class="figure__legend">The new sheriff in town is a machine</span>
       <span class="figure__credits"><a href="https://twitter.com/lynch_jen">Jennifer LYNCH</a></span>
@@ -107,7 +107,7 @@ Conférence d'assez haute volée technique, elle a pour but de présenter les di
 L'exploitation présentée permettant de désactiver complètement les filtres des antivirus.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/howtofool.jpg" alt="How to fool antivirus software?">
+    <img src="content/images/blog/2017/ndhxv/howtofool.jpg" alt="How to fool antivirus software?">
     <figcaption>
       <span class="figure__legend">How to fool antivirus software?</span>
       <span class="figure__credits">Baptiste DAVID</span>
@@ -124,7 +124,7 @@ A noter également la visite du secrétaire d'État au numérique Mounir Mahjoub
 Énormément d'efforts sont consentis dans le recrutement chacun essayant de « draguer » au mieux et ce, sur beaucoup de domaines différents. Autant vous dire que l'on est pas en reste en termes de goodies ;)
 
 <figure>
-    <img src="images/posts/2017/ndhxv/goodies.jpg" alt="Goodies NDH">
+    <img src="content/images/blog/2017/ndhxv/goodies.jpg" alt="Goodies NDH">
     <figcaption>
       <span class="figure__legend">Goodies NDH</span>
     </figcaption>
@@ -144,7 +144,7 @@ Oui à la NDH les enfants ne sont pas oubliés, il est donc possible pour eux de
 Et enfin l'électrolab qui proposait également un stand en salle de conférence avec plein de matériel électronique à acheter. Les kids auront eu l'occasion de se faire les dents sur les bases de l'électronique, la conception de circuits, de badges...
 
 <figure>
-    <img src="images/posts/2017/ndhxv/ndh_kids.jpg" alt="NDH Kids">
+    <img src="content/images/blog/2017/ndhxv/ndh_kids.jpg" alt="NDH Kids">
     <figcaption>
       <span class="figure__legend">NDH Kids</span>
     </figcaption>
@@ -163,7 +163,7 @@ Divers et variés les workshops permettent de s'initier tranquillement (de 20h �
 La WarGame est un concours ouvert à tous, où chacun peut essayer de résoudre différents « challenges », chaque challenge rapportant un certain nombre de points permettant de progresser au classement général de l'épreuve.
 
 <figure>
-    <img src="images/posts/2017/ndhxv/wargame.jpg" alt="Les participants à la WarGame">
+    <img src="content/images/blog/2017/ndhxv/wargame.jpg" alt="Les participants à la WarGame">
     <figcaption>
       <span class="figure__legend">Les participants à la WarGame</span>
     </figcaption>

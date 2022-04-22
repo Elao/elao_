@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Rapide présentation d'une fonctionnalité intéressante des distributions Proxmox qui permet de faire du clustering avec deux ou plusieures machines physiques."
 
-thumbnail:          "images/posts/thumbnails/matryoshka.jpg"
+thumbnail:          "content/images/blog/thumbnails/matryoshka.jpg"
 tags:               ["proxmox", "openvz", "cluster"]
 categories:         ["Infra", "Proxmox", "Cluster"]
 

@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "Nginx fonctionne avec une notion de contexte autorisant certaines instructions de configuration. Nous évoquons dans cet article comment Nginx traite et organise ces différents blocs."
 
-thumbnail:      "images/posts/thumbnails/geek_love.jpg"
-banner:     "images/posts/headers/stickers.jpg"
+thumbnail:      "content/images/blog/thumbnails/geek_love.jpg"
+banner:     "content/images/blog/headers/stickers.jpg"
 tags:           ["infra", "nginx", "linux"]
 categories:     ["infra", "nginx"]
 

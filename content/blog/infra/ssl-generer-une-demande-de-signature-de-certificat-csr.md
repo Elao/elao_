@@ -7,8 +7,8 @@ lastModified:       ~
 
 description:        "Comment générer une demande de signature d'un certificat SSL (CSR) à destination d'une autorité de certification."
 
-thumbnail:          "images/posts/thumbnails/crypto.jpg"
-banner:             "images/posts/headers/elao_babyfoot.jpg"
+thumbnail:          "content/images/blog/thumbnails/crypto.jpg"
+banner:             "content/images/blog/headers/elao_babyfoot.jpg"
 tags:               ["Infra", "Linux", "SSL", "Certicats", "Sécurité"]
 categories:         ["Infra", "Sécurité", "Linux"]
 

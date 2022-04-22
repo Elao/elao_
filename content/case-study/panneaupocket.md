@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react-native"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "cmeiller", "xgorse"]
-images: ["images/casestudies/headers/panneaupocket-banner.jpg"]
+images: ["content/images/casestudies/headers/panneaupocket-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -55,7 +55,7 @@ PanneauPocket a depuis le début une volonté réelle de simplification de ses i
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit PanneauPocket, l'équipe technique d'Elao a réalisé les applications web avec Symfony et l'intégration a été réalisée avec Bootstrap dans une logique de MVP.
 
 <figure>
-    <img src="images/casestudies/panneaupocket-adminmairie.png" alt="Application de gestion de panneaux d'informations">
+    <img src="content/images/casestudies/panneaupocket-adminmairie.png" alt="Application de gestion de panneaux d'informations">
     <figcaption>
       <span class="figure__legend">L'interface de gestion de panneaux côté client</span>
     </figcaption>
@@ -72,7 +72,7 @@ Par volonté d'être le plus simple possible à utiliser, l'utilisateur cherche 
 Le partage de panneaux étant aussi un élément central de visibilité des informations, PanneauPocket a souhaité l'intégrer dès les premières versions de son application. 
 
 <figure>
-    <img src="images/casestudies/panneaupocket-mobile.png" alt="Application mobile de visualisation de panneaux">
+    <img src="content/images/casestudies/panneaupocket-mobile.png" alt="Application mobile de visualisation de panneaux">
     <figcaption>
       <span class="figure__legend">L'application mobile</span>
     </figcaption>
@@ -92,7 +92,7 @@ Parmi les évolutions récentes, PanneauPocket a souhaité proposer un site inte
 
 
 <figure>
-    <img src="images/casestudies/panneaupocket-web.png" alt="Application web de visualisation de panneaux">
+    <img src="content/images/casestudies/panneaupocket-web.png" alt="Application web de visualisation de panneaux">
     <figcaption>
       <span class="figure__legend">L'application web</span>
     </figcaption>
@@ -105,7 +105,7 @@ L'équipe PanneauPocket ayant un besoin quotidien d'administration (ajout / modi
 
 
 <figure>
-    <img src="images/casestudies/panneaupocket-admin.png" alt="Interface d'administration">
+    <img src="content/images/casestudies/panneaupocket-admin.png" alt="Interface d'administration">
     <figcaption>
       <span class="figure__legend">L'interface d'administration de PanneauPocket</span>
     </figcaption>

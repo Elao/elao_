@@ -11,56 +11,91 @@ Either:
 
 ## Setup
 
+### Local install
+
+For a local install, simply install the dependencies with:
+
+```shell
+make install
+```
+
+### Docker
+
 If you want to use the Docker stack, setup the project using:
 
-    make up
+```shell
+make up
+```
 
 Then, log into the container using
 
-    make sh
+```shell
+make sh
+```
 
 And install the dependencies with
 
-    make install
+```shell
+make install
+```
 
-(for a local installation, simply run `make install`).
+## Commands
 
-## Contributing
+When using Docker, use
 
-When Docker, use
-    
-    make sh
+```shell
+make sh
+```
 
 to log into the container before running the next commands.
 
-If you use a local install, next commands can be used, but you can also start
-the whole application using a single command:
+### Start the server
 
-    make start
+#### Local Install
 
-## Start the server
+If you use a local install & Symfony CLI, you can use:
 
-    make up
-
-The site is now available at: http://localhost:8000
-
-Alternatively, if you use a local install & Symfony CLI, you can use:
-
-    make serve
+```shell
+make serve
+```
 
 The Symfony CLI exposes you the URL at which the site is available.
 
-## Build assets
+#### Using Docker
 
-    make build
+When using a Docker install, serve the application using:
 
-### Start Webpack dev-server
+```shell
+make up
+```
 
-To build assets for development purposes, with HMR (hot reloading) enabled, run:
+The site is now available at: http://localhost:8000, but you need to build or serve the assets (see following sections)
 
-    make dev
+### Build assets
 
-## Writing an article
+Build the assets once using:
+
+```shell
+make build.assets
+```
+
+For development purposes, **on a Docker install**, use a Webpack dev-server using:
+
+```shell
+make serve.assets
+```
+
+**When using a local install, `make serve` is enough to serve both PHP app and assets.**
+
+## Contributing
+
+### Writing an article
+
+You can generate a new article using:
+
+```shell
+make article
+```
 
 Please, follow the [guidelines](https://elao.github.io/elao_/blog/styleguide/example/).
 

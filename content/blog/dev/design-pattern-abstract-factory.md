@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Abstract Factory"
 
-thumbnail:      "images/posts/thumbnails/schema.jpg"
-banner:     "images/posts/headers/header_schema.jpg"
+thumbnail:      "content/images/blog/thumbnails/schema.jpg"
+banner:     "content/images/blog/headers/header_schema.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
@@ -21,13 +21,13 @@ Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui, le p
     <tr>
         <td>
             <figure>
-                <img src="images/posts/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine" />
+                <img src="content/images/blog/design-pattern/img/ingals-family.jpeg" alt="Une gentille famille américaine" />
                 <figcaption style="text-align: center;font-style: italic;">Une gentille famille américaine</figcaption>
             </figure>
         </td>
         <td>
             <figure>
-                <img src="images/posts/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine"/>
+                <img src="content/images/blog/design-pattern/img/chainsaw-family.jpeg" alt="Une famille américaine"/>
                 <figcaption style="text-align: center;font-style: italic;">Une <strike>gentille</strike> famille américaine</figcaption>
             </figure>
         </td>
@@ -52,9 +52,7 @@ En résumé, le pattern `Abstract Factory` va nous permettre d'instancier des fa
 
 ## Schéma du design pattern Abstract Factory
 
-<figure>
-    <img class="text-center" src="images/posts/design-pattern/creation-abstract-factory.png" alt="Le Design Pattern 'Abstract Factory'" />
-</figure>
+![Le Design Pattern 'Abstract Factory'](content/images/blog/design-pattern/creation-abstract-factory.png)
 
 Ne vous laissez pas impressionner par la densité du schéma et le nombre de participants. Le pattern n'a rien d'insurmontable et peut s'avérer utile dans de nombreuses situations.
 

@@ -12,7 +12,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 terms: ["symfony"]
 members: ["mcolin", "tjarrand"]
-images: ["images/etudes-de-cas/ems_mockup1.png"]
+images: ["content/images/etudes-de-cas/ems_mockup1.png"]
 enabled: false
 ---
 

@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Comment gérer une authentification HTTP basique avec HA Proxy, définir des utilisateurs, des groupes et le type d'authentification souhaitée."
 
-thumbnail:          "images/posts/thumbnails/lock.png"
+thumbnail:          "content/images/blog/thumbnails/lock.png"
 tags:               ["Infra", "HA Proxy", "Linux", "Network"]
 categories:         ["Infra", "HA Proxy", "Linux"]
 

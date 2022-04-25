@@ -46,7 +46,7 @@ Systématiser une checklist personnalisée dans le modèle de vos spécification
 
 Le "monkey testing" c'est s'amuser à rentrer n'importe quoi dans les différents champs d'une application pour tenter de trouver les failles du système. Il n'y a pas de règle, juste votre créativité ! 
 
-![](images/terms/monkeytesting.gif)
+![Monkey testing](content/images/terms/monkeytesting.gif)
 
 ## Les limites de la recette 
 

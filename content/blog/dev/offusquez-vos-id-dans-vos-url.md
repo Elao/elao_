@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Découverte d'alternatives aux ID auto-incrémentés dans les urls et leur mise en place dans le framework Symfony."
 
-thumbnail:          "images/posts/thumbnails/obfuscation.jpg"
-banner:             "images/posts/headers/obfuscation.jpg"
+thumbnail:          "content/images/blog/thumbnails/obfuscation.jpg"
+banner:             "content/images/blog/headers/obfuscation.jpg"
 tags:               ["Securite","PHP","Symfony","Framework"]
 categories:         ["Dev", "Symfony"]
 

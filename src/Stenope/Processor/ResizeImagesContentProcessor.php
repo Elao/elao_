@@ -8,7 +8,8 @@ use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
 use Stenope\Bundle\Behaviour\HtmlCrawlerManagerInterface;
 use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
-use Symfony\Component\Mime\MimeTypes;
+use Stenope\Bundle\Provider\Factory\LocalFilesystemProviderFactory;
+use Symfony\Component\Filesystem\Path;
 
 /**
  * Provide resized and optimized images, for retina devices as well, inside a specific content.
@@ -21,21 +22,23 @@ class ResizeImagesContentProcessor implements ProcessorInterface
     private string $type;
     private string $preset;
     private string $property;
-    private MimeTypes $mimeTypes;
+
+    private string $projectDir;
 
     public function __construct(
         ResizedUrlGenerator $resizedUrlGenerator,
         HtmlCrawlerManagerInterface $crawlers,
+        string $projectDir,
         string $type,
         string $preset,
         string $property = 'content'
     ) {
         $this->resizedUrlGenerator = $resizedUrlGenerator;
         $this->crawlers = $crawlers;
+        $this->projectDir = $projectDir;
         $this->type = $type;
         $this->preset = $preset;
         $this->property = $property;
-        $this->mimeTypes = new MimeTypes();
     }
 
     public function __invoke(array &$data, Content $content): void
@@ -53,13 +56,18 @@ class ResizeImagesContentProcessor implements ProcessorInterface
 
         /** @var \DOMElement $element */
         foreach ($crawler->filter('img') as $element) {
-            $this->processImage($element);
+            $this->processImage($element, $content);
+        }
+
+        /** @var \DOMElement $element */
+        foreach ($crawler->filter('video') as $element) {
+            $this->processVideoPoster($element, $content);
         }
 
         $this->crawlers->save($content, $data, $this->property);
     }
 
-    private function processImage(\DOMElement $element): void
+    private function processImage(\DOMElement $element, Content $content): void
     {
         if (!$element->hasAttribute('src')) {
             return;
@@ -71,10 +79,7 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
-        // Ignore unsupported image formats
-        if (!$this->isSupported($source)) {
-            return;
-        }
+        $source = $this->normalizePath($source, $content);
 
         $dpr1 = $this->resizedUrlGenerator->withPreset($source, $this->preset);
         $dpr2 = $this->resizedUrlGenerator->withPreset($source, $this->preset, ['dpr' => 2]);
@@ -86,27 +91,62 @@ class ResizeImagesContentProcessor implements ProcessorInterface
         HTML);
     }
 
-    private function isSupported(string $url): bool
+    private function processVideoPoster(\DOMElement $element, Content $content): void
     {
-        try {
-            $mimeType = $this->mimeTypes->guessMimeType($url);
-        } catch (\InvalidArgumentException $exception) {
-            // File not found
-            return false;
+        if (!$element->hasAttribute('poster')) {
+            return;
         }
 
-        switch ($mimeType) {
-            case 'image/gif':
-            case 'image/svg+xml':
-                return false;
+        $source = $element->getAttribute('poster');
 
-            default:
-                return true;
+        if (!$this->isLocalImage($source)) {
+            return;
         }
+
+        $source = $this->normalizePath($source, $content);
+
+        $resized = $this->resizedUrlGenerator->withPreset($source, $this->preset);
+
+        $element->setAttribute('poster', $resized);
     }
 
     private function isLocalImage(string $url): bool
     {
         return !\is_string(parse_url($url, PHP_URL_HOST));
+    }
+
+    /**
+     * Normalizes the path to be relative to the Glide source directory, i.e project root dir.
+     */
+    private function normalizePath(string $imgPath, Content $content): string
+    {
+        // Ignore of not attempting to resolve an image path relative to current content
+        if (!$this->isRelativeImagePath($imgPath)) {
+            return $imgPath;
+        }
+
+        // Ignore if not using the file provider
+        if (!$this->isFilesystemProvider($content)) {
+            return $imgPath;
+        }
+
+        $currentContentPath = $content->getMetadata()['path'];
+
+        return Path::makeRelative(
+            // Resolve path relative to current content as absolute full path:
+            Path::makeAbsolute($imgPath, Path::getDirectory($currentContentPath)),
+            // And return it relative to the project dir:
+            $this->projectDir,
+        );
+    }
+
+    private function isRelativeImagePath(string $imgPath): bool
+    {
+        return str_starts_with($imgPath, './') || str_starts_with($imgPath, '../');
+    }
+
+    private function isFilesystemProvider(Content $content): bool
+    {
+        return LocalFilesystemProviderFactory::TYPE === ($content->getMetadata()['provider'] ?? null);
     }
 }

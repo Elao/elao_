@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Opération sur un fichier avec la commande find"
 
-thumbnail:          "images/posts/thumbnails/linux_fix.jpg"
+thumbnail:          "content/images/blog/thumbnails/linux_fix.jpg"
 tags:               ["Linux", "Tips"]
 categories:         ["Infra", "Linux"]
 

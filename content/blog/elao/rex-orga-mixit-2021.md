@@ -6,7 +6,7 @@ tableOfContent:     2
 
 description:        "Comme la plupart des conférences tech, cette année, l'édition de MiXiT 2021 a eu lieu à distance. Alors, comment ça s'est passé côté orga ?"
 
-thumbnail:          images/posts/2021/mixit/mixit-2021.png
+thumbnail:          content/images/blog/2021/mixit/mixit-2021.png
 tags:               ["conference", "mixit"]
 categories:         ["Elao"]
 authors:            ["aldeboissieu"]
@@ -43,7 +43,7 @@ Nous avons proposé diverses options pour nos speakers :
 - une conférence pré-enregistrée, et s'ils le souhaitent, nous aurions envoyé chez eux un·e professionnel·le pour la captation > cette option n'a pas été retenue par nos invité·e·s. Ceux qui ont souhaité pré-enregistrer leur conférence l'ont fait par leurs propres moyens et se sont ensuite rendus disponible pour les questions/réponses (merci à eux !). Pour le cas d'une conférencière qui a du partir à l'étranger plus vite que prévu, Agnès et elle ont enregistré une session de questions/réponses entre elles, avec des questions préparées par Agnès. 
 
 <figure>
-    <img src="images/posts/2021/mixit/conference-sinatou.png">
+    <img src="content/images/blog/2021/mixit/conference-sinatou.png">
     <figcaption>
       <span class="figure__legend">Le talk pré-enregistré de Sinatou Saka.</span>
     </figcaption>
@@ -56,7 +56,7 @@ Nous avons proposé diverses options pour nos speakers :
 Hop, la solution est vite acceptée par la team MiXiT, et nous voilà à proposer un espace virtuel aux participants et des stands aux sponsors et associations qui ont répondu à l'appel. 
 
 <figure>
-    <img src="images/posts/2021/mixit/wa-mixit.png">
+    <img src="content/images/blog/2021/mixit/wa-mixit.png">
     <figcaption>
       <span class="figure__legend">L'espace MiXiT dans WorkAdventure</span>
     </figcaption>
@@ -67,7 +67,7 @@ C'est peut-être le meilleur souvenir que j'ai de la conférence, car nous nous 
 Et puis surtout, la plus belle surprise de cette édition, ce sont les inventions très marrantes de Grégory, agiliste de profession, qui s'est révélé être un très bon comédien. Il nous a régalé avec un quizz très marrant qui porte sur l'histoire de MiXiT et sur de superbes vidéos d'intro. Je ne peux pas m'empêcher d'en partager ici ;
 
 <figure>
-    <img src="images/posts/2021/mixit/quizz-mixit2.jpg">
+    <img src="content/images/blog/2021/mixit/quizz-mixit2.jpg">
     <figcaption>
       <span class="figure__legend">Quiz MiXiT avec question (avec la réponse D)</span>
     </figcaption>
@@ -92,7 +92,7 @@ Vimeo nous inspire confiance, nous faisons des tests où notre "seul" problème 
 Le premier jour de conférence s'est déroulé avec un léger freeze de quelques minutes, magnifiquement rattrapé par Guillaume Pitron. Mais le jour suivant, le live a été interrompu de nombreuses et longues minutes, ce qui nous a amené à ouvrir une cellule de crise et à changer notre solution technique en plein milieu de la conférence, un scenario cauchemardesque comme vous pouvez l'imaginer. 
 
 <figure>
-    <img src="images/posts/2021/mixit/crazy.gif">
+    <img src="content/images/blog/2021/mixit/crazy.gif">
 </figure>
 
 ## La crise
@@ -103,7 +103,7 @@ Grâce à ça, nous basculons sur un outil open source Big Blue Button, héberg�
 Aucun problème pour mettre à jour le site et faire en sorte que ce soit transparent pour nos participants (merci CleverCloud pour l'hébergement et le déploiement zero downtime !).
 
 <figure>
-    <img src="images/posts/2021/mixit/mixit-freeze.png">
+    <img src="content/images/blog/2021/mixit/mixit-freeze.png">
     <figcaption>
       <span class="figure__legend">😬😬😬🥶</span>
     </figcaption>
@@ -125,7 +125,7 @@ De cette édition, je retiendrai surtout la programmation vraiment exceptionnell
 Cheers, et à l'année prochaine ! 🙌
 
 <figure>
-    <img src="images/posts/2021/mixit/mixit-fun.png">
+    <img src="content/images/blog/2021/mixit/mixit-fun.png">
     <figcaption>
       <span class="figure__legend">MiXiT, dans le monde d'avant.</span>
     </figcaption>

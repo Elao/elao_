@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Installation et utilisation de Behat 3 pour vos tests fonctionnels Symfony2"
 
-thumbnail:          "images/posts/thumbnails/behat.png"
-banner:             "images/posts/headers/behat_cover.jpg"
+thumbnail:          "content/images/blog/thumbnails/behat.png"
+banner:             "content/images/blog/headers/behat_cover.jpg"
 tags:               ["Behat","Symfony","Mink","Alice"]
 categories:         ["Dev", Symfony", "PHP"]
 

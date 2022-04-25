@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "L'écriture d'user stories n'est pas aussi simple qu'elle peut le paraître. Avec un minimum de guide, on peut s'améliorer rapidement."
 
-thumbnail:      "images/posts/thumbnails/50-quick.jpg"
-banner:     "images/posts/headers/elao_team_front.jpg"
+thumbnail:      "content/images/blog/thumbnails/50-quick.jpg"
+banner:     "content/images/blog/headers/elao_team_front.jpg"
 tags:           ["agile", "user stories", "specifications"]
 categories:     ["methodo"]
 

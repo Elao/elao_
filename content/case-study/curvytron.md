@@ -12,7 +12,7 @@ size: 2 mois
 services: ["Accompagnement", "Développement"]
 terms: ["nodejs", "javascript"]
 members: ["tjarrand"]
-images: ["images/casestudies/headers/curvytron-banner.jpg"]
+images: ["content/images/casestudies/headers/curvytron-banner.jpg"]
 ---
 
 ## Expertise développement

@@ -59,6 +59,7 @@ class GlideExtension extends Extension
             $config['cache_with_file_extensions'],
             $config['group_cache_in_folders'],
             $config['presets'],
+            $config['skipped_types'],
         );
 
         $publicCacheDir = (new Fs())->makePathRelative(
@@ -74,7 +75,8 @@ class GlideExtension extends Extension
         string $cache,
         bool $cacheWithExtensions,
         bool $groupCacheInFolders,
-        array $presets = []
+        array $presets = [],
+        array $skippedTypes = [],
     ): void {
         $container->register('glide_source', LocalFilesystemAdapter::class)->setArguments([$source]);
         $container->register('glide_cache', LocalFilesystemAdapter::class)->setArguments([$cache]);
@@ -90,6 +92,7 @@ class GlideExtension extends Extension
             'presets' => $presets,
             'cache_with_file_extensions' => $cacheWithExtensions,
             'group_cache_in_folders' => $groupCacheInFolders,
+            'skipped_types' => $skippedTypes,
         ])
         ->setPublic(true);
     }

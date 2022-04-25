@@ -7,8 +7,8 @@ modifieddate:       "2020-05-05"
 
 description:        "Guide d'intrégration de Vue.js dans une application Symfony"
 
-thumbnail:          "images/posts/thumbnails/vuejs.jpg"
-banner:             "images/posts/headers/vuejs.jpg"
+thumbnail:          "content/images/blog/thumbnails/vuejs.jpg"
+banner:             "content/images/blog/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Symfony"]
 categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 

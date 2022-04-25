@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react", "html", "css", "svg"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "xgorse"]
-images: ["images/casestudies/headers/tribu-banner.jpg"]
+images: ["content/images/casestudies/headers/tribu-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -56,7 +56,7 @@ Tribü avait besoin d'automatiser la remontée des données saisies par les tech
 Pour répondre à ces besoins et aux spécifications fonctionnelles du produit Tribü, l'équipe technique d'Elao a fait le choix d’utiliser React, un framework JavaScript, afin d'avoir une interface fluide, dynamique et surtout, **agréable à utiliser**. De plus, pour permettre la collaboration sur une même page, les données se rafraîchissent sans avoir besoin de recharger la page.
 
 <figure>
-    <img src="images/casestudies/tribu-saisie.png" alt="Application de saisie de tri de déchets">
+    <img src="content/images/casestudies/tribu-saisie.png" alt="Application de saisie de tri de déchets">
     <figcaption>
       <span class="figure__legend">L'interface de saisie côté technicien</span>
     </figcaption>
@@ -67,7 +67,7 @@ Pour répondre à ces besoins et aux spécifications fonctionnelles du produit T
 **L’un des points forts de Tribü est de proposer à ses clients de suivre la quantité de déchets jetés chaque mois, et surtout de connaître le résultat du tri.** Il est par exemple possible, pour le carton ou le papier, de connaître le pourcentage de “bon” tri, afin d’améliorer la démarche de recyclage au sein de l’entreprise. Par exemple, une cannette jetée dans un bac papier est considérée comme "mauvais tri" et sera remontée dans l'interface du client. Ce dernier peut alors se servir de toutes ces données pour sensibiliser ses collaborateurs.
 
 <figure>
-    <img src="images/casestudies/tribu-reporting.png" alt="Rapport de tri de déchets">
+    <img src="content/images/casestudies/tribu-reporting.png" alt="Rapport de tri de déchets">
     <figcaption>
       <span class="figure__legend">L'interface de reporting côté client</span>
     </figcaption>
@@ -78,7 +78,7 @@ Pour  l’intégration du design, nous avons opté pour SVG, un format de donné
 **En complément de l'interface, les entreprises utilisatrices de Tribü ont également la possibilité d'exporter un document PDF de leur rapport afin de l'afficher dans leurs locaux et sensibiliser leurs collaborateurs au bon tri.**
 
 <figure>
-    <img src="images/casestudies/tribu-reporting-pdf.png" alt="Rapport de tri de déchets en PDF imprimable">
+    <img src="content/images/casestudies/tribu-reporting-pdf.png" alt="Rapport de tri de déchets en PDF imprimable">
     <figcaption>
       <span class="figure__legend">Le rapport de tri en PDF imprimable</span>
     </figcaption>

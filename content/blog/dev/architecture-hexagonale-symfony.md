@@ -7,8 +7,8 @@ lastModified:       ~
 description:        "Présentation de l'architecture hexagonale et de son implémentation avec le framework Symfony."
 tableOfContent:     3
 
-thumbnail:          "images/posts/thumbnails/hexagons.jpg"
-banner:             "images/posts/headers/hexagons.jpg"
+thumbnail:          "content/images/blog/thumbnails/hexagons.jpg"
+banner:             "content/images/blog/headers/hexagons.jpg"
 tags:               ["Architecture", "Conception", "Symfony", "PHP"]
 categories:         ["Dev", "Symfony"]
 
@@ -21,7 +21,7 @@ L'architecture hexagonale, également appelée *Ports & Adapters*, présente deu
 
 Elle a été pensé par [Alistair Cockburn](http://alistair.cockburn.us/Hexagonal+architecture) dans les années 2000. Son but est de permettre à une application d'être pilotée sans distinction par des utilisateurs, des programmes, des tests automatisés ou des scripts ainsi que d'être développée et testée de façon isolée de son contexte d'exécution et de ses bases de données.
 
-![Architecture hexagonale](images/posts/2017/hexagonal-architecture.png)
+![Architecture hexagonale](content/images/blog/2017/hexagonal-architecture.png)
 
 ### Une architecture hexagonale
 
@@ -39,7 +39,7 @@ Le **code métier** c'est tout le code qui traduit le métier de votre client. I
 ### Une architecture en couches (ou en oignon)
 
 <figure>
-    <img src="images/posts/2017/onionman.jpg" alt="Onion man">
+    <img src="content/images/blog/2017/onionman.jpg" alt="Onion man">
     <figcaption>
       <span class="figure__legend">Onion man</span>
     </figcaption>
@@ -62,7 +62,7 @@ Pour ma part je suis partie sur les quatres couches suivantes qui représentent 
 L'idée est que chaque couche peut utiliser une couche inférieure mais jamais une couche supérieure, ou en tout cas pas directement.
 
 <figure>
-    <img src="images/posts/2017/clean-architecture.png" alt="Clean architecture">
+    <img src="content/images/blog/2017/clean-architecture.png" alt="Clean architecture">
     <figcaption>
       <span class="figure__legend">Clean architecture</span>
     </figcaption>
@@ -121,7 +121,7 @@ Certes cette architecture est plus complexe, implique un peu plus de code et dem
 Au final, l'investissement de départ est un peu plus grand, quoiqu'avec l'habitude pas tant, mais est largement amorti sur la durée de vie du projet tant les évolutions et la testabilité sont simplifiées.
 
 <figure>
-    <img src="images/posts/2017/good-work-chuck-norris.jpg" alt="Good work">
+    <img src="content/images/blog/2017/good-work-chuck-norris.jpg" alt="Good work">
     <figcaption>
       <span class="figure__legend">Good work</span>
     </figcaption>

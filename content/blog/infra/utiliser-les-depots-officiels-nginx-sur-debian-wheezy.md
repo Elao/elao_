@@ -7,7 +7,7 @@ lastModified:       ~
 
 description:        "Comment configurer et utiliser les dépôts Nginx sur Debian Wheezy."
 
-thumbnail:          "images/posts/thumbnails/server.jpg"
+thumbnail:          "content/images/blog/thumbnails/server.jpg"
 tags:               ["Infra", "Linux", "Debian", "Nginx"]
 categories:         ["Infra", "Linux", "Nginx"]
 

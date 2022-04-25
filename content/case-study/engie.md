@@ -12,7 +12,7 @@ size: 2 ans
 services: ["Accompagnement", "Développement"]
 terms: ["symfony"]
 members: ["mcolin"]
-images: ["images/casestudies/headers/engie-banner.jpg"]
+images: ["content/images/casestudies/headers/engie-banner.jpg"]
 ---
 
 ## Expertise développement

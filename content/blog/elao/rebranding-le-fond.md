@@ -8,7 +8,7 @@ tableOfContent:     2
 
 description:        "On pose les bases."
 
-thumbnail:          "images/posts/headers/elao-rebrand-banner-fond.jpg"
+thumbnail:          "content/images/blog/headers/elao-rebrand-banner-fond.jpg"
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["xgorse","cmozzati"]
@@ -57,7 +57,7 @@ Avant de s'attaquer à la forme il fallait déjà formaliser le fond, accompagn�
 
 À travers de longs entretiens avec l’équipe, Oriane et Estelle ont su prendre le temps de tirer l’essence d’Elao pour le formaliser à travers le concept du [Golden Circle](https://www.youtube.com/watch?v=qp0HIF3SfI4) développé et présenté par Simon Sinek.
  
-![](images/posts/2021/rebranding-le-fond/elao-golden-circle.png)
+![](content/images/blog/2021/rebranding-le-fond/elao-golden-circle.png)
 
 ### Why 
 
@@ -97,7 +97,7 @@ Nous sommes des artisans, nous construisons avec nos clients des applications we
 
 Nous nous retrouvons dans cette plateforme du haut de nos 16 années d'expérience et d'expérimentation et surtout nous nous projetons celles à venir
 
-![](images/posts/2021/rebranding-le-fond/recap.jpg)
+![](content/images/blog/2021/rebranding-le-fond/recap.jpg)
 
 
 

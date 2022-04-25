@@ -8,8 +8,8 @@ lang:           "en"
 description:    "From react-native init to stores real quick"
 tableOfContent: 3
 
-thumbnail:      "images/posts/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
-banner:     "images/posts/headers/from-react-native-init-to-app-stores-real-quick.jpg"
+thumbnail:      "content/images/blog/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
+banner:     "content/images/blog/headers/from-react-native-init-to-app-stores-real-quick.jpg"
 tags:           ["react", "react native", "mobile"]
 categories:     ["dev"]
 
@@ -278,7 +278,7 @@ Open your iOS project `iOS/AcmeApp.xcodeproj` with Xcode and select the root ite
 
 <span class="side-note">🔧</span> In the _Signing_ section, select a __Team__
 
-![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/xcode_config.png)
+![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/xcode_config.png)
 
 #### In the _Build Settings_ tab
 
@@ -289,7 +289,7 @@ Open your iOS project `iOS/AcmeApp.xcodeproj` with Xcode and select the root ite
 * Set __Info.plist Preprocessor Prefix File__ to `${BUILD_DIR}/GeneratedInfoPlistDotEnv.h`
 * Set __Info.plist Other Preprocessor Flags__ to `-traditional`
 
-![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/xcode_build_settings.png)
+![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/xcode_build_settings.png)
 
 <span class="side-note light">💡</span> _If you don't see those settings, verify that "All" is selected at the top (instead of "Basic")._
 
@@ -370,7 +370,7 @@ What's more, we can now run the app in a _certain_ environment by specifying the
 | Develoment                               | Staging                                  | Production                               |
 | ---------------------------------------- | ---------------------------------------- | ---------------------------------------- |
 | `ENVFILE=.env.development react-native run-ios` | `ENVFILE=.env.staging react-native run-ios ` | `ENVFILE=.env.production react-native run-ios ` |
-| ![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_dev.png) | ![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_staging.png) | ![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_production.png) |
+| ![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_dev.png) | ![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_staging.png) | ![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/AcmeApp_production.png) |
 
 ## Store configuration
 
@@ -420,14 +420,14 @@ Open your project in XCode:
 
 <span class="side-note light">💡</span> _If you're having trouble figuring out which format corresponds to which case, the alert tab on the left will tell you exactly what size is expected for each image._
 
-![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/notice.png)
+![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/notice.png)
 
 <span class="side-note">🔧</span> Finally, go back in the _General_ tab, in the _App Icons and Launch Images_ section, do the following:
 
 * As _Launch Images Source_ select __LaunchImage__.
 * Empty the __Launch Screen File__.
 
-![](images/posts/2017/from-react-native-init-to-app-stores-real-quick/launch_screen_setup.png)
+![](content/images/blog/2017/from-react-native-init-to-app-stores-real-quick/launch_screen_setup.png)
 
 <span class="side-note light">💡</span> _You can now delete the `LaunchScreen.xib` in the `AcmeApp` folder._
 

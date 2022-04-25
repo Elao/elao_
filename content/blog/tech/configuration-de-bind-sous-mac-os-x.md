@@ -7,7 +7,7 @@ lastModified:       ~
 
 description:        "Configuration de Bind sous Mac OS X."
 
-thumbnail:          "images/posts/thumbnails/yosemite.jpg"
+thumbnail:          "content/images/blog/thumbnails/yosemite.jpg"
 tags:               ["Bind","Mac OSX", "OSX"]
 categories:         ["Tech", "OSX"]
 

@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Les 12 et 13 mai se déroulait à Paris la nCrafts, une conférence indépendante et internationale sur le développement logiciel."
 
-thumbnail:          "images/posts/thumbnails/ncrafts-2016.jpg"
-banner:             "images/posts/headers/ncrafts-2016.jpg"
+thumbnail:          "content/images/blog/thumbnails/ncrafts-2016.jpg"
+banner:             "content/images/blog/headers/ncrafts-2016.jpg"
 tags:               ["Développement", "Web","conference", "nCrafts", "craftsmanship"]
 categories:         ["Actualité", "Web", "conference"]
 
@@ -24,9 +24,7 @@ Le thème principal de l'événement était le [software craftsmanship / "l'arti
 
 Partagés en 5 tracks, les talks abordaient des sujets techniques comme le CQRS, l'Event Sourcing, ElasticSearch, le machine learning ou la programmation génétique, des sujets plus organisationnels comme le DDD, le mouvement No Estimates, l'architecture, la communication mais également des retours d'expériences sur la vie de développeur.
 
-<p class="text-center">
-    {{< figure src="images/posts/2016/ncrafts-talk.jpg" alt="Conférence nCrafts">}}
-</p>
+![Conférence nCrafts](content/images/blog/2016/ncrafts-talk.jpg)
 
 ## Talks
 
@@ -36,35 +34,18 @@ Le CQRS et l'Event Sourcing sont deux concepts qui se démocratisent beaucoup en
 
 Plusieurs talks, plus théoriques, avaient pour sujet des moyens d'améliorer conception et méthodes de travail des développeurs comme [Designed Stickiness](https://speakerdeck.com/mathiasverraes/designed-stickiness) de Mathias Verraes qui explorait l'utilisation du langage et des métaphores dans la modélisation du domaine, [Beyond patterns & principles - writing good code](http://ncrafts.io/speaker/matthiasnoback) de Matthias Noback qui présentait des bonnes pratiques de développement au delà des design patterns de la littérature classique ou [A Hundred Times...](http://ncrafts.io/speaker/ToF_) de Christophe Thibaut qui partageait un retour d'expérience sur 20 ans de développement.
 
-<div class=row>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<p class="text-center">
-		    {{< figure src="images/posts/2016/ncrafts-oculus.jpg" alt="Oculus">}}
-		</p>
-	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<p class="text-center">
-		    {{< figure src="images/posts/2016/ncrafts-agile.jpg" alt="Agile">}}
-		</p>
-	</div>
-</div>
+| Oculus | Agile |
+| - | - |
+| ![Oculus](content/images/blog/2016/ncrafts-oculus.jpg) | ![Agile](content/images/blog/2016/ncrafts-agile.jpg) |
 
 Il y avait également des talks plus sur le social comme [Tech Beyond Borders](http://techbeyondborders.com/fr/) dans lequel [Ludwine Probst](https://twitter.com/nivdul) présentait son voyage en Asie à la rencontre des communautés de développeurs dans des pays comme le Népal, la Birmanie, le Cambodge, l'Indonésie ou la Malaisie. Durant ce voyage, elle s'est interrogée sur les technologies utilisées dans ces pays, les différents types d'entreprise qu'on peut y trouver ainsi que la place des "femmes numériques" dans des sociétés parfois patriarcale.
 
 Plusieurs tracks étaient consacrés à des lightning talks, des open spaces privilégiant l'échange et le partage, ou des workshops comme le Lego4DevOps de [Sebastien Fauvel](https://twitter.com/sebfauvel) ou la découverte de CQRS & EventSourcing avec [Florent PELLET](https://twitter.com/florentpellet).
 
-<div class=row>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<p class="text-center">
-		    {{< figure src="images/posts/2016/ncrafts-hands.jpg" alt="Mains levées">}}
-		</p>
-	</div>
-	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-		<p class="text-center">
-		    {{< figure src="images/posts/2016/ncrafts-lego.jpg" alt="Atelier Lego">}}
-		</p>
-	</div>
-</div>
+
+| Mains levées | Atelier Lego |
+| - | - |
+| ![Oculus](content/images/blog/2016/ncrafts-hands.jpg) | ![Agile](content/images/blog/2016/ncrafts-lego.jpg) |
 
 ## Ambiance
 
@@ -72,6 +53,4 @@ Les différentes pauses entre les talks et pendant le déjeuner étaient autant 
 
 Enfin, en clôture du premier jour, un apéro était organisé sur place avec des bières spécialement brassées pour l'occasion, et c'était plutôt la classe !
 
-<p class="text-center">
-    {{< figure src="images/posts/2016/ncrafts-beers.jpg" alt="The Old Craftsman beer">}}
-</p>
+![The Old Craftsman beer](content/images/blog/2016/ncrafts-beers.jpg)

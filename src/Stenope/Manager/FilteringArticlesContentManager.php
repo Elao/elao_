@@ -46,6 +46,7 @@ class FilteringArticlesContentManager implements ContentManagerInterface
         $content = $this->inner->getContent($type, $id);
 
         if ($content->isPublished()) {
+            // @phpstan-ignore-next-line
             return $content;
         }
 

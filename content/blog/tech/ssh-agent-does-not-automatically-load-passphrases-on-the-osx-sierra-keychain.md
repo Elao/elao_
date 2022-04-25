@@ -7,8 +7,8 @@ lang:               "en"
 
 description:        "SSH-agent does not automatically load passphrases on the OSX Sierra keychain during startup."
 
-thumbnail:          "images/posts/thumbnails/badass_vader.jpg"
-banner:             "images/posts/headers/php_elao_code.jpg"
+thumbnail:          "content/images/blog/thumbnails/badass_vader.jpg"
+banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["SSH", "OSX"]
 categories:         ["Dev", "Tech", "OSX"]
 

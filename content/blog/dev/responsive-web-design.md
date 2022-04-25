@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Responsive Web Design"
 
-thumbnail:          "images/posts/thumbnails/html5.jpg"
-banner:             "images/posts/headers/elao_team_front.jpg"
+thumbnail:          "content/images/blog/thumbnails/html5.jpg"
+banner:             "content/images/blog/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
 categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
@@ -35,7 +35,7 @@ Le web design responsive amène une solution pratique et économique à cette si
 
 Adieu grille fixe en pixels, bonjour grille flexible ou fluide en pourcentage. Chaque élément de notre maquette doit ainsi s’exprimer en terme relatifs et proportionnels à son contenant d’où la formule :  `cible / contexte = résultat`.
 
-![contruire grid Responsive Web Design](images/posts/2012/contruire-grid.jpg)
+![contruire grid Responsive Web Design](content/images/blog/2012/contruire-grid.jpg)
 
 **Gagnez du temps**
 

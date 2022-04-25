@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Notre compte-rendu de l'Afup Day à Lyon, du 17 mai 2019."
 
-thumbnail:          "images/posts/thumbnails/afup-day-2019.jpg"
-banner:             "images/posts/headers/afup-day-2019.jpg"
+thumbnail:          "content/images/blog/thumbnails/afup-day-2019.jpg"
+banner:             "content/images/blog/headers/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
 categories:         ["conference"]
 authors:            ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]
@@ -66,4 +66,4 @@ A travers également la conférence d’Alexandre Rock qui nous a parlé de la p
 
 Mention spéciale au restaurateur « Le Moulin » qui nous a offert un petit déjeuner, déjeuner et des collations de qualité !
 
-![L'équipe élao présente sur place](images/posts/2019/afup-day-2019/equipe.jpg)
+![L'équipe élao présente sur place](content/images/blog/2019/afup-day-2019/equipe.jpg)

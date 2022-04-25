@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 10 Juin 2016 à Paris, et a rassemblé le meilleur des meetups de l'année. Retour sur cet événement."
 
-thumbnail:          "images/posts/thumbnails/best-of-web-2016.jpg"
-banner:             "images/posts/headers/best-of-web-2016.jpg"
+thumbnail:          "content/images/blog/thumbnails/best-of-web-2016.jpg"
+banner:             "content/images/blog/headers/best-of-web-2016.jpg"
 tags:               ["Javascript", "Web","conference"]
 categories:         ["Actualité", "Web", "conference"]
 

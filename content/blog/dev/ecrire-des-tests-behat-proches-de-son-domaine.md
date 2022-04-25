@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        ""
 
-thumbnail:          "images/posts/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png"
-banner:             "images/posts/headers/ecrire-test-behat-proche-de-son-domaine.jpg"
+thumbnail:          "content/images/blog/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png"
+banner:             "content/images/blog/headers/ecrire-test-behat-proche-de-son-domaine.jpg"
 tags:               ["Behat","Symfony","DDD"]
 categories:         ["Dev", Symfony", "PHP"]
 

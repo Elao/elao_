@@ -11,7 +11,7 @@ size: 3 months
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "graphql", "react"]
 members: ["ndievart", "rhanna"]
-images: ["images/casestudies/headers/chalkboardeducation-banner.jpg"]
+images: ["content/images/casestudies/headers/chalkboardeducation-banner.jpg"]
 ---
 
 ## Contexte projet

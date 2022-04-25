@@ -5,7 +5,7 @@ lastModified: ~
 description: ''
 authors: [cmozzati, sludovicdelys]
 tags: [elao, team]
-thumbnail: images/posts/thumbnails/sabrina-ludo-samoens.jpg
+thumbnail: content/images/blog/thumbnails/sabrina-ludo-samoens.jpg
 tweetId: "1440962443228889090"
 ---
 
@@ -15,7 +15,7 @@ Nous sommes ravis de vous présenter Sabrina, qui a récemment entamé une recon
 
 Bienvenue sur ma page de présentation!🪴
 
-![](images/posts/2021/itw-sabrina/hello-sailor-moon.gif)
+![](content/images/blog/2021/itw-sabrina/hello-sailor-moon.gif)
 
 Avant l'informatique j'étais dans le domaine du théâtre et du cinéma. J'ai écris ma première ligne de code en mars 2020, au début du premier confinement.
 Après avoir exploré en autodidacte pendant plusieurs mois, j'ai intégré une école et complété une formation socle de trois mois centrée sur l'apprentissage de l'environnement JavaScript et la réalisation de projets.
@@ -28,7 +28,7 @@ Ayant vécu une grande partie de ma vie dans divers pays africains, j'ai été s
 
 Plus sérieusement, qui ne hurle pas de joie lorsque son code s’exécute à la perfection? 🤓
 
-![](images/posts/2021/itw-sabrina/working-star-wars.gif)
+![](content/images/blog/2021/itw-sabrina/working-star-wars.gif)
 
 ## Qu'est-ce que tu fais au quotidien chez Elao ?
 
@@ -47,7 +47,7 @@ Je fais du yoga régulièrement, et mes collègues peuvent parfois m’apercevoi
 
 Je me suis récemment remise à dessiner car j’aime utiliser mes mains et divers outils (crayon, stylo, aquarelle, etc...) pour créer.
 
-![](images/posts/2021/interview/sab-ludo-dessin.jpg)
+![](content/images/blog/2021/interview/sab-ludo-dessin.jpg)
 
 ## L'interview :fast-parrot:
 
@@ -57,7 +57,7 @@ Mon émoji préféré est "amaze face", il représente l'étonnement et je l'uti
 
 Mes deux autres émojis préferés font référence à des blagues internes que je ne peux divulguer. It's top secret.
 
-![](images/posts/2021/itw-sabrina/secret-the-office.gif)
+![](content/images/blog/2021/itw-sabrina/secret-the-office.gif)
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 
@@ -70,7 +70,7 @@ Les deux !
 
 ### Thé ou Café ?
 
-![](images/posts/2021/itw-sabrina/bugs-bunny-coffee.gif)
+![](content/images/blog/2021/itw-sabrina/bugs-bunny-coffee.gif)
 
 ### PHP ou JS ?
 

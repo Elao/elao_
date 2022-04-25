@@ -12,7 +12,7 @@ size: "8 mois"
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react", "react-native"]
 members: ["msteinhausser", "abenassy", "tjarrand", "cmeiller"]
-images: ["images/casestudies/headers/climapp-banner.jpg"]
+images: ["content/images/casestudies/headers/climapp-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -86,7 +86,7 @@ JavaScript basé sur React permettant de construire des applications mobiles à 
 fois pour iOS et Android.
 
 <figure>
-    <img src="images/casestudies/climapp/climapp-app.png" alt="Application Clim'app">
+    <img src="content/images/casestudies/climapp/climapp-app.png" alt="Application Clim'app">
     <figcaption>
       <span class="figure__legend">L'application Clim'app</span>
     </figcaption>
@@ -98,7 +98,7 @@ documents règlementaires**, lesquels sont alors disponibles depuis
 l'application.
 
 <figure>
-    <img src="images/casestudies/climapp/climapp-pdf-cerfa.png" alt="Gestion des documents règlementaires">
+    <img src="content/images/casestudies/climapp/climapp-pdf-cerfa.png" alt="Gestion des documents règlementaires">
     <figcaption>
       <span class="figure__legend">Gestion des documents règlementaires</span>
     </figcaption>
@@ -112,7 +112,7 @@ matériels (détecteurs, contenants, ...).**
 
 
 <figure>
-    <img src="images/casestudies/climapp/climapp-admin01.png" alt="Interface d'administration et de suivi">
+    <img src="content/images/casestudies/climapp/climapp-admin01.png" alt="Interface d'administration et de suivi">
     <figcaption>
       <span class="figure__legend">L'interface d'administration et de suivi</span>
     </figcaption>
@@ -125,7 +125,7 @@ déplacements de contenants ou consulter la liste des matériels nécessitant un
 
 
 <figure>
-    <img src="images/casestudies/climapp/climapp-admin02.png" alt="Interface d'administration et de suivi">
+    <img src="content/images/casestudies/climapp/climapp-admin02.png" alt="Interface d'administration et de suivi">
     <figcaption>
       <span class="figure__legend">L'interface d'administration et de suivi</span>
     </figcaption>

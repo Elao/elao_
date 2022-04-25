@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Pratique encore relativement marginale dans l'entreprise française, le télétravail s'imposera sans doute dans les années à venir comme une réelle alternative aux méthodes traditionnelles. Bilan sur ses avantages et ses inconvénients, de mon point de vue."
 
-thumbnail:          "images/posts/thumbnails/RemoteMountain.jpg"
-banner:             "images/posts/headers/elao_babyfoot.jpg"
+thumbnail:          "content/images/blog/thumbnails/RemoteMountain.jpg"
+banner:             "content/images/blog/headers/elao_babyfoot.jpg"
 tags:               ["teletravail", "vie au travail"]
 categories:         ["vie au bureau", "elao"]
 
@@ -31,7 +31,7 @@ Et c'est <strong><u>de ce point de vue là</u></strong> que j'aimerais plutôt a
 
 # Mon sentiment
 
-<img src="images/posts/2015/homeoffice.gif" alt="teletravail" class="outside-right" />
+![teletravail](content/images/blog/2015/homeoffice.gif)
 
 A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simplement parce que c'est un modèle qui ne m'a jamais convenu pour différentes raisons. En particulier, si je travaille chez moi, je suis quasiment certain :
 
@@ -41,16 +41,14 @@ A titre personnel, je n'ai jamais été un grand fan du télétravail, tout simp
 - de continuer à bosser passé 22h,
 - de développer ma fibre d'ours asocial (qui n'en demandait pas tant).
 
-<p>
-En tant que travailleur, je préfère utiliser le télétravail pour dépanner en cas de situation imprévue : le môme qui est malade et qui ne peut pas aller à la crèche, l'intervention nécessaire du plombier parce que la machine à laver a inondé l'appartement, bref pour tout un tas de raisons plus ou moins saugrenues. Mais cela reste un mode exceptionnel, que je n'envisage absolument pas au quotidien.</p>
+En tant que travailleur, je préfère utiliser le télétravail pour dépanner en cas de situation imprévue : le môme qui est malade et qui ne peut pas aller à la crèche, l'intervention nécessaire du plombier parce que la machine à laver a inondé l'appartement, bref pour tout un tas de raisons plus ou moins saugrenues. Mais cela reste un mode exceptionnel, que je n'envisage absolument pas au quotidien.
 
-<p>
-J'ai en effet une grosse préférence pour le travail "sur site" avec mon équipe, mes collaborateurs, mes associés, parce qu'au final j'aime voir les gens, j'aime échanger avec eux, prendre un café et de temps en temps déjeuner ensemble sur une terrasse. En résumé, <strong><u>conserver le lien social</u></strong>.
-Également parce que je trouve qu'il est plus facile de communiquer "en direct" et que ça laisse moins de place à l'interprétation, voire pire, à l'incompréhension.</p>
+J'ai en effet une grosse préférence pour le travail "sur site" avec mon équipe, mes collaborateurs, mes associés, parce qu'au final j'aime voir les gens, j'aime échanger avec eux, prendre un café et de temps en temps déjeuner ensemble sur une terrasse. En résumé, **<u>conserver le lien social</u>**.
+Également parce que je trouve qu'il est plus facile de communiquer "en direct" et que ça laisse moins de place à l'interprétation, voire pire, à l'incompréhension.
 
 Attention ces remarques ne s'appliquent qu'à moi seul ; je suis un bordélique chronique à forte tendance workaholic et je m'astreins donc le plus possible à essayer de séparer le professionnel de la sphère privée.
 
-<u>Bref, le <i>home-office</i> très peu pour moi. Toutefois:</u>
+<u>Bref, le _home-office_ très peu pour moi. Toutefois:</u>
 
 * J'y trouve de nombreux avantages.
 * Je ne vais pas forcément imposer à d'autres un ressenti basé sur une approche/expérience personnelle.
@@ -65,9 +63,7 @@ A ces réflexions personnelles, nous pouvons ajouter d'autres remarques de port�
 - La problématique de la confidentialité des données et de la sécurité des réseaux.
 - La problématique des lignes téléphoniques et plus généralement des moyens de communication.
 
-<div class="text-center">
-{{< figure src="images/posts/2015/love_hate_baby.jpg" alt="teletravail love hate">}}
-</div>
+![teletravail love hate](content/images/blog/2015/love_hate_baby.jpg)
 
 # Les avantages
 
@@ -81,20 +77,21 @@ Il est tout aussi facile d'y trouver un grand nombre d'avantages. Parmi ceux qui
 - D'un point de vue plus terre-à-terre, restreindre les coûts de fonctionnement, notamment la location des bureaux.
 
 # La situation actuelle
-<img src="images/posts/2015/valar_morghulis.gif" alt="teletravail" class="outside-left" />
 
-<p>Certains parleront de productivité, de contrôle et de confiance. J'évoque souvent la frilosité du système français, mais pour le coup, sur ce sujet, les entreprises anglo-saxonnes, pourtant peu réputées pour leur immobilisme en termes de management, semblent adopter une position assez similaire. En effet certaines études menées au Canada, en Allemagne et aux États-Unis mettent en avant une certaine impopularité de la méthode.
+![teletravail](content/images/blog/2015/valar_morghulis.gif)
+
+Certains parleront de productivité, de contrôle et de confiance. J'évoque souvent la frilosité du système français, mais pour le coup, sur ce sujet, les entreprises anglo-saxonnes, pourtant peu réputées pour leur immobilisme en termes de management, semblent adopter une position assez similaire. En effet certaines études menées au Canada, en Allemagne et aux États-Unis mettent en avant une certaine impopularité de la méthode.
 Selon ces études, on constate que les entreprises restent <u>très méfiantes</u> par rapport au télétravail, craignant une baisse de moral du salarié ainsi qu'une perte de productivité.
 Dans les faits, la grande majorité d'entre elles constatent une hausse de la productivité et une amélioration du moral de ses équipes.
 En Allemagne, IBM estime pourtant à 20% l'augmentation de la productivité de ses équipes ayant recours au télétravail.
 
 Enfin, pour les employeurs français, sachez que si vous souhaitez vous mettre en conformité avec le code du travail, le chemin est encore long ; notre législation étant completement dépassée par ces problématiques, elle impose aujourd'hui des contraintes compliquées à satisfaire.
 
-Sans surprise, le principal frein à sa mise en place est culturel et managérial. Pour vous en convaincre, un bon résumé de l'état du télétravail en France, en 2015, est consultable <a target="_blank" href="http://zevillage.net/wp-content/uploads/2015/05/Barom%C3%A8tre-t%C3%A9l%C3%A9travail-Zevillage-Inferences-V5.pdf">ici</a></p>
+Sans surprise, le principal frein à sa mise en place est culturel et managérial. Pour vous en convaincre, un bon résumé de l'état du télétravail en France, en 2015, est consultable [ici](http://zevillage.net/wp-content/uploads/2015/05/Barom%C3%A8tre-t%C3%A9l%C3%A9travail-Zevillage-Inferences-V5.pdf)
 
 # Oui, mais alors chez ELAO ?
 
-<p>Il serait malhonnête de dire que le télétravail est une pratique très répandue au sein d'ELAO. Néanmoins, cela arrive régulièrement et cela se passe plutôt très bien pour peu que certaines règles de bons sens soient respectées, à savoir prévenir les collègues que l'on ne sera pas là et rester facilement joignable.</p>
+Il serait malhonnête de dire que le télétravail est une pratique très répandue au sein d'ELAO. Néanmoins, cela arrive régulièrement et cela se passe plutôt très bien pour peu que certaines règles de bons sens soient respectées, à savoir prévenir les collègues que l'on ne sera pas là et rester facilement joignable.
 
 Pour le reste, sa mise en place et son usage au quotidien dépendent, à mon sens, de trois facteurs : le collaborateur, l'équipe et l'entreprise, auxquels il faut ajouter les éléments suivants :
 
@@ -109,15 +106,15 @@ Bref, on retrouve ici tous les ingrédients qui contribuent habituellement au bo
 
 # Pour terminer
 
-<p>Je reste persuadé que le télétravail se développera de plus en plus, particulièrement dans nos métiers qui ne nécessitent pas de lourds investissements pour le permettre.</p>
-<p>J'y crois également parce que l'humain reprend peu à peu sa place au centre de la société, parce que les gens commencent à penser à des modes de vie différents qui font la part belle à l'épanouissement personnel.</p>
-<p>Nous serons confrontés tôt ou tard à des problématiques de transports (on l'est déja dans les grandes métropoles) et perdre 2 heures de sa journée dans les transports n'est bon, ni pour la société, ni pour le collaborateur.</p>
+Je reste persuadé que le télétravail se développera de plus en plus, particulièrement dans nos métiers qui ne nécessitent pas de lourds investissements pour le permettre.
 
-<small>
-<strong>Sources et lectures intéressantes:</strong>
+J'y crois également parce que l'humain reprend peu à peu sa place au centre de la société, parce que les gens commencent à penser à des modes de vie différents qui font la part belle à l'épanouissement personnel.</p>
 
-- <a target="_blank" href="https://blog.scenari-enterprise.com/2013/07/le-teletravail-dans-le-monde-et-a-kelis/">https://blog.scenari-enterprise.com/2013/07/le-teletravail-dans-le-monde-et-a-kelis/</a>
-- <a target="_blank" href="http://www.arolla.fr/blog/2015/06/le-teletravail-un-win-win-social-et-economique/" >http://www.arolla.fr/blog/2015/06/le-teletravail-un-win-win-social-et-economique/</a>
-- <a target="_blank" href="http://blog.osezvosdroits.com/le-teletravail-faut-il-y-succomber/">http://blog.osezvosdroits.com/le-teletravail-faut-il-y-succomber/</a>
-- <a target="_blank" href="http://jgarcialopez.over-blog.com/2014/09/teletravail-comment-mieux-manager-a-distance.html">http://jgarcialopez.over-blog.com/2014/09/teletravail-comment-mieux-manager-a-distance.html</a>
-</small>
+Nous serons confrontés tôt ou tard à des problématiques de transports (on l'est déja dans les grandes métropoles) et perdre 2 heures de sa journée dans les transports n'est bon, ni pour la société, ni pour le collaborateur.
+
+###### Sources et lectures intéressantes :
+
+- [https://blog.scenari-enterprise.com/2013/07/le-teletravail-dans-le-monde-et-a-kelis/](https://blog.scenari-enterprise.com/2013/07/le-teletravail-dans-le-monde-et-a-kelis/)
+- [http://www.arolla.fr/blog/2015/06/le-teletravail-un-win-win-social-et-economique/](http://www.arolla.fr/blog/2015/06/le-teletravail-un-win-win-social-et-economique/)
+- [http://blog.osezvosdroits.com/le-teletravail-faut-il-y-succomber/](http://blog.osezvosdroits.com/le-teletravail-faut-il-y-succomber/)
+- [http://jgarcialopez.over-blog.com/2014/09/teletravail-comment-mieux-manager-a-distance.html](http://jgarcialopez.over-blog.com/2014/09/teletravail-comment-mieux-manager-a-distance.html)

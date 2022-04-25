@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Twig : Quelques pro-tips issue du Symfony Live 2013"
 
-thumbnail:          "images/posts/thumbnails/badass_vader.jpg"
-banner:             "images/posts/headers/php_forum_team_elao.jpg"
+thumbnail:          "content/images/blog/thumbnails/badass_vader.jpg"
+banner:             "content/images/blog/headers/php_forum_team_elao.jpg"
 tags:               ["Tips", "Twig", "Symfony 2"]
 categories:         ["Tips", "Twig", "Symfony"]
 

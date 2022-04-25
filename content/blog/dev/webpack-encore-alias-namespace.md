@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Avec les alias Webpack Encore, adoptez la souplesse des namespaces PHP dans vos modules JavaScript avec des chemins absolus pour un code plus lisible et plus facile à refactorer."
 
-thumbnail:          "images/posts/thumbnails/webpack-encore-alias.jpg"
-banner:             "images/posts/headers/webpack-encore-alias.jpg"
+thumbnail:          "content/images/blog/thumbnails/webpack-encore-alias.jpg"
+banner:             "content/images/blog/headers/webpack-encore-alias.jpg"
 credits:            { name: "Jannes Glas" , url: "https://unsplash.com/@jannesglas" }
 
 tags:               ["Symfony", "JavaScript", "Webpack"]
@@ -110,6 +110,6 @@ Et simplifiez-vous la vie :
 
 ```javascript
 import 'Style/app.scss';
-import logoPath from 'Images/logo.png';
+import logoPath from 'content/images/logo.png';
 ```
 

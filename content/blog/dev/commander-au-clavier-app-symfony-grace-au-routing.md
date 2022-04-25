@@ -7,8 +7,8 @@ lastModified:       ~
 description:    "Comment ajouter à une application Symfony une UI différente, une interface de commande par texte avec autocompletion."
 tableOfContent: 2
 
-thumbnail:      "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
-banner:     "images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
+thumbnail:      "content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
+banner:     "content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
 tags:           ["Symfony", "Routing", "UX"]
 categories:     ["dev", "Symfony"]
 
@@ -26,7 +26,7 @@ une interface de commande par texte avec autocompletion.
 
 ## Le contexte
 
-<img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/backoffice.png" alt="Interface d'administration" />
+<img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/backoffice.png" alt="Interface d'administration" />
 
 Ceci est une capture d'écran d'interface d'administration d'une application classique.
 Il y a des listes, des boutons, des menus...
@@ -42,7 +42,7 @@ S'inspirer des **suggestions de résultats** comme sur Google, Spotlight ou Alfr
 Exemple lorsqu'on tape "Modifier document" sur Google :
 
 <p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/search.png" alt="Recherche avec suggestion de résultats" />
+    <img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/search.png" alt="Recherche avec suggestion de résultats" />
 </p>
 
 Cela serait pas mal d'avoir la même chose dans notre application, n'est-ce pas ?
@@ -85,7 +85,7 @@ class AllRoutesResolver
 Cela donne comme résultat :
 
 <p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de *routes* les *routes* de l'application" style="width: 50%" />
+    <img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/all-routes-dump.png" alt="Dump de *routes* les *routes* de l'application" style="width: 50%" />
 </p>
 
 Filtrons maintenant les *routes* en ne gardant que les *routes* avec méthode GET :
@@ -143,7 +143,7 @@ nous avons choisi une librairie assez légère et facilement configurable, notam
 Et cela donne comme résultat :
 
 <p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo1.gif" alt="Démo" />
+    <img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/demo1.gif" alt="Démo" />
 </p>
 
 ## Deviner des paramètres de route
@@ -534,7 +534,7 @@ App\ActionsBot\Resolver\TranslateRouteName:
 ### Démo
 
 <p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/demo2.gif" alt="Démo avec paramètre" />
+    <img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/demo2.gif" alt="Démo avec paramètre" />
 </p>
 
 ## Bilan
@@ -589,7 +589,7 @@ recognition.start();
 Le support de l'API SpeechRecognition est très limité pour l'instant :
 
 <p class="text-center">
-    <img src="images/posts/2018/commander-au-clavier-app-symfony-grace-au-routing/caniuse-speech-recognition.png" alt="Can I Use SpeechRecognition" />
+    <img src="content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/caniuse-speech-recognition.png" alt="Can I Use SpeechRecognition" />
 </p>
 
 [Démo ici](https://www.google.com/intl/en/chrome/demos/speech.html) (à tester avec Chrome seulement au jour où cet article a été écrit).

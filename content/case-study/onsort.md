@@ -12,7 +12,7 @@ size: 2 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "vue-js", "html", "css"]
 members: ["mcolin"]
-images: ["images/casestudies/headers/onsort-banner.jpg"]
+images: ["content/images/casestudies/headers/onsort-banner.jpg"]
 ---
 
 ## Le contexte du projet
@@ -46,7 +46,7 @@ La mise en production de la première version a permis à la mairie de tester tr
 La mairie d'Orléans souhaitait une application simple et performante permettant à un maximum d'habitants de la métropole de trouver facilement les événements culturels disponibles autour d'Orléans.
 
 <figure>
-    <img src="images/casestudies/on-sort-phones.png" alt="L'application On Sort sur téléphone">
+    <img src="content/images/casestudies/on-sort-phones.png" alt="L'application On Sort sur téléphone">
     <figcaption>
       <span class="figure__legend">Une application d'abord pensée mobile</span>
     </figcaption>
@@ -62,7 +62,7 @@ L'application a été réalisée en [Vue.js](#lien-page-techno) afin de proposer
 
 
 <figure>
-    <img src="images/casestudies/on-sort-computer-phone.jpg" alt="L'application On Sort en responsive design">
+    <img src="content/images/casestudies/on-sort-computer-phone.jpg" alt="L'application On Sort en responsive design">
     <figcaption>
       <span class="figure__legend">Une ergonomie pensée pour tous les devices</span>
     </figcaption>
@@ -79,7 +79,7 @@ Quant aux utilisateurs, ils peuvent s'inscrire et ajouter des événements en fa
 Enfin, les données générées par l'application permettent à la mairie de mesurer les envies et les besoins de la population en terme de culture.
 
 <figure>
-    <img src="images/casestudies/on-sort-tablet.png" alt="L'application On Sort sur tablette">
+    <img src="content/images/casestudies/on-sort-tablet.png" alt="L'application On Sort sur tablette">
     <figcaption>
       <span class="figure__legend">Une SPA compatible tablette</span>
     </figcaption>

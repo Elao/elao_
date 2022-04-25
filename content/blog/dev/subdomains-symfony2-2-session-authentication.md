@@ -7,8 +7,8 @@ lang:               "en"
 
 description:        "Feedback on a side-effect with Symfony 2.2, subdomains and sessions"
 
-thumbnail:          "images/posts/thumbnails/turtle.jpg"
-banner:             "images/posts/headers/php_elao_code.jpg"
+thumbnail:          "content/images/blog/thumbnails/turtle.jpg"
+banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Symfony", "PHP"]
 categories:         ["Dev", "Symfony", "PHP"]
 

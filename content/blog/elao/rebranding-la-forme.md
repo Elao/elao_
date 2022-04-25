@@ -8,7 +8,7 @@ tableOfContent:     true
 
 description:        "Après le fond, la forme."
 
-thumbnail:          "images/posts/headers/elao-rebrand-header-forme.jpg"
+thumbnail:          "content/images/blog/headers/elao-rebrand-header-forme.jpg"
 tags:               ["Rebranding", "Logo"]
 categories:         ["Elao"]
 authors:            ["cmozzati"]
@@ -33,7 +33,7 @@ Côté logo, on s’amuse d’un signe simple mais fondateur : un underscore qui
 Cet underscore (que vous pouvez aussi appeler sous-tiret, blanc souligné, caractère de soulignement ou plus communément “tiret du 8”) est le symbole que tout reste à écrire, comme un curseur, comme si Elao n’était finalement qu’un point de départ, celui des projets de nos clients, tout en étant également un tout, celui de l’équipe de choc qui le compose.
 
 <figure>
-    <img src="images/posts/2021/elao-rebranding02.jpg">
+    <img src="content/images/blog/2021/elao-rebranding02.jpg">
     <figcaption>
       <span class="figure__legend">Le logo</span>
     </figcaption>
@@ -41,14 +41,14 @@ Cet underscore (que vous pouvez aussi appeler sous-tiret, blanc souligné, carac
 
 
 <figure>
-    <img src="images/posts/2021/elao-loop.gif">
+    <img src="content/images/blog/2021/elao-loop.gif">
 </figure>
 
 ### Dans la palette, prendre le parti de la nuance
 La charte Elao manquait de finesse : du rouge et du blanc, c'est difficile à mettre en application et surtout ça nous positionne comme trop radicaux. On l'est peut être un peu (notamment dans nos choix techniques), mais jamais dans nos rapports avec les autres. Estelle nous propose plus de nuances, une manière de montrer la richesse de ce que l'on est et de ce que l'on produit. Comme pour répondre à la plateforme de marque, on pose un univers, un territoire.
 
 <figure>
-    <img src="images/posts/2021/elao-rebranding01.jpg">
+    <img src="content/images/blog/2021/elao-rebranding01.jpg">
     <figcaption>
       <span class="figure__legend">La palette</span>
     </figcaption>
@@ -60,7 +60,7 @@ Le logo se dote d'une belle Faktum bien grasse, qui vient asseoir notre position
 En typographie de labeur, on s'amuse avec les codes du… code : Antikor text, une monospace bien connotée avec laquelle on prend plaisir à jouer.
 
 <figure>
-    <img src="images/posts/2021/elao-rebranding03.jpg">
+    <img src="content/images/blog/2021/elao-rebranding03.jpg">
     <figcaption>
       <span class="figure__legend">Les typographies dans la charte graphique</span>
     </figcaption>
@@ -70,7 +70,7 @@ En typographie de labeur, on s'amuse avec les codes du… code : Antikor text, u
 Une charte graphique n'est pas complète si elle n'est pas accompagnée de possibilités de mises en application, de pictos, illustrations, photographie… c'est tout l'objet de la direction artistique : on choisit une direction, et on s'y tient. Estelle s'est montrée très généreuse et créative dans la mise en application de la charte, pour notre plus grand plaisir.
 
 <figure>
-    <img src="images/posts/2021/elao-rebranding04.jpg">
+    <img src="content/images/blog/2021/elao-rebranding04.jpg">
     <figcaption>
       <span class="figure__legend">L'application de la charte</span>
     </figcaption>
@@ -89,7 +89,7 @@ C’est [Adrien Gervaix](https://adriengervaix.com/) qui a eu la mission de rend
 Et comme il n'y a pas de bon design sans bonne intégration, je profite de cet article pour faire un gros big up à notre intégratrice de choc, [Amélie](../../member/adefrance.yaml).
 
 <figure>
-    <img src="images/posts/2021/elao-webdesign.jpg">
+    <img src="content/images/blog/2021/elao-webdesign.jpg">
     <figcaption>
       <span class="figure__legend">Hello Elao_</span>
     </figcaption>
@@ -108,7 +108,7 @@ Même si nous avions certaines des compétences en interne, nous sommes très he
 Merci Oriane, Estelle, Adrien et Gweno : vous faites un peu partie de l'équipe d'Elao désormais <3
 
 <figure>
-    <img src="images/posts/2021/elao-developpe-du-lien.jpg">
+    <img src="content/images/blog/2021/elao-developpe-du-lien.jpg">
     <figcaption>
       <span class="figure__legend">Elao, plus que jamais, développe du lien :)</span>
     </figcaption>

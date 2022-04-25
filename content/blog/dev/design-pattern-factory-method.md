@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    "Premier article d'une série consacrée aux Design Patterns. Aujourd'hui : le pattern Factory Method"
 
-thumbnail:      "images/posts/thumbnails/scientist.jpg"
-banner:     "images/posts/headers/scientist.jpg"
+thumbnail:      "content/images/blog/thumbnails/scientist.jpg"
+banner:     "content/images/blog/headers/scientist.jpg"
 tags:           ["Design Pattern", "Conception"]
 categories:     ["Dev", "Design Pattern"]
 
@@ -20,7 +20,7 @@ authors:            ["xavierr"]
 Avant d'entrer dans le vif du sujet en abordant notre premier Design Pattern, permettez-moi de citer deux ouvrages incontournables lorsque l'on évoque ce sujet.
 
 <figure>
-    <img src="images/posts/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">
+    <img src="content/images/blog/design-pattern/biblio-dp-elements-of-reusable.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software">
     <figcaption>
       <span class="figure__legend">Design Patterns: Elements of Reusable Object-Oriented Software</span>
     </figcaption>
@@ -41,7 +41,7 @@ Je ne m'étendrai pas sur la définition exacte d'un Design Pattern, ni sur le f
 On peut déplorer que la plupart des exemples du livre s'appuient sur le langage <strong>Smalltalk</strong> qui est tombé en désuétude (mais notez tout de même que ce langage fut pionnier dans bien des domaines !) ... <strong>Java</strong> pourrait sembler aujourd'hui plus adapté et/ou fédérateur pour un ouvrage consacré à la conception objet, mais lors de la première édition du livre (1994), la première version de Java n'existait pas encore ...
 
 <figure>
-    <img src="images/posts/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">
+    <img src="content/images/blog/design-pattern/biblio-dp-head-first.jpeg" alt="Head First Design Patterns">
     <figcaption>
       <span class="figure__legend">Head First Design Patterns</span>
     </figcaption>
@@ -107,7 +107,7 @@ Cette définition peut paraître assez obscure à première vue, mais croyez-moi
 ### Schéma
 
 <figure>
-    <img src="images/posts/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">
+    <img src="content/images/blog/design-pattern/creation-factory-method.jpg" alt="Le Design Pattern 'Factory Method'">
     <figcaption>
       <span class="figure__legend">Schéma du Design Pattern 'Factory Method'</span>
     </figcaption>

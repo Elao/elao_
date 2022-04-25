@@ -80,7 +80,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 !!! danger "Titre"
     Le même [composant](https://www.elao.com) dans le style "danger".
 
-
 ### Les images
 
 Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une légende, et si possible on crédite son auteur·ice.
@@ -96,12 +95,43 @@ Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une lég
 ```html
 <!-- Comme ceci -->
 <figure>
-    <img src="photo.png" alt="photo de ...">
+    <img src="content/images/blog/styleguide/photo.png" alt="photo de ...">
     <figcaption>
       <span class="figure__legend">Photo de ...</span>
       <span class="figure__credits">Crédit photo : <a href="">Nom de l'auteur</a></span>
     </figcaption>
 </figure>
+```
+
+Pour les autres images, utilisez simplement la syntaxe Markdown classique (_cf sections suivantes_).
+
+#### Images retina
+
+Les images inclues dans un contenu sont automatiquement adaptée et fournies en version rétina et non-rétina lorsque cela le permet.
+
+##### Depuis la racine du projet
+
+![Image d'exemple depuis la racine du projet](content/images/blog/styleguide/exemple-image.jpg)
+
+```md
+![Image d'exemple depuis la racine du projet](content/images/blog/styleguide/exemple-image.jpg)
+```
+
+##### Avec un chemin relatif au contenu (recommandé)
+
+![Image d'exemple en relatif](./../../images/blog/styleguide/exemple-image-relative.jpg)
+
+```md
+![Image d'exemple en relatif](./../../images/blog/styleguide/exemple-image-relative.jpg)
+```
+
+!!! info ""
+    Les GIFs ne peuvent être redimensionnés mais peuvent tout de même être référencés
+
+![Test gif](./../../images/blog/styleguide/exemple-gif.gif)
+
+```md
+![Test gif](./../../images/blog/styleguide/exemple-gif.gif)
 ```
 
 ### Le code

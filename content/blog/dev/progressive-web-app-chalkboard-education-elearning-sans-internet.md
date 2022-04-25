@@ -7,8 +7,8 @@ lastModified:       ~
 description:    "Retour d'expérience sur la conception de la progressive web app de Chalkboard Education"
 tableOfContent: 3
 
-thumbnail:      "images/posts/2017/chalkboard-education/woman-phone.jpg"
-banner:     "images/posts/2017/chalkboard-education/woman-phone.jpg"
+thumbnail:      "content/images/blog/2017/chalkboard-education/woman-phone.jpg"
+banner:     "content/images/blog/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["Progressive Web App", "Offline", "React", "Symfony"]
 categories:     ["dev", "Symfony", "javascript"]
 
@@ -37,7 +37,7 @@ résultat une application Android déployée sur Google Play Store à destinatio
 l'University Of Ghana.
 
 <p class="text-center">
-    <img src="images/posts/2017/chalkboard-education/app-react-native.png" alt="React native app" />
+    <img src="content/images/blog/2017/chalkboard-education/app-react-native.png" alt="React native app" />
 </p>
 
 ## Progressive Web App
@@ -73,9 +73,7 @@ et des états gérés par [Redux](https://github.com/reactjs/redux).
 L'étudiant•e reçoit son accès par SMS contenant un lien permettant de l'identifier. A l'ouverture de l'application, le
 contenu des cours est préchargé. La progression du chargement est affichée en haut de l'interface :
 
-<div style="text-align:center;">
-<video src="images/posts/2017/chalkboard-education/demo-chalkboard.mp4" loop autoplay style="height:500px; border:1px solid #333"></video>
-</div>
+<video src="resources/blog/2017/chalkboard-education/demo-chalkboard.mp4" loop autoplay mute controls style="height:500px; border:1px solid #333"></video>
 
 ### UI/UX inspirées des applications natives
 
@@ -83,7 +81,7 @@ Pour l'UI de l'application, nous avons utilisé [Material UI](http://www.materia
 React qui implémente les bonnes pratiques *Material Design* édictées par Google.
 
 <p class="text-center">
-    <img src="images/posts/2017/chalkboard-education/submit-progression.png" alt="Submit progression" style="height:500px; border:1px solid #333"/>
+    <img src="content/images/blog/2017/chalkboard-education/submit-progression.png" alt="Submit progression" style="height:500px; border:1px solid #333"/>
 </p>
 
 Nous avons également travaillé l'UX pour mobile afin de s'approcher de l'UX des applications natives. Pour cela, nous
@@ -294,7 +292,7 @@ Sur Chalkboard Education, l'étudiant•e doit valider sa progression. Pour cela
 internet ou... le SMS.
 
 <p class="text-center">
-    <img src="images/posts/2017/chalkboard-education/submit-validation.png" alt="Submit validation by SMS" style="height:500px; border:1px solid #333" />
+    <img src="content/images/blog/2017/chalkboard-education/submit-validation.png" alt="Submit validation by SMS" style="height:500px; border:1px solid #333" />
 </p>
 
 Un code est généré par l'application web. Ce code est envoyé par SMS par l'étudiant•e à un numéro donné.
@@ -327,7 +325,7 @@ L'application *front* pèse ainsi moins de 300 Ko !
 Le panel Audit de Chrome indique qu'on est plutôt pas mal :
 
 <p class="text-center">
-    <img src="images/posts/2017/chalkboard-education/audit.png" alt="Audit" />
+    <img src="content/images/blog/2017/chalkboard-education/audit.png" alt="Audit" />
 </p>
 
 ## Back office et API avec Symfony ♥️

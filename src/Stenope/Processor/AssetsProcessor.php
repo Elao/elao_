@@ -46,7 +46,9 @@ class AssetsProcessor implements ProcessorInterface
 
         /** @var \DOMElement $element */
         foreach ($crawler->filter('video') as $element) {
-            $element->setAttribute('poster', $this->assetUtils->getUrl($element->getAttribute('poster')));
+            if ($element->hasAttribute('src')) {
+                $element->setAttribute('src', $this->assetUtils->getUrl($element->getAttribute('src')));
+            }
         }
 
         $this->crawlers->save($content, $data, $this->property);

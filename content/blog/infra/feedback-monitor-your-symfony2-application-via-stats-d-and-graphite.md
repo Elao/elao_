@@ -7,7 +7,7 @@ lang:               "en"
 
 description:        "Feedback : Monitor your Symfony2 application via Stats.d and Graphite"
 
-thumbnail:          "images/posts/thumbnails/rocket.jpg"
+thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
 categories:         ["Infra", "Monitoring", "PHP"]
 
@@ -29,6 +29,4 @@ Once I realized that my monitoring system was the problem (especially carbon), I
 
 **I won ~60%** on my server response time (both monitored by google analytics and newrelic).
 
-<div style="text-align:center;">
-![response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite](/en/images/posts/2012/memory_usage.png)
-</div>
+![response time Feedback : Monitor your Symfony2 application via Stats.d and Graphite](content/images/blog/2012/memory_usage.png)

@@ -1,10 +1,13 @@
 glide:
     base_url: /image/resize
-    source: '%kernel.project_dir%/public'
+    source: '%kernel.project_dir%'
     cache: '%kernel.project_dir%/public/resized'
     pre_generate: '%env(bool:GLIDE_PRE_GENERATE_CACHE)%'
     cache_with_file_extensions: true
     group_cache_in_folders: true
+    skipped_types:
+        - 'image/gif'
+        - 'image/svg+xml'
 
     # https://glide.thephpleague.com/1.0/api/quick-reference/
     presets:
@@ -45,6 +48,13 @@ glide:
         # Base format for images inside case-studies' content.
         # It's declined with dpr 2x automatically for retina screens.
         case_study_content:
+            w: 1040
+            fit: max
+            dpr: 1
+
+        # Base format for images inside a glossary article content.
+        # It's declined with dpr 2x automatically for retina screens.
+        glossary_content:
             w: 1040
             fit: max
             dpr: 1

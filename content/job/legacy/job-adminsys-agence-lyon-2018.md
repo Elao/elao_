@@ -5,8 +5,8 @@ date:    "2018-05-29"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/adminsys.jpg"
-header_img:     "images/posts/headers/adminsys.jpg"
+thumbnail:      "content/images/blog/thumbnails/adminsys.jpg"
+header_img:     "content/images/blog/headers/adminsys.jpg"
 tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
 categories:     ["elao", "recrutement"]
 

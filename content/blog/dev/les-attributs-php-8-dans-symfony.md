@@ -6,8 +6,8 @@ description: 'Utilisation des attributs PHP 8 à la place des annotations.'
 authors: [mcolin]
 #tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [symfony, php, attributes]
-thumbnail: images/posts/thumbnails/les-attributs-php-8-dans-symfony.jpg
-#banner: images/posts/headers/les-attributs-php-8-dans-symfony.jpg # Uniquement si différent de la minitature (thumbnail)
+thumbnail: content/images/blog/thumbnails/les-attributs-php-8-dans-symfony.jpg
+#banner: content/images/blog/headers/les-attributs-php-8-dans-symfony.jpg # Uniquement si différent de la minitature (thumbnail)
 #credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
 tweetId: '1412341801734791169' # Ajouter l'id du Tweet après publication.
 ---
@@ -101,7 +101,7 @@ class DefaultController extends AbstractController
 
 Pour plus de détails, reportez vous aux différentes documentations qui intêgrent désormais, en plus des exemples d'anotations, leurs équivalents avec les attributs.
 
-![Les attributs PHP dans Symfony](images/posts/2021/php-attributes-symfony/symfony-attributes-doc.png)
+![Les attributs PHP dans Symfony](content/images/blog/2021/php-attributes-symfony/symfony-attributes-doc.png)
 
 ## Les contraintes de validation
 

@@ -5,8 +5,8 @@ date:           "2018-02-26"
 active:         false
 contractType:   CDI
 
-thumbnail:      "images/posts/thumbnails/riccardo-chiarini-247364.jpg"
-header_img:     "images/posts/headers/riccardo-chiarini-247364.jpg"
+thumbnail:      "content/images/blog/thumbnails/riccardo-chiarini-247364.jpg"
+header_img:     "content/images/blog/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]
 categories:     ["elao", "recrutement"]
 

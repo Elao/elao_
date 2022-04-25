@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Installation d'un dépôt SVN pour gérer et versioner le code source d'un projet"
 
-thumbnail:          "images/posts/thumbnails/kenny.jpg"
+thumbnail:          "content/images/blog/thumbnails/kenny.jpg"
 tags:               ["Linux", "SVN"]
 categories:         ["Infra", "Linux"]
 

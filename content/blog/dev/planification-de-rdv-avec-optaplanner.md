@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:    ""
 
-thumbnail:      "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
-banner:     "images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
+thumbnail:      "content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
+banner:     "content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
 tags:           ["Planification", "OptaPlanner"]
 categories:     ["dev"]
 
@@ -23,13 +23,13 @@ organisateurs d’événements une plateforme de gestion de rendez-vous B2B.
 Avant l’événement les participants s’inscrivent sur la plateforme et consultent le catalogue des participants :
 
 <p class="text-center">
-    <img src="images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-catalogue.png" alt="Catalogue Vimeet" />
+    <img src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/vimeet-catalogue.png" alt="Catalogue Vimeet" />
 </p>
 
 Les participants demandent en rendez-vous d'autres participants, acceptent ou refusent des propositions de rendez-vous :
 
 <p class="text-center">
-    <img src="images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-gdr.png" alt="Catalogue Vimeet" />
+    <img src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/vimeet-gdr.png" alt="Catalogue Vimeet" />
 </p>
 
 Avant l’ouverture de l’événement l’agenda des rendez-vous de chaque participant est généré.
@@ -72,7 +72,7 @@ ou l'[algorithme génétique](https://fr.wikipedia.org/wiki/Algorithme_g%C3%A9n%
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/algorithmes.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/algorithmes.png"
         alt="Algorithme génétique et algorithme de colonies de fourmis"
     />
 </p>
@@ -95,7 +95,7 @@ OptaPlanner est livré avec des exemples variés :
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-examples.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-examples.png"
         alt="Optaplanner exemples"
     />
 </p>
@@ -104,7 +104,7 @@ Dont, l'optimisation de l'agenda des professeurs :
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
         alt="Optimisation agenda de profs"
     />
 </p>
@@ -113,7 +113,7 @@ L'affectation des lits d'un hôpital :
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-hospital.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-hospital.png"
         alt="Optimisation lits d'hôpital"
     />
 </p>
@@ -122,7 +122,7 @@ La minimisation du trajet d'un voyageur de commerce :
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-traveller.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-traveller.png"
         alt="Optimisation trajet du voyageur de commerce"
     />
 </p>
@@ -131,7 +131,7 @@ Et même l'optimisation du plan de tables d'un mariage :
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/optaplanner-wedding.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-wedding.png"
         alt="Optimisation du plan de table de mariage"
     />
 </p>
@@ -164,9 +164,7 @@ Il n'est jamais simple de modéliser un problème de planification. Le moyen d'y
 
 ### Les annotations de OptaPlanner
 
-<p class="text-center">
-    <img src="images/posts/2017/planification-de-rdv-avec-optaplanner/model-annotations.png" alt="Modèle" />
-</p>
+![Modèle](content/images/blog/2017/planification-de-rdv-avec-optaplanner/model-annotations.png)
 
 Voici un extrait du code de MeetingSchedule :
 
@@ -432,7 +430,7 @@ public class MeetingsCliApp {
 Visualisation d'une solution optimale des plannings de rendez-vous des participants d'un événement :
 
 <p class="text-center">
-    <img src="images/posts/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
+    <img src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/planner-real-event.gif" alt="Demo" />
 </p>
 
 * _Spot_ : les lieux
@@ -443,7 +441,7 @@ Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateu
 
 <p class="text-center">
     <img
-        src="images/posts/2017/planification-de-rdv-avec-optaplanner/vimeet-agenda-mobile.png"
+        src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/vimeet-agenda-mobile.png"
         alt="Agenda utilisateur"
         style="height: 600px"
     />
@@ -494,7 +492,7 @@ plus il va tendre vers une meilleure solution.__
 </table>
 
 <p class="text-center">
-    <img src="images/posts/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
+    <img src="content/images/blog/2017/planification-de-rdv-avec-optaplanner/stats-planifications.png" alt="Planifications" />
     <i>Les statistiques et les planifications successives réalisées pour un événement</i>
 </p>
 

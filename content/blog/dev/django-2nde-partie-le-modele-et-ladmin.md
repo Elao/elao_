@@ -6,7 +6,7 @@ lastModified:       ~
 
 description:        "Django (2nde partie) : le Modèle et l’Admin"
 
-thumbnail:          "images/posts/thumbnails/django.jpg"
+thumbnail:          "content/images/blog/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
 categories:         ["Django", "Python"]
 
@@ -231,15 +231,11 @@ python manage.py runserver
 
 ... et admirer le résultat en nous rendant à l'URL suivante : <a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a>. Nous sommes alors invités à nous loguer :
 
-<div style="text-align:center;">
-![django admin Django (2nde partie) : le Modèle et lAdmin](images/posts/2010/django-admin.gif)
-</div>
+![django admin Django (2nde partie) : le Modèle et lAdmin](content/images/blog/2010/django-admin.gif)
 
 Saisissez les identifiants que vous aviez précisés lorsque nous avions lancé la commande *python manage.py syncdb*. Voici le résultat après login :
 
-<div style="text-align:center;">
-![Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%](images/posts/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png)
-</div>
+![Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%](content/images/blog/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png)
 
 A présent, nous allons éditer le fichier contenant la définition de nos deux classes du modèle, *Item* et *Sport*, afin qu'elles soient prises en compte par l'Admin de Django. Pour cela, nous allons éditer le fichier *shop/models.py* et y ajouter les lignes suivantes :
 
@@ -264,9 +260,7 @@ admin.site.register(Item, ItemAdmin)
 
 Rendez-vous à présent sur la page <a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a> pour constater que l'Admin de Django a bien enregistré nos deux classes du modèle. Si tout s'est correctement déroulé, vous devriez voir la liste des entités gérées sur la page d'accueil :
 
-<div style="text-align:center;">
-![Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin](images/posts/2010/Django-Admin-Model-Classes.png)
-</div>
+![Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin](content/images/blog/2010/Django-Admin-Model-Classes.png)
 
 N'hésitez pas à naviguer dans l'interface d'Administration de Django pour découvrir les nombreuses fonctionnalités offertes, mais avant de créer des articles, nous devons préalablement déterminer le chemin du répertoire "*media*" où seront notamment placées les images liées aux articles. Pour cela, nous allons préciser la valeur de la constante *MEDIA_ROOT* dans le fichier *settings.py*, puis créer une nouvelle route destinée à servir les fichiers statiques contenus dans ce répertoire "*media*".
 

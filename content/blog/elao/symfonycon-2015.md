@@ -6,8 +6,8 @@ lastModified:       ~
 
 description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans de Symfony"
 
-thumbnail:          "images/posts/thumbnails/symfonycon-2015.jpg"
-banner:             "images/posts/headers/foliesbergeres.jpg"
+thumbnail:          "content/images/blog/thumbnails/symfonycon-2015.jpg"
+banner:             "content/images/blog/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
 categories:         ["conference"]
 

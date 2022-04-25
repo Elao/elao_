@@ -7,7 +7,7 @@ tableOfContent:     true
 
 description:        "Et maintenant ?"
 
-thumbnail:          "images/posts/headers/elao-rebrand-banner-future.jpg"
+thumbnail:          "content/images/blog/headers/elao-rebrand-banner-future.jpg"
 tags:               ["Rebranding", "Elao"]
 categories:         ["Elao"]
 authors:            ["gfaivre"]
@@ -110,7 +110,7 @@ Rix a dorénavant pour vocation de porter ces métiers, indépendamment, mais en
 
 ##Rix
 
-![Rix](images/posts/2021/rebranding-l-avenir/rix-logo.jpg)
+![Rix](content/images/blog/2021/rebranding-l-avenir/rix-logo.jpg)
 
 Bienvenue à la petite soeur donc, créée en Mars 2020 en plein confinement (bah oui, on ne se refait pas 🤷🏻‍♂️).  
 Elle aura dorénavant la tâche de porter ces métiers gravitant autour de la conception d'applications et ô combien essentiels à leurs cycles de vie.
@@ -194,4 +194,4 @@ Conscient·e·s qu'il ne faut rien considérer comme acquis nous continuerons à
 Client·e·s, partenaires, ami·e·s, collaborateurs·rices ancien·ne·s et actuel·le·s, **merci !**  
 **VOUS** avez tou·te·s, à votre niveau, contribué à créer ce que **NOUS** sommes aujourd'hui.
 
-![breathtaking](images/posts/2021/rebranding-l-avenir/breathtaking.gif)
+![breathtaking](content/images/blog/2021/rebranding-l-avenir/breathtaking.gif)

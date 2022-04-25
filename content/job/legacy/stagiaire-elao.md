@@ -5,8 +5,8 @@ date:           "2017-06-19"
 active:         false
 contractType:   CDI
 
-thumbnail:          "images/posts/thumbnails/stagiaire_pc.jpg"
-header_img:         "images/posts/headers/gate.jpg"
+thumbnail:          "content/images/blog/thumbnails/stagiaire_pc.jpg"
+header_img:         "content/images/blog/headers/gate.jpg"
 tags:               ["stagiaire","web","elao"]
 categories:         ["vie au bureau", "elao"]
 

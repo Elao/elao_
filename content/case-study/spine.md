@@ -12,7 +12,7 @@ size: 4 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony"]
 members: ["mcolin", "tjarrand"]
-images: ["images/casestudies/headers/spine-banner.jpg"]
+images: ["content/images/casestudies/headers/spine-banner.jpg"]
 ---
 
 ## Expertise développement

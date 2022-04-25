@@ -6,8 +6,8 @@ lastModified:       "2021-06-18"
 
 description:        "Migration continue de mots de passe legacy d'une méthode d'encodage à une autre dans Symfony. Par exemple, migrer de md5 vers bcrypt."
 
-thumbnail:          "images/posts/thumbnails/password.jpg"
-banner:             "images/posts/headers/password.jpg"
+thumbnail:          "content/images/blog/thumbnails/password.jpg"
+banner:             "content/images/blog/headers/password.jpg"
 tags:               ["Sécurité", "Migration", "Encodage", "Symfony"]
 categories:         ["Dev", "Symfony"]
 outdated: >
@@ -38,10 +38,8 @@ Par exemple, pour une migration de mots de passe de `md5` vers `bcrypt`, lors d'
 
 Ainsi, chaque utilisateur migrera son mot de passe lors de sa première connexion à la nouvelle plateforme. Une fois que tous les utilisateurs auront été migrés, nous pourront effacer complètement les hashs `md5` de la base de données et n'utiliser que `bcrypt`.
 
-<figure style="text-align: center;">
-    <a href="images/posts/2017/password-encoding-switch.png">
-        <img src="images/posts/2017/password-encoding-switch.png" style="max-width: 600px;" alt="Logique de migration" />
-    </a>
+<figure>
+    <img src="content/images/blog/2017/password-encoding-switch.png" style="max-width: 600px;" alt="Logique de migration" />
     <figcaption>Processus d'authentification</figcaption>
 </figure>
 

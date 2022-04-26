@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .nav {
   display: flex;
   align-items: flex-end;
@@ -62,7 +64,7 @@
   a:hover,
   a:focus,
   a:active {
-    color: darken($color-primary, 10%);
+    color: color.adjust($color-primary, $lightness: -10%);
 
     span {
       &:after {
@@ -89,8 +91,8 @@
       }
 
       &:before {
-        left: -5px; 
-        content: '['; 
+        left: -5px;
+        content: '[';
       }
 
       &:after {
@@ -103,7 +105,7 @@
         transform: none;
         transition: none;
         content: ']';
-        right: -5px; 
+        right: -5px;
       }
     }
   }

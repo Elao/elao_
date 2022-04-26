@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .btn {
   padding: 20px 50px;
   min-height: 67px;
@@ -39,7 +41,7 @@
   &:active,
   &:focus {
     color: #fff;
-    background: darken($color-primary, 5%);
+    background: color.adjust($color-primary, $lightness: -5%);
   }
 }
 
@@ -62,7 +64,7 @@
   &:hover,
   &:active,
   &:focus {
-    background: darken($color-light, 5%);
+    background: color.adjust($color-light, $lightness: -5%);
   }
 
 }

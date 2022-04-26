@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .page-signature {
   padding: 0 110px;
   display: flex;
@@ -31,7 +33,7 @@
 
     &::selection {
       color: #fff;
-      background: transparentize(#fff, .8);
+      background: color.adjust(#fff, $alpha: -.8);
     }
   }
 }

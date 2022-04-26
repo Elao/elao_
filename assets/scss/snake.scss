@@ -1,4 +1,4 @@
-@import "base/_variables";
+@use "base/_variables";
 
 body.snake {
   overflow: hidden;
@@ -11,7 +11,7 @@ body.snake {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-brand;
+  background-color: variables.$color-brand;
 
   .snake-renderer {
     width: 100vw;
@@ -22,9 +22,9 @@ body.snake {
     .point {
       animation: popIn 400ms ease-out;
 
-      &.color-0 { fill: $color-primary; }
-      &.color-1 { fill: $color-dark; }
-      &.color-2 { fill: $color-info; }
+      &.color-0 { fill: variables.$color-primary; }
+      &.color-1 { fill: variables.$color-dark; }
+      &.color-2 { fill: variables.$color-info; }
     }
 
     /** HEADER */
@@ -45,7 +45,7 @@ body.snake {
     /** Crash Animation */
 
     .crash__symbol {
-        fill: $code-primary;
+        fill: variables.$code-primary;
         font-family: 'faktum bold';
         font-size: 0.05em;
         text-anchor: middle;
@@ -70,8 +70,8 @@ body.snake {
   /** END SCREEN */
 
   .snake__end-panel {
-    background-color: $color-secondary;
-    color: $color-brand;
+    background-color: variables.$color-secondary;
+    color: variables.$color-brand;
     font-family: 'faktum regular';
     padding: 3em;
     font-size: 1.2em;
@@ -91,7 +91,7 @@ body.snake {
       margin-bottom: 1em;
 
       > span {
-        color: $color-primary;
+        color: variables.$color-primary;
         font-family: 'faktum bold';
       }
     }
@@ -99,7 +99,7 @@ body.snake {
     .end__score {
       font-size: 4em;
       font-family: 'antikor medium';
-      color: $color-primary;
+      color: variables.$color-primary;
     }
   }
 
@@ -126,8 +126,8 @@ body.snake {
       font-size: 0.5em;
       margin: 0.1em;
       padding: 0.8em;
-      color: $color-secondary;
-      background: $color-tertiary;
+      color: variables.$color-secondary;
+      background: variables.$color-tertiary;
       border-radius: 0.2em;
     }
 
@@ -190,8 +190,8 @@ body.snake {
         height: 2em;
         padding: 0;
         border: none;
-        color: $color-primary;
-        background: $color-secondary;
+        color: variables.$color-primary;
+        background: variables.$color-secondary;
         font-size: 2em;
         font-family: "faktum bold";
         opacity: 0.2;

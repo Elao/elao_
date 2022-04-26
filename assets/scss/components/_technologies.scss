@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .technologies {
   margin: 20px 0 0;
   padding: 0;
@@ -40,7 +42,7 @@
     &:hover,
     &:active,
     &:focus {
-      color: darken($color-light, 10%);
+      color: color.adjust($color-light, $lightness: -10%);
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .brick-send-message {
   @extend .brick;
   @extend .brick--large;
@@ -39,7 +41,7 @@
   &:active,
   &:focus {
     color: $color-light;
-    background: darken($color-dark, 2%);
+    background: color.adjust($color-dark, $lightness: -2%);
 
     .animation {
       .letter__arrow {

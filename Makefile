@@ -143,7 +143,7 @@ ssh@production:
 ## Test - Most basic test: check the build command, without images
 test: build.content.without-images
 test:
-	$(call message_success, Most basic tests succeeded. You can ensure a \`make build-content\` is successful for more complete tests.)
+	$(call message_success, Most basic tests succeeded. You can ensure a \`make build.content\` is successful for more complete tests.)
 
 ############
 # Utils    #

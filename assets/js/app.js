@@ -22,7 +22,6 @@ function init() {
     } catch {
         // Fail silently.
     }
-
 }
 
 // Social Post Generator

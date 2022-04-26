@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .alert {
   padding: 30px;
   display: flex;
@@ -20,11 +22,11 @@
 }
 
 .alert--warning {
-  color: transparentize(#fff, .1);
+  color: color.adjust(#fff, $alpha: -.1);
   background: $color-warning;
 }
 
 .alert--info {
-  color: transparentize(#fff, .1);
+  color: color.adjust(#fff, $alpha: -.1);
   background: $color-info;
 }

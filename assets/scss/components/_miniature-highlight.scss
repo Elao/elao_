@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .miniature-highlight {
   margin: 0 0 70px;
   padding-bottom: 190px;
@@ -85,7 +87,7 @@
     &:hover,
     &:active,
     &:focus {
-      background: darken($color-brand, 2%);
+      background: color.adjust($color-brand, $lightness: -2%);
     }
 
     .title {

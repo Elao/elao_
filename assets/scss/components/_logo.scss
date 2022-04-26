@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .logo {
   width: 95px;
 
@@ -13,7 +15,7 @@
       opacity: 0;
       -webkit-animation: fade 0 both;
       animation: fade 0 both;
-      animation-delay: #{$i / 10}s;
+      animation-delay: #{math.div($i, 10)}s;
       animation-iteration-count: 1;
     }
   }
@@ -37,7 +39,7 @@
   100% { opacity : 1; }
 }
 
-@keyframe fade {
+@keyframes fade {
   0% { opacity: 0; }
   60% { opacity: 0; }
   100% { opacity : 1; }
@@ -52,7 +54,7 @@
   100% { transform: translateX(0); }
 }
 
-@keyframe type {
+@keyframes type {
   0% { transform: translateX(-240px); }
   20% { transform: translateX(-240px); }
   40% { transform: translateX(-191px); }

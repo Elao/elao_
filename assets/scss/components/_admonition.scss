@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .admonition {
   margin: 60px 0;
   padding: 45px 60px 30px;
@@ -61,7 +63,7 @@
 
 .admonition.success {
   background: #3ec789;
-  color: darken(#3ec789, 40%);
+  color: color.adjust(#3ec789, $lightness: -40%);
 
   &:before {
     background: #3ec789;
@@ -72,13 +74,13 @@
   }
 
   a {
-    color: darken(#3ec789, 40%);
-    border-bottom-color: darken(#3ec789, 40%);
+    color: color.adjust(#3ec789, $lightness: -40%);
+    border-bottom-color: color.adjust(#3ec789, $lightness: -40%);
 
     &:hover,
     &:active,
     &:focus {
-      color: darken(#3ec789, 40%);
+      color: color.adjust(#3ec789, $lightness: -40%);
     }
   }
 }

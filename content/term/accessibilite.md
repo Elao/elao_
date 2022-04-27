@@ -28,3 +28,7 @@ Le WCAG est une norme internationale d’accessibilité web, créée par le W3C,
 ## Pourquoi c’est bon pour le SEO ? 
 
 Un site ergonomique et accessible pour les humains, c’est aussi un site accessible pour les robots d’indexation des moteurs de recherche (Google, Bing, etc.), ce qui profite à une meilleure visibilité sur les moteurs de recherche. En effet, le contenu est facilement identifiable et peut-être même structuré de façon à être intégré dans les fonctionnalités avancées du moteur de recherche, comme par exemple un comparatif de prix, une mise en avant du temps de cuisson d’une recette de cuisine, etc. 
+
+!!! Utile
+    L'équipe d'Elao a développé un bundle Symfony, Accesseo. Celui-ci permet de remonter des informations simples à détecter sur des critères d'accessibilité et de SEO, au moment du développement. 
+    [En savoir plus sur Accesseo](accesseo.md). 

@@ -103,7 +103,8 @@
         ]
     },
     "conflict": {
-        "symfony/symfony": "*"
+        "symfony/symfony": "*",
+        "symfony/dom-crawler": "> 5.4.5"
     },
     "extra": {
         "symfony": {

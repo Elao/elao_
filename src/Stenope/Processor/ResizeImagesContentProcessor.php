@@ -26,7 +26,8 @@ class ResizeImagesContentProcessor implements ProcessorInterface
         private string $type,
         private string $preset,
         private string $property = 'content'
-    ) {}
+    ) {
+    }
 
     public function __invoke(array &$data, Content $content): void
     {
@@ -66,13 +67,13 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
+        $source = $this->normalizePath($source, $content);
+
         if (!$this->isSupportedImage($source)) {
             $this->processUnsupportedImage($element, $source);
 
             return;
         }
-
-        $source = $this->normalizePath($source, $content);
 
         $dpr1 = $this->resizedUrlGenerator->withPreset($source, $this->preset);
         $dpr2 = $this->resizedUrlGenerator->withPreset($source, $this->preset, ['dpr' => 2]);
@@ -96,13 +97,13 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
+        $source = $this->normalizePath($source, $content);
+
         if (!$this->isSupportedImage($source)) {
             $this->processUnsupportedImage($element, $source);
 
             return;
         }
-
-        $source = $this->normalizePath($source, $content);
 
         $resized = $this->resizedUrlGenerator->withPreset($source, $this->preset);
 

@@ -9,22 +9,16 @@ use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 class GlideUrlBuilder
 {
-    private UrlGeneratorInterface $urlGenerator;
-    private string $basePath;
-    private ?string $signKey;
-
-    public function __construct(UrlGeneratorInterface $urlGenerator, string $basePath, ?string $signKey = null)
-    {
-        $this->basePath = $basePath;
-        $this->signKey = $signKey;
-        $this->urlGenerator = $urlGenerator;
+    public function __construct(
+        private UrlGeneratorInterface $urlGenerator,
+        private string $basePath,
+        private ?string $signKey = null,
+    ) {
     }
 
     public function buildUrl(string $filename, array $params = []): string
     {
-        $urlBuilder = UrlBuilderFactory::create($this->basePath, $this->signKey);
-
-        return $urlBuilder->getUrl($filename, $params);
+        return UrlBuilderFactory::create($this->basePath, $this->signKey)->getUrl($filename, $params);
     }
 
     public function getPublicCachePath(string $cachePath): string

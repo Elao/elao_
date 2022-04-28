@@ -67,7 +67,7 @@ build.content.without-images:
 	ulimit -S -n 2048 && symfony console stenope:build
 
 ## Build - Build static site with assets
-build.static: build build.content
+build.static: build.assets build.content
 
 ## Serve - Serve the static version
 serve.static:

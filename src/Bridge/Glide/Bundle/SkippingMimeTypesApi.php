@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace App\Bridge\Glide\Bundle;
 
 use League\Glide\Api\ApiInterface;
-use Symfony\Component\Mime\MimeTypes;
-use Symfony\Component\Mime\MimeTypesInterface;
 
 /**
  * An API implementation allowing to skip Glide resize on some specific MIME types
@@ -17,14 +15,13 @@ class SkippingMimeTypesApi implements ApiInterface
 {
     public function __construct(
         private ApiInterface $decorated,
-        private array $skippedTypes = ['image/gif'],
-        private MimeTypesInterface $types = new MimeTypes()
+        private SkippedTypes $skippedTypes,
     ) {
     }
 
     public function run($source, array $params): string
     {
-        if (\in_array($this->types->guessMimeType($source), $this->skippedTypes, true)) {
+        if ($this->skippedTypes->isSkippedFile($source)) {
             return (string) file_get_contents($source);
         }
 

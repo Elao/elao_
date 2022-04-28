@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Stenope\Processor;
 
 use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
+use App\Bridge\Glide\Bundle\SkippedTypes;
+use App\Bridge\Glide\Bundle\SkippingMimeTypesApi;
 use Stenope\Bundle\Behaviour\HtmlCrawlerManagerInterface;
 use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
@@ -16,30 +18,15 @@ use Symfony\Component\Filesystem\Path;
  */
 class ResizeImagesContentProcessor implements ProcessorInterface
 {
-    private ResizedUrlGenerator $resizedUrlGenerator;
-    private HtmlCrawlerManagerInterface $crawlers;
-
-    private string $type;
-    private string $preset;
-    private string $property;
-
-    private string $projectDir;
-
     public function __construct(
-        ResizedUrlGenerator $resizedUrlGenerator,
-        HtmlCrawlerManagerInterface $crawlers,
-        string $projectDir,
-        string $type,
-        string $preset,
-        string $property = 'content'
-    ) {
-        $this->resizedUrlGenerator = $resizedUrlGenerator;
-        $this->crawlers = $crawlers;
-        $this->projectDir = $projectDir;
-        $this->type = $type;
-        $this->preset = $preset;
-        $this->property = $property;
-    }
+        private ResizedUrlGenerator $resizedUrlGenerator,
+        private HtmlCrawlerManagerInterface $crawlers,
+        private SkippedTypes $skippedTypes,
+        private string $projectDir,
+        private string $type,
+        private string $preset,
+        private string $property = 'content'
+    ) {}
 
     public function __invoke(array &$data, Content $content): void
     {
@@ -79,6 +66,12 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
+        if (!$this->isSupportedImage($source)) {
+            $this->processUnsupportedImage($element, $source);
+
+            return;
+        }
+
         $source = $this->normalizePath($source, $content);
 
         $dpr1 = $this->resizedUrlGenerator->withPreset($source, $this->preset);
@@ -103,11 +96,25 @@ class ResizeImagesContentProcessor implements ProcessorInterface
             return;
         }
 
+        if (!$this->isSupportedImage($source)) {
+            $this->processUnsupportedImage($element, $source);
+
+            return;
+        }
+
         $source = $this->normalizePath($source, $content);
 
         $resized = $this->resizedUrlGenerator->withPreset($source, $this->preset);
 
         $element->setAttribute('poster', $resized);
+    }
+
+    /**
+     * In case the image is not supported, we'll still generate an URL with Glide, but with no preset/options:
+     */
+    private function processUnsupportedImage(\DOMElement $element, string $source): void
+    {
+        $element->setAttribute('src', $this->resizedUrlGenerator->withOptions($source, []));
     }
 
     private function isLocalImage(string $url): bool
@@ -148,5 +155,15 @@ class ResizeImagesContentProcessor implements ProcessorInterface
     private function isFilesystemProvider(Content $content): bool
     {
         return LocalFilesystemProviderFactory::TYPE === ($content->getMetadata()['provider'] ?? null);
+    }
+
+    /**
+     * Is the image supported for resize.
+     *
+     * @see SkippingMimeTypesApi
+     */
+    private function isSupportedImage(string $src): bool
+    {
+        return !$this->skippedTypes->isSkippedUrl($src);
     }
 }

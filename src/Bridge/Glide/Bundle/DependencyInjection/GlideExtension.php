@@ -7,6 +7,7 @@ namespace App\Bridge\Glide\Bundle\DependencyInjection;
 use App\Bridge\Glide\Bundle\Controller\ResizeImageController;
 use App\Bridge\Glide\Bundle\GlideUrlBuilder;
 use App\Bridge\Glide\Bundle\ResizedUrlGenerator;
+use App\Bridge\Glide\Bundle\SkippedTypes;
 use League\Flysystem\Filesystem;
 use League\Flysystem\Local\LocalFilesystemAdapter;
 use League\Glide\Responses\SymfonyResponseFactory;
@@ -84,7 +85,9 @@ class GlideExtension extends Extension
         $container->register('glide_source_fs', Filesystem::class)->setArgument(0, new Reference('glide_source'));
         $container->register('glide_cache_fs', Filesystem::class)->setArgument(0, new Reference('glide_cache'));
 
-        $container->getDefinition(Server::class)->replaceArgument(0, [
+        $container->getDefinition(SkippedTypes::class)->replaceArgument('$skippedTypes', $skippedTypes);
+
+        $container->getDefinition(Server::class)->replaceArgument('$config', [
             'source' => new Reference('glide_source_fs'),
             'cache' => new Reference('glide_cache_fs'),
             'response' => new Reference(SymfonyResponseFactory::class),
@@ -92,7 +95,6 @@ class GlideExtension extends Extension
             'presets' => $presets,
             'cache_with_file_extensions' => $cacheWithExtensions,
             'group_cache_in_folders' => $groupCacheInFolders,
-            'skipped_types' => $skippedTypes,
         ])
         ->setPublic(true);
     }

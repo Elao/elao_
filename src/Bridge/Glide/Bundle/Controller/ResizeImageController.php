@@ -15,14 +15,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ResizeImageController
 {
-    private Server $server;
-
-    private ?string $signKey;
-
-    public function __construct(Server $server, ?string $signKey = null)
+    public function __construct(private Server $server, private ?string $signKey = null)
     {
-        $this->server = $server;
-        $this->signKey = $signKey;
     }
 
     public function __invoke(Request $request, string $path): Response

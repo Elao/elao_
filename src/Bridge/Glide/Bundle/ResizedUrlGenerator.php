@@ -11,23 +11,15 @@ use Psr\Log\NullLogger;
 
 class ResizedUrlGenerator
 {
-    private Server $server;
-    private GlideUrlBuilder $glideUrlBuilder;
-    private array $presetsNames;
-    private bool $preGenerate;
     private LoggerInterface $logger;
 
     public function __construct(
-        Server $server,
-        GlideUrlBuilder $glideUrlBuilder,
-        array $presetsNames = [],
-        bool $preGenerate = false,
+        private Server $server,
+        private GlideUrlBuilder $glideUrlBuilder,
+        private array $presetsNames = [],
+        private bool $preGenerate = false,
         ?LoggerInterface $logger = null
     ) {
-        $this->server = $server;
-        $this->glideUrlBuilder = $glideUrlBuilder;
-        $this->presetsNames = $presetsNames;
-        $this->preGenerate = $preGenerate;
         $this->logger = $logger ?? new NullLogger();
     }
 

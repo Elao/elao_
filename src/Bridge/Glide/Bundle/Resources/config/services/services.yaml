@@ -21,12 +21,16 @@ services:
         tags:
             - { name: twig.extension }
 
+    App\Bridge\Glide\Bundle\SkippedTypes:
+        $skippedTypes: !abstract array set by the extension
+
     League\Glide\Responses\SymfonyResponseFactory: ~
 
     League\Glide\Server:
-        factory: [App\Bridge\Glide\Bundle\DecoratingApiServerFactory, create]
+        factory: [App\Bridge\Glide\Bundle\DecoratingApiServerFactory, createWithSkippedTypes]
         arguments:
-            - ~ # $config set by the extension
+            $skippedTypes: '@App\Bridge\Glide\Bundle\SkippedTypes'
+            $config: !abstract set by the extension
 
     App\Bridge\Glide\Bundle\Controller\ResizeImageController:
         public: true

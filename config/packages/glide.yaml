@@ -31,7 +31,7 @@ glide:
         # It's declined with dpr 2x automatically for retina screens.
         article_content:
             w: 1040
-            fit: max
+            fit: fill-max
             dpr: 1
 
         case_study_thumbnail.md:
@@ -49,14 +49,14 @@ glide:
         # It's declined with dpr 2x automatically for retina screens.
         case_study_content:
             w: 1040
-            fit: max
+            fit: fill-max
             dpr: 1
 
         # Base format for images inside a glossary article content.
         # It's declined with dpr 2x automatically for retina screens.
         glossary_content:
             w: 1040
-            fit: max
+            fit: fill-max
             dpr: 1
 
         tribe_banner:

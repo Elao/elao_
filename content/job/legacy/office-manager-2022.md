@@ -4,7 +4,7 @@ title:
     - "un·e Office Manager en alternance"
 description:  "Une position clé et transverse pour organiser le quotidien tant administratif qu'opérationnel."
 date:         "2022-03-10"
-active:       true
+active:       false
 contractType: WORK-STUDY
 place:        "Lyon, télétravail partiel possible"
 hiringDate:   ~
@@ -12,6 +12,8 @@ formation:    ~
 experience:   ~
 remuneration: ~
 ---
+
+> <strong class="disclaimer__title">Avertissement : </strong>Cette annonce est aujourd'hui caduque. Rendez-vous dans <a href="/recrutement/">notre rubrique "Recrutement"</a> pour consulter nos annonces plus récentes.
 
 Afin d'améliorer et de faciliter le travail de l'équipe, nous sommes à la recherche de quelqu'un·e pour nous aider à structurer et organiser le quotidien nécessaire au bon fonctionnement de nos deux métiers:
 

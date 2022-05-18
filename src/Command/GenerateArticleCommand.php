@@ -6,6 +6,7 @@ namespace App\Command;
 
 use App\Model\Member;
 use Stenope\Bundle\ContentManagerInterface;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -18,10 +19,9 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Yaml\Yaml;
 
+#[AsCommand('app:generate:article')]
 class GenerateArticleCommand extends Command
 {
-    protected static $defaultName = 'app:generate:article';
-
     private string $path;
     private ContentManagerInterface $contents;
     private Filesystem $filesystem;

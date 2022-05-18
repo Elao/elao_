@@ -19,10 +19,8 @@ services:
         resource: '../src/'
         exclude:
             - '../src/DependencyInjection/'
-            - '../src/Entity/'
             - '../src/Model/'
             - '../src/Kernel.php'
-            - '../src/Tests/'
             - '../src/Bridge/Glide/Bundle/'
             - '../src/Stenope/Processor/ResizeImagesContentProcessor.php'
             - '../src/Stenope/Provider/SampleRemovalProvider.php'

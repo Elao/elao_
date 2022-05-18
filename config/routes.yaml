@@ -26,3 +26,7 @@ errors_404:
     options:
         stenope:
             sitemap: false
+
+controllers:
+    resource: ../src/Controller/
+    type: attribute

@@ -13,9 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/la-tribu")
- */
+#[Route('/la-tribu')]
 class TeamController extends AbstractController
 {
     private ContentManagerInterface $manager;
@@ -25,9 +23,7 @@ class TeamController extends AbstractController
         $this->manager = $manager;
     }
 
-    /**
-     * @Route(name="team")
-     */
+    #[Route(name: 'team')]
     public function list(): Response
     {
         $members = $this->manager->getContents(Member::class, ['name' => true], ['active' => true]);
@@ -37,9 +33,7 @@ class TeamController extends AbstractController
         ])->setLastModified(ContentUtils::max($members, 'lastModified'));
     }
 
-    /**
-     * @Route("/{member}", name="team_member")
-     */
+    #[Route('/{member}', name: 'team_member')]
     public function show(Member $member): Response
     {
         $articles = $this->manager->getContents(
@@ -61,9 +55,9 @@ class TeamController extends AbstractController
         ])->setLastModified($member->lastModified);
     }
 
-    /**
-     * @Route("/{member}/signature", name="team_member_mail_signature", options={ "stenope": { "sitemap": false }})
-     */
+    #[Route('/{member}/signature', name: 'team_member_mail_signature', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function emailSignature(Member $member): Response
     {
         return $this->render('team/mail_signature.html.twig', [

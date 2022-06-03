@@ -19,7 +19,7 @@ use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Yaml\Yaml;
 
-#[AsCommand('app:generate:article')]
+#[AsCommand('app:generate:article', description: 'Créer un nouvel article', aliases: ['article'])]
 class GenerateArticleCommand extends Command
 {
     private string $path;
@@ -33,11 +33,6 @@ class GenerateArticleCommand extends Command
         $this->filesystem = new Filesystem();
 
         parent::__construct();
-    }
-
-    protected function configure(): void
-    {
-        $this->setDescription('Créer un nouvel article');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int

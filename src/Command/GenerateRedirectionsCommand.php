@@ -11,7 +11,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-#[AsCommand('app:generate-redirections')]
+#[AsCommand('app:generate-redirections', description: 'Generate redirections rules for Nginx.')]
 class GenerateRedirectionsCommand extends Command
 {
     private HtaccessGenerator $generator;
@@ -26,7 +26,6 @@ class GenerateRedirectionsCommand extends Command
     protected function configure(): void
     {
         $this
-            ->setDescription('Generate redirections rules for Nginx.')
             ->addOption('target', 't', InputOption::VALUE_REQUIRED, HtaccessGenerator::TARGET_SITE)
         ;
     }

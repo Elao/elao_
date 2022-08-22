@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Stenope\Listener;
 
 use App\Model\Member;
-use Stenope\Bundle\Command\BuildCommand;
 use Stenope\Bundle\ContentManagerInterface;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleCommandEvent;
@@ -25,7 +24,7 @@ class BuildListener implements EventSubscriberInterface
 
     public function onCommand(ConsoleCommandEvent $event): void
     {
-        if (null !== $event->getCommand() && $event->getCommand()->getName() !== BuildCommand::getDefaultName()) {
+        if (null !== $event->getCommand() && $event->getCommand()->getName() !== 'stenope:build') {
             return;
         }
 

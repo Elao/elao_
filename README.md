@@ -7,17 +7,20 @@ The Elao website.
 Either:
 
 - Docker
-- or a local Node 16+, PHP 8.1+ & Symfony CLI install
+- or a local install, with Node 16+, PHP 8.1+ & Symfony CLI
 
 ## Setup
 
-### Local install
+### Local Install
 
 For a local install, simply install the dependencies with:
 
 ```shell
 make install
 ```
+
+> **Note**
+> You're done! **Next:** see how to [serve the app](#dev).
 
 ### Docker
 
@@ -39,21 +42,11 @@ And install the dependencies with
 make install
 ```
 
-## Commands
+## Dev
 
-When using Docker, use
+### Local Install
 
-```shell
-make sh
-```
-
-to log into the container before running the next commands.
-
-### Start the server
-
-#### Local Install
-
-If you use a local install & Symfony CLI, you can use:
+If you use a **local install**, use
 
 ```shell
 make serve
@@ -61,15 +54,35 @@ make serve
 
 The Symfony CLI exposes you the URL at which the site is available.
 
-#### Using Docker
+> **Note**
+> When using a local install, `make serve` is enough to serve both PHP app and assets.  
+> You're ready to dev!
 
-When using a Docker install, serve the application using:
+### Using Docker
+
+When using a Docker install, serve the PHP application using:
 
 ```shell
 make up
 ```
 
-The site is now available at: http://localhost:8000, but you need to build or serve the assets (see following sections)
+The site is now available at: http://localhost:8000, but you need to build or serve the assets:
+
+For development purposes, start a Webpack dev-server using:
+
+```shell
+make serve.assets
+```
+
+## Commands
+
+> **Warning**
+> When **using Docker** (_not the local install_), you must use
+>
+> ```shell
+> make sh
+> ```
+> to log into the container before running any command.
 
 ### Build assets
 
@@ -78,14 +91,6 @@ Build the assets once using:
 ```shell
 make build.assets
 ```
-
-For development purposes, **on a Docker install**, use a Webpack dev-server using:
-
-```shell
-make serve.assets
-```
-
-**When using a local install, `make serve` is enough to serve both PHP app and assets.**
 
 ## Contributing
 

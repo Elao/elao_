@@ -7,7 +7,7 @@ The Elao website.
 Either:
 
 - Docker
-- or a local install, with Node 16+, PHP 8.1+ & Symfony CLI
+- or a local install, with Node 16+, PHP 8.1+ & [Symfony CLI](https://symfony.com/download)
 
 ## Setup
 
@@ -22,7 +22,10 @@ make install
 > **Note**
 > You're done! **Next:** see how to [serve the app](#dev).
 
-### Docker
+<details>
+<summary>
+<h3>Using Docker</h3>
+</summary>
 
 If you want to use the Docker stack, setup the project using:
 
@@ -41,6 +44,7 @@ And install the dependencies with
 ```shell
 make install
 ```
+</details>
 
 ## Dev
 
@@ -58,7 +62,11 @@ The Symfony CLI exposes you the URL at which the site is available.
 > When using a local install, `make serve` is enough to serve both PHP app and assets.  
 > You're ready to dev!
 
-### Using Docker
+
+<details>
+<summary>
+<h3>Using Docker</h3>
+</summary>
 
 When using a Docker install, serve the PHP application using:
 
@@ -73,6 +81,7 @@ For development purposes, start a Webpack dev-server using:
 ```shell
 make serve.assets
 ```
+</details>
 
 ## Commands
 

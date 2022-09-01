@@ -25,10 +25,11 @@
         "npm": ">=7"
     },
     "dependencies": {
+        "@hotwired/stimulus": "^3.0.0",
+        "@swup/matomo-plugin": "^1.0.0",
         "@symfony/stimulus-bridge": "^3.1.0",
         "aos": "^3.0.0-beta.6",
-        "prismjs": "^1.24.0",
-        "@hotwired/stimulus": "^3.0.0"
+        "prismjs": "^1.24.0"
     },
     "devDependencies": {
         "@swup/debug-plugin": "^1.0",

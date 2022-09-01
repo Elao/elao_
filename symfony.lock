@@ -400,6 +400,9 @@
             "templates/base.html.twig"
         ]
     },
+    "symfony/ux-swup": {
+        "version": "v2.4.0"
+    },
     "symfony/validator": {
         "version": "6.1",
         "recipe": {

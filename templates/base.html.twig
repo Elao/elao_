@@ -136,7 +136,7 @@
 
                     {% block mobile_nav %}
                         <!-- Mobile nav -->
-                        <nav class="nav-mobile">
+                        <nav class="nav-mobile" {{ stimulus_controller('toggle') }}>
                             <div class="nav-mobile__header">
                                 <a href="{{ path('homepage') }}">
                                     {{ block('logo') }}

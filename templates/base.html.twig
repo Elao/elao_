@@ -83,9 +83,18 @@
         <meta name="see" content="{{ encore_entry_js_files('see')|json_encode|escape('html_attr') }}">
         <meta name="see_style" content="{{ encore_entry_css_files('see')|json_encode|escape('html_attr') }}">
     </head>
-    <body>
+    <body {{ stimulus_controller(
+        {
+            'swup_scroll': {},
+            'symfony/ux-swup/swup': {
+                containers: ['#main', '#nav'],
+                cache: true,
+                debug: app.debug,
+            },
+            'swup_matomo': { enabled: site.trackers.matomo is not empty },
+        }) }}>
         {% block header %}
-            <header class="header">
+            <header id="nav" class="header">
                 <div class="container">
                     <!--
                         Todo :
@@ -129,7 +138,7 @@
 
                     {% block mobile_nav %}
                         <!-- Mobile nav -->
-                        <nav class="nav-mobile">
+                        <nav class="nav-mobile" {{ stimulus_controller('toggle') }}>
                             <div class="nav-mobile__header">
                                 <a href="{{ path('homepage') }}">
                                     {{ block('logo') }}
@@ -160,7 +169,7 @@
                 </div>
             </header>
         {% endblock %}
-        <main>
+        <main id="main">
             {% block content %}{% endblock %}
         </main>
         {% block footer %}

@@ -34,6 +34,7 @@
         "symfony/string": "^6.1",
         "symfony/translation": "^6.1",
         "symfony/twig-bundle": "^6.1",
+        "symfony/ux-swup": "^2.4",
         "symfony/validator": "^6.1",
         "symfony/web-link": "^6.1",
         "symfony/webpack-encore-bundle": "^1.11",

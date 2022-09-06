@@ -19,3 +19,14 @@
         {{ asset(path|glide_image_preset(preset, { dpr: 2 })) }} 2x
     "
 {% endmacro %}
+
+{% macro htmlAttributes(attributes) %}
+    {%- for attrname, attrvalue in attributes -%}
+        {{- " " -}}
+        {%- if attrvalue is same as(true) -%}
+            {{- attrname }}="{{ attrname }}"
+            {%- elseif attrvalue is not same as(false) -%}
+                {{- attrname }}="{{ attrvalue }}"
+        {%- endif -%}
+    {%- endfor -%}
+{% endmacro %}

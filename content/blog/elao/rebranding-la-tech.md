@@ -31,7 +31,7 @@ Du sur-mesure quoi, comme pour les projets client !
 
 En tant qu'experts Symfony chez Elao, ça nous a paru évident : pour maîtriser complètement notre base de code, développons notre site avec Symfony, puis servons-le en statique !
 
-Et ça tombait bien, [Thomas](../../member/tjarrand.yaml) et [Maxime](../../member/msteinhausser.yaml), de l'équipe, étaient justement en train de plancher sur un projet open-source avec cette idée en tête.
+Et ça tombait bien, Thomas et [Maxime](../../member/msteinhausser.yaml), de l'équipe, étaient justement en train de plancher sur un projet open-source avec cette idée en tête.
 
 Cet outil fait maison, c'est [Stenope](https://stenopephp.github.io/Stenope/).
 

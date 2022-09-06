@@ -14,7 +14,7 @@ authors:            ["aldeboissieu", "adefrance"]
 ---
 
 « SEO et accessibilité : et si on relevait le niveau ? » C'est le titre de la conférence
-qu'[Amélie](../../member/adefrance.yaml) (intégratrice) et [Anne-Laure](../../member/aldeboissieu.yaml) (développeuse web) ont
+qu'[Amélie](../../member/adefrance.yaml) (intégratrice) et Anne-Laure (développeuse web) ont
 donné lors du forum PHP (2021), organisé par l'AFUP.
 
 Nous avons proposé à cette occasion, avec nos deux expériences conjointes de développeuse web et d'intégratrice experte

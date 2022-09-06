@@ -3,22 +3,24 @@
 {% set noindex = true %}
 
 {% block content %}
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('blog') }}">
-                <span itemprop="name">Blog</span>
-            </a>
-            <meta itemprop="position" content="1"/>
-        </li>
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">#{{ tag|u.camel.title }}</span>
-            </a>
-            <meta itemprop="position" content="2"/>
-        </li>
-    </ol>
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('blog') }}">
+                    <span itemprop="name">Blog</span>
+                </a>
+                <meta itemprop="position" content="1"/>
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">#{{ tag|u.camel.title }}</span>
+                </a>
+                <meta itemprop="position" content="2"/>
+            </li>
+        </ol>
 
-    {{ block('articles') }}
+        {{ block('articles') }}
+    </div>
 
     {% include 'blog/pagination.html.twig' with {
         route: 'blog_tag_page',

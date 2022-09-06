@@ -85,11 +85,13 @@
     </head>
     <body {{ stimulus_controller(
         {
+            'swup_scroll': {},
             'symfony/ux-swup/swup': {
                 containers: ['#main', '#nav'],
+                cache: true,
+                debug: app.debug,
             },
             'swup_matomo': { enabled: site.trackers.matomo is not empty },
-            'swup_scroll': {}
         }) }}>
         {% block header %}
             <header id="nav" class="header">

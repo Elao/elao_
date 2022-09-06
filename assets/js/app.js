@@ -4,14 +4,10 @@ import '../scss/style.scss';
 import './bootstrap';
 import AOS from 'aos';
 
-// import Toggle from './feature/Toggle';
 import Launcher from './feature/Launcher';
 import SocialPostGenerator from './feature/SocialPostGenerator';
 
 function init() {
-    // Mobile navigation
-    // new Toggle('.nav-toggle', { '.nav-mobile': 'nav-mobile--open', 'body': 'no-scroll' });
-
     // S.E.E
     try {
         new Launcher(

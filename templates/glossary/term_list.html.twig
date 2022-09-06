@@ -4,12 +4,12 @@
         <li>
             {% if term.show %}
                 <a href="{{ path('glossary_term', { term: term.slug })}}" class="{{ item_class|default('technologies__item') }}">
-                    <img src="{{ asset(term.logo) }}" alt="Logo {{ term.logo }}">
+                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="Logo {{ term.logo }}">
                     {{ term.name }}
                 </a>
             {% else %}
                 <div class="{{ item_class|default('technologies__item') }}">
-                    <img src="{{ asset(term.logo) }}" alt="Logo {{ term.logo }}">
+                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="Logo {{ term.logo }}">
                     {{ term.name }}
                 </div>
             {% endif %}

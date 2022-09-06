@@ -1,5 +1,6 @@
 ---
 name: "Paiement en ligne"
+logo: ~
 title: 
  - "Intégration d'une solution de paiement en ligne" 
  - "pour votre application"

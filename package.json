@@ -26,7 +26,9 @@
     },
     "dependencies": {
         "@hotwired/stimulus": "^3.0.0",
+        "@swup/fade-theme": "^1.0",
         "@swup/matomo-plugin": "^1.0.0",
+        "@swup/progress-plugin": "^1.2.1",
         "@swup/scroll-plugin": "^1.3.1",
         "@symfony/stimulus-bridge": "^3.1.0",
         "aos": "^3.0.0-beta.6",
@@ -34,7 +36,6 @@
     },
     "devDependencies": {
         "@swup/debug-plugin": "^1.0",
-        "@swup/fade-theme": "^1.0",
         "@swup/forms-plugin": "^1.0",
         "@swup/slide-theme": "^1.0",
         "@symfony/ux-swup": "file:vendor/symfony/ux-swup/Resources/assets",

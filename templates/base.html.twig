@@ -83,16 +83,18 @@
         <meta name="see" content="{{ encore_entry_js_files('see')|json_encode|escape('html_attr') }}">
         <meta name="see_style" content="{{ encore_entry_css_files('see')|json_encode|escape('html_attr') }}">
     </head>
-    <body {{ stimulus_controller(
-        {
-            'swup_scroll': {},
-            'symfony/ux-swup/swup': {
-                containers: ['#main', '#nav'],
-                cache: true,
-                debug: app.debug,
-            },
-            'swup_matomo': { enabled: site.trackers.matomo is not empty },
-        }) }}>
+    <body
+        {{ stimulus_controller('swup_plugins')
+         | stimulus_controller('symfony/ux-swup/swup', {
+               containers: ['#main', '#nav'],
+               cache: true,
+               animateHistoryBrowsing: true,
+               debug: app.debug,
+           })
+         | stimulus_controller('swup_matomo', {
+               enabled: site.trackers.matomo is not empty,
+           })
+        }}>
         {% block header %}
             <header id="nav" class="header">
                 <div class="container">

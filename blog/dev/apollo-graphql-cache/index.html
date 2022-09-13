@@ -562,7 +562,7 @@ client
     <span class="token property">completed</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le case de la première car les données ne sont pas stockées avec la même clé de cache.</p>
+<p>Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le cache de la première car les données ne sont pas stockées avec la même clé de cache.</p>
 <p>La redirection de cache permettra d'aller chercher ces données dans le cache d'une autre requête.</p>
 <pre class="code-multiline language-javascript"><code class="language-javascript" id="395d3fcfc81c38e4d143ad0342829c32"><span class="token keyword module">import</span> <span class="token imports"><span class="token punctuation">{</span> <span class="token maybe-class-name">InMemoryCache</span> <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'apollo-cache-inmemory'</span>
 

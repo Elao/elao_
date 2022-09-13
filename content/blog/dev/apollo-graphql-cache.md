@@ -313,7 +313,7 @@ query Todo($id: ID!) {
 }
 ```
 
-Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le case de la première car les données ne sont pas stockées avec la même clé de cache.
+Les deux requêtes utilisent les même données mais Apollo fera la seconde requête même si l'objet est déjà dans le cache de la première car les données ne sont pas stockées avec la même clé de cache.
 
 La redirection de cache permettra d'aller chercher ces données dans le cache d'une autre requête.
 

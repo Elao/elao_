@@ -299,16 +299,16 @@ Les développeurs web sont souvent confrontés à des problématiques DNS (wildc
 <h3 id="etape-1-configuration-de-rndc" class="anchor-title"><a href="#etape-1-configuration-de-rndc">Etape 1: Configuration de rndc</a></h3>
 <p><strong>rndc</strong> est l'utilitaire qui permet la configuration du serveur DNS. Vous devez tout d'abord créer un fichier de configuration ainsi qu'une clé secrète.</p>
 <p>Saisissez les commandes suivantes dans votre terminal pour générer le fichier de configuration et la clé secrète :</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="677095399f3e5004ba3e9f04fb446da1"><span class="token operator">&gt;</span> <span class="token function">sudo</span> -s
-rndc-confgen -b <span class="token number">256</span> <span class="token operator">&gt;</span> /etc/rndc.conf
-<span class="token function">head</span> -n5 /etc/rndc.conf <span class="token operator">|</span> <span class="token function">tail</span> -n4 <span class="token operator">&gt;</span> /etc/rndc.key</code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="677095399f3e5004ba3e9f04fb446da1"><span class="token operator">&gt;</span> <span class="token function">sudo</span> <span class="token parameter variable">-s</span>
+rndc-confgen <span class="token parameter variable">-b</span> <span class="token number">256</span> <span class="token operator">&gt;</span> /etc/rndc.conf
+<span class="token function">head</span> <span class="token parameter variable">-n5</span> /etc/rndc.conf <span class="token operator">|</span> <span class="token function">tail</span> <span class="token parameter variable">-n4</span> <span class="token operator">&gt;</span> /etc/rndc.key</code></pre>
 <p>Attention : La commande r<strong>ndc-confgen</strong> est extrêmement pratique pour générer les fichiers de configurations <strong>rndc</strong>, mais il se peut qu'il initialise un port par défaut différent de celui de <strong>named</strong>.
 Lancez les commandes suivantes, et assurez-vous que les ports sont identiques dans les deux fichiers de configurations /<strong>etc/named.conf</strong> et <strong>/etc/rndc.conf</strong>, si ce n'est pas le cas, éditez les fichiers et uniformisez les.</p>
 <pre class="code-multiline language-bash"><code class="language-bash" id="1182500b7cda165a8ae996012626f04f"><span class="token function">cat</span> /etc/named.conf <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'inet'</span>
 <span class="token function">cat</span> /etc/rndc.conf <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">'default-port'</span></code></pre>
 <h3 id="etape-2-activer-bind" class="anchor-title"><a href="#etape-2-activer-bind">Etape 2 : Activer BIND</a></h3>
 <p>Nous devons maintenant configurer <strong>Bind</strong> pour qu'il se lance au démarrage. Pour se faire, on utilisera les commandes suivantes:</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="adb544bb02d1df7b37e13ed817c8af62">launchctl load -w /System/Library/LaunchDaemons/org.isc.named.plist
+<pre class="code-multiline language-bash"><code class="language-bash" id="adb544bb02d1df7b37e13ed817c8af62">launchctl load <span class="token parameter variable">-w</span> /System/Library/LaunchDaemons/org.isc.named.plist
 <span class="token builtin class-name">echo</span> <span class="token string">"launchctl start org.isc.named"</span> <span class="token operator">&gt;&gt;</span> /etc/launchd.conf</code></pre>
 <p>Puis nous n'avons plus qu'à démarrer le démon.</p>
 <pre class="code-multiline"><code id="2de3cb95d13ef660e22f1dd6c1f56927">/usr/bin/named</code></pre>

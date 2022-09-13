@@ -327,15 +327,15 @@
 /elao_/resized/content/images/blog/2012/memory_usage.png/7cd6f1e66c0730378d99a34ab6385af1.png 2x," id="graphite">
 <h1 id="install-graphite" class="anchor-title"><a href="#install-graphite">Install Graphite</a></h1>
 <h2 id="installing-graphite-dependencies" class="anchor-title"><a href="#installing-graphite-dependencies">Installing graphite dependencies</a></h2>
-<pre class="code-multiline language-bash"><code class="language-bash" id="98da77ef6d314d18f2a06231320991da"><span class="token function">apt-get</span> <span class="token function">install</span> -y python2.6 python-pip python-cairo python-django python-django-tagging
-<span class="token function">apt-get</span> <span class="token function">install</span> -y libapache2-mod-wsgi python-twisted python-memcache python-pysqlite2 python-simplejson
+<pre class="code-multiline language-bash"><code class="language-bash" id="98da77ef6d314d18f2a06231320991da"><span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> python2.6 python-pip python-cairo python-django python-django-tagging
+<span class="token function">apt-get</span> <span class="token function">install</span> <span class="token parameter variable">-y</span> libapache2-mod-wsgi python-twisted python-memcache python-pysqlite2 python-simplejson
 pip <span class="token function">install</span> whisper
 pip <span class="token function">install</span> carbon
 pip <span class="token function">install</span> graphite-web
 
 <span class="token comment"># Setup a vhost by grabbing the example the graphite team released on their repo.</span>
 <span class="token comment"># In this file, you'll provide the url used to access to your Graphite dashboard</span>
-<span class="token function">wget</span> https://raw.github.com/tmm1/graphite/master/examples/example-graphite-vhost.conf -O /etc/apache2/sites-available/graphite</code></pre>
+<span class="token function">wget</span> https://raw.github.com/tmm1/graphite/master/examples/example-graphite-vhost.conf <span class="token parameter variable">-O</span> /etc/apache2/sites-available/graphite</code></pre>
 <pre class="code-multiline language-bash"><code class="language-bash" id="e417cfd05864ba10eb197dff62ae67d0"><span class="token comment"># If you are running on a Debian, don't forget to replace in the vhost, the WSGISocketPrefix value by the following:</span>
 WSGISocketPrefix /var/run/apache2/wsgi</code></pre>
 <h2 id="configuring-graphite" class="anchor-title"><a href="#configuring-graphite">Configuring graphite</a></h2>
@@ -380,7 +380,7 @@ WSGISocketPrefix /var/run/apache2/wsgi</code></pre>
 <h1 id="let-s-go-back-to-the-installation-process" class="anchor-title"><a href="#let-s-go-back-to-the-installation-process">Let's go back to the installation process</a></h1>
 <pre class="code-multiline language-bash"><code class="language-bash" id="cfe5036c5416682c827647795ba43a0d"><span class="token builtin class-name">cd</span> /opt/graphite/webapp/graphite
 python manage.py syncdb
-<span class="token function">chown</span> -R www-data:www-data /opt/graphite/storage/</code></pre>
+<span class="token function">chown</span> <span class="token parameter variable">-R</span> www-data:www-data /opt/graphite/storage/</code></pre>
 <h2 id="enabling-graphite-host" class="anchor-title"><a href="#enabling-graphite-host">Enabling graphite host</a></h2>
 <pre class="code-multiline language-bash"><code class="language-bash" id="2626d327c365ddfad10f755161da3313">a2ensite graphite
 /opt/graphite/bin/carbon-cache.py start
@@ -398,8 +398,8 @@ python manage.py syncdb
 <span class="token function">make</span>
 <span class="token function">make</span> <span class="token builtin class-name">test</span>
 <span class="token function">sudo</span> <span class="token function">make</span> <span class="token function">install</span>
-<span class="token function">node</span> -v
-<span class="token function">npm</span> -v
+<span class="token function">node</span> <span class="token parameter variable">-v</span>
+<span class="token function">npm</span> <span class="token parameter variable">-v</span>
 
 <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>
 <span class="token function">git</span> clone https://github.com/etsy/statsd

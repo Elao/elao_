@@ -317,8 +317,8 @@ In other words, the keys are not added to the agent until you actually use them.
 <p><strong>You will have to re-enter your passphrase the first time you are using it after a logout or a reboot.</strong></p>
 <h1 id="using-a-profile-dot-file" class="anchor-title"><a href="#using-a-profile-dot-file">Using a «profile dot file»</a></h1>
 <p>For CLI users a partial solution is to add this to your dot files (<code class="code-inline" id="ec20fb240e117fea7b0049c21edf1ef3">.zshrc</code>, <code class="code-inline" id="85cf9b51417c7cfb8766aa6b56f7edb9">.bashrc</code>, <code class="code-inline" id="9e0037ad71166970bde5f910189cc94a">.bash_profile</code> ...).</p>
-<pre class="code-multiline language-shell"><code class="language-shell" id="2e6f5dcc8860d87b59cbce5c40794725">ssh-add -K ~/.ssh/my_private_key <span class="token operator">&amp;&gt;</span> /dev/null
-ssh-add -A <span class="token operator">&amp;&gt;</span> /dev/null</code></pre>
+<pre class="code-multiline language-shell"><code class="language-shell" id="2e6f5dcc8860d87b59cbce5c40794725">ssh-add <span class="token parameter variable">-K</span> ~/.ssh/my_private_key <span class="token operator">&amp;&gt;</span> /dev/null
+ssh-add <span class="token parameter variable">-A</span> <span class="token operator">&amp;&gt;</span> /dev/null</code></pre>
 <p><strong>This will only be effective when using terminal.</strong></p>
 <h1 id="using-a-launch-agent-non-tested-solution" class="anchor-title"><a href="#using-a-launch-agent-non-tested-solution">Using a launch agent (non-tested solution)</a></h1>
 <p>The last solution is to call command <code class="code-inline" id="2da3bcca27a36bfd821f0b01992ff42c">ssh-add -A</code> on every startup of macOS.</p>

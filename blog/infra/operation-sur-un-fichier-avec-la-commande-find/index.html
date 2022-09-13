@@ -291,7 +291,7 @@
                 
                 
                 <body><p>La commande "find" permet non seulement de faire des recherches sur les fichiers de l'arborescence mais également d'exécuter des commandes sur ces mêmes fichiers. Option au combien pratique pour toutes les tâches de maintenance / nettoyage des systèmes !</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="c1369dc8e746632779d5ce25db006262"><span class="token function">find</span> <span class="token builtin class-name">.</span> -name ’*.yml’ -exec <span class="token function">rm</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">;</span></code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="c1369dc8e746632779d5ce25db006262"><span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-name</span> ’*.yml’ <span class="token parameter variable">-exec</span> <span class="token function">rm</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token punctuation">;</span></code></pre>
 <p><strong>Explications :</strong></p>
 <p>La commande ci-dessus va rechercher dans le répertoire courant tous les fichiers correspondant au masque suivant l'option <em>-name</em> et exécuter la commande <em>rm</em> sur le résultat. Cette simple commande permet donc de supprimer <strong>tous</strong> les fichiers de l'arborescence et de la sous-arborescence du répertoire courant suffixés par <strong><em>.yml</em></strong>.</p>
 <p><strong>Syntaxe :</strong></p>

@@ -405,7 +405,7 @@
 <p>While <a href="https://expo.io" target="_blank">Expo</a> might be fine for experimenting and quickly bootstraping an App, it's not compatible with setting up a <em>real release process</em> as stated in our goals.</p>
 <p>So instead, let's go to the <a href="https://facebook.github.io/react-native/docs/getting-started.html#the-react-native-cli" target="_blank">Building Projects with Native Code</a> section of the documentation:</p>
 <p><span class="side-note">🔧</span> Install the React Native cli tool:</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="de687b8dc8dff03844d5696ed423f5e5"><span class="token function">npm</span> <span class="token function">install</span> -g react-native-cli</code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="de687b8dc8dff03844d5696ed423f5e5"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> react-native-cli</code></pre>
 <p><span class="side-note">🔧</span> Create your app and be careful to <strong>choose a name that contains no dots, spaces or other special characters</strong>.</p>
 <pre class="code-multiline language-bash"><code class="language-bash" id="6aa347a2347b00355443ceb7c50086c3">react-native init AcmeApp
 <span class="token builtin class-name">cd</span> AcmeApp</code></pre>
@@ -479,7 +479,7 @@ To do so you will need to generate a personal signing key and to configure your 
 <span class="token key attr-name">MY_RELEASE_KEY_PASSWORD</span><span class="token punctuation">=</span><span class="token value attr-value">{Generate another 32 characters password}</span></code></pre>
 <p><span class="side-note light">💡</span> <em>You'll need to <a href="https://passwordsgenerator.net/" target="_blank">generate 2 passwords</a></em></p>
 <p><span class="side-note">🔧</span> Now generate the keystore key file:</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="b052e6d20cdd18c0c47457be0d42aebf">keytool -genkey -v -keystore ~/.gradle/my_release.keystore -alias my_release -keyalg RSA -keysize <span class="token number">2048</span> -validity <span class="token number">10000</span></code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="b052e6d20cdd18c0c47457be0d42aebf">keytool <span class="token parameter variable">-genkey</span> <span class="token parameter variable">-v</span> <span class="token parameter variable">-keystore</span> ~/.gradle/my_release.keystore <span class="token parameter variable">-alias</span> my_release <span class="token parameter variable">-keyalg</span> RSA <span class="token parameter variable">-keysize</span> <span class="token number">2048</span> <span class="token parameter variable">-validity</span> <span class="token number">10000</span></code></pre>
 <p><span class="side-note">🔧</span> Follow the instructions as below:</p>
 <pre class="code-multiline language-bash"><code class="language-bash" id="2d2c999f44eba6f9a24c03ae81534566">Entrez le mot de passe <span class="token function">du</span> fichier de clés: <span class="token punctuation">{</span>MY_RELEASE_STORE_PASSWORD<span class="token punctuation">}</span>
 Ressaisissez le nouveau mot de passe: <span class="token punctuation">{</span>MY_RELEASE_STORE_PASSWORD<span class="token punctuation">}</span>
@@ -493,7 +493,7 @@ Est-ce <span class="token assign-left variable">CN</span><span class="token oper
 Entrez le mot de passe de la clé pour <span class="token operator">&lt;</span>my_release<span class="token operator">&gt;</span> <span class="token punctuation">{</span>MY_RELEASE_KEY_PASSWORD<span class="token punctuation">}</span>
 Ressaisissez le nouveau mot de passe <span class="token builtin class-name">:</span> <span class="token punctuation">{</span>MY_RELEASE_KEY_PASSWORD<span class="token punctuation">}</span></code></pre>
 <p><span class="side-note">🔧</span> Finally, link the keystore to the project with a symbolic link:</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="43ef3e05ed35691d79ef8db63a0fa904"><span class="token function">ln</span> -s ~/.gradle/my_release.keystore android/app/my_release.keystore</code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="43ef3e05ed35691d79ef8db63a0fa904"><span class="token function">ln</span> <span class="token parameter variable">-s</span> ~/.gradle/my_release.keystore android/app/my_release.keystore</code></pre>
 <h3 id="configure-the-gradle-build" class="anchor-title"><a href="#configure-the-gradle-build">Configure the gradle build</a></h3>
 <p>Edit the <code class="code-inline" id="dc46f9f5dfe204e394fb41395ccd03cf">android/app/build.gradle</code> file and apply the following changes:</p>
 <p><span class="side-note">🔧</span> Insert the following line on <em>line 2:</em></p>
@@ -694,11 +694,11 @@ Run the app on any simulated or real android device found, as a release.</li>
 <h3 id="ios-release" class="anchor-title"><a href="#ios-release">iOS release</a></h3>
 <p>The following command will generate your iOS release:</p>
 <pre class="code-multiline language-bash"><code class="language-bash" id="4ab0d89ffcf3c50ada9dc180f560b5df"><span class="token assign-left variable">ENVFILE</span><span class="token operator">=</span>.env.production xcodebuild <span class="token punctuation">\</span>
-    -workspace ./iOS/AcmeApp.xcodeproj/project.xcworkspace <span class="token punctuation">\</span>
-    -scheme AcmeApp <span class="token punctuation">\</span>
-    -sdk iphoneos <span class="token punctuation">\</span>
-    -configuration AppStoreDistribution archive <span class="token punctuation">\</span>
-    -archivePath ./iOS/release/AcmeApp.xcarchive</code></pre>
+    <span class="token parameter variable">-workspace</span> ./iOS/AcmeApp.xcodeproj/project.xcworkspace <span class="token punctuation">\</span>
+    <span class="token parameter variable">-scheme</span> AcmeApp <span class="token punctuation">\</span>
+    <span class="token parameter variable">-sdk</span> iphoneos <span class="token punctuation">\</span>
+    <span class="token parameter variable">-configuration</span> AppStoreDistribution archive <span class="token punctuation">\</span>
+    <span class="token parameter variable">-archivePath</span> ./iOS/release/AcmeApp.xcarchive</code></pre>
 <p>The archive will be available at <code class="code-inline" id="de367db3d4473ac9117df7fe2465fe3b">./iOS/release/AcmeApp.xcarchive</code> and you can open it in Xcode to build an IPA for development purpose or upload it to the App Store.</p>
 <h3 id="android-release" class="anchor-title"><a href="#android-release">Android release</a></h3>
 <p>The following command will generate your Android release:</p>

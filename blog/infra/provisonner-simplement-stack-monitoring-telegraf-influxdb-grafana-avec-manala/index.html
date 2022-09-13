@@ -432,7 +432,7 @@
 <h2 id="prise-en-main" class="anchor-title"><a href="#prise-en-main">Prise en main</a></h2>
 <h3 id="influxdb" class="anchor-title"><a href="#influxdb">InfluxDB</a></h3>
 <p>InfluxDB dispose d'une interface en ligne de commandes à la manière de <code class="code-inline" id="81c3b080dad537de7e10e0987a4bf52e">mysql</code> pour exécuter des requêtes. Si vous vous connectez en SSH à la machine que vous avez provisonnée, vous devriez pouvoir l'interroger. Vous pouvez par exemple lister les métriques de la base de données "telegraf".</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="65b3939b3136f5f6240a6ced9d3f5c9a">$ influx -execute <span class="token string">'SHOW MEASUREMENTS'</span> -database<span class="token operator">=</span><span class="token string">"telegraf"</span>
+<pre class="code-multiline language-bash"><code class="language-bash" id="65b3939b3136f5f6240a6ced9d3f5c9a">$ influx <span class="token parameter variable">-execute</span> <span class="token string">'SHOW MEASUREMENTS'</span> <span class="token parameter variable">-database</span><span class="token operator">=</span><span class="token string">"telegraf"</span>
 name: measurements
 name
 ----

@@ -304,7 +304,7 @@
 </blockquote>
 <p>En effet, au moment de la rédaction de ce billet, la version courante du plugin "Extra" est la version 1.0.5 qui requiert la version 1.3.0 ou 1.3.1 du plugin sfImageTransformPlugin. Or, la version courante de ce dernier est 1.4.0, mais elle est incompatible avec la dernière version du plugin "Extra". Si bien que si vous essayez d'installer le plugin "Extra" via la ligne de commande <strong>plugin:install</strong>, l'opération échouera car elle installera préalablement la dernière version de sfImageTransformPlugin, donc une version incompatible ! Vous me suivez ? Oui, je sais que ces histoires de versions ne sont pas passionnantes mais si vous souhaitez utiliser sfImageTransformExtraPlugin (et nous le recommandons !), mieux vaut être au courant de ces incompatibilités. Voici donc la démarche que nous préconisons :</p>
 <p>Installer le plugin de base (sfImageTransformPlugin) en ligne de commande en prenant soin de préciser la version souhaitée :</p>
-<pre class="code-multiline language-bash"><code class="language-bash" id="a2a1a41669c96bf1c66b55da2edf8839">./symfony plugin:install --release<span class="token operator">=</span><span class="token number">1.3</span>.1 sfImageTransformPlugin</code></pre>
+<pre class="code-multiline language-bash"><code class="language-bash" id="a2a1a41669c96bf1c66b55da2edf8839">./symfony plugin:install <span class="token parameter variable">--release</span><span class="token operator">=</span><span class="token number">1.3</span>.1 sfImageTransformPlugin</code></pre>
 <p>Pour le plugin "Extra", il faut l'installer manuellement. Pour cela :</p>
 <ul>
 <li>

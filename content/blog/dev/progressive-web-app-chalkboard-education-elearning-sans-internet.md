@@ -10,7 +10,6 @@ tableOfContent: 3
 thumbnail:      "content/images/blog/2017/chalkboard-education/woman-phone.jpg"
 banner:     "content/images/blog/2017/chalkboard-education/woman-phone.jpg"
 tags:           ["Progressive Web App", "Offline", "React", "Symfony"]
-categories:     ["dev", "Symfony", "javascript"]
 
 authors:        ["rhanna"]
 

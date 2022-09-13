@@ -10,7 +10,6 @@ description:        "Comment générer une demande de signature d'un certificat 
 thumbnail:          "content/images/blog/thumbnails/crypto.jpg"
 banner:             "content/images/blog/headers/elao_babyfoot.jpg"
 tags:               ["Infra", "Linux", "SSL", "Certicats", "Sécurité"]
-categories:         ["Infra", "Sécurité", "Linux"]
 
 authors:            ["gfaivre"]
 

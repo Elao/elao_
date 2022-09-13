@@ -9,7 +9,6 @@ description:    "Deuxième article d'une série consacrée aux Design Patterns. 
 thumbnail:      "content/images/blog/thumbnails/schema.jpg"
 banner:     "content/images/blog/headers/header_schema.jpg"
 tags:           ["Design Pattern", "Conception"]
-categories:     ["Dev", "Design Pattern"]
 
 authors:            ["xavierr"]
 

@@ -9,7 +9,6 @@ et plus globalement de qualité web 🪄"
 thumbnail:          "content/images/blog/thumbnails/afup-day-2019.jpg"
 banner:             "content/images/blog/thumbnails/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "forumphp"]
-categories:         ["conference"]
 authors:            ["aldeboissieu", "adefrance"]
 ---
 

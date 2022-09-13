@@ -9,7 +9,6 @@ description:        "Responsive Web Design"
 thumbnail:          "content/images/blog/thumbnails/html5.jpg"
 banner:             "content/images/blog/headers/elao_team_front.jpg"
 tags:               ["CSS", "Webdesign"]
-categories:         ["Dev", "Web", "CSS", "Webdesign"]
 
 authors:            ["fzannettacci"]
 ---

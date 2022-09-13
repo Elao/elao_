@@ -9,7 +9,6 @@ description:        "Elao recherche des passionnés pour développer la tribu pa
 thumbnail:          "content/images/blog/thumbnails/haphpybirthday.jpg"
 banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Paris", "Recrutement", "Tribu",]
-categories:         ["elao", "methodo"]
 
 authors:            ["ssolere"]
 

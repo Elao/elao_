@@ -9,7 +9,6 @@ description:        "Introduction aux principes de base de l'approvisionnement (
 thumbnail:          "content/images/blog/thumbnails/puppet.jpg"
 banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Ansible", "Linux", "Virtualisation"]
-categories:         ["Infra", "Virtualisation", "Provisioning", "Ansible"]
 
 authors:            ["gfaivre"]
 

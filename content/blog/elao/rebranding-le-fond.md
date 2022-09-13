@@ -10,7 +10,6 @@ description:        "On pose les bases."
 
 thumbnail:          "content/images/blog/headers/elao-rebrand-banner-fond.jpg"
 tags:               ["Rebranding", "Elao"]
-categories:         ["Elao"]
 authors:            ["xgorse","cmozzati"]
 tweetId:            "1384417140346920962"
 ---

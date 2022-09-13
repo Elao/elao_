@@ -10,7 +10,6 @@ banner:             "content/images/blog/headers/manalize-virtualiser-son-enviro
 thumbnail:          "content/images/blog/thumbnails/manalize-virtualiser-son-environnement-de-developpement.jpg"
 credits:            { name: 'Mark Mühlberger', url: 'https://unsplash.com/photos/zen35Y3B834' }
 tags:               ["manala", "virtualisation", "ansible", "vagrant",]
-categories:         ["Dev"]
 outdated: >
     Cet article date et contient quelques informations obsolètes.
 

@@ -10,7 +10,6 @@ description:        "Migrer un site web sans interruption de service grâce au r
 thumbnail:          "content/images/blog/thumbnails/pulp_starwars.png"
 banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Apache","Linux","Trucs et astuces"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

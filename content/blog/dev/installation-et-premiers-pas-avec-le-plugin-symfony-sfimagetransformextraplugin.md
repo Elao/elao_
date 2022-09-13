@@ -8,7 +8,6 @@ description:        "Installation et premiers pas avec le plugin Symfony sfImage
 
 thumbnail:          "content/images/blog/thumbnails/toad.jpg"
 tags:               ["Développement", "PHP", "Symfony"]
-categories:         ["PHP", "Symfony"]
 
 authors:            ["xavierr"]
 ---

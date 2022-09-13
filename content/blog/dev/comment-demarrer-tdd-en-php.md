@@ -10,7 +10,6 @@ tableOfContent:     2
 thumbnail:          "content/images/blog/thumbnails/tdd.jpg"
 banner:             "content/images/blog/headers/tdd.jpg"
 tags:               ["PHP", "Test", "TDD"]
-categories:         ["Dev", "PHP"]
 
 authors:            ["rhanna"]
 ---

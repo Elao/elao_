@@ -7,7 +7,6 @@ lastModified:       ~
 description:        "Notre compte-rendu du deuxième jour de l'Afup Day, édition 2021, à distance !"
 thumbnail:          "content/images/blog/2021/afup-day-2021/afup-day-2021-2.png"
 tags:               ["Développement", "afup", "Conférence", "afupDay"]
-categories:         ["conference"]
 authors:            ["bleveque"]
 ---
 

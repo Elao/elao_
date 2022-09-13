@@ -9,7 +9,6 @@ description:        "Et maintenant ?"
 
 thumbnail:          "content/images/blog/headers/elao-rebrand-banner-future.jpg"
 tags:               ["Rebranding", "Elao"]
-categories:         ["Elao"]
 authors:            ["gfaivre"]
 tweetId:            "1392037980945125377"
 ---

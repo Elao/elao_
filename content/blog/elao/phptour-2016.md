@@ -9,7 +9,6 @@ description:        "Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP T
 thumbnail:          "content/images/blog/thumbnails/phptour-thumbnail.jpg"
 banner:             "content/images/blog/headers/phptour-2016.jpg"
 tags:               ["Développement", "Web", "conférence", "afup", "clermont'ech"]
-categories:         ["Actualité", "Web", "conference"]
 
 authors:            ["tjarrand", "bleveque", "msteinhausser", "abenassy", "xavierr", "yheitz", "lhoizey", "rchalas"]
 

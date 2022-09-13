@@ -8,7 +8,6 @@ description:        "Comment gérer une authentification HTTP basique avec HA Pr
 
 thumbnail:          "content/images/blog/thumbnails/lock.png"
 tags:               ["Infra", "HA Proxy", "Linux", "Network"]
-categories:         ["Infra", "HA Proxy", "Linux"]
 
 authors:            ["gfaivre"]
 

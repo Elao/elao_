@@ -9,7 +9,6 @@ description:        "Créer une clé bootable OSX 10.10 Yosemite."
 
 thumbnail:          "content/images/blog/thumbnails/yosemite.jpg"
 tags:               ["OSX"]
-categories:         ["Tech", "OSX"]
 
 authors:            ["gfaivre"]
 

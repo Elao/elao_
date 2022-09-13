@@ -9,7 +9,6 @@ description:        "Nous avons construit plus de 200 applications en nous appuy
 thumbnail:          content/images/blog/headers/whiteboard-product-roadmap.jpg
 credits:            { name: "slidebean", url: "https://unsplash.com/@slidebean" }
 tags:               ["Organisation agile", "Gestion de projet"]
-categories:         ["methodo"]
 authors:            ["cmozzati"]
 tweetId:            "1435891278315671554"
 ---

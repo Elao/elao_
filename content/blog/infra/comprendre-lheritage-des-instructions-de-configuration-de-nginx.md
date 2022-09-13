@@ -9,7 +9,6 @@ description:    "Nginx fonctionne avec une notion de contexte autorisant certain
 thumbnail:      "content/images/blog/thumbnails/geek_love.jpg"
 banner:     "content/images/blog/headers/stickers.jpg"
 tags:           ["infra", "nginx", "linux"]
-categories:     ["infra", "nginx"]
 
 authors:            ["gfaivre"]
 

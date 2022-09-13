@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:      "content/images/blog/thumbnails/stand-up.jpg"
 header_img:     "content/images/blog/headers/stand-up.jpg"
 tags:           ["job", "web", "mobile", "lyon", "frontend", "backend", adminsys", "devops"]
-categories:     ["recrutement", "elao"]
 
 author:    "elao"
 ---

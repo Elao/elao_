@@ -10,7 +10,6 @@ description:        "Chez Elao, nous mesurons désormais l'audience de nos propr
 thumbnail:          "content/images/blog/thumbnails/matomo.jpg"
 banner:             "content/images/blog/headers/matomo.jpg"
 tags:               ["Seo", "RGPD", "Matomo"]
-categories:         ["Dev", "Web"]
 
 authors:            ["aldeboissieu"]
 ---

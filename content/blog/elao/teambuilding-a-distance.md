@@ -8,7 +8,6 @@ description:        "Pour la première fois dans l'histoire d'Elao, nous avons f
 
 thumbnail:          content/images/blog/2021/teambuilding/workadventure.png
 tags:               ["Team building", "Télétravail"]
-categories:         ["Elao"]
 authors:            ["cmozzati"]
 tweetId:            "1395285448122150913"
 ---

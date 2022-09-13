@@ -10,7 +10,6 @@ description:        "On s'outille."
 
 thumbnail:          "content/images/blog/headers/elao-rebrand-banner-tech.jpg"
 tags:               ["Rebranding", "Elao"]
-categories:         ["Elao"]
 authors:            ["tjarrand", "msteinhausser", "adefrance", "aldeboissieu"]
 tweetId:            "1389506062672351242"
 ---

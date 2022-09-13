@@ -9,7 +9,6 @@ description:        "Migration continue de mots de passe legacy d'une méthode d
 thumbnail:          "content/images/blog/thumbnails/password.jpg"
 banner:             "content/images/blog/headers/password.jpg"
 tags:               ["Sécurité", "Migration", "Encodage", "Symfony"]
-categories:         ["Dev", "Symfony"]
 outdated: >
     Cet article date un peu et il est maintenant possible de gérer la migration des
     mots de passe de vos utilisateurs de façon un peu plus native dans Symfony en

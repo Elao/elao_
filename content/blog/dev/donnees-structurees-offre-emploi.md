@@ -9,7 +9,6 @@ date:               "2019-08-26"
 thumbnail:          "content/images/blog/thumbnails/arrows-square.jpg"
 banner:             "content/images/blog/headers/arrows.jpg"
 tags:               ["Seo", "microdata", "rich snippets"]
-categories:         ["Dev", "Web"]
 
 authors:            ["aldeboissieu"]
 ---

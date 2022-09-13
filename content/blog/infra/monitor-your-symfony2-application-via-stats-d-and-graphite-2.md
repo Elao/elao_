@@ -10,7 +10,6 @@ description:        "Monitor your Symfony2 application via Stats.d and Graphite 
 thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 banner:             "content/images/blog/headers/minions.jpg"
 tags:               ["Monitoring", "symfony", "Statd", "infra", "ops"]
-categories:         ["Infra", "Monitoring"]
 
 authors:            ["tbessoussa"]
 ---

@@ -10,7 +10,6 @@ description:        "Après le fond, la forme."
 
 thumbnail:          "content/images/blog/headers/elao-rebrand-header-forme.jpg"
 tags:               ["Rebranding", "Logo"]
-categories:         ["Elao"]
 authors:            ["cmozzati"]
 tweetId:            "1386971321310060546"
 ---

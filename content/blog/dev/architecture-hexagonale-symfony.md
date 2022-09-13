@@ -10,7 +10,6 @@ tableOfContent:     3
 thumbnail:          "content/images/blog/thumbnails/hexagons.jpg"
 banner:             "content/images/blog/headers/hexagons.jpg"
 tags:               ["Architecture", "Conception", "Symfony", "PHP"]
-categories:         ["Dev", "Symfony"]
 
 authors:            ["mcolin"]
 ---

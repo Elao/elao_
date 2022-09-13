@@ -9,7 +9,6 @@ description:        "Les pages de votre application n'ont pas vocation à être 
 thumbnail:          "content/images/blog/thumbnails/judging-sardine-small.jpg"
 banner:             "content/images/blog/headers/judging-sardine-large.jpg"
 tags:               ["Symfony", "seo", "no-index"]
-categories:         ["Dev", "Symfony", "seo"]
 authors:            ["mcolin", "aldeboissieu"]
 
 ---

@@ -10,7 +10,6 @@ description:        "A nice way of handling form label translation"
 
 thumbnail:          "content/images/blog/thumbnails/cool_cat.jpg"
 tags:               ["Symfony", "Form", "Theming", "Translation"]
-categories:         ["Dev", "Form", "Symfony"]
 authors:            ["tjarrand"]
 ---
 

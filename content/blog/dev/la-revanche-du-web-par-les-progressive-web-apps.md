@@ -9,7 +9,6 @@ description:    "Les Progressives Web Apps ont pour objectif de rivaliser avec l
 thumbnail:      "content/images/blog/thumbnails/pwa-general.jpg"
 banner:     "content/images/blog/2016/pwa/pwa-general.jpg"
 tags:           ["Progressive Web App", "Service Worker", "Mobile", "Offline"]
-categories:     ["dev"]
 
 authors:        ["rhanna"]
 

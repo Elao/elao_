@@ -8,7 +8,6 @@ description:        "Django (3ème partie) : les templates, et bien d'autres cho
 
 thumbnail:          "content/images/blog/thumbnails/django.jpg"
 tags:               ["Django", "Framework", "MVC", "Python"]
-categories:         ["Django", "Python"]
 
 authors:            ["xavierr"]
 ---

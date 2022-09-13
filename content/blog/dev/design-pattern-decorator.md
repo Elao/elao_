@@ -9,7 +9,6 @@ description:    "Présentation du pattern 'Decorator' dans le cadre d'une série
 thumbnail:      "content/images/blog/thumbnails/decorator_pattern.jpg"
 banner:     "content/images/blog/headers/decorator_pattern.jpg"
 tags:           ["Design Pattern", "Conception"]
-categories:     ["Dev", "Design Pattern"]
 
 authors:            ["xavierr"]
 

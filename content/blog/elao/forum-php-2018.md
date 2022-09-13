@@ -9,7 +9,6 @@ description:        "En attendant l'AFUP Day, voici notre retour sur le Forum PH
 thumbnail:          "content/images/blog/thumbnails/forumphp2018-team.jpeg"
 banner:             "content/images/blog/headers/forumphp2018-team.jpeg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
-categories:         ["conference"]
 authors:            ["rhanna", "tjarrand", "aldeboissieu", "ndievart"]
 ---
 

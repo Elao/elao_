@@ -9,7 +9,6 @@ description:        "Notre compte-rendu de l'Afup Day à Lyon, du 17 mai 2019."
 thumbnail:          "content/images/blog/thumbnails/afup-day-2019.jpg"
 banner:             "content/images/blog/headers/afup-day-2019.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "afupDay"]
-categories:         ["conference"]
 authors:            ["tjarrand", "aldeboissieu", "mbernard", "bleveque", "dgauthier"]
 ---
 

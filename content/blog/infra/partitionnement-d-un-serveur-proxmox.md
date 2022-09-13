@@ -9,7 +9,6 @@ description:        "Petit billet mémo aujourd'hui concernant le partitionnemen
 
 thumbnail:          "content/images/blog/thumbnails/hdd_partition.jpg"
 tags:               ["proxmox", "openvz", "partitionnement", "linux"]
-categories:         ["Infra", "Proxmox", "Linux"]
 
 authors:            ["gfaivre"]
 

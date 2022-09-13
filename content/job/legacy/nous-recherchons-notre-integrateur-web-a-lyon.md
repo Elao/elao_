@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:      "content/images/blog/thumbnails/boy.png"
 header_img:     "content/images/blog/headers/JobLyon.jpg"
 tags:           ["recrutement", "jobs", "integration", "lyon"]
-categories:     ["elao", "jobs", "recrutement"]
 
 author:    "elao"
 ---

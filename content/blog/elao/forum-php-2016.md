@@ -9,7 +9,6 @@ description:        "Nous étions au Forum PHP 2016 de l'AFUP"
 thumbnail:          "content/images/blog/thumbnails/forumphp2016-thumb.jpg"
 banner:             "content/images/blog/headers/forumphp2016.jpg"
 tags:               ["Développement", "Web", "afup", "Conférence", "ForumPHP"]
-categories:         ["conference"]
 authors:            ["tjarrand", "bleveque", "lhoizey", "rchalas", "mcolin", "bviguier", "rhanna", "xgorse", "ndievart"]
 ---
 

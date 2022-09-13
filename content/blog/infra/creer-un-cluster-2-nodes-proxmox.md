@@ -8,7 +8,6 @@ description:        "Rapide présentation d'une fonctionnalité intéressante de
 
 thumbnail:          "content/images/blog/thumbnails/matryoshka.jpg"
 tags:               ["proxmox", "openvz", "cluster"]
-categories:         ["Infra", "Proxmox", "Cluster"]
 
 authors:            ["gfaivre"]
 

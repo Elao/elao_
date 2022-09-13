@@ -9,7 +9,6 @@ description:        "Découverte d'alternatives aux ID auto-incrémentés dans l
 thumbnail:          "content/images/blog/thumbnails/obfuscation.jpg"
 banner:             "content/images/blog/headers/obfuscation.jpg"
 tags:               ["Securite","PHP","Symfony","Framework"]
-categories:         ["Dev", "Symfony"]
 
 authors:            ["mcolin"]
 ---

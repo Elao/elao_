@@ -9,7 +9,6 @@ description:        "Feedback : Monitor your Symfony2 application via Stats.d an
 
 thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 tags:               ["Carbon", "Graphite", "Monitoring", "Stats.d", "Symfony", "Webperf"]
-categories:         ["Infra", "Monitoring", "PHP"]
 
 authors:            ["tbessoussa"]
 ---

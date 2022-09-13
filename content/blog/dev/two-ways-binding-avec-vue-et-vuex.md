@@ -9,7 +9,6 @@ description:        "Mise en place d'un Two-Way Binding avec Vue et Vuex."
 thumbnail:          "content/images/blog/thumbnails/vuejs.jpg"
 banner:             "content/images/blog/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Framework"]
-categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
 authors:            ["mcolin"]
 ---

@@ -8,7 +8,6 @@ description:        "Installation d'un dépôt SVN pour gérer et versioner le c
 
 thumbnail:          "content/images/blog/thumbnails/kenny.jpg"
 tags:               ["Linux", "SVN"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

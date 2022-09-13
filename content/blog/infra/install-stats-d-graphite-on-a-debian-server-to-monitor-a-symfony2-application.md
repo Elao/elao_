@@ -11,7 +11,6 @@ language:           "en"
 thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 banner:             "content/images/blog/headers/minions.jpg"
 tags:               ["Linux","Monitoring","Symfony"]
-categories:         ["Infra", "Monitoring"]
 
 authors:            ["tbessoussa"]
 ---

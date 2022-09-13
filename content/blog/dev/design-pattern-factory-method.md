@@ -9,7 +9,6 @@ description:    "Premier article d'une série consacrée aux Design Patterns. Au
 thumbnail:      "content/images/blog/thumbnails/scientist.jpg"
 banner:     "content/images/blog/headers/scientist.jpg"
 tags:           ["Design Pattern", "Conception"]
-categories:     ["Dev", "Design Pattern"]
 
 authors:            ["xavierr"]
 

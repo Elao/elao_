@@ -9,7 +9,6 @@ description:        "Installation de graphite avec Gunicorn et Nginx sur debian 
 
 thumbnail:          "content/images/blog/thumbnails/dashboard.png"
 tags:               ["Monitoring", "Infra", "Linux", "Debian", "Nginx"]
-categories:         ["Infra", "Monitoring", "Linux"]
 
 authors:            ["gfaivre"]
 

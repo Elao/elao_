@@ -9,7 +9,6 @@ description:        "Installation et utilisation de Behat 3 pour vos tests fonct
 thumbnail:          "content/images/blog/thumbnails/behat.png"
 banner:             "content/images/blog/headers/behat_cover.jpg"
 tags:               ["Behat","Symfony","Mink","Alice"]
-categories:         ["Dev", Symfony", "PHP"]
 
 authors:            ["ndievart"]
 ---

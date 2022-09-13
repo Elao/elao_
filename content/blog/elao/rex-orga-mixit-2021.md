@@ -8,7 +8,6 @@ description:        "Comme la plupart des conférences tech, cette année, l'éd
 
 thumbnail:          content/images/blog/2021/mixit/mixit-2021.png
 tags:               ["conference", "mixit"]
-categories:         ["Elao"]
 authors:            ["aldeboissieu"]
 tweetId:            "1397886962527309826"
 ---

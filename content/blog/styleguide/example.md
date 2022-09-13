@@ -11,7 +11,6 @@ thumbnail:          https://images.unsplash.com/photo-1533142266415-ac591a4deae9
 banner:             ~ # Si vous voulez une image différente des miniatures comme bannière sur la vue de l'article
 credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Tag 1", "Tag 2"]
-categories:         ["Dev", "Symfony"]
 authors:            ["adefrance","tjarrand", "cmozzati"]
 tweetId: "1369737350830583811"
 ---

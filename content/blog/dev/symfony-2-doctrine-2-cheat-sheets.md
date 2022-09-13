@@ -10,7 +10,6 @@ description:        "Symfony 2 - Doctrine 2 - Cheat Sheets"
 thumbnail:          "content/images/blog/thumbnails/cool_cat.jpg"
 banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Symfony", "Doctrine", "Cheat sheets"]
-categories:         ["Dev", "Symfony", Doctrine]
 
 authors:            ["vbouzeran"]
 ---

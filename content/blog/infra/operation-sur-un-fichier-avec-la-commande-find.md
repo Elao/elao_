@@ -8,7 +8,6 @@ description:        "Opération sur un fichier avec la commande find"
 
 thumbnail:          "content/images/blog/thumbnails/linux_fix.jpg"
 tags:               ["Linux", "Tips"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

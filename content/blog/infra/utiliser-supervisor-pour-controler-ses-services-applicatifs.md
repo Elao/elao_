@@ -9,7 +9,6 @@ description:        "Supervisor est un système de contrôle des processus/servi
 
 thumbnail:          "content/images/blog/thumbnails/ice_bulb.jpg"
 tags:               ["Services", "Infra", "Linux", "Debian", "Supervisor"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

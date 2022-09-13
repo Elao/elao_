@@ -8,7 +8,6 @@ description:        "Symfony 2 – L’injection de dépendances"
 
 thumbnail:          "content/images/blog/thumbnails/event-dispatcher.jpg"
 tags:               ["Symfony", "PHP"]
-categories:         ["Dev", "PHP", "Symfony"]
 
 authors:            ["vbouzeran"]
 ---

@@ -9,7 +9,6 @@ description:        "Nous étions au Forum PHP de l'AFUP, voici ce que l'on a re
 thumbnail:          "content/images/blog/thumbnails/haphpybirthday.jpg"
 banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "ForumPHP"]
-categories:         ["conference"]
 
 authors:            ["rhanna"]
 ---

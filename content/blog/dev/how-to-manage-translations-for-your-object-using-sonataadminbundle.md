@@ -9,7 +9,6 @@ description:        "How to manage translations for your object using SonataAdmi
 
 thumbnail:          "content/images/blog/thumbnails/rocket.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
-categories:         ["Dev", Symfony", "PHP"]
 
 authors:            ["tbessoussa"]
 ---

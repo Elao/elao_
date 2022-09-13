@@ -9,7 +9,6 @@ description:        "Préparer son environnement pour utiliser l'API openstack d
 thumbnail:          "content/images/blog/thumbnails/openstack.png"
 banner:             "content/images/blog/headers/facade.jpg"
 tags:               ["ovh","openstack","docker","infra","api"]
-categories:         ["Infra", "openstack", "ovh"]
 
 authors:            ["gfaivre"]
 ---

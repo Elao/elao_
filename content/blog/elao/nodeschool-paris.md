@@ -9,7 +9,6 @@ description:        "La NodeSchool permet de pratiquer Javascript et Node.js gr√
 thumbnail:          "content/images/blog/thumbnails/nodejs.png"
 banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["Javascript", "Node.js", "Conf√©rences"]
-categories:         ["Dev", "conference", "Javascript", "NodeJS"]
 
 authors:            ["rhanna"]
 ---

@@ -8,7 +8,6 @@ description:        "Syntaxe des enregistrements SPF, cas d'utilisation et optio
 
 thumbnail:          "content/images/blog/thumbnails/mail_bottle.jpeg"
 tags:               ["Linux", "Tips", "SPF"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

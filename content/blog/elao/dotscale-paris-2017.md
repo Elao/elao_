@@ -9,7 +9,6 @@ description:        "Aperçu du DotScale Paris 2017"
 thumbnail:          "content/images/blog/thumbnails/dotscale.jpg"
 banner:             "content/images/blog/headers/dotscale.jpg"
 tags:               ["DevOps", "SysAdmin", "Infrastructure", "Conférence", "Scalabilité"]
-categories:         ["conference"]
 authors:            ["gfaivre"]
 ---
 

@@ -9,7 +9,6 @@ description:    "Comment j'ai créé un petit outil en ligne de commande pour m'
 thumbnail:      "content/images/blog/thumbnails/github-agile-dashboard.jpg"
 banner:     "content/images/blog/headers/github-agile-dashboard.jpg"
 tags:           ["agile", "scrum", "kanban", "gestion de projet", "github", "git", "node", "cli"]
-categories:     ["methodo", "dev"]
 
 authors:        ["tjarrand"]
 

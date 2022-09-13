@@ -10,7 +10,6 @@ thumbnail:      "content/images/blog/thumbnails/harpal-singh-396280-unsplash.jpg
 credits:        { name: "Harpal Singh", url: "https://unsplash.com/@aquatium" }
 banner:     "content/images/blog/headers/harpal-singh-396280-unsplash.jpg"
 tags:           ["React native", "Mobile", "Font", "Icon"]
-categories:     ["dev"]
 
 authors:            ["tjarrand"]
 

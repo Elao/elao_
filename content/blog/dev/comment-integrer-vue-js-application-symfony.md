@@ -10,7 +10,6 @@ description:        "Guide d'intrégration de Vue.js dans une application Symfon
 thumbnail:          "content/images/blog/thumbnails/vuejs.jpg"
 banner:             "content/images/blog/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Frontend","Symfony"]
-categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
 authors:            ["mcolin"]
 ---

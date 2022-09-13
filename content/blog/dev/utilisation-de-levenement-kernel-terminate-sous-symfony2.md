@@ -8,7 +8,6 @@ description:        "Utilisation de l'évènement kernel.terminate sous Symfony2
 
 thumbnail:          "content/images/blog/thumbnails/geekon.jpg"
 tags:               ["Bundle","Doctrine","Symfony","Translations"]
-categories:         ["Dev", Symfony", "PHP"]
 
 authors:            ["tbessoussa"]
 ---

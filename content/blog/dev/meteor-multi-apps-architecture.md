@@ -9,7 +9,6 @@ description:        "Architecture d'une application Meteor décomposée en plusi
 thumbnail:          "content/images/blog/thumbnails/beer.jpg"
 banner:             "content/images/blog/headers/elephpant_elao.jpg"
 tags:               ["Meteor", "Tips", "Développement", "Bonnes pratiques"]
-categories:         ["Web", "Meteor"]
 
 authors:            ["jgaulupeau"]
 ---

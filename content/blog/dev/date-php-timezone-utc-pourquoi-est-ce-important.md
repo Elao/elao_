@@ -9,7 +9,6 @@ description:        "Mise au point sur les problématiques de timezone avec les 
 thumbnail:          "content/images/blog/thumbnails/time.jpg"
 banner:             "content/images/blog/headers/time.jpg"
 tags:               ["Symfony", "PHP","Datetime", "Timezone"]
-categories:         ["Dev", "Symfony", "PHP"]
 
 authors:            ["mcolin"]
 ---

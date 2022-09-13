@@ -8,7 +8,6 @@ description:        "Plusieurs mailer dans une application Symfony 2"
 
 thumbnail:          "content/images/blog/thumbnails/mailers.jpg"
 tags:               ["Symfony", "errorNotifierBundle", "SwiftMailer", "Mailer transport"]
-categories:         ["Dev", "Mailer", "Symfony"]
 
 authors:            ["jlopes"]
 ---

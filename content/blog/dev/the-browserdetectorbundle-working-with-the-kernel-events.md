@@ -8,7 +8,6 @@ description:        "The BrowserDetectorBundle: working with the Kernel events"
 
 thumbnail:          "content/images/blog/thumbnails/homer.jpg"
 tags:               ["Symfony", "PHP", "Kernel", "Browser"]
-categories:         ["Dev", "Symfony", "PHP"]
 
 authors:            ["tbessoussa"]
 ---

@@ -9,7 +9,6 @@ description:        "Sécuriser ses accès serveur: Authentification par clés S
 
 thumbnail:          "content/images/blog/thumbnails/hdd_partition.jpg"
 tags:               ["ssh", "Sécurité"]
-categories:         ["Infra", "Linux", "SSH"]
 
 authors:            ["gfaivre"]
 

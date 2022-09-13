@@ -10,7 +10,6 @@ tableOfContent:     2
 thumbnail:          "content/images/blog/thumbnails/api-interview-micro-phone.png"
 banner:             "content/images/blog/headers/api-interview-micro-phone.png"
 tags:               ["API", "Conception", "REST", "API Design"]
-categories:         ["Dev"]
 
 authors:            ["elao"]
 ---

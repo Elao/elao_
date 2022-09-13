@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:          "content/images/blog/thumbnails/stagiaire_pc.jpg"
 header_img:         "content/images/blog/headers/gate.jpg"
 tags:               ["stagiaire","web","elao"]
-categories:         ["vie au bureau", "elao"]
 
 author:    "lmoreau"
 ---

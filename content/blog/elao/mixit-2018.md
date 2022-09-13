@@ -9,7 +9,6 @@ description:        "Nos retours sur les conférences du MiXiT 2018."
 thumbnail:          "content/images/blog/thumbnails/mixit-2018.png"
 banner:             "content/images/blog/headers/mixit-2018.jpg"
 tags:               ["Javascript", "Web","Conférence"]
-categories:         ["Dev", "Actualité", "Web", "Conférence"]
 
 authors:            ["mcolin"]
 ---

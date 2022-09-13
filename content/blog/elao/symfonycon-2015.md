@@ -9,7 +9,6 @@ description:        "Nous étions à la SymfonyCon 2015 pour fêter les 10 ans d
 thumbnail:          "content/images/blog/thumbnails/symfonycon-2015.jpg"
 banner:             "content/images/blog/headers/foliesbergeres.jpg"
 tags:               ["Conférence", "Symfony", "SymfonyCon"]
-categories:         ["conference"]
 
 authors:            ["rhanna"]
 ---

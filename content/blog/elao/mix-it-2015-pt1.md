@@ -9,7 +9,6 @@ description:        "L'édition 2015 du Mix-IT s'est tenue les 16 et 17 avril au
 thumbnail:          "content/images/blog/thumbnails/unepetitemousse-mixit.jpg"
 banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Conférence", "Mix-IT 2015"]
-categories:         ["Dev", "Web", "conference", "Javascript", "NodeJS"]
 
 authors:            ["elao"]
 ---

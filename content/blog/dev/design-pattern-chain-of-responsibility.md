@@ -9,7 +9,6 @@ description:    "Nouvel article consacré aux Design Patterns. Aujourd'hui : le 
 thumbnail:      "content/images/blog/thumbnails/chaplin-assembly-line.jpeg"
 banner:     "content/images/blog/headers/chaplin-assembly-line.jpg"
 tags:           ["Design Pattern", "Conception"]
-categories:     ["Dev", "Design Pattern"]
 
 authors:            ["xavierr"]
 

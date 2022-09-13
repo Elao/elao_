@@ -9,7 +9,6 @@ description:        "Retour d'expérience sur la mise en place d'authentificatio
 thumbnail:          "content/images/blog/thumbnails/magic-link.jpg"
 banner:             "content/images/blog/headers/magic-link.jpg"
 tags:               ["Authentification", "Email", "Sécurité", "MagicLink"]
-categories:         ["Dev"]
 
 authors:            ["mcolin"]
 ---

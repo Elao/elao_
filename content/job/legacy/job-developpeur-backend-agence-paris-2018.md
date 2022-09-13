@@ -7,7 +7,6 @@ contractType:   CDI
 
 thumbnail:      "content/images/blog/thumbnails/back-2.jpg"
 tags:           ["job", "web", "mobile", "paris", "backend", "symfony", "PHP"]
-categories:     ["elao", "recrutement", "Symfony"]
 
 author:    "elao"
 ---

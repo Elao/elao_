@@ -9,7 +9,6 @@ description:        "Comment bien préparer sa conférence ?"
 
 thumbnail:          "content/images/blog/thumbnails/yosemite.jpg"
 tags:               ["Talk", "Aisance", "Conférence", "Oral", "Préparation"]
-categories:         ["Actualité", "Communication", "conference"]
 
 authors:            ["jjames"]
 

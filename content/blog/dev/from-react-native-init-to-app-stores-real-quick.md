@@ -11,7 +11,6 @@ tableOfContent: 3
 thumbnail:      "content/images/blog/thumbnails/from-react-native-init-to-app-stores-real-quick.jpg"
 banner:     "content/images/blog/headers/from-react-native-init-to-app-stores-real-quick.jpg"
 tags:           ["react", "react native", "mobile"]
-categories:     ["dev"]
 
 authors:        ["tjarrand"]
 

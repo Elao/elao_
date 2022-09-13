@@ -9,7 +9,6 @@ description:        "La seconde édition du Best Of Web s'est tenue le Vendredi 
 thumbnail:          "content/images/blog/thumbnails/best-of-web-2016.jpg"
 banner:             "content/images/blog/headers/best-of-web-2016.jpg"
 tags:               ["Javascript", "Web","conference"]
-categories:         ["Actualité", "Web", "conference"]
 
 authors:            ["mcolin"]
 ---

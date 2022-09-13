@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:      "content/images/blog/thumbnails/Chatfocus.jpg"
 header_img:     "content/images/blog/thumbnails/Chatfocus.jpg"
 tags:           ["JOBS", "FRONTEND", "JAVASCRIPT", "MOBILE", "LYON"]
-categories:     ["jobs", "recrutement"]
 
 author:    "elao"
 ---

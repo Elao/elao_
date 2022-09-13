@@ -11,7 +11,6 @@ banner:             "content/images/blog/headers/webpack-encore-alias.jpg"
 credits:            { name: "Jannes Glas" , url: "https://unsplash.com/@jannesglas" }
 
 tags:               ["Symfony", "JavaScript", "Webpack"]
-categories:         ["JavaScript", "Dev", "Symfony"]
 tweetId: "1289132577694121985"
 authors:            ["tjarrand"]
 ---

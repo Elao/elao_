@@ -9,7 +9,6 @@ description:        "Comment configurer et utiliser les dépôts Nginx sur Debia
 
 thumbnail:          "content/images/blog/thumbnails/server.jpg"
 tags:               ["Infra", "Linux", "Debian", "Nginx"]
-categories:         ["Infra", "Linux", "Nginx"]
 
 authors:            ["gfaivre"]
 

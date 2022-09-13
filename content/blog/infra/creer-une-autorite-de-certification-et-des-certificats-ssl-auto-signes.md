@@ -8,7 +8,6 @@ description:        "Créer une autorité de certification et des certificats SS
 
 thumbnail:          "content/images/blog/thumbnails/matryoshka.jpg"
 tags:               ["Linux", "Sécurité"]
-categories:         ["Linux", "Infra"]
 
 authors:            ["gfaivre"]
 ---

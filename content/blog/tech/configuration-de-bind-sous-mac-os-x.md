@@ -9,7 +9,6 @@ description:        "Configuration de Bind sous Mac OS X."
 
 thumbnail:          "content/images/blog/thumbnails/yosemite.jpg"
 tags:               ["Bind","Mac OSX", "OSX"]
-categories:         ["Tech", "OSX"]
 
 authors:            ["vbouzeran"]
 

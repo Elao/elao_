@@ -9,7 +9,6 @@ description:        ""
 thumbnail:          "content/images/blog/thumbnails/pre-blend-2017.jpg"
 banner:             "content/images/blog/headers/pre-blend-2017.jpg"
 tags:               ["Web", "conférence", "blend", "Lyon", "Développement", "Design", "Business"]
-categories:         ["Actualité", "Web", "conference"]
 
 authors:            ["lhoizey"]
 

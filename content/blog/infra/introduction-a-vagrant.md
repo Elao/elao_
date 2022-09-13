@@ -9,7 +9,6 @@ description:        "Le fonctionnement et les principes utilisés par Vagrant. C
 thumbnail:          "content/images/blog/thumbnails/vagrant.png"
 banner:             "content/images/blog/headers/vagrant.png"
 tags:               ["Vagrant", "Virtualisation"]
-categories:         ["Infra", "Virtualisation", "Vagrant"]
 
 authors:            ["mbernard"]
 

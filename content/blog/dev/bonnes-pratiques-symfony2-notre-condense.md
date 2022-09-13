@@ -9,7 +9,6 @@ description:        "Bonnes pratiques Symfony2 : notre condensé !"
 thumbnail:          "content/images/blog/thumbnails/kafeine.png"
 banner:             "content/images/blog/headers/elephpant_elao_family.jpg"
 tags:               ["Tips", "Symfony"]
-categories:         ["Tips", "Symfony"]
 
 authors:            ["tjarrand"]
 ---

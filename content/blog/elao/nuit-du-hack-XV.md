@@ -9,7 +9,6 @@ description:        "La quinzième édition de la Nuit Du Hack (#NDHXV) s'est te
 thumbnail:          "content/images/blog/thumbnails/ndhxv.png"
 banner:             "content/images/blog/headers/ndhxv.jpg"
 tags:               ["SysAdmin", "Sécurité", "Conférence", "Hacking"]
-categories:         ["conference"]
 authors:            ["gfaivre"]
 ---
 

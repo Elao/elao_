@@ -10,7 +10,6 @@ description:        "SSH-agent does not automatically load passphrases on the OS
 thumbnail:          "content/images/blog/thumbnails/badass_vader.jpg"
 banner:             "content/images/blog/headers/php_elao_code.jpg"
 tags:               ["SSH", "OSX"]
-categories:         ["Dev", "Tech", "OSX"]
 
 authors:            ["gfaivre"]
 ---

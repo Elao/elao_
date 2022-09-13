@@ -8,7 +8,6 @@ description:        "Propel - Utiliser des champs calculés"
 
 thumbnail:          "content/images/blog/thumbnails/mailers.jpg"
 tags:               ["Propel", "PHP", "ORM", "Symfony"]
-categories:         ["Dev", "PHP", "Propel", "ORM"]
 
 authors:            ["gfaivre"]
 ---

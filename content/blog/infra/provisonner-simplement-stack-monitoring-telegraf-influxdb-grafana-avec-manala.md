@@ -10,7 +10,6 @@ language:           "fr"
 thumbnail:          "content/images/blog/thumbnails/grafana.jpg"
 banner:             "content/images/blog/headers/grafana.jpg"
 tags:               ["provisoning","manala","ansible","influxdb","grafana","telegraf","monitoring"]
-categories:         ["Infra", "manala", "ansible"]
 
 authors:            ["mcolin"]
 ---

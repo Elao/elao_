@@ -9,7 +9,6 @@ description:        "Paris Web, la conférence francophone des gens qui font le 
 thumbnail:          "content/images/blog/thumbnails/unicorn.jpg"
 banner:             "content/images/blog/headers/unicorn.jpg"
 tags:               ["ParisWeb", "Conférences"]
-categories:         ["conference"]
 
 authors:            ["lhoizey"]
 ---

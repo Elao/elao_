@@ -9,7 +9,6 @@ description:    "L'écriture d'user stories n'est pas aussi simple qu'elle peut 
 thumbnail:      "content/images/blog/thumbnails/50-quick.jpg"
 banner:     "content/images/blog/headers/elao_team_front.jpg"
 tags:           ["agile", "user stories", "specifications"]
-categories:     ["methodo"]
 
 authors:            ["ssolere"]
 

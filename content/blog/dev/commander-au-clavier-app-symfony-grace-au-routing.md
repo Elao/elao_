@@ -10,7 +10,6 @@ tableOfContent: 2
 thumbnail:      "content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg"
 banner:     "content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/header.jpg"
 tags:           ["Symfony", "Routing", "UX"]
-categories:     ["dev", "Symfony"]
 
 authors:        ["rhanna"]
 

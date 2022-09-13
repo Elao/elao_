@@ -9,7 +9,6 @@ description:        "Les 12 et 13 mai se déroulait à Paris la nCrafts, une con
 thumbnail:          "content/images/blog/thumbnails/ncrafts-2016.jpg"
 banner:             "content/images/blog/headers/ncrafts-2016.jpg"
 tags:               ["Développement", "Web","conference", "nCrafts", "craftsmanship"]
-categories:         ["Actualité", "Web", "conference"]
 
 authors:            ["mcolin"]
 ---

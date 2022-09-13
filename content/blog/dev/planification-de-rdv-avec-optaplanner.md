@@ -9,7 +9,6 @@ description:    ""
 thumbnail:      "content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png"
 banner:     "content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-logo.png"
 tags:           ["Planification", "OptaPlanner"]
-categories:     ["dev"]
 
 authors:        ["rhanna"]
 

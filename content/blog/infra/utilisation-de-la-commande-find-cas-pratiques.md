@@ -8,7 +8,6 @@ description:        "Utilisation de la commande find - cas pratiques"
 
 thumbnail:          "content/images/blog/thumbnails/homer-do-not-care.png"
 tags:               ["Linux", "Trucs et astuces", "Tips"]
-categories:         ["Infra", "Linux"]
 
 authors:            ["gfaivre"]
 

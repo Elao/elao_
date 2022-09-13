@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:      "content/images/blog/thumbnails/adminsys.jpg"
 header_img:     "content/images/blog/headers/adminsys.jpg"
 tags:           ["job", "web", "cloud", "adminsys", "devops", "virtualisation"]
-categories:     ["elao", "recrutement"]
 
 author:    "elao"
 ---

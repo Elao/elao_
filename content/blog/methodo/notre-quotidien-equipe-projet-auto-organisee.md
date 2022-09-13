@@ -9,7 +9,6 @@ description:    "Retour d'expérience sur la vie d'une équipe projet auto-organ
 thumbnail:      "content/images/blog/thumbnails/equipe_projet.jpg"
 banner:     "content/images/blog/2016/equipe-projet/equipe.jpg"
 tags:           ["agile", "user stories"]
-categories:     ["methodo"]
 
 authors:        ["rhanna"]
 

@@ -9,7 +9,6 @@ description:        ""
 thumbnail:          "content/images/blog/thumbnails/blend2016.jpg"
 banner:             "content/images/blog/headers/blend2016.jpg"
 tags:               ["Web", "conférence", "blend", "lyon", "Développement", "Design", "Business"]
-categories:         ["Actualité", "Web", "conference"]
 
 authors:            ["xgorse", "lhoizey", "tjarrand", "cmeiller", "ssolere"]
 

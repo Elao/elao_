@@ -9,7 +9,6 @@ description:        "Introduction à la réalisation d'applications frontend ave
 thumbnail:          "content/images/blog/thumbnails/vuejs.jpg"
 banner:             "content/images/blog/headers/vuejs.jpg"
 tags:               ["Vuejs","Javascript","Front","Framework"]
-categories:         ["Dev", "Vuejs", "Javascript", "Symfony"]
 
 authors:            ["mcolin"]
 ---

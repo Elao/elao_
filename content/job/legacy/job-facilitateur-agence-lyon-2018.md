@@ -8,7 +8,6 @@ contractType:   CDI
 thumbnail:      "content/images/blog/thumbnails/riccardo-chiarini-247364.jpg"
 header_img:     "content/images/blog/headers/riccardo-chiarini-247364.jpg"
 tags:           ["agile", "jobs", "lyon", "gestion de projet", "facilitateur"]
-categories:     ["elao", "recrutement"]
 
 author:    "xgorse"
 ---

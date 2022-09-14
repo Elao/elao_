@@ -6,7 +6,7 @@ titleSeo: "Stenope : le générateur de site statique pour les développeurs Sym
 metaDescription : >
     Découvrez l'origine de Stenope, le générateur de site statique créé pour les développeurs Symfony
     et comment Elao tire parti de cet outil pour créer des sites performants.
-articles: ["elao/rebranding-la-tech"]
+articles: ["elao/rebranding-la-tech", "dev/stenope-skeleton"]
 ---
 
 ## L'origine

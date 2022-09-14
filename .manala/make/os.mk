@@ -11,11 +11,19 @@
 #   echo $(if $(OS_LINUX),Running on Linux,*NOT* running on Linux)
 
 ifeq ($(OS),Windows_NT)
-    OS = windows
+OS := windows
 else
-    OS = $(shell uname | tr '[:upper:]' '[:lower:]')
+OS := $(shell uname | tr '[:upper:]' '[:lower:]')
 endif
 
-OS_LINUX = $(if $(findstring $(OS),linux),1,)
-OS_DARWIN = $(if $(findstring $(OS),darwin),1,)
-OS_WINDOWS = $(if $(findstring $(OS),windows),1,)
+ifeq ($(OS),linux)
+OS_LINUX := 1
+endif
+
+ifeq ($(OS),darwin)
+OS_DARWIN := 1
+endif
+
+ifeq ($(OS),windows)
+OS_WINDOWS := 1
+endif

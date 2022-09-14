@@ -19,7 +19,7 @@ project:
 
 system:
     nginx:
-        version: 1.18
+        version: "1.20"
         port: 8000
     php:
         version: 8.1

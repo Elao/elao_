@@ -9,10 +9,8 @@ FROM debian:${DEBIAN}-slim as base
 ARG DEBIAN
 ARG USER_ID=1000
 ARG GROUP_ID=1000
-ARG S6_OVERLAY_VERSION=2.2.0.3
 ARG GOSU_VERSION=1.14
-ARG GOMPLATE_VERSION=3.10.0
-ARG STARSHIP_VERSION=0.58.0
+ARG GOMPLATE_VERSION=3.11.1
 
 # The 'container' environment variable tells systemd that it's running inside a
 # Docker container environment.
@@ -24,37 +22,35 @@ RUN \
     printf "deb http://deb.debian.org/debian ${DEBIAN}-backports main" > /etc/apt/sources.list.d/backports.list \
     && apt-get update \
     && apt-get install --yes --no-install-recommends \
+        s6 \
         sudo \
         curl \
         ca-certificates \
         gnupg \
         libarchive-tools bzip2 \
         bash-completion \
+        git \
         make \
         less \
         vim \
+        socat \
     # User
     && addgroup --gid ${GROUP_ID} lazy \
     && adduser --home /home/lazy --shell /bin/bash --uid ${USER_ID} --gecos lazy --ingroup lazy --disabled-password lazy \
     && mkdir -p /run/user/${USER_ID} && chown lazy:lazy /run/user/${USER_ID} \
     && printf "lazy ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/lazy \
-    # S6
-    && curl -sSL https://github.com/just-containers/s6-overlay/releases/download/v${S6_OVERLAY_VERSION}/s6-overlay-amd64.tar.gz \
-      | bsdtar -xvf - -C /usr/bin --strip-components=2 bin/s6-svscan bin/s6-supervise bin/s6-svc \
     # Gosu
-    && curl -sSL https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-amd64 \
+    && curl -sSL https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-$(case $(dpkg --print-architecture) in "amd64") echo "amd64" ;; "arm64") echo "arm64" ;; esac) \
         -o /usr/local/bin/gosu \
     && chmod +x /usr/local/bin/gosu \
     # Gomplate
-    && curl -sSL https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-amd64 \
+    && curl -sSL https://github.com/hairyhenderson/gomplate/releases/download/v${GOMPLATE_VERSION}/gomplate_linux-$(case $(dpkg --print-architecture) in "amd64") echo "amd64" ;; "arm64") echo "arm64" ;; esac) \
         -o /usr/local/bin/gomplate \
     && chmod +x /usr/local/bin/gomplate \
     # Bash completion
     && mkdir -p /etc/bash_completion.d \
-    # Starship
-    && curl -sSL https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz \
-        | bsdtar -xvf - -C /usr/local/bin \
-    && printf "eval \"\$(starship init bash)\"\nexport STARSHIP_CONFIG=\"/etc/starship/config.toml\"" > /etc/profile.d/starship.sh
+    # Oh My Bash
+    && git clone https://github.com/ohmybash/oh-my-bash.git /usr/local/share/oh-my-bash
 
 ##########
 # System #
@@ -77,7 +73,7 @@ RUN \
         | apt-key add - \
     && apt-get update \
     && apt-get install --yes --no-install-recommends \
-        nginx=1.18.*
+        nginx=1.20.*
 
 # Php
 RUN \
@@ -105,10 +101,8 @@ RUN \
     && curl -sSL https://getcomposer.org/installer \
         | php -- --install-dir /usr/local/bin --filename composer \
     # Symfony
-    && SYMFONY_VERSION=`curl -sSL https://get.symfony.com/cli/LATEST --fail` \
-    && curl -sSL https://github.com/symfony/cli/releases/download/v${SYMFONY_VERSION}/symfony_linux_amd64 \
-        -o /usr/local/bin/symfony \
-    && chmod +x /usr/local/bin/symfony
+    && curl -sSL https://github.com/symfony-cli/symfony-cli/releases/latest/download/symfony-cli_linux_$(case $(dpkg --print-architecture) in "amd64") echo "amd64" ;; "arm64") echo "arm64" ;; esac).tar.gz \
+        | bsdtar -xvf - -C /usr/local/bin symfony
 
 # Nodejs
 RUN \

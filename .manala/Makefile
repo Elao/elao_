@@ -4,8 +4,8 @@ _DIR := $(patsubst ./%,%,$(patsubst %/.manala/Makefile,%,./$(filter %.manala/Mak
 _ROOT = $(if $(filter .,$(_DIR)),1)
 # Relative current dir ("."|"foo"|"foo/bar"|…)
 _CURRENT_DIR = $(patsubst ./%,%,.$(patsubst $(realpath $(CURDIR)/$(_DIR))%,%,$(CURDIR)))
-# Relative cache dir ("./.manala/.cache"|"../.manala/.cache"|"../../.manala/.cache"|…)
-_CACHE_DIR = $(shell dir=$(_DIR)/.manala/.cache ; mkdir -p $${dir} ; echo $${dir})
+# Cache dir
+_CACHE_DIR = .manala/.cache
 
 include $(_DIR)/.manala/make/text.mk
 include $(_DIR)/.manala/make/help.mk
@@ -18,16 +18,6 @@ include $(_DIR)/.manala/docker/make.mk
 ##########
 
 ifneq ($(container),docker)
-
-_DOCKER_COMPOSE_PROJECT_NAME = elao
-_DOCKER_COMPOSE_FILE = $(_DIR)/.manala/docker-compose.yaml $(_DIR)/.manala/docker-compose.$(OS).yaml
-_DOCKER_COMPOSE_SERVICE = system
-_DOCKER_COMPOSE_USER = lazy
-_DOCKER_COMPOSE_ENV = \
-	DIR=$(realpath $(_DIR)) \
-	CACHE_DIR=$(realpath $(_CACHE_DIR)) \
-	USER_ID=$(shell id -u) \
-	GROUP_ID=$(shell id -g) \
 
 HELP += $(call help_section, System)
 
@@ -56,7 +46,7 @@ clean:
 		--format "{{.ID}}" \
 			| xargs $(_docker) rmi --force
 	@$(call log, Delete cache dir…)
-	rm -Rf $(_CACHE_DIR)
+	rm -Rf $(_DIR)/$(_CACHE_DIR)
 .PHONY: clean
 
 endif

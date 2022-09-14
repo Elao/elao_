@@ -1,0 +1,10 @@
+services:
+
+    ##########
+    # System #
+    ##########
+
+    system:
+        environment:
+            # Php - XDebug
+            PHP_XDEBUG_CLIENT_HOST: host.docker.internal

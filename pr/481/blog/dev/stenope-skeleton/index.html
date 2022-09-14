@@ -293,28 +293,20 @@
             <main class="article-content__main">
 
                 
-                                    <div class="alert alert--warning">
-                        <i class="icon icon--danger" aria-hidden="true"></i>
-                        <div>
-                            <p>
-                                Cet article n'est pas encore publié. Cet aperçu est disponible uniquement dans cet environnement mais n'apparaîtra en production qu'à partir du 14 septembre 2022
-                            </p>
-                        </div>
-                    </div>
                 
                 <body><h2 id="stenope-l-outil-propulsant-ce-site" class="anchor-title"><a href="#stenope-l-outil-propulsant-ce-site">Stenope, l'outil propulsant ce site</a></h2>
 <p><a href="/elao_/pr/481/blog/elao/rebranding-la-tech">Il y a quelque temps de cela déjà</a>, nous vous parlions de <a href="/elao_/pr/481/glossaire/stenope">Stenope</a>,
 notre générateur de site statique développé en interne, motivé par la volonté d'avoir la totale maitrise sur notre site
 grâce à un outil à destination des développeurs Symfony.</p>
-<p>Celui-ci consiste en effet en un bundle Symfony que vous pouvez mettre en place sur votre projet Symfony existant,
+<p>Celui-ci consiste en effet en un bundle Symfony que vous pouvez mettre en place sur votre projet Symfony,
 afin de bénéficier d'une commande CLI agissant comme un <em>crawler</em> parcourant les pages de votre application,
 et d'en générer une version statique :</p>
 <pre class="code-multiline language-shell"><code class="language-shell" id="e57a5a65c67a236927de8357ea24b0be">symfony console stenope:build <span class="token parameter variable">-e</span> prod ./build</code></pre>
 <p>La manière d'écrire votre application Symfony n'est pas imposée et ne nécessite pas forcément de connaissances
-particulières supplémentaires. Aucun thème, modèle de données ne sont fournis et par conséquent la façon de développer
+particulières supplémentaires. Aucun thème ou modèle de données n'est fourni et par conséquent la façon de développer
 votre application vous appartient entièrement.</p>
 <p>Pour autant, Stenope contient quelques fonctionnalités optionnelles de gestion de contenu qui pourraient vous aider,
-et nous avons également pu mettre en place certaines fonctionnalités communes sur certaines typologies de projets qu'il
+et nous avons également pu mettre en place certaines fonctionnalités courantes sur certaines typologies de projets qu'il
 peut être intéressant de démontrer.</p>
 <h2 id="un-kit-de-demarrage" class="anchor-title"><a href="#un-kit-de-demarrage">Un kit de démarrage</a></h2>
 <p>Nous avons donc décidé de mettre à disposition un kit de démarrage, qui vous permettra de découvrir davantage comment
@@ -323,8 +315,8 @@ décrocher et commencer à écrire votre propre version, tout en démontrant des
 <p>Le projet est disponible <a href="https://stenopephp.github.io/skeleton/" target="_blank">à cette URL</a> et peut être installé via Composer:</p>
 <pre class="code-multiline language-shell"><code class="language-shell" id="56d99842887a90327882225032e7280f"><span class="token function">composer</span> create-project stenope/skeleton <span class="token parameter variable">-s</span> dev</code></pre>
 <p>Vous pouvez dès lors utiliser ce projet comme terrain de jeu pour expérimenter, ou commencer à développer vos propres
-pages et contenus en profitant de la structure et des outils déjà mise en place.
-Le project inclus notamment des outils de linting, redimensionnement d'images et autres workflows Github de déploiement
+pages et contenus en profitant de la structure et des outils déjà mis en place.
+Le projet inclut notamment des outils de linting, redimensionnement d'images et autres workflows Github de déploiement
 sur Github Pages…</p>
 <h2 id="sources" class="anchor-title"><a href="#sources">Sources</a></h2>
 <ul>

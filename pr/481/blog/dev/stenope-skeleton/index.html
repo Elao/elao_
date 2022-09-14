@@ -17,14 +17,14 @@
         <meta name="msapplication-config" content="/elao_/pr/481/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                        <meta name="description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne maintenant d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+                        <meta name="description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
 " />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/481/blog/dev/stenope-skeleton" />
 
             <!-- Open Graph / Facebook -->
             <meta property="og:title" content="Un kit pour démarrer votre site statique avec Stenope" />
             <meta property="og:locale" content="fr" />
-            <meta property="og:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne maintenant d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+            <meta property="og:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
 " />
             <meta property="og:url" content="https://elao.github.io/elao_/pr/481/blog/dev/stenope-skeleton" />
             <meta property="og:site_name" content="elao_" />
@@ -33,7 +33,7 @@
             <!-- Twitter -->
             <meta property="twitter:card" content="summary_large_image">
             <meta property="twitter:title" content="Un kit pour démarrer votre site statique avec Stenope">
-            <meta property="twitter:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne maintenant d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+            <meta property="twitter:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
 ">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
@@ -269,13 +269,13 @@
                                             </span>
                     </div>
                                 <div class="article-info__date">
-                    <span>Publication <strong>14 septembre 2022</strong></span>
+                    <span>Publication <strong>15 septembre 2022</strong></span>
                                                         </div>
             </div>
 
             <div class="article-header" data-aos="zoom-in-up">
                 <h1>Un kit pour démarrer votre site statique avec Stenope</h1>
-                <p>Stenope, le générateur de site statique initié par Elao s&#039;accompagne maintenant d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+                <p>Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
 </p>
                 <ul class="article-tag-list">
                                             <li class="article-tag-list__item">
@@ -293,14 +293,22 @@
             <main class="article-content__main">
 
                 
+                                    <div class="alert alert--warning">
+                        <i class="icon icon--danger" aria-hidden="true"></i>
+                        <div>
+                            <p>
+                                Cet article n'est pas encore publié. Cet aperçu est disponible uniquement dans cet environnement mais n'apparaîtra en production qu'à partir du 15 septembre 2022
+                            </p>
+                        </div>
+                    </div>
                 
                 <body><h2 id="stenope-l-outil-propulsant-ce-site" class="anchor-title"><a href="#stenope-l-outil-propulsant-ce-site">Stenope, l'outil propulsant ce site</a></h2>
 <p><a href="/elao_/pr/481/blog/elao/rebranding-la-tech">Il y a quelque temps de cela déjà</a>, nous vous parlions de <a href="/elao_/pr/481/glossaire/stenope">Stenope</a>,
 notre générateur de site statique développé en interne, motivé par la volonté d'avoir la totale maitrise sur notre site
 grâce à un outil à destination des développeurs Symfony.</p>
-<p>Celui-ci consiste en effet en un bundle Symfony que vous pouvez mettre en place sur votre projet Symfony,
-afin de bénéficier d'une commande CLI agissant comme un <em>crawler</em> parcourant les pages de votre application,
-et d'en générer une version statique :</p>
+<p>Celui-ci consiste en effet en un bundle Symfony que vous pouvez mettre en place sur un projet existant.
+Vous bénéficierez dès lors d'une commande CLI agissant comme un <em>crawler</em> parcourant les pages de votre application
+et permettant d'en générer une version statique :</p>
 <pre class="code-multiline language-shell"><code class="language-shell" id="e57a5a65c67a236927de8357ea24b0be">symfony console stenope:build <span class="token parameter variable">-e</span> prod ./build</code></pre>
 <p>La manière d'écrire votre application Symfony n'est pas imposée et ne nécessite pas forcément de connaissances
 particulières supplémentaires. Aucun thème ou modèle de données n'est fourni et par conséquent la façon de développer

@@ -477,7 +477,7 @@ To do so you will need to generate a personal signing key and to configure your 
 <span class="token key attr-name">MY_RELEASE_KEY_ALIAS</span><span class="token punctuation">=</span><span class="token value attr-value">my_release</span>
 <span class="token key attr-name">MY_RELEASE_STORE_PASSWORD</span><span class="token punctuation">=</span><span class="token value attr-value">{Generate a 32 characters password}</span>
 <span class="token key attr-name">MY_RELEASE_KEY_PASSWORD</span><span class="token punctuation">=</span><span class="token value attr-value">{Generate another 32 characters password}</span></code></pre>
-<p><span class="side-note light">💡</span> <em>You'll need to <a href="https://passwordsgenerator.net/" target="_blank">generate 2 passwords</a></em></p>
+<p><span class="side-note light">💡</span> <em>You'll need to <a href="https://passwords-generator.org/" target="_blank">generate 2 passwords</a></em></p>
 <p><span class="side-note">🔧</span> Now generate the keystore key file:</p>
 <pre class="code-multiline language-bash"><code class="language-bash" id="b052e6d20cdd18c0c47457be0d42aebf">keytool <span class="token parameter variable">-genkey</span> <span class="token parameter variable">-v</span> <span class="token parameter variable">-keystore</span> ~/.gradle/my_release.keystore <span class="token parameter variable">-alias</span> my_release <span class="token parameter variable">-keyalg</span> RSA <span class="token parameter variable">-keysize</span> <span class="token number">2048</span> <span class="token parameter variable">-validity</span> <span class="token number">10000</span></code></pre>
 <p><span class="side-note">🔧</span> Follow the instructions as below:</p>

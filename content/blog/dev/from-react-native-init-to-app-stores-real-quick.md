@@ -187,7 +187,7 @@ MY_RELEASE_STORE_PASSWORD={Generate a 32 characters password}
 MY_RELEASE_KEY_PASSWORD={Generate another 32 characters password}
 ```
 
-<span class="side-note light">💡</span> _You'll need to [generate 2 passwords](https://passwordsgenerator.net/)_
+<span class="side-note light">💡</span> _You'll need to [generate 2 passwords](https://passwords-generator.org/)_
 
 <span class="side-note">🔧</span> Now generate the keystore key file:
 

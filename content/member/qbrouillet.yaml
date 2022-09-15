@@ -1,0 +1,32 @@
+active: true # make it true
+🚲: true # velo-taffeur
+anonymousTribePicture: true # To protect your image privacy
+
+# Bio
+name: Quentin Brouillet
+# pseudo: none
+# gender: male
+bio: |
+    Avant Quentin travaillait dans la culture, la formation, la communication, et bien d’autres choses.
+    Maintenant il développe, en PHP surtout, et il adore ça !
+
+    Et quand il ne code pas, il s’applique à transformer son appartement en mini-forêt et à réinventer les manuels Lego® avec son fils.
+position: Développeur
+integrationDate: 12-09-2022
+
+# Social
+linkedIn: quentinbrouillet
+email: quentin.brouillet@elao.com
+
+# avatar: images/members/avatars/qbrouillet.jpg
+
+#certifications:
+#    - symfony
+#    - opquast
+
+emojis:
+    - 🧗‍♂️
+    - 🥃
+    - 🚲
+    - 😋
+    - 🪴

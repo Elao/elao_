@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Le blog de l'équipe d'Elao</title>
+        <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
+        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <link>https://elao.github.io/elao_/pr/479/blog</link>
+        <pubDate>Thu, 15 Sep 2022 09:44:26 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/479/apple-touch-icon.png</url>
+            <title>Le blog de l'équipe d'Elao</title>
+            <link>https://elao.github.io/elao_/pr/479/blog</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/479/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                <item>
+            <title>Un kit pour démarrer votre site statique avec Stenope</title>
+            <pubDate>Thu, 15 Sep 2022 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[ Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+ ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/479/blog/dev/stenope-skeleton</guid>
+            <link>https://elao.github.io/elao_/pr/479/blog/dev/stenope-skeleton</link>
+            <media:content url="https://elao.github.io/elao_/pr/479/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/b77e359f0625fd754383d6188502b89d.jpg" width="1200" height="627">
+                <media:description type="plain">Un kit pour démarrer votre site statique avec Stenope</media:description>
+                            </media:content>
+                            <category>stenope</category>
+                            <category>site-statique</category>
+                                        <comments>https://twitter.com/Elao/status/1570321529505710080</comments>
+                    </item>
+                <item>
+            <title>Amélie, intégratrice chez Elao depuis 5 ans</title>
+            <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[  ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/479/blog/elao/amelie-integratrice-depuis-5-ans</guid>
+            <link>https://elao.github.io/elao_/pr/479/blog/elao/amelie-integratrice-depuis-5-ans</link>
+            <media:content url="https://elao.github.io/elao_/pr/479/resized/content/images/blog/2022/itw-amelie/banner.jpg/fce4f89e2d59f6bfb2e98ad7ec03b037.jpg" width="1200" height="627">
+                <media:description type="plain">Amélie, intégratrice chez Elao depuis 5 ans</media:description>
+                            </media:content>
+                            <category>elao</category>
+                            <category>team</category>
+                                </item>
+            </channel>
+</rss>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>La tribu Elao : Quentin Brouillet</title>
+        <title>Un kit pour démarrer votre site statique avec Stenope</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/elao_/pr/478/apple-touch-icon.png">
@@ -17,25 +17,31 @@
         <meta name="msapplication-config" content="/elao_/pr/478/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                    <meta name="description" content="Découvrez Quentin Brouillet, Développeur chez Elao" />
-            <link rel="canonical" href="https://elao.github.io/elao_/pr/478/la-tribu/qbrouillet" />
+                        <meta name="description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+" />
+            <link rel="canonical" href="https://elao.github.io/elao_/pr/478/blog/dev/stenope-skeleton" />
 
             <!-- Open Graph / Facebook -->
-            <meta property="og:title" content="La tribu Elao : Quentin Brouillet" />
+            <meta property="og:title" content="Un kit pour démarrer votre site statique avec Stenope" />
             <meta property="og:locale" content="fr" />
-            <meta property="og:description" content="Découvrez Quentin Brouillet, Développeur chez Elao" />
-            <meta property="og:url" content="https://elao.github.io/elao_/pr/478/la-tribu/qbrouillet" />
+            <meta property="og:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+" />
+            <meta property="og:url" content="https://elao.github.io/elao_/pr/478/blog/dev/stenope-skeleton" />
             <meta property="og:site_name" content="elao_" />
-                                        <meta property="og:image" content="https://elao.github.io/elao_/pr/478/resized/content/images/members/default.jpg/1e8677536855082c6dfa4feaaad5ea16.jpg">
+                                        <meta property="og:image" content="/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/b77e359f0625fd754383d6188502b89d.jpg">
             
             <!-- Twitter -->
-            <meta property="twitter:card" content="summary">
-            <meta property="twitter:title" content="La tribu Elao : Quentin Brouillet">
-            <meta property="twitter:description" content="Découvrez Quentin Brouillet, Développeur chez Elao">
+            <meta property="twitter:card" content="summary_large_image">
+            <meta property="twitter:title" content="Un kit pour démarrer votre site statique avec Stenope">
+            <meta property="twitter:description" content="Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
-                                        <meta property="twitter:image" content="https://elao.github.io/elao_/pr/478/resized/content/images/members/default.jpg/c412525f689d8e0b264371ea866fc49a.jpg">
+                                        <meta property="twitter:image" content="https://elao.github.io/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/b3cb3b51ba405e5e8ec3e1dab2210d5a.jpg">
                     
+
+    <link rel="alternate" type="application/rss+xml" href="/elao_/pr/478/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
+
                             <meta name="robots" content="noindex" />
         
         <script>
@@ -44,9 +50,31 @@
 
                     <link rel="stylesheet" href="/elao_/pr/478/build/app.f174a69e.css">
         
-                    <script src="/elao_/pr/478/build/runtime.4deffd6a.js" defer></script><script src="/elao_/pr/478/build/646.8594decb.js" defer></script><script src="/elao_/pr/478/build/948.898c51f2.js" defer></script><script src="/elao_/pr/478/build/app.a98f3045.js" defer></script>
+                        <script src="/elao_/pr/478/build/runtime.4deffd6a.js" defer></script><script src="/elao_/pr/478/build/646.8594decb.js" defer></script><script src="/elao_/pr/478/build/948.898c51f2.js" defer></script><script src="/elao_/pr/478/build/app.a98f3045.js" defer></script>
 
                     
+
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+    <script>
+        window.onload = (function(){
+            var tweets = document.querySelectorAll('.tweet-container');
+            tweets.forEach(function(tweet) {
+                // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+                twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                    conversation: 'none',
+                    cards: 'hidden',
+                    theme: 'light',
+                    lang: 'fr',
+                    align: 'center',
+                    width: 550, // default
+                    dnt: true,
+                })
+            })
+        });
+    </script>
+
         <!-- S.E.E. -->
         <meta name="see" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;pr&#x5C;&#x2F;478&#x5C;&#x2F;build&#x5C;&#x2F;787.5af5d355.js&quot;,&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;pr&#x5C;&#x2F;478&#x5C;&#x2F;build&#x5C;&#x2F;see.a2007eaa.js&quot;&#x5D;">
         <meta name="see_style" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;pr&#x5C;&#x2F;478&#x5C;&#x2F;build&#x5C;&#x2F;see.24930bce.css&quot;&#x5D;">
@@ -60,7 +88,7 @@
                         - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
                      -->
                     <a href="/elao_/pr/478/">
-                        <span class="screen-reader">La tribu Elao : Quentin Brouillet</span>
+                        <span class="screen-reader">Un kit pour démarrer votre site statique avec Stenope</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
                                 <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
                                     c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
@@ -189,119 +217,182 @@
                 <div class="container">
         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/elao_/pr/478/">
-                    <span itemprop="name">Accueil</span>
+                <a itemprop="item" href="/elao_/pr/478/blog">
+                    <span itemprop="name">Blog</span>
                 </a>
                 <meta itemprop="position" content="1" />
             </li>
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="/elao_/pr/478/la-tribu">
-                    <span itemprop="name">La tribu</span>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Un kit pour démarrer votre site statique avec Stenope</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Quentin Brouillet</span>
-                </a>
-                <meta itemprop="position" content="3" />
-            </li>
         </ol>
 
-        <div class="member">
-            <div class="member__infos">
-                <h1 data-aos="fade-right">
-                    Découvrez
-                    <span>Quentin Brouillet</span>
-                </h1>
+        <div class="article-banner">
+            <div class="article-banner__cover" style="background: #f1f1f1 url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/f9285cc06e67467d69bef15dbfd8cd89.jpg');
+    background: #f1f1f1 -webkit-image-set(
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/f9285cc06e67467d69bef15dbfd8cd89.jpg') 1x,
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/417708d2ba18db7e42ff29bb48bafa76.jpg') 2x
+    );
+    background: #f1f1f1 -moz-image-set(
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/f9285cc06e67467d69bef15dbfd8cd89.jpg') 1x,
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/417708d2ba18db7e42ff29bb48bafa76.jpg') 2x
+    );
+    background: #f1f1f1 -ms-image-set(
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/f9285cc06e67467d69bef15dbfd8cd89.jpg') 1x,
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/417708d2ba18db7e42ff29bb48bafa76.jpg') 2x
+    );
+    background: #f1f1f1 image-set(
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/f9285cc06e67467d69bef15dbfd8cd89.jpg') 1x,
+        url('/elao_/pr/478/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/417708d2ba18db7e42ff29bb48bafa76.jpg') 2x
+    );" data-aos="fade-down"></div>
 
-                <div class="member__image member__image--mobile">
-                                        <!-- image de profil : 500 x 680px -->
-                    <img     src="/elao_/pr/478/resized/content/images/members/default.jpg/bcca3b168c329c7336e4ca6b583a5698.jpg"
+            <div class="article-info" data-aos="zoom-in">
+                                                    <div class="article-author ">
+                        <div class="article-author__image">
+                                                            <a href="/elao_/pr/478/la-tribu/msteinhausser">
+                                    <img     src="/elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/082fd0188892e254eb0d7604e793767c.jpg"
     srcset="
-        /elao_/pr/478/resized/content/images/members/default.jpg/bcca3b168c329c7336e4ca6b583a5698.jpg 1x,
-        /elao_/pr/478/resized/content/images/members/default.jpg/2d9232c06790b204ab9cb8bbe2bae3a5.jpg 2x
+        /elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/082fd0188892e254eb0d7604e793767c.jpg 1x,
+        /elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/079e97b32e0b5c6cbde07e847b4423d4.jpg 2x
     "
- alt="Portrait de Quentin Brouillet">
-                    <div class="seniority" data-aos="zoom-in">
-                                                                                                <span>0 mois</span>
-                        dans la tribu Elao <3
+ />
+                                </a>
+                                                    </div>
+                        <span class="article-author__info">
+                        Écrit par
+                                                    <a href="/elao_/pr/478/la-tribu/msteinhausser">
+                                <strong>Maxime Steinhausser</strong>
+                            </a>
+                                            </span>
+                    </div>
+                                <div class="article-info__date">
+                    <span>Publication <strong>15 septembre 2022</strong></span>
+                                                        </div>
+            </div>
+
+            <div class="article-header" data-aos="zoom-in-up">
+                <h1>Un kit pour démarrer votre site statique avec Stenope</h1>
+                <p>Stenope, le générateur de site statique initié par Elao s&#039;accompagne désormais d&#039;un kit de démarrage pour vous aider à découvrir son utilisation et démarrer vos projets.
+</p>
+                <ul class="article-tag-list">
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/478/blog/tag/stenope" rel="nofollow">#Stenope</a>
+                        </li>
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/478/blog/tag/site-statique" rel="nofollow">#SiteStatique</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+
+        
+        <div class="article-content">
+            <main class="article-content__main">
+
+                
+                
+                <body><h2 id="stenope-l-outil-propulsant-ce-site" class="anchor-title"><a href="#stenope-l-outil-propulsant-ce-site">Stenope, l'outil propulsant ce site</a></h2>
+<p><a href="/elao_/pr/478/blog/elao/rebranding-la-tech">Il y a quelque temps de cela déjà</a>, nous vous parlions de <a href="/elao_/pr/478/glossaire/stenope">Stenope</a>,
+notre générateur de site statique.
+Développé en interne et motivé par la volonté d'avoir la totale maitrise sur notre site,
+il s'agit d'un outil à destination des développeurs Symfony.</p>
+<p>Celui-ci consiste en effet en un bundle Symfony que vous pouvez mettre en place sur un projet existant.
+Vous bénéficierez dès lors d'une commande CLI agissant comme un <em>crawler</em> parcourant les pages de votre application
+afin d'en générer une version statique :</p>
+<pre class="code-multiline language-shell"><code class="language-shell" id="e57a5a65c67a236927de8357ea24b0be">symfony console stenope:build <span class="token parameter variable">-e</span> prod ./build</code></pre>
+<p>La manière d'écrire votre application Symfony n'est pas imposée et ne nécessite pas forcément de connaissances
+particulières supplémentaires. Aucun thème ou modèle de données n'est fourni et par conséquent la façon de développer
+votre application vous appartient entièrement.</p>
+<p>Pour autant, Stenope contient quelques fonctionnalités optionnelles de gestion de contenu qui pourraient vous aider.<br>
+Nous avons également pu mettre en place des fonctionnalités courantes sur certaines typologies de projets qu'il
+peut être intéressant de démontrer.</p>
+<h2 id="un-kit-de-demarrage" class="anchor-title"><a href="#un-kit-de-demarrage">Un kit de démarrage</a></h2>
+<p>Nous avons donc décidé de mettre à disposition un kit de démarrage, qui vous permettra de découvrir davantage comment
+utiliser Stenope et ses fonctionnalités au sein d'une application concrète.
+Le kit est suffisamment simple pour vous permettre de bifurquer à tout moment et commencer à écrire votre propre version,
+tout en démontrant des possibilités d'extensions.</p>
+<p>Le projet est disponible <a href="https://stenopephp.github.io/skeleton/" target="_blank">à cette URL</a> et peut être installé via Composer:</p>
+<pre class="code-multiline language-shell"><code class="language-shell" id="56d99842887a90327882225032e7280f"><span class="token function">composer</span> create-project stenope/skeleton <span class="token parameter variable">-s</span> dev</code></pre>
+<p>Vous pouvez dès lors utiliser ce projet comme terrain de jeu pour expérimenter, ou commencer à développer vos propres
+pages et contenus en profitant de la structure et des outils déjà mis en place.
+Le projet inclut notamment des outils de linting, redimensionnement d'images et autres workflows Github de déploiement
+sur Github Pages…</p>
+<h2 id="sources" class="anchor-title"><a href="#sources">Sources</a></h2>
+<ul>
+<li><a href="https://stenopephp.github.io/Stenope/" target="_blank">La documentation de Stenope</a></li>
+<li><a href="https://stenopephp.github.io/skeleton/" target="_blank">Stenope skeleton</a></li>
+</ul></body>
+                                                                </main>
+            <aside class="article-content__aside">
+                                    <a href="https://twitter.com/intent/like?tweet_id=1570321529505710080" class="kudo" target="_blank">
+                        <span class="kudo__button" aria-hidden="true"></span>
+                        <span class="screen-reader">Cet article m’a été utile</span>
+                        <span class="kudo__label" aria-hidden="true">Kudos</span>
+                    </a>
+                            </aside>
+        </div>
+
+        <div class="article-footer" data-aos="fade-in">
+                                                <div class="article-author">
+                        <div class="article-author__image">
+                            <a href="/elao_/pr/478/la-tribu/msteinhausser">
+                                <img     src="/elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/082fd0188892e254eb0d7604e793767c.jpg"
+    srcset="
+        /elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/082fd0188892e254eb0d7604e793767c.jpg 1x,
+        /elao_/pr/478/resized/content/images/members/avatars/msteinhausser.jpg/079e97b32e0b5c6cbde07e847b4423d4.jpg 2x
+    "
+ />
+                            </a>
+                        </div>
+                        <span class="article-author__info">
+                            Écrit par
+                            <a href="/elao_/pr/478/la-tribu/msteinhausser">
+                                <strong>Maxime Steinhausser</strong>
+                            </a>
+                        </span>
+
+                        <div class="article-author__social">
+                                                            <a href="https://twitter.com/ogizanagi" class="social social--small">
+                                    <i class="icon icon--twitter" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte twitter de Maxime Steinhausser</span>
+                                </a>
+                                                                                        <a href="https://github.com/ogizanagi " class="social social--small">
+                                    <i class="icon icon--github" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte github de Maxime Steinhausser</span>
+                                </a>
+                                                                                        <a href="https://shiningame.maxime-steinhausser.fr/" class="social social--small">
+                                    <i class="icon icon--website" aria-hidden="true"></i>
+                                    <span class="screen-reader">Site personnel de Maxime Steinhausser</span>
+                                </a>
+                                                    </div>
                     </div>
                                     </div>
 
-                <p class="job">Développeur</p>
-
-                <div class="description" data-aos="fade-in">
-                    <p>Avant Quentin travaillait dans la culture, la formation, la communication, et bien d’autres choses.<br />
-Maintenant il développe, en PHP surtout, et il adore ça !<br />
-<br />
-Et quand il ne code pas, il s’applique à transformer son appartement en mini-forêt et à réinventer les manuels Lego® avec son fils.<br /></p>
+                <div class="bricks">
+                            <div class="brick-comment">
+                    <p class="title">Commenter</p>
+                    <p>
+                        Des commentaires ?
+                        <a href="https://twitter.com/Elao/status/1570321529505710080" target="_blank" class="animated-link animated-link--light">
+                            Poursuivons la discussion sur twitter !
+                        </a>
+                    </p>
+                    <div id="tweet-container" class="tweet-container" data-tweet-id="1570321529505710080"></div>
                 </div>
-
-                <div class="socials socials--inline" data-aos="fade-in">
-                    <ul>
-                                                                                                                        <li>
-                            <a href="https://www.linkedin.com/in/quentinbrouillet" target="_blank">
-                                <i class="icon icon--linkedin" aria-hidden="true"></i>
-                                <span class="screen-reader">Compte Linkedin de Quentin Brouillet</span>
-                            </a>
-                        </li>
-                                            </ul>
-                </div>
-
-                <!-- Facultatif -->
-                
-                                    <ul class="interests" data-aos="fade-in">
-                                                    <li>🧗‍♂️</li>
-                                                    <li>🥃</li>
-                                                    <li>🚲</li>
-                                                    <li>😋</li>
-                                                    <li>🪴</li>
-                                            </ul>
-                            </div>
-
-            <div class="member__image" data-aos="fade-left">
-                                    <!-- image de profil : 500 x 680px -->
-                    <img     src="/elao_/pr/478/resized/content/images/members/default.jpg/bcca3b168c329c7336e4ca6b583a5698.jpg"
-    srcset="
-        /elao_/pr/478/resized/content/images/members/default.jpg/bcca3b168c329c7336e4ca6b583a5698.jpg 1x,
-        /elao_/pr/478/resized/content/images/members/default.jpg/2d9232c06790b204ab9cb8bbe2bae3a5.jpg 2x
-    "
- alt="Portrait de Quentin Brouillet">
-                    <div class="seniority" data-aos="zoom-in">
-                                                                                                <span>0 mois</span>
-                        dans la tribu Elao <3
-                    </div>
-                    
-            </div>
-
             
-        </div>
-
-        <aside class="bricks">
-            <div class="brick-visit" data-aos="zoom-in-up" data-aos-delay="150">
-    <h3 class="title">Venir nous voir</h3>
-    <address class="address">
-        <i class="icon icon--location"></i>
-        <a class="address__content" href="https://g.page/Elao_fr?share" target="_blank">
-            <span>34 rue Jean Broquin</span>
-            <span>69006 Lyon</span>
-        </a>
-    </address>
-</div>
-            <div class="brick-contact" data-aos="zoom-in-up" data-aos-delay="150">
-    <h3 class="title">Nous contacter</h3>
-    <address>
-        <i class="icon icon--phone"></i>
-        <a href="tel://04 82 53 37 19">04 82 53 37 19</a>
-    </address>
-    <address>
-        <i class="icon icon--write"></i>
-        <a href="mailto://contact@elao.com">contact@elao.com</a>
-    </address>
-</div>
-        </aside>
-    </div>
+                            <div class="brick-contribute">
+                    <p>
+                        Une typo ?
+                        <a href="https://github.com/Elao/elao_/edit/add_quentin/content/blog/dev/stenope-skeleton.md/" target="_blank" class="animated-link animated-link--light">
+                            Modifier cet article sur Github
+                        </a>
+                    </p>
+                </div>
+                    </div>
+            </div>
         </main>
                     
 <footer class="footer">

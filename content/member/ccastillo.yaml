@@ -1,0 +1,34 @@
+active: true # make it true
+🚲: true
+anonymousTribePicture: true # To protect your image privacy
+
+# Bio
+name: Camille Castillo
+pseudo: Supericam
+gender: female
+position: "Développeuse"
+
+bio: |
+    Développeuse web principalement sur Symfony, qui aime aussi toucher au front. 
+    Aime comprendre le fond du fond du pourquoi du comment…! 
+
+    Sur son temps libre, aime plein de choses, rouler quand c’est possible, et casser des os ; du Roller Derby, un sport consistant à bloquer une personne faisant des tours de piste, mais aussi du roller disco et en skatepark.
+
+    Aime aussi pousser la chansonnette (mais ne demandez pas une chanson au milieu d’une conversation) et jouer la drama / comédie (du théâtre)
+    
+integrationDate: 12-09-2022
+
+# Social
+linkedIn: camille-castillo-52660030
+email: camille.castillo@elao.com
+
+avatar: ~
+
+certifications: [ ]
+
+emojis:
+    - 🛼💨💨
+    - 🎭
+    - 🎵
+    - 🐱
+    - 🍹

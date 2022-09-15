@@ -1,0 +1,27 @@
+active: true
+🚲: false
+
+name: Océane Gandillon
+pseudo: Océane
+gender: female
+position: "Office Manager"
+bio: |
+    Océane est en cours de reconversion professionnelle après plusieurs années dans le commerce.
+    Elle soutient aujourd'hui [Guewen](./gfaivre) dans les tâches administratives, comptable et dans la gestion du personnel.
+
+    Sur son temps libre elle aime s'occuper de sa chienne Revka, qui la suit dans toutes ses aventures.
+
+integrationDate: 04-07-2022
+
+website: ~
+twitter: ~
+github: ~
+linkedIn: oceane-gandillon-809314168
+email: oceane.gandillon@elao.com
+avatar: ~
+
+emojis:
+    - 🐶
+    - ☕️
+    - 🛍
+    - 📲

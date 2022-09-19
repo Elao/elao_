@@ -28,7 +28,7 @@
             <meta property="og:url" content="{{ app.request.uri }}" />
             <meta property="og:site_name" content="elao_" />
             
-            {% set og_image %}{% block og_image %}{{ absolute_url(asset('social/Elao-home-og2.jpg'))  }}{% endblock %}{% endset %}
+            {% set og_image %}{% block og_image %}{{ absolute_url(asset('social/Elao-home-og2.jpg')) }}{% endblock %}{% endset %}
             {% if og_image|default(false) %}
                 <meta property="og:image" content="{{ og_image }}">
             {% endif %}

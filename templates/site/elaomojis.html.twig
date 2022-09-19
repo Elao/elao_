@@ -4,7 +4,7 @@
 {% block meta_description config.description %}
 
 {% block twitter_card_type 'summary_large_image' %}
-{% block og_image asset(config.ogImage|glide_image_preset('opengraph_image')) %}
+{% block og_image absolute_url(asset(config.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(config.twitterImage|glide_image_preset('twitter_card'))) %}
 
 {% block content %}

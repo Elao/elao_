@@ -27,7 +27,8 @@
             <meta property="og:description" content="{% block og_description block('meta_description') %}" />
             <meta property="og:url" content="{{ app.request.uri }}" />
             <meta property="og:site_name" content="elao_" />
-            {% set og_image %}{% block og_image %}{% endblock %}{% endset %}
+            
+            {% set og_image %}{% block og_image %}{{ absolute_url(asset('social/Elao-home-og2.jpg'))  }}{% endblock %}{% endset %}
             {% if og_image|default(false) %}
                 <meta property="og:image" content="{{ og_image }}">
             {% endif %}
@@ -38,7 +39,7 @@
             <meta property="twitter:description" content="{% block twitter_description block('meta_description') %}">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
-            {% set twitter_image %}{% block twitter_image %}{% endblock %}{% endset %}
+            {% set twitter_image %}{% block twitter_image %}{{ absolute_url(asset('social/elao-ogimage-twitter2.jpg')) }}{% endblock %}{% endset %}
             {% if twitter_image|default(false) %}
                 <meta property="twitter:image" content="{{ twitter_image }}">
             {% endif %}

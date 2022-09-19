@@ -6,7 +6,7 @@
 {% block meta_title article.title %}
 {% block meta_description article.description %}
 
-{% block og_image asset(article.thumbnail|glide_image_preset('opengraph_image')) %}
+{% block og_image absolute_url(asset(article.thumbnail|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(article.thumbnail|glide_image_preset('twitter_card'))) %}
 
 {% block meta %}

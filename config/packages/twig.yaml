@@ -10,6 +10,7 @@ twig:
             contact:
                 email: contact@elao.com
                 phone: 04 82 53 37 19
+                publicationDirector: Xavier GORSE
                 address:
                     street_address: 34 rue Jean Broquin
                     address_locality: 69006 Lyon

@@ -1,18 +1,24 @@
 certification_description: >-
-  {member_gender, select,
-      female {Experte certifiée}
-      other  {Expert certifié}
-  }
+    {member_gender, select,
+        female {Experte certifiée}
+        other  {Expert certifié}
+    }
 
 seniority: >-
-  {years, plural,
-      =0    {{months} mois}
-      one   {1 an}
-      other {# ans}
-  }
+    {years, plural,
+        =0    {{months, plural, offset:1
+            =0    {{gender, select,
+                female { Nouvelle ! }
+                other  { Nouveau ! }
+            }}
+            other {{months, number} mois}
+        }}
+        one   {1 an}
+        other {# ans}
+    }
 
 job_offers: >-
-  { count, plural,
-      one   {1 offre }
-      other {# offres }
-  }
+    { count, plural,
+        one   {1 offre }
+        other {# offres }
+    }

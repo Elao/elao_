@@ -43,6 +43,7 @@
             {% if twitter_image|default(false) %}
                 <meta property="twitter:image" content="{{ twitter_image }}">
             {% endif %}
+            {% block structured_data %}{% endblock %}
         {% endblock %}
 
         {# Optional no-index #}

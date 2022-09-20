@@ -15,6 +15,29 @@
     <link rel="alternate" type="application/rss+xml" href="{{ path('blog_rss') }}" title="Le blog de l'équipe d'Elao" />
 {% endblock %}
 
+{% block structured_data %}
+{% autoescape false %}
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "{{ article.title }}",
+        "image": [ "{{ absolute_url(article.thumbnail) }}" ],
+        "datePublished": "{{ article.date|format_date('long') }}",
+        "dateModified": "{{ article.lastModified|format_date('long') }}",
+        "author": {{ article.authors | map(author => {
+            "@type": "Person",
+            "name": author.name,
+            "url": absolute_url(author.active 
+                ? path('team_member', { member: author.slug })
+                : path('team')
+                )
+            })|json_encode }}
+        }
+    </script>
+{% endautoescape %}
+{% endblock %}
+
 {% block content %}
     <div class="container">
         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">

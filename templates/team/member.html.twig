@@ -46,7 +46,11 @@
                         {% set interval = date('now').diff(member.integrationDate) %}
                         {% set numberYear = interval.y %}
                         {% set numberMonth= interval.m %}
-                        <span>{{ 'seniority'|trans({ years: numberYear, months: numberMonth})|raw }}</span>
+                        <span>{{ 'seniority'|trans({
+                            years: numberYear,
+                            months: numberMonth,
+                            gender: member.gender,
+                        })|raw }}</span>
                         dans la tribu Elao <3
                     </div>
                     {% endblock %}

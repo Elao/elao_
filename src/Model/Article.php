@@ -92,4 +92,14 @@ class Article
     {
         return new \DateTimeImmutable() >= $this->date;
     }
+
+    /**
+     * Authors array (without keys)
+     *
+     * @return Member[]
+     */
+    public function getAuthorsArray(): array
+    {
+        return array_values($this->authors);
+    }
 }

@@ -16,26 +16,30 @@
 {% endblock %}
 
 {% block structured_data %}
-{% autoescape false %}
+    {% autoescape false %}
     <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "{{ article.title }}",
-        "image": [ "{{ absolute_url(article.thumbnail) }}" ],
-        "datePublished": "{{ article.date|format_date('long') }}",
-        "dateModified": "{{ article.lastModifiedOrCreated|format_date('long') }}",
-        "author": {{ article.authors | map(author => {
-            "@type": "Person",
-            "name": author.name,
-            "url": absolute_url(author.active 
-                ? path('team_member', { member: author.slug })
-                : path('team')
-                )
-            })|json_encode }}
-        }
+        {{- {
+            '@context': 'https://schema.org',
+            '@type': 'NewsArticle',
+            headline: article.title,
+            image: [absolute_url(article.thumbnail)],
+            datePublished: article.date|format_date('long'),
+            dateModified: article.lastModifiedOrCreated|format_date('long'),
+            authors: article.authorsArray | map(author => {
+                '@type': 'Person',
+                name: author.name,
+                url: absolute_url(author.active
+                    ? path('team_member', { member: author.slug })
+                    : path('team'),
+                ),
+            }),
+        }|json_encode(
+            constant('JSON_PRETTY_PRINT') b-or
+            constant('JSON_UNESCAPED_SLASHES') b-or
+            constant('JSON_UNESCAPED_UNICODE')
+        ) }}
     </script>
-{% endautoescape %}
+    {% endautoescape %}
 {% endblock %}
 
 {% block content %}

@@ -25,7 +25,7 @@
             image: [absolute_url(article.thumbnail)],
             datePublished: article.date|format_date('long'),
             dateModified: article.lastModifiedOrCreated|format_date('long'),
-            authors: article.authorsArray | map(author => {
+            author: article.authorsArray | map(author => {
                 '@type': 'Person',
                 name: author.name,
                 url: absolute_url(author.active

@@ -10,7 +10,7 @@ description: >
     pour vous aider à découvrir son utilisation et démarrer vos projets.
 
 thumbnail:          "content/images/blog/thumbnails/stenope-skeleton.jpg"
-tags:               ["Stenope", "Site Statique"]
+tags:               ["Stenope", "Site Statique", "Symfony"]
 authors:            ["msteinhausser"]
 tweetId:            "1570321529505710080"
 ---

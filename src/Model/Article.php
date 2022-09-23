@@ -33,6 +33,8 @@ class Article
      * If provided, the image to use on top of the show article view instead of the thumbnail image.
      */
     public ?string $banner = null;
+
+    /** @var string[] */
     public array $tags = [];
 
     /**

@@ -114,6 +114,7 @@ Par nature, le déploiement d'un site statique est simple et sans prise de tête
 
 ## Sources
 
+- [Qu'est-ce que Stenope ?](../../term/stenope.md)
 - Le site Elao (propulsé par Stenope) : https://github.com/Elao/elao_
 - La doc de Stenope, propulsée par lui-même 🧠 : https://stenopephp.github.io/Stenope/
 - Glide : https://glide.thephpleague.com/

@@ -1,10 +1,86 @@
 .contact {
-  margin: 0 auto;
-  padding: 75px 100px;
+  position: relative;
   width: 100%;
-  max-width: 1040px;
   display: flex;
+  perspective: 2000px;
+  justify-content: center;
+}
+
+.contact__3d {
+  inset: 0;
+  transform: rotateY(var(--r-x)) rotateX(var(--r-y));
+  clip-path: inset(0 0 0 0 round 10px);
+  display: flex;
+}
+
+.contact__content {
+  width: 100%;
+  padding: 75px 100px;
+  display: flex;
+  max-width: 1040px;
   background: $color-secondary;
+}
+
+// Adds a soft light
+.contact__layer-soft-light {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  clip-path: inset(0 0 1px 0 round 10px);
+  background: radial-gradient(
+    farthest-corner circle at var(--x) var(--y),
+    rgba(255, 255, 255, 0.7) 10%,
+    rgba(255, 255, 255, 0.45) 20%,
+    rgba(255, 255, 255, 0) 90%
+  );
+}
+
+.contact__image {
+  position: relative;
+}
+
+// Adds a diagonal glare
+.contact__layer-diagonal-light {
+  --diagonal: repeating-linear-gradient(
+    130deg,
+    #0e152e 0%,
+    hsl(180, 10%, 60%) 6.5%,
+    hsl(180, 10%, 60%) 12.5%,
+    hsl(180, 10%, 60%) 23.5%,
+    #0e152e 38%,
+    #0e152e 50%
+  )
+  var(--bg-x) var(--bg-y) / 300%;
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  mix-blend-mode: color-dodge;
+  will-change: background;
+  transition-property: opacity;
+  clip-path: url(#contactStampNegative);
+  background-blend-mode: overlay;
+  background: var(--diagonal);
+}
+
+// sweet hologram effect
+// Inspired from https://deck-24abcd.netlify.app/
+.contact__layer-hologram {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  pointer-events: none;
+  mix-blend-mode: exclusion;
+  opacity: min(calc(var(--dist-center) * 0.4), 0.5);
+  will-change: background;
+  transition-property: opacity;
+  clip-path: url(#contactStampNegative);
+  background-blend-mode: overlay;
+  background-image: url('../../images/pages/contact/hologram.webp');
+  background-size: 80%;
+  filter: brightness(var(--dist-center));
 }
 
 .contact__main {
@@ -70,7 +146,16 @@
 
 
 @media (max-width: $screen-sm) {
-  .contact {
+  .contact__3d {
+    transform: none;
+    clip-path: none;
+  }
+
+  .contact__layer-soft-light {
+    display: none;
+  }
+
+  .contact__content {
     padding: 0;
     flex-direction: column;
     background: transparent;
@@ -96,9 +181,9 @@
     padding: 45px 30px;
     color: $color-light;
     background: $color-dark;
+  }
 
-    img {
-      display: none;
-    }
+  .contact__image {
+    display: none;
   }
 }

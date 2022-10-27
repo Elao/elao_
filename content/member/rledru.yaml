@@ -1,26 +1,23 @@
 active: true
 🚲: true
-anonymousTribePicture: true
 
 name: Romane Ledru
 gender: female
 position: "Alternante en développement"
 bio: |
-    Romane s'est passionnée pour le web après s'être longuement aventurée dans le domaine de l'Art. Devant une feuille blanche comme devant du code, la création reste son grand dada.
+    Romane s'est passionnée pour le web après s'être longuement aventurée dans le domaine de l'Art.
 
-    Aujourd'hui alternante, elle vise toujours la lune pour ne pas finir gelée dans les tréfonds de l'espace. Elle souhaite tout autant s'investir dans des associations Lyonnaises du développement web.
+    Aujourd'hui alternante, elle rêve de passer sa vie à développer de bon matin avec un chat 🐱 sur les genoux et un bon thé 🍵.
 
-    Se nourrissant presque exclusivement de miel, elle est amatrice d'apiculture depuis plus de 2 ans. Surtout ne pas la lancer sur ce sujet si l'on n'a pas 2h devant soi pour l'écouter en parler. 🐝
+    Se nourrissant presque exclusivement de miel, elle est amatrice d'apiculture depuis plus de 2 ans. 🐝
     On peut la trouver facilement dans le coin d'un bar à jeux ou devant son ordinateur, et même parfois en haut d'une montagne à manger du fromage.
-
-    Son rêve ? Développer de bon matin avec un chat sur les genoux et un bon thé (au miel bien sûr !).
 
 integrationDate: 05-09-2022
 
 github: Romaneled
 linkedIn: romane-ledru
 email: romane.ledru@elao.com
-avatar: ~
+avatar: content/images/members/avatars/rledru.jpg
 
 emojis:
     - 🐝

@@ -15,3 +15,14 @@
   visibility: hidden;
   opacity: 0;
 }
+
+// Hides the SVG included for clip-paths
+.clip-paths {
+  svg {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+}

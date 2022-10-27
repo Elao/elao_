@@ -83,10 +83,6 @@
   filter: brightness(var(--dist-center));
 }
 
-.contact__main {
-  flex: 1;
-}
-
 .contact__message {
   display: flex;
   flex-direction: column;
@@ -100,15 +96,6 @@
     font-family: 'antikor bold';
     font-size: 28px;
     color: $color-primary;
-  }
-
-  .form-group {
-    margin: 0 0 20px;
-    width: 100%;
-
-    &:first-of-type {
-      margin: 0 0 50px;
-    }
   }
 
   .btn {

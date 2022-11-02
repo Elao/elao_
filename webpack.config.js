@@ -96,6 +96,10 @@ Encore
             'templates/**/*.twig',
             'content/**/*.{yaml,md}',
         ];
+
+        // Disable watching the static `public` folder since it would force a live reload on any change,
+        // as the manifest.json file is always re-computed (but not required by the dev server):
+        options.static.watch = false;
     })
 ;
 

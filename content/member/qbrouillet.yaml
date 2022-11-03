@@ -1,6 +1,5 @@
 active: true # make it true
 🚲: true # velo-taffeur
-anonymousTribePicture: true # To protect your image privacy
 
 # Bio
 name: Quentin Brouillet
@@ -15,8 +14,10 @@ position: Développeur
 integrationDate: 12-09-2022
 
 # Social
+github: quentin-brouillet
 linkedIn: quentinbrouillet
 email: quentin.brouillet@elao.com
+avatar: content/images/members/avatars/qbrouillet.jpg
 
 # avatar: images/members/avatars/qbrouillet.jpg
 

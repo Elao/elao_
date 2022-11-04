@@ -8,7 +8,7 @@ class Job
 {
     use MetaTrait;
 
-    public const DEFAULT_SOCIAL_IMG = 'images/common/elao-developpe-du-lien.jpg';
+    public const DEFAULT_SOCIAL_IMG = 'content/images/common/elao-developpe-du-lien.jpg';
 
     public string $slug;
 

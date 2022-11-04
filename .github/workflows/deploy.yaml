@@ -21,7 +21,7 @@ jobs:
 
     environment:
       name: production
-      url: ${{ secrets.WEBSITE_URL }}
+      url: https://www.elao.com
 
     steps:
       - name: 'Checkout'
@@ -94,7 +94,7 @@ jobs:
           bin/console app:generate-redirections --target=blog --no-interaction -vv --ansi > build/redirections-blog.conf
         env:
           APP_ENV: prod
-          ROUTER_DEFAULT_URI: ${{ secrets.WEBSITE_URL }}
+          ROUTER_DEFAULT_URI: https://www.elao.com
           INCLUDE_SAMPLES: 0
           SHOW_UNPUBLISHED_ARTICLES: 0
           MATOMO_ID: 1

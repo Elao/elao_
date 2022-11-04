@@ -18,18 +18,13 @@ jobs:
     # Do not run on Draft PRs
     if: "!github.event.pull_request || github.event.pull_request.draft == false"
 
+    environment:
+      name: staging
+      url: https://elao.github.io/elao_/pr/${{ github.event.number }}
+
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v2
-
-      - name: 'Create GitHub deployment'
-        uses: chrnorm/deployment-action@releases/v1
-        id: deployment
-        with:
-          ref: ${{ github.head_ref }}
-          token: ${{ secrets.GITHUB_TOKEN }}
-          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}
-          environment: staging
 
       # https://github.com/actions/setup-node
       - name: 'Setup node'
@@ -108,23 +103,3 @@ jobs:
           FOLDER: build # The folder the action should deploy.
           TARGET_FOLDER: pr/${{ github.event.number }} # The folder where the action should deploy on the deployment branch.
           CLEAN: true # Automatically remove deleted files from the deploy branch
-
-      - name: 'Update deployment status (success)'
-        if: success()
-        uses: chrnorm/deployment-status@releases/v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          description: "Deployed PR #${{ github.event.number }}"
-          target_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
-          environment_url: https://elao.github.io/elao_/pr/${{ github.event.number }}/
-          state: "success"
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-
-      - name: 'Update deployment status (failure)'
-        if: failure()
-        uses: chrnorm/deployment-status@releases/v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          description: "Failed to deploy PR #${{ github.event.number }}"
-          state: "failure"
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}

@@ -25,6 +25,7 @@ class CaseStudy
     public array $terms = [];
     public array $members = [];
     public bool $enabled = true;
+    public ?array $credits = null;
 
     public function hasMember(Member $member): bool
     {

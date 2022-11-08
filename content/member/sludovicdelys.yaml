@@ -1,5 +1,6 @@
 active: true
 🚲: true
+gender: female
 
 name: Sabrina Ludovic de Lys
 pseudo: Sabrina Ludovic de Lys
@@ -7,7 +8,7 @@ position: Alternante en intégration
 integrationDate: 16-08-2021
 bio: "Après avoir été apprentie sorcière dans plusieurs métiers, Sabrina se reconvertit dans le domaine du développement web.
 
-Soutenue par [Amélie](https://www.elao.com/la-tribu/adefrance) sensei🥋, elle développe une connaissance approfondie de la profession de l'intégration web tout en cultivant sa connaissance du développement en amont au cours de sa formation.
+Soutenue par [Amélie](./adefrance) sensei🥋, elle développe une connaissance approfondie de la profession de l'intégration web tout en cultivant sa connaissance du développement en amont au cours de sa formation.
 
 Elle aime peindre en aquarelle pendant son temps libre et cuisiner des gâteaux au chocolat faits de courgettes.
 

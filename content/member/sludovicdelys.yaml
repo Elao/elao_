@@ -1,9 +1,17 @@
 active: true
+🚲: true
 
 name: Sabrina Ludovic de Lys
 pseudo: Sabrina Ludovic de Lys
 position: Alternante en intégration
 integrationDate: 16-08-2021
+bio: "Après avoir été apprentie sorcière dans plusieurs métiers, Sabrina se reconvertit dans le domaine du développement web.
+
+Soutenue par [Amélie](https://www.elao.com/la-tribu/adefrance) sensei🥋, elle développe une connaissance approfondie de la profession de l'intégration web tout en cultivant sa connaissance du développement en amont au cours de sa formation.
+
+Elle aime peindre en aquarelle pendant son temps libre et cuisiner des gâteaux au chocolat faits de courgettes.
+
+Chez Elao, elle mange seulement la moitié de sa pizza afin de la garder pour le lendemain et médite de temps à autre."
 
 website: ~
 twitter: ~
@@ -12,8 +20,10 @@ email: sabrina.ludovicdelys@elao.com
 avatar: content/images/members/avatars/sludovicdelys.jpg
 
 emojis:
-    - ☕️
-    - 🎬
+    - 🎨
+    - 🥒
+    - 🎥
     - 🧘🏽‍♀️
     - 🪴
+    - 🍕
 

@@ -28,7 +28,7 @@ le GRIEPS dans sa démarche de formation à voulu partager ces connaissances via
 
 Le GRIEPS a confié à Elao le développement de l’application ainsi que de son back-office permettant d’avoir la main sur tout le contenu de son application.
 
-## L'expertise Elao déployée pour l'application Tribü
+## L'expertise Elao déployée pour l'application Semio8G
 
 ### Ateliers de recueil du besoin
 

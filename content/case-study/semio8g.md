@@ -5,7 +5,7 @@ date: "2022-11-15"
 
 # Params
 metaDescription: "Application de sémiologie en psychiatrie"
-description: "Le GRIEPS propose Semio8G permettant aux soignants en psychiatrie de maitriser la sémilogie de leur domaine."
+description: "Le GRIEPS propose Semio8G permettant aux soignants en psychiatrie de maitriser la sémiologie de leur domaine."
 websiteUrl: https://semio8g.grieps.fr/
 shortDescription: "Application de sémiologie en psychiatrie"
 clients: Grieps

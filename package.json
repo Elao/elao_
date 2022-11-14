@@ -35,23 +35,27 @@
         "prismjs": "^1.24.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.20.2",
+        "@babel/eslint-parser": "^7.19.1",
+        "@babel/preset-env": "^7.20.2",
         "@swup/debug-plugin": "^1.0",
         "@swup/forms-plugin": "^1.0",
         "@swup/slide-theme": "^1.0",
         "@symfony/ux-swup": "file:vendor/symfony/ux-swup/Resources/assets",
-        "@symfony/webpack-encore": "^2.0.0",
+        "@symfony/webpack-encore": "^4.1.1",
         "autoprefixer": "^10.0.0",
-        "babel-eslint": "^10.1.0",
         "concurrently": "^6.2.0",
         "core-js": "^3.15.1",
-        "eslint": "^7.29.0",
+        "eslint": "^8.27.0",
         "eslint-plugin-json": "^3.0.0",
         "file-loader": "^6.2.0",
-        "postcss-loader": "^5.0.0",
+        "postcss-loader": "^7.0.1",
         "regenerator-runtime": "^0.13.2",
         "sass": "^1.51.0",
-        "sass-loader": "^12.0.0",
+        "sass-loader": "^13.2.0",
         "swup": "^2.0",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.13.0"
     }
 }

@@ -40,23 +40,29 @@ Le besoin étant de proposer une application fluide et retranscrivant le chemine
 ### Ateliers UX/UI
 
 Les développeurs Elao sont avant tout des concepteurs et n'hésitent pas à être force de proposition d'un point de vue fonctionnel. 
-Le GRIEPS n’étant pas familier avec la conception d’interfaces utilisateur, Christelle et Xavier ont proposé des maquettes et un prototype. 
-Cette étape a permis à l’équipe du GRIEPS de se projeter sur l’utilisation de l’application. 
-Ainsi que dans la réflexion de l'application.
+Le GRIEPS n’étant pas familier avec la conception d’interfaces utilisateur, Christelle et Xavier ont proposé des maquettes et un prototype.
+Cette étape a permis à l’équipe du GRIEPS de se projeter sur l’utilisation de l’application, ainsi que dans la réflexion fonctionnelle de l'application.
+
+<figure>
+    <img src="content/images/casestudies/semio8g-screen-prototype.png" alt="Capture d'écran du prototype">
+    <figcaption>
+      <span class="figure__legend">Capture d'écran du prototype réalisé avec Figma</span>
+    </figcaption>
+</figure>
 
 ### Phase de build (développement)
 
 C’est Amélie et Arthur qui ont accompagné Benjamin et Guillaume du GRIEPS dans l’élaboration 
 des spécifications fonctionnelles pour prendre en compte tous les cas nominaux.
 
-Ils ont ensuite posé les bases techniques. Le budget du projet étant limité, 
-le choix de proposer une interface d’administration via un outil tier à été fait. 
-Strapi, un CMS headless, fut le choix idéal. Permettant de se concentrer sur la valeur qu’apporte le produit.
+Ils ont ensuite posé les bases techniques.
+Le choix de proposer une interface d’administration via un outil tier était le plus adapté aux besoins du projet.
+Strapi, un CMS headless, fut le choix idéal permettant de se concentrer sur la valeur qu’apporte le produit.
 
 
 ## Les applications
 
-### Pour les personnes qui souhaite acquérir des connaissances
+### Pour les personnes qui souhaitent acquérir des connaissances
 
 Semio8G a depuis le début une volonté d’être clair et intuitive. 
 Pour que l’apprentissage et la recherche soit simple.
@@ -76,3 +82,12 @@ L’intégration à été réalisée dans une réflexion mobile first, tout en �
 L'équipe chargée de l’application a des besoins ponctuels d’administration. 
 C’est pourquoi l’équipe technique d’Elao a décidé d’utiliser un outil tiers : Strapi, 
 afin de concentrer le développement et le budget sur ce qui apporte le plus de valeur aux utilisateurs du produit.
+
+<figure>
+    <img src="content/images/casestudies/semio8g-interface-mobile.jpg" alt="L'interface mobile de l'application">
+    <figcaption>
+      <span class="figure__legend">L'interface mobile de l'application</span>
+      <span class="figure__credits">Crédit photo : <a href="https://psd.zone/mockups/iphone-x-in-hand-mockup-psd/">PSD zone</a></span>
+    </figcaption>
+</figure>
+

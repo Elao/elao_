@@ -27,7 +27,7 @@
             <meta property="og:description" content="{% block og_description block('meta_description') %}" />
             <meta property="og:url" content="{{ app.request.uri }}" />
             <meta property="og:site_name" content="elao_" />
-            
+
             {% set og_image %}{% block og_image %}{{ absolute_url(asset('social/Elao-home-og2.jpg')) }}{% endblock %}{% endset %}
             {% if og_image|default(false) %}
                 <meta property="og:image" content="{{ og_image }}">
@@ -92,6 +92,15 @@
                cache: true,
                animateHistoryBrowsing: true,
                debug: app.debug,
+               linkSelector: [
+                   'a[href^="%s"]'|format(app.request.schemeAndHttpHost ~ app.request.basePath),
+                   'a[href^="/"]',
+               ]|map(selector => selector ~ [
+                       '[data-no-swup]',
+                       '[target="_blank"]',
+                       'a[href^="%s/_profiler"]'|format(app.request.schemeAndHttpHost ~ app.request.basePath)
+                   ]|map(notRule => ':not(%s)'|format(notRule))|join(''))
+               |join(',')
            })
          | stimulus_controller('swup_matomo', {
                enabled: site.trackers.matomo is not empty,

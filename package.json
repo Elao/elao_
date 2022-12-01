@@ -41,7 +41,7 @@
         "@swup/debug-plugin": "^1.0",
         "@swup/forms-plugin": "^1.0",
         "@swup/slide-theme": "^1.0",
-        "@symfony/ux-swup": "file:vendor/symfony/ux-swup/Resources/assets",
+        "@symfony/ux-swup": "file:vendor/symfony/ux-swup/assets",
         "@symfony/webpack-encore": "^4.1.1",
         "autoprefixer": "^10.0.0",
         "concurrently": "^6.2.0",

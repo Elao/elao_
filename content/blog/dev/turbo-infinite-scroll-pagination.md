@@ -150,10 +150,12 @@ Comme nous l'avons vu au dessus, une `<turbo-frame>` contient en général un co
 Mais le contenu d'une `<turbo-frame>` peut également être chargé de façon asynchrone via une url au moment celle ci apparait à l'utilisateur. C'est à dire que tant que la `<turbo-frame>` n'est pas visible par l'utilisateur, car par exemple en dehors du viewport, rien ne se passe. Et lorsque l'utilisateur scroll dans la page jusqu'à faire apparaitre `<turbo-frame>`, son contenu est chargé depuis l'url.
 
 ```twig
-<turbo-frame loading="lazy" src="/path/to/content" target="_top"></turbo-frame>
+<turbo-frame id="frame_id" loading="lazy" src="/path/to/content" target="_top"></turbo-frame>
 ```
 
 L'attribut `target="_top"` permet d'indiquer à Turbo que les éventuels liens contenus dans la `<turbo-frame>` permettent de remplacer la page entière et non pas uniquement la frame à la manière d'une iframe.
+
+L'url doit retourner une `<turbo-frame>` avec le même `id`.
 
 L'idée c'est donc d'inclure la page suivante de cette manière. Une page c'est donc la liste des éléments de la page courante plus une `<turbo-frame>` lazy vers la page suivante :
 

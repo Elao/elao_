@@ -46,7 +46,7 @@ Pour savoir si la requête provient de Turbo, celui ci ajoute un header qu'il co
 
 Ce qui donne un controller de ce type :
 
-```
+```php
 class ExempleController extends AbstractController
 {
     public function example(Request $request): Response
@@ -78,7 +78,7 @@ Au premier affichage, on obtient ceci :
 
 Lorsque l'on soumet le formulaire avec "Maxime" dans le champ, le controlleur retourne un `<turbo-stream>` permettant de remplacer la `<turbo-frame>` par "Bonjour Maxime.".
 
-```
+```twig
 <turbo-stream action="replace" target="myFrame">
     <template>
         <p>Bonjour {{ name }}.</p>
@@ -143,7 +143,7 @@ Dans une pagination clasique nous aurions en plus en bas de la page les liens ve
 
 Nous souhaitons maintenant charger la page suivante lorsque l'on arrive en bas de la liste.
 
-Nous allons pour cela utilisé une fonctionnalité spaciale des `<turbo-frame>`, le [lazy loading](https://turbo.hotwired.dev/reference/frames#lazy-loaded-frame).
+Nous allons pour cela utiliser une fonctionnalité spéciale des `<turbo-frame>`, le [lazy loading](https://turbo.hotwired.dev/reference/frames#lazy-loaded-frame).
 
 Comme nous l'avons vu au dessus, une `<turbo-frame>` contient en général un contenu de base qui peut être mis à jour par un `<turbo-stream>` retourné par le serveur suite à la soumission d'un formulaire par exemple.
 
@@ -153,11 +153,11 @@ Mais le contenu d'une `<turbo-frame>` peut également être chargé de façon as
 <turbo-frame loading="lazy" src="/path/to/content" target="_top"></turbo-frame>
 ```
 
-L'attribut `target="_top"` permet d'indiquer à Turbo que le lien contenu dans la `<turbo-frame>` permette de remplacer la page entière et non pas uniquement la frame comme ce que ferait une iframe.
+L'attribut `target="_top"` permet d'indiquer à Turbo que les éventuels liens contenus dans la `<turbo-frame>` permettent de remplacer la page entière et non pas uniquement la frame à la manière d'une iframe.
 
-L'idée c'est donc d'inclure la page suivante de cette manière. Une page c'est donc la liste des élément de la page courante plus une `<turbo-frame>` lazy vers la page suivante :
+L'idée c'est donc d'inclure la page suivante de cette manière. Une page c'est donc la liste des éléments de la page courante plus une `<turbo-frame>` lazy vers la page suivante :
 
-```
+```twig
 {# item/page.html.twig #}
 {% for item in pagination.items %}
     <div>
@@ -166,7 +166,12 @@ L'idée c'est donc d'inclure la page suivante de cette manière. Une page c'est 
     </div>
 {% endfor %}
 {% if not pagination.isLastPage() %}
-    <turbo-frame loading="lazy" src="{{ path('item_list', { page: pagination.getNextPage() }) }}" target="_top"></turbo-frame>
+    <turbo-frame 
+        id="page_{{ pagination.getNextPage() }} l
+        oading="lazy" 
+        src="{{ path('item_list', { page: pagination.getNextPage() }) }}" 
+        target="_top"
+    ></turbo-frame>
 {% endif %}
 ```
 
@@ -184,7 +189,7 @@ On inclu la première page ici :
 {% endblock %}
 ```
 
-On modifie également le controlleur pour retourner un `<turbo-frame>` lors que la requête provient d'une frame :
+On modifie également le controlleur pour retourner une `<turbo-frame>` lors que la requête provient d'une frame :
 
 ```php
 class ItemController extends AbstractController
@@ -205,11 +210,30 @@ class ItemController extends AbstractController
 }
 ```
 
-On renvoie une `<turbo-frame>` avec l'id de la page demandée permettant de remplacer la frame lazy vide par le contenu de la page (liste des items + frame lazy vers la page suivante).
+Côté template renvoie une `<turbo-frame>` avec l'id de la page demandée permettant de remplacer la frame lazy vide par le contenu de la page (liste des items + frame lazy vers la page suivante).
 
 ```
 {# item/page.frame.html.twig #}
 <turbo-frame id="page_{{ pagination.getCurrentPage() }}">
     {{ include('item/page.html.twig') }}
 </turbo-frame>
+```
+
+## Etape 3 - Afficher le chargement en cours
+
+Afin de montrer à l'utilisateur qu'une page est en cours de chargement, on peut rajouter un message, un loader sous forme petite animation ou de gif directement dans la frame lazy de la page suivante. Ce contenu sera affiché pendant le chargement de la page suivante.
+
+```twig
+{# item/page.html.twig #}
+{% for item in pagination.items %}
+    <div>
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.description }}</p>
+    </div>
+{% endfor %}
+{% if not pagination.isLastPage() %}
+    <turbo-frame loading="lazy" src="{{ path('item_list', { page: pagination.getNextPage() }) }}" target="_top">
+        Chargement en cours 🕘
+    </turbo-frame>
+{% endif %}
 ```

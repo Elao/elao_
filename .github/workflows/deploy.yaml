@@ -21,7 +21,7 @@ jobs:
 
     environment:
       name: production
-      url: https://www.elao.com
+      url: ${{ vars.WEBSITE_URL }}
 
     steps:
       - name: 'Checkout'
@@ -94,14 +94,14 @@ jobs:
           bin/console app:generate-redirections --target=blog --no-interaction -vv --ansi > build/redirections-blog.conf
         env:
           APP_ENV: prod
-          ROUTER_DEFAULT_URI: https://www.elao.com
+          ROUTER_DEFAULT_URI: ${{ vars.WEBSITE_URL }}
           INCLUDE_SAMPLES: 0
           SHOW_UNPUBLISHED_ARTICLES: 0
-          MATOMO_ID: 1
+          MATOMO_ID: ${{ vars.MATOMO_ID }}
 
       - name: '🚀 Deploy'
         run: |
-          rsync build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }} \
+          rsync build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ vars.DEPLOY_PATH }} \
             --human-readable \
             --compress \
             --archive \

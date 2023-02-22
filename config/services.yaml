@@ -38,8 +38,7 @@ services:
             - name: 'stenope.processor'
               priority: '10' # MUST be before any processor using the SharedHtmlCrawlerManager
 
-    # Override default HTML Anchor processor:
-    Stenope\Bundle\Processor\HtmlAnchorProcessor: '@App\Stenope\Processor\HtmlAnchorProcessor'
+    # Use our own processor to add anchors to headings (by wrapping these headings content in <a> tags)
     App\Stenope\Processor\HtmlAnchorProcessor:
         tags: [{ name: stenope.processor, priority: -20 }]
 

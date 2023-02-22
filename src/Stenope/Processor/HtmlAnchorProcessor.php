@@ -10,7 +10,8 @@ use Stenope\Bundle\Content;
 use Stenope\Bundle\Service\HtmlUtils;
 
 /**
- * Add anchor to titles
+ * Add anchor to titles by wrapping its content in <a> tags rather than appending it to titles
+ * on contrary of {@see \Stenope\Bundle\Processor\HtmlAnchorProcessor}
  */
 class HtmlAnchorProcessor implements ProcessorInterface
 {

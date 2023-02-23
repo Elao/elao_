@@ -9,17 +9,16 @@ services:
     system:
         hostname: elao
         build:
-            context: .
-            target: system
-        image: elao:20220914094914
+            context: ..
+            dockerfile: docker/Dockerfile
+        image: elao:20230226135917
         restart: always
         ports:
             - 8000:80
             - 8080:8080
         volumes:
-            - ../..:${DIR}
+            - ../..:${MANALA_DIR}
         environment:
-            DIR: ${DIR}
-            CACHE_DIR: ${CACHE_DIR}
-        working_dir: ${DIR}
-        entrypoint: .manala/docker/entrypoint.sh
+            MANALA_DIR: ${MANALA_DIR}
+            MANALA_CACHE_DIR: ${MANALA_CACHE_DIR}
+        working_dir: ${MANALA_DIR}

@@ -17,5 +17,5 @@ _int_decode = $(words $(1))
 _int_encode = $(if $(1),$(wordlist 1,$(1),$(_int)))
 
 # Usage:
-#   $(call plus, 40, 2) = 42
-plus = $(call _int_decode,$(call _int_encode,$(strip $(1))) $(call _int_encode,$(strip $(2))))
+#   $(call manala_plus, 40, 2) = 42
+manala_plus = $(call _int_decode,$(call _int_encode,$(strip $(1))) $(call _int_encode,$(strip $(2))))

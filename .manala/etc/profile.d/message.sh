@@ -20,10 +20,10 @@ printf " \033[36m• php-xdebug \033[35m[on|off] \033[37m- enable/disable php xd
 php-xdebug () {
   if [ "$1" = on ]; then
     sudo phpenmod xdebug
-    sudo s6-svc -r /etc/services/php
+    sudo s6-svc -r /etc/services.d/php
   elif [ "$1" = off ]; then
     sudo phpdismod xdebug
-    sudo s6-svc -r /etc/services/php
+    sudo s6-svc -r /etc/services.d/php
   else
     if $(php -m | grep -q Xdebug); then
         echo on

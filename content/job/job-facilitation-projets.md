@@ -10,7 +10,7 @@ place:        "Lyon, télétravail partiel possible"
 hiringDate:   ~
 formation:    ~
 experience:   "> 3 ans"
-remuneration: "40 - 45k €"
+remuneration: "A partir de 40k €"
 ---
 
 ## Contexte

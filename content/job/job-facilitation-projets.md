@@ -34,7 +34,7 @@ Quelqu'un qui partage les [valeurs d'Elao](https://www.elao.com/nos-valeurs).
 
 
 ## Votre rôle
-Faciliter et fluidifier la mise en oeuvre des projets clients et des projets interne d'Elao, plus concrètement :
+Faciliter et fluidifier la mise en oeuvre des projets clients et des projets internes d'Elao, plus concrètement :
 
 - Animer la construction et la mise à jour des nouvelles features avec les clients
 - Les accompagner sur la priorisation de leurs sujets et sur la rédaction de leurs spécifications

@@ -61,7 +61,7 @@ Faciliter et fluidifier la mise en oeuvre des projets clients et des projets int
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Elao reste **pragmatique** mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, [l'équipe](https://www.elao.com/la-tribu) disposent de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez Elao.
+Backend, frontend et/ou devops, [l'équipe](../../la-tribu) disposent de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez Elao.
 
 
 ## Vie dans l'entreprise

@@ -23,3 +23,6 @@ stenope:
         App\Model\Article: { route: 'blog_article', slug: 'article' }
         App\Model\CaseStudy: { route: 'case_study', slug: 'caseStudy' }
         App\Model\Glossary\Term: { route: 'glossary_term', slug: 'term' }
+
+    processors:
+        anchors: false # See HtmlAnchorProcessor

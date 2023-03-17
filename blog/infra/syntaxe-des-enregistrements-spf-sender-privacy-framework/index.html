@@ -317,7 +317,7 @@
 
                 
                 
-                <body><p>Dans cet article je vais tenté d'expliquer comment fonctionne actuellement le SPF pour nos emails, mais également de détailler au maximum les différentes options que fournit le framework afin de créer nos propres enregistrements. L'ensemble de ces options peuvent être retrouvées sur le site officiel (anglais): <a href="http://www.openspf.org/SPF_Record_Syntax" title="OpenSPF" target="_blank">OpenSPF.org</a></p>
+                <p>Dans cet article je vais tenté d'expliquer comment fonctionne actuellement le SPF pour nos emails, mais également de détailler au maximum les différentes options que fournit le framework afin de créer nos propres enregistrements. L'ensemble de ces options peuvent être retrouvées sur le site officiel (anglais): <a href="http://www.openspf.org/SPF_Record_Syntax" title="OpenSPF" target="_blank">OpenSPF.org</a></p>
 <p>Le SPF est une spécification publiée le 28 Avril 2006, pour la RFC c'est <a href="http://www.openspf.org/RFC_4408" title="RFC_4408" target="_blank">ici</a></p>
 <p>Ce qui suit est une traduction du manuel officiel que l'on peut trouver sur le site ci-dessus: Les noms de domaines définissent 0 ou plusieurs mécanismes. Ces mécanismes peuvent être utilisés pour décrire le paramétrage des hôtes désignés comme serveurs de mail sortant, c'est à dire autorisés à envoyer des emails pour le domaine concerné.</p>
 <p><a href="http://www.openspf.org/SPF_Record_Syntax#all" target="_blank">all</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#ip4" target="_blank">ip4</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#ip6" target="_blank">ip6</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#a" target="_blank">a</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#mx" target="_blank">mx</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#ptr" target="_blank">ptr</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#exists" target="_blank">exists</a> | <a href="http://www.openspf.org/SPF_Record_Syntax#include" target="_blank">include</a></p>
@@ -442,7 +442,7 @@ mx:/</code></pre>
 <pre class="code-multiline"><code id="1563a69bf60f6eb2ef8f2eeba066536a">"v=spf1 mx mx:deferrals.domain.com -all"</code></pre>
 <p>Peut être qu'un domaine a envoyé un mail via ce serveur MX ainsi qu'avec un autre ensemble de serveur dont le rôle est de retenter l'envoi pour les domaines dont la distribution a été différée.</p>
 <pre class="code-multiline"><code id="258d5425e74e92a3f27925a9c4bfc73c">"v=spf1 mx/24 mx:offsite.domain.com/24 -all"</code></pre>
-<p>Peut être qu'un serveur MX de domaine à reçu un mail sur une adresse IP, mais a envoyé le mail sur une adresse IP différente mais proche.</p></body>
+<p>Peut être qu'un serveur MX de domaine à reçu un mail sur une adresse IP, mais a envoyé le mail sur une adresse IP différente mais proche.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

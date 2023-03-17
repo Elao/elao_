@@ -343,7 +343,7 @@
 
                 
                 
-                <body><h2 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h2>
+                <h2 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h2>
 <p>Dans la continuité de l'émergence des applications full frontend, nous sommes de plus en plus amenés a appeler des API directement en Javascript depuis le client. J'ai récemment été confronté à un cas où l'API à interroger n'était pas sur le même domaine que l'application. Sur un développement backend ce genre de cas ne pose aucun problème mais avec Javascript, pour des raisons de sécurité, les communications <strong>cross-domain</strong> sont bloquées par la <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Same_origin_policy_for_JavaScript" target="_blank">Same Origin Policy</a>.</p>
 <h2 id="cors" class="anchor-title"><a href="#cors">CORS</a></h2>
 <p><a href="http://www.w3.org/TR/cors/" target="_blank">Cross-Origin Resource Sharing</a> (CORS) est une spécification du W3C permettant les requêtes <strong>cross-domain</strong> depuis les navigateurs compatibles. Si l'API que vous interrogez est compatible avec <strong>CORS</strong>, vous pourrez accéder à l'API même si elle n'est pas sur le même domaine que votre application.</p>
@@ -419,7 +419,7 @@ Access-Control-Allow-Headers: Api-Key</code></pre>
 <h2 id="bonus" class="anchor-title"><a href="#bonus">Bonus</a></h2>
 <p>Vous pouvez encore améliorer votre proxy par exemple en ajoutant automatiquement des headers d'authentification si l'API en nécessite ou encore des headers de cache afin de reduire le temps de réponse ou d'économiser un éventuel quota imposé par l'API.</p>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
-<p>Grâce a <strong>nginx</strong> vous pouvez donc créer un <em>reverse proxy</em> qui vous permettra d'accéder à une API directement depuis votre application front sur un domaine différent en contournant de façon sécurisée la <strong>Same Origin Policy</strong>.</p></body>
+<p>Grâce a <strong>nginx</strong> vous pouvez donc créer un <em>reverse proxy</em> qui vous permettra d'accéder à une API directement depuis votre application front sur un domaine différent en contournant de façon sécurisée la <strong>Same Origin Policy</strong>.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

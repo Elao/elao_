@@ -321,7 +321,7 @@
 
                 
                 
-                <body><p>Nous utilisons aujourd'hui pas mal HA Proxy pour faire du load-balancing software sur différents types d'infra, une fonctionnalité interessante proposée par HA Proxy permet de gérer une authentification basique via HTTP.</p>
+                <p>Nous utilisons aujourd'hui pas mal HA Proxy pour faire du load-balancing software sur différents types d'infra, une fonctionnalité interessante proposée par HA Proxy permet de gérer une authentification basique via HTTP.</p>
 <p>Cela permet, entre autre, de centraliser les accès au niveau du LB mais également de ne pas solliciter les backend.</p>
 <p>Sa mise en place est assez simple et repose sur la notion de "<strong>userlist</strong>", qui permet de définir au niveau HA Proxy des identifiants comme ci-dessous.</p>
 <pre class="code-multiline"><code id="dab71afafdd4cd21409f49cf215658e3">userlist ELAO
@@ -344,7 +344,7 @@
 <pre class="code-multiline"><code id="c69dafc8768ef2b10f865891bd33265b">backend HttpElaoServers
   acl AuthOK_ELAO http_auth(ELAO)
   http-request auth realm ELAO if !AuthOK_ELAO</code></pre>
-<p>Si les "credentials" du client ne sont pas bons HA Proxy renverra le traditionnel <code class="code-inline" id="987ec9e1c847709406571048e5a96a18">401 Unauthorized</code> et le header <code class="code-inline" id="2b74f1075d499960c2fc369e171c48b0">WWW-Authenticate: Basic</code>.</p></body>
+<p>Si les "credentials" du client ne sont pas bons HA Proxy renverra le traditionnel <code class="code-inline" id="987ec9e1c847709406571048e5a96a18">401 Unauthorized</code> et le header <code class="code-inline" id="2b74f1075d499960c2fc369e171c48b0">WWW-Authenticate: Basic</code>.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

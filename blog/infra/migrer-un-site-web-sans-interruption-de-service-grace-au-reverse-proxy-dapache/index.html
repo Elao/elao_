@@ -317,7 +317,7 @@
 
                 
                 
-                <body><p>Bonjour à tous,</p>
+                <p>Bonjour à tous,</p>
 <p>petit mémo aujourd'hui concernant la migration d'une application web d'un (ancien) serveur vers un nouveau serveur.
 Tout admin système à été, un jour ou l'autre, confronté à la problématique du "downtime" ou en bon français de l'interruption de service lors du "déménagement" d'une application web vers une nouvelle machine.</p>
 <p>En effet dans le cas de la modification d'un pointage DNS, celui-ci peut mettre plusieurs heures, voir même une journée à se propager sur les différents serveurs de noms.
@@ -359,7 +359,7 @@ Dans le cadre de ce mémo nous utiliseront <a href="http://httpd.apache.org/" ti
 <span class="token directive-inline property">ProxyPassReverse</span> / http://www.my-domain.com/</code></pre>
 <p>Il suffit, pour finir, de redémarrer Apache, le traffic est à présent redirigé vers le nouveau serveur de manière transparente pour l'internaute.
 Nous pouvons dès lors demander la redirection du nom de domaine vers l'IP du "nouveau" serveur sans se soucier des délais de propagation des serveurs de noms.</p>
-<p>Une fois tout cela terminé jetez de temps en temps un oeil à vos logs sur le serveur d'origine, une fois que vous constatez que plus aucun traffic n'arrive sur votre ancien serveur c'est que le nom de domaine a été propagé.</p></body>
+<p>Une fois tout cela terminé jetez de temps en temps un oeil à vos logs sur le serveur d'origine, une fois que vous constatez que plus aucun traffic n'arrive sur votre ancien serveur c'est que le nom de domaine a été propagé.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

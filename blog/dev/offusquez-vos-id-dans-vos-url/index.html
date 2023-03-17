@@ -343,7 +343,7 @@
 
                 
                 
-                <body><p>L'une des pratiques les plus courantes du web pour accéder à un contenu de base de données est d'inclure l'identifiant (<code class="code-inline" id="b718adec73e04ce3ec720dd11a06a308">ID</code>) de celui-ci dans l'url. Cet identifiant est dans la grande majorité des cas un entier positif auto-incrémenté par la base de données. Cet identifiant se retrouve ainsi exposé dans les urls. Bien qu'elle pose un certain nombre de problèmes, cette pratique est très simple et très répandue.</p>
+                <p>L'une des pratiques les plus courantes du web pour accéder à un contenu de base de données est d'inclure l'identifiant (<code class="code-inline" id="b718adec73e04ce3ec720dd11a06a308">ID</code>) de celui-ci dans l'url. Cet identifiant est dans la grande majorité des cas un entier positif auto-incrémenté par la base de données. Cet identifiant se retrouve ainsi exposé dans les urls. Bien qu'elle pose un certain nombre de problèmes, cette pratique est très simple et très répandue.</p>
 <h2 id="problemes-de-securite-et-de-confidentialite" class="anchor-title"><a href="#problemes-de-securite-et-de-confidentialite">Problèmes de sécurité et de confidentialité</a></h2>
 <p>Exposer ces identifiants dans les urls pose principalement des problèmes de <strong>sécurité</strong> et de <strong>confidentialité</strong>.</p>
 <p>Ces problèmes sont dus à la prédictabilité de l'identifiant. En effet, celui-ci étant auto-incrémenté, si vous avez une url avec un identifiant, il est très facile de déduire les urls d'autres contenus en incrémentant ou décrémentant l'identifiant dans l'url.</p>
@@ -571,7 +571,7 @@ class ObfuscatorUrlGenerator implements RouterInterface
             <span class="token operator">&amp;&amp;</span> <span class="token function">in_array</span><span class="token punctuation">(</span><span class="token variable">$argumentName</span><span class="token punctuation">,</span> <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token property">routes</span><span class="token punctuation">[</span><span class="token variable">$routeName</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></span></code></pre>
-<p>Pour aller plus loin, nous pouvons baser ce tableau de routes sur un fichier de configuration, sur des attributs ou des options dans le fichier de routing, sur une convention de nommage ou implémenter toute autre logique dans la méthode <code class="code-inline" id="cd3c6265a726bca865fe9b74b4fd5ec4">mustBeObfuscated</code>.</p></body>
+<p>Pour aller plus loin, nous pouvons baser ce tableau de routes sur un fichier de configuration, sur des attributs ou des options dans le fichier de routing, sur une convention de nommage ou implémenter toute autre logique dans la méthode <code class="code-inline" id="cd3c6265a726bca865fe9b74b4fd5ec4">mustBeObfuscated</code>.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

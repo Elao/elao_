@@ -347,7 +347,7 @@
 
                 
                 
-                <body><p>Le <em>Gang of Four</em> a classé les design patterns dans trois catégories : les DP de création, les DP structurels et les DP comportementaux (<em>behavior</em>).</p>
+                <p>Le <em>Gang of Four</em> a classé les design patterns dans trois catégories : les DP de création, les DP structurels et les DP comportementaux (<em>behavior</em>).</p>
 <p>Au début de cette série, nous avons abordé deux design patterns de création : la <a href="/elao_/blog/dev/design-pattern-factory-method"><code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code></a> et le pattern <a href="/elao_/blog/dev/design-pattern-abstract-factory"><code class="code-inline" id="3266b075d74acc656ed95e166300fd26">Abstract Factory</code></a>. Je vous propose aujourd'hui de nous pencher sur notre premier design pattern structurel : le <code class="code-inline" id="5041ffe849fcde6f23f9d99c2e949265">Decorator</code>.</p>
 <p>Il y sera notamment question de modération, de sexe et de grossièretés. Autant de bonnes raisons de poursuivre votre lecture.</p>
 <h2 id="classification" class="anchor-title"><a href="#classification">Classification</a></h2>
@@ -468,7 +468,7 @@
         <span class="token comment">// AppCache hérite de HttpCache:</span>
         <span class="token variable">$kernel</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AppCache</span><span class="token punctuation">(</span><span class="token variable">$kernel</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span></code></pre>
 <p>Source : <a href="http://symfony.com/doc/current/http_cache.html#symfony-reverse-proxy" target="_blank">http://symfony.com/doc/current/http_cache.html#symfony-reverse-proxy</a></p>
-<p>La classe <code class="code-inline" id="22554c2f3f431fa4243965df392b9ea9">AppCache</code> de Symfony implémente l'interface <code class="code-inline" id="0c1e20bd8106272498d98bc2dab30ac5">HttpKernelInterface</code> (via son parent <code class="code-inline" id="cbd8f4eaaa6db9d6087aaea4351b469a">HttpCache</code>), tout comme la classe <code class="code-inline" id="3caeb9565027419ea673f2f760ededf0">AppKernel</code> qu'elle décore.</p></body>
+<p>La classe <code class="code-inline" id="22554c2f3f431fa4243965df392b9ea9">AppCache</code> de Symfony implémente l'interface <code class="code-inline" id="0c1e20bd8106272498d98bc2dab30ac5">HttpKernelInterface</code> (via son parent <code class="code-inline" id="cbd8f4eaaa6db9d6087aaea4351b469a">HttpCache</code>), tout comme la classe <code class="code-inline" id="3caeb9565027419ea673f2f760ededf0">AppKernel</code> qu'elle décore.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

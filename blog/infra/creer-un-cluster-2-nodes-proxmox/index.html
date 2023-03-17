@@ -339,7 +339,7 @@
 
                 
                 
-                <body><p>Bonjour à tous,</p>
+                <p>Bonjour à tous,</p>
 <p>Aujourd'hui nous allons aborder une fonctionnalité intéressante des distributions Proxmox qui permet de faire du "clustering" avec deux ou plusieures machines physiques.</p>
 <p>Pour aujourd'hui nous verrons une notion simple de cluster sans haute disponibilité basé sur 2 machines physiques seulement. Cette configuration est intéressante lorsqu'il n'y a pas un réel besoin de haute disponibilité, mais un besoin de répartition de charge et/ou de reprise de service anticipé en cas d'incident.</p>
 <p>Le "cluster" Proxmox permet notamment de faire de la migration de container d'une machine à une autre "à chaud", de gérer l'ensemble de ces containers à partir de l'un ou l'autre des hyperviseurs ... bref rien d'indispensable en soit mais pas mal de petites choses foutrement utiles.</p>
@@ -470,7 +470,7 @@ Node addresses: <span class="token number">172.16</span>.0.1</code></pre>
 <span class="token punctuation">[</span>main<span class="token punctuation">]</span> notice: <span class="token builtin class-name">exit</span> proxmox configuration filesystem <span class="token punctuation">(</span>-1<span class="token punctuation">)</span>
  <span class="token punctuation">(</span>warning<span class="token punctuation">)</span>.</code></pre>
 <p>Ce petit soucis peut être rapidement résolu grâce à la commande <code class="code-inline" id="cf059e5cd387b7c3668ff8aab48514b3">umount -f /etc/pve</code>, redémarrez ensuite votre cluster <code class="code-inline" id="c32ac3899aa6c9f05b1c480950797ddf">/etc/init.d/pve-cluster start</code> et tout devrait rentrer dans l'ordre.</p>
-<p>Comme à l'accoutumé cet article est ouvert à toutes critiques, suggestions et corrections.</p></body>
+<p>Comme à l'accoutumé cet article est ouvert à toutes critiques, suggestions et corrections.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

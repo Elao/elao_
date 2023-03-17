@@ -327,7 +327,7 @@
 
                 
                 
-                <body><h2 id="quelques-reperes-bibliographiques-en-guise-de-preambule" class="anchor-title"><a href="#quelques-reperes-bibliographiques-en-guise-de-preambule">Quelques repères bibliographiques en guise de préambule</a></h2>
+                <h2 id="quelques-reperes-bibliographiques-en-guise-de-preambule" class="anchor-title"><a href="#quelques-reperes-bibliographiques-en-guise-de-preambule">Quelques repères bibliographiques en guise de préambule</a></h2>
 <p>Avant d'entrer dans le vif du sujet en abordant notre premier Design Pattern, permettez-moi de citer deux ouvrages incontournables lorsque l'on évoque ce sujet.</p>
 <figure>
     <img src="/elao_/resized/content/images/blog/design-pattern/biblio-dp-elements-of-reusable.jpeg/a4cd2bb87a4ad278b50e536503593d10.jpeg" alt="Design Patterns: Elements of Reusable Object-Oriented Software" srcset="/elao_/resized/content/images/blog/design-pattern/biblio-dp-elements-of-reusable.jpeg/a4cd2bb87a4ad278b50e536503593d10.jpeg 1x,
@@ -458,7 +458,7 @@
 <p>On note tout d'abord, comme le laisse deviner la classe <code class="code-inline" id="f454b76d1cda09695d0fe30bb3447acd">OrderHandler</code>, que le pattern <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> est souvent implémenté par des classes dont la création de produit n'est pas la principale responsabilité ; ici <code class="code-inline" id="f454b76d1cda09695d0fe30bb3447acd">OrderHandler</code> est une classe métier qui ne se contente pas d'instancier un produit ; elle est par exemple plus riche fonctionnellement que la classe <code class="code-inline" id="df38f3fff38715f5a828cb4513ec1063">MyFactory</code> que j'avais présentée tout à l'heure.</p>
 <p>En résumé, et comme son nom l'indique, le pattern <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> consiste tout simplement à déporter dans une méthode dédiée l'instanciation de l'objet attendu. Cette méthode se résume finalement à un simple <code class="code-inline" id="376c2c521c8fa91f7f529db30e32047a">return new Product();</code>. Concept d'une extrême simplicité mais qui nous permet d'obtenir une classe ouverte à l'extension, en permettant le cas échéant à ses enfants d'instancier un autre type.</p>
 <h3 id="design-patterns-voisins" class="anchor-title"><a href="#design-patterns-voisins">Design patterns voisins</a></h3>
-<p>Il existe un autre Design pattern <em>Factory</em>, plus riche que le design pattern <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> car il implique plus de participants (mais il n'est pas nécessairement plus compliqué pour autant) : l'<code class="code-inline" id="1c61beffe031447a2393c8e7e10a2574">Abstact Factory</code>. Il y a fort à parier qu'il fasse l'objet du prochain article de cette série consacrée aux Design Patterns.</p></body>
+<p>Il existe un autre Design pattern <em>Factory</em>, plus riche que le design pattern <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> car il implique plus de participants (mais il n'est pas nécessairement plus compliqué pour autant) : l'<code class="code-inline" id="1c61beffe031447a2393c8e7e10a2574">Abstact Factory</code>. Il y a fort à parier qu'il fasse l'objet du prochain article de cette série consacrée aux Design Patterns.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

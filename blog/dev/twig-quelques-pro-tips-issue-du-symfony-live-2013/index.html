@@ -317,7 +317,7 @@
 
                 
                 
-                <body><h3 id="isoler-les-include" class="anchor-title"><a href="#isoler-les-include">Isoler les "include"</a></h3>
+                <h3 id="isoler-les-include" class="anchor-title"><a href="#isoler-les-include">Isoler les "include"</a></h3>
 <p>Lors d'un <code class="code-inline" id="d436eb0fd9de10b54a828ce6435f7e81">include</code>, le template appelé accède par défaut au context du template appellant. Or c'est inutile la plus part du temps (le template appelé n'a souvent besoin que de quelques variables). De plus, cela peut provoquer des conflits si des variables portent le même nom dans les différents scopes.</p>
 <p>Pour éviter ça, vous pouvez isoler le template enfant en passant le paramètre <code class="code-inline" id="6299ba2cbd9661a5e3872b715521cd6a">only</code> lors de son appel. Le template appelé n'aura alors accès qu'aux variables que vous lui passez. C'est une bonne pratique en terme de performance et de stabilité :</p>
 <pre class="code-multiline language-twig"><code class="language-twig" id="7bf89c183d8127a3850453dcd85aeec0"><span class="token twig language-twig"><span class="token comment">{# template.html.twig #}</span></span>
@@ -375,7 +375,7 @@
 <p>Vous pouvez déclarer un block en une ligne ! Utile notamment pour un bloc vide amené à être redéfini par un autre template lors d'un extend :</p>
 <pre class="code-multiline language-twig"><code class="language-twig" id="49ed900d8e4e6b42380380cc31bc5518"><span class="token twig language-twig"><span class="token delimiter punctuation">{%</span> <span class="token tag-name keyword">block</span> content <span class="token string"><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token delimiter punctuation">%}</span></span></code></pre>
 <h3 id="sources" class="anchor-title"><a href="#sources">Sources</a></h3>
-<p>Conférence au Symfony Live 2013 : "<a href="http://lyrixx.github.io/SFLive-Paris2013-Twig/#/comment-organiser-ses-templates-twig" target="_blank">COMMENT ORGANISER SES TEMPLATES TWIG ?</a>" par Grégoire Pineau – SensioLabs</p></body>
+<p>Conférence au Symfony Live 2013 : "<a href="http://lyrixx.github.io/SFLive-Paris2013-Twig/#/comment-organiser-ses-templates-twig" target="_blank">COMMENT ORGANISER SES TEMPLATES TWIG ?</a>" par Grégoire Pineau – SensioLabs</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

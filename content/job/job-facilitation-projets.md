@@ -38,7 +38,7 @@ Faciliter et fluidifier la mise en oeuvre des projets clients et des projets int
 
 - Animer la construction et la mise à jour des nouvelles features avec les clients
 - Les accompagner sur la priorisation de leurs sujets et sur la rédaction de leurs spécifications
-- Alimenter les board, la roadmap et la mise à jour des budgets
+- Alimenter les boards, la roadmap et la mise à jour des budgets
 - Planifier les dates importantes des projets (mise en production, recettage,...) et les rendre visible à tous
 - Communiquer régulièrement avec les clients, si nécessaire
 - Animation de la répartition des tâches sur l'équipe
@@ -59,9 +59,9 @@ Faciliter et fluidifier la mise en oeuvre des projets clients et des projets int
 
 ## La culture Elao
 
-Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Elao reste **pragmatique** mais ne transige pas sur la qualité au quotidien.
+Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Elao reste **pragmatique**, mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, [l'équipe](../../la-tribu) disposent de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez Elao.
+Backend, frontend et/ou devops, [l'équipe](../../la-tribu) dispose de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elle est à votre disposition pour témoigner de son quotidien chez Elao.
 
 
 ## Vie dans l'entreprise

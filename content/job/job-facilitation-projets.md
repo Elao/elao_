@@ -4,7 +4,7 @@ title:
     - "Un·e Facilitateur·rice pour nos projets"
 description:  "Véritable pivot entre les clients et l'équipe, le·a facilitateur·rice à la sauce elao, ce n'est pas un goulet d'étranglement. La responsabilité est partagée entre tous les acteurs du projet... Intrigué·e ?"
 date:         "2023-03-16"
-active:       true
+active:       false
 contractType: CDI
 place:        "Lyon, télétravail partiel possible"
 hiringDate:   ~

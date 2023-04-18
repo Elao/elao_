@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/513/blog</link>
-        <pubDate>Tue, 18 Apr 2023 13:01:26 +0000</pubDate>
+        <pubDate>Tue, 18 Apr 2023 15:18:54 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/513/apple-touch-icon.png</url>
@@ -20,15 +20,14 @@
                 <![CDATA[ Une astuce pour booster votre productivité lorsque vous développez certains types de contenus avec Webpack, permettant de recharger automatiquement votre navigateur lorsque vous modifiez un fichier arbitraire (Twig, PHP, Yaml, …).
  ]]>
             </description>
-            <guid isPermaLink="true">https://elao.github.io/elao_/pr/513/blog/dev/webpack-tip-reload-arbitrary-file-changed</guid>
-            <link>https://elao.github.io/elao_/pr/513/blog/dev/webpack-tip-reload-arbitrary-file-changed</link>
-            <media:content url="https://elao.github.io/elao_/pr/513/todo" width="1200" height="627">
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/513/blog/dev/webpack-tips-reload-arbitrary-file-changed</guid>
+            <link>https://elao.github.io/elao_/pr/513/blog/dev/webpack-tips-reload-arbitrary-file-changed</link>
+            <media:content url="https://elao.github.io/elao_/pr/513/resized/content/images/blog/thumbnails/webpack-tips-reload-arbitrary-file-changed.jpg/32be23bdbc31bc3d47acd052769f5647.jpg" width="1200" height="627">
                 <media:description type="plain">Observer les changements de fichiers arbitraires avec Webpack</media:description>
                             </media:content>
                             <category>webpack</category>
                             <category>javascript</category>
-                            <category>php</category>
-                            <category>twig</category>
+                            <category>tips</category>
                                 </item>
             </channel>
 </rss>

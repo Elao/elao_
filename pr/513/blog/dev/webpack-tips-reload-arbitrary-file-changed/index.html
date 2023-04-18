@@ -354,8 +354,8 @@ Le plus avantageux est que cela fonctionne sans rafraîchissement de la page, ce
 application et constater les changements en temps réel sans avoir à reproduire les actions effectuées.</p>
 <p>Le parent pauvre de ce fonctionnel existe également sous le terme de <em>« Live Reload »</em> et permet uniquement
 d'automatiser le rechargement de la page lorsque vous modifiez un fichier.<br>
-Cela est moins optimal, car ne conserve pas l'état courant de l'application, mais permet tout de même de gagner du temps
-lors de vos développements selon les situations.</p>
+Ce mécanisme est moins optimal, car ne conserve pas l'état courant de l'application, mais permet tout de même de gagner
+du temps lors de vos développements selon les situations.</p>
 <p>Le live reload ne s'applique par défaut qu'aux fichiers JavaScript et CSS, mais il est possible
 depuis <a href="https://github.com/webpack/webpack-dev-server/releases/tag/v4.0.0-beta.2" target="_blank"><strong>Webpack DevServer 4</strong></a> de l'étendre
 de façon arbitraire à n'importe quel fichier de votre application au travers
@@ -423,11 +423,11 @@ de <code class="code-inline" id="5b9bd227a0f494a1d8b6701988d9d387">devServer.wat
   <span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
 <p>Cette astuce est particulièrement utile lorsque vous développez des contenus statiques ou travaillez sur la structure de
-vos pages HTML. Le genre d'applications pour lesquelles <a href="/elao_/pr/513/glossaire/stenope">Stenope</a> est fait sont généralement de
-bons candidats.<br>
-C'est notamment le cas pour
-<a href="https://github.com/Elao/elao_/blob/cca48190d21277b39b682c461054ce739cfe452e/webpack.config.js#L88-L99" target="_blank">ce site</a> qui est
-généré avec cet outil à partir de fichiers Twig, Yaml et Markdown.</p>
+vos pages HTML. Les applications de type "pages de contenus", telles que celles utilisant
+<a href="/elao_/pr/513/glossaire/stenope">Stenope</a>, font généralement de bonnes candidates.<br>
+C'est d'ailleurs le cas du site sur lequel vous vous trouvez actuellement, généré avec Stenope à partir de fichiers
+Twig, Yaml et Markdown (comme en atteste
+son <a href="https://github.com/Elao/elao_/blob/cca48190d21277b39b682c461054ce739cfe452e/webpack.config.js#L88-L99" target="_blank">code source</a>).</p>
 <h2 id="sources" class="anchor-title"><a href="#sources">Sources</a></h2>
 <ul>
 <li><a href="https://github.com/webpack/webpack-dev-server/pull/3136" target="_blank">feat: add watchFiles option</a></li>

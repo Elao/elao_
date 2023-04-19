@@ -363,11 +363,12 @@ de <a href="https://webpack.js.org/configuration/dev-server/#devserverwatchfiles
 <h3 id="avec-webpack" class="anchor-title"><a href="#avec-webpack">Avec Webpack</a></h3>
 <p>Par exemple, vous pourriez vouloir recharger automatiquement votre navigateur lorsque vous modifiez un fichier Twig ou
 de contenu rendu dans votre application Symfony :</p>
-<pre class="code-multiline language-js"><code class="language-js" id="b1db715e92eab2106403db94b668e468"><span class="token comment">// webpack.config.js</span>
+<pre class="code-multiline language-js"><code class="language-js" id="0e171f4d8d10fc61d2441872899a884e"><span class="token comment">// webpack.config.js</span>
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">// …</span>
   <span class="token literal-property property">devServer</span><span class="token operator">:</span> <span class="token punctuation">{</span>
     <span class="token literal-property property">liveReload</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// Watch Twig, YAML and Markdown files to force reload the browser on changes:</span>
     <span class="token literal-property property">watchFiles</span><span class="token operator">:</span> <span class="token punctuation">[</span>
       <span class="token string">'templates/**/*.twig'</span><span class="token punctuation">,</span>
       <span class="token string">'content/**/*.{yaml,md}'</span><span class="token punctuation">,</span>
@@ -380,13 +381,13 @@ rechargé lorsque vous modifierez un fichier correspondant à l'un des patterns 
 <p>Si vous développez une application Symfony, il y a toutes les chances que vous utilisiez
 <a href="https://symfony.com/doc/current/frontend.html" target="_blank">Webpack Encore</a>.</p>
 <p>Auquel cas, la configuration est similaire :</p>
-<pre class="code-multiline language-js"><code class="language-js" id="06a2be2c01d241e4445387317d1c0bce"><span class="token comment">// webpack.config.js</span>
+<pre class="code-multiline language-js"><code class="language-js" id="8a96531bf55882050c7b3d234b6c41ad"><span class="token comment">// webpack.config.js</span>
 <span class="token keyword">const</span> <span class="token maybe-class-name">Encore</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@symfony/webpack-encore'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token maybe-class-name">Encore</span>
   <span class="token comment">// …</span>
   <span class="token punctuation">.</span><span class="token method function property-access">configureDevServerOptions</span><span class="token punctuation">(</span><span class="token parameter">options</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token comment">// Watch Twig &amp; yaml files to force reload the browser on changes:</span>
+    <span class="token comment">// Watch Twig, YAML and Markdown files to force reload the browser on changes:</span>
     options<span class="token punctuation">.</span><span class="token property-access">liveReload</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
     options<span class="token punctuation">.</span><span class="token property-access">watchFiles</span> <span class="token operator">=</span> <span class="token punctuation">[</span>
       <span class="token string">'templates/**/*.twig'</span><span class="token punctuation">,</span>
@@ -401,7 +402,7 @@ rechargé lorsque vous modifierez un fichier correspondant à l'un des patterns 
 <p>Si vous utilisez une version antérieure à Webpack 5 / Webpack DevServer 4, vous pouvez toujours utiliser
 <a href="https://github.com/paulmillr/chokidar" target="_blank"><code class="code-inline" id="70da510d9bc80a1a563e6e687ef36621">chokidar</code></a> et un middleware pour simuler le comportement
 de <code class="code-inline" id="5b9bd227a0f494a1d8b6701988d9d387">devServer.watchFiles</code> :</p>
-<pre class="code-multiline language-js"><code class="language-js" id="793d3605e362e6cbee6ec5e589c57343"><span class="token comment">// webpack.config.js</span>
+<pre class="code-multiline language-js"><code class="language-js" id="813dc5ff43084e6f4cea9f0d27d1fc9b"><span class="token comment">// webpack.config.js</span>
 <span class="token keyword">const</span> <span class="token maybe-class-name">Encore</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'@symfony/webpack-encore'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> chokidar <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'chokidar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -409,7 +410,7 @@ de <code class="code-inline" id="5b9bd227a0f494a1d8b6701988d9d387">devServer.wat
 <span class="token maybe-class-name">Encore</span>
   <span class="token comment">// …</span>
   <span class="token punctuation">.</span><span class="token method function property-access">configureDevServerOptions</span><span class="token punctuation">(</span><span class="token parameter">options</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token comment">// Watch Twig files to force reload the browser on changes:</span>
+    <span class="token comment">// Watch Twig, YAML and Markdown files to force reload the browser on changes:</span>
     options<span class="token punctuation">.</span><span class="token method-variable function-variable method function property-access">onBeforeSetupMiddleware</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">devServer</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> files <span class="token operator">=</span> <span class="token punctuation">[</span>
         path<span class="token punctuation">.</span><span class="token method function property-access">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'templates/**/*.html.twig'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>

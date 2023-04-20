@@ -46,8 +46,8 @@
     "image": [
         "https://elao.github.io/elao_/pr/513/blog/dev/content/images/blog/thumbnails/webpack-tips-reload-arbitrary-file-changed.jpg"
     ],
-    "datePublished": "18 avril 2023",
-    "dateModified": "18 avril 2023",
+    "datePublished": "20 avril 2023",
+    "dateModified": "20 avril 2023",
     "author": [
         {
             "@type": "Person",
@@ -293,7 +293,7 @@
                                             </span>
                     </div>
                                 <div class="article-info__date">
-                    <span>Publication <strong>18 avril 2023</strong></span>
+                    <span>Publication <strong>20 avril 2023</strong></span>
                                                         </div>
             </div>
 
@@ -348,21 +348,21 @@
                 
                 <h2 id="description" class="anchor-title"><a href="#description">Description</a></h2>
 <p>Si vous utilisez Webpack, vous êtes probablement déjà habitués à son serveur de dev et
-au <a href="https://webpack.js.org/guides/hot-module-replacement/" target="_blank"><em>Hot Module Replacement</em></a> permettant de mettre à jour le code
-CSS et/ou JavaScript à chaque changement de votre code.
-Le plus avantageux est que cela fonctionne sans rafraîchissement de la page, ce qui permet de garder l'état de votre
-application et constater les changements en temps réel sans avoir à reproduire les actions effectuées.</p>
+au <a href="https://webpack.js.org/guides/hot-module-replacement/" target="_blank"><em>Hot Module Replacement</em></a> permettant de mettre à jour le
+CSS et/ou JavaScript interprété dans votre navigateur, à chaque changement dans votre code source.
+Le bénéfice principal étant que cela ne nécessite aucun rafraîchissement de votre page, ce qui permet de garder l'état
+de votre application et constater les changements en temps réel sans avoir à reproduire les actions effectuées.</p>
 <p>Le parent pauvre de ce fonctionnel existe également sous le terme de <em>« Live Reload »</em> et permet uniquement
 d'automatiser le rechargement de la page lorsque vous modifiez un fichier.<br>
 Ce mécanisme est moins optimal, car ne conserve pas l'état courant de l'application, mais permet tout de même de gagner
 du temps lors de vos développements selon les situations.</p>
-<p>Le live reload ne s'applique par défaut qu'aux fichiers JavaScript et CSS, mais il est possible
+<p>Le <em>live reload</em> ne s'applique par défaut qu'aux fichiers JavaScript et CSS, mais il est possible
 depuis <a href="https://github.com/webpack/webpack-dev-server/releases/tag/v4.0.0-beta.2" target="_blank"><strong>Webpack DevServer 4</strong></a> de l'étendre
 de façon arbitraire à n'importe quel fichier de votre application au travers
 de <a href="https://webpack.js.org/configuration/dev-server/#devserverwatchfiles" target="_blank">l'option <code class="code-inline" id="5b9bd227a0f494a1d8b6701988d9d387">devServer.watchFiles</code></a>.</p>
 <h3 id="avec-webpack" class="anchor-title"><a href="#avec-webpack">Avec Webpack</a></h3>
-<p>Par exemple, vous pourriez vouloir recharger automatiquement votre navigateur lorsque vous modifiez un fichier Twig ou
-de contenu rendu dans votre application Symfony :</p>
+<p>Par exemple, vous pourriez vouloir recharger automatiquement la page dans votre navigateur lorsque vous modifiez
+un fichier Twig ou de l'un des contenus rendus dans votre application Symfony :</p>
 <pre class="code-multiline language-js"><code class="language-js" id="0e171f4d8d10fc61d2441872899a884e"><span class="token comment">// webpack.config.js</span>
 module<span class="token punctuation">.</span><span class="token property-access">exports</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">// …</span>
@@ -375,8 +375,8 @@ module<span class="token punctuation">.</span><span class="token property-access
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>Ainsi, lorsque vous lancerez votre serveur de dev avec <code class="code-inline" id="b771910f53571038edeac97a1e8b0d68">npx webpack serve</code>, votre navigateur sera automatiquement
-rechargé lorsque vous modifierez un fichier correspondant à l'un des patterns définis.</p>
+<p>Ainsi, lorsque vous lancerez votre serveur de dev avec <code class="code-inline" id="b771910f53571038edeac97a1e8b0d68">npx webpack serve</code>, votre navigateur rechargera automatiquement
+la page dès lors que vous modifierez un fichier correspondant à l'un des patterns définis.</p>
 <h3 id="avec-webpack-encore" class="anchor-title"><a href="#avec-webpack-encore">Avec Webpack Encore</a></h3>
 <p>Si vous développez une application Symfony, il y a toutes les chances que vous utilisiez
 <a href="https://symfony.com/doc/current/frontend.html" target="_blank">Webpack Encore</a>.</p>

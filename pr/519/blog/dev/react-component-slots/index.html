@@ -480,8 +480,8 @@ Cependant, il est bel et bien possible de se baser sur cette notion lors de la c
 <em>Vous l'avez probablement déjà fait sans le savoir.</em></p>
 <h3 id="slot-par-defaut" class="anchor-title"><a href="#slot-par-defaut">Slot par défaut</a></h3>
 <p>Le cas le plus simple est celui d'un composant qui ne possède qu'un seul slot, celui par défaut, connu comme la
-popriété <a href="https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children" target="_blank"><code class="code-inline" id="268184c12df027f536154d099d497b31">children</code></a> disponible dans tout
-composant React :</p>
+propriété <a href="https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children" target="_blank"><code class="code-inline" id="268184c12df027f536154d099d497b31">children</code></a> disponible dans
+tout composant React :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="9c5cf13e26b7ac8fff437f90ef1f366c"><span class="token comment">// App.jsx</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token punctuation">{</span><span class="token comment">/* Slot par défaut, disponible en tant que propriété `children` du composant Modal */</span><span class="token punctuation">}</span><span class="token plain-text">
@@ -588,7 +588,8 @@ visant à manipuler la propriété <code class="code-inline" id="268184c12df027f
 <p>En la matière, <a href="https://fr.reactjs.org/docs/react-api.html#reactchildrentoarray" target="_blank"><code class="code-inline" id="d04f6f7c3ef1087850b8cfdfc7efdfef">Children.toArray</code></a> permet
 d'obtenir un tableau linéarisé du contenu passé à notre <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code>.<br>
 Dès lors, nous pouvons rechercher, isoler et manipuler nos slots parmi ces nœuds en les identifiant par leur type.</p>
-<pre class="code-multiline language-jsx"><code class="language-jsx" id="026a13704bb897c88fa920fa267c1f3d"><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">React</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">,</span> cloneElement <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="code-multiline language-jsx"><code class="language-jsx" id="2cb41662157e2ba57760a41b208589f6"><span class="token comment">// Modal.jsx</span>
+<span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">React</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">,</span> cloneElement <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token comment">/**
  * Fonction utilitaire permettant de trouver un noeud enfant correspondant à un type donné
@@ -597,7 +598,6 @@ Dès lors, nous pouvons rechercher, isoler et manipuler nos slots parmi ces nœu
   <span class="token keyword control-flow">return</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">.</span><span class="token method function property-access">toArray</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> child<span class="token punctuation">.</span><span class="token property-access">type</span> <span class="token operator">===</span> slotType<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment">// Modal.jsx</span>
 <span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Modal</span></span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token function-variable function">close</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span><span class="token comment">/* … */</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
 
@@ -654,15 +654,14 @@ Dès lors, nous pouvons rechercher, isoler et manipuler nos slots parmi ces nœu
 pas possible de rendre un slot obligatoire de façon à ce que l'analyse statique remonte une erreur si celui-ci n'est pas
 fourni, y compris avec TypeScript.</p>
 <p>Il est par contre possible de lever une exception à l'exécution si le slot n'est pas trouvé :</p>
-<pre class="code-multiline language-jsx"><code class="language-jsx" id="0542f1a93142240e63d7064edfcc4fc3"><span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Modal</span></span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<pre class="code-multiline language-jsx"><code class="language-jsx" id="41b347bf38efa37257ab8de9eb2d399b"><span class="token keyword">function</span> <span class="token function"><span class="token maybe-class-name">Modal</span></span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> children <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token comment">// …</span>
-  <span class="token keyword">const</span> <span class="token maybe-class-name">TitleComponent</span> <span class="token operator">=</span> <span class="token function">findSlotOfType</span><span class="token punctuation">(</span>children<span class="token punctuation">,</span> <span class="token maybe-class-name">Title</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">const</span> <span class="token maybe-class-name">ContentComponent</span> <span class="token operator">=</span> <span class="token function">findSlotOfType</span><span class="token punctuation">(</span>children<span class="token punctuation">,</span> <span class="token maybe-class-name">Content</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
   <span class="token keyword control-flow">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token maybe-class-name">ContentComponent</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword control-flow">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'You MUST provide a &lt;Modal.Content&gt; component as a child of &lt;Modal&gt;.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-  <span class="token comment">// ...</span>
+  <span class="token comment">// …</span>
 <span class="token punctuation">}</span></code></pre>
 <h3 id="bonus-exemple-de-dropmenu" class="anchor-title"><a href="#bonus-exemple-de-dropmenu">Bonus: exemple de DropMenu</a></h3>
 <p>Vous pouvez consulter sur <a href="https://gist.github.com/ogizanagi/db03004d72b680ab03998308f3c18823" target="_blank">ce gist</a>

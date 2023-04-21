@@ -370,7 +370,7 @@
                     </div>
                 
                 <h2 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h2>
-<p>En tant que développeur React, vous avez probablement déjà été confronté à la création de composants génériques.
+<p>En tant que développeur React, vous avez probablement déjà été confrontés à la création de composants génériques.
 Ces composants sont souvent utilisés pour mutualiser des comportements communs à plusieurs endroits de votre application
 et nécessitent d'être suffisamment personnalisables pour pouvoir s'adapter à la situation.</p>
 <h3 id="factoriser-le-markup-personnaliser-le-contenu" class="anchor-title"><a href="#factoriser-le-markup-personnaliser-le-contenu">Factoriser le markup, personnaliser le contenu</a></h3>
@@ -396,7 +396,7 @@ personnaliser le contenu :</p>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript">…</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>Fermer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
-<p>Chacune des sous-parties <code class="code-inline" id="b78a3223503896721cca1303f776159b">Title</code>, <code class="code-inline" id="f15c1cae7882448b3fb0404682e17e61">Content</code> et <code class="code-inline" id="ded40f2a77c30efc6062db0cbd857746">Footer</code> de ce composant possède autour de leur contenu un markup HTML
+<p>Chacune des sous-parties <code class="code-inline" id="b78a3223503896721cca1303f776159b">Title</code>, <code class="code-inline" id="f15c1cae7882448b3fb0404682e17e61">Content</code> et <code class="code-inline" id="ded40f2a77c30efc6062db0cbd857746">Footer</code> de ce composant possède autour de son contenu un markup HTML
 qui lui est propre et qu'il convient de ne pas avoir à répéter à chaque utilisation du composant <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code> :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="761cd0910c38c06c987e9eb97d860d92"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token punctuation">{</span><span class="token comment">/* Injection d'un simple texte dans le titre de la modale */</span><span class="token punctuation">}</span><span class="token plain-text">
@@ -530,8 +530,8 @@ naturelle de contourner ce problème. </p>
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p><strong>Inconvénient</strong> : à fur et à mesure que vos composants, le nombre de slots, ou que les contenus injectés
-grossissent, la lisibilité est compromise. Par exemple, avec un composant plus riche :</p>
+<p><strong>Inconvénient</strong> : à mesure que vos composants, le nombre de slots, ou les contenus injectés augmentent, la lisibilité
+est compromise. Par exemple, avec un composant plus riche :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="942ca7f833069bd3cbd288df61f262c7"><span class="token comment">// App.jsx</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span>
   <span class="token attr-name">title</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Un contenu </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">plus riche</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span></span>
@@ -554,7 +554,7 @@ grossissent, la lisibilité est compromise. Par exemple, avec un composant plus 
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span></span>
 <span class="token punctuation">/&gt;</span></span></code></pre>
 <p>L'intérêt du <a href="https://fr.reactjs.org/docs/introducing-jsx.html" target="_blank">JSX</a> étant d'exposer une syntaxe proche du HTML, il est
-moins naturel à la lecture de retrouver ces contenus en tant que propriétés plutôt que nœuds enfant d'un composant.</p>
+moins naturel à la lecture de retrouver ces contenus en tant que propriétés plutôt que nœuds enfants d'un composant.</p>
 <p>Il est bien sûr possible de faire un mix des deux approches, en utilisant <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code> pour définir l'un des slots :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="ccc196f6a00db4acba1608442eeef1a5"><span class="token comment">// App.jsx</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span>
@@ -588,10 +588,10 @@ visant à manipuler la propriété <code class="code-inline" id="268184c12df027f
 <p>En la matière, <a href="https://fr.reactjs.org/docs/react-api.html#reactchildrentoarray" target="_blank"><code class="code-inline" id="d04f6f7c3ef1087850b8cfdfc7efdfef">Children.toArray</code></a> permet
 d'obtenir un tableau linéarisé du contenu passé à notre <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code>.<br>
 Dès lors, nous pouvons rechercher, isoler et manipuler nos slots parmi ces nœuds en les identifiant par leur type.</p>
-<pre class="code-multiline language-jsx"><code class="language-jsx" id="242e6dcddd7377ca77ab69c9eb3c1364"><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">React</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">,</span> cloneElement <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
+<pre class="code-multiline language-jsx"><code class="language-jsx" id="026a13704bb897c88fa920fa267c1f3d"><span class="token keyword module">import</span> <span class="token imports"><span class="token maybe-class-name">React</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">,</span> cloneElement <span class="token punctuation">}</span></span> <span class="token keyword module">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token comment">/**
- * Fonction utilitaire permettant de trouver un noeud enfants correspondant à un type donné
+ * Fonction utilitaire permettant de trouver un noeud enfant correspondant à un type donné
  */</span>
 <span class="token keyword">function</span> <span class="token function">findSlotOfType</span><span class="token punctuation">(</span><span class="token parameter">children<span class="token punctuation">,</span> slotType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">.</span><span class="token method function property-access">toArray</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> child<span class="token punctuation">.</span><span class="token property-access">type</span> <span class="token operator">===</span> slotType<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -671,7 +671,7 @@ l'implémentation d'un composant <code class="code-inline" id="51572ff77d912ffc4
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
 <p>React ne suggère pas de manière explicite la notion de slots, mais il est possible de s'inspirer de ce concept en
 exploitant les propriétés de JSX et <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code> afin de simuler l'utilisation de slots multiples avec une syntaxe proche
-du HTML, semblable à ce qu'il peut se faire avec d'autres frameworks.</p>
+du HTML, semblable à ce qui peut se faire avec d'autres frameworks.</p>
 <p>Cette approche n'est cependant peut-être pas à généraliser à tous les composants que vous écrirez ; la plupart des
 composants pouvant très bien s'accommoder de l'utilisation de simples <code class="code-inline" id="50fe03ab7bf37089a7e88da9b31ffb3b">props</code> pour ce besoin.</p>
 <h2 id="aller-plus-loin-sources" class="anchor-title"><a href="#aller-plus-loin-sources">Aller plus loin &amp; sources</a></h2>

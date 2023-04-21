@@ -376,6 +376,9 @@ et nécessitent d'être suffisamment personnalisables pour pouvoir s'adapter à 
 <h3 id="factoriser-le-markup-personnaliser-le-contenu" class="anchor-title"><a href="#factoriser-le-markup-personnaliser-le-contenu">Factoriser le markup, personnaliser le contenu</a></h3>
 <p>Par exemple, un composant <code class="code-inline" id="c59d6df802c32f037c2a15ff75faec17">Modal</code> peut être constitué de plusieurs sous-parties dont vous souhaiteriez uniquement
 personnaliser le contenu :</p>
+<img src="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/modal-slots.png/36e2641af176ddc4ea034df855c26200.png" alt="Sous-parties simplifiées d'un composant modal" title="Sous-parties simplifiées d'un composant modal" srcset="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/modal-slots.png/36e2641af176ddc4ea034df855c26200.png 1x,
+/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/modal-slots.png/54e0acabbb18217adad251199c88ce2d.png 2x," id="sous-parties-simplifiees-d-un-composant-modal">
+<p>Et dont le rendu HTML pourrait être le suivant :</p>
 <pre class="code-multiline language-html"><code class="language-html" id="45db5c1a58e9c078bf05613c338b6ece"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal-header<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
         <span class="token comment">&lt;!-- Title --&gt;</span>
@@ -393,8 +396,8 @@ personnaliser le contenu :</p>
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token special-attr"><span class="token attr-name">onClick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript">…</span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>Fermer<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
-<p>Chacune des sous-parties <code class="code-inline" id="b78a3223503896721cca1303f776159b">Title</code>, <code class="code-inline" id="f15c1cae7882448b3fb0404682e17e61">Content</code> et <code class="code-inline" id="ded40f2a77c30efc6062db0cbd857746">Footer</code> de ce composant possède un markup HTML qui leur est propre et
-qu'il convient de ne pas avoir à répéter à chaque utilisation du composant <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code> :</p>
+<p>Chacune des sous-parties <code class="code-inline" id="b78a3223503896721cca1303f776159b">Title</code>, <code class="code-inline" id="f15c1cae7882448b3fb0404682e17e61">Content</code> et <code class="code-inline" id="ded40f2a77c30efc6062db0cbd857746">Footer</code> de ce composant possède autour de leur contenu un markup HTML
+qui lui est propre et qu'il convient de ne pas avoir à répéter à chaque utilisation du composant <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code> :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="761cd0910c38c06c987e9eb97d860d92"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token punctuation">{</span><span class="token comment">/* Injection d'un simple texte dans le titre de la modale */</span><span class="token punctuation">}</span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal.Title</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Objectifs</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Modal.Title</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -416,6 +419,9 @@ qu'il convient de ne pas avoir à répéter à chaque utilisation du composant <
 <p>De cette façon, il n'y a plus qu'à fournir le contenu dynamique de ces sous-parties, le reste du markup étant abstrait. </p>
 <h3 id="abstraire-les-comportements" class="anchor-title"><a href="#abstraire-les-comportements">Abstraire les comportements</a></h3>
 <p>Voici un composant <code class="code-inline" id="c6d1ad1b4466dc4e8b9022c2e464abe9">DropMenu</code> :</p>
+<img src="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/drop-menu.png/201849c67489d8e64b540569d8a828f5.png" alt="Représentation d'un composant DropMenu" title="Représentation d'un composant DropMenu" srcset="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/drop-menu.png/201849c67489d8e64b540569d8a828f5.png 1x,
+/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/drop-menu.png/22c1d5fc975ef2d906c05a89820051a4.png 2x," id="representation-d-un-composant-dropmenu">
+<p>Dont le code JSX, à l'utilisation serait le suivant :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="adf5dd312bd1864b224de3251fbd573c"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">DropMenu</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
   </span><span class="token punctuation">{</span><span class="token comment">/* Bouton déclenchant l'apparition du menu dropdow */</span><span class="token punctuation">}</span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">DropMenu.Trigger</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -446,8 +452,7 @@ permettant de décorer, mutualiser et personnaliser leur contenu - sont communé
 <h2 id="a-propos-des-slots" class="anchor-title"><a href="#a-propos-des-slots">À propos des slots</a></h2>
 <p>Le terme <strong>slot</strong> est bien connu des développeurs utilisant
 <a href="https://fr.vuejs.org/guide/components/slots.html" target="_blank">Vue.js</a>, lequel formalise ce concept en exposant
-explicitement un élément <code class="code-inline" id="cb49b6907a28b314bfb69d2a3ec32d7d">&lt;slot&gt;</code> pour définir un emplacement du composant dans lequel le contenu du fourni sera
-injecté.</p>
+explicitement un élément <code class="code-inline" id="cb49b6907a28b314bfb69d2a3ec32d7d">&lt;slot&gt;</code> pour définir un emplacement du composant dans lequel le contenu fourni sera injecté.</p>
 <img src="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/vue-slots.png/bbadfd9c49b1886a7340b0489f352743.png" alt="Diagramme de définition des slots dans Vue.js" title="Diagramme de définition des slots dans Vue.js" srcset="/elao_/pr/519/resized/content/images/blog/2023/react-component-slots/vue-slots.png/bbadfd9c49b1886a7340b0489f352743.png 1x,
 /elao_/pr/519/resized/content/images/blog/2023/react-component-slots/vue-slots.png/603ed2d0adab4fb45f3fae910595a78c.png 2x," id="diagramme-de-definition-des-slots-dans-vue-js">
 <p>Il est aussi possible de <a href="https://fr.vuejs.org/guide/components/slots.html#named-slots" target="_blank">nommer ces slots</a> afin de
@@ -475,7 +480,7 @@ Cependant, il est bel et bien possible de se baser sur cette notion lors de la c
 <em>Vous l'avez probablement déjà fait sans le savoir.</em></p>
 <h3 id="slot-par-defaut" class="anchor-title"><a href="#slot-par-defaut">Slot par défaut</a></h3>
 <p>Le cas le plus simple est celui d'un composant qui ne possède qu'un seul slot, celui par défaut, connu comme la
-popriété <a href="https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children" target="_blank"><code class="code-inline" id="268184c12df027f536154d099d497b31">children</code></a> disponible dans tous
+popriété <a href="https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children" target="_blank"><code class="code-inline" id="268184c12df027f536154d099d497b31">children</code></a> disponible dans tout
 composant React :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="9c5cf13e26b7ac8fff437f90ef1f366c"><span class="token comment">// App.jsx</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
@@ -549,7 +554,7 @@ grossissent, la lisibilité est compromise. Par exemple, avec un composant plus 
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span></span><span class="token punctuation">&gt;</span></span><span class="token punctuation">}</span></span>
 <span class="token punctuation">/&gt;</span></span></code></pre>
 <p>L'intérêt du <a href="https://fr.reactjs.org/docs/introducing-jsx.html" target="_blank">JSX</a> étant d'exposer une syntaxe proche du HTML, il est
-moins naturel à la lecture de retrouver ces contenus en tant que propriétés plutôt que nœuds enfants d'un composant.</p>
+moins naturel à la lecture de retrouver ces contenus en tant que propriétés plutôt que nœuds enfant d'un composant.</p>
 <p>Il est bien sûr possible de faire un mix des deux approches, en utilisant <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code> pour définir l'un des slots :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="ccc196f6a00db4acba1608442eeef1a5"><span class="token comment">// App.jsx</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Modal</span></span>
@@ -662,11 +667,11 @@ fourni, y compris avec TypeScript.</p>
 <h3 id="bonus-exemple-de-dropmenu" class="anchor-title"><a href="#bonus-exemple-de-dropmenu">Bonus: exemple de DropMenu</a></h3>
 <p>Vous pouvez consulter sur <a href="https://gist.github.com/ogizanagi/db03004d72b680ab03998308f3c18823" target="_blank">ce gist</a>
 l'implémentation d'un composant <code class="code-inline" id="51572ff77d912ffc49b18cf5049005ee">&lt;DropMenu&gt;</code> utilisant cette approche, TypeScript et
-<a href="https://mui.com/base/getting-started/overview/" target="_blank">MUI Base</a>, relatif à l'exemple de notre <a href="#abstraire-les-comportements">introdution</a>.</p>
+<a href="https://mui.com/base/getting-started/overview/" target="_blank">MUI Base</a>, relatif à l'exemple de notre <a href="#abstraire-les-comportements">introduction</a>.</p>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
 <p>React ne suggère pas de manière explicite la notion de slots, mais il est possible de s'inspirer de ce concept en
-utilisant exploitant les propriétés de JSX et <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code> afin de simuler l'utilisation de slots multiples avec une
-syntaxe proche du HTML et ce qu'il peut se faire avec d'autres frameworks.</p>
+exploitant les propriétés de JSX et <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code> afin de simuler l'utilisation de slots multiples avec une syntaxe proche
+du HTML, semblable à ce qu'il peut se faire avec d'autres frameworks.</p>
 <p>Cette approche n'est cependant peut-être pas à généraliser à tous les composants que vous écrirez ; la plupart des
 composants pouvant très bien s'accommoder de l'utilisation de simples <code class="code-inline" id="50fe03ab7bf37089a7e88da9b31ffb3b">props</code> pour ce besoin.</p>
 <h2 id="aller-plus-loin-sources" class="anchor-title"><a href="#aller-plus-loin-sources">Aller plus loin &amp; sources</a></h2>

@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/519/blog</link>
-        <pubDate>Fri, 21 Apr 2023 09:39:25 +0000</pubDate>
+        <pubDate>Mon, 24 Apr 2023 09:25:29 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/519/apple-touch-icon.png</url>
@@ -28,6 +28,7 @@
                             </media:content>
                             <category>react</category>
                             <category>slots</category>
+                            <category>javascript</category>
                                 </item>
                 <item>
             <title>Observer les changements de fichiers arbitraires avec Webpack</title>
@@ -45,6 +46,7 @@
                             <category>webpack</category>
                             <category>javascript</category>
                             <category>tips</category>
-                                </item>
+                                        <comments>https://twitter.com/Elao/status/1648967238009995266</comments>
+                    </item>
             </channel>
 </rss>

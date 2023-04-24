@@ -613,13 +613,17 @@ visant à manipuler la propriété <code class="code-inline" id="268184c12df027f
     </span><span class="token punctuation">{</span><span class="token keyword">typeof</span> children <span class="token operator">===</span> <span class="token string">'function'</span> <span class="token operator">?</span> <span class="token function">children</span><span class="token punctuation">(</span><span class="token punctuation">{</span> close <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">:</span> children<span class="token punctuation">}</span><span class="token plain-text">
   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Par la suite, nous allons avoir besoin d'une fonction pour identifier chacun de nos sous-composants parmi les enfants de notre <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code> :</p>
+<p>Par la suite, nous allons avoir besoin d'une fonction pour identifier chacun de nos sous-composants parmi les enfants de
+notre <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code> :</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="ed26f1209d2ca48d6f194fe17b3b9304"><span class="token comment">/**
  * Fonction utilitaire permettant de trouver un noeud enfant correspondant à un type donné
  */</span>
 <span class="token keyword">function</span> <span class="token function">findSlotOfType</span><span class="token punctuation">(</span><span class="token parameter">children<span class="token punctuation">,</span> slotType</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword control-flow">return</span> <span class="token maybe-class-name">Children</span><span class="token punctuation">.</span><span class="token method function property-access">toArray</span><span class="token punctuation">(</span>children<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token method function property-access">find</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">child</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> child<span class="token punctuation">.</span><span class="token property-access">type</span> <span class="token operator">===</span> slotType<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
+<p>En la matière, <a href="https://fr.reactjs.org/docs/react-api.html#reactchildrentoarray" target="_blank"><code class="code-inline" id="d04f6f7c3ef1087850b8cfdfc7efdfef">Children.toArray</code></a> permet
+d'obtenir un tableau linéarisé du contenu passé à notre <code class="code-inline" id="996b48b5cde40992422d230ad42d33c2">&lt;Modal&gt;</code>.<br>
+Nous pouvons alors rechercher, isoler et manipuler nos slots parmi ces nœuds en les identifiant par leur type.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>

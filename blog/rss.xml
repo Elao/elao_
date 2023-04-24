@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Mon, 24 Apr 2023 08:21:19 +0000</pubDate>
+        <pubDate>Mon, 24 Apr 2023 13:45:28 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -13,6 +13,23 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                <item>
+            <title>Concevoir vos composants React avec des slots multiples</title>
+            <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[ Concevez des composants réutilisables avec de multiples slots pour mutualiser les comportements communs  tout en permettant de personnaliser leur rendu et contenu.
+ ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/blog/dev/react-component-slots</guid>
+            <link>https://elao.github.io/elao_/blog/dev/react-component-slots</link>
+            <media:content url="https://elao.github.io/elao_/resized/content/images/blog/thumbnails/react-component-slots.jpg/4e03c706b952d736887f23158f95172b.jpg" width="1200" height="627">
+                <media:description type="plain">Concevoir vos composants React avec des slots multiples</media:description>
+                                    <media:credit role="photographer" scheme="urn:ebu">Lautaro Andreani, https://unsplash.com/@lautaroandreani</media:credit>
+                            </media:content>
+                            <category>react</category>
+                            <category>slots</category>
+                            <category>javascript</category>
+                                </item>
                 <item>
             <title>Observer les changements de fichiers arbitraires avec Webpack</title>
             <pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate>

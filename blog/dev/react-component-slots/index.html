@@ -567,7 +567,7 @@ moins naturel à la lecture de retrouver ces contenus en tant que propriétés p
 <p>bien que ce choix puisse sembler arbitraire et ne résolve pas notre problématique lors de la multiplication des slots
 acceptant du JSX.</p>
 <h3 id="slots-multiple-via-jsx" class="anchor-title"><a href="#slots-multiple-via-jsx">Slots multiple via JSX</a></h3>
-<p>Il est possible d'obtenir une stucture plus naturelle en utilisant le markup JSX pour définir les slots, des
+<p>Il est possible d'obtenir une structure plus naturelle en utilisant le markup JSX pour définir les slots, des
 sous-composants React pour chaque et en utilisant <a href="https://fr.reactjs.org/docs/react-api.html#reactchildren" target="_blank">les APIs React</a>
 visant à manipuler la propriété <code class="code-inline" id="268184c12df027f536154d099d497b31">children</code>.</p>
 <p>Afin d'aboutir à une telle syntaxe :</p>
@@ -584,7 +584,7 @@ visant à manipuler la propriété <code class="code-inline" id="268184c12df027f
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>close<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Fermer</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
   <span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Modal.Footer</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
 </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Modal</span></span><span class="token punctuation">&gt;</span></span></code></pre>
-<p>Commençons par créer nos sous-composants dans notre fichier <code class="code-inline" id="cbc14a23781a8278a6a55fa4cfd3057a">Modal.jsx</code>:</p>
+<p>commençons par créer nos sous-composants dans notre fichier <code class="code-inline" id="cbc14a23781a8278a6a55fa4cfd3057a">Modal.jsx</code>:</p>
 <pre class="code-multiline language-jsx"><code class="language-jsx" id="31a1b49435e62e4fe7c80979df715a98"><span class="token comment">// Chacun de nos slots est un sous-composant React dédié, </span>
 <span class="token comment">// permettant de l'identifier par son type :</span>
 
@@ -691,6 +691,11 @@ composants pouvant très bien s'accommoder de l'utilisation de simples <code cla
                                                     </div>
                                                 </main>
             <aside class="article-content__aside">
+                                    <a href="https://twitter.com/intent/like?tweet_id=1650771626332487681" class="kudo" target="_blank">
+                        <span class="kudo__button" aria-hidden="true"></span>
+                        <span class="screen-reader">Cet article m’a été utile</span>
+                        <span class="kudo__label" aria-hidden="true">Kudos</span>
+                    </a>
                             </aside>
         </div>
 
@@ -731,6 +736,16 @@ composants pouvant très bien s'accommoder de l'utilisation de simples <code cla
                                     </div>
 
                 <div class="bricks">
+                            <div class="brick-comment">
+                    <p class="title">Commenter</p>
+                    <p>
+                        Des commentaires ?
+                        <a href="https://twitter.com/Elao/status/1650771626332487681" target="_blank" class="animated-link animated-link--light">
+                            Poursuivons la discussion sur twitter !
+                        </a>
+                    </p>
+                    <div id="tweet-container" class="tweet-container" data-tweet-id="1650771626332487681"></div>
+                </div>
             
                             <div class="brick-contribute">
                     <p>

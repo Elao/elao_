@@ -57,7 +57,9 @@ qui lui est propre et qu'il convient de ne pas avoir à répéter à chaque util
 ```jsx
 <Modal>
   {/* Injection d'un simple texte dans le titre de la modale */}
-  <Modal.Title>Objectifs</Modal.Title>
+  <Modal.Title>
+    Objectifs
+  </Modal.Title>
 
   {/* Contenu JSX */}
   <Modal.Content>
@@ -69,8 +71,8 @@ qui lui est propre et qu'il convient de ne pas avoir à répéter à chaque util
     Fonction de rendu utilisée pour le contenu du footer,
     se voyant injecté la fonction de fermeture de la modale
   */}
-  <Modal.Footer>{
-    ({ close }) => <button onClick={close}>Fermer</button>
+  <Modal.Footer>{({ close }) =>
+    <button onClick={close}>Fermer</button>
   }</Modal.Footer>
 </Modal>
 ```
@@ -199,8 +201,8 @@ Il est possible de définir plusieurs slots en utilisant des `props` dédiées :
     <p>Contenu de ma modale</p>
     <a href="…">En découvrir plus…</a>
   </>}
-  footer={
-    ({ close }) => <button onClick={close}>Fermer</button>
+  footer={({ close }) => 
+    <button onClick={close}>Fermer</button>
   }
 />
 ```
@@ -261,10 +263,10 @@ Il est bien sûr possible de faire un mix des deux approches, en utilisant `chil
 ```jsx
 // App.jsx
 <Modal
- title="Objectifs" 
- footer={
-   ({ close }) => <button onClick={close}>Fermer</button>
- }
+  title="Objectifs" 
+  footer={({ close }) => 
+    <button onClick={close}>Fermer</button>
+  }
 >
   <p>Contenu de ma modale</p>
   <a href="…">En découvrir plus…</a>
@@ -292,8 +294,8 @@ Afin d'aboutir à une telle syntaxe :
     <a href="…">En découvrir plus…</a>
   </Modal.Content>
 
-  <Modal.Footer>{
-    ({ close }) => <button onClick={close}>Fermer</button>
+  <Modal.Footer>{({ close }) =>
+    <button onClick={close}>Fermer</button>
   }</Modal.Footer>
 </Modal>
 ```

@@ -13,7 +13,7 @@ thumbnail:          "content/images/blog/thumbnails/react-component-slots.jpg"
 tags:               ["React", "Slots", "Javascript"]
 authors:            ["msteinhausser"]
 credits:            { name: "Lautaro Andreani", url: "https://unsplash.com/@lautaroandreani" }
-tweetId:            ~
+tweetId:            "1650771626332487681"
 ---
 
 ## Introduction
@@ -278,7 +278,7 @@ acceptant du JSX.
 
 ### Slots multiple via JSX
 
-Il est possible d'obtenir une stucture plus naturelle en utilisant le markup JSX pour définir les slots, des
+Il est possible d'obtenir une structure plus naturelle en utilisant le markup JSX pour définir les slots, des
 sous-composants React pour chaque et en utilisant [les APIs React](https://fr.reactjs.org/docs/react-api.html#reactchildren)
 visant à manipuler la propriété `children`.
 
@@ -300,7 +300,7 @@ Afin d'aboutir à une telle syntaxe :
 </Modal>
 ```
 
-Commençons par créer nos sous-composants dans notre fichier `Modal.jsx`:
+commençons par créer nos sous-composants dans notre fichier `Modal.jsx`:
 
 ```jsx
 // Chacun de nos slots est un sous-composant React dédié, 

@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/525/blog</link>
-        <pubDate>Tue, 30 May 2023 14:47:52 +0000</pubDate>
+        <pubDate>Fri, 02 Jun 2023 12:54:12 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/525/apple-touch-icon.png</url>
@@ -15,9 +15,9 @@
         <atom:link href="https://elao.github.io/elao_/pr/525/blog/rss.xml" rel="self" type="application/rss+xml"/>
                 <item>
             <title>Bienvenue à bord …</title>
-            <pubDate>Mon, 22 May 2023 00:00:00 +0000</pubDate>
+            <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
             <description>
-                <![CDATA[ L&#039;accueil et l&#039;accompagnement des nouveaux développeurs chez élao ]]>
+                <![CDATA[ L&#039;accueil et l&#039;accompagnement des nouveaux développeurs chez elao ]]>
             </description>
             <guid isPermaLink="true">https://elao.github.io/elao_/pr/525/blog/elao/onboarding-2022</guid>
             <link>https://elao.github.io/elao_/pr/525/blog/elao/onboarding-2022</link>

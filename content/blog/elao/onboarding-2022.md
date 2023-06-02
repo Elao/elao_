@@ -1,8 +1,8 @@
 ---
 title: "Bienvenue à bord …"
-date: '2023-05-22'
+date: '2023-06-13'
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
-description: "L'accueil et l'accompagnement des nouveaux développeurs chez élao"
+description: "L'accueil et l'accompagnement des nouveaux développeurs chez elao"
 authors: [xavierr]
 tags: [elao, team]
 thumbnail: content/images/blog/2023/onboarding-2022/eileen-pan-5d5DSRQ5dUc-unsplash.jpg
@@ -15,15 +15,15 @@ L'arrivée de nouveaux développeurs au sein d'une équipe est toujours un momen
 
 En effet, dans un contexte professionnel où les profils techniques sont très convoités et les renouvellements de personnel assez fréquents, il s'agit pour l'entreprise de renvoyer une image aussi positive que possible aux nouveaux arrivants. Et pour les nouvelles recrues, il s'agit de surmonter les appréhensions que ne manque pas de susciter un changement professionnel et de se sentir rapidement à l'aise dans leur nouveau milieu.
 
-Au cours de la rentrée 2022, élao a accueilli dans son équipe de développeurs trois nouvelles personnes au cours de la même semaine. L'occasion pour nous d'affiner notre procédure d'accompagnement et de la confronter à l'épreuve du réel. Retour sur cette expérience et sur les enseignements que nous en tirons …
+Au cours de la rentrée 2022, elao a accueilli dans son équipe de développeurs trois nouvelles personnes au cours de la même semaine. L'occasion pour nous d'affiner notre procédure d'accompagnement et de la confronter à l'épreuve du réel. Retour sur cette expérience et sur les enseignements que nous en tirons …
 
 ## Le contexte
 
-Un lundi de septembre peu banal pour nous : trois personnes franchissent pour la première fois, avec plus ou moins de timidité, le seuil des locaux d'élao. Trois personnalités, et autant de profils différents, auxquels il convient de réserver le meilleur accueil possible. Camille, Romane et Quentin viennent donc ce jour-là de rejoindre notre équipe de développeurs.
+Une semaine de septembre peu banale pour nous : à quelques jours d'intervalle, trois personnes franchissent pour la première fois, avec plus ou moins de timidité, le seuil des locaux d'elao. Trois personnalités, et autant de profils différents, auxquels il convient de réserver le meilleur accueil possible. Camille, Romane et Quentin viennent donc de rejoindre notre équipe de développeurs.
 
-[Romane](../../member/rledru.yaml), étudiante en première année de Master d'informatique, débute son alternance chez élao où elle compte bien parfaire et mettre en pratique ses connaissances en développement. [Camille](../../member/ccastillo.yaml), diplômée d'un Master 2 en informatique et forte de cinq années d'expérience en développement PHP et Symfony, souhaite exercer ses talents dans une nouvelle entreprise où elle pourra diversifier ses compétences. Quant à [Quentin](../../member/qbrouillet.yaml), le doyen, il est développeur PHP depuis peu de temps car il a auparavant exercé ses talents dans d'autres domaines (la communication et la culture, notamment), mais a souhaité rejoindre élao pour se frotter aux bonnes pratiques qui y sont prônées.
+[Romane](../../member/rledru.yaml), étudiante en première année de Master d'informatique, débute son alternance chez elao où elle compte bien parfaire et mettre en pratique ses connaissances en développement. [Camille](../../member/ccastillo.yaml), diplômée d'un Master 2 en informatique et forte de cinq années d'expérience en développement PHP et Symfony, souhaite exercer ses talents dans une nouvelle entreprise où elle pourra diversifier ses compétences. Quant à [Quentin](../../member/qbrouillet.yaml), le doyen, il est développeur PHP depuis peu de temps car il a auparavant exercé ses talents dans d'autres domaines (la communication et la culture, notamment), mais a souhaité rejoindre elao pour se frotter aux bonnes pratiques qui y sont prônées.
 
-Xavier Gorse et l'équipe avaient été séduits par le profil de ces trois candidats, mais accueillir trois nouveaux le même jour était inédit pour élao. Il fallait nous assurer que nous étions en capacité d'intégrer autant de nouvelles recrues dans des conditions satisfaisantes et de dégager du temps pour les accueillir et les former. Jusqu'à présent, l'accueil des nouveaux se faisait assez naturellement et sans heurt en se basant sur nos expériences précédentes, et n'avait pas fait l'objet d'une formalisation avancée. Mais les circonstances nous ont incités à nous préparer au mieux à cet événement.
+Xavier Gorse et l'équipe avaient été séduits par le profil de ces trois candidats, mais accueillir trois nouveaux la même semaine était inédit pour elao. Il fallait nous assurer que nous étions en capacité d'intégrer autant de nouvelles recrues dans des conditions satisfaisantes et de dégager du temps pour les accueillir et les former. Jusqu'à présent, l'accueil des nouveaux se faisait assez naturellement et sans heurt en se basant sur nos expériences précédentes, et n'avait pas fait l'objet d'une formalisation avancée. Mais les circonstances nous ont incités à nous préparer au mieux à cet événement.
 
 ## La préparation et les questions soulevées
 
@@ -43,7 +43,7 @@ Toutes ces questions n'appellent pas nécessairement de réponses définitives, 
 
 Compte tenu du contexte très particulier, à savoir l'arrivée simultanée de plusieurs développeurs aux profils plutôt junior, il a été décidé de porter un soin tout particulier à l'accueil des nouveaux arrivants, considérant que cet effort pourrait également nous être bénéfique dans la perspective des prochains recrutements.
 
-J'ai donc été désigné pour accompagner les nouvelles recrues au cours des premières semaines et libéré pendant un temps de toute charge opérationnelle pour mieux me consacrer à leur intégration. Je sortais d'une mission de deux ans chez un client, marquée par un contexte technique et métier assez compliqué. Durant ma mission, j'avais particulièrement apprécié l'esprit d'entraide qui avait régné au sein de l'équipe et avais été très sensible à la qualité de l'accompagnement dont j'avais bénéficié à mon arrivée. L'occasion m'était donc offerte de ré-intégrer l'équipe d'élao en douceur et de m'efforcer d'instaurer auprès de nos nouveaux collègues le même climat que j'avais tant apprécié durant ma mission.
+J'ai donc été désigné pour accompagner les nouvelles recrues au cours des premières semaines et libéré pendant un temps de toute charge opérationnelle pour mieux me consacrer à leur intégration. Je sortais d'une mission de deux ans chez un client, marquée par un contexte technique et métier assez compliqué. Durant ma mission, j'avais particulièrement apprécié l'esprit d'entraide qui avait régné au sein de l'équipe et avais été très sensible à la qualité de l'accompagnement dont j'avais bénéficié à mon arrivée. L'occasion m'était donc offerte de ré-intégrer l'équipe d'elao en douceur et de m'efforcer d'instaurer auprès de nos nouveaux collègues le même climat que j'avais tant apprécié durant ma mission.
 
 <figure>
     <img src="content/images/blog/2023/onboarding-2022/full-metal-jacket.gif" alt="Full Metal Jacket">
@@ -58,14 +58,14 @@ La masse d'informations à assimiler lorsque l'on occupe un nouveau poste peut r
 
 Avant d'entrer dans le vif du sujet, les premiers jours sont consacrés à l'installation et la configuration des postes de travail : PHPStorm, Git, Google Chrome, manala, 1Password, création des comptes Github, configuration des boîtes mail, etc. Une checklist existe répertoriant toutes les étapes obligatoires ou optionnelles pour disposer d'un poste de travail fonctionnel. L'occasion également de vérifier sa pertinence et de la réactualiser si nécessaire.
 
-Notez qu'élao a instauré une cagnotte du nouvel arrivant, c'est-à-dire une réserve d'argent exceptionnelle dont disposent les intéressés pour faire l'acquisition d'équipements d'appoint qui ne font pas partie de la dotation par défaut (tapis de souris, souris, clavier, adaptateurs USB, housse d'ordinateur, casque audio, etc.).
+Notez qu'elao a instauré une cagnotte du nouvel arrivant, c'est-à-dire une réserve d'argent exceptionnelle dont disposent les intéressés pour faire l'acquisition d'équipements d'appoint qui ne font pas partie de la dotation par défaut (tapis de souris, souris, clavier, adaptateurs USB, housse d'ordinateur, casque audio, etc.).
 
 Autre activité qui permet une entrée en matière sans pression particulière : la rédaction des nouveaux profils pour [notre site web](https://www.elao.com/la-tribu). L'occasion de :
 
 - s'approprier son poste de travail
 - vérifier son installation,
 - créer sa première pull request,
-- se familiariser avec le workflow Git en vigueur chez élao,
+- se familiariser avec le workflow Git en vigueur chez elao,
 - réaliser son premier déploiement en production.
 
 Et le sentiment d'officialiser sur la toile son appartenance à la tribu …

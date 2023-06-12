@@ -2,7 +2,7 @@
 title: "Bienvenue à bord …"
 date: '2023-06-13'
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
-description: "L'accueil et l'accompagnement des nouveaux développeurs chez elao"
+description: "L'accueil et l'accompagnement des nouveaux développeurs et développeuses chez elao"
 authors: [xavierr]
 tags: [elao, team]
 thumbnail: content/images/blog/2023/onboarding-2022/eileen-pan-5d5DSRQ5dUc-unsplash.jpg
@@ -11,15 +11,15 @@ credit: { name: 'Eileen Pan', url: 'https://unsplash.com/photos/5d5DSRQ5dUc' } #
 tweetId: ''
 ---
 
-L'arrivée de nouveaux développeurs au sein d'une équipe est toujours un moment marquant dans la vie d'une entreprise. La perspective d'accueillir une nouvelle personne est très stimulante pour une équipe car elle marque une rupture appréciable avec la routine quotidienne et peut donner lieu à de très belles rencontres. Néanmoins, c'est une étape importante qu'il convient de préparer au mieux, dans l'intérêt de tous.
+L'arrivée de nouvelles personnes au sein d'une équipe est toujours un moment marquant dans la vie d'une entreprise. Elle est très stimulante pour l'équipe car elle marque une rupture appréciable avec la routine quotidienne et peut donner lieu à de très belles rencontres. Néanmoins, c'est une étape importante qu'il convient de préparer au mieux, dans l'intérêt de tous.
 
 En effet, dans un contexte professionnel où les profils techniques sont très convoités et les renouvellements de personnel assez fréquents, il s'agit pour l'entreprise de renvoyer une image aussi positive que possible aux nouveaux arrivants. Et pour les nouvelles recrues, il s'agit de surmonter les appréhensions que ne manque pas de susciter un changement professionnel et de se sentir rapidement à l'aise dans leur nouveau milieu.
 
-Au cours de la rentrée 2022, elao a accueilli dans son équipe de développeurs trois nouvelles personnes au cours de la même semaine. L'occasion pour nous d'affiner notre procédure d'accompagnement et de la confronter à l'épreuve du réel. Retour sur cette expérience et sur les enseignements que nous en tirons …
+Au cours de la rentrée 2022, elao a accueilli dans son équipe de développement trois nouvelles personnes au cours de la même semaine. L'occasion pour nous d'affiner notre procédure d'accompagnement et de la confronter à l'épreuve du réel. Retour sur cette expérience et sur les enseignements que nous en tirons …
 
 ## Le contexte
 
-Une semaine de septembre peu banale pour nous : à quelques jours d'intervalle, trois personnes franchissent pour la première fois, avec plus ou moins de timidité, le seuil des locaux d'elao. Trois personnalités, et autant de profils différents, auxquels il convient de réserver le meilleur accueil possible. Camille, Romane et Quentin viennent donc de rejoindre notre équipe de développeurs.
+Une semaine de septembre peu banale pour nous : à quelques jours d'intervalle, trois personnes franchissent pour la première fois, avec plus ou moins de timidité, le seuil des locaux d'elao. Trois personnalités, et autant de profils différents, auxquels il convient de réserver le meilleur accueil possible. Camille, Romane et Quentin viennent donc de rejoindre notre équipe de développement.
 
 [Romane](../../member/rledru.yaml), étudiante en première année de Master d'informatique, débute son alternance chez elao où elle compte bien parfaire et mettre en pratique ses connaissances en développement. [Camille](../../member/ccastillo.yaml), diplômée d'un Master 2 en informatique et forte de cinq années d'expérience en développement PHP et Symfony, souhaite exercer ses talents dans une nouvelle entreprise où elle pourra diversifier ses compétences. Quant à [Quentin](../../member/qbrouillet.yaml), le doyen, il est développeur PHP depuis peu de temps car il a auparavant exercé ses talents dans d'autres domaines (la communication et la culture, notamment), mais a souhaité rejoindre elao pour se frotter aux bonnes pratiques qui y sont prônées.
 
@@ -87,7 +87,7 @@ Passée la période de chauffe, arrivent enfin après quelques jours les premier
 
 Il est important d'insister auprès des nouveaux sur le fait que leurs premières interventions sur projet font toujours partie de leur accompagnement : une manière de les mettre en confiance, et de ne pas leur infliger une pression contre-productive. Ils sont également sensibilisés à l'exercice délicat de la revue de code : leurs premières PR risquent d'être abondamment commentés, mais il ne doivent surtout pas s'en inquiéter, ni s'en offusquer, cela fait partie intégrante de l'apprentissage. Les bonnes pratiques, l'outillage, le linting, l'intégration continue, le cycle de vie d'une PR, les conventions de codage et les modèles propres à l'entreprise ne s'assimilent pas du jour au lendemain et nécessitent de la pratique, encore de la pratique, et toujours de la pratique.
 
-Avant d'être parachutés sur un projet, ils bénéficient d'une présentation générale de l'application sur laquelle ils vont intervenir : les principaux concepts métiers, les principales fonctionnalités et les particularités techniques du projet. C'est aussi l'occasion pour nous de nous assurer que les README des projets comportent toutes les informations nécessaires pour débuter sur le projet et l'aborder sereinement. Et le cas échéant, compléter la documentation, et rappeler à tous que la documentation nous appartient, qu'elle est à notre service et que nous avons la responsabilité de la faire évoluer lorsque le besoin se fait sentir ou lorsque des manques flagrants sont identifiés.
+Avant d'être parachutés sur un projet, Camille, Romane et Quentin ont bénéficié d'une présentation générale de l'application sur laquelle ils allaient intervenir, portant notamment sur les principaux concepts métiers, les principales fonctionnalités et les particularités techniques du projet. C'est aussi l'occasion pour nous de nous assurer que les README des projets comportent toutes les informations nécessaires pour débuter sur le projet et l'aborder sereinement. Et le cas échéant, compléter la documentation, et rappeler à tous que la documentation nous appartient, qu'elle est à notre service et que nous avons la responsabilité de la faire évoluer lorsque le besoin se fait sentir ou lorsque des manques flagrants sont identifiés.
 
 Il convient également d'assigner aux nouveaux des tâches abordables, avec une difficulté croissante, afin de les mettre en confiance. Dans tous les cas, quelle que soit la difficulté de leur tâche, ils doivent pouvoir compter sur le soutien sans condition de toute l'équipe. Certaines tâches plus complexes peuvent être prises en charge en pair-programming pour une meilleure transmission des compétences.
 

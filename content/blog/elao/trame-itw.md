@@ -18,7 +18,7 @@ Aujourd'hui, on vous présente [Prénom], dév chez Elao depuis [X] ans.
 
 ## Ton parcours
 
-## C'est quoi que tu préfères dans le quotidien de ton métier ?
+## Qu'est-ce que tu préfères dans le quotidien de ton métier ?
 
 ## Et ce que tu laisses volontiers aux autres ?
 

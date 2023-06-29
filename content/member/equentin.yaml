@@ -1,0 +1,28 @@
+active: true # make it true
+🚲: true
+
+
+# Bio
+name: Eva Quentin
+gender: female
+bio:
+    Cheffe de projet de formation, Eva ce qu’elle aime c’est organiser, structurer, et communiquer !
+    Son objectif ? Que le projet se déroule dans les meilleures conditions !👌
+
+    Vous pouvez la retrouver lors d’une balade en montagne, pendant ses séances de course à pied sur les quais ou au parc, autour d’une bonne bière ou en en train de lire un bouquin passionnant.✨
+position: Facilitatrice projets
+integrationDate: 12-06-2023
+
+# Social
+linkedIn: eva-quentin-12618b115
+email: eva.quentin@elao.com
+avatar: content/images/members/equentin.jpg
+
+emojis:
+    - 🏃‍♀️
+    - 🏸
+    - 🏔️
+    - 📖
+    - 🎨
+    - 🍃
+    - 🍻

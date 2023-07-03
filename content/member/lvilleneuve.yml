@@ -1,0 +1,20 @@
+active: true
+
+# Bio
+name: Laurie Villeneuve
+#pseudo: lolo
+gender: female
+bio: 'Laurie a étudié l’art et l’enseignement avant de se reconvertir dans le web. Elle est aujourd’hui notre développeuse Front-End / Intégratrice. Elle met à profit ses capacités de développeuse pour créer des interfaces fluides et réactives.'
+position: Développeuse front-end
+integrationDate: 12-06-2023
+
+# Social
+twitter: VilleneuveLaur4
+github: Laurie24
+linkedIn: laurie-villeneuve-92b90213a
+email: laurie.villeneuve@elao.com
+avatar: content/images/members/avatars/lvilleneuve.jpg
+emojis:
+    - 🏝️
+    - 🍷
+    - 🎨

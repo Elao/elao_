@@ -3,8 +3,8 @@ title: 'Laurie, développeuse front-end chez Elao'
 date: '2023-07-03' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
-authors: [] # multiple acceptés
-#tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
+authors: [lvilleneuve] # multiple acceptés
+tableOfContent: false # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team]
 thumbnail: content/images/blog/2023/itw-laurie/banner.JPEG
 #banner: content/images/blog/interviews/banners/trame-itw.jpg # Uniquement si différent de la minitature (thumbnail)

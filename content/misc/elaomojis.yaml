@@ -111,6 +111,8 @@ categories:
                   path: cats/killer-robot-cat.png
                 - code: ":catjam:"
                   path: cats/catjam.gif
+                - code: ":miaou-sprint:"
+                  path: cats/miaou-sprint.gif
           - title: Les animaux qui jugent
             emojis:
                 - code: ":judging-hermine:"

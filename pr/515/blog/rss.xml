@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/515/blog</link>
-        <pubDate>Thu, 29 Jun 2023 08:00:51 +0000</pubDate>
+        <pubDate>Thu, 06 Jul 2023 14:43:39 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/515/apple-touch-icon.png</url>
@@ -13,6 +13,49 @@
             <link>https://elao.github.io/elao_/pr/515/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/515/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                <item>
+            <title>Eva, Facilitatrice projets fraichement arrivée chez Elao</title>
+            <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[  ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/515/blog/elao/eva-facilitatrice-projet-portrait</guid>
+            <link>https://elao.github.io/elao_/pr/515/blog/elao/eva-facilitatrice-projet-portrait</link>
+            <media:content url="https://elao.github.io/elao_/pr/515/resized/content/images/blog/2023/itw-eva/banner.jpeg/84834d44b0b6c0334c8d5bc821be46cd.jpeg" width="1200" height="627">
+                <media:description type="plain">Eva, Facilitatrice projets fraichement arrivée chez Elao</media:description>
+                            </media:content>
+                            <category>elao</category>
+                            <category>team</category>
+                                </item>
+                <item>
+            <title>Laurie, développeuse front-end chez Elao</title>
+            <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[  ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/515/blog/elao/laurie-developpeuse-front-end</guid>
+            <link>https://elao.github.io/elao_/pr/515/blog/elao/laurie-developpeuse-front-end</link>
+            <media:content url="https://elao.github.io/elao_/pr/515/resized/content/images/blog/2023/itw-laurie/banner.JPEG/212abc833ec91d4854a76e2b9ac5e5f3.JPEG" width="1200" height="627">
+                <media:description type="plain">Laurie, développeuse front-end chez Elao</media:description>
+                            </media:content>
+                            <category>elao</category>
+                            <category>team</category>
+                                </item>
+                <item>
+            <title>Config 2023: notre sélection de nouveautés Figma</title>
+            <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[ À travers cet article, retrouvez notre sélection et avis sur les nouveautés Figma, présentées lors de la Config 2023. ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/pr/515/blog/tech/config-2023-notre-selection-de-nouveautes-figma</guid>
+            <link>https://elao.github.io/elao_/pr/515/blog/tech/config-2023-notre-selection-de-nouveautes-figma</link>
+            <media:content url="https://elao.github.io/elao_/pr/515/resized/content/images/blog/thumbnails/config-2023-notre-selection-de-nouveautes-figma.jpg/f18a797a4c6e2b1325ea8d1d4e3626df.jpg" width="1200" height="627">
+                <media:description type="plain">Config 2023: notre sélection de nouveautés Figma</media:description>
+                            </media:content>
+                            <category>figma</category>
+                            <category>conference</category>
+                            <category>webdesign</category>
+                                </item>
                 <item>
             <title>Bienvenue à bord …</title>
             <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>

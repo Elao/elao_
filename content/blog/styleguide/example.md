@@ -243,7 +243,14 @@ Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une 
 * Accentuez les majuscules ! Cela rend la lecture plus facile. Sur Mac, il suffit d'activer le capslock avant d'appuyer sur la touche à accentuer. 
 
 ### L'écriture inclusive
-Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solutions possibles pour que cela reste lisible en fonction du contexte :
+Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solutions possibles pour que cela reste lisible en fonction du contexte.
+Chacun est libre, en tant qu'auteur en son nom propre, de l'utiliser ou non lors de la rédaction de son article. 
+
+Nous les présentons ici par ordre de préférence dans leur mise en application sur le blog, mais il est à votre discrétion d'utiliser la formule la plus adaptée en fonction du contexte.
+
+#### Utiliser des formules non genrées (épicène)
+*Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*  
+*Exemple 2 : « Bonjour tout le monde ! »*
 
 #### Doubler au féminin la formule masculine
 *Exemple 1 : « Chaque employé et employée doit faire sa demande de congés sur Lucca. »*  
@@ -256,12 +263,6 @@ Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solut
 Pour faire un point médian :  
 Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ;  
 Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.
-
-#### Utiliser des formules non genrées (épicène)
-*Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »*  
-*Exemple 2 : « Bonjour tout le monde ! »*
-
-Il est à votre discrétion d'utiliser la formule la plus adaptée en fonction du contexte.
 
 ### Pour aller plus loin
 Quelques ressources intéressantes :

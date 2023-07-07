@@ -63,6 +63,8 @@ categories:
                   path: miscellaneous/excellent-mrburns.gif
                 - code: ":think-about-it:"
                   path: miscellaneous/think-about-it.png
+                - code: ":wowspin:"
+                  path: miscellaneous/wowspin.gif
     - title: "Quelques collections 🙌"
       sections:
           - title: Ah ! - Denis Brogniart
@@ -115,6 +117,8 @@ categories:
                   path: cats/catjam.gif
                 - code: ":miaou-sprint:"
                   path: cats/miaou-sprint.gif
+                - code: ":miaou-heart:"
+                  path: cats/miaou-heart.png
           - title: Les animaux qui jugent
             emojis:
                 - code: ":judging-hermine:"

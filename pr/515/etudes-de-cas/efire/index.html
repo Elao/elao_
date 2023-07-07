@@ -346,7 +346,7 @@
 <p>Utilisation du design System elao_</p>
 <h3 id="phase-de-developpement" class="anchor-title"><a href="#phase-de-developpement">Phase de développement</a></h3>
 <p>C'est Florian, Amélie, Benjamin et Quentin qui sont montés sur ce projet. </p>
-<p>Le premier a planché sur les scripts de détourage d'objet en <em>python</em> pour permettre, depuis une photo, de générer différents fichiers vectoriels exportables.</p>
+<p>Le premier a planché sur les scripts de détourage d'objets en <em>python</em> pour permettre, depuis une photo, de générer différents fichiers vectoriels exportables.</p>
 <p>Amélie s'est chargée de l'intégration sur la base du <em>design system</em> Elao, un ensemble de composants <em>HTML/Sass</em> pensé pour répondre aux besoins basiques de la construction d'applications. Les quelques éléments spécifiques à l'application <em>Efire Calage</em> ont été réalisés en HTML/Sass directement dans le projet.</p>
 <p>Benjamin et Quentin quant à eux ont mis en place l'interface permettant aux utilisateurs de :</p>
 <ul>
@@ -359,15 +359,15 @@
 <p>Efire souhaitait fluidifier le parcours de ses équipes, du recueil de données chez leurs clients jusqu'à la génération et la transmission de fichiers vectoriels exploitables en production.</p>
 <h3 id="les-principaux-enjeux" class="anchor-title"><a href="#les-principaux-enjeux">Les principaux enjeux</a></h3>
 <h4 id="detourer-precisement-les-objets-photographies-au-sein-de-l-application" class="anchor-title"><a href="#detourer-precisement-les-objets-photographies-au-sein-de-l-application">Détourer précisément les objets photographiés au sein de l'application</a></h4>
-<p>En partant du code source de la solution existante, nous avons pu l'améliorer tout gardant l'essence de l'algorithme d'origine pour s'assurer de la pérennité du résultat.
-Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" target="_blank">opencv</a>, une référence en matière de traitement d'images, et notamment sur les filtres de <a href="https://fr.wikipedia.org/wiki/Filtre_de_Canny" target="_blank"><em>Canny</em></a> et <a href="https://fr.wikipedia.org/wiki/Filtre_de_Sobel" target="_blank"><em>Sobel</em></a>.</p>
+<p>En partant du code source de la solution existante, nous avons pu l'améliorer tout en gardant l'essence de l'algorithme d'origine pour s'assurer de la pérennité du résultat.
+Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" target="_blank">OpenCV</a>, une référence en matière de traitement d'images, et notamment sur les filtres de détection de contours <a href="https://fr.wikipedia.org/wiki/Filtre_de_Canny" target="_blank"><em>Canny</em></a> et <a href="https://fr.wikipedia.org/wiki/Filtre_de_Sobel" target="_blank"><em>Sobel</em></a>.</p>
 <p>Une fois capturée, l'image subit une succession d'étapes :</p>
 <ul>
 <li>suppression du maximum d'artefacts</li>
 <li>conversion en niveaux de gris puis noir &amp; blanc</li>
 <li>centrage de la detection en se basant sur la dalle carrée et sa bordure</li>
-<li>redressement du plan et mise à l'échelle via les matrices de transformations</li>
-<li>détection des formes noires qui apparaissent sur ce fond blanc</li>
+<li>redressement du plan et mise à l'échelle via des matrices de transformations</li>
+<li>détection des formes hautement contrastées apparaissant sur ce fond clair</li>
 </ul>
 <p>Enfin une ultime étape : interagir avec l'application web pour générer, stocker et mettre à disposition de l'utilisateur des fichiers aux formats <em>.csv</em> et <em>.dxf</em>.</p>
 <h4 id="retrouver-dans-un-contexte-web-les-fonctionnalites-natives-de-l-appareil-photo" class="anchor-title"><a href="#retrouver-dans-un-contexte-web-les-fonctionnalites-natives-de-l-appareil-photo">Retrouver, dans un contexte web, les fonctionnalités natives de l'appareil photo</a></h4>
@@ -459,30 +459,30 @@ Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" targe
             <h2 class="h2--dash">D'autres études de cas</h2>
             <ul class="article-list">
                                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="150">
-                        <a href="/elao_/pr/515/etudes-de-cas/climapp" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg');
+                        <a href="/elao_/pr/515/etudes-de-cas/mjc" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/e13e10bfd920e93dbaf46336b8e02706.jpg');
     background: #f1f1f1 -webkit-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/e13e10bfd920e93dbaf46336b8e02706.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/b49b325fdf0e529b4334cd08c621b3fd.jpg') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/e13e10bfd920e93dbaf46336b8e02706.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/b49b325fdf0e529b4334cd08c621b3fd.jpg') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/e13e10bfd920e93dbaf46336b8e02706.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/b49b325fdf0e529b4334cd08c621b3fd.jpg') 2x
     );
     background: #f1f1f1 image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/e13e10bfd920e93dbaf46336b8e02706.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/mjc-banner.jpg/b49b325fdf0e529b4334cd08c621b3fd.jpg') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Climalife Dehon / Gestimat</span>
-                            <a href="/elao_/pr/515/etudes-de-cas/climapp" class="title">Clim&#039;app</a>
-                            <p class="description">Une application dédiée aux professionnels du froid</p>
-                            <a href="/elao_/pr/515/etudes-de-cas/climapp" class="btn btn--secondary btn--animated">
+                            <span class="info">MyJob.Company</span>
+                            <a href="/elao_/pr/515/etudes-de-cas/mjc" class="title">MyJob.Company</a>
+                            <p class="description">MyJob.Company propose une plateforme d&#039;offres d&#039;emploi fonctionnant sur le principe de la cooptation.</p>
+                            <a href="/elao_/pr/515/etudes-de-cas/mjc" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -494,30 +494,30 @@ Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" targe
                         </div>
                     </li>
                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="300">
-                        <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg');
+                        <a href="/elao_/pr/515/etudes-de-cas/m6" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/520d37a824d90ad253b5daf4a8ab1c53.jpg');
     background: #f1f1f1 -webkit-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/520d37a824d90ad253b5daf4a8ab1c53.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/0a57006f343aa5152f9e656643c1f29d.jpg') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/520d37a824d90ad253b5daf4a8ab1c53.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/0a57006f343aa5152f9e656643c1f29d.jpg') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/520d37a824d90ad253b5daf4a8ab1c53.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/0a57006f343aa5152f9e656643c1f29d.jpg') 2x
     );
     background: #f1f1f1 image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/520d37a824d90ad253b5daf4a8ab1c53.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/6play-banner.jpg/0a57006f343aa5152f9e656643c1f29d.jpg') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Musique &amp; Music</span>
-                            <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="title">Musique &amp; Music</a>
-                            <p class="description">Musique &amp; Music permet aux professionnels de la vidéo d&#039;enrichir leurs productions avec de l&#039;illustration sonore.</p>
-                            <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="btn btn--secondary btn--animated">
+                            <span class="info">M6 Web</span>
+                            <a href="/elao_/pr/515/etudes-de-cas/m6" class="title">M6 web</a>
+                            <p class="description">Participation à la refonte de 6play, l&#039;application gérant la partie interactive des chaînes du groupe M6.</p>
+                            <a href="/elao_/pr/515/etudes-de-cas/m6" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">

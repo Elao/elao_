@@ -76,3 +76,5 @@ L'équipe de Musique & Music utilise au quotidien l'espace administrateurs : les
       <span class="figure__legend">Les playlists Musique & Music</span>
     </figcaption>
 </figure>
+
+> Nous avons le plaisir de travailler quotidiennement avec les équipes d'ELAO, un accompagnement qui nous guide vers la mise en production des fonctionnalités de notre app de librairie musicale.

@@ -83,3 +83,7 @@ Pour  l’intégration du design, nous avons opté pour SVG, un format de donné
       <span class="figure__legend">Le rapport de tri en PDF imprimable</span>
     </figcaption>
 </figure>
+
+> Chez TRiBü, nous sommes pleinement satisfaits de notre collaboration avec ELAO. Leur équipe a parfaitement su comprendre notre projet, nos besoins.
+
+> La mise en œuvre opérationnelle a été maitrisée et le résultat répond complètement à nos attentes, et surtout aux besoins de nos clients utilisateurs.

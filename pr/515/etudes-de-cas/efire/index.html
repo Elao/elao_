@@ -43,7 +43,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/515/build/app.2471cb93.css">
+                    <link rel="stylesheet" href="/elao_/pr/515/build/app.f29dd613.css">
         
                     <script src="/elao_/pr/515/build/runtime.e82dcf1e.js" defer></script><script src="/elao_/pr/515/build/53.348337ac.js" defer></script><script src="/elao_/pr/515/build/659.8b7e4ba8.js" defer></script><script src="/elao_/pr/515/build/app.88c7c3ae.js" defer></script>
 
@@ -316,12 +316,12 @@
 
         <div class="page-project__content">
             <h2 id="le-contexte-du-projet" class="anchor-title"><a href="#le-contexte-du-projet">Le contexte du projet</a></h2>
-<p><strong><em>Le Groupe Efire</em> figure parmi les leaders européens de l'étanchéité, du transfert de fluides, de la découpe métallique et de la protection pour les industries.</strong></p>
+<p><strong>Le Groupe Efire figure parmi les leaders européens de l'étanchéité, du transfert de fluides, de la découpe métallique et de la protection pour les industries.</strong></p>
 <p>Nous avons travaillé avec les équipes spécialisées dans la transformation de la mousse plastique, qui conçoivent et fabriquent des calages en mousse sur mesure, pour protéger les appareillages, transporter du matériel sans risque et organiser les ateliers.</p>
-<p><strong>L'application web <em>Efire Calage</em></strong> permet aux équipes de <strong>générer rapidement des fichiers vectoriels</strong>. À partir d'une simple photo prise sur tablette, les équipes commerciales d'<em>Efire</em> sont capables de qualifier, valider et envoyer les ressources nécessaires à la conception des futures mousses de rangement.</p>
+<p><strong>L'application web Efire Calage</strong> permet aux équipes de <strong>générer rapidement des fichiers vectoriels</strong>. À partir d'une simple photo prise sur tablette, les équipes commerciales d'Efire sont capables de qualifier, valider et envoyer les ressources nécessaires à la conception des futures mousses de rangement.</p>
 <h2 id="l-expertise-elao-deployee-pour-l-application-efire-calage" class="anchor-title"><a href="#l-expertise-elao-deployee-pour-l-application-efire-calage">L'expertise Elao déployée pour l'application Efire Calage</a></h2>
 <h3 id="ateliers-de-recueil-du-besoin" class="anchor-title"><a href="#ateliers-de-recueil-du-besoin">Ateliers de recueil du besoin</a></h3>
-<p>L'application a vocation à être utilisée dans des ateliers, sur des <em>devices</em> mobiles. <strong>L'expérience utilisateur a donc été pensée <em>tablet first</em></strong>, même s'il est possible d'utiliser <em>Efire Calage</em> sur n'importe quel <em>device</em>.</p>
+<p>L'application a vocation à être utilisée dans des ateliers, sur des <em>devices</em> mobiles. <strong>L'expérience utilisateur a donc été pensée <em>tablet first</em></strong>, même s'il est possible d'utiliser Efire Calage sur n'importe quel <em>device</em>.</p>
 <p>Pour répondre aux attentes graphiques tout en apportant un cadre standardisé mais souple à l'application, <strong>Elao a proposé d'utiliser son propre <em>design system</em></strong>.</p>
 <p>L'interface a ensuite été construite rapidement et simplement à partir de composants préexistants et quelques rares ajouts liés au fonctionnel de l'application.</p>
 <figure>
@@ -344,8 +344,8 @@
 </figure>
 <h3 id="phase-de-developpement" class="anchor-title"><a href="#phase-de-developpement">Phase de développement</a></h3>
 <p>C'est Florian, Amélie, Benjamin et Quentin qui sont montés sur ce projet. </p>
-<p>Le premier a planché sur les scripts de détourage d'objets en <em>python</em> pour permettre, depuis une photo, de générer différents fichiers vectoriels exportables.</p>
-<p>Amélie s'est chargée de l'intégration sur la base du <em>design system</em> Elao, un ensemble de composants <em>HTML/Sass</em> pensé pour répondre aux besoins basiques de la construction d'applications. Les quelques éléments spécifiques à l'application <em>Efire Calage</em> ont été réalisés en HTML/Sass directement dans le projet.</p>
+<p>Le premier a planché sur les scripts de détourage d'objets pour permettre, depuis une photo, de générer différents fichiers vectoriels exportables.</p>
+<p>Amélie s'est chargée de l'intégration sur la base du <em>design system</em> Elao, un ensemble de composants HTML/Sass pensé pour répondre aux besoins basiques de la construction d'applications. Les quelques éléments spécifiques à l'application Efire Calage ont été réalisés en HTML/Sass directement dans le projet.</p>
 <p>Benjamin et Quentin quant à eux ont mis en place l'interface permettant aux utilisateurs de :</p>
 <ul>
 <li>référencer des clients et des projets associés</li>
@@ -355,17 +355,8 @@
 <h2 id="l-application" class="anchor-title"><a href="#l-application">L'application</a></h2>
 <h3 id="les-principaux-enjeux" class="anchor-title"><a href="#les-principaux-enjeux">Les principaux enjeux</a></h3>
 <h4 id="detourer-precisement-les-objets-photographies-au-sein-de-l-application" class="anchor-title"><a href="#detourer-precisement-les-objets-photographies-au-sein-de-l-application">Détourer précisément les objets photographiés au sein de l'application</a></h4>
-<p>En partant du code source de la solution existante, nous avons pu l'améliorer tout en gardant l'essence de l'algorithme d'origine pour s'assurer de la pérennité du résultat.
-Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" target="_blank">OpenCV</a>, une référence en matière de traitement d'images, et notamment sur les filtres de détection de contours <a href="https://fr.wikipedia.org/wiki/Filtre_de_Canny" target="_blank"><em>Canny</em></a> et <a href="https://fr.wikipedia.org/wiki/Filtre_de_Sobel" target="_blank"><em>Sobel</em></a>.</p>
-<p>Une fois capturée, l'image subit une succession d'étapes :</p>
-<ul>
-<li>suppression du maximum d'artefacts</li>
-<li>conversion en niveaux de gris puis noir &amp; blanc</li>
-<li>centrage de la detection en se basant sur la dalle carrée et sa bordure</li>
-<li>redressement du plan et mise à l'échelle via des matrices de transformations</li>
-<li>détection des formes hautement contrastées apparaissant sur ce fond clair</li>
-</ul>
-<p>Enfin une ultime étape : interagir avec l'application web pour générer, stocker et mettre à disposition de l'utilisateur des fichiers aux formats <em>.csv</em> et <em>.dxf</em>.</p>
+<p>En partant du code source de la solution existante, nous avons pu l'améliorer tout en gardant l'essence de l'algorithme d'origine pour s'assurer de la pérennité du résultat.</p>
+<p>Une fois capturée, l'image subit une succession de traitements avant de devenir interactive dans l'application web pour générer, stocker et mettre à disposition de l'utilisateur des fichiers vectoriels.</p>
 <figure>
     <img src="/elao_/pr/515/resized/content/images/casestudies/efire-selection.jpg/12e2883b8df137f36b6b5acf4efdbcf8.jpg" alt="Écran de sélection" srcset="/elao_/pr/515/resized/content/images/casestudies/efire-selection.jpg/12e2883b8df137f36b6b5acf4efdbcf8.jpg 1x,
 /elao_/pr/515/resized/content/images/casestudies/efire-selection.jpg/af8dc4968f03d4e6ed908f9ce2b07292.jpg 2x," id="ecran-de-selection">
@@ -379,7 +370,6 @@ Ce code s'appuyait sur la library opensource <a href="https://opencv.org/" targe
 <li>l'affichage du niveau</li>
 <li>la capture d'une image en haute définition</li>
 </ul>
-<p>Cette problématique a été résolue grâce à l'intégration de l'<a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageCapture" target="_blank">API ImageCapture</a> et à l'événement <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/deviceorientation_event" target="_blank"><code class="code-inline" id="a2a9f778977330861ed7c115301b834d">deviceorientation</code></a> disponibles sur les <em>devices</em> Android.</p>
 <figure>
     <img src="/elao_/pr/515/resized/content/images/casestudies/efire-snapshot.jpg/b69efd6934d3a35cc1efded002d0995c.jpg" alt="prise de vue sur l'application Efire Calage" srcset="/elao_/pr/515/resized/content/images/casestudies/efire-snapshot.jpg/b69efd6934d3a35cc1efded002d0995c.jpg 1x,
 /elao_/pr/515/resized/content/images/casestudies/efire-snapshot.jpg/3f8f130782c00121e4889ed0cdd63bad.jpg 2x," id="prise-de-vue-sur-l-application-efire-calage">
@@ -475,30 +465,30 @@ Les risques : </p>
             <h2 class="h2--dash">D'autres études de cas</h2>
             <ul class="article-list">
                                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="150">
-                        <a href="/elao_/pr/515/etudes-de-cas/climapp" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg');
+                        <a href="/elao_/pr/515/etudes-de-cas/ngtv" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/307bdbe24264f36bf3d0aa63ae608ce5.jpg');
     background: #f1f1f1 -webkit-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/307bdbe24264f36bf3d0aa63ae608ce5.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/22c15613809c91c914aa35198e5c6cb2.jpg') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/307bdbe24264f36bf3d0aa63ae608ce5.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/22c15613809c91c914aa35198e5c6cb2.jpg') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/307bdbe24264f36bf3d0aa63ae608ce5.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/22c15613809c91c914aa35198e5c6cb2.jpg') 2x
     );
     background: #f1f1f1 image-set(
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/e2776a0ae0a32db324d871a7340fb8fe.jpg') 1x,
-        url('/elao_/pr/515/resized/content/images/casestudies/headers/climapp-banner.jpg/96c92c8431acd81bd62c2b32903aaea7.jpg') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/307bdbe24264f36bf3d0aa63ae608ce5.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/ngtv-banner.jpg/22c15613809c91c914aa35198e5c6cb2.jpg') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Climalife Dehon / Gestimat</span>
-                            <a href="/elao_/pr/515/etudes-de-cas/climapp" class="title">Clim&#039;app</a>
-                            <p class="description">Une application dédiée aux professionnels du froid</p>
-                            <a href="/elao_/pr/515/etudes-de-cas/climapp" class="btn btn--secondary btn--animated">
+                            <span class="info">NGTV</span>
+                            <a href="/elao_/pr/515/etudes-de-cas/ngtv" class="title">NGTV Experience</a>
+                            <p class="description">NGTV filme des matchs de football et de padel en salle et génère des statistiques variées de performances individuelles et d&#039;équipe</p>
+                            <a href="/elao_/pr/515/etudes-de-cas/ngtv" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -510,30 +500,30 @@ Les risques : </p>
                         </div>
                     </li>
                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="300">
-                        <a href="/elao_/pr/515/etudes-de-cas/example" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('https://placekitten.com/630/380');
+                        <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg');
     background: #f1f1f1 -webkit-image-set(
-        url('https://placekitten.com/630/380') 1x,
-        url('https://placekitten.com/630/380') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('https://placekitten.com/630/380') 1x,
-        url('https://placekitten.com/630/380') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('https://placekitten.com/630/380') 1x,
-        url('https://placekitten.com/630/380') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
     );
     background: #f1f1f1 image-set(
-        url('https://placekitten.com/630/380') 1x,
-        url('https://placekitten.com/630/380') 2x
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/371d501b99004b045289935320bec776.jpg') 1x,
+        url('/elao_/pr/515/resized/content/images/casestudies/headers/musique-music-banner.jpg/bf8b84d2a237fd9fd5941db40f57d192.jpg') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Example Corp.</span>
-                            <a href="/elao_/pr/515/etudes-de-cas/example" class="title">Exemple</a>
-                            <p class="description">Nunc auctor est dolor, eget placerat lorem semper sit amet. Integer aliquet mi orci, et eleifend urna fermetum. Nullam pelletesque frigilla vulputate.</p>
-                            <a href="/elao_/pr/515/etudes-de-cas/example" class="btn btn--secondary btn--animated">
+                            <span class="info">Musique &amp; Music</span>
+                            <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="title">Musique &amp; Music</a>
+                            <p class="description">Musique &amp; Music permet aux professionnels de la vidéo d&#039;enrichir leurs productions avec de l&#039;illustration sonore.</p>
+                            <a href="/elao_/pr/515/etudes-de-cas/musique-music" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">

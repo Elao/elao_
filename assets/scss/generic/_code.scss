@@ -5,7 +5,7 @@ pre {
   [class*="language-"] {
     padding: 0;
     font-family: $code-font;
-    font-size: 18px;
+    font-size: 1.1rem;
     color: $color-primary;
     text-align: left;
     white-space: pre;
@@ -17,10 +17,18 @@ pre {
     tab-size: 4;
     hyphens: none;
     background: $code-background;
+    border-radius: 5px;
   }
 }
 
 .code-multiline {
+  &,
+  &[class*="language-"],
+  [class*="language-"] {
+    font-size: 1rem;
+    color: $color-secondary;
+  }
+
   margin: 30px 0 !important;
   padding: 20px 30px !important;
   font-size: 18px;
@@ -40,7 +48,6 @@ pre {
   &.doctype,
   &.cdata,
   &.inserted,
-  &.punctuation,
   &.operator,
   &.property,
   &.selector,
@@ -48,7 +55,7 @@ pre {
   &.class-name,
   &.function-name,
   &.function {
-    color: $code-primary;
+    color: $code-tertiary;
   }
 
   &.constant,
@@ -61,8 +68,9 @@ pre {
   &.important,
   &.atrule,
   &.keyword,
-  &.builtin {
-    color: $code-tertiary;
+  &.builtin,
+  &.punctuation,{
+    color: $code-primary;
   }
 
   &.boolean,

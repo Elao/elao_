@@ -17,9 +17,9 @@ $screen-xs: 760px;  // phone
 $screen-xxs: 380px; // small phone
 
 // Code theme
-$code-font: 'antikor medium', monospace;
-$code-background: #fee3e4;
-$code-primary: #7f1A55;
-$code-tertiary: #f4756d;
-$code-info: #1e7695;
-$code-mute: #616161;
+$code-font: monospace;
+$code-background: darken(#0d3a5a, 10%);
+$code-primary: lighten(#1e7695, 50%);
+$code-tertiary: #E8BF69;
+$code-info: #fee3e4;
+$code-mute: #fee3e4;

@@ -5,8 +5,8 @@
 {% block meta_description 'Découvrez ' ~ member.pseudo ?? member.name ~ ', ' ~  member.position ~ ' chez Elao' %}
 
 {% block twitter_card_type 'summary' %}
-{% block og_image absolute_url(asset(member.tribePicture|glide_image_preset('opengraph_image'))) %}
-{% block twitter_image absolute_url(asset(member.tribePicture|glide_image_preset('twitter_card'))) %}
+{% block og_image absolute_url(asset(member.teamPicture|glide_image_preset('opengraph_image'))) %}
+{% block twitter_image absolute_url(asset(member.teamPicture|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
     <div class="container">
@@ -41,7 +41,7 @@
                 <div class="member__image member__image--mobile">
                     {% block memberImage %}
                     <!-- image de profil : 500 x 680px -->
-                    <img {{ macros.imageSrcset(member.tribePicture, 'tribe_picture.show') }} alt="Portrait de {{ member.name }}">
+                    <img {{ macros.imageSrcset(member.teamPicture, 'team_picture.show') }} alt="Portrait de {{ member.name }}">
                     <div class="seniority" data-aos="zoom-in">
                         {% set interval = date('now').diff(member.integrationDate) %}
                         {% set numberYear = interval.y %}

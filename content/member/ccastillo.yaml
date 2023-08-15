@@ -1,6 +1,6 @@
 active: true # make it true
 🚲: true
-anonymousTribePicture: false # To protect your image privacy
+anonymousTeamPicture: false # To protect your image privacy
 
 # Bio
 name: Camille Castillo

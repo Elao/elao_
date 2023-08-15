@@ -1,7 +1,7 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% block meta_title "La tribu d'Elao" %}
+{% block meta_title "La magic team d'Elao" %}
 {% block meta_description "Toute l'équipe d'Elao" %}
 
 {% block content %}
@@ -15,7 +15,7 @@
             </li>
             <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="#">
-                    <span itemprop="name">La tribu</span>
+                    <span itemprop="name">La magic team</span>
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
@@ -24,10 +24,10 @@
         <div class="page-team">
             <div class="banner-team">
                 <div class="banner-team__title" data-aos="fade-right">
-                    <h1>Ce qui fait notre force : <span>notre tribu</span></h1>
+                    <h1>Ce qui fait notre force : <span>notre magic team</span></h1>
                 </div>
                 <div class="banner-team__content">
-                    <img {{ macros.imageSrcset('content/images/members/team-banner.png', 'tribe_banner') }} alt="" data-aos="fade-in">
+                    <img {{ macros.imageSrcset('content/images/members/team-banner.png', 'team_banner') }} alt="" data-aos="fade-in">
                 </div>
             </div>
 
@@ -71,26 +71,34 @@
                 </div>
 
                 <h2 class="h2--dash">L'équipe</h2>
-                <ul class="team">
-                    {% for member in members %}
-                        <li class="team__member" data-aos="fade-in">
-                            <a href="{{ path('team_member', { member: member.slug }) }}">
-                                <span class="image">
-                                     <span style=" {{ macros.backgroundImageSrcset(member.tribePicture, 'tribe_picture.list') }}"></span>
-                                </span>
-                                <span class="name">{{ member.name }}</span>
-                                <span class="job">{{ member.position|nl2br }}</span>
-                                {% for c in member.certifications|filter(c => c in ['symfony', 'opquast'])[0:1] %}
-                                    {% set certif = content_get('App\\Model\\Certification', c) %}
-                                    <span class="certification">
-                                        <img src="{{ asset(certif.logoPath) }}" alt="" />
-                                        <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+                <div class="container--narrow">
+                    <ul class="team">
+                        {% for member in members %}
+                            <li class="team__member" data-aos="fade-in">
+                                <a href="{{ path('team_member', { member: member.slug }) }}">
+                                    <span class="image">
+                                         <span style=" {{ macros.backgroundImageSrcset(member.teamPicture, 'team_picture.list') }}"></span>
                                     </span>
-                                {% endfor %}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
+                                    <span class="name">{{ member.name }}</span>
+                                    <span class="job">{{ member.position|nl2br }}</span>
+                                    {% for c in member.certifications|filter(c => c in ['symfony', 'opquast'])[0:1] %}
+                                        {% set certif = content_get('App\\Model\\Certification', c) %}
+                                        <span class="certification">
+                                            <img src="{{ asset(certif.logoPath) }}" alt="" />
+                                            <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+                                        </span>
+                                    {% endfor %}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ path('jobs') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Rejoindre la magic team
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

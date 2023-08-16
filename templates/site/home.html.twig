@@ -52,7 +52,7 @@
                         <span class="number">{{ membersCount }}</span>
                         expert·e·s passionné·e·s
                         <span class="item__link">
-                            La tribu elao
+                            La team elao
                             <i class="icon icon--arrow" aria-hidden="true"></i>
                         </span>
                     </a>
@@ -289,14 +289,19 @@
             {% include 'partials/brick-visit.html.twig' %}
             {% include 'partials/brick-contact.html.twig' %}
 
-            <a href="{{ path('jobs') }}" class="brick-team">
-                <img src="{{ asset('build/images/tipi.svg') }}" alt="">
-                <h3 class="title">Rejoindre la tribu</h3>
+            <div class="brick-team">
+                <h3 class="title">Rejoindre la team</h3>
                 {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
                 {% if count > 0 %}
                     <span class="subtitle">{{ 'job_offers'|trans({ count: count }) }}</span>
                 {% endif %}
-            </a>
+                <a href="{{ path('jobs') }}" class="btn btn--primary btn--animated">
+                    <span>
+                        Voir les postes
+                        {% include 'partials/svg-arrow.html.twig' %}
+                    </span>
+                </a>
+            </div>
         </aside>
     </div>
 {% endblock %}

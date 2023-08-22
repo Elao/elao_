@@ -29,7 +29,7 @@ twig:
                 - { path: 'methodology', label: 'Méthodologie' }
                 - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'values', label: 'Valeurs' }
-                - { path: 'team', label: 'La tribu' }
+                - { path: 'team', label: 'La team' }
                 - { path: 'blog', label: 'Blog' }
                 - { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' }
             footer:
@@ -39,7 +39,7 @@ twig:
                     - { path: 'case_studies', label: 'Études de cas' }
                 -
                     - { path: 'values', label: 'Valeurs' }
-                    - { path: 'team', label: 'La tribu' }
+                    - { path: 'team', label: 'La team' }
                     - { path: 'blog', label: 'Blog' }
                     - { path: 'blog_rss', label: 'RSS' , attributes: { data-no-swup: true } }
                 -

@@ -13,7 +13,6 @@
         "elao/enum": "^2.1",
         "league/glide-symfony": "^2.0",
         "phpdocumentor/reflection-docblock": "^5.2",
-        "sensio/framework-extra-bundle": "^6.2",
         "stenope/stenope": "0.x-dev",
         "symfony/asset": "^6.2",
         "symfony/console": "^6.2",

@@ -188,7 +188,7 @@ class Header
     public ?string $comment;
     public bool $active;
 
-    public function __construct(array $value, ?string $comment = null, bool $active = true)
+    public function __construct(array $value, string $comment = null, bool $active = true)
     {
         $this->value = $value;
         $this->comment = $comment;

@@ -7,10 +7,26 @@
 # Install #
 ###########
 
-## Install dependencies
-install:
+## Install - Install dependencies
+install: install.composer install.npm
+
+install.composer:
 	symfony composer install
+
+install.npm:
 	npm install
+
+## Update - Update dependencies
+update: update.composer update.npm update.browserslist
+
+update.composer:
+	symfony composer update
+
+update.npm:
+	npm update
+
+update.browserslist:
+	npx update-browserslist-db@latest
 
 ###############
 # Development #

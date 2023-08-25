@@ -1,6 +1,8 @@
 .SILENT:
 .PHONY: build
 
+PORT_PREFIX = 350
+
 -include .manala/Makefile
 
 ###########
@@ -41,12 +43,14 @@ serve:
 	npx concurrently "make serve.php" "make serve.assets" --names="Symfony,Webpack" --prefix=name --kill-others --kill-others-on-fail
 
 ## Dev - Start Symfony server
+serve.php: export SYMFONY_PORT ?= $(PORT_PREFIX)80
 serve.php:
-	symfony server:start --no-tls
+	symfony server:start --no-tls --port=$(SYMFONY_PORT)
 
 ## Dev - Start webpack dev server with HMR (Hot reload)
+serve.assets: export WEBPACK_PORT ?= $(PORT_PREFIX)81
 serve.assets:
-	npx encore dev-server --mode=development
+	npx encore dev-server --mode=development --port=$(WEBPACK_PORT)
 
 ## Dev - Watch assets
 watch.assets:

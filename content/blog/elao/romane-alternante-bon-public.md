@@ -37,6 +37,14 @@ En été, on me trouvera le plus souvent sur mon vélo, ou dans un bar à sirote
 
 Je gribouille beaucoup aussi. Je continue de dessiner des illustrations 🎨 et des planches, le tout toujours en musique 🎵
 
+cf.
+<a href="https://www.instagram.com/melp_code" target="_blank">
+mon compte Instagram ✨
+<i class="icon icon--instagram" aria-hidden="true"></i>
+    <span class="screen-reader">Compte Instagram de Romane</span>
+✨
+</a>
+
 Et évidemment je suis aussi apicultrice amatrice, et j'adore ça ! 🍯 🐝🐝🐝
 
 ## L'interview :fast-parrot:

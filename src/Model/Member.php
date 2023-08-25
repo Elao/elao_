@@ -33,6 +33,7 @@ class Member
     public ?string $email = null;
     public ?string $avatar = null;
     public ?string $linkedIn = null;
+    public ?string $instagram = null;
 
     public ?string $phone = null;
 

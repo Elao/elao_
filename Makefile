@@ -1,16 +1,34 @@
 .SILENT:
 .PHONY: build
 
+PORT_PREFIX = 350
+
 -include .manala/Makefile
 
 ###########
 # Install #
 ###########
 
-## Install dependencies
-install:
+## Install - Install dependencies
+install: install.composer install.npm
+
+install.composer:
 	symfony composer install
+
+install.npm:
 	npm install
+
+## Update - Update dependencies
+update: update.composer update.npm update.browserslist
+
+update.composer:
+	symfony composer update
+
+update.npm:
+	npm update
+
+update.browserslist:
+	npx update-browserslist-db@latest
 
 ###############
 # Development #
@@ -25,12 +43,14 @@ serve:
 	npx concurrently "make serve.php" "make serve.assets" --names="Symfony,Webpack" --prefix=name --kill-others --kill-others-on-fail
 
 ## Dev - Start Symfony server
+serve.php: export SYMFONY_PORT ?= $(PORT_PREFIX)80
 serve.php:
-	symfony server:start --no-tls
+	symfony server:start --no-tls --port=$(SYMFONY_PORT)
 
 ## Dev - Start webpack dev server with HMR (Hot reload)
+serve.assets: export WEBPACK_PORT ?= $(PORT_PREFIX)81
 serve.assets:
-	npx encore dev-server --mode=development
+	npx encore dev-server --mode=development --port=$(WEBPACK_PORT)
 
 ## Dev - Watch assets
 watch.assets:

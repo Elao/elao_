@@ -11,9 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/recrutement")
- */
+#[Route('/recrutement')]
 class JobController extends AbstractController
 {
     private ContentManagerInterface $manager;
@@ -23,9 +21,7 @@ class JobController extends AbstractController
         $this->manager = $manager;
     }
 
-    /**
-     * @Route(name="jobs")
-     */
+    #[Route(name: 'jobs')]
     public function list(): Response
     {
         $jobs = $this->manager->getContents(Job::class, ['date' => false], ['active' => true]);
@@ -35,9 +31,7 @@ class JobController extends AbstractController
         ])->setLastModified(\count($jobs) > 0 ? ContentUtils::max($jobs, 'lastModified') : null);
     }
 
-    /**
-     * @Route("/{job<.+>}", name="job")
-     */
+    #[Route('/{job<.+>}', name: 'job')]
     public function show(Job $job): Response
     {
         return $this->render('job/show.html.twig', [

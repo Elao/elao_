@@ -23,13 +23,13 @@ Autant juste vous résumer ça sur un petit schéma :
 
 ## Qu'est ce qui t'a donné envie de faire du web ?
 
-J'ai fais des rencontres. J'avais déjà un profil très tech; je bidouillais déjà l'informatique dès le lycée, j'aimais ça. J'avais des affinités mais je n'avais pas du tout envisagé en faire mon métier…
+J'ai fait des rencontres. J'avais déjà un profil très tech, je bidouillais l'informatique dès le lycée, j'aimais ça. J'avais des affinités mais je n'avais pas du tout envisagé d'en faire mon métier…
 
-C'est quand j'ai rencontré des développeurs que j'ai compris que ça pouvait être un milieu où je trouverai ma place. J'ai commencé à apprendre en autodidacte et je suis tombée dedans sans me douter que ça me passionnerait autant ! 
+C'est quand j'ai rencontré des développeurs que j'ai compris que ça pouvait être un milieu où je trouverais ma place. J'ai commencé à apprendre en autodidacte et je suis tombée dedans sans me douter que ça me passionnerait autant ! 
 
 ## Qu'est-ce que tu fais au quotidien chez Elao ?
 
-J'ai un rythme 2 semaines 2 semaines avec mon master en alternance. De ce fait, je suis souvent sur des tâches à froid et peu urgentes. Je suis très curieuse et touche à tout, Back, Front, Mobile, même côté devOps, j'ai envie de tout apprendre et surtout de tout comprendre ! 
+Dans le cadre de mon Master, j'alterne deux semaines en entreprise et deux semaines en école. De ce fait, je suis souvent sur des tâches à froid et peu urgentes. Je suis très curieuse et touche à tout, Back, Front, Mobile, même devOps, j'ai envie de tout apprendre et surtout de tout comprendre ! 
 
 ### Et quand tu ne travailles pas ?
 
@@ -43,7 +43,7 @@ Et évidemment je suis aussi apicultrice amatrice, et j'adore ça ! 🍯 🐝�
 
 ### Tes 3 emojis préf du Slack
 
-- Mon pref, et de loin, c'est le `gremlin-ohno` :gremlin-ohno: pour son expressivité
+- Mon préféré, et de loin, c'est le `gremlin-ohno` :gremlin-ohno: pour son expressivité
 - Le `surprised-pikachu` toujours très utile :surprised-pikachu:
 - Le `amaze` parce que je suis très impressionnable :amaze:
 

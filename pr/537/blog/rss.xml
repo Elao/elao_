@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/537/blog</link>
-        <pubDate>Tue, 29 Aug 2023 12:36:44 +0000</pubDate>
+        <pubDate>Tue, 29 Aug 2023 12:40:56 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/537/apple-touch-icon.png</url>
@@ -15,7 +15,7 @@
         <atom:link href="https://elao.github.io/elao_/pr/537/blog/rss.xml" rel="self" type="application/rss+xml"/>
                 <item>
             <title>Camille, développeuse web chez Elao depuis 1 an</title>
-            <pubDate>Fri, 15 Sep 2023 00:00:00 +0000</pubDate>
+            <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
             <description>
                 <![CDATA[  ]]>
             </description>

@@ -71,6 +71,8 @@ categories:
                   path: miscellaneous/think-about-it.png
                 - code: ":wowspin:"
                   path: miscellaneous/wowspin.gif
+                - code: ":balance:"
+                  path: miscellaneous/balance.png
     - title: "Quelques collections 🙌"
       sections:
           - title: Ah ! - Denis Brogniart
@@ -147,6 +149,12 @@ categories:
                   path: judging/judging-goose.png
                 - code: ":judgemental-shoelace:"
                   path: judging/judgemental-shoelace.png
+          - title: Corpo
+            emojis:
+                - code: ":new-elao:"
+                  path: corporate/new-elao.png
+                - code: ":magic-team:"
+                  path: corporate/magic-team.png
           - title: 'Bonus : la happy team'
             emojis:
                 - code: ":amelie-happy:"
@@ -167,6 +175,8 @@ categories:
                   path: happy/lod-happy.gif
                 - code: ":max-happy:"
                   path: happy/max-happy.gif
+                - code: ":oceane-happy:"
+                  path: happy/oceane-happy.gif
                 - code: ":ogi-happy:"
                   path: happy/ogi-happy.gif
                 - code: ":sabrina-happy:"

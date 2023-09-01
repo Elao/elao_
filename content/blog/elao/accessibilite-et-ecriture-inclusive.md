@@ -18,16 +18,17 @@ authors:            ["ccastillo"]
 Vous ne le saviez peut-être pas, mais à Elao s'est posée très récemment la question de savoir 
 comment rendre nos articles plus **inclusifs**.
 
-La question de l'intégration de **l'écriture inclusive** s'est posée régulièrement ces derniers mois, quand nous avons
-beaucoup réalimenté le blog avec de nouveaux articles, 
-des personnes de l'équipe étant particulièrement sensibles à la question,
-nous avons pris des décisions résumées dans [cet article](https://elao.github.io/elao_/blog/styleguide/example/#l-ecriture-inclusive).
+La question de l'intégration de **l'écriture inclusive** s'est posée régulièrement ces derniers mois. 
 
-!!! note "Petit rappel des règles décidées"
-    Sur les articles et contenus postés au nom d'Elao, sans auteurs ou autrices, nous allons privilégier 
+En effet, comme l'activité du site s'est intensifiée durant cette période 
+et plusieurs personnes de l'équipe sont particulièrement sensibles à cette question, 
+nous avons décidé d'adopter certaines règles en la matière.
+
+!!! note "Petit rappel des règles adoptées"
+    Sur les articles et contenus postés au nom d'Elao, sans auteur ou autrice, nous allons privilégier 
     dans l'ordre d'importance, les règles suivantes :  
      - **Les formules non genrées,**  
-     - **Doubler les formes masculines de féminin,**  
+     - **Doubler les formes masculines avec leurs équivalents féminins,**  
      - **Et le fameux point médian.**
 
 ## Au fait, c'est quoi l'écriture inclusive ?
@@ -40,7 +41,7 @@ et pourquoi son utilisation devient de plus en plus répandue.
 ### Petit rappel de règles de bases de la langue française
 
 La langue française, est une langue fortement genrée, chaque nom commun ayant un **genre**,
-**masculin ou féminin**, et chaque adjectif s'accorde avec ce **genre**.
+**masculin ou féminin**, et chaque adjectif s'accordant avec ce **genre**.
 
 !!! Success "Exemple"
     Le mot "chat" est **masculin**, l'adjectif "roux" s'accorde avec ce genre, on dira donc "un chat roux".  
@@ -70,16 +71,16 @@ dans les textes la **visibilité** des hommes, réduisant celle des femmes.
 La question se pose d'autant plus dans le milieu de l'informatique, en particulier dans les sphères techniques, 
 car c'est un milieu où **il y a une forte majorité d'hommes**. 
 
-On peut aussi citer comme exemple les offres d'emplois rédigés **au masculin**, 
-car encore trop souvent considéré comme **neutre**, 
-qui peut décourager les femmes à postuler, parce qu'elles ne se sentent pas **concernées**.
+On peut aussi citer comme exemple les offres d'emplois rédigées **au masculin**, 
+encore trop souvent considéré comme **neutre**. 
+Cela peut décourager les femmes à postuler, car elles ne se sentent pas **concernées**.
 
 Bref, l'**écriture inclusive**, c'est un ensemble de règles, qui permettent de rendre le langage plus **inclusif**, 
 en rééquilibrant la **visibilité** des hommes et femmes.
 
 ## Et l'accessibilité dans tout ça ?
 
-L'accessibilité, c'est le fait de rendre un contenu accessible à tous, et notamment aux 
+L'**accessibilité**, c'est le fait de rendre un contenu accessible à tous, et notamment aux 
 **personnes en situation de handicap**.
 
 Je me suis intéressée en particulier à la question des liseurs de texte (ou lecteurs d'écran), qui permettent à des personnes 
@@ -92,8 +93,9 @@ la forme avec le **point médian**, qui est celle qui déchaîne le plus les pas
 
 ### Le point médian, le point de discorde
 
-Très critiqué jusqu'aux plus hautes instances du pays ;
-Le ministère de l'Education Nationale, porté par Jean-Michel Blanquer en 2019,
+Le point est médian est très critiqué, 
+et ce jusqu'aux plus hautes instances du pays : 
+le ministère de l'Education Nationale, porté par Jean-Michel Blanquer en 2019,
 avait [communiqué en défaveur de l'écriture inclusive](https://www.leprogres.fr/education/2021/05/07/pourquoi-la-guerre-que-mene-jean-michel-blanquer-contre-l-ecriture-inclusive-est-paradoxale) 
 (en réalité, uniquement le **point médian**...),
 qui, selon lui "complique la lecture et la compréhension des textes".
@@ -105,7 +107,7 @@ Pourtant, le **point médian** est beaucoup utilisé,
 ayant l'avantage de ne pas alourdir le texte en rajoutant un ou plusieurs mots, 
 et après une certaine pratique, demandant moins d'efforts mentaux (pratique uniquement **syntaxique**).
 
-Ceci étant cependant mon point de vue **personnel**, 
+C'est aussi une pratique que j'ai adoptée,
 après quelques années d'utilisation de différentes méthodes **d'écriture inclusive**,
 dans différents contextes (associatifs, professionnels, personnels).
 
@@ -140,7 +142,7 @@ qui utilisaient le **point médian** de l'**écriture inclusive**.
 ### Alors ça donne quoi ?
 
 **VoiceOver** utilise une voix robotique un peu comme celle de Google Traduction,
-quand vous demandez à énoncer sur le haut-parleur le mot ou les expressions sélectionnées.
+quand vous demandez à énoncer sur le haut-parleur le mot ou les expressions sélectionnés.
 
 **VoiceOver** ne prononce pas à l'oral avec ses paramètres par défaut le **point médian**. 
 Il lit donc la forme féminisée directement à la suite de la forme masculine,
@@ -158,10 +160,10 @@ C'est encore plus difficilement compréhensible pour le **point médian** utilis
 
 Le fait est que le liseur ne détecte pas le **point médian** comme un caractère qui doit être énoncé à l'oral, 
 il n'y pas de façon pour une personne **aveugle ou malvoyante** de savoir si c'est un mot écrit de façon inclusive, 
-ou mot français classique.
+ou un mot de la langue française.
 
-Il ne peut donc plus difficilement saisir le sens de la phrase, s'il n'a aucune connaissance auditive sur comment 
-sont prononcés les mots incluant un **point médian**.
+Il peut donc difficilement saisir le sens de la phrase, s'il n'a aucune connaissance auditive sur 
+la manière de prononcer les mots incluant un **point médian**.
 
 ### Est-ce qu'il y a des moyens d'y pallier ?
 
@@ -170,11 +172,10 @@ les paramétrer spécifiquement pour que le liseur prononce
 le **point médian**, par exemple, ou installer des extensions 
 qui facilitent la prononciation de textes utilisant l'**écriture inclusive**.
 
-!!! Success "Ressource vidéo : Écriture inclusive et accessibilité numérique"
-    Voici une vidéo portée par la **fédération des Aveugles et des Amblyopes de France** 
-    [vidéo Écriture inclusive et accessibilité numérique](https://www.youtube.com/watch?v=hJeHc3ckou8) 
-    sur l'accessibilité et **l'écriture inclusive**.
-    Elle donne des points de vue et des arguments très intéressants, discutée avec des personnes concernées.
+!!! Success "Ressource vidéo : Écriture inclusive et **accessibilité** numérique"
+    Voici une [vidéo portée par la **fédération des Aveugles et des Amblyopes de France**](https://www.youtube.com/watch?v=hJeHc3ckou8) 
+    sur l'**accessibilité** et **l'écriture inclusive**.
+    Elle donne des points de vue et des arguments très intéressants, discutés avec des personnes concernées.
 
 !!! note "Petite parenthèse sur **l'amblyopie**"
     **L'amblyopie** est un **handicap** où un seul des deux yeux transmet des informations au cerveau, les personnes atteintes
@@ -183,13 +184,14 @@ qui facilitent la prononciation de textes utilisant l'**écriture inclusive**.
 ### Les extensions pour l'écriture inclusive
 
 Ces extensions pour **navigateurs webs**, facilitent la lecture de textes qui incluent 
-le **point médian**, et permettent de différencier plus aisément les formes féminines et masculines.
+le **point médian**, et permettent de différencier plus aisément les formes **féminines** et **masculines**.
 
 J'ai testé l'extension [LÉIA](https://addons.mozilla.org/fr/firefox/addon/leiaccessible/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search) 
 disponible sur **Mozilla Firefox**.
 
 Elle permet notamment de convertir les textes écrits en **écriture inclusive** avec le **point médian**,
-en textes qui doublent les formes masculines de féminin, ce qui permet de les lire avec un liseur de texte.
+en textes qui doublent les **formes masculines** de leurs **équivalents féminins**, 
+ce qui permet de les lire avec un liseur de texte.
 
 D'autres extensions sont disponibles sur le navigateur **Google Chrome** 
 comme [Ecriture·Inclusive·Facile](https://chrome.google.com/webstore/detail/ecriture%C2%B7inclusive%C2%B7facile/dfjcdiknbdbnfgecbkcaobgmeekinphg?hl=fr)
@@ -201,9 +203,9 @@ des femmes** dans les textes français.
 
 Toutefois, l'**écriture inclusive** avec le **point médian** 
 peut apporter des difficultés pour certaines personnes en situation de handicap, en termes de compréhension,
-car leurs **outils** peuvent ne pas y être adaptés. 
+car leurs **outils** peuvent ne pas être adaptés. 
 
-C'est un sujet doit être discuté, 
+C'est un sujet qui doit être discuté, 
 en étant vigilant et vigilante pour ne pas exclure les **personnes en situation de handicap**. 
 
 Les **adaptations** sont en théorie **possibles** et **pas forcément compliquées** à mettre en place,

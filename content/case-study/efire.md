@@ -110,4 +110,4 @@ Aujourd'hui, la capture et le traitement se font en même temps, permettant de d
 
 Et cerise sur le gâteau, le travail apporté au traitement algorythmique a permis d'améliorer significativement la précision de détection des contours 😎.
 
-> Citation client
+> Elao nous a fait une présentation budgétaire claire, l’équipe a été disponible, attachée à l’expérience utilisateur et avec un périmètre de compétence très large.

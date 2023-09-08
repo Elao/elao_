@@ -350,7 +350,21 @@
                                                                         <li>
                                             <a href="#identifiez-les-donnees-concernees">Identifiez les données concernées</a>
                                         </li>
+                                                                        <li>
+                                            <a href="#definir-la-base-legale-liceite-du-traitement">Définir la base légale (licéité) du traitement</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#mefiez-vous-de-l-interet-legitime">Méfiez-vous de l&#039;intérêt légitime</a>
+                                        </li>
                                                             </ol>
+                                            </li>
+                                    <li class="table-of-content__item">
+                        <a href="#conclusion-de-cette-premiere-partie">Conclusion de cette première partie</a>
+
+                                            </li>
+                                    <li class="table-of-content__item">
+                        <a href="#sources">Sources</a>
+
                                             </li>
                             </ol>
         
@@ -432,7 +446,7 @@ On comprendra donc qu'une personne peut-être identifiée de <strong>manière di
 <li>Son siège social est établi dans l'Union Européenne;</li>
 <li>Qu'elle traite des données de citoyens européens.</li>
 </ul>
-<p>Inutile d'aller chercher plus loin ou de vous poser la question <strong>du lieu de traitement des données</strong>, il n'a en soit aucune importance !</p>
+<p>Inutile d'aller chercher plus loin ou de vous poser la question <strong>du lieu de traitement des données</strong>, il n'a en soit que très peu d'importance !</p>
 <p>Et d'ailleurs si vous avez des DCP qui quittent le territoire de l'UE, il y a de fortes chances que vous soyez déjà par cet aspect, dans l'illégalité.</p>
 <p>Enfin le RGPD concerne également les sous-traitants qui peuvent être amenés à traiter des données personnelles pour le compte de tiers et ça tombe bien, aux yeux du RGPD, nous sommes le sous-traitant de notre client final.</p>
 <h3 id="je-ne-suis-pas-sur-de-correctement-interpreter-le-texte" class="anchor-title"><a href="#je-ne-suis-pas-sur-de-correctement-interpreter-le-texte">Je ne suis pas sûr de correctement interpréter le texte !</a></h3>
@@ -467,7 +481,7 @@ On comprendra donc qu'une personne peut-être identifiée de <strong>manière di
 <h3 id="integrez-la-gestion-des-donnees-des-la-phase-de-conception" class="anchor-title"><a href="#integrez-la-gestion-des-donnees-des-la-phase-de-conception">Intégrez la gestion des données dès la phase de conception</a></h3>
 <p>Vous souhaitez sensibiliser et éduquer votre client et ses équipes ?
 Amenez le sujet dès les phases de conception.</p>
-<p>Les ateliers sont un excellent point de départ pour prendre connaissance de ce qui va être manipuler et de la sensibilité des données.
+<p>Les ateliers fonctionnels sont un excellent point de départ pour prendre connaissance de ce qui va être manipuler et de la sensibilité des données.
 C'est une information importante à la fois pour le concepteur, pour l'infogérant mais également pour les équipes métiers.</p>
 <p>Dès lors que vous démarrez un atelier, rappelez aux différents intervenants qu'à partir du moment où une brique fonctionnelle va nécessiter de la donnée personnelle il faudra se poser plusieurs questions sur la façon dont celle-ci va être gérée (collectée, conservée, traitée) et bien évidemment si l'on est en capacité de <strong>justifier sa collecte</strong>.</p>
 <p><strong>Les questions à se poser avant de décider d'une collecte de données:</strong></p>
@@ -482,7 +496,38 @@ C'est une information importante à la fois pour le concepteur, pour l'infogéra
 <h3 id="identifiez-les-donnees-concernees" class="anchor-title"><a href="#identifiez-les-donnees-concernees">Identifiez les données concernées</a></h3>
 <p>À partir du moment ou vous développez une application qu'elle soit publique ou destinée à de l'intranet, il y a fort à parier que les données personnelles seront de la partie. Ne serait ce que pour la partie authentification de vos utilisateurs.</p>
 <p>Il faudra toutefois ne pas oublier que les données personnelles peuvent être <strong>indirectes</strong> et c'est plus sur ce type de données que l'effort sera nécessaire pour les identifier.</p>
-<p>/!\ Il n'y a pas besoin qu'une donnée soit nominative pour qu'elle soit une DCP, un identifiant client ()</p>
+<p>⚠️ Il n'y a pas besoin qu'une donnée soit nominative pour qu'elle soit une DCP (Un identifiant client, une plaque d'immatriculation, un NIR...) !</p>
+<h3 id="definir-la-base-legale-liceite-du-traitement" class="anchor-title"><a href="#definir-la-base-legale-liceite-du-traitement">Définir la base légale (licéité) du traitement</a></h3>
+<p>C'est probablement la phase la plus complexe, car la licéité d'un traitement ne s'effectue pas uniquement au regard des dispositions « Informatique et liberté » et RGPD mais également au regard de sa conformité au droit en général.</p>
+<p>Afin de définir si un traitement de données est licite il devra remplir l'une des 6 conditions suivantes:</p>
+<ul>
+<li>La personne ciblée par la collecte a consenti au traitement de ses données (Attention le consentement doit être receuilli pour <strong>chacune</strong> des finalités de traitement et il <strong>ne peut y avoir de caractère lié</strong> entre les finalités), il doit être <strong>libre</strong>, <strong>spécifique</strong>, <strong>éclairée</strong> et <strong>univoque</strong>;</li>
+<li>Le traitement est nécessaire à l'exécution du contrat;</li>
+<li>Le traitement est nécessaire au respect d'une contrainte légale à laquelle est soumise le responsable;</li>
+<li>Le traitement est nécessaire à la sauvegardes des intérêts vitaux (soit de la personne concernée soit d'une autre personne physique);</li>
+<li>Le traitement est nécessaire à l'exécution d'une mission d'intérêt public ou relevant de l'exercice de l'aurotité publique;</li>
+<li>Le traitement est nécessaire aux fins des intérêts légitimes.</li>
+</ul>
+<h3 id="mefiez-vous-de-l-interet-legitime" class="anchor-title"><a href="#mefiez-vous-de-l-interet-legitime">Méfiez-vous de l'intérêt légitime</a></h3>
+<p>Derrière cette expression se cache l'une des bases légales prévues par le RGPD sur laquelle <strong>peut</strong> se fonder un traitement de données personnelles.</p>
+<p>C'est paradoxalement celui qui est le plus difficile à justifier et celui derrière lequel se réfugient nombre d'organisation (L'apparente facilité à évoquer l'intérêt légitime est souvent un piège).</p>
+<p>Il est soumis à <a href="https://www.cnil.fr/fr/les-bases-legales/interet-legitime" target="_blank">3 conditions</a>:</p>
+<ul>
+<li>L'intérêt poursuivi doit être légitime;</li>
+<li>Il ne peut être retenu que si le traitement satisfait la condition de nécessité;</li>
+<li>Le traitement ne doit pas heurter les droits et intérêts des personnes dont les données sont traitées.</li>
+</ul>
+<h2 id="conclusion-de-cette-premiere-partie" class="anchor-title"><a href="#conclusion-de-cette-premiere-partie">Conclusion de cette première partie</a></h2>
+<p>Si vous avez survécu à cette première partie (félicitations !), vous avez sans doute plus de questions en tête que vous n'en aviez avant cette lecture, rassurez-vous c'est normal.</p>
+<p>Nous ne saurons être exhaustifs sur le sujet tant le texte est vaste toutefois s'il est une chose à retenir c'est que ce sujet doit être abordé <strong>au plus tôt</strong> au cours de la phase de conception.</p>
+<p>En effet bien que cela ne remette pas en cause l'applicatif et la réussite du projet, la mise en conformité <strong>à posteriori</strong> peut vite devenir un véritable casse tête.</p>
+<p>Dans notre prochaine article nous aborderons la phase de <strong>réalisation</strong> où nous mettrons en avant les bonnes pratiques à retenir et à mettre en oeuvre tout au long de la durée de vie du projet.</p>
+<h2 id="sources" class="anchor-title"><a href="#sources">Sources</a></h2>
+<ul>
+<li><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">https://www.cnil.fr/fr/reglement-europeen-protection-donnees</a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679" target="_blank">https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679</a></li>
+<li><a href="https://blog.imirhil.fr/2022/11/19/rgpd-en-10-minutes-1.html" target="_blank">https://blog.imirhil.fr/2022/11/19/rgpd-en-10-minutes-1.html</a></li>
+</ul>
                                                             <div class="article-credits">
                             Crédits: photo de couverture par
                                                             <a href="https://unsplash.com/@ev">

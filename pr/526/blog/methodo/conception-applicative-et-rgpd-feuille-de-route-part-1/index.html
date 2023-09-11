@@ -43,8 +43,8 @@
     "image": [
         "https://elao.github.io/elao_/pr/526/blog/methodo/content/images/blog/thumbnails/big-data-is-watching.jpg"
     ],
-    "datePublished": "8 septembre 2023",
-    "dateModified": "8 septembre 2023",
+    "datePublished": "11 septembre 2023",
+    "dateModified": "11 septembre 2023",
     "author": [
         {
             "@type": "Person",
@@ -290,7 +290,7 @@
                                             </span>
                     </div>
                                 <div class="article-info__date">
-                    <span>Publication <strong>8 septembre 2023</strong></span>
+                    <span>Publication <strong>11 septembre 2023</strong></span>
                                                         </div>
             </div>
 
@@ -321,7 +321,7 @@
 
                                                     <ol class="table-of-content__sub-level">
                                                                         <li>
-                                            <a href="#qu-est-ce-qu-une-donnee-personnelle">Qu&#039;est ce qu&#039;une donnée personnelle ?</a>
+                                            <a href="#qu-est-ce-qu-une-donnee-personnelle">Qu&#039;est ce qu&#039;une donnée personnelle 🤔 ?</a>
                                         </li>
                                                                         <li>
                                             <a href="#c-est-quoi-traiter-une-donnee-personnelle">C&#039;est quoi « traiter » une donnée personnelle ?</a>
@@ -382,19 +382,20 @@ Nous aborderons également les moyens que nous essayons de mettre en oeuvre de m
 </p>
 </div>
 <h2 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h2>
-<p>Le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">RGPD</a> et les préoccupations liées au traitement des données personnelles, sont dorénavant présents dans beaucoup des aspects des métiers de l'IT (ou devraient l'être), et bien qu'en tant que prestaire nous ne soyons pas directement concernés par le règlement, nous sommes au coeur de la problématique et avons quoiqu'il en soit un <a href="https://www.cnil.fr/sites/default/files/atoms/files/rgpd-guide_sous-traitant-cnil.pdf" target="_blank"><strong>devoir de conseil</strong></a> auprès de nos clients.</p>
+<p>Le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">RGPD</a> et les préoccupations liées au traitement des données personnelles, sont dorénavant présents dans beaucoup des aspects des métiers de l'IT (ou devraient l'être), et bien qu'en tant que prestaire nous ne soyons pas directement concerné par le règlement, nous sommes au coeur de la problématique et avons quoiqu'il en soit un <a href="https://www.cnil.fr/sites/default/files/atoms/files/rgpd-guide_sous-traitant-cnil.pdf" target="_blank"><strong>devoir de conseil</strong></a> auprès de nos clients.</p>
 <p>Ce devoir de conseil nous impose d'avoir un minimum de réflexion concernant les données que nos clients nous demandent de collecter, stocker et/ou traiter.</p>
 <p>Convaincus qu'en tant que concepteurs d'applications nous avons un rôle à jouer dans la bonne application des textes et surtout dans la préservation des données personnelles, nous partageons notre démarche et le cheminement que nous suivons pour y parvenir.</p>
 <p>Alors on est d'accord, le texte est vaste, complexe et bien malin le non juriste qui pourrait prétendre en avoir saisi toutes les subtilités.
-De plus, veiller à la bonne conformité d'un applicatif prend du temps et donc coûte de l'argent. Toutefois, nous condisérons qu'une mise en conformité « a posteriori » coûtera encore plus cher à mettre en oeuvre.</p>
+De plus, veiller à la bonne conformité d'un applicatif prend du temps et donc coûte de l'argent. Toutefois, d'expérience nous considérons qu'une mise en conformité « a posteriori » coûtera encore plus cher à mettre en oeuvre.</p>
 <p>Enfin, nous sommes partis du principe qu'il ne faut pas que ces difficultés de compréhension et / ou d'interprétation nous empêchent d'aborder et/ou traiter les points que nous pourrions identifier comme problématiques dans nos réalisations.</p>
 <h2 id="notions-essentielles" class="anchor-title"><a href="#notions-essentielles">Notions essentielles</a></h2>
-<h3 id="qu-est-ce-qu-une-donnee-personnelle" class="anchor-title"><a href="#qu-est-ce-qu-une-donnee-personnelle">Qu'est ce qu'une donnée personnelle ?</a></h3>
+<h3 id="qu-est-ce-qu-une-donnee-personnelle" class="anchor-title"><a href="#qu-est-ce-qu-une-donnee-personnelle">Qu'est ce qu'une donnée personnelle 🤔 ?</a></h3>
 <p>Les données personnelles sont bien évidemment le point central de la réflexion que tout professionnel doit mener lorsqu'on lui demande d'en manipuler. Mais la première difficulté est de bien comprendre ce qu'est une donnée personnelle au sens de la <strong>réglementation Européenne</strong>.</p>
 <p><strong>SPOILER</strong>: Ça n'est pas forcément aussi simple que l'on pourrait le penser.</p>
 <p>Pour commencer, que dit le texte en lui-même concernant celles-ci ?</p>
 <blockquote>
-<p>Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable.</p>
+<p>Une donnée personnelle est toute information se rapportant à une personne physique identifiée ou identifiable.
+<cite><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679#d1e1438-1-1" target="_blank">Article 4.1 du RGPD</a></cite></p>
 </blockquote>
 <p>Ça n'a l'air de rien mais ça ouvre en fait pas mal de portes !
 On comprendra donc qu'une personne peut-être identifiée de <strong>manière directe</strong> comme par exemple son nom, ou <strong>indirecte</strong> et là on rentre dans le plus subjectif puisqu'une donnée indirecte peut prendre plusieurs formes comme l'explique très bien la <a href="https://www.cnil.fr/fr/rgpd-de-quoi-parle-t-on" target="_blank">CNIL</a>:</p>
@@ -422,7 +423,8 @@ On comprendra donc qu'une personne peut-être identifiée de <strong>manière di
 <p>Dans le cas contraire il faut dorénavant se poser la question de ce qu'est un <strong>traitement</strong>.</p>
 <p>Et tout comme la définition de la donnée personnelle, cette notion de traitement est relativement large.</p>
 <blockquote>
-<p><em>Toute opération ou tout ensemble d'opérations effectuées ou non à l'aide de procédés automatisés et appliquées à des données ou des ensembles de données à caractère personnel, telles que la collecte, l'enregistrement, l'organisation, la structuration, la conservation, l'adaptation ou la modification, l'extraction, la consultation, l'utilisation, la communication par transmission, la diffusion ou toute autre forme de mise à disposition, le rapprochement ou l'interconnexion, la limitation, l'effacement ou la destruction.</em></p>
+<p><em>Toute opération ou tout ensemble d'opérations effectuées ou non à l'aide de procédés automatisés et appliquées à des données ou des ensembles de données à caractère personnel, telles que la collecte, l'enregistrement, l'organisation, la structuration, la conservation, l'adaptation ou la modification, l'extraction, la consultation, l'utilisation, la communication par transmission, la diffusion ou toute autre forme de mise à disposition, le rapprochement ou l'interconnexion, la limitation, l'effacement ou la destruction.</em>
+<cite><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679#d1e1438-1-1" target="_blank">Article 4.2 du RGPD</a></cite></p>
 </blockquote>
 <p>Voilà autant vous dire que si vous manipulez de la données personnelle dans vos applications, vous faites forcément du traitement quelque part !</p>
 <div class="admonition info">

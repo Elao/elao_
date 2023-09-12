@@ -46,13 +46,17 @@
 
   a {
     font-family: 'antikor bold';
-    border-bottom-color: $color-dark;
+    border-bottom: solid 2px $color-dark;
 
     &:hover,
     &:active,
     &:focus {
       color: $color-dark;
     }
+  }
+
+  strong, b {
+    font-family: 'antikor bold';
   }
 }
 

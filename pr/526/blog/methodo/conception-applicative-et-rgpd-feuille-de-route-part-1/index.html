@@ -378,11 +378,11 @@ Nous aborderons également les moyens que nous essayons de mettre en oeuvre de m
 <div class="admonition info">
 <p class="admonition-title">DISCLAIMER</p>
 <p>
-    En aucun cas cet article ne vaut conseil juridique, <strong>nous ne sommes pas juristes</strong>, simplement des professionnels qui essaient d'avoir une bonne lecture de la législation et de faire en sorte que les données personnelles que nous sommes amenés à manipuler pour le compte de nos client le soit avec l'égard qui leur est dû.
+    En aucun cas cet article ne vaut conseil juridique, <strong>nous ne sommes pas juristes</strong>, simplement des professionnels qui essaient d'avoir une bonne lecture de la législation et de faire en sorte que les données personnelles que nous sommes amenés à manipuler pour le compte de nos clients le soit avec l'égard qui leur est dû.
 </p>
 </div>
 <h2 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h2>
-<p>Le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">RGPD</a> et les préoccupations liées au traitement des données personnelles, sont dorénavant présents dans beaucoup des aspects des métiers de l'IT (ou devraient l'être), et bien qu'en tant que prestaire nous ne soyons pas directement concerné par le règlement, nous sommes au coeur de la problématique et avons quoiqu'il en soit un <a href="https://www.cnil.fr/sites/default/files/atoms/files/rgpd-guide_sous-traitant-cnil.pdf" target="_blank"><strong>devoir de conseil</strong></a> auprès de nos clients.</p>
+<p>Le <a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">RGPD</a> et les préoccupations liées au traitement des données personnelles, sont dorénavant présents dans beaucoup des aspects des métiers de l'IT (ou devraient l'être). Et bien qu'en tant que prestataire nous ne soyons pas directement concerné par le règlement, nous sommes au cœur de la problématique et avons quoiqu'il en soit un <a href="https://www.cnil.fr/sites/default/files/atoms/files/rgpd-guide_sous-traitant-cnil.pdf" target="_blank"><strong>devoir de conseil</strong></a> auprès de nos clients.</p>
 <p>Ce devoir de conseil nous impose d'avoir un minimum de réflexion concernant les données que nos clients nous demandent de collecter, stocker et/ou traiter.</p>
 <p>Convaincus qu'en tant que concepteurs d'applications nous avons un rôle à jouer dans la bonne application des textes et surtout dans la préservation des données personnelles, nous partageons notre démarche et le cheminement que nous suivons pour y parvenir.</p>
 <p>Alors on est d'accord, le texte est vaste, complexe et bien malin le non juriste qui pourrait prétendre en avoir saisi toutes les subtilités.
@@ -426,7 +426,7 @@ On comprendra donc qu'une personne peut-être identifiée de <strong>manière di
 <p><em>Toute opération ou tout ensemble d'opérations effectuées ou non à l'aide de procédés automatisés et appliquées à des données ou des ensembles de données à caractère personnel, telles que la collecte, l'enregistrement, l'organisation, la structuration, la conservation, l'adaptation ou la modification, l'extraction, la consultation, l'utilisation, la communication par transmission, la diffusion ou toute autre forme de mise à disposition, le rapprochement ou l'interconnexion, la limitation, l'effacement ou la destruction.</em>
 <cite><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679#d1e1438-1-1" target="_blank">Article 4.2 du RGPD</a></cite></p>
 </blockquote>
-<p>Voilà autant vous dire que si vous manipulez de la données personnelle dans vos applications, vous faites forcément du traitement quelque part !</p>
+<p>Voilà, autant vous dire que si vous manipulez de la données personnelle dans vos applications, vous faites forcément du traitement quelque part !</p>
 <div class="admonition info">
 <p class="admonition-title">Quid des données « génériques » ?</p>
 <p>
@@ -496,12 +496,12 @@ C'est une information importante à la fois pour le concepteur, pour l'infogéra
 </ul>
 <p>N'hésitez pas également à rappeler que le « privacy by design » <strong>est imposée</strong> par <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX:32016R0679&amp;qid=1684314015871#d1e3109-1-1" target="_blank">l'article 25</a> du RGPD.</p>
 <h3 id="identifiez-les-donnees-concernees" class="anchor-title"><a href="#identifiez-les-donnees-concernees">Identifiez les données concernées</a></h3>
-<p>À partir du moment ou vous développez une application qu'elle soit publique ou destinée à de l'intranet, il y a fort à parier que les données personnelles seront de la partie. Ne serait-ce que pour la partie authentification de vos utilisateurs.</p>
+<p>À partir du moment où vous développez une application, qu'elle soit publique ou destinée à de l'intranet, il y a fort à parier que les données personnelles seront de la partie. Ne serait-ce que pour la partie authentification de vos utilisateurs.</p>
 <p>Il faudra toutefois ne pas oublier que les données personnelles peuvent être <strong>indirectes</strong> et c'est plus sur ce type de données que l'effort sera nécessaire pour les identifier.</p>
 <p>⚠️ Il n'y a pas besoin qu'une donnée soit nominative pour qu'elle soit une DCP (Un identifiant client, une plaque d'immatriculation, un NIR...) !</p>
 <h3 id="definir-la-base-legale-liceite-du-traitement" class="anchor-title"><a href="#definir-la-base-legale-liceite-du-traitement">Définir la base légale (licéité) du traitement</a></h3>
 <p>C'est probablement la phase la plus complexe, car la licéité d'un traitement ne s'effectue pas uniquement au regard des dispositions « Informatique et liberté » et RGPD mais également au regard de sa conformité au droit en général.</p>
-<p>Afin de définir si un traitement de données est licite il devra remplir l'une des 6 conditions suivantes:</p>
+<p>Afin de définir si un traitement de données est licite, il devra remplir l'une des 6 conditions suivantes:</p>
 <ul>
 <li>La personne ciblée par la collecte a consenti au traitement de ses données (Attention le consentement doit être receuilli pour <strong>chacune</strong> des finalités de traitement et il <strong>ne peut y avoir de caractère lié</strong> entre les finalités), il doit être <strong>libre</strong>, <strong>spécifique</strong>, <strong>éclairée</strong> et <strong>univoque</strong>;</li>
 <li>Le traitement est nécessaire à l'exécution du contrat;</li>
@@ -521,14 +521,14 @@ C'est une information importante à la fois pour le concepteur, pour l'infogéra
 </ul>
 <h2 id="conclusion-de-cette-premiere-partie" class="anchor-title"><a href="#conclusion-de-cette-premiere-partie">Conclusion de cette première partie</a></h2>
 <p>Si vous avez survécu à cette première partie (félicitations !), vous avez sans doute plus de questions en tête que vous n'en aviez avant cette lecture, rassurez-vous c'est normal.</p>
-<p>Nous ne saurons être exhaustifs sur le sujet tant le texte est vaste, toutefois s'il est une chose à retenir c'est que ce sujet doit être abordé <strong>au plus tôt</strong> au cours de la phase de conception.</p>
+<p>Nous ne saurons être exhaustifs sur le sujet tant le texte est vaste. Toutefois s'il est une chose à retenir, c'est que ce sujet doit être abordé <strong>au plus tôt</strong> au cours de la phase de conception.</p>
 <p>En effet bien que cela ne remette pas en cause l'applicatif et la réussite du projet, la mise en conformité <strong>a posteriori</strong> peut vite devenir un véritable casse-tête.</p>
 <p>Dans notre prochaine article nous aborderons la phase de <strong>réalisation</strong> où nous mettrons en avant les bonnes pratiques à retenir et à mettre en oeuvre tout au long de la durée de vie du projet.</p>
 <h2 id="sources" class="anchor-title"><a href="#sources">Sources</a></h2>
 <ul>
-<li><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">https://www.cnil.fr/fr/reglement-europeen-protection-donnees</a></li>
-<li><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679" target="_blank">https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679</a></li>
-<li><a href="https://blog.imirhil.fr/2022/11/19/rgpd-en-10-minutes-1.html" target="_blank">https://blog.imirhil.fr/2022/11/19/rgpd-en-10-minutes-1.html</a></li>
+<li><a href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees" target="_blank">Le règlement général sur la protection des données - RGPD (CNIL)</a></li>
+<li><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679" target="_blank">Règlement (UE) 2016/679 du Parlement Européen et du Conseil</a></li>
+<li><a href="https://blog.imirhil.fr/2022/11/19/rgpd-en-10-minutes-1.html" target="_blank">Le RGPD en 10 minutes (ou un peu plus)</a></li>
 </ul>
                                                             <div class="article-credits">
                             Crédits: photo de couverture par

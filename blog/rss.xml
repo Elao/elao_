@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Wed, 06 Sep 2023 12:10:28 +0000</pubDate>
+        <pubDate>Tue, 12 Sep 2023 08:39:23 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -13,6 +13,22 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                <item>
+            <title>Conception applicative et RGPD, feuille de route - partie 1.</title>
+            <pubDate>Tue, 19 Sep 2023 00:00:00 +0000</pubDate>
+            <description>
+                <![CDATA[ Cette première partie illustre nos réflexions afin d&#039;intégrer le RGPD lors de la conception d&#039;applicatifs web. Identification des données, définition des traitements et validation de leur licéité. ]]>
+            </description>
+            <guid isPermaLink="true">https://elao.github.io/elao_/blog/methodo/conception-applicative-et-rgpd-feuille-de-route-part-1</guid>
+            <link>https://elao.github.io/elao_/blog/methodo/conception-applicative-et-rgpd-feuille-de-route-part-1</link>
+            <media:content url="https://elao.github.io/elao_/resized/content/images/blog/thumbnails/big-data-is-watching.jpg/2b73763d2576bce4f2d335735b45baad.jpg" width="1200" height="627">
+                <media:description type="plain">Conception applicative et RGPD, feuille de route - partie 1.</media:description>
+                                    <media:credit role="photographer" scheme="urn:ebu">ev, https://unsplash.com/@ev</media:credit>
+                            </media:content>
+                            <category>rgpd</category>
+                            <category>conformite</category>
+                            <category>privacy</category>
+                                </item>
                 <item>
             <title>Camille, développeuse web chez Elao depuis 1 an</title>
             <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>

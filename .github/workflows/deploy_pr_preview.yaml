@@ -1,4 +1,4 @@
-# Deploy a PR preview on Github Pages
+# Deploy a PR preview on GitHub Pages
 name: Deploy preview
 
 on:
@@ -24,13 +24,14 @@ jobs:
 
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # https://github.com/actions/setup-node
       - name: 'Setup node'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'npm'
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -40,26 +41,21 @@ jobs:
           php-version: "8.1"
 
       - name: 'Cache resized images'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: public/resized
           key: resized-images-${{ github.workflow }}-${{ secrets.CACHE_VERSION }}
 
       - name: 'Determine composer cache directory'
         id: composer-cache
-        run: echo "::set-output name=directory::$(composer config cache-dir)"
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: 'Cache composer dependencies'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
-          path: ${{ steps.composer-cache.outputs.directory }}
-          key: composer-${{ hashFiles('composer.lock') }}
-
-      - name: 'Cache NPM dependencies'
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: node-${{ hashFiles('package-lock.json') }}
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
 
       - name: 'Install dependencies'
         run: |
@@ -92,14 +88,13 @@ jobs:
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'
-        uses: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          COMMIT_MESSAGE: |
+          commit-message: |
             [AUTO] Deploy PR #${{ github.event.number }}
 
             for commit ${{ github.sha }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: build # The folder the action should deploy.
-          TARGET_FOLDER: pr/${{ github.event.number }} # The folder where the action should deploy on the deployment branch.
-          CLEAN: true # Automatically remove deleted files from the deploy branch
+          branch: gh-pages # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
+          target-folder: pr/${{ github.event.number }} # The folder
+          clean: true # Automatically remove deleted files from the deploy branch

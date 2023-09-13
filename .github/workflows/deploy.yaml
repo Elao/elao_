@@ -25,18 +25,19 @@ jobs:
 
     steps:
       - name: 'Checkout'
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: 'Configure deployer SSH key'
-        uses: webfactory/ssh-agent@v0.4.1
+        uses: webfactory/ssh-agent@v0.8
         with:
           ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY_PRODUCTION }}
 
       # https://github.com/actions/setup-node
       - name: 'Setup node'
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'npm'
 
       - name: 'Setup PHP'
         uses: shivammathur/setup-php@v2
@@ -46,26 +47,21 @@ jobs:
           php-version: "8.1"
 
       - name: 'Cache resized images'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: public/resized
           key: resized-images-${{ github.workflow }}-${{ secrets.CACHE_VERSION }}
 
       - name: 'Determine composer cache directory'
         id: composer-cache
-        run: echo "::set-output name=directory::$(composer config cache-dir)"
+        run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: 'Cache composer dependencies'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
-          path: ${{ steps.composer-cache.outputs.directory }}
-          key: composer-${{ hashFiles('composer.lock') }}
-
-      - name: 'Cache NPM dependencies'
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: node-${{ hashFiles('package-lock.json') }}
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
 
       - name: 'Install dependencies'
         run: |

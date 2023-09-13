@@ -149,10 +149,10 @@ La première étape, même si elle semble évidente, est sans doute de demander 
 Vous souhaitez sensibiliser et éduquer votre client et ses équipes ?
 Amenez le sujet dès les phases de conception.
 
-Les ateliers fonctionnels sont un excellent point de départ pour prendre connaissance de ce qui va être manipuler et de la sensibilité des données.
-C'est une information importante à la fois pour le concepteur, pour l'infogérant mais également pour les équipes métiers.
+Les ateliers fonctionnels sont un excellent point de départ pour prendre connaissance de ce qui va être manipulé et de la sensibilité des données.
+C'est une information importante à la fois pour le concepteur, pour l'infogérant, mais également pour les équipes métiers.
 
-Dès lors que vous démarrez un atelier, rappelez aux différents intervenants qu'à partir du moment où une brique fonctionnelle va nécessiter de la donnée personnelle il faudra se poser plusieurs questions sur la façon dont celle-ci va être gérée (collectée, conservée, traitée) et bien évidemment si l'on est en capacité de **justifier sa collecte**.
+Dès lors que vous démarrez un atelier, rappelez aux différents intervenants qu'à partir du moment où une brique fonctionnelle va nécessiter de la donnée personnelle, il faudra se poser plusieurs questions sur la façon dont celle-ci va être gérée (collectée, conservée, traitée) et bien évidemment si l'on est en capacité de **justifier sa collecte**.
 
 **Les questions à se poser avant de décider d'une collecte de données:**
 

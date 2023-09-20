@@ -129,7 +129,7 @@ C'est bien évidemment **notre client qui aura le dernier mot** sur ce qu'il sou
 
 Encore une fois, ce qui va suivre **n'est que le reflet de notre réflexion** afin d'améliorer la façon dont est abordé le sujet de la protection des données personnelles tout au long de la conception d'une application.
 
-Le contenu n'est pas exhaustif et sera sans doute,, amené à évoluer dans le temps.
+Le contenu n'est pas exhaustif et sera sans doute, amené à évoluer dans le temps.
 
 ### Demandez à votre client s'il dispose d'un DPO
 

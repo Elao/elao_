@@ -80,6 +80,14 @@
                                 </a>
                             </li>
                         {% endif %}
+                        {% if member.instagram %}
+                            <li>
+                                <a href="https://www.instagram.com/{{ member.instagram }}" target="_blank">
+                                    <i class="icon icon--instagram" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte Instagram de {{ member.name }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
                         {% if member.github %}
                             <li>
                                 <a href="https://github.com/{{ member.github }}" target="_blank">

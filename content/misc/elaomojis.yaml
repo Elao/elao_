@@ -25,6 +25,8 @@ categories:
                   path: parrots/real-fiesta-parrot.gif
                 - code: ":approving-hermine:"
                   path: miscellaneous/approving-hermine.png
+                - code: ":amaze:"
+                  path: miscellaneous/amaze.gif
           - title: "Réaction : hmm... 👎"
             emojis:
                 - code: ":judging-hermine:"
@@ -35,6 +37,10 @@ categories:
                   path: miscellaneous/non-non-cat.gif
                 - code: ":gneu-gneu-gneu:"
                   path: miscellaneous/gneu-gneu-gneu.png
+                - code: ":gremlin-ohno:"
+                  path: miscellaneous/gremlin-ohno.png
+                - code: ":surprised-pikachu:"
+                  path: miscellaneous/surprised-pikachu.png
           - title: "Réaction : pardon ? 🤷‍♀️"
             emojis:
                 - code: ":ah:"

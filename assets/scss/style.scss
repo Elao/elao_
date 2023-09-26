@@ -27,6 +27,7 @@ html.no-js [data-aos] {
 // components
 @import "components/_admonition";
 @import "components/_alert";
+@import "components/_amabla-brief-incentive";
 @import "components/_animated-block";
 @import "components/_animated-link";
 @import "components/_article-author";
@@ -87,7 +88,7 @@ html.no-js [data-aos] {
 @import "components/_process";
 @import "components/_project-team";
 @import "components/prospect-contact";
-@import "components/_section-home";
+@import "components/_illustrated-section";
 @import "components/_socials";
 @import "components/_statistics";
 @import "components/_table-of-content";
@@ -111,6 +112,7 @@ html.no-js [data-aos] {
 @import "generic/_img";
 @import "generic/_kbd";
 @import "generic/_ul";
+@import "generic/_p";
 
 // pages
 @import "pages/_page-contact";
@@ -126,3 +128,4 @@ html.no-js [data-aos] {
 @import "pages/_page-jobs";
 @import "pages/_page-job-posting";
 @import "pages/page-innovation-workshop";
+@import "pages/page-ia";

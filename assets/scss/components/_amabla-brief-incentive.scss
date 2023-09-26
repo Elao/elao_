@@ -1,0 +1,30 @@
+.amabla-brief-incentive {
+  background-color: $amabla-color-brand;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  .amabla-logo {
+    svg {
+      width: 80px;
+      fill: white;
+    }
+  }
+
+  .btn {
+    white-space: nowrap;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .amabla-brief-incentive {
+    flex-direction: column;
+  }
+}

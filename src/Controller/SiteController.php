@@ -30,7 +30,17 @@ class SiteController extends AbstractController
     #[Route('/nos-services', name: 'services')]
     public function services(): Response
     {
-        return $this->render('site/services.html.twig');
+        return $this->render('site/services/services.html.twig');
+    }
+
+    #[Route('/nos-services/ia', name: 'ia', options: [
+        'stenope' => [
+            'sitemap' => true,
+        ],
+    ])]
+    public function iaServices(): Response
+    {
+        return $this->render('site/services/ia.html.twig');
     }
 
     #[Route('/methodologie', name: 'methodology')]

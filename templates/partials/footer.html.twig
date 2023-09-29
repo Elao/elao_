@@ -46,16 +46,31 @@
                     </li>
                     <li>
                         <a href="{{ site.social.twitter }}" target="_blank">
-                            <i class="icon icon--twitter"></i>
+                            <i class="icon icon--x"></i>
                             Twitter
                         </a>
                     </li>
                     <li>
-                        <a href="{{ site.social.instagram }}" target="_blank">
-                            <i class="icon icon--instagram"></i>
-                            Instagram
+                        <a href="{{ site.social.linkedin }}" target="_blank">
+                            <i class="icon icon--linkedin"></i>
+                            Linkedin
                         </a>
                     </li>
+                </ul>
+            </div>
+            <div class="contacts">
+                <ul>
+                    <li>
+                        <a href="{{ path('contact') }}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="tel://{{ site.contact.phone }}">{{ site.contact.phone }}</a>
+                    </li>
+                    <li>
+                        <a href="mailto://{{ site.contact.email }}">{{ site.contact.email }}</a>
+                    </li>
+                    <li>36 rue Jean Broquin</li>
+                    <li>69006 LYON</li>
                 </ul>
             </div>
         </section>

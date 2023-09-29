@@ -23,7 +23,7 @@ twig:
             social:
                 github: https://github.com/elao
                 twitter: https://twitter.com/elao
-                instagram: https://www.instagram.com/hello_elao_/
+                linkedin: https://www.linkedin.com/company/elao/mycompany/
 
             trackers:
                 matomo: '%env(MATOMO_ID)%'
@@ -46,8 +46,6 @@ twig:
                     - { path: 'team', label: "L'équipe" }
                     - { path: 'blog', label: 'Blog' }
                     - { path: 'blog_rss', label: 'RSS' , attributes: { data-no-swup: true } }
-                -
-                    - { path: 'contact', label: 'Contact' }
 
             home:
                 highlights:

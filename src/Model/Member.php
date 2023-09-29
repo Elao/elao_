@@ -49,8 +49,8 @@ class Member
     /** Vélotafeur */
     public bool $🚲 = false;
 
-    /** Use an anonymous tribe picture */
-    public bool $anonymousTribePicture = false;
+    /** Use an anonymous team picture */
+    public bool $anonymousTeamPicture = false;
 
     public ?\DateTime $integrationDate = null;
     public ?\DateTimeInterface $lastModified = null;
@@ -64,9 +64,9 @@ class Member
         $this->slug = $slug;
     }
 
-    public function getTribePicture(): string
+    public function getTeamPicture(): string
     {
-        return sprintf('content/images/members/%s.jpg', $this->anonymousTribePicture ? 'default' : $this->slug);
+        return sprintf('content/images/members/%s.jpg', $this->anonymousTeamPicture ? 'default' : $this->slug);
     }
 
     public function getAvatar(): ?string

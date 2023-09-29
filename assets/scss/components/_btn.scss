@@ -142,6 +142,8 @@
 
 @media (max-width: $screen-xs) {
   .btn {
+    padding: 15px 30px;
+    min-height: 50px;
     font-size: 16px !important;
   }
 }

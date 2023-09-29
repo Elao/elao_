@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/la-tribu')]
+#[Route('/equipe')]
 class TeamController extends AbstractController
 {
     private ContentManagerInterface $manager;

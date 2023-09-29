@@ -1,6 +1,5 @@
 .team {
-  margin: 0;
-  margin-left: 110px;
+  margin: 0 -20px;
   padding: 50px 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -90,13 +89,6 @@
       top: -25px;
       right: 25px;
     }
-  }
-}
-
-@media (max-width: $screen-md) {
-  .team {
-    margin-left: -20px;
-    margin-right: -20px;
   }
 }
 

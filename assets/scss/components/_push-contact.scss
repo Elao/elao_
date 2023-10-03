@@ -1,0 +1,27 @@
+.push-contact {
+  background-color: $color-dark;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+
+  &__content {
+    color: white;
+    font-family: 'faktum semibold';
+    font-size: 25px;
+    width: 70%;
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .push-contact {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    &__content {
+      width: 100%;
+      font-size: 20px;
+    }
+  }
+}

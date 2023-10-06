@@ -43,6 +43,12 @@ class SiteController extends AbstractController
         return $this->render('site/services/ia.html.twig');
     }
 
+    #[Route('/nos-services/ia/brief-ia', name: 'ia-brief')]
+    public function iaBrief(): Response
+    {
+        return $this->render('site/services/ia-brief.html.twig');
+    }
+
     #[Route('/methodologie', name: 'methodology')]
     public function methodology(): Response
     {

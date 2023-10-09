@@ -1,0 +1,50 @@
+.page-ia {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: 40px;
+
+  .h2--dash {
+    grid-column: 2 / 13;
+  }
+
+  .offset-content {
+    grid-column: 3 / 12;
+  }
+
+  .illustrated-section {
+    grid-column: 2 / 13;
+  }
+
+  .amabla-incentive {
+    margin: 90px 0 50px;
+    grid-column: 1 / 13;
+  }
+
+  .bricks {
+    grid-column: 1 / 13;
+
+    a {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-ia {
+    .h2--dash,
+    .offset-content,
+    .illustrated-section {
+      grid-column: 1 / 13;
+    }
+
+    .amabla-incentive {
+      margin: 40px 0 0;
+    }
+    
+    .illustrated-section {
+     img {
+       display: none;
+     }
+    }
+  }
+}

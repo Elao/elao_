@@ -64,6 +64,12 @@ class SiteController extends AbstractController
         return $this->render('site/services/hosting.html.twig');
     }
 
+    #[Route('/nos-services/conseil-et-accompagnement', name: 'consulting')]
+    public function servicesAdvice(): Response
+    {
+        return $this->render('services/consulting.html.twig');
+    }
+
     #[Route('/methodologie', name: 'methodology')]
     public function methodology(): Response
     {

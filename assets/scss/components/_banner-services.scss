@@ -1,6 +1,7 @@
 $highlight-width: 620px;
 
 .banner-services {
+  margin-bottom: 90px;
   position: relative;
 
   &__text {
@@ -21,6 +22,7 @@ $highlight-width: 620px;
     height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
   }
 
   .highlight {
@@ -39,15 +41,25 @@ $highlight-width: 620px;
     line-height: 1.6;
     background: $color-brand;
     z-index: -1;
+
+    .icon {
+      position: absolute;
+      right: 10px;
+      bottom: -45px;
+      font-size: 110px;
+      color: $color-secondary;
+      line-height: 1;
+    }
   }
 }
 
 @media (max-width: $screen-lg) {
   .banner-services {
-    margin-bottom: 160px;
+    margin-bottom: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     &__text {
       margin-top: 20px;
       margin-bottom: 50px;

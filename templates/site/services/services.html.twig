@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
-{% block meta_title "Accompagnement & réalisation technique - Conduite de projet | Elao" %}
-{% block meta_description "De l'ingénierie logicielle à la conduite de projet web, nous vous accompagnons pour que votre projet se concentre sur votre métier et vise l'excellence technique | Elao" %}
+{% block meta_title "Développement web et mobile sur-mesure" %}
+{% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
 
 {% block content %}
     <div class="container">
@@ -30,252 +30,140 @@
                                               url({{ asset('build/images/pages/services/services-banner@2x.jpg') }}) 2x);"></div>
                 <span class="highlight" data-aos="zoom-in">
                     <p>Développement web et mobile, conseil et accompagnement technique</p>
-                    <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
                 </span>
             </div>
         </div>
 
         <div class="page-services">
-            <h2 class="h2--dash">Des applications web et mobiles <br> sur-mesure</h2>
+            <p>Notre équipe vous accompagne tout au long de votre projet : à travers nos <strong>conseils</strong> en tant qu'experts concepteurs, lors de l'étape de <strong>développement</strong> de votre produit ou service, via un <strong>hébergement</strong> adapté à vos besoins ou encore grâce à des solutions sur-mesure basées sur les <strong>IA génératives</strong>.</p>
 
-            <div class="offset-content">
-                <h3 data-aos="fade-up">Un projet pensé pour vos utilisateurs</h3>
-                <ul data-aos="fade-up">
-                    {% set interval = date('now').diff(date(site.birthdate)) %}
-                    <li>Nous nous appuyons sur <strong>plus de {{ interval.y }} ans d'expérience </strong>pour faire les bons choix techniques</li>
-                    <li><strong>Nous surveillons la qualité de nos développements </strong>: revues de code, tests, outils de suivi et démonstrations au fil de l'eau</li>
-                    <li>Nous construisons <strong>une architecture évolutive pour répondre à vos besoins actuels et futurs</strong></li>
-                    <li>Nous nous concentrons sur <strong>vos enjeux métier</strong></li>
-                </ul>
-
-                <ul class="list-inline list-inline--simple">
-                    {% with { duration: 600, delayGap: 200, delay: 0 } %}
-                        <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <h3>Sur-mesure</h3>
-                            <p>Vous devez disposer d'un <strong>outil adapté à votre métier</strong>. Ce n'est pas votre métier qui doit s'adapter à l'outil.</p>
-                        </li>
-                        {% set delay = delay + delayGap %}
-                        <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <h3>Fiable</h3>
-                            <p>Vous devez avoir <strong>confiance dans votre outil au quotidien </strong>pour valoriser et rester focalisé sur votre métier.</p>
-                        </li>
-                        {% set delay = delay + delayGap %}
-                        <li class="list-inline__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <h3>Évolutif</h3>
-                            <p>Votre outil doit, sans barrière, <strong>évoluer conjointement avec votre métier</strong>.</p>
-                        </li>
-                    {% endwith %}
-                </ul>
-            </div>
-
-            <h2 class="h2--dash">Notre socle technique</h2>
-
-            <div class="offset-content">
-                <ul class="list-inline">
-                    {% with { duration: 600, delayGap: 200, delay: 0 } %}
-                        <li class="list-inline__item" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                            <h3>Symfony</h3>
-                            {% set interval = date('now').diff(date(site.birthdate)) %}
-                            <p>C'est un choix et <strong>une expertise depuis {{ interval.y }} ans chez Elao</strong>. Symfony est un framework parfaitement adapté aux applications métier spécifiques et nos équipes sont contributrices et aguerries à ses bonnes pratiques.</p>
-        {#                    <a href="#" class="link link--brand">À propos de Symfony</a>#}
-                        </li>
-                        {% set delay = delay + delayGap %}
-                        <li class="list-inline__item" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
-                            <h3>ReactJS & React Native</h3>
-                            <p>Référence des frameworks JavaScript, <strong>nous utilisons React pour les besoins applicatifs frontend </strong>et mobiles avec React Native.</p>
-        {#                    <a href="#" class="link link--brand">À propos de React</a>#}
-                        </li>
-                        {% set delay = delay + delayGap %}
-                        <li class="list-inline__item" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                            <img src="{{ asset('build/images/technos/html5.svg') }}" alt="Logo HTML">
-                            <h3>HTML & CSS</h3>
-                            <p>Nous exploitons au maximum les standards HTML5 et CSS3 en faveur d'<strong>un code maintenable et modulaire en suivant les bonnes pratiques d'accessibilité.</strong></p>
-        {#                    <a href="#" class="link link--brand">À propos de HTML & CSS</a>#}
-                        </li>
-                    {% endwith %}
-                </ul>
-            </div>
-
-            <h2 class="h2--dash">Ingénierie logicielle</h2>
-
-            <div class="banner-engineering">
-                <picture data-aos="fade-left">
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/services/pair-programming.webp') }} 1x,
-                                {{ asset('build/images/pages/services/pair-programming@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/services/pair-programming.jpg') }} 1x,
-                                {{ asset('build/images/pages/services/pair-programming@2x.jpg') }} 2x"
-                    >
-                    <img src="{{ asset('build/images/pages/services/pair-programming.jpg') }}" alt="" />
-                </picture>
-                <blockquote class="blockquote-secondary" data-aos="zoom-in">Le coût de la qualité reste bien inférieur à celui de la non-qualité.</blockquote>
-            </div>
-
-            <div class="offset-content">
-                <p>Nous avons une culture du génie logiciel pointue. Certains de nos clients nous ont poussé à aller loin sur le terrain de la qualité au vu de la criticité de certaines de leurs applications. <strong>Ce niveau de qualité est devenu un standard chez Elao </strong>et nous ne pouvons ni ne voulons y déroger.</p>
-                <p>Cette approche vertueuse du développement nous a systématiquement prouvé sa valeur ajoutée à moyen et long terme. Un investissement raisonnable au début du projet permet des gains importants en temps et en sérénité.</p>
-            </div>
-
-            <div class="architecture" data-aos="fade-left">
-                <img src="{{ asset('build/images/pages/services/architecture.svg') }}" alt="">
-                <div>
-                    <h3>Architecture applicative</h3>
-                    <p><strong>Notre approche centrée sur le produit </strong>impacte également la structure de notre code. Nous essayons de découpler au maximum le code métier, qui porte le plus de valeur ajoutée, du framework, qui sert juste à le mettre en œuvre.</p>
-                    <p>Ce type d'architecture que l'on nomme DDD permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.</p>
+            <h2 class="h2--dash">Des applications web et mobiles sur-mesure</h2>
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>À travers les projets d'application web et mobile, nous souhaitons avant tout concevoir un projet commun avec vous, main dans la main. Notre équipe d'experts nous permet de vous accompagner depuis les prémices de votre projet jusqu'à son <strong>déploiement</strong> et ses futures <strong>évolutions</strong>. Nos maîtres mots : <strong>sur-mesure, fiabilité, évolutivité</strong>.</p>
+                    <a href="{{ path('application') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Développons votre projet
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
                 </div>
-            </div>
-
-            <div class="tests" data-aos="fade-right">
-                <div>
-                    <div class="offset">
-                        <h3>Tests unitaires et fonctionnels</h3>
-                        <p>Pour garantir la qualité dans le temps et la non-régression, nous mettons en place <strong>des tests automatiques de l'application </strong>en même temps que le code est produit.</p>
-                        <p>Ces tests sont lancés à chaque modification de code dans l'application et doivent tous passer avant de partir en production.</p>
-                        <p>Nous nous focalisons sur les parties les plus critiques du projet. Une couverture complète des tests n'est pas pertinente par rapport à l'investissement en temps.</p>
-                    </div>
-                    <h3>Environnement de développement</h3>
-                    <p>Nous avons beaucoup investi sur l'optimisation des tâches techniques qui n'ont pas de valeur ajoutée directe pour votre projet. Couplé avec notre culture de la qualité, nous avons mis en place un écosystème complet répondant à ces problématiques.</p>
-                    <p>Avec la virtualisation globale de l'environnement de développement, <strong>un nouveau développeur peut intervenir en moins d'une demi-heure sur un projet </strong>et la cohérence transverse des projets Elao permet également un gain d'efficacité.</p>
-                    <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture DevOps.</p>
+                 <div class="illustrated-section__image" data-aos="fade-right">
+                     <picture>
+                        <source type="image/webp"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/applications-responsive.webp') }}"
+                        >
+                        <source type="image/jpeg"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/applications-responsive.jpg') }}"
+                        >
+                        <source
+                            type="image/webp"
+                            srcset="{{ asset('build/images/pages/services/applications.webp') }} 1x,
+                                    {{ asset('build/images/pages/services/applications@2x.webp') }} 2x"
+                        >
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/services/applications.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/applications@2x.jpg') }} 2x"
+                        >
+                        <img src="{{ asset('build/images/pages/services/applications.jpg') }}" alt=""/>
+                     </picture>
+                     <i class="icon icon--brackets-right" aria-hidden="true"></i>
                 </div>
-                <img src="{{ asset('build/images/pages/services/tests.svg') }}" alt="">
-            </div>
-
-            <div class="audit" data-aos="fade-left">
-                <img src="{{ asset('build/images/pages/services/audit.svg') }}" alt="">
-                <div>
-                    <h3>Audit qualité</h3>
-                    <p>Pour <strong>garantir et suivre les indicateurs qualité tout au long du projet</strong>, nous mettons en place systématiquement et dès le début, des outils de qualité.</p>
-                    <ul>
-                        <li>
-                            <strong>PhpStan :</strong>
-                            Cet analyseur statique pour PHP soumet le code à un haut niveau d'exigence et permet d'anticiper les erreurs possibles, pour obtenir une application plus fiable.
-                        </li>
-                        <li>
-                            <strong>Php-Cs-Fixer :</strong>
-                            Cet outil est centré sur l'analyse du code PHP, et permet de vérifier et corriger le formatage du code selon le haut niveau de qualité voulu par Elao.
-                        </li>
-                    </ul>
-                    <p>Ces deux outils sont complémentaires et sont utilisés par beaucoup d'autres prestataires, le respect de ces standards vous <strong>garantit une prise en main facile du projet par des tiers.</strong></p>
-                </div>
-            </div>
-
-            <div class="review" data-aos="fade-right">
-                <h3>Revue de code</h3>
-                <p>Chaque nouveau développement est vérifié par un autre membre de l'équipe avant de partir en recette. Cette méthode permet une validation avec du recul pour identifier au plus tôt des effets de bord indésirables.</p>
             </div>
 
             <h2 class="h2--dash">Conseil et accompagnement</h2>
-
-            <div class="banner-support" data-aos="flip-up">
-                <picture>
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/services/consulting.webp') }} 1x,
-                                {{ asset('build/images/pages/services/consulting@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/services/consulting.jpg') }} 1x,
-                                {{ asset('build/images/pages/services/consulting@2x.jpg') }} 2x"
-                    >
-                    <img src="{{ asset('build/images/pages/services/consulting.jpg') }}" alt="" />
-                </picture>
-            </div>
-
-            <div class="offset-content">
-                <div class="section" data-aos="fade-up">
-                    <h3>Notre expertise de concepteurs à votre service</h3>
-                    <p>Nous aimons notre métier, nous aimons le faire bien et le partage d'expérience est profondément ancré dans notre ADN. Aussi, <strong>nous proposons de vous accompagner à tous les niveaux de la conception de votre application</strong>, sans se limiter au développement.</p>
-                </div>
-                <div class="section" data-aos="fade-up">
-                    <h3>Un accompagnement global tout au long du projet, adapté à votre contexte</h3>
-                    <p>Ce qui nous fait vibrer, c'est de <strong>sortir le nez de notre écran pour construire avec vous le meilleur projet</strong>, qui corresponde à votre métier et à vos utilisateurs. Si nous n'aimons pas particulièrement les cahiers des charges trop fournis, c'est parce que notre équipe est efficace quand elle est actrice des choix techniques et fonctionnels et qu'elle les comprend.</p>
-                    {% set interval = date('now').diff(date(site.birthdate)) %}
-                    <p>Ainsi, chez Elao, nous devenons votre équipe produit : plus partenaires que prestataires, nous misons sur la transparence totale tout au long du projet. <strong>Nos {{ interval.y }} ans d'expérience nous aident dans la mise en place de méthodologies éprouvées </strong>pour vous garantir le meilleur accompagnement.</p>
-
-                    <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>Chez Elao nous pensons que chaque projet web mérite une attention et des conseils experts tout au long de son cycle de vie. Nous sommes à votre écoute et <strong>force de proposition</strong> afin de construire avec vous votre solution. Que cela soit sur l'essence même de votre produit ou service, sur son <strong>environnement</strong>, sur la connaissance de vos <strong>utilisateurs</strong>, ou encore sur les process du projet, nous sortons le nez de notre écran pour construire avec vous le chemin le plus rayonnant pour votre solution.</p>
+                    <a href="{{ path('consulting') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                         <span>
-                            Notre méthologie
+                            Découvrez notre démarche
                             {% include 'partials/svg-arrow.html.twig' %}
                         </span>
                     </a>
                 </div>
-
-                <div class="section" data-aos="fade-up">
-                    <h3>Défricher ensemble votre projet</h3>
-                    <ul>
-                        <li>Définir ensemble <strong>l'essence et les subtilités de votre métier</strong></li>
-                        <li>Connaître vos utilisateurs</li>
-                        <li>S'adapter à leurs contraintes (et aux vôtres)</li>
-                        <li>Comprendre le contexte et l'environnement dans lequel vous évoluez</li>
-                    </ul>
+                <div class="illustrated-section__image" data-aos="fade-right">
+                    <picture>
+                        <source type="image/webp"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/consulting-responsive.webp') }}"
+                        >
+                        <source type="image/jpeg"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/consulting-responsive.jpg') }}"
+                        >
+                        <source
+                            type="image/webp"
+                            srcset="{{ asset('build/images/pages/services/consulting.webp') }} 1x,
+                                    {{ asset('build/images/pages/services/consulting@2x.webp') }} 2x"
+                        >
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/services/consulting.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/consulting@2x.jpg') }} 2x"
+                        >
+                        <img src="{{ asset('build/images/pages/services/consulting.jpg') }}" alt=""/>
+                     </picture>
+                     <i class="icon icon--chevrons-left" aria-hidden="true"></i>
                 </div>
+            </div>
 
-                <div class="section" data-aos="fade-up">
-                    <h3>Construire une feuille de route pertinente</h3>
-                    <ul>
-                        <li>Permettre à chacun d'exprimer son besoin afin d'<strong>aboutir à un périmètre fonctionnel adapté</strong></li>
-                        <li>Mettre en place une méthodologie qui fonctionne dans votre contexte</li>
-                        <li>Vous permettre de faire des choix techniques et stratégiques en toute connaissance de cause</li>
-                        <li>Construire un planning réaliste et serein</li>
-                        <li>Estimer finement le temps de développement de chaque fonctionnel pour <strong>prioriser en fonction de votre enveloppe budgétaire</strong></li>
-                    </ul>
-                </div>
-
-                <div class="section" data-aos="fade-up">
-                    <h3>Mettre en place la bonne équipe pour contruire votre produit</h3>
-                    <ul>
-                        <li>Une équipe technique adaptée aux besoins de votre projet</li>
-                        <li>Un facilitateur pour fluidifier les échanges</li>
-                        <li><strong>Vous aider à trouver les bons partenaires </strong>pour les étapes importantes (UX/UI, hébergement...) et vous accompagner pour les guider tout au long du projet</li>
-                    </ul>
-
-                    <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+            <h2 class="h2--dash">Hébergement et infrastructure</h2>
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>Nous vous accompagnons sur votre hébergement et votre infrastructure, par le biais de <strong>Rix</strong>, notre partenaire Devops. Fort de ses 15 années d'expérience, Rix dispose de toute l'expertise pour vous conduire dans l'élaboration d'une infrastructure pérenne et en adéquation avec vos besoins (à travers le diagnostic de problématiques appréciatives, la mise en place de l'environnement de développement, la maintenance, l'hébergement, le conseil, la conception et le pilotage d'infrastructure sur-msure).</p>
+                    <a href="{{ path('hosting') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                         <span>
-                            Nos engagements
+                            Aller plus loin sur l'hébergement
                             {% include 'partials/svg-arrow.html.twig' %}
                         </span>
                     </a>
                 </div>
-            </div>
-
-            <h2 class="h2--dash">Un accompagnement technique <br> personnalisé selon vos besoins</h2>
-
-            <div class="banner-tech-support" data-aos="flip-up">
-                <picture>
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/services/technical-support.webp') }} 1x,
-                                {{ asset('build/images/pages/services/technical-support@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/services/technical-support.jpg') }} 1x,
-                                {{ asset('build/images/pages/services/technical-support@2x.jpg') }} 2x"
-                    >
-                    <img src="{{ asset('build/images/pages/services/technical-support.jpg') }}" alt="" />
-                </picture>
-            </div>
-
-            <div class="offset-content">
-                <div class="section" data-aos="fade-up">
-                    <p>Nous sommes régulièrement sollicités pour faire de l'<strong>accompagnement technique poussé auprès d'équipes techniques ou produit déjà en place</strong>, souvent dans le but d'offrir un regard extérieur bienveillant mais exigeant. Cet accompagnement peut avoir divers objectifs :</p>
-                    <ul>
-                        <li>Vous aider à organiser et même recruter votre équipe tech</li>
-                        <li>Vous accompagner dans l'architecture technique de votre projet</li>
-                        <li>Construire avec vous un backlog de votre produit</li>
-                        <li>Vous aider à améliorer la qualité de vos développements à travers de la revue de code ou des audits techniques</li>
-                    </ul>
+                 <div class="illustrated-section__image" data-aos="fade-right">
+                     <picture>
+                        <source type="image/webp"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/hosting-responsive.webp') }}"
+                        >
+                        <source type="image/jpeg"
+                                media="(min-width: 760px) and (max-width: 1220px)"
+                                srcset="{{ asset('build/images/pages/services/hosting-responsive.jpg') }}"
+                        >
+                        <source
+                            type="image/webp"
+                            srcset="{{ asset('build/images/pages/services/hosting.webp') }} 1x,
+                                    {{ asset('build/images/pages/services/hosting@2x.webp') }} 2x"
+                        >
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/services/hosting.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/hosting@2x.jpg') }} 2x"
+                        >
+                        <img src="{{ asset('build/images/pages/services/hosting.jpg') }}" alt=""/>
+                     </picture>
+                     <i class="icon icon--chevrons-right" aria-hidden="true"></i>
                 </div>
             </div>
 
+            <h2 class="h2--dash">Solutions basées sur l'IA</h2>
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>Depuis quelques temps, l'IA est au coeur de nos projets chez Elao, avant tout comme un <strong>outil</strong> nous permettant de gagner du temps dans nos tâches quotidiennes afin de nous focaliser sur notre valeur ajoutée. De l'intégration dans votre site à l'utilisation d'Amabla, <strong>un service d'assistants sur-mesure</strong> basé sur <strong>l'IA générative</strong>, nous concevons avec vous des solutions permettant de répondre à vos besoins métier.</p>
+                    <a href="{{ path('ia') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            On vous en dit plus
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+                <div class="illustrated-section__image" data-aos="fade-right">
+                    <img src="{{ asset('build/images/pages/services/ia/amabla-screenshot.jpg') }}" alt="exemple d'écran d'amabla">
+                    <i class="icon icon--brackets-right" aria-hidden="true"></i>
+                </div>
+            </div>
             <div class="bricks">
                 {% include 'partials/brick-development.html.twig' %}
             </div>

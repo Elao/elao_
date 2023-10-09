@@ -55,7 +55,7 @@ class SiteController extends AbstractController
     #[Route('/nos-services/application-web-et-mobile', name: 'application')]
     public function servicesApplication(): Response
     {
-        return $this->render('services/application.html.twig');
+        return $this->render('site/services/application.html.twig');
     }
 
     #[Route('/nos-services/hebergement', name: 'hosting')]
@@ -67,7 +67,7 @@ class SiteController extends AbstractController
     #[Route('/nos-services/conseil-et-accompagnement', name: 'consulting')]
     public function servicesAdvice(): Response
     {
-        return $this->render('services/consulting.html.twig');
+        return $this->render('site/services/consulting.html.twig');
     }
 
     #[Route('/methodologie', name: 'methodology')]

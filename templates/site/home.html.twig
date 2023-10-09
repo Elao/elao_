@@ -29,12 +29,16 @@
             <ul class="banner-home__list">
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <div class="item">
+                    <a href="{{ path('services') }}" class="item">
                         {% set interval = date('now').diff(date(site.birthdate)) %}
                         <span class="number">{{ interval.y }}</span>
                         ans d'expérience
                         <small>(et d'expérimentations)</small>
-                    </div>
+                        <span class="item__link">
+                        Nos services
+                        <i class="icon icon--arrow" aria-hidden="true"></i>
+                    </span>
+                    </a>
                 </li>
                 {% set delay = delay + delayGap %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
@@ -147,6 +151,7 @@
                 <p>En tant qu'atelier de co-conception, nous avons pour objectif de contribuer à l'élaboration de vos projets, en <strong>collaboration</strong>  étroite avec vous, tout en mettant l'accent sur la satisfaction de vos utilisateurs. Cette approche passe par notre <strong>expertise</strong> sur différents services.</p>
                 <ul class="services-home">
                     <li class="services-home__card">
+                        <i class="icon icon--code"></i>
                         <h3>Développement web et mobile sur-mesure</h3>
                         <ul>
                             <li>Développement sur-mesure</li>
@@ -159,6 +164,7 @@
                         <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
+                        <i class="icon icon--bulb"></i>
                         <h3>Conseil et accompagnement</h3>
                         <ul>
                             <li>Audit technique</li>
@@ -171,6 +177,7 @@
                         <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
+                        <i class="icon icon--hosting"></i>
                         <h3>Gestion d'infrastructure et d'hébergement</h3>
                         <ul>
                             <li>Déploiement continu</li>
@@ -181,6 +188,7 @@
                         <a href="{{ path('hosting') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
+                        <i class="icon icon--ia"></i>
                         <h3>Solutions basées sur l'IA</h3>
                         <ul>
                             <li>IA génératives</li>
@@ -211,7 +219,7 @@
                     </ul>
                     <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes et évolutives possibles.</p>
                     <p>Pour découvrir l'ensemble de nos outils cliquez sur "En savoir plus_" !</p>
-                    <a href="{{ path('glossary') }}" class="btn btn--secondary btn--animated">
+                    <a href="{{ path('application') }}#techno" class="btn btn--secondary btn--animated">
                         <span>
                             En savoir plus
                             {% include 'partials/svg-arrow.html.twig' %}
@@ -305,15 +313,24 @@
                         </div>
                     </li>
                     {% endfor %}
+
+                    <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
+                    <span>
+                        Voir le blog
+                        {% include 'partials/svg-arrow.html.twig' %}
+                    </span>
+                    </a>
                 </ul>
             </div>
         </section>
-
-        <section class="illustrated-section" data-aos="fade-right">
-            <div class="push-contact">
-                <div class="push-contact__content">Vous souhaitez nous en dire plus sur vos idées, trouver un partenaire expert pour vous accompagner dans la conception et le développement de votre projet ?</div>
-                <a href="{{ path('contact') }}" class="btn btn--light btn--animated">Échangeons</a>
-            </div>
-        </section>
+        <div class="bricks">
+            <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
+                <h3 class="title">Vous souhaitez nous en dire plus sur vos idées, trouver un partenaire expert pour vous accompagner dans la conception et le développement de votre projet ?</h3>
+                <span class="animation">
+                    {% include 'partials/svg-letter.html.twig' %}
+                    <span>Échangeons !</span>
+                </span>
+            </a>
+        </div>
     </div>
 {% endblock %}

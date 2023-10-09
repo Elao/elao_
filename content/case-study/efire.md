@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "html", "css", "svg", "python"]
 members: ["bleveque", "qbrouillet", "adefrance", "frey", "xgorse"]
-images: ["content/images/casestudies/headers/efire.png"]
+images: ["content/images/casestudies/efire-qualification.jpg"]
 ---
 
 ## Le contexte du projet

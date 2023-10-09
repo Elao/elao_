@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react", "html", "css", "svg"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "xgorse"]
-images: ["content/images/casestudies/headers/tribu-banner.jpg"]
+images: ["content/images/casestudies/tribu-reporting.png"]
 ---
 
 ## Le contexte du projet

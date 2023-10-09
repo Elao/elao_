@@ -12,7 +12,7 @@ size: 2 ans
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "elasticsearch", "vue-js"]
 members: ["mcolin", "ndievart", "rhanna"]
-images: ["content/images/casestudies/headers/vimeet-banner.jpg"]
+images: ["content/images/casestudies/vimeet-gdr.png"]
 ---
 
 ## Le contexte du projet

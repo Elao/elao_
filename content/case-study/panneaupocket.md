@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react-native"]
 members: ["aldeboissieu", "tjarrand", "adefrance", "cmeiller", "xgorse"]
-images: ["content/images/casestudies/headers/panneaupocket-banner.jpg"]
+images: ["content/images/casestudies/panneaupocket-web.png"]
 ---
 
 ## Le contexte du projet

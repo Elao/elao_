@@ -24,6 +24,7 @@
 
     & > h3 {
       color: $color-primary;
+      text-align: center;
     }
 
     & > a {
@@ -35,6 +36,11 @@
         border-color: rgba($color-primary, .5);
       }
     }
+  }
+
+  .icon {
+    font-size: 40px;
+    margin: 0 auto;
   }
 }
 

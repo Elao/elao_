@@ -44,9 +44,9 @@
             Le <strong>développement d'application web et mobile</strong> est l'ADN d'Elao depuis sa création il y a 18 ans. Notre position <strong>d'expert</strong>, notamment sur les techno que nous utilisons au quotidien, assoie notre volonté de <strong>co-concevoir</strong> avec nos clients un projet qui répond à leurs <strong>besoins</strong>, leurs <strong>challenges</strong> et leurs <strong>ambitions</strong>.
         </p>
     </div>
-    <div class="page-services">
+    <div class="page-services pages">
         <h2 class="h2--dash">Notre socle technique</h2>
-        <div class="offset-content">
+        <div class="offset-content" id="techno">
             <ul class="list-inline">
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                     <li class="two-columns two-columns--card" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
@@ -199,11 +199,16 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="large-content">
-        <div class="push-contact">
-            <div class="push-contact__content">Vous avez un projet et souhaitez en discuter avec nous ?</div>
-            <a href="{{ path('contact') }}" class="btn btn--light btn--animated">Échangeons</a>
+
+        <div class="bricks">
+            <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
+                <p>Un projet ?</p>
+                <h3 class="title">Vous avez un projet et souhaitez en discuter avec nous ?</h3>
+                <span class="animation">
+                    {% include 'partials/svg-letter.html.twig' %}
+                    <span>Échangeons !</span>
+                </span>
+            </a>
         </div>
     </div>
 </div>

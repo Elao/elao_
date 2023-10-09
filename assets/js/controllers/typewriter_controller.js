@@ -6,7 +6,7 @@ export default class extends Controller {
         text: Array,
     };
     connect() {
-        const speed = 100;
+        const speed = 50;
         const scrollAt = 20;
         const destinationId = 'typedtext';
         const typewriter = new Typewriter(this.textValue, speed, scrollAt, destinationId);

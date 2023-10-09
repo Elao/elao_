@@ -2,6 +2,10 @@ $highlight-width: 620px;
 
 .banner-services {
   position: relative;
+
+  &__text {
+    margin-top: 40px;
+  }
 }
 
 .banner-services__title {
@@ -44,6 +48,10 @@ $highlight-width: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    &__text {
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
   }
 
   .banner-services__title {

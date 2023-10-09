@@ -68,7 +68,8 @@ $icons: (
   time: '\e929',
   twitter: '\e900',
   website: '\e91e',
-  write: '\e909'
+  write: '\e909',
+  x: '\e900',
 );
 
 @each $icon-name, $icon-character in $icons {

@@ -6,6 +6,7 @@ import AOS from 'aos';
 
 import Launcher from './feature/Launcher';
 import SocialPostGenerator from './feature/SocialPostGenerator';
+import Typewriter from './feature/Typewriter';
 
 function init() {
     // S.E.E
@@ -19,6 +20,8 @@ function init() {
         // Fail silently.
     }
 }
+
+window.Typewriter = Typewriter;
 
 // Social Post Generator
 window.SocialPostGenerator = SocialPostGenerator;

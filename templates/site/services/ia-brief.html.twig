@@ -18,13 +18,12 @@
                 </a>
                 <meta itemprop="position" content="2" />
             </li>
-{#            Todo : uncomment after page has been validated #}
-{#            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">#}
-{#                <a itemprop="item" href="{{ path('ia') }}">#}
-{#                    <span itemprop="name">IA</span>#}
-{#                </a>#}
-{#                <meta itemprop="position" content="3" />#}
-{#            </li>#}
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('ia') }}">
+                    <span itemprop="name">IA</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
             <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                 <a itemprop="item" href="{{ path('ia-brief') }}">
                     <span itemprop="name">Brief</span>
@@ -53,7 +52,7 @@
             <p>Répondez aux quelques questions que va vous poser notre assistant et obtenez par mail <strong>votre brief projet en moins de 10 minutes</strong>.</p>
 
             <p>Envie d'échanger sur l'intégration de l'IA dans vos solutions ? Vous avez un besoin spécifique et vous souhaitez en discuter ?</p>
-            <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+            <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                 <span>
                     Parlons-en
                     {% include 'partials/svg-arrow.html.twig' %}
@@ -63,7 +62,7 @@
             <h2 class="h2--dash">Elao et l'IA</h2>
             <p>Chez Elao, nous percevons <strong>l'intelligence artificielle</strong> comme un outil qui nous permet d'<strong>optimiser l'efficacité des équipes</strong> et de focaliser les ressources là où elles sont vraiment le plus utile.</p>
             <p>Notre vision consiste à faire de cette technologie un partenaire de tous les jours, loin de l'image d'une entité complexe et intimidante.</p>
-            <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+            <a href="{{ path('ia') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                 <span>
                     En savoir plus
                     {% include 'partials/svg-arrow.html.twig' %}

@@ -296,7 +296,11 @@
                                     </ul>
                                 {% endblock %}
                             </div>
-                            <h3>{{ article.title }}</h3>
+                            <h3>
+                                <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
+                                    {{ article.title }}
+                                </a>
+                            </h3>
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
                         </div>
                     </li>

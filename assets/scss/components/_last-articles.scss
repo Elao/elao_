@@ -46,7 +46,9 @@
       }
 
       h3 {
-        color: $color-primary;
+        .title {
+          color: $color-primary;
+        }
       }
     }
   }

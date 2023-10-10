@@ -57,7 +57,7 @@ Avec ARC, vous pouvez :
 Le tout repose sur une interface fluide et plaisante. Bien qu’il faille un petit temps d’adaptation pour se familiariser avec le principe de la sidebar qui remplace les onglets que l’on a l’habitude d’utiliser, on s'accommode facilement à la souplesse de ce navigateur.
 Petit bémol cependant, ARC est disponible uniquement sous **MacOS** (pour le moment) !
 
-Si vous souhaitez en savoir plus sur toutes les fonctionnalités de ce navigateur, [c’est par ici](https://arc.net/.
+Si vous souhaitez en savoir plus sur toutes les fonctionnalités de ce navigateur, [c’est par ici](https://arc.net/).
 
 ## L'intelligence artificielle au cœur du navigateur ARX MAX
 

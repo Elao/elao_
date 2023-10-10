@@ -47,10 +47,6 @@ twig:
                     - { path: 'blog', label: 'Blog' }
                     - { path: 'blog_rss', label: 'RSS' , attributes: { data-no-swup: true } }
 
-            home:
-                highlights:
-                    caseStudy: tribu
-
 when@test:
     twig:
         strict_variables: true

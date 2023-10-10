@@ -4,12 +4,19 @@ import Typewriter from '../feature/Typewriter';
 export default class extends Controller {
     static values = {
         text: Array,
+        speed: { type: Number, default: 50 },
+        scrollAt: { type: Number, default: 20 },
+        destinationId: { type: String, default: 'typedtext' },
     };
+
     connect() {
-        const speed = 50;
-        const scrollAt = 20;
-        const destinationId = 'typedtext';
-        const typewriter = new Typewriter(this.textValue, speed, scrollAt, destinationId);
+        const typewriter = new Typewriter(
+            this.textValue,
+            this.speedValue,
+            this.scrollAtValue,
+            this.destinationIdValue,
+        );
+
         typewriter.startTyping();
     }
 }

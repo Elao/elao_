@@ -27,7 +27,7 @@ class ServicesController extends AbstractController
         return $this->render('site/services/ia.html.twig');
     }
 
-    #[Route('/ia/brief-ia', name: 'ia-brief')]
+    #[Route('/ia/brief-ia/', name: 'ia-brief')]
     public function iaBrief(): Response
     {
         return $this->render('site/services/ia-brief.html.twig');

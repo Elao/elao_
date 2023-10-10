@@ -30,46 +30,6 @@ class SiteController extends AbstractController
         ]);
     }
 
-    #[Route('/nos-services', name: 'services')]
-    public function services(): Response
-    {
-        return $this->render('site/services/services.html.twig');
-    }
-
-    #[Route('/nos-services/ia', name: 'ia', options: [
-        'stenope' => [
-            'sitemap' => true,
-        ],
-    ])]
-    public function iaServices(): Response
-    {
-        return $this->render('site/services/ia.html.twig');
-    }
-
-    #[Route('/nos-services/ia/brief-ia', name: 'ia-brief')]
-    public function iaBrief(): Response
-    {
-        return $this->render('site/services/ia-brief.html.twig');
-    }
-
-    #[Route('/nos-services/application-web-et-mobile', name: 'application')]
-    public function servicesApplication(): Response
-    {
-        return $this->render('site/services/application.html.twig');
-    }
-
-    #[Route('/nos-services/hebergement', name: 'hosting')]
-    public function hosting(): Response
-    {
-        return $this->render('site/services/hosting.html.twig');
-    }
-
-    #[Route('/nos-services/conseil-et-accompagnement', name: 'consulting')]
-    public function servicesAdvice(): Response
-    {
-        return $this->render('site/services/consulting.html.twig');
-    }
-
     #[Route('/methodologie', name: 'methodology')]
     public function methodology(): Response
     {

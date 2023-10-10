@@ -1,0 +1,45 @@
+---------------------------------------------------------------------------
+
+by ogizanagi at 2023-10-09T15:26:19Z
+
+@Laurie24 : Nous allons avoir un besoin supplémentaire pour ce fonctionnel :
+
+Au premier chargement de l'iframe sur la page, nous aurions besoin d'afficher un overlay bloquant avec :
+- un texte explicatif / disclaimer quant aux données transférées à l'API d'OpenAI et leur rétention. (@quentin-brouillet est sur ce texte)
+- un bouton "j'ai compris" qui dissimule l'overlay et permet d'interagir alors avec l'iframe
+
+Ce n'est pas gênant si cet overlay s'affiche à chaque ré-affichage de la page.
+On souhaite juste éviter qu'il s'affiche lors du changement de brief depuis la même page (mais on en est pas encore là)
+
+---------------------------------------------------------------------------
+
+by quentin-brouillet at 2023-10-09T15:48:15Z
+
+Base pour le message, à affiner, @xgorse je te laisse compléter, dites moi si ça va, sinon je rebosserai ça demain
+
+> Bienvenue sur notre assistant !
+>
+> Avant de vous lancer, on vous rappelle quelques fondamentaux pour une bonne utilisation des IA génératives (celle d’OpenAi dans notre cas):
+> - ne transmettez pas de données sensibles
+> - les données que vous allez envoyer ne seront pas utilisées pour l'entrainement de leur modèle
+> - ces données pourront être stockées par OpenAI au maximum _[XX]_ jours pour des raisons juridiques
+>
+> Si vous avez des questions précises, elles ont certainement une réponse sur [le site dédié aux questions de données d'OpenAI](https://privacy.openai.com/policies).
+>
+> J’ai compris, c’est parti (bouton à cliquer pour accéder à la suite)
+>
+
+---------------------------------------------------------------------------
+
+by ogizanagi at 2023-10-10T08:12:05Z
+
+Cf https://elao.slack.com/archives/C05Q0QLF75Y/p1696924766704889, pourrions-nous réintégrer avant  "Créez votre brief" le même bloc que sur la home, permettant ainsi de sélectionner un nouveau contexte en retournant en arrière dans la page, ou encore permettant d'en sélection un dans le cas où on arrive directement sur cette page par un autre biais (lien depuis un article, QR Code, lien depuis page IA, …) ?
+
+![image](https://github.com/Elao/elao_/assets/2211145/1a0b9978-4683-4ecc-a12d-a0b326c21df1)
+
+---------------------------------------------------------------------------
+
+by quentin-brouillet at 2023-10-10T12:27:40Z
+
+@Laurie24 pour le message d'info à afficher je suis aller chercher l'info, d'après les FAQ OpenAI les données sont supprimées au bout de 30 jours max
+> ces données pourront être stockées par OpenAI au maximum 30 jours pour des raisons juridiques

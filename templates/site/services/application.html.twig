@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+{% set interval = date('now').diff(date(site.birthdate)) %}
 {% block meta_title "Application web et mobile sur-mesure" %}
 {% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
 
@@ -52,8 +53,7 @@
                     <li class="two-columns two-columns--card" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                         <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
                         <h3>Symfony</h3>
-                        {% set interval = date('now').diff(date(site.birthdate)) %}
-                        <p><strong>Symfony</strong> est un choix et une expertise depuis 18 ans chez Elao. Ce <strong>framework PHP</strong> est parfaitement adapté aux <strong>applications métier spécifiques</strong>. On apprécie particulièrement sa <strong>modularité</strong>, et le <strong>dynamisme</strong> de sa <strong>communauté</strong> puisque nos équipes en sont <strong>contributrices</strong>.</p>
+                        <p><strong>Symfony</strong> est un choix et une expertise depuis {{ interval.y}} ans chez Elao. Ce <strong>framework PHP</strong> est parfaitement adapté aux <strong>applications métier spécifiques</strong>. On apprécie particulièrement sa <strong>modularité</strong>, et le <strong>dynamisme</strong> de sa <strong>communauté</strong> puisque nos équipes en sont <strong>contributrices</strong>.</p>
                         <a href="{{ path('glossary_term', {term: 'symfony'}) }}" class="link link--brand">À propos de Symfony</a>
                     </li>
                     {% set delay = delay + delayGap %}
@@ -77,7 +77,6 @@
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                     <li class="two-columns" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                         <h3>Un projet orienté utilisateurs</h3>
-                        {% set interval = date('now').diff(date(site.birthdate)) %}
                         <p>Nous réalisons les <strong>bons choix techniques, surveillons la qualité de nos développements</strong>, construisons une <strong>architecture évolutive</strong> et nous concentrons sur <strong>vos enjeux métier</strong>.</p>
                     </li>
                     {% set delay = delay + delayGap %}

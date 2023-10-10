@@ -29,7 +29,6 @@
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <a href="{{ path('services') }}" class="item">
-                        {% set interval = date('now').diff(date(site.birthdate)) %}
                         <span class="number">{{ interval.y }}</span>
                         ans d'expérience
                         <small>(et d'expérimentations)</small>

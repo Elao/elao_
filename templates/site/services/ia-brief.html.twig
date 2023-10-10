@@ -53,15 +53,20 @@
             <h2 class="h2--dash">Créez votre brief</h2>
             <p>Répondez aux quelques questions que va vous poser notre assistant et obtenez par mail <strong>votre brief projet en moins de 10 minutes</strong>.</p>
 
-            <div  class="page-ia-brief__iframe">
+            <div class="page-ia-brief__iframe">
                 <iframe
                     id="brief"
-                    {{ stimulus_controller('iframe') }}
+                    {{ stimulus_controller('ia/brief/iframe', {
+                        host: amabla_briefs_demo.host,
+                        briefs: amabla_briefs_demo.briefs,
+                    }) }}
                     title="Brief projet"
                 >
                 </iframe>
 
-                <div class="overlay">
+                <div class="overlay" {{ stimulus_controller('ia/brief/overlay', {
+                    closeSelector: '#closeOverlay',
+                }) }}>
                     <div class="overlay__content">
                         <h3>Bienvenue sur notre assistant !</h3>
                         <p>Avant de vous lancer, on vous rappelle quelques fondamentaux pour une bonne utilisation des IA génératives (celle d’OpenAi dans notre cas):</p>

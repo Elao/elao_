@@ -13,7 +13,7 @@ size: 3 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "react", "html", "css", "svg"]
 members: ["bleveque", "tjarrand", "adefrance", "msteinhausser", "aldeboissieu", "xavierr"]
-images: ["content/images/casestudies/headers/musique-music-banner.jpg"]
+images: ["content/images/casestudies/musique-music-results.jpg"]
 ---
 
 ## Le contexte du projet

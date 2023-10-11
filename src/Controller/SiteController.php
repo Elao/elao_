@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Article;
+use App\Model\CaseStudy;
 use App\Model\Member;
 use App\Model\Misc;
 use Stenope\Bundle\ContentManagerInterface;
@@ -20,17 +21,13 @@ class SiteController extends AbstractController
         /** @var Article[] $articles */
         $articles = $manager->getContents(Article::class, ['date' => false]);
         $members = $manager->getContents(Member::class, [], ['active' => true]);
+        $caseStudies = $manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]);
 
         return $this->render('site/home.html.twig', [
-            'lastArticle' => current($articles),
+            'lastTwoArticles' => \array_slice($articles, 0, 2),
+            'lastThreeCaseStudies' => \array_slice($caseStudies, 0, 3),
             'membersCount' => \count($members),
         ]);
-    }
-
-    #[Route('/nos-services', name: 'services')]
-    public function services(): Response
-    {
-        return $this->render('site/services.html.twig');
     }
 
     #[Route('/methodologie', name: 'methodology')]

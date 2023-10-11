@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block meta_title "Conception d'infrastructure, hébergement et SRE as a service | Elao" %}
+{% block meta_description "Spécialiste de l’hébergement des applications PHP/Symfony métier sur-mesure, nous vous accompagnons également lors du choix et de la conception de vos infrastructures. | Elao" %}
+
+{% block content %}
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('services') }}">
+                    <span itemprop="name">Nos services</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Hébergement et accompagnement</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+
+        <div class="banner-services">
+            <h1 class="banner-services__title" data-aos="fade-right">Hébergement et <span>infrastructure</span></h1>
+            <div class="banner-services__content">
+                <div class="image"
+                     data-aos="fade-left"
+                     style="background-image: url({{ asset('build/images/pages/services/hosting/hosting-banner.jpg') }});
+                            background-image: image-set(url({{ asset('build/images/pages/services/hosting-banner.jpg') }}) 1x,
+                                              url({{ asset('build/images/pages/services/hosting/hosting-banner@2x.jpg') }}) 2x);"></div>
+                <span class="highlight" data-aos="zoom-in">
+                    <p>SRE et conception d'infrastructures sur-mesure.</p>
+                    <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="page-hosting">
+            <h2 class="h2--dash">Rix et Elao</h2>
+
+            <div class="offset-content">
+                <div class="illustrated-section">
+                    <div class="illustrated-section__content">
+                        <p>Rix, est le résultat de plusieurs années d'exploitation en production, d'applications web métier chez Elao . Il y a encore quelques années, <strong>l'hébergement</strong> et <strong>la conception des infrastructures</strong> des projets clients étaient pilotés sous le nom d'Elao. Face à une demande croissante et pour mieux différencier cette activité <strong>SRE</strong> de la partie <strong>conseil</strong> et <strong>expertise</strong> en <strong>développement</strong> d'Elao, la structure Rix a été créée.</p>
+                        <a href="https://www.rix.fr/" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                            <span>
+                                Découvrir Rix
+                                {% include 'partials/svg-arrow.html.twig' %}
+                            </span>
+                        </a>
+                    </div>
+                    <img src="{{ asset('build/images/pages/hosting/logo-rix.svg') }}" alt="" class="logo-rix">
+                </div>
+            </div>
+
+            <h2 class="h2--dash">Les domaines d'intervention</h2>
+
+            <div class="offset-content">
+                <p>Rix concoit des <strong>infrastructures résilientes orientées Ops</strong> et vous aide à les piloter (Métriques, alerting, CI/CD...).</p>
+                <p>Parmi ses domaines d'intervention, vous pouvez retrouver :</p>
+                <ul>
+                    <li>SRE as a service (Équipe de pilotage au quotidien de vos infrastructures);</li>
+                    <li>Expertise Kubernetes (Audit, étude de faisabilité, conception / migration...);</li>
+                    <li>Conception d'infrastructure sur-mesure (Kubernetes, Private / Public Cloud...);</li>
+                    <li>Performance et diagnostic applicatif (Tirs de charges, PRA...);</li>
+                    <li>Industrialisation des environnements de développement.</li>
+                </ul>
+            </div>
+
+            <div class="bricks">
+                {% include 'partials/brick-hosting.html.twig' %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

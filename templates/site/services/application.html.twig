@@ -1,0 +1,214 @@
+{% extends 'base.html.twig' %}
+
+{% set interval = date('now').diff(date(site.birthdate)) %}
+{% block meta_title "Application web et mobile sur-mesure" %}
+{% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
+
+{% block content %}
+<div class="container">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('services') }}">
+                <span itemprop="name">Nos services</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Application web et mobile sur-mesure</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+
+    <div class="banner-services">
+        <h1 class="banner-services__title" data-aos="fade-right">Application web et mobile <span>sur-mesure</span></h1>
+        <div class="banner-services__content">
+            <div class="image"
+                 data-aos="fade-left"
+                 style="background-image: url('{{ asset('build/images/pages/services/banner-application.jpg') }}');
+                        background-image: image-set(url('{{ asset('build/images/pages/services/banner-application.jpg') }}') 1x,
+                                                    url('{{ asset('build/images/pages/services/banner-application@2x.jpg') }}') 2x)">
+            </div>
+            <span class="highlight" data-aos="zoom-in">
+                <p>Co-concevoir un projet sur-mesure, fiable et évolutif</p>
+                <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
+            </span>
+        </div>
+        <p class="banner-services__text">
+            Le <strong>développement d'application web et mobile</strong> est l'ADN d'Elao depuis sa création il y a {{ interval.y}} ans. Notre position <strong>d'expert</strong>, notamment sur les techno que nous utilisons au quotidien, assoie notre volonté de <strong>co-concevoir</strong> avec nos clients un projet qui répond à leurs <strong>besoins</strong>, leurs <strong>challenges</strong> et leurs <strong>ambitions</strong>.
+        </p>
+    </div>
+    <div class="page-services pages">
+        <h2 class="h2--dash">Notre socle technique</h2>
+        <div class="offset-content" id="techno">
+            <ul class="list-inline">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <li class="two-columns two-columns--card" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
+                        <h3>Symfony</h3>
+                        <p><strong>Symfony</strong> est un choix et une expertise depuis {{ interval.y}} ans chez Elao. Ce <strong>framework PHP</strong> est parfaitement adapté aux <strong>applications métier spécifiques</strong>. On apprécie particulièrement sa <strong>modularité</strong>, et le <strong>dynamisme</strong> de sa <strong>communauté</strong> puisque nos équipes en sont <strong>contributrices</strong>.</p>
+                        <a href="{{ path('glossary_term', {term: 'symfony'}) }}" class="link link--brand">À propos de Symfony</a>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="two-columns two-columns--card" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo React">
+                        <h3>ReactJS & React Native</h3>
+                        <p>Nous utilisons <strong>React</strong> pour les besoins <strong>applicatifs frontend</strong> et <strong>React Native</strong> pour la partie <strong>mobile</strong>. Cette techno permet de concevoir des solutions <strong>dynamiques</strong> avec une <strong>expérience utilisateurs</strong> de haute qualité.</p>
+                        <a href="{{ path('glossary_term', {term: 'react'}) }}" class="link link--brand">À propos de React</a>
+                    </li>
+                {% endwith %}
+            </ul>
+        </div>
+
+        <div class="offset-content">
+            <p>Entre ces frameworks et Elao, c'est une histoire qui dure déjà depuis de nombreuses années. Mais on peut aussi citer de nombreux langages, technologies et services utilisés quotidiennement par nos équipes : <strong>Elastic Search, Algolia, Hubspot, Git & GitHub, ChatGPT, Python, Doctrine, Sentry, Grafana, Docker, ...</strong></p>
+        </div>
+
+        <h2 class="h2--dash">Nos engagements de développements</h2>
+        <div class="offset-content">
+            <ul class="list-inline">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <li class="two-columns" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Un projet orienté utilisateurs</h3>
+                        <p>Nous réalisons les <strong>bons choix techniques, surveillons la qualité de nos développements</strong>, construisons une <strong>architecture évolutive</strong> et nous concentrons sur <strong>vos enjeux métier</strong>.</p>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="two-columns" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Un projet sur-mesure</h3>
+                        <p>Vous devez disposer d'un outil <strong>adapté</strong> à votre métier. Ce n'est pas <strong>votre métier</strong> qui doit s'adapter à l'outil.</p>
+                    </li>
+                    <li class="two-columns" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Un projet fiable</h3>
+                        <p>Vous devez <strong>avoir confiance dans votre outil</strong> au quotidien pour valoriser et rester focalisé sur votre métier.</p>
+                    </li>
+                    <li class="two-columns" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <h3>Un projet évolutif</h3>
+                        <p>Votre outil doit, sans barrière, <strong>évoluer conjointement avec votre métier.</strong></p>
+                    </li>
+                {% endwith %}
+            </ul>
+        </div>
+
+        <h2 class="h2--dash">Conception d'application</h2>
+        <div class="banner-engineering">
+            <picture data-aos="fade-left">
+                <source
+                    type="image/webp"
+                    srcset="{{ asset('build/images/pages/services/pair-programming.webp') }} 1x,
+                                    {{ asset('build/images/pages/services/pair-programming@2x.webp') }} 2x"
+                >
+                <source
+                    type="image/jpeg"
+                    srcset="{{ asset('build/images/pages/services/pair-programming.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/pair-programming@2x.jpg') }} 2x"
+                >
+                <img src="{{ asset('build/images/pages/services/pair-programming.jpg') }}" alt="" />
+            </picture>
+            <blockquote class="blockquote-secondary" data-aos="zoom-in">Le coût de la qualité reste bien inférieur à celui de la non-qualité.</blockquote>
+        </div>
+
+        <div class="offset-content">
+            <p>Nous avons une culture du génie logiciel pointue. Certains de nos clients nous ont poussé à aller loin sur le terrain de la qualité au vu de la criticité de certaines de leurs applications. <strong>Ce niveau de qualité est devenu un standard chez Elao </strong>et nous ne pouvons ni ne voulons y déroger.</p>
+            <p>Cette approche vertueuse du développement nous a systématiquement prouvé sa valeur ajoutée à moyen et long terme. Un investissement raisonnable au début du projet permet des gains importants en temps et en sérénité.</p>
+        </div>
+
+        <div class="architecture" data-aos="fade-left">
+            <img src="{{ asset('build/images/pages/services/architecture.svg') }}" alt="">
+            <div>
+                <h3>Architecture applicative</h3>
+                <p><strong>Notre approche centrée sur le produit </strong>impacte également la structure de notre code. Nous essayons de découpler au maximum le code métier, qui porte le plus de valeur ajoutée, du framework, qui sert juste à le mettre en œuvre.</p>
+                <p>Ce type d'architecture que l'on nomme DDD permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.</p>
+            </div>
+        </div>
+
+        <div class="tests" data-aos="fade-right">
+            <div>
+                <div class="offset">
+                    <h3>Tests unitaires et fonctionnels</h3>
+                    <p>Pour garantir la qualité dans le temps et la non-régression, nous mettons en place <strong>des tests automatiques de l'application </strong>en même temps que le code est produit.</p>
+                    <p>Ces tests sont lancés à chaque modification de code dans l'application et doivent tous passer avant de partir en production.</p>
+                    <p>Nous nous focalisons sur les parties les plus critiques du projet. Une couverture complète des tests n'est pas pertinente par rapport à l'investissement en temps.</p>
+                </div>
+                <h3>Environnement de développement</h3>
+                <p>Nous avons beaucoup investi sur l'optimisation des tâches techniques qui n'ont pas de valeur ajoutée directe pour votre projet. Couplé avec notre culture de la qualité, nous avons mis en place un écosystème complet répondant à ces problématiques.</p>
+                <p>Avec la virtualisation globale de l'environnement de développement, <strong>un nouveau développeur peut intervenir en moins d'une demi-heure sur un projet </strong>et la cohérence transverse des projets Elao permet également un gain d'efficacité.</p>
+                <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture DevOps.</p>
+            </div>
+            <img src="{{ asset('build/images/pages/services/tests.svg') }}" alt="">
+        </div>
+
+        <div class="audit" data-aos="fade-left">
+            <img src="{{ asset('build/images/pages/services/audit.svg') }}" alt="">
+            <div>
+                <h3>Audit qualité</h3>
+                <p>Pour <strong>garantir et suivre les indicateurs qualité tout au long du projet</strong>, nous mettons en place systématiquement et dès le début, des outils de qualité.</p><br>
+                <ul>
+                    <li>
+                        <strong>PhpStan :</strong>
+                        Cet analyseur statique pour PHP soumet le code à un haut niveau d'exigence et permet d'anticiper les erreurs possibles, pour obtenir une application plus fiable.
+                    </li>
+                    <li>
+                        <strong>Php-Cs-Fixer :</strong>
+                        Cet outil est centré sur l'analyse du code PHP, et permet de vérifier et corriger le formatage du code selon le haut niveau de qualité voulu par Elao.
+                    </li>
+                </ul>
+                <p>Ces deux outils sont complémentaires et sont utilisés par beaucoup d'autres prestataires, le respect de ces standards vous <strong>garantit une prise en main facile du projet par des tiers.</strong></p>
+            </div>
+        </div>
+
+        <div class="review" data-aos="fade-right">
+            <h3>Revue de code</h3>
+            <p>Chaque nouveau développement est vérifié par un autre membre de l'équipe avant de partir en recette. Cette méthode permet une validation avec du recul pour identifier au plus tôt des effets de bord indésirables.</p>
+        </div>
+
+        <h2 class="h2--dash">Nous concevons/développons</h2>
+        <div class="offset-content">
+            <div class="type-projects" data-aos="fade-left">
+                <ul>
+                    <li>Site vitrine sur-mesure</li>
+                    <li>Site ecommerce sur-mesure</li>
+                    <li>Application métier sur-mesure</li>
+                    <li>Application iPhone, Ipad et Android</li>
+                    <li>API</li>
+                    <li>Extranet métier</li>
+                    <li>Progressive Web App (PWA)</li>
+                </ul>
+                <div>
+                    <picture>
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/services/ipad.jpg') }} 1x,
+                                {{ asset('build/images/pages/services/ipad@2x.jpg') }} 2x"
+                        >
+                        <img src="{{ asset('build/images/pages/services/ipad.jpg') }}" alt=""/>
+                    </picture>
+                    <a href="{{ path('case_studies') }}" class="btn btn--secondary btn--animated">
+                        <span>
+                            Voir nos réalisations
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bricks">
+            <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
+                <p>Un projet ?</p>
+                <h3 class="title">Vous avez un projet et souhaitez en discuter avec nous ?</h3>
+                <span class="animation">
+                    {% include 'partials/svg-letter.html.twig' %}
+                    <span>Échangeons !</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

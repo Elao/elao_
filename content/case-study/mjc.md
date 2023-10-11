@@ -13,7 +13,7 @@ size: 6 mois
 services: ["Refonte", "Développement"]
 terms: ["symfony", "elasticsearch", "vue-js", "html", "css", "payment"]
 members: ["mcolin", "adefrance"]
-images: ["content/images/casestudies/headers/mjc-banner.jpg"]
+images: ["content/images/casestudies/mjc-recruteur-mes-offres.png"]
 ---
 
 ## Le contexte du projet

@@ -1,0 +1,146 @@
+{% extends 'base.html.twig' %}
+
+{% set interval = date('now').diff(date(site.birthdate)) %}
+{% block meta_title "Conseil et accompagnement | Elao" %}
+{% block meta_description "Sollicitez notre expertise fonctionnelle et technique afin de profitez d’un accompagnement globale qui contribuera à la réussite de votre projet web | Elao" %}
+
+{% block content %}
+
+<div class="container">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ path('homepage') }}" itemprop="item">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('services') }}">
+                <span itemprop="name">Nos services</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Conseil et accompagnement</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+    <div class="banner-services">
+        <h1 class="banner-services__title" data-aos="fade-right">Conseil et<span>accompagnement</span></h1>
+        <div class="banner-services__content">
+            <div class="image" data-aos="fade-left" style="background-image: url('{{ asset('build/images/pages/services/services-banner.jpg') }}'); background-image: image-set(url('{{ asset('build/images/pages/services/services-banner.jpg') }}') 1x, url('{{ asset('build/images/pages/services/services-banner@2x.jpg') }}') 2x)"></div>
+            <span class="highlight" data-aos="zoom-in">
+                <p>Notre expertise fonctionnelle et technique à disposition de vos projets</p>
+                <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
+            </span>
+        </div>
+        <p class="banner-services__text">
+            Nous aimons notre métier, nous aimons le faire bien et le <strong>partage d'expérience</strong> est profondément ancré dans notre ADN. Aussi, nous proposons de vous <strong>accompagner à tous les niveaux de la conception de votre application</strong>, sans se limiter au développement.
+        </p>
+    </div>
+    <div class="page-services">
+        <h2 class="h2--dash">Un accompagnement global adapté à votre contexte</h2>
+        <div class="offset-content">
+            <p>
+                Ce qui nous fait vibrer, c'est de sortir le nez de notre écran pour <strong>construire avec vous le meilleur projet</strong>, qui corresponde à <strong>votre métier et à vos utilisateurs</strong>. Si nous n'aimons pas particulièrement les cahiers des charges trop fournis, c'est parce que <strong>notre équipe est efficace quand elle est actrice des choix techniques et fonctionnels</strong> et qu'elle les comprend.
+                <br>
+                Ainsi, chez Elao, nous devenons votre équipe produit : <strong>plus partenaires que prestataires</strong>, nous misons sur la <strong>transparence totale</strong> tout au long du projet. Nos {{ interval.y}} ans d'expérience nous aident dans la mise en place de méthodologies éprouvées pour vous garantir le meilleur accompagnement.
+            </p>
+        </div>
+
+        <h2 class="h2--dash">Les grandes étapes de notre accompagnement</h2>
+        <ul class="steps">
+            {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                <li class="steps__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <span>1</span>
+                    <h3>Défricher ensemble votre projet</h3>
+                    <ul>
+                        <li>Définir ensemble l'essence et les subtilités de votre métier</li>
+                        <li>Connaître vos utilisateurs</li>
+                        <li>S'adapter à leurs contraintes (et aux vôtres)</li>
+                        <li>Comprendre le contexte et l'environnement dans lequel vous évoluez</li>
+                    </ul>
+                </li>
+                {% set delay = delay + delayGap %}
+                <li class="steps__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <span>2</span>
+                    <h3>Construire une feuille de route pertinente</h3>
+                    <ul>
+                        <li>Permettre à chacun d'exprimer son besoin afin d'aboutir à un périmètre fonctionnel adapté</li>
+                        <li>Mettre en place une méthodologie qui fonctionne dans votre contexte</li>
+                        <li>Vous permettre de faire des choix techniques et stratégiques en toute connaissance de cause</li>
+                        <li>Construire un planning réaliste et serein</li>
+                        <li>Estimer finement le temps de développement et prioriser en fonction de votre enveloppe budgétaire</li>
+                    </ul>
+                </li>
+                {% set delay = delay + delayGap %}
+                <li class="steps__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <span>3</span>
+                    <h3>Mettre en place la bonne équipe</h3>
+                    <ul>
+                        <li>Proposer une équipe technique adaptée aux besoins de votre projet</li>
+                        <li>Mettre à disposition un facilitateur pour fluidifier les échanges</li>
+                        <li>Vous aider à trouver les bons partenaires pour les étapes importantes (UX/UI, hébergement...) et vous accompagner pour les guider tout au long du projet</li>
+                    </ul>
+                </li>
+            {% endwith %}
+        </ul>
+
+        <div class="large-content">
+            <div class="text-image">
+                <div>
+                    <h2 class="h2--dash">Notre expertise technique à travers notre accompagnement</h2>
+                    <p>Nous sommes régulièrement sollicités pour faire de l'accompagnement technique poussé auprès d'équipes techniques ou produit déjà en place, souvent dans le but <strong>d'offrir un regard extérieur bienveillant mais exigeant</strong>.
+                        <br><br>Cet accompagnement peut avoir divers objectifs :
+                    </p>
+                </div>
+                <picture data-aos="fade-left">
+                    <source
+                        type="image/jpeg"
+                        srcset="{{ asset('build/images/pages/services/developer.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/developer@2x.jpg') }} 2x"
+                    >
+                    <img src="{{ asset('build/images/pages/services/developer.jpg') }}" alt="" />
+                </picture>
+            </div>
+        </div>
+        <div class="large-content">
+            <ul class="supports">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <i class="icon icon--team" aria-hidden="true"></i>
+                    Vous aider à organiser et même recruter votre équipe tech
+                </li>
+                {% set delay = delay + delayGap %}
+                <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <i class="icon icon--architecture" aria-hidden="true"></i>
+                    Vous accompagner dans l'architecture technique de votre projet
+                </li>
+                {% set delay = delay + delayGap %}
+                <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <i class="icon icon--backlog" aria-hidden="true"></i>
+                    Construire avec vous le backlog de votre produit
+                </li>
+                {% set delay = delay + delayGap %}
+                <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <i class="icon icon--audit" aria-hidden="true"></i>
+                    Vous aider à améliorer la qualité de vos développement à travers de la revue de code ou des audits techniques
+                </li>
+                {% endwith %}
+            </ul>
+        </div>
+        <div class="bricks">
+            <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
+                <p>Un projet ?</p>
+                <h3 class="title">Vous avez un projet et souhaitez en discuter avec nous ?</h3>
+                <span class="animation">
+                    {% include 'partials/svg-letter.html.twig' %}
+                    <span>Échangeons !</span>
+                </span>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

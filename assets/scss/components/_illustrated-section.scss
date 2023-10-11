@@ -1,22 +1,23 @@
-.section-home {
+.illustrated-section {
   margin: 0 0 180px;
   display: flex;
   align-items: flex-start;
 }
 
-.section-home__content {
+.illustrated-section__content {
   margin-right: 80px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
 
   .btn {
     margin-top: 40px;
   }
 }
 
-.section-home__image {
+.illustrated-section__image {
   min-width: 600px;
   position: relative;
 
@@ -44,7 +45,7 @@
   }
 }
 
-.section-home__links {
+.illustrated-section__links {
   min-width: 600px;
   position: relative;
   display: flex;
@@ -56,12 +57,12 @@
   }
 }
 
-.section-home--reverse {
-  .section-home__content {
+.illustrated-section--reverse {
+  .illustrated-section__content {
     margin-left: 80px;
   }
 
-  .section-home__image {
+  .illustrated-section__image {
     &:before {
       right: unset;
       left: -20px;
@@ -75,16 +76,16 @@
 }
 
 @media (max-width: $screen-md) {
-  .section-home {
+  .illustrated-section {
     margin: 0 0 70px;
     flex-direction: column-reverse;
   }
 
-  .section-home--reverse {
+  .illustrated-section--reverse {
     margin: 0 0 45px;
   }
 
-  .section-home__image {
+  .illustrated-section__image {
     margin-bottom: 40px;
     width: 100%;
     min-width: unset;
@@ -101,11 +102,11 @@
     }
   }
 
-  .section-home__content {
+  .illustrated-section__content {
     margin: 0;
   }
 
-  .section-home__links {
+  .illustrated-section__links {
     margin-top: 0;
     margin-left: -15px;
     margin-right: -15px;
@@ -114,29 +115,29 @@
     width: 100%;
   }
 
-  .section-home--reverse,
-  .section-home--mobile-reverse {
+  .illustrated-section--reverse,
+  .illustrated-section--mobile-reverse {
     flex-direction: column;
 
-    .section-home__content {
+    .illustrated-section__content {
       margin: 20px 0 0;
     }
   }
 }
 
 @media (max-width: $screen-sm) {
-  .section-home {
+  .illustrated-section {
     max-width: unset;
   }
 }
 
 @media(max-width: $screen-xs) {
-  .section-home {
+  .illustrated-section {
     max-width: unset;
   }
 
-  .section-home--reverse {
-    .section-home__image {
+  .illustrated-section--reverse {
+    .illustrated-section__image {
       &:before {
         left: -5px;
       }
@@ -147,7 +148,7 @@
     }
   }
 
-  .section-home__image {
+  .illustrated-section__image {
     &:before {
       right: -5px;
       height: 50px;
@@ -161,7 +162,7 @@
     }
   }
 
-  .section-home__content {
+  .illustrated-section__content {
     .btn {
       margin-left: auto;
       margin-right: auto;
@@ -171,7 +172,7 @@
     }
   }
 
-  .section-home__links {
+  .illustrated-section__links {
     margin-left: 0;
     margin-right: 0;
     flex-direction: column;

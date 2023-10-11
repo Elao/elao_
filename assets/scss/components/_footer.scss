@@ -38,18 +38,17 @@
   margin: 60px 0;
   display: flex;
   align-items: flex-start;
+  gap: 80px;
 
   .h1 {
     margin-left: 0;
     margin-bottom: 10px;
-    line-height: 50px;
+    line-height: 40px;
   }
 
   .links {
-    padding: 0 50px;
     display: flex;
-    justify-content: space-around;
-    flex: 1;
+    gap: 60px;
 
     ul {
       display: flex;
@@ -57,8 +56,11 @@
     }
   }
 
-  .socials {
-    margin-right: 165px;
+  .contacts {
+    & > ul {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -89,6 +91,7 @@
   .footer__links {
     margin: 60px 0 35px;
     flex-wrap: wrap;
+    gap: 20px;
 
     .h1 {
       margin-bottom: 35px;
@@ -100,6 +103,7 @@
       padding-right: 100px;
       padding-left: 0;
       justify-content: space-between;
+      gap: 20px;
     }
 
     .socials {
@@ -118,7 +122,6 @@
     }
 
     .links {
-      margin: 0 0 35px;
       padding: 0;
       flex-direction: column;
     }

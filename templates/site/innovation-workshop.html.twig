@@ -115,16 +115,18 @@
                 </div>
                 <div class="notice__thumbnails">
                     <div class="thumbnail">
-                        <span class="number">16</span>
+                        {% set interval = date('now').diff(date(site.birthdate)) %}
+                        <span class="number">{{ interval.y }}</span>
                         <span class="detail">
                             ans d'expérience
                             <small>(et d'expérimentations)</small>
                         </span>
                     </div>
                     <div class="thumbnail">
-                        <span class="number">15</span>
+                        {% set membersCount = content_list('App\\Model\\Member', filterBy = '_.active') | length %}
+                        <span class="number">{{ membersCount }}</span>
                         <span class="detail">expert·e·s passionné·e·s</span>
-                        <a href="#">
+                        <a href="{{ path('team') }}">
                             La tribu elao
                             <i class="icon icon--arrow" aria-hidden="true"></i>
                         </a>
@@ -132,7 +134,7 @@
                     <div class="thumbnail">
                         <span class="number">200+</span>
                         <span class="detail">projets</span>
-                        <a href="#">
+                        <a href="{{ path('case_studies') }}">
                             Nos études de cas
                             <i class="icon icon--arrow" aria-hidden="true"></i>
                         </a>

@@ -20,31 +20,34 @@
             <div class="banner-home__content" data-aos="zoom-in">
                 <h1>{{ site.description }}</h1>
             </div>
-            {% set highlightedCaseStudy = content_get('App\\Model\\CaseStudy', site.home.highlights.caseStudy) %}
             <div class="banner-home__image" data-aos="fade-left">
                 <figure>
-                    <div class="image" style="{{ macros.backgroundImageSrcset(highlightedCaseStudy.images|first, 'case_study_thumbnail.md') }}"></div>
-                    <figcaption>
-                        <span>{{ highlightedCaseStudy.title }}</span>
-                        {{ highlightedCaseStudy.shortDescription }}
-                    </figcaption>
+                    <div class="image" style="background: url('{{asset('build/images/pages/home/home-banner.jpg') }}')"></div>
                 </figure>
-                <a href="{{ path('case_study', { caseStudy: highlightedCaseStudy.slug }) }}" class="btn btn--primary btn--animated">
-                    <span>
-                        Découvrir le projet
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </a>
             </div>
             <ul class="banner-home__list">
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <div class="item">
-                        {% set interval = date('now').diff(date(site.birthdate)) %}
+                    <a href="{{ path('services') }}" class="item">
                         <span class="number">{{ interval.y }}</span>
                         ans d'expérience
                         <small>(et d'expérimentations)</small>
-                    </div>
+                        <span class="item__link">
+                        Nos services
+                        <i class="icon icon--arrow" aria-hidden="true"></i>
+                    </span>
+                    </a>
+                </li>
+                {% set delay = delay + delayGap %}
+                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                    <a href="{{ path('case_studies') }}" class="item">
+                        <span class="number">200+</span>
+                        projets
+                        <span class="item__link">
+                        Nos études de cas
+                        <i class="icon icon--arrow" aria-hidden="true"></i>
+                    </span>
+                    </a>
                 </li>
                 {% set delay = delay + delayGap %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
@@ -57,251 +60,223 @@
                         </span>
                     </a>
                 </li>
-                {% set delay = delay + delayGap %}
-                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <a href="{{ path('case_studies') }}" class="item">
-                        <span class="number">200+</span>
-                        projets
-                        <span class="item__link">
-                            Nos études de cas
-                            <i class="icon icon--arrow" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </li>
                 {% endwith %}
             </ul>
         </div>
 
-        <section class="section-home" data-aos="fade-left">
-            <div class="section-home__content">
-                <h2 class="h2--dash">Contribuer à des projets vertueux, utiles à notre société</h2>
-                <p>Nous pensons que notre responsabilité est de faire émerger et grandir des projets ayant des valeurs communes aux nôtres.</p>
-                <a href="{{ path('methodology') }}" class="btn btn--secondary btn--animated">
-                    <span>
-                        Notre méthodologie
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </a>
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                {% include 'partials/ia-brief.html.twig' %}
             </div>
-            <div class="section-home__image">
-                <picture>
-                    <source type="image/webp"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/coding-responsive.webp') }}"
-                    >
-                    <source type="image/jpeg"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/coding-responsive.jpg') }}"
-                    >
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/home/coding.webp') }} 1x,
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-right">
+            <div class="illustrated-section__content">
+                <div class="quote-home">
+                    <picture data-aos="fade-left">
+                        <source
+                            type="image/webp"
+                            srcset="{{ asset('build/images/pages/home/coding.webp') }} 1x,
                                 {{ asset('build/images/pages/home/coding@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/home/coding.jpg') }} 1x,
+                        >
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/home/coding.jpg') }} 1x,
                                 {{ asset('build/images/pages/home/coding@2x.jpg') }} 2x"
-                    >
-                    <img src="{{ asset('build/images/pages/home/coding.jpg') }}" alt="" />
-                </picture>
-                <i class="icon icon--chevrons-right" aria-hidden="true"></i>
+                        >
+                        <img class="quote-home__img" src="{{ asset('build/images/pages/home/coding.jpg') }}" alt="" />
+                    </picture>
+                    <blockquote class="quote-home__blockquote" data-aos="zoom-in">Conseiller et concevoir des applications web sur-mesure, animé par des experts passionnés.</blockquote>
+                </div>
             </div>
         </section>
 
-        <section class="section-home section-home--reverse" data-aos="fade-right">
-            <div class="section-home__image">
-                <picture>
-                    <source type="image/webp"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/presentation-responsive.webp') }}"
-                    >
-                    <source type="image/jpeg"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/presentation-responsive.jpg') }}"
-                    >
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/home/presentation.webp') }} 1x,
-                                {{ asset('build/images/pages/home/presentation@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/home/presentation.jpg') }} 1x,
-                                {{ asset('build/images/pages/home/presentation@2x.jpg') }} 2x"
-                    >
-                    <img src="{{ asset('build/images/pages/home/presentation.jpg') }}" alt=""/>
-                </picture>
-                <i class="icon icon--square-brackets-left" aria-hidden="true"></i>
-            </div>
-            <div class="section-home__content">
-                <h2 class="h2--dash">Faire des choix pérennes et pragmatiques</h2>
-                <p>Nous faisons le choix de <strong>technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes, et évolutives possibles </strong>en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</p>
-                {% include "glossary/term_list.html.twig" with { terms: [
-                    'symfony',
-                    'vue-js',
-                    'react',
-                    'react-native',
-                ] } only %}
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Les services que nous proposons <br> chez Elao</h2>
+                <p>En tant qu'atelier de co-conception, nous avons pour objectif de contribuer à l'élaboration de vos projets, en <strong>collaboration</strong>  étroite avec vous, tout en mettant l'accent sur la satisfaction de vos utilisateurs. Cette approche passe par notre <strong>expertise</strong> sur différents services.</p>
+                <ul class="services-home">
+                    <li class="services-home__card">
+                        <i class="icon icon--code"></i>
+                        <h3>Développement web et mobile sur-mesure</h3>
+                        <ul>
+                            <li>Développement sur-mesure</li>
+                            <li>Application web</li>
+                            <li>Application mobile</li>
+                            <li>Intégration et accessibilité</li>
+                            <li>Expert Symfony -React - React Native</li>
+                            <li>Architecture applicative</li>
+                        </ul>
+                        <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
+                    </li>
+                    <li class="services-home__card">
+                        <i class="icon icon--bulb"></i>
+                        <h3>Conseil et accompagnement</h3>
+                        <ul>
+                            <li>Audit technique</li>
+                            <li>Accompagnement global</li>
+                            <li>Méthodologie Agile (mais pas que)</li>
+                            <li>Facilitation de projet</li>
+                            <li>Ateliers participatifs</li>
+                            <li>Parcours utilisateur</li>
+                        </ul>
+                        <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
+                    </li>
+                    <li class="services-home__card">
+                        <i class="icon icon--hosting"></i>
+                        <h3>Gestion d'infrastructure et d'hébergement</h3>
+                        <ul>
+                            <li>Déploiement continu</li>
+                            <li>Expertise DevOps</li>
+                            <li>Hébergement et maintenance</li>
+                            <li>Pilotage d'infrastructures</li>
+                        </ul>
+                        <a href="{{ path('hosting') }}" class="link link--brand">En savoir plus</a>
+                    </li>
+                    <li class="services-home__card">
+                        <i class="icon icon--ia"></i>
+                        <h3>Solutions basées sur l'IA</h3>
+                        <ul>
+                            <li>IA génératives</li>
+                            <li>Assistants personnalisés</li>
+                            <li>Intégration ChatGPT</li>
+                            <li>Amabla©</li>
+                        </ul>
+                        <a href="{{ path('ia') }}" class="link link--brand">En savoir plus</a>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <section class="section-home" data-aos="fade-left">
-            <div class="section-home__content">
-                <h2 class="h2--dash">Mettre ensemble l'énergie là où elle a le plus de valeur</h2>
-                <p>Nous ne croyons plus aux cahiers des charges figés de 200 pages, mais à l'<strong>émulation des ateliers et à l'implication des utilisateurs finaux </strong>pour itérer ensemble afin de trouver la meilleure solution.</p>
-                <a href="{{ path('case_studies') }}" class="btn btn--secondary btn--animated">
+        <section class="illustrated-section" data-aos="fade-right">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Un atelier expert sur les technos utilisées</h2>
+                <div class="section__techno">
+                    <div class="illustration">
+                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
+                        +
+                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo Symfony">
+                        = ❤️
+                    </div>
+                    <p>Nous sommes avant tout des experts sur les technologies que nous utilisons au quotidien, avec principalement :</p>
+                    <ul>
+                        <li><strong>Symfony</strong>, LE <strong>framework PHP</strong> que nous utilisons depuis notre création (nous avons mis notre première application web en ligne en 2006, avant la version 1 de Symfony !). On aime son efficacité, sa modularité, sa robustesse et le dynamisme de sa communauté qui en a fait une référence depuis presque 20 ans.</li>
+                        <li><strong>React/ReactNative</strong>, pour le côté front, qui va rendre vos sites et vos applications dynamiques, responsives et permettre une expérience utilisateurs optimale.</li>
+                    </ul>
+                    <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes et évolutives possibles.</p>
+                    <p>Pour découvrir l'ensemble de nos outils cliquez sur "En savoir plus_" !</p>
+                    <a href="{{ path('application') }}#techno" class="btn btn--secondary btn--animated">
+                        <span>
+                            En savoir plus
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Nos derniers projets</h2>
+                <p>Ce que l'on aime chez Elao ? Contribuer à des <strong>projets vertueux, utiles</strong> à notre société. Nous sommes animés et ressentons la responsabilité de faire émerger, grandir, des projets ayant des valeurs communes aux nôtres.</p>
+                <ul class="last-projects">
+                    {% for caseStudy in lastThreeCaseStudies %}
+                    <li class="last-project">
+                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="last-project__image">
+                            <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
+                        </a>
+                        <div class="last-project__content">
+                            <h3>{{ caseStudy.title }}</h3>
+                            <p>{{ caseStudy.description }}</p>
+                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Découvrir le projet
+                                    {% include 'partials/svg-arrow.html.twig' %}
+                                </span>
+                            </a>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-right">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Nos clients et partenaires de confiance</h2>
+                <div class="partners">
+                    <img src="{{ asset('build/images/partners/bien-fonde.svg') }}" alt="logo Bien Fondé">
+                    <img src="{{ asset('build/images/partners/efire.svg') }}" alt="logo Efire">
+                    <img src="{{ asset('build/images/partners/jetpulp.svg') }}" alt="logo Jetpulp">
+                    <img src="{{ asset('build/images/partners/mjc.svg') }}" alt="logo My Job Company">
+                    <img src="{{ asset('build/images/partners/musique-music.svg') }}" alt="logo Musique & Music">
+                    <img src="{{ asset('build/images/partners/onisep.svg') }}" alt="logo Onisep">
+                    <img src="{{ asset('build/images/partners/panneau-pocket.svg') }}" alt="logo Panneau Pocket">
+                    <img src="{{ asset('build/images/partners/bedrock.svg') }}" alt="logo Bedrock">
+                    <img src="{{ asset('build/images/partners/rix.svg') }}" alt="logo Rix">
+                    <img src="{{ asset('build/images/partners/inria.svg') }}" alt="logo Inria">
+                    <img src="{{ asset('build/images/partners/engie.svg') }}" alt="logo Engie">
+                    <img src="{{ asset('build/images/partners/sensiolabs.svg') }}" alt="logo SensioLabs">
+                    <img src="{{ asset('build/images/partners/la-cuisine-du-web.svg') }}" alt="logo La Cuisine du Web">
+                    <img src="{{ asset('build/images/partners/afup.svg') }}" alt="logo AFUP">
+                    <img src="{{ asset('build/images/partners/digital-league.svg') }}" alt="logo Digital League">
+                    <img src="{{ asset('build/images/partners/seb.svg') }}" alt="logo Seb">
+                </div>
+            </div>
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Nos dernières actus</h2>
+                <p>Nous attachons une grande importance à <strong>partager, redistribuer et favoriser</strong> la vitalité de notre <strong>écosystème</strong>. C'est la raison pour laquelle nous apprécions prendre part à des conférences et diffuser des articles liés à notre domaine d'expertise.</p>
+                <ul class="last-articles">
+                    {% for article in lastTwoArticles %}
+                    <li class="last-article">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
+                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
+                        </a>
+                        <div class="last-article__content" data-aos="zoom-in">
+                            <div class="info">
+                                <span>{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
+                                {% block tags %}
+                                    <ul class="tag-list">
+                                        {% for tag in article.tags %}
+                                            <li class="tag-list__item">
+                                                <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                    #{{ tag|u.camel.title }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endblock %}
+                            </div>
+                            <h3>
+                                <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
+                                    {{ article.title }}
+                                </a>
+                            </h3>
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                        </div>
+                    </li>
+                    {% endfor %}
+
+                    <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
                     <span>
-                        Nos études de cas
+                        Voir le blog
                         {% include 'partials/svg-arrow.html.twig' %}
                     </span>
-                </a>
-            </div>
-            <div class="section-home__image">
-                <picture>
-                    <source type="image/webp"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/workshop-talk-responsive.webp') }}"
-                    >
-                    <source type="image/jpeg"
-                            media="(min-width: 760px) and (max-width: 1220px)"
-                            srcset="{{ asset('build/images/pages/home/workshop-talk-responsive.jpg') }}"
-                    >
-                    <source
-                        type="image/webp"
-                        srcset="{{ asset('build/images/pages/home/workshop-talk.webp') }} 1x,
-                                {{ asset('build/images/pages/home/workshop-talk@2x.webp') }} 2x"
-                    >
-                    <source
-                        type="image/jpeg"
-                        srcset="{{ asset('build/images/pages/home/workshop-talk.jpg') }} 1x,
-                                {{ asset('build/images/pages/home/workshop-talk@2x.jpg') }} 2x"
-                    >
-                    <img srcset="{{ asset('build/images/pages/home/workshop-talk.jpg') }}" alt=""/>
-                </picture>
-                <i class="icon icon--brackets-left" aria-hidden="true"></i>
+                    </a>
+                </ul>
             </div>
         </section>
-
-        <section class="section-home">
-            <div class="section-home__content">
-                <h2 class="h2--dash">Partager, redistribuer et faire vivre l'écosystème</h2>
-                <p>Nous mettons un point d’honneur à redonner un peu de ce que l’on prend chaque jour à l’écosystème web et open source, qui nous ont élevé à un très haut niveau d’expertise
-                </p>
-                <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
-                    <span>
-                        Nos billets de blog
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </a>
-            </div>
-            <div class="section-home__links" data-aos="fade-in" data-aos-delay="200">
-                <a class="animated-block">
-                    <div class="animated-block__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45px" height="30" viewBox="0 0 45 30" class="browser">
-                            <rect x="3.3" y="6.8" width="37.8" height="1"/>
-                            <circle cx="7.1" cy="3.5" r="0.9"/>
-                            <circle cx="4.3" cy="3.5" r="0.9"/>
-                            <circle cx="9.7" cy="3.5" r="0.9"/>
-                            <path class="gear" d="M45.6,20.1h-0.9c-0.1-0.3-0.2-0.5-0.3-0.8l0.7-0.7c0.5-0.5,0.5-1.4,0-1.9l-1.9-1.9c-0.5-0.5-1.4-0.5-1.9,0l-0.7,0.7
-                            c-0.3-0.1-0.5-0.2-0.8-0.3v-0.9c0-0.7-0.6-1.4-1.4-1.4h-2.7c-0.7,0-1.4,0.6-1.4,1.4v0.9c-0.3,0.1-0.5,0.2-0.8,0.3l-0.7-0.7
-                            c-0.5-0.5-1.4-0.5-1.9,0L29,16.7c-0.5,0.5-0.5,1.4,0,1.9l0.7,0.7c-0.1,0.3-0.2,0.5-0.3,0.8h-0.9c-0.7,0-1.4,0.6-1.4,1.4v2.7
-                            c0,0.7,0.6,1.4,1.4,1.4h0.9c0.1,0.3,0.2,0.5,0.3,0.8L29.1,27c-0.5,0.5-0.5,1.4,0,1.9l1.9,1.9c0.5,0.5,1.4,0.5,1.9,0l0.7-0.7
-                            c0.3,0.1,0.5,0.2,0.8,0.3v0.9c0,0.7,0.6,1.4,1.4,1.4h2.7c0.7,0,1.4-0.6,1.4-1.4v-0.9c0.3-0.1,0.5-0.2,0.8-0.3l0.7,0.7
-                            c0.5,0.5,1.4,0.5,1.9,0l1.9-1.9c0.5-0.5,0.5-1.4,0-1.9l-0.7-0.7c0.1-0.3,0.2-0.5,0.3-0.8h0.9c0.7,0,1.4-0.6,1.4-1.4v-2.7
-                            C47,20.7,46.4,20.1,45.6,20.1z M46.1,24.2c0,0.3-0.2,0.5-0.5,0.5h-1.2c-0.2,0-0.4,0.1-0.4,0.3c-0.1,0.4-0.3,0.9-0.5,1.3
-                            c-0.1,0.2-0.1,0.4,0.1,0.5l0.9,0.9c0.2,0.2,0.2,0.5,0,0.6l-1.9,1.9c-0.2,0.2-0.5,0.2-0.6,0l-1-0.9c-0.1-0.1-0.4-0.2-0.5-0.1
-                            c-0.4,0.2-0.8,0.4-1.3,0.5c-0.2,0.1-0.3,0.2-0.3,0.4v1.2c0,0.3-0.2,0.5-0.5,0.5h-2.7c-0.3,0-0.5-0.2-0.5-0.5v-1.2
-                            c0-0.2-0.1-0.4-0.3-0.4c-0.4-0.1-0.9-0.3-1.3-0.5c-0.2-0.1-0.4-0.1-0.5,0.1l-0.9,0.9c-0.2,0.2-0.5,0.2-0.6,0l-1.9-1.9
-                            c-0.2-0.2-0.2-0.5,0-0.6l0.9-0.9c0.1-0.1,0.2-0.4,0.1-0.5c-0.2-0.4-0.4-0.8-0.5-1.3c-0.1-0.2-0.2-0.3-0.4-0.3h-1.2
-                            c-0.3,0-0.5-0.2-0.5-0.5v-2.7c0-0.3,0.2-0.5,0.5-0.5h1.2c0.2,0,0.4-0.1,0.4-0.3c0.1-0.4,0.3-0.8,0.5-1.2c0.1-0.2,0.1-0.4-0.1-0.5
-                            l-0.9-1c-0.2-0.2-0.2-0.5,0-0.6l1.9-1.9c0.2-0.2,0.5-0.2,0.6,0l0.9,0.9c0.1,0.1,0.4,0.2,0.5,0.1c0.4-0.2,0.8-0.4,1.3-0.5
-                            c0.2-0.1,0.3-0.2,0.3-0.4v-1.2c0-0.3,0.2-0.5,0.5-0.5h2.7c0.3,0,0.5,0.2,0.5,0.5v1.2c0,0.2,0.1,0.4,0.3,0.4c0.4,0.1,0.9,0.3,1.3,0.5
-                            c0.2,0.1,0.4,0.1,0.5-0.1l0.9-0.9c0.2-0.2,0.5-0.2,0.6,0l1.9,1.9c0.2,0.2,0.2,0.5,0,0.6l-0.9,0.9c-0.1,0.1-0.2,0.4-0.1,0.5
-                            c0.2,0.4,0.4,0.8,0.5,1.3c0.1,0.2,0.2,0.3,0.4,0.3h1.2c0.3,0,0.5,0.2,0.5,0.5L46.1,24.2L46.1,24.2z"/>
-                            <polygon class="mask" points="43,12 43,28.1 22.5,28.1 22.5,32.7 47.1,32.7 47.1,12 "/>
-                            <path d="M42.5,30H2.5C1.1,30,0,28.9,0,27.4V2.6C0,1.2,1.1,0,2.5,0h39.9C43.9,0,45,1.2,45,2.6v24.9C45,28.9,43.9,30,42.5,30z M2.5,1
-                                C1.7,1,1,1.7,1,2.6v24.9C1,28.3,1.7,29,2.5,29h39.9c0.9,0,1.5-0.7,1.5-1.6V2.6C44,1.7,43.3,1,42.5,1H2.5z"/>
-                            <path d="M37.3,19.7c-1.9,0-3.3,1.5-3.3,3.3c0,1.9,1.5,3.3,3.3,3.3c1.9,0,3.3-1.5,3.3-3.3C40.7,21.2,39.2,19.7,37.3,19.7z M37.3,25.4
-                            c-1.3,0-2.3-1-2.3-2.3c0-1.3,1-2.3,2.3-2.3s2.3,1,2.3,2.3C39.7,24.3,38.6,25.4,37.3,25.4z"/>
-                        </svg>
-                    </div>
-                    <div class="animated-block__content">
-                        <p class="title">
-                            Contribution
-                            <i class="icon"></i>
-                        </p>
-                        <p>Core team Symfony</p>
-                    </div>
-                </a>
-                <a href="https://youtu.be/YPLlzte7tgs?list=PLkJgdYh31EJGz3SD2rY4GUaZfck10OQRl" target="_blank" class="animated-block" data-aos="fade-in" data-aos-delay="400">
-                    <div class="animated-block__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="bulb">
-                            <path d="M20.4,12.4c0-4.4-3.6-8-8-8 c-4.4,0-8,3.6-8,8c0,2.7,2.8,5.8,3.3,7.3s0,4.8,0,4.8c0,1,0.8,1.8,1.8,1.8h6.2c1,0,1.8-0.8,1.8-1.8c0,0-0.6-3.3,0-4.8 C18,18.2,20.4,14.9,20.4,12.4z"/>
-                            <line x1="7.6" y1="21.9" x2="13.8" y2="21.9"/>
-                            <path d="M12.6,29.3c1.7,0,3.1-1.4,3.1-3.1H9.5C9.5,28,10.9,29.3,12.6,29.3z
-                                "/>
-                            <polygon points="15.5,15.7 14.8,15.1 12.3,17.6 9.9,15.2 9.3,15.8 11.9,18.4 11.9,21.8 12.7,21.8 12.7,18.4 "/>
-                            <g class="light">
-                                <line x1="0" y1="11.2" x2="2.9" y2="11.2"/>
-                                <line x1="12.4" y1="0.1" x2="12.4" y2="2.9"/>
-                                <line x1="3.4" y1="3.4" x2="5.4" y2="5.4"/>
-                                <line x1="19.4" y1="5.4" x2="21.4" y2="3.4"/>
-                                <line x1="1.9" y1="18.8" x2="3.9" y2="16.8"/>
-                                <line x1="21.9" y1="11.2" x2="24.7" y2="11.2"/>
-                                <line x1="21.1" y1="16.8" x2="23" y2="18.8"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="animated-block__content">
-                        <p class="title">
-                            Conférences
-                            <i class="icon icon--arrow"></i>
-                        </p>
-                        <p>Elao Summer Talk #2</p>
-                    </div>
-                </a>
-                <a href="{{ path('blog_article', { article: lastArticle.slug }) }}" class="animated-block" data-aos="fade-in" data-aos-delay="600">
-                    <div class="animated-block__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="45" height="30" viewBox="0 0 45 30" class="pen">
-                            <rect x="0.6" y="28.4" height="1"/>
-                            <path d="M19.4,4.1l0.7,0.7L4.2,20.7l2.4,2.4L22.5,7.2L23.2,8L7.3,23.9l2.4,2.4
-                                l15.9-15.9l0.7,0.7L10.1,27.4c0,0-0.1,0.1-0.2,0.1c0,0,0,0,0,0s0,0,0,0l-8.2,1.9c-0.2,0-0.4,0-0.5-0.1S1,29,1,28.8l1.9-8.2 c0,0,0,0,0,0c0,0,0,0,0,0c0-0.1,0.1-0.1,0.1-0.2L19.4,4.1z M2.7,26.4l-0.4,1.9l1.9-0.4L2.7,26.4z M3.7,21.8l-0.8,3.4c0,0,0,0,0,0 l2.3,2.3c0,0,0,0,0,0l3.4-0.8L3.7,21.8z M23.7,0.7c0.6,0,1.2,0.2,1.7,0.7L29,5c0.5,0.5,0.7,1.1,0.7,1.7c0,0.6-0.2,1.2-0.7,1.7 l-1.3,1.3c-0.2,0.2-0.5,0.2-0.7,0l-6.3-6.3c-0.1-0.1-0.2-0.2-0.2-0.4c0-0.1,0.1-0.3,0.2-0.4L22,1.4C22.5,0.9,23.1,0.7,23.7,0.7z M23.7,1.8c-0.3,0-0.7,0.1-1,0.4l-0.9,0.9l5.6,5.6l0.9-0.9c0.3-0.3,0.4-0.6,0.4-1c0-0.3-0.1-0.7-0.4-1l-3.6-3.6 C24.4,1.9,24.1,1.8,23.7,1.8L23.7,1.8z"/>
-                        </svg>
-                    </div>
-                    <div class="animated-block__content">
-                        <p class="title">
-                            Article de blog
-                            <i class="icon icon--arrow"></i>
-                        </p>
-                        <p>{{ lastArticle.title }}</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <aside class="bricks">
-            <div class="brick-conception" data-aos="zoom-in-down">
-                <p>Et surtout...</p>
-                <h3 class="title">Prendre du plaisir à concevoir avec vous, pour vos utilisateurs et utilisatrices</h3>
-            </div>
-
-            {% include 'partials/brick-visit.html.twig' %}
-            {% include 'partials/brick-contact.html.twig' %}
-
-            <div class="brick-team">
-                <h3 class="title">Rejoindre la team</h3>
-                {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                {% if count > 0 %}
-                    <span class="subtitle">{{ 'job_offers'|trans({ count: count }) }}</span>
-                {% endif %}
-                <a href="{{ path('jobs') }}" class="btn btn--primary btn--animated">
-                    <span>
-                        Voir les postes
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                </a>
-            </div>
-        </aside>
+        <div class="bricks">
+            <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
+                <h3 class="title">Vous souhaitez nous en dire plus sur vos idées, trouver un partenaire expert pour vous accompagner dans la conception et le développement de votre projet ?</h3>
+                <span class="animation">
+                    {% include 'partials/svg-letter.html.twig' %}
+                    <span>Échangeons !</span>
+                </span>
+            </a>
+        </div>
     </div>
 {% endblock %}

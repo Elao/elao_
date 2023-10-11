@@ -1,0 +1,92 @@
+{% set noindex = true %}
+{% import "macros.html.twig" as macros %}
+
+{% set swupContainers = [] %}
+
+{% block meta_title "Des solutions basées sur l'IA | Elao" %}
+{% block meta_description "Utilisez notre assistant basé sur les IA génératives afin de vous accompagner dans vos tâches récurrentes pour vous faire gagner du temps | Elao" %}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('homepage') }}">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="{{ path('services') }}">
+                    <span itemprop="name">Nos services</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">IA</span>
+                </a>
+                <meta itemprop="position" content="3" />
+            </li>
+        </ol>
+
+        <div class="banner-services">
+            <h1 class="banner-services__title" data-aos="fade-right">Des solutions <span>basées sur l'IA</span></h1>
+            <div class="banner-services__content">
+                <div class="image"
+                     data-aos="fade-left"
+                     style="background-image: {{ asset('build/images/pages/services/ia/ia-banner.jpg') }};
+                            background-image: image-set(url({{ asset('build/images/pages/services/ia/ia-banner.jpg') }}) 1x,
+                                                        url({{ asset('build/images/pages/services/ia/ia-banner@2x.jpg') }}) 2x);"></div>
+                <span class="highlight" data-aos="zoom-in">
+                    <p>Chez Elao, nous voyons en l'IA un allié de taille pour nous aider dans nos tâches quotidiennes</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="page-ia">
+            <h2 class="h2--dash">Elao et l'IA</h2>
+            <div class="offset-content">
+                <p>Chez Elao, nous voyons l'IA comme un outil <strong>puissant</strong> et <strong>polyvalent</strong> qui nous permet de <strong>gagner un temps précieux</strong> et de concentrer nos efforts là où nous avons de la <strong>véritable valeur</strong>.</p>
+                <p>Face à cette affirmation, nous nous sommes demandés comment faire de l'IA un outil quotidien donnant une <strong>forte valeur ajoutée à nos tâches récurrentes</strong>.</p>
+                <p>Notre idée : faire de cet outil technologique un allié de tous les jours plutôt qu'un mastodonte effrayant.</p>
+            </div>
+
+            {% include 'partials/amabla-brief-incentive.html.twig' %}
+
+            <h2 class="h2--dash">C'est quoi Amabla ?</h2>
+            <div class="illustrated-section" data-aos="fade-left">
+                <div class="illustrated-section__content">
+                    <p>Né de l'envie d'intégrer l'IA dans notre quotidien, ce projet s'est rapidement imposé comme une réponse à un besoin plus large : proposer des <strong>assistants personalisés capables d'interagir avec les nombreux modèles d'IA</strong> présents et à venir.</p>
+                    <p>Depuis plusieurs mois, les équipes d'Elao travaillent sur ce projet avec une idée en tête : permettre à nos clients d'exploiter toute puissance de l'IA dans un <strong>contexte défini pour répondre à des besoins métiers spéficiques</strong>.</p>
+                    <p>Aujourd'hui nous vous proposons, à travers une interface de génération de brief, de tester une première application de cet outil. <strong>Mais ce n'est qu'un usage parmi d'autres, et la liste des possibles est infini : </strong> que cela soit pour vous aider à générer du contenu, à concevoir vos argumentaires commerciaux, à réaliser vos rapports journaliers, à synthétiser vos documents, etc.</p>
+                    <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Parlons-en
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+                <div class="illustrated-section__image">
+                    <img src="{{ asset('build/images/pages/services/ia/amabla-screenshot.jpg') }}" alt="exemple d'écran d'amabla">
+                    <i class="icon icon--chevrons-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <aside class="bricks">
+                <div class="brick-conception" data-aos="zoom-in-down">
+                    <p>Intéressé·e ?</p>
+                    <h3 class="title">Vous avez un besoin particulier et souhaitez nous en faire part ?</h3>
+                    <p>Vous souhaitez utiliser nos assistants pour vous faire gagner du temps sur la génération de contenu, sur vos tâches quotidiennes quelles qu'elles soient ?</p>
+                    <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Échangeons
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+{% endblock %}

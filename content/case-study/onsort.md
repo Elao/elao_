@@ -12,7 +12,7 @@ size: 2 mois
 services: ["Accompagnement", "Développement"]
 terms: ["symfony", "vue-js", "html", "css"]
 members: ["mcolin"]
-images: ["content/images/casestudies/headers/onsort-banner.jpg"]
+images: ["content/images/casestudies/on-sort-tablet.png"]
 ---
 
 ## Le contexte du projet

@@ -45,7 +45,7 @@
                                     </span>
                                     <span class="article-author__info">
                                         Publication
-                                        <strong>{{ article.date|format_date('medium') }}</strong>
+                                        <strong>{{ article.date|format_datetime('short', 'none', locale='fr') }}</strong>
                                     </span>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                             <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
                         </a>
                         <div class="miniature-inline__content">
-                            <span class="date">{{ article.date|format_date('medium')  }}</span>
+                            <span class="date">{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>
                             <p class="description">{{ article.description }}</p>
                             {% block tags %}

@@ -1,0 +1,56 @@
+<h2 class="h2--dash">Et si vous construisiez votre brief projet <br> grâce à notre assistant IA ?</h2>
+<p>Vous avez une idée de projet et vous souhaitez mesurer sa viabilité ? Vous avez besoin d'optimiser vos données métiers ? Vous souhaitez accélérer votre projet ? Nous avons conçu notre assistant, Amabla, basé sur les <strong>IA génératives</strong> qui vous permettra <strong>d'affiner vos besoins</strong>, définir vos <strong>priorités</strong> et <strong>construire</strong> les bases de nos futurs échanges.</p>
+<div class="ia-home">
+    <div class="ia-home__code">
+        <p id="typedtext" {{ stimulus_controller('typewriter', {
+            text: [
+                '"Salut, je suis l\'assistant qui vous aide à concevoir le brief de votre projet. ',
+                'À l\'issu de notre échange, je vous enverrai par mail un brief finalisé prêt à l\'emploi !',
+                'Êtes-vous prêts à commencer ?',
+                'Première étape, je vous invite à choisir le contexte de votre besoin."'
+            ]
+        }) }}></p>
+    </div>
+
+    <ul class="ia-home__needs">
+        <li class="ia-home__need">
+            <a href="{{ path('ia-brief', { _fragment: 'brief', brief: "expertize" }) }}">
+                <div>
+                    <h3>J'ai déjà mon idée et j'ai besoin d'une expertise</h3>
+                    <img src="{{ asset('build/images/pages/home/ideas.svg') }}" alt="">
+                </div>
+                <span class="link link--brand">Construire mon brief</span>
+            </a>
+        </li>
+        <li class="ia-home__need">
+            <a href="{{ path('ia-brief', { _fragment: 'brief', brief: "optimize" }) }}">
+                <div>
+                    <h3>J'ai besoin d'optimiser les données de mon entreprise</h3>
+                    <img src="{{ asset('build/images/pages/home/data.svg') }}" alt="">
+                </div>
+                <span class="link link--brand">Construire mon brief</span>
+            </a>
+            <div class="ia-home__overlay"><span>À venir</span></div>
+        </li>
+        <li class="ia-home__need">
+            <a href="{{ path('ia-brief', { _fragment: 'brief', brief: "accelerate" }) }}">
+                <div>
+                    <h3>J'ai besoin d'accélérer mon projet</h3>
+                    <img src="{{ asset('build/images/pages/home/speed.svg') }}" alt="">
+                </div>
+                <span class="link link--brand">Construire mon brief</span>
+            </a>
+            <div class="ia-home__overlay"><span>À venir</span></div>
+        </li>
+        <li class="ia-home__need">
+            <a href="{{ path('ia-brief', { _fragment: 'brief', brief: "integrate" }) }}">
+                <div class="content">
+                    <h3>J'aimerai intégrer l'IA à mon projet</h3>
+                    <img src="{{ asset('build/images/pages/home/artificial-intelligence.svg') }}" alt="">
+                </div>
+                <span class="link link--brand">Construire mon brief</span>
+            </a>
+            <div class="ia-home__overlay"><span>À venir</span></div>
+        </li>
+    </ul>
+</div>

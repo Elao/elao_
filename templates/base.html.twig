@@ -88,7 +88,7 @@
     <body
         {{ stimulus_controller('swup_plugins')
          | stimulus_controller('symfony/ux-swup/swup', {
-               containers: ['#main', '#nav'],
+               containers: swupContainers ?? ['#main', '#nav'],
                cache: true,
                animateHistoryBrowsing: true,
                debug: app.debug,

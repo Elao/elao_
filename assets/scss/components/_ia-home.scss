@@ -33,9 +33,11 @@
   &__need {
     width: calc(50% - 20px);
     min-width: calc(50% - 20px);
+    min-height: 270px;
     margin: 10px;
     padding: 10px 30px 30px 30px;
     background-color: white;
+    position: relative;
 
     &:before, &:after {
       display: none;
@@ -58,6 +60,24 @@
       span {
         width: fit-content;
       }
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(13, 58, 90, .65);
+    color: white;
+    font-family: antikor bold;
+
+    span {
+      border: 3px solid white;
+      padding: 10px 20px;
     }
   }
 }

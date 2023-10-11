@@ -1,5 +1,6 @@
 {% extends 'base.html.twig' %}
 
+{% set interval = date('now').diff(date(site.birthdate)) %}
 {% block meta_title "Conseil et accompagnement | Elao" %}
 {% block meta_description "Sollicitez notre expertise fonctionnelle et technique afin de profitez d’un accompagnement globale qui contribuera à la réussite de votre projet web | Elao" %}
 
@@ -45,7 +46,7 @@
             <p>
                 Ce qui nous fait vibrer, c'est de sortir le nez de notre écran pour <strong>construire avec vous le meilleur projet</strong>, qui corresponde à <strong>votre métier et à vos utilisateurs</strong>. Si nous n'aimons pas particulièrement les cahiers des charges trop fournis, c'est parce que <strong>notre équipe est efficace quand elle est actrice des choix techniques et fonctionnels</strong> et qu'elle les comprend.
                 <br>
-                Ainsi, chez Elao, nous devenons votre équipe produit : <strong>plus partenaires que prestataires</strong>, nous misons sur la <strong>transparence totale</strong> tout au long du projet. Nos 18 ans d'expérience nous aident dans la mise en place de méthodologies éprouvées pour vous garantir le meilleur accompagnement.
+                Ainsi, chez Elao, nous devenons votre équipe produit : <strong>plus partenaires que prestataires</strong>, nous misons sur la <strong>transparence totale</strong> tout au long du projet. Nos {{ interval.y}} ans d'expérience nous aident dans la mise en place de méthodologies éprouvées pour vous garantir le meilleur accompagnement.
             </p>
         </div>
 

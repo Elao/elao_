@@ -3,142 +3,229 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 40px;
 
+  .process {
+    grid-column: 2 / 13;
+  }
+
+  .character {
+    background-image: url(../../images/pages/methodology/character.png);
+    width: 70px;
+    height: 100px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+
   .h2--dash,
   .h2--ordered {
     grid-column: 2 / 13;
   }
 
+  .steps {
+    grid-column: 2 / 13;
+    margin-bottom: 40px;
+
+    h3 {
+      span {
+        color: $color-brand;
+        font-size: 50px;
+        margin-right: 20px;
+      }
+    }
+
+    .before-project {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      width: 100%;
+      padding-bottom: 80px;
+      &__content {
+        width: 50%;
+        padding-bottom: 40px;
+        position: relative;
+        .path {
+          position: absolute;
+          left: -60px;
+          top: 0;
+          width: 2px;
+          height: 100%;
+          background-color: $color-dark;
+        }
+        .character {
+          top: 0;
+          left: -60px;
+          transform: translateX(-50%);
+        }
+      }
+
+      &__steps {
+        background-color: $color-brand;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 40px;
+        grid-row-gap: 0;
+        color: white;
+        padding: 40px;
+        position: relative;
+      }
+
+      .step {
+        &__title {
+          h4 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            .icon {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+
+    .build {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      grid-column-gap: 60px;
+      grid-row-gap: 0;
+      margin-bottom: 80px;
+      position: relative;
+      .path {
+        position: absolute;
+        top: -80px;
+        left: 80%;
+        width: 2px;
+        height: 100%;
+        background-color: $color-dark;
+      }
+      .character {
+        top: -80px;
+        left: 80%;
+        transform: translateX(-50%);
+      }
+
+      &__steps {
+        background-color: $color-dark;
+        color: white;
+        height: fit-content;
+        margin: auto 0 -80px auto;
+        padding: 40px 60px;
+        position: relative;
+        z-index: 3;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          margin-bottom: 30px;
+          i {
+            font-size: 40px;
+          }
+          &:before, &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .deployment {
+      display: grid;
+      grid-template-columns: repeat(13, 1fr);
+
+      & > div {
+        grid-area: 1 / 4 / 2 / 14;
+        position: relative;
+        padding-bottom: 80px;
+        .path {
+          position: absolute;
+          top: -20px;
+          left: -100px;
+          width: 60%;
+          height: 2px;
+          background-color: $color-dark;
+        }
+        .character {
+          top: -20px;
+          left: 100px;
+          transform: translateY(-50%);
+          z-index: 2;
+        }
+        .character2 {
+          top: 0;
+          left: -100px;
+          transform: translateX(-50%);
+          background-image: url(../../images/pages/methodology/character.png);
+          width: 70px;
+          height: 100px;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+        }
+        .path2 {
+          position: absolute;
+          top: -20px;
+          left: -100px;
+          width: 2px;
+          height: calc(100% + 20px);
+          background-color: $color-dark;
+        }
+      }
+
+    }
+
+    .run {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      position: relative;
+
+      &__content {
+        width: 50%;
+      }
+
+      &__steps {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+        margin-bottom: 20px;
+
+        .step {
+          background-color: $color-primary;
+          padding: 20px 30px;
+          color: white;
+          &:first-child {
+            grid-area: 1 / 1 / 2 / 5;
+          }
+          &:nth-child(2) {
+            grid-area: 1 / 5 / 2 / 9;
+          }
+          &:last-child {
+            grid-area: 1 / 9 / 2 / 13;
+          }
+          &__title {
+            h4 {
+              display: flex;
+              flex-direction: row-reverse;
+              align-items: center;
+              gap: 20px;
+              color: white;
+              .icon {
+                font-size: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
   .offset-content {
     grid-column: 3 / 12;
-  }
-
-  .banner-planning {
-    margin: 60px 0 0;
-    position: relative;
-    grid-column: 1 / 13;
-
-    &:after {
-      height: 190px;
-      width: 500px;
-      position: absolute;
-      bottom: 70px;
-      right: 0;
-      content: '';
-      background: $color-secondary;
-      z-index: -1;
-    }
-
-    picture {
-      img {
-        margin: 0;
-      }
-    }
-  }
-
-  .banner-steps {
-    margin: 80px 0 480px;
-    position: relative;
-    grid-column: 1 / 13;
-
-    picture {
-      position: absolute;
-      bottom: -400px;
-      left: 0;
-      z-index: -1;
-
-      img {
-        margin: 0;
-      }
-    }
-  }
-
-  .run {
-    margin: 40px 0;
-    padding: 0;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-    grid-column: 2 / 12;
-
-    &:before,
-    &:after {
-      width: 290px;
-      position: absolute;
-      content: '';
-    }
-
-    &:before {
-      height: 480px;
-      top: 95px;
-      left: -310px;
-      background: $color-secondary;
-    }
-
-    &:after {
-      height: 660px;
-      top: 0;
-      right: -310px;
-      background: linear-gradient(to bottom, $color-secondary 380px, #fff 380px, #fff 420px, $color-secondary 421px);
-    }
-  }
-
-  .run__item {
-    margin: 0 20px;
-    padding: 40px 30px 40px;
-    width: calc(33.33% - 20px);
-    min-height: 485px;
-    color: #fff;
-    background: $color-dark;
-
-    &:before,
-    &:after {
-      display: none;
-    }
-
-    &:nth-of-type(1) {
-      margin-left: 0;
-    }
-
-    &:nth-of-type(2) {
-      margin-top: 50px;
-    }
-
-    &:nth-of-type(3) {
-      margin-top: 120px;
-      margin-right: 0;
-    }
-
-    h4 {
-      margin: 0 0 30px;
-      font-family: 'antikor bold';
-      font-size: 18px;
-      color: $color-light;
-      line-height: 1.7;
-    }
-  }
-
-  .prioritization {
-    grid-column: 2 / 9;
-
-    p {
-      margin: 0 0 50px;
-    }
-  }
-
-  .estimate {
-    margin: 30px 0;
-    display: flex;
-    align-items: center;
-    grid-column: 1 / 12;
-
-    picture {
-      margin-right: 40px;
-      min-width: 400px;
-
-      img {
-        margin: 0;
-      }
-    }
   }
 
   .tools {
@@ -172,16 +259,6 @@
   .list-inline {
     grid-column: 3 / 12;
   }
-
-  .our-commitments {
-    margin-top: 100px;
-    grid-column: 1 / 7;
-  }
-
-  .your-commitments {
-    margin-top: 180px;
-    grid-column: 7 / 13;
-  }
 }
 
 @media (max-width: $screen-md) {
@@ -193,55 +270,62 @@
       grid-column: 1 / 13;
     }
 
-    .offset-content {
+    .path, .character, .character2 {
+      display: none !important;
+    }
+
+    .steps {
       grid-column: 1 / 13;
-    }
-
-    .banner-planning {
-      margin: 40px 0;
-
-      img {
-        width: 100%;
-      }
-
-      &:after {
-        display: none;
-      }
-    }
-
-    .run {
-      flex-direction: column;
-      grid-column: 1 / 13;
-
-      &:before,
-      &:after {
-        display: none;
-      }
-    }
-
-    .run__item {
-      margin: 0 0 10px !important;
-      width: 100%;
-      min-height: unset;
-    }
-
-    .prioritization {
-      grid-column: 1 / 13;
-    }
-
-    .estimate {
-      margin-bottom: 0;
-      flex-direction: column;
-      grid-column: 1 / 13;
-
-      picture {
-        margin: 0 0 40px;
-        width: 100%;
-
-        img {
+      .before-project {
+        padding-bottom: 40px;
+        &__content {
           width: 100%;
+          padding-bottom: 0;
+        }
+        &__steps {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+          padding: 20px;
         }
       }
+
+      .build {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        &__steps {
+          padding: 40px;
+        }
+      }
+
+      .deployment {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+
+        & > div {
+          padding-bottom: 0;
+        }
+      }
+
+      .run {
+        &__content {
+          width: 100%;
+        }
+
+        &__steps {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: auto;
+          grid-row-gap: 20px;
+          .step {
+            grid-area: auto !important;
+            grid-column: span 13;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .process {
+      grid-column: 1/13;
     }
 
     .tools {
@@ -264,44 +348,13 @@
         margin: 0 0 20px;
       }
     }
-
-    .our-commitments,
-    .your-commitments {
-      margin-top: 0;
-      grid-column: 1 / 13;
-    }
-
-    .our-commitments {
-      .check-block {
-        margin-bottom: 20px;
-      }
-    }
-
-    .your-commitments {
-      .check-block {
-        margin-bottom: 40px;
-      }
-    }
   }
 }
 
 @media (max-width: $screen-sm) {
   .page-methodology {
-    .banner-steps {
-      margin: 40px 0;
-
-      picture {
-        position: static;
-        width: 100%;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    .brick-development {
-      margin: 0;
+    .offset-content {
+      grid-column: 1 / 13;
     }
   }
 }

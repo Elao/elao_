@@ -1,0 +1,222 @@
+{% extends 'base.html.twig' %}
+
+{% set interval = date('now').diff(date(site.birthdate)) %}
+{% block meta_title "Découvrez notre méthodologie | Elao" %}
+{% block meta_description "Découvrez notre méthodologie projet, de la phase de conception à la phase de run | Elao"|format(interval.y) %}
+
+{% block content %}
+    <div class="container">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ path('homepage') }}" itemprop="item">
+                    <span itemprop="name">Accueil</span>
+                </a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ path('approach') }}" itemprop="item">
+                    <span itemprop="name">Notre démarche</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a itemprop="item" href="#">
+                    <span itemprop="name">Notre méthodologie</span>
+                </a>
+                <meta itemprop="position" content="2" />
+            </li>
+        </ol>
+
+        <div class="banner-services">
+            <h1 class="banner-services__title" data-aos="fade-right">Découvrez <span>notre méthodologie</span></h1>
+            <div class="banner-services__content">
+                <div class="image"
+                     data-aos="fade-left"
+                     style="background-image: url({{ asset('build/images/pages/methodology/brainstorming.jpg') }});
+                         background-image: image-set(url({{ asset('build/images/pages/methodology/brainstorming.jpg') }}) 1x,
+                         url({{ asset('build/images/pages/methodology/brainstorming@2x.jpg') }}) 2x);"></div>
+                <span class="highlight" data-aos="zoom-in">
+                    <p>Notre process en 4 grandes étapes pour un projet réussi</p>
+                </span>
+            </div>
+        </div>
+
+        <div class="banner-methodology">
+            <h2 class="h2--dash" data-aos="fade-right">Une équipe d'experts</h2>
+            <div class="banner-methodology__content">
+                <div class="info" data-aos="fade-right">
+                    <p>Elao est avant tout une équipe de concepteurs / développeurs seniors. Un projet est généralement composé d’une <strong>équipe technique dédiée de 2 ou 3 personnes sur 3 à 6 mois.</strong></p>
+                    <p>Notre particularité : <strong>pas de chef de projet.</strong> Ce sont les développeurs qui seront vos contacts privilégiés et qui auront à cœur d’être réactifs et proactifs concernant vos besoins. Les facilitateurs de l’équipe sont là pour garantir une fluidité dans les échanges mais ne doivent jamais être un goulot d’étranglement dans le projet.</p>
+                </div>
+                <img
+                    src="{{ asset('build/images/pages/methodology/typical-team.svg') }}"
+                    alt="Schéma d'une équipe type elao : développeur backend, développeur frontend, intégratrice, facilitateur"
+                    data-aos="zoom-in"
+                />
+            </div>
+        </div>
+
+        <div class="page-methodology">
+            <h2 class="h2--dash">Les différentes étapes du projet</h2>
+
+            <div class="steps" {{ stimulus_controller('path') }}>
+                <div class="before-project">
+                    <div class="before-project__content">
+                        <h3><span>1</span>La phase d'avant projet</h3>
+                        <p>C’est l’une des phases clés de succès de votre projet !</p>
+                        <p>C’est là que l’équipe fait connaissance avec votre métier, votre vision et se les approprie pour proposer les solutions fonctionnelles et techniques optimales, <strong>selon vos besoins et notre expérience de plus de 200 projets.</strong></p>
+                        <div class="path"></div>
+                        <div class="character"></div>
+                    </div>
+                    <div class="before-project__steps">
+                        <div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--team"></i>Ateliers de compréhension</h4>
+                                </div>
+                                <p>Des ateliers de compréhension du besoin en présence de toute l’équipe technique, aboutissant à la création du <strong>backlog</strong> (liste des fonctionnalités envisagées sur le projet) et à une <strong>première phase de priorisation fonctionnelle</strong> (découpage en itérations).</p>
+                            </div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--mockup"></i>Ateliers UX/UI</h4>
+                                </div>
+                                <p>Des atelier(s) de suivi UX/UI permettant la synchronisation de toutes les parties prenantes (fonctionnel, design, développement) avec l’objectif d’avoir des maquettes cohérentes pour toute la chaîne.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--code"></i>Socle technique</h4>
+                                </div>
+                                <p>La mise en place du socle technique.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--write"></i>Rédactions des spécifications</h4>
+                                </div>
+                                <p>La rédaction des spécifications, soit par le client en toute autonomie selon une trame fournie par Elao, soit par Elao, soumis à validation du client.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--pen-ruler"></i>Outils</h4>
+                                </div>
+                                <p>La mise en place des outils de pilotage/suivi.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step__title">
+                                    <h4><i class="icon icon--architecture"></i>Estimation</h4>
+                                </div>
+                                <p>L’estimation chiffrée la plus <strong>fine possible</strong> de chaque fonctionnalité. Nous facturons en fonction du <strong>temps passé</strong> pour assurer la transparence. Avant le développement, les estimations de chaque fonctionnalité permettent d'<strong>évaluer les coûts</strong>, mais ces chiffres peuvent <strong>évoluer</strong> en fonction des découvertes et de la compréhension du projet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="build">
+                    <div class="path"></div>
+                    <div class="character"></div>
+                    <div>
+                        <h3><span>2</span>La phase de build</h3>
+                        <p>Lors de la phase de build, l’équipe technique Elao allouée au client est mobilisée à <strong>80 % de son temps sur le projet</strong>, sans autre projet en parallèle. Les 20 % restants permettent à l’équipe d’intervenir ponctuellement sur d’autres projets en phase de run, de contribuer à des projets <strong>Open Source</strong>, de s’investir dans l’écosystème web, de faire de la <strong>veille</strong> pour se tenir toujours à jour techniquement.</p>
+                        <p>L’équipe étant à bord depuis le tout début du projet, elle a alors une compréhension fine du projet et peut avancer de façon efficace.</p>
+                    </div>
+                    <ul class="build__steps">
+                        <li><i class="icon icon--mockup"></i>L'intégration responsive HTML/CSS</li>
+                        <li><i class="icon icon--code"></i>Le développement</li>
+                        <li><i class="icon icon--audit"></i>La recette fonctionnelle</li>
+                    </ul>
+                </div>
+
+                <div class="deployment">
+                    <div>
+                        <div class="path"></div>
+                        <div class="character"></div>
+                        <div class="path2"></div>
+                        <div class="character2"></div>
+                        <h3><span>3</span>La phase de mise en production </h3>
+                        <p>La mise en production est la <strong>“mise en ligne”</strong> de l’application à destination des utilisateurs finaux. Dès que le client considère que le périmètre fonctionnel minimal de l’application a été développé et validé, la première mise en production peut-être réalisée.</p>
+                        <p>Nous conseillons une mise en production <strong>le plus tôt possible</strong> pour avoir des retours d’utilisateurs au plus vite afin d’identifier les points de <strong>friction</strong> éventuels qui n’avaient pas été anticipés lors de la phase d’UX et de développement.</p>
+                        <p>L’idée est de multiplier les boucles de feedback (mise en prod ➜ retour utilisateur ➜ itération ➜ mise en prod) pour <strong>obtenir une expérience utilisateur robuste le plus rapidement possible.</strong></p>
+                    </div>
+                </div>
+                <div class="run">
+                    <div class="run__content">
+                        <h3><span>4</span>La phase de run</h3>
+                        <p>La phase de run s’enclenche dès que le périmètre fonctionnel de la V1 a été <strong>livré</strong>. Le projet est désormais prêt à être exposé aux <strong>utilisateurs finaux</strong>.</p>
+                        <p>Lors de la phase de run, notre périmètre d’intervention est le suivant :</p>
+                    </div>
+                    <div class="run__steps">
+                        {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                        <div class="step" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                            <div class="step__title">
+                                <h4><i class="icon icon--time"></i>Maintenance proactive par mois</h4>
+                            </div>
+                            <p>Dès que le projet est accessible aux utilisateurs, l’équipe technique sur le projet passe 1 à 2 jours par mois à faire une maintenance proactive.</p>
+                        </div>
+                        {% set delay = delay + delayGap %}
+                        <div class="step" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                            <div class="step__title">
+                                <h4><i class="icon icon--backlog"></i>Analyse de vos remontées</h4>
+                            </div>
+                            <p>Suivi des nouveaux tickets remontés par le client : tri, qualification de la demande (bug, évolution) et spécifications si besoin puis estimation.</p>
+                        </div>
+                        {% set delay = delay + delayGap %}
+                        <div class="step" data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                            <div class="step__title">
+                                <h4><i class="icon icon--person-cog"></i>Amélioration continue fonctionnelle selon votre priorisation</h4>
+                            </div>
+                            <p>Il est possible que la V1 n’ait pas toutes les fonctionnalités envisagées en début de projet et que vos priorités aient changé en cours de développement ou en fonction des retours utilisateurs.</p>
+                        </div>
+                        {% endwith %}
+                    </div>
+                    <p>Selon votre priorisation, nous <strong>estimons</strong> le temps de développement nécessaire à chaque nouvelle fonctionnalité envisagée pour que vous puissiez prendre la décision de la faire développer ou non.</p>
+                    <p>Le processus de mise en ligne reste le même qu’à la phase de build :</p>
+                </div>
+            </div>
+
+            <ul class="process" data-aos="fade-up">
+                <li class="process__item">Spécifications</li>
+                <li class="process__item">Maquettes si nécessaire</li>
+                <li class="process__item">Intégration</li>
+                <li class="process__item">Développement</li>
+                <li class="process__item">Recette fonctionnelle</li>
+                <li class="process__item">Mise en production.</li>
+            </ul>
+
+            <div class="tools" data-aos="fade-right">
+                <div>
+                    <h2 class="h2--dash">Nos outils</h2>
+                    <p>Nous n'imposons aucune application à nos clients, nous avons la flexibilité nécessaire pour nous conformer à leurs préférences et à leurs besoins. Cependant, nous avons l'expérience de travailler avec des <strong>outils efficaces</strong> que nous recommandons.</p>
+                </div>
+            </div>
+
+            <ul class="list-inline">
+                {% with { duration: 600, delayGap: 200, delay: 0 } %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/figma.svg') }}" alt="logo de Figma">
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/googledrive.svg') }}" alt="logo de Google Drive">
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/slack.svg') }}" alt="logo de Slack">
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/github.svg') }}" alt="logo de Github">
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/sentry.svg') }}" alt="logo de Sentry">
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li class="list-inline__item" data-aos="zoom-in-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <img src="{{ asset('build/images/tools/grafana.svg') }}" alt="logo de Grafana">
+                    </li>
+                {% endwith %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}

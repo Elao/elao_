@@ -30,10 +30,10 @@ class SiteController extends AbstractController
         ]);
     }
 
-    #[Route('/methodologie', name: 'methodology')]
-    public function methodology(): Response
+    #[Route('/demarche', name: 'approach')]
+    public function approach(): Response
     {
-        return $this->render('site/methodology.html.twig');
+        return $this->render('site/approach/approach.html.twig');
     }
 
     #[Route('/nos-valeurs', name: 'values')]

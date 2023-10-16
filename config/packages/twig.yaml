@@ -30,7 +30,7 @@ twig:
 
             menu:
                 - { path: 'services', label: 'Services' }
-                - { path: 'methodology', label: 'Méthodologie' }
+                - { path: 'approach', label: 'Démarche' }
                 - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'values', label: 'Valeurs' }
                 - { path: 'team', label: "L'équipe" }
@@ -39,7 +39,7 @@ twig:
             footer:
                 -
                     - { path: 'services', label: 'Services' }
-                    - { path: 'methodology', label: 'Méthodologie' }
+                    - { path: 'approach', label: 'Démarche' }
                     - { path: 'case_studies', label: 'Études de cas' }
                 -
                     - { path: 'values', label: 'Valeurs' }

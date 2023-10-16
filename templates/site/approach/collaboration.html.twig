@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% set interval = date('now').diff(date(site.birthdate)) %}
+{% block meta_title "Découvrez notre collaboration | Elao" %}
+{% block meta_description "Rejoignez nous dans une collaboration projet solide et pérenne | Elao"|format(interval.y) %}
+
+{% block content %}
+<div class="container">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ path('approach') }}">
+                <span itemprop="name">Notre démarche</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>
+        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Notre collaboration</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>
+    </ol>
+
+    <div class="banner-services">
+        <h1 class="banner-services__title" data-aos="fade-right">Découvrez <span>notre collaboration</span></h1>
+        <div class="banner-services__content">
+            <div class="image"
+                 data-aos="fade-left"
+                 style="background-image: {{ asset('build/images/pages/methodology/developer.jpg') }};
+                     background-image: image-set(url({{ asset('build/images/pages/methodology/developer@2x.jpg') }}) 1x,
+                     url({{ asset('build/images/pages/methodology/developer@2x.jpg') }}) 2x);"></div>
+            <span class="highlight" data-aos="zoom-in">
+                    <p>Avancer vers un but commun, basé sur une collaboration florissante</p>
+                </span>
+        </div>
+        <p class="banner-services__text">
+            Nous partons du principe que la réussite d'un produit web repose sur une <strong>collaboration solide</strong> où chacune des parties est <strong>pleinement acteur du projet</strong>. Il est important pour nous de vous exprimer notre fort engagement à participer activement à votre projet, tout en mettant en lumière l'importance de <strong>votre engagement</strong> dans cette initiative.
+        </p>
+    </div>
+    <h2 class="h2--dash">Une collaboration engageante</h2>
+    <div class="page-methodology">
+        <div class="our-commitments" data-aos="zoom-in-left">
+            <div class="check-block check-block--right">
+                <span class="check-block__title">Nos engagements</span>
+                <ul class="check-block__list">
+                    <li>Concevoir un logiciel dans lequel <strong>vous avez confiance</strong>.</li>
+                    <li>Se concentrer sur <strong>l'efficacité</strong>.</li>
+                    <li>Nous <strong>adapter</strong> à vous, et pas l’inverse.</li>
+                    <li>Vous donner toutes les informations pour prendre les bonnes décisions.</li>
+                    <li>Tout faire pour que le temps passé par tous sur le projet <strong>produise le plus de valeur</strong> possible pour les utilisateurs.</li>
+                    <li>Vous <strong>accompagner</strong> au mieux dans toutes les phases du projet.</li>
+                    <li>Mettre l’équipe la plus cohérente possible en face des besoins de vos utilisateurs et de votre business.</li>
+                    <li><strong>Garantir les solutions les plus qualitatives, robustes, et évolutives</strong> possibles en mettant au service de votre projet notre expertise technique. Nous laissons nos projets comme on aimerait les trouver.</li>
+                    <li>Entrer dans un <strong>processus itératif</strong> pour avoir du feedback utilisateur le plus tôt possible et être proactif sur les évolutions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="your-commitments" data-aos="zoom-in-right">
+            <div class="check-block check-block--right check-block--secondary check-block--unchecked">
+                <span class="check-block__title">Vos engagements</span>
+                <ul class="check-block__list">
+                    <li><strong>Nous donner toutes les informations</strong> pour vous aider à prendre les bonnes décisions.</li>
+                    <li>Prendre la casquette d’un <strong>Product Owner</strong> : c’est votre produit, vous devez comprendre comment définir son fonctionnement et petit à petit apprendre à <strong>piloter</strong> une équipe de développeurs. Nous vous accompagnerons bien évidemment tout au long du projet en fonction de votre niveau d’aisance.</li>
+                    <li><strong>Être disponible</strong> : d’expérience, <strong>une disponibilité d’au-moins un mi-temps</strong> pour nourrir l’équipe et répondre aux questions est requise en phase de build (jusqu’à la mise en ligne).</li>
+                </ul>
+            </div>
+
+            <div class="bricks" data-aos="zoom-in-left">
+                {% include 'partials/brick-development.html.twig' %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

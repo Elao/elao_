@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog</loc>
-            <lastmod>2023-10-13T00:00:00+00:00</lastmod>            <priority>0</priority>            <changefreq>monthly</changefreq>
+            <lastmod>2023-10-20T00:00:00+00:00</lastmod>            <priority>0</priority>            <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/etudes-de-cas</loc>
@@ -10,59 +10,99 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/recrutement</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/la-tribu</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/</loc>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/ia</loc>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/ia/brief-ia/</loc>
+            <lastmod>2023-10-18T11:37:01+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/application-web-et-mobile</loc>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/hebergement</loc>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/nos-services/conseil-et-accompagnement</loc>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/nos-services</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/methodologie</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/nos-valeurs</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/contact</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/legal</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/confidentialite</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/elaomojis</loc>
-            <lastmod>2023-10-17T11:34:56+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:36:38+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/quentin-developpeur-web</loc>
-            <lastmod>2023-10-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-20T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/qbrouillet</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tech/arc-max-quand-l-IA-simplifie-notre-navigation-sur-le-web</loc>
+            <lastmod>2023-10-10T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/arc</loc>
+            <lastmod>2023-10-10T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/navigateur</loc>
+            <lastmod>2023-10-10T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/ia</loc>
+            <lastmod>2023-10-10T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/browser</loc>
+            <lastmod>2023-10-10T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/romane-alternante-bon-public</loc>
@@ -70,23 +110,23 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/elao</loc>
-            <lastmod>2023-10-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-20T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/team</loc>
-            <lastmod>2023-10-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-20T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/accessibilite-et-ecriture-inclusive</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/ecriture-inclusive</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/accessibilite</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/methodo/conception-applicative-et-rgpd-feuille-de-route-part-1</loc>
@@ -233,20 +273,8 @@
             <lastmod>2021-07-08T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/les-attributs-php-8-dans-symfony</loc>
-            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/php</loc>
-            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/attributes</loc>
-            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/2</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/3</loc>
@@ -254,19 +282,19 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/4</loc>
-            <lastmod>2017-04-27T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2017-05-04T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/5</loc>
-            <lastmod>2016-02-03T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2016-05-17T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/6</loc>
-            <lastmod>2014-09-17T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2014-11-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/page/7</loc>
-            <lastmod>2010-09-15T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2010-10-05T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/etudes-de-cas/efire</loc>
@@ -338,131 +366,143 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/accesseo</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/accessibilite</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/algolia</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/authentification-double-facteurs-2FA</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/elasticsearch</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/payment</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/react</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/recette-fonctionnelle</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/specifications-fonctionnelles</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/stenope</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/symfony</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/glossaire/vue-js</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/recrutement/job-concepteur-developpeur-web-lyon-2022</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/recrutement/example</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/xgorse</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/cmozzati</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/adefrance</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/afarrugia</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/bleveque</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/ccastillo</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/eflahaut</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/equentin</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/frey</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/gfaivre</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/lvilleneuve</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/llapeyre</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/mcolin</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/msteinhausser</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/ogandillon</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/rledru</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/xavierr</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/equipe/yheitz</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/the-browserdetectorbundle-working-with-the-kernel-events</loc>
+            <lastmod>2013-08-02T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/php</loc>
+            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/kernel</loc>
+            <lastmod>2013-08-02T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/trame-itw</loc>
@@ -490,7 +530,7 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/seo</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/matomo</loc>
@@ -813,6 +853,14 @@
             <lastmod>2009-12-03T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/les-attributs-php-8-dans-symfony</loc>
+            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/attributes</loc>
+            <lastmod>2021-07-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/dev/offusquez-vos-id-dans-vos-url</loc>
             <lastmod>2019-11-06T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
@@ -929,18 +977,6 @@
             <lastmod>2013-09-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/the-browserdetectorbundle-working-with-the-kernel-events</loc>
-            <lastmod>2013-08-02T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/kernel</loc>
-            <lastmod>2013-08-02T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/browser</loc>
-            <lastmod>2013-08-02T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/dev/utilisation-de-levenement-kernel-terminate-sous-symfony2</loc>
             <lastmod>2013-07-18T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
@@ -1025,38 +1061,6 @@
             <lastmod>2017-04-26T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/comment-demarrer-tdd-en-php</loc>
-            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/test</loc>
-            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/tdd</loc>
-            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/subdomains-symfony2-2-session-authentication</loc>
-            <lastmod>2013-02-28T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/symfony-2-linjection-de-dependances</loc>
-            <lastmod>2010-06-03T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/dev/propel-utiliser-des-champs-calcules</loc>
-            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/propel</loc>
-            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
-            <loc>https://elao.github.io/elao_/pr/512/blog/tag/orm</loc>
-            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
-        </url>
-            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/teambuilding-a-distance</loc>
             <lastmod>2021-05-20T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
@@ -1102,15 +1106,15 @@
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/dev/donnees-structurees-offre-emploi</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/microdata</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/rich-snippets</loc>
-            <lastmod>2023-10-06T13:39:03+00:00</lastmod>                        <changefreq>monthly</changefreq>
+            <lastmod>2023-10-18T11:34:47+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/dev/manalize-virtualiser-son-environnement-de-developpement</loc>
@@ -1131,6 +1135,18 @@
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/vagrant</loc>
             <lastmod>2021-06-18T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/comment-demarrer-tdd-en-php</loc>
+            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/test</loc>
+            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/tdd</loc>
+            <lastmod>2018-10-30T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/elao/elao-paris</loc>
@@ -1457,6 +1473,10 @@
             <lastmod>2014-06-03T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/subdomains-symfony2-2-session-authentication</loc>
+            <lastmod>2013-02-28T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/infra/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application</loc>
             <lastmod>2012-11-23T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
@@ -1521,6 +1541,10 @@
             <lastmod>2010-09-15T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/symfony-2-linjection-de-dependances</loc>
+            <lastmod>2010-06-03T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tech/configuration-de-bind-sous-mac-os-x</loc>
             <lastmod>2010-05-21T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
@@ -1531,6 +1555,18 @@
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/tag/mac-osx</loc>
             <lastmod>2010-05-21T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/dev/propel-utiliser-des-champs-calcules</loc>
+            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/propel</loc>
+            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
+        </url>
+            <url>
+            <loc>https://elao.github.io/elao_/pr/512/blog/tag/orm</loc>
+            <lastmod>2010-05-13T00:00:00+00:00</lastmod>                        <changefreq>monthly</changefreq>
         </url>
             <url>
             <loc>https://elao.github.io/elao_/pr/512/blog/infra/securiser-ses-acces-serveur-authentification-par-cles-ssh</loc>

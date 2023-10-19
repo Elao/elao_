@@ -30,3 +30,16 @@
         {%- endif -%}
     {%- endfor -%}
 {% endmacro %}
+
+{% macro breadcrumb(routes) %}
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+    {% for route in routes %}
+        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ route.path }}">
+                <span itemprop="name">{{ route.label }}</span>
+            </a>
+            <meta itemprop="position" content="{{ loop.index }}" />
+        </li>
+    {%- endfor -%}
+    </ol>
+{% endmacro %}

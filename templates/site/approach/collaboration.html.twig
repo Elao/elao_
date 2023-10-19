@@ -1,31 +1,14 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('approach'), label: 'Notre démarche'}, {path: '#', label: 'Notre collaboration'}] %}
 {% block meta_title "Découvrez notre collaboration | Elao" %}
 {% block meta_description "Rejoignez nous dans une collaboration projet solide et pérenne | Elao"|format(interval.y) %}
 
 {% block content %}
 <div class="container">
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('approach') }}">
-                <span itemprop="name">Notre démarche</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">Notre collaboration</span>
-            </a>
-            <meta itemprop="position" content="3" />
-        </li>
-    </ol>
+    {{ macros.breadcrumb(routes) }}
 
     <div class="banner-services">
         <h1 class="banner-services__title" data-aos="fade-right">Découvrez <span>notre collaboration</span></h1>

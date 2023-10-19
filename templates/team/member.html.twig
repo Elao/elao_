@@ -3,6 +3,7 @@
 
 {% block meta_title 'La tribu Elao : '  ~ member.pseudo ?? member.name %}
 {% block meta_description 'Découvrez ' ~ member.pseudo ?? member.name ~ ', ' ~  member.position ~ ' chez Elao' %}
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('team'), label: "L'équipe"}, {path: '#', label: member.name}] %}
 
 {% block twitter_card_type 'summary' %}
 {% block og_image absolute_url(asset(member.teamPicture|glide_image_preset('opengraph_image'))) %}
@@ -10,26 +11,7 @@
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('team') }}">
-                    <span itemprop="name">La tribu</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">{{ member.pseudo ?? member.name }}</span>
-                </a>
-                <meta itemprop="position" content="3" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb(routes) }}
 
         <div class="member">
             <div class="member__infos">

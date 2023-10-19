@@ -3,7 +3,6 @@
 
 {% block meta_title 'La tribu Elao : '  ~ member.pseudo ?? member.name %}
 {% block meta_description 'Découvrez ' ~ member.pseudo ?? member.name ~ ', ' ~  member.position ~ ' chez Elao' %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('team'), label: "L'équipe"}, {path: '#', label: member.name}] %}
 
 {% block twitter_card_type 'summary' %}
 {% block og_image absolute_url(asset(member.teamPicture|glide_image_preset('opengraph_image'))) %}
@@ -11,7 +10,11 @@
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('team'), label: "L'équipe"},
+            {path: '#', label: member.name},
+        ]) }}
 
         <div class="member">
             <div class="member__infos">

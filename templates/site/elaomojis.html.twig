@@ -7,11 +7,13 @@
 {% block twitter_card_type 'summary_large_image' %}
 {% block og_image absolute_url(asset(config.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(config.twitterImage|glide_image_preset('twitter_card'))) %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: 'Elaomojis'}] %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Elaomojis'},
+        ]) }}
 
         <div class="banner">
             <h1 class="banner__title" data-aos="fade-right">

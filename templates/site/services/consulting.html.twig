@@ -2,15 +2,17 @@
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('services'), label: 'Nos services'}, {path: '#', label: 'Conseil et accompagnement'}] %}
 {% block meta_title "Conseil et accompagnement | Elao" %}
 {% block meta_description "Sollicitez notre expertise fonctionnelle et technique afin de profitez d’un accompagnement globale qui contribuera à la réussite de votre projet web | Elao" %}
 
 {% block content %}
 
 <div class="container">
-    {{ macros.breadcrumb(routes) }}
-
+    {{ macros.breadcrumb([
+        {path: path('homepage'), label: 'Accueil'},
+        {path: path('services'), label: 'Nos services'},
+        {path: '#', label: 'Conseil et accompagnement'},
+    ]) }}
     <div class="banner-services">
         <h1 class="banner-services__title" data-aos="fade-right">Conseil et<span>accompagnement</span></h1>
         <div class="banner-services__content">

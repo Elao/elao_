@@ -4,11 +4,13 @@
 {% set interval = date('now').diff(date(site.birthdate)) %}
 {% block meta_title "Réalisations web : revue de nos projets depuis %d ans | Elao"|format(interval.y) %}
 {% block meta_description "Découvrez quelques unes des applications web et mobile réalisées depuis %d ans chez Elao"|format(interval.y) %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "Nos études de cas"}] %}
 
 {% block content %}
     <div class="page-projects container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: "Nos études de cas"},
+        ]) }}
 
         <div class="banner-case-study">
             <h1 class="banner-case-study__title" data-aos="fade-right">

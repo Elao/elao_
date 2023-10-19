@@ -1,14 +1,15 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: 'Nos services'}] %}
 {% block meta_title "Développement web et mobile sur-mesure" %}
 {% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
-
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Nos services'},
+        ]) }}
         <div class="banner-services">
             <h1 class="banner-services__title" data-aos="fade-right">L'expertise Elao <span>au service de votre projet</span></h1>
             <div class="banner-services__content">

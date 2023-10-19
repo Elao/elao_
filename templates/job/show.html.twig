@@ -6,11 +6,13 @@
 {% block og_image absolute_url(asset(job.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(job.twitterImage|glide_image_preset('twitter_card'))) %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('jobs'), label: 'Rejoindre la magic team'}, {path: '#', label: job.fullTitle}] %}
-
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('jobs'), label: 'Rejoindre la magic team'},
+            {path: '#', label: job.fullTitle},
+        ]) }}
 
         <div itemscope itemtype="https://schema.org/JobPosting">
             <div class="banner">

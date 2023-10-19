@@ -1,16 +1,16 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: 'Contact'}] %}
-
 {% block content %}
     <div class="clip-paths">
         {{ include('assets/stamp-negatif.svg.twig') }}
     </div>
 
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
-
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Contact'},
+        ]) }}
         <div class="page-contact">
             <h1 data-aos="fade-right">Écrire <span>un petit mot</span></h1>
 

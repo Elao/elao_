@@ -4,11 +4,14 @@
 
 {% block meta_title term.titleSeo ?? term.fullTitle %}
 {% block meta_description term.metaDescription ?? term.fullTitle %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('glossary'), label: "Glossaire"}, {path: '#', label: term.name}] %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('glossary'), label: "Glossaire"},
+            {path: '#', label: term.name},
+        ]) }}
 
         <div class="banner-technology">
             <h1 class="banner-technology__title">

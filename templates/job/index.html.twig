@@ -4,14 +4,15 @@
 {% block meta_title "Les offres d'emploi d'Elao" %}
 {% block meta_description "Découvrez les offres d'emploi ouvertes chez Elao" %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "Jobs"}] %}
-
 {% block og_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('twitter_card'))) %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Jobs'},
+        ]) }}
 
         <div class="page-jobs">
             <div class="banner">

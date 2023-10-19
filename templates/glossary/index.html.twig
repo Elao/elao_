@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 {% import "macros.html.twig" as macros %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "Glossaire"}] %}
-
 {% block content %}
     <div class="page-glossary container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Glossaire'},
+        ]) }}
 
         <div class="banner-glossary">
             <div class="banner-glossary__content">

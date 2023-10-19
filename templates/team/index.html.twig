@@ -1,14 +1,15 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "L'équipe"}] %}
 {% block meta_title "L'équipe d'Elao" %}
 {% block meta_description "Toute l'équipe d'Elao" %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
-
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: "L'équipe"},
+        ]) }}
         <div class="page-team">
             <div class="banner-team">
                 <div class="banner-team__title" data-aos="fade-right">

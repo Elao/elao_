@@ -44,7 +44,7 @@ export default class extends Controller {
                         this.animateCharacter(character, path, sectionTop, sectionHeight, scrollHeight, viewportHeight, index);
                     }
                 } else {
-                    this.hideCharacter(character, character2);
+                    this.hideCharacter(character, character2, sectionTop, scrollHeight, viewportHeight);
                 }
             });
         });
@@ -85,10 +85,14 @@ export default class extends Controller {
         }
     }
 
-    hideCharacter(character, character2) {
+    hideCharacter(character, character2, sectionTop, scrollHeight, viewportHeight) {
         character.style.display = 'none';
         if (character2) {
-            character2.style.display = 'none';
+            if (scrollHeight + 0.5 * viewportHeight >= sectionTop) {
+                character2.style.display = 'block';
+            } else {
+                character2.style.display = 'none';
+            }
         }
     }
 }

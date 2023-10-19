@@ -1,10 +1,12 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "Protection des données"}] %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: "Protection des données"},
+        ]) }}
         <!--
             Todo :
 

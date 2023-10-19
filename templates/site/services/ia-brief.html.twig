@@ -1,13 +1,17 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('services'), label: 'Nos services'}, {path: path('ia'), label: 'IA'}, {path: '#', label: 'Brief'}] %}
 {% block meta_title "L'IA au service de votre conception projet | Elao" %}
 {% block meta_description "Découvrez notre assistant basé sur les IA génératives vous permettant de construire votre brief projet | Elao" %}
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('services'), label: 'Nos services'},
+            {path: path('ia'), label: 'IA'},
+            {path: '#', label: 'Brief'},
+        ]) }}
         <div class="banner-services">
             <h1 class="banner-services__title" data-aos="fade-right">L'IA au service de votre conception projet <span>par Amabla et elao</span></h1>
             <div class="banner-services__content">

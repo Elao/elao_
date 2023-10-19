@@ -6,11 +6,14 @@
 
 {% block og_image absolute_url(asset(caseStudy.images|first|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(caseStudy.images|first|glide_image_preset('twitter_card'))) %}
-{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('case_studies'), label: "Nos études de cas"}, {path: '#', label: caseStudy.title}] %}
 
 {% block content %}
     <div class="page-project container">
-        {{ macros.breadcrumb(routes) }}
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('case_studies'), label: "Nos études de cas"},
+            {path: '#', label: caseStudy.title},
+        ]) }}
 
         <div class="banner-case-study">
             <h1 class="banner-case-study__title" data-aos="fade-right">Découvrez <span>{{ caseStudy.title }}</span></h1>

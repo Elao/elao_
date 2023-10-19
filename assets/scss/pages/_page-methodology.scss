@@ -3,6 +3,16 @@
   grid-template-columns: repeat(12, 1fr);
   column-gap: 40px;
 
+  .your-commitments {
+    grid-column: 7/13;
+    margin-top: 180px;
+  }
+
+  .our-commitments {
+    grid-column: 1/7;
+    margin-top: 100px;
+  }
+
   .process {
     grid-column: 2 / 13;
   }
@@ -268,6 +278,17 @@
     .h2--dash,
     .h2--ordered {
       grid-column: 1 / 13;
+    }
+
+    .our-commitments, .your-commitments {
+      grid-column: 1/13;
+      margin-top: 0;
+    }
+
+    .your-commitments {
+      .check-block {
+        margin-bottom: 40px;
+      }
     }
 
     .path, .character, .character2 {

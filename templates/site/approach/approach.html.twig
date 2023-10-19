@@ -1,25 +1,14 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: 'Notre démarche'}] %}
 {% block meta_title "Découvrez la démarche Elao | Elao" %}
 {% block meta_description "Découvrez notre méthodologie projet et les engagements de notre collaboration | Elao"|format(interval.y) %}
 
 {% block content %}
 <div class="container">
-    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="{{ path('homepage') }}">
-                <span itemprop="name">Accueil</span>
-            </a>
-            <meta itemprop="position" content="1" />
-        </li>
-        <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a itemprop="item" href="#">
-                <span itemprop="name">Notre démarche</span>
-            </a>
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
+    {{ macros.breadcrumb(routes) }}
 
     <div class="banner-services">
         <h1 class="banner-services__title" data-aos="fade-right">Découvrez <span>la démarche elao</span></h1>
@@ -87,7 +76,7 @@
                 <p>
                     Bien plus que des clients, nous voyons en vous un véritable <strong>partenaire</strong> dont la collaboration est LA clé de la réussite.
                 </p>
-                <a href="" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                <a href="{{ path('collaboration') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                         <span>
                             Découvrez notre collaboration
                             {% include 'partials/svg-arrow.html.twig' %}

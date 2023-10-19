@@ -1,25 +1,13 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "L'équipe"}] %}
 {% block meta_title "L'équipe d'Elao" %}
 {% block meta_description "Toute l'équipe d'Elao" %}
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">L'équipe</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb(routes) }}
 
         <div class="page-team">
             <div class="banner-team">

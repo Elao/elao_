@@ -2,7 +2,7 @@
 {% import "macros.html.twig" as macros %}
 
 {% set swupContainers = [] %}
-
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('services'), label: 'Nos services'}, {path: '#', label: 'IA'}] %}
 {% block meta_title "Des solutions basées sur l'IA | Elao" %}
 {% block meta_description "Utilisez notre assistant basé sur les IA génératives afin de vous accompagner dans vos tâches récurrentes pour vous faire gagner du temps | Elao" %}
 
@@ -10,26 +10,7 @@
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('services') }}">
-                    <span itemprop="name">Nos services</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">IA</span>
-                </a>
-                <meta itemprop="position" content="3" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb(routes) }}
 
         <div class="banner-services">
             <h1 class="banner-services__title" data-aos="fade-right">Des solutions <span>basées sur l'IA</span></h1>

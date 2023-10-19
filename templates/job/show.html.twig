@@ -1,33 +1,16 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title job.titleSeo ?? job.fullTitle %}
 {% block meta_description job.metaDescription ?? job.description %}
-
 {% block og_image absolute_url(asset(job.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(job.twitterImage|glide_image_preset('twitter_card'))) %}
 
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: path('jobs'), label: 'Rejoindre la magic team'}, {path: '#', label: job.fullTitle}] %}
+
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('jobs') }}">
-                    <span itemprop="name">Rejoindre la magic team</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">{{ job.fullTitle }}</span>
-                </a>
-                <meta itemprop="position" content="3" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb(routes) }}
 
         <div itemscope itemtype="https://schema.org/JobPosting">
             <div class="banner">

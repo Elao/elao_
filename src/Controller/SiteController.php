@@ -36,6 +36,12 @@ class SiteController extends AbstractController
         return $this->render('site/approach/approach.html.twig');
     }
 
+    #[Route('/demarche/collaboration', name: 'collaboration')]
+    public function collaboration(): Response
+    {
+        return $this->render('site/approach/collaboration.html.twig');
+    }
+
     #[Route('/demarche/methodologie', name: 'methodology')]
     public function methodology(): Response
     {

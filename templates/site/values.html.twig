@@ -1,25 +1,14 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
+{% set routes = [{path: path('homepage'), label: 'Accueil'}, {path: '#', label: "Nos valeurs"}] %}
 {% block meta_title "L'humain avant tout : donner du sens, s'engager, prendre plaisir | Elao" %}
 {% block meta_description "Nous sommes un atelier de co-conception d’applications web et mobiles sur-mesure, animé depuis plus de %d ans par des expert·e·s passionné·e·s. | Elao"|format(interval.y) %}
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Nos valeurs</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb(routes) }}
 
         <div class="banner-values">
             <div class="banner-values__title">

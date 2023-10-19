@@ -27,6 +27,13 @@
     bottom: -90px;
     right: 0;
     background: $color-brand;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "antikor regular";
+    font-size: 24px;
+    color: #fff;
+    line-height: 1.6;
 
     .icon {
       position: absolute;

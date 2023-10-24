@@ -3,7 +3,7 @@ title: 'Quentin, développeur chez Elao depuis 1 an'
 date: '2023-10-20' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
-authors: [qbrouillet] # multiple acceptés
+authors: [elao, qbrouillet] # multiple acceptés
 tableOfContent: false
 tags: [elao, team]
 thumbnail: content/images/blog/2023/itw-quentin/banner-qb.jpg

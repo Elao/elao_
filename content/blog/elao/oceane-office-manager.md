@@ -3,10 +3,10 @@ title: 'Océane, office manager chez Elao depuis 1 an'
 date: '2023-11-02' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article a été mis à jour
 description: ''
-authors: [ogandillon] # multiple acceptés
+authors: [elao, ogandillon] # multiple acceptés
 tableOfContent: false # 'true' pour activer ou '3' pour lister les titres sur 3 niveaux.
 tags: [elao, team]
-thumbnail: content/images/blog/2023/itw-oceane/ogandillon.jpg
+thumbnail: content/images/blog/2023/itw-oceane/ogandillon-banner.jpg
 credit: { name: 'Benjamin Lévêque', url: 'https://www.instagram.com/benji07' } # Pour créditer la photo utilisée en miniature
 ---
 
@@ -18,7 +18,7 @@ Après l’obtention de mon Bac en 2013, je suis entrée dans la vie active, pri
 
 Grâce à une expérience en tant que responsable de magasin, j’ai pu découvrir la gestion humaine et administrative d’une équipe, ce qui m’a conduit tout droit vers une reconversion professionnelle que j’ai débutée en 2021.
 
-J’ai intégré Elao en alternance en 2022 pour la préparation d’un titre certifiée _Attachée de direction spécialisation Ressources humaines_ au poste d’Office Manager. 📁
+J’ai intégré Elao en alternance en 2022 pour la préparation d’un titre certifié _Attachée de direction spécialisation Ressources humaines_ au poste d’Office Manager. 📁
 
 Après obtention de mon diplôme, j’ai décidé de repousser à nouveau mes limites en poursuivant avec la préparation d’un _Bachelor Gestion des ressources humaines_ et suis ravie que :new-elao: me suive dans cette nouvelle aventure. 👩🏼‍🎓
 
@@ -52,7 +52,7 @@ L’hiver, je suis team combo plaid/Netflix 📺 et l’été vous me trouverez 
 
 🙏🏻 `merci` parce que la reconnaissance est importante
 
-:+1: `++1` pour approuver
+:+1: `+1` pour approuver
 
 ## Les 3 trucs qui traînent toujours autour de ton bureau ?
 
@@ -60,7 +60,7 @@ L’hiver, je suis team combo plaid/Netflix 📺 et l’été vous me trouverez 
 
 🍰 Un paquet de gâteaux, car j’ai toujours faim
 
-🖊️ Une tonne de stylo de dispersés, j’ai besoin de tout noter
+🖊️ Une tonne de stylo dispersés, j’ai besoin de tout noter
 
 ## Plutôt Slack ou plutôt call ?
 

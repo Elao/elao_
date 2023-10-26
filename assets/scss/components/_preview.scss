@@ -13,6 +13,12 @@
 .preview__main {
   margin-right: 30px;
   width: 600px;
+
+  img {
+    width: 630px;
+    height: 380px;
+    object-fit: cover;
+  }
 }
 
 .preview__list {
@@ -36,6 +42,12 @@
       margin: 0 15px 30px;
       min-height: 30px;
       width: 240px;
+
+      img {
+        width: 240px;
+        height: 160px;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -52,6 +64,10 @@
   .preview__main {
     margin: 0 0 10px;
     width: 100%;
+
+    img {
+      width: 100%;
+    }
   }
 
   .preview__list {
@@ -64,6 +80,14 @@
     .btn {
       width: 100%;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .preview__main {
+    img {
+      height: 230px;
     }
   }
 }

@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title "Développement web et mobile sur-mesure" %}
@@ -5,21 +6,10 @@
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Nos services</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
-
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: 'Nos services'},
+        ]) }}
         <div class="banner-services">
             <h1 class="banner-services__title" data-aos="fade-right">L'expertise Elao <span>au service de votre projet</span></h1>
             <div class="banner-services__content">

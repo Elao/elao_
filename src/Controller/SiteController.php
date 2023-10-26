@@ -30,10 +30,22 @@ class SiteController extends AbstractController
         ]);
     }
 
-    #[Route('/methodologie', name: 'methodology')]
+    #[Route('/demarche', name: 'approach')]
+    public function approach(): Response
+    {
+        return $this->render('site/approach/approach.html.twig');
+    }
+
+    #[Route('/demarche/collaboration', name: 'collaboration')]
+    public function collaboration(): Response
+    {
+        return $this->render('site/approach/collaboration.html.twig');
+    }
+
+    #[Route('/demarche/methodologie', name: 'methodology')]
     public function methodology(): Response
     {
-        return $this->render('site/methodology.html.twig');
+        return $this->render('site/approach/methodology.html.twig');
     }
 
     #[Route('/nos-valeurs', name: 'values')]

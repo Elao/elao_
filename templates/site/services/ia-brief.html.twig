@@ -1,3 +1,4 @@
+{% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
 {% block meta_title "L'IA au service de votre conception projet | Elao" %}
@@ -5,33 +6,12 @@
 
 {% block content %}
     <div class="container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('services') }}">
-                    <span itemprop="name">Nos services</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-               <a itemprop="item" href="{{ path('ia') }}">
-                    <span itemprop="name">IA</span>
-                </a>
-                <meta itemprop="position" content="3" />
-           </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('ia-brief') }}">
-                    <span itemprop="name">Brief</span>
-                </a>
-                <meta itemprop="position" content="4" />
-            </li>
-        </ol>
-
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('services'), label: 'Nos services'},
+            {path: path('ia'), label: 'IA'},
+            {path: '#', label: 'Brief'},
+        ]) }}
         <div class="banner-services">
             <h1 class="banner-services__title" data-aos="fade-right">L'IA au service de votre conception projet <span>par Amabla et elao</span></h1>
             <div class="banner-services__content">

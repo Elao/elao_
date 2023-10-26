@@ -7,20 +7,10 @@
 
 {% block content %}
     <div class="page-projects container">
-        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="{{ path('homepage') }}">
-                    <span itemprop="name">Accueil</span>
-                </a>
-                <meta itemprop="position" content="1" />
-            </li>
-            <li class="breadcrumb__item"  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                <a itemprop="item" href="#">
-                    <span itemprop="name">Nos études de cas</span>
-                </a>
-                <meta itemprop="position" content="2" />
-            </li>
-        </ol>
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: '#', label: "Nos études de cas"},
+        ]) }}
 
         <div class="banner-case-study">
             <h1 class="banner-case-study__title" data-aos="fade-right">

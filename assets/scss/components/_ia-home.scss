@@ -95,5 +95,17 @@
     &__needs {
       width: 100%;
     }
+
+    &__need {
+      a {
+        div {
+          flex-direction: column;
+          gap: 0;
+        }
+        img {
+          margin: 0 auto 20px auto;
+        }
+      }
+    }
   }
 }

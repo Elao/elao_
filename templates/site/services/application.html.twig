@@ -53,7 +53,7 @@
         </div>
 
         <div class="offset-content">
-            <p>Entre ces frameworks et Elao, c'est une histoire qui dure déjà depuis de nombreuses années. Mais on peut aussi citer de nombreux langages, technologies et services utilisés quotidiennement par nos équipes : <strong>Elastic Search, Algolia, Hubspot, Git & GitHub, ChatGPT, Python, Doctrine, Sentry, Grafana, Docker, ...</strong></p>
+            <p>Entre ces frameworks et Elao, c'est une histoire qui dure déjà depuis de nombreuses années. Mais on peut aussi citer de nombreux langages, technologies et services utilisés quotidiennement par nos équipes : <strong><a href="{{ path('glossary_term', {term: 'elasticsearch'}) }}">ElasticSearch</a>, <a href="{{ path('glossary_term', {term: 'algolia'}) }}">Algolia</a>, Hubspot, Git & <a href="{{ path('glossary_term', {term: 'github'}) }}">GitHub</a>, ChatGPT, Python, Doctrine, <a href="{{ path('glossary_term', {term: 'sentry'}) }}">Sentry</a>, <a href="{{ path('glossary_term', {term: 'grafana'}) }}">Grafana</a>, <a href="{{ path('glossary_term', {term: 'docker'}) }}">Docker</a>, ...</strong></p>
         </div>
 
         <h2 class="h2--dash">Nos engagements de développements</h2>
@@ -109,13 +109,13 @@
             <div>
                 <h3>Architecture applicative</h3>
                 <p><strong>Notre approche centrée sur le produit </strong>impacte également la structure de notre code. Nous essayons de découpler au maximum le code métier, qui porte le plus de valeur ajoutée, du framework, qui sert juste à le mettre en œuvre.</p>
-                <p>Ce type d'architecture que l'on nomme DDD permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.</p>
+                <p>Ce type d'architecture que l'on nomme <a href="{{ path('glossary_term', {term: 'ddd'}) }}">DDD</a> permet également de faciliter la mise en place de tests automatiques et de se rendre moins dépendant des montées de version du framework.</p>
             </div>
         </div>
 
         <div class="tests" data-aos="fade-right">
             <div>
-                <div class="offset">
+                <div class="offset" id="tests">
                     <h3>Tests unitaires et fonctionnels</h3>
                     <p>Pour garantir la qualité dans le temps et la non-régression, nous mettons en place <strong>des tests automatiques de l'application </strong>en même temps que le code est produit.</p>
                     <p>Ces tests sont lancés à chaque modification de code dans l'application et doivent tous passer avant de partir en production.</p>
@@ -124,7 +124,7 @@
                 <h3>Environnement de développement</h3>
                 <p>Nous avons beaucoup investi sur l'optimisation des tâches techniques qui n'ont pas de valeur ajoutée directe pour votre projet. Couplé avec notre culture de la qualité, nous avons mis en place un écosystème complet répondant à ces problématiques.</p>
                 <p>Avec la virtualisation globale de l'environnement de développement, <strong>un nouveau développeur peut intervenir en moins d'une demi-heure sur un projet </strong>et la cohérence transverse des projets Elao permet également un gain d'efficacité.</p>
-                <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture DevOps.</p>
+                <p>Ces environnements sont le plus proche possible des serveurs de production et nos équipes ont une bonne connaissance des problématiques d'infrastructure avec une vraie culture <a href="{{ path('glossary_term', {term: 'devops'}) }}">DevOps.</a></p>
             </div>
             <img src="{{ asset('build/images/pages/services/tests.svg') }}" alt="">
         </div>
@@ -137,11 +137,11 @@
                 <ul>
                     <li>
                         <strong>PhpStan :</strong>
-                        Cet analyseur statique pour PHP soumet le code à un haut niveau d'exigence et permet d'anticiper les erreurs possibles, pour obtenir une application plus fiable.
+                        Cet analyseur statique pour <a href="{{ path('glossary_term', {term: 'php'}) }}">PHP</a> soumet le code à un haut niveau d'exigence et permet d'anticiper les erreurs possibles, pour obtenir une application plus fiable.
                     </li>
                     <li>
                         <strong>Php-Cs-Fixer :</strong>
-                        Cet outil est centré sur l'analyse du code PHP, et permet de vérifier et corriger le formatage du code selon le haut niveau de qualité voulu par Elao.
+                        Cet outil est centré sur l'analyse du code <a href="{{ path('glossary_term', {term: 'php'}) }}">PHP</a>, et permet de vérifier et corriger le formatage du code selon le haut niveau de qualité voulu par Elao.
                     </li>
                 </ul>
                 <p>Ces deux outils sont complémentaires et sont utilisés par beaucoup d'autres prestataires, le respect de ces standards vous <strong>garantit une prise en main facile du projet par des tiers.</strong></p>
@@ -151,6 +151,7 @@
         <div class="review" data-aos="fade-right">
             <h3>Revue de code</h3>
             <p>Chaque nouveau développement est vérifié par un autre membre de l'équipe avant de partir en recette. Cette méthode permet une validation avec du recul pour identifier au plus tôt des effets de bord indésirables.</p>
+            <a href="{{ path('glossary_term', {term: 'code-review'}) }}" class="link link--brand">En savoir plus sur la revue de code</a>
         </div>
 
         <h2 class="h2--dash">Nous concevons/développons</h2>

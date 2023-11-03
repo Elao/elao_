@@ -9,9 +9,9 @@ articles:
 - "dev/donnees-structurees-offre-emploi"
 - "dev/no-index-staging-symfony"
 ---
-Chez Elao, lorsque nous travaillons sur des pages web, **nous cherchons à offrir la meilleure expérience possible à l'utilisateur**. Cela passe par un travail d'UX design et de conception au préalable, mais également d'optimisation invisibles du HTML qui permettent un meilleur accès au contenu, quelque soit les conditions de lecture de la page (débit internet faible, port d'équipement contraignants comme des gants, lecture d'écran, etc.). 
+Chez Elao, lorsque nous travaillons sur des pages web, **nous cherchons à offrir la meilleure expérience possible à l'utilisateur**. Cela passe par un travail d'UX design et de conception au préalable, mais également d'optimisation invisible du HTML qui permettent un meilleur accès au contenu, quelque soit les conditions de lecture de la page (débit internet faible, port d'équipements contraignants comme des gants, lecture d'écran, etc.). 
 
-Nous avons développé Accesseo afin de pouvoir, au moment du développement, avoir un oeil sur ces optimisations et les mettre en place, tout en impactant le moins possible le temps passé à faire ces ajustements. 
+Nous avons développé Accesseo afin de pouvoir, au moment du développement, avoir un œil sur ces optimisations et les mettre en place, tout en impactant le moins possible le temps passé à faire ces ajustements. 
 
 ⚡️ [Voir Accesseo sur Packagist](https://packagist.org/packages/elao/accesseo) ⚡️
 
@@ -23,7 +23,7 @@ Ces optimisations passent par une navigation claire et simple, un temps de charg
 
 ## Accesseo, comment ça marche ?
 
-Acesseo permet de remonter, à partir du HTML, ces signaux que l'on peut, si on le souhaite, optimiser - ou non, selon notre stratégie. Ce bundle s'adresse aux utilisateurs de [Symfony](/glossaire/symfony), au moment du développement : webmasters, développeurs ou intégrateurs. Les informations sont visibles sur la Symfony Debug toolbar et dans le profiler dans leur intégralité.
+Acesseo permet de remonter, à partir du HTML, ces signaux que l'on peut, si on le souhaite, optimiser - ou non, selon notre stratégie. Ce bundle s'adresse aux utilisateurs de [Symfony](./symfony.md), au moment du développement : webmasters, développeurs ou intégrateurs. Les informations sont visibles sur la Symfony Debug toolbar et dans le profiler dans leur intégralité.
 
 
 !!! Attention

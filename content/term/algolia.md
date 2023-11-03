@@ -9,13 +9,14 @@ titleSeo: "Intégration de la solution Algolia dans votre applicatif web - Elao"
 metaDescription : "Elao a développé une expertise dans la mise en place d'Algolia, un moteur de recherche performant, pour ses clients. Nous pouvons vous accompagner grâce à notre expertise technique d'Algolia."
 ---
 
-Algolia est un atout de taille pour bénéficier d’un moteur de recherche rapide, pertinent et efficace. Grâce à ce service, le résultat de recherche est pertinent, ce qui améliore considérablement l’expérience client. Nos équipes peuvent intégrer ou vous aider à intégrer Algolia à votre application et ainsi améliorer l’expérience utilisateur de vos clients.
+Algolia est un atout de taille pour bénéficier d’un moteur de recherche rapide, pertinent et efficace. Grâce à ce service <abbr title="Software as a Service">SAAS</abbr>, le résultat de recherche est pertinent, ce qui améliore considérablement l’expérience client. Nos équipes peuvent intégrer ou vous aider à intégrer Algolia à votre application et ainsi améliorer l’expérience utilisateur de vos clients.
 
 ## Pourquoi utiliser Algolia dans vos projets ?
 
-Développer un outil de recherche peut être très coûteux. Profiter de l’expertise d’Algolia, reconnue pour son savoir-faire dans le search, peut être un gain de temps et une économie, bien que le service soit payant.
+Développer ou héberger un outil de recherche peut être très coûteux. Profiter de l’expertise d’Algolia, reconnue pour son savoir-faire dans le _search_, peut être un gain de temps et une économie.
+Bien que le service soit payant pour une utilisation avancée, il est toutefois gradué en fonction de son utilisation et propose même une offre gratuite permettant 10 000 requêtes par mois et 1 million d'enregistrements.
 Vos données sont synchronisées sur les serveurs d’Algolia, qui s’engage sur un taux de réponse extrêmement rapide.
-La rapidité des résultats et la pertinence de la recherche améliorent le taux de conversion.
+La rapidité des résultats et la pertinence de la recherche améliorent le taux de conversion, avec par exemple une autocomplétion quasi instantanée.
 Algolia est compatible avec n’importe quel langage informatique et peut donc s’intégrer dans votre projet facilement.
 
 ## Algolia, une pousse française !

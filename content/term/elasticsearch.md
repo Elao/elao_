@@ -10,13 +10,11 @@ metaDescription : "Elao a développé une expertise dans la mise en place d'Elas
 
 ElasticSearch est un logiciel open source assurant **une recherche rapide et pertinente dans vos bases de données**. Chez Elao, nous l'utilisons en grande majorité pour des recherches de géolocalisations, par exemple pour trouver une offre d'emploi près de son domicile ou dans un rayon d'un certain nombre de kilomètre, ou bien pour de la recherche plus classique de texte.
 
-##Qu'est ce qui nous fait choisir ElasticSearch, chez Elao ?
+## Qu'est-ce qui nous fait choisir ElasticSearch, chez Elao ?
 
 - C'est un **logiciel opensource**, ce qui signifie qu'il n'y a pas d'abonnement mensuel payant.
-
 - ElasticSearch peut s'installer sur le même serveur que l'application : cela garantit que les données ne transitent pas, tout est calculé "sur place". Il faut compter, en revanche, un coût d'installation et de maintenance plus élevé des serveurs.
-
-- Il est possible de configurer ElasticSearch pour obtenir une multitude de type de recherches différentes.
+- Il est possible de configurer ElasticSearch pour obtenir une multitude de types de recherches différentes.
 
 ## Comment ElasticSearch peut fournir une réponse pertinente ?
 
@@ -24,8 +22,8 @@ ElasticSearch fournit de multiples outils permettant de paramétrer la recherche
 
 Tout l'enjeu de la pertinence se trouve également dans les différents moyens d'obtenir un résultat malgré des fautes de frappe, par exemple, ou l'emploi d'un mot très similaire ou de même racine. C'est ce que propose ElasticSearch.
 
-##ElasticSearch pour votre projet
+## ElasticSearch pour votre projet
 
 Obtenir un résultat de recherche pertinent est l'enjeu du moteur de recherche. Nous connaissons ces problématiques, et nous sommes capables d'apporter notre expertise pour vous guider vers le meilleur choix pour votre application selon vos besoins et les particularités de votre projet. En effet, ElasticSearch peut être une réponse pertinente, mais il existe d'autres solutions techniques telles qu'[Algolia](./algolia.md) ou encore MeiliSearch, que nous implémentons également selon les besoins de nos clients.
 
-Nous pouvons intervenir à la fois pour mettre en réfléchir à une solution et mettre en place ElasticSearch dans le cadre du développement de votre application, ou bien nous pouvons vous apporter une expertise technique en tant que consultant pour faire auditer ou faire évoluer votre utilisation d'ElasticSearch.
+Nous pouvons intervenir à la fois pour mettre en réfléchir à une solution et mettre en place [ElasticSearch](https://www.elastic.co/fr/elasticsearch) dans le cadre du développement de votre application, ou bien nous pouvons vous apporter une expertise technique en tant que consultant pour faire auditer ou faire évoluer votre utilisation d'ElasticSearch.

@@ -5,7 +5,7 @@
         <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/577/blog</link>
-        <pubDate>Mon, 06 Nov 2023 14:38:36 +0000</pubDate>
+        <pubDate>Mon, 06 Nov 2023 15:05:22 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/577/apple-touch-icon.png</url>
@@ -73,7 +73,7 @@
                                 </item>
                 <item>
             <title>L&#039;accessibilité de l&#039;écriture inclusive, ça donne quoi ?</title>
-            <pubDate>Mon, 06 Nov 2023 14:37:14 +0000</pubDate>
+            <pubDate>Mon, 06 Nov 2023 15:04:04 +0000</pubDate>
             <description>
                 <![CDATA[ Expérimentations autour de l&#039;accessibilité liée à l&#039;écriture inclusive. ]]>
             </description>

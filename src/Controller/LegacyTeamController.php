@@ -15,13 +15,17 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/la-tribu')]
 class LegacyTeamController extends AbstractController
 {
-    #[Route]
+    #[Route(options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function list(): Response
     {
         return $this->redirectToRoute('team', [], Response::HTTP_MOVED_PERMANENTLY);
     }
 
-    #[Route('/{member}')]
+    #[Route('/{member}', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function show(Member $member): Response
     {
         return $this->redirectToRoute('team_member', [

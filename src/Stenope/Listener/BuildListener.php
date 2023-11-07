@@ -28,11 +28,25 @@ class BuildListener implements EventSubscriberInterface
             return;
         }
 
+        $this->addTeamMemberSignatureUrls();
+        $this->addLegacyTeamMemberRedirects();
+    }
+
+    private function addTeamMemberSignatureUrls(): void
+    {
         // For each active member, we pre-generate their mail signature URLs,
         // so it's included in the build despite not being linked anywhere:
         /** @var Member $member */
         foreach ($this->manager->getContents(Member::class, [], ['active' => true]) as $member) {
             $this->urlGenerator->generate('team_member_mail_signature', ['member' => $member->slug]);
+        }
+    }
+
+    private function addLegacyTeamMemberRedirects(): void
+    {
+        /** @var Member $member */
+        foreach ($this->manager->getContents(Member::class, [], ['active' => true]) as $member) {
+            $this->urlGenerator->generate('app_legacyteam_show', ['member' => $member->slug]);
         }
     }
 

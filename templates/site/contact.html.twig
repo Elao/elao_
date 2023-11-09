@@ -28,22 +28,22 @@
                             </div>
                         </div>
 
-                        <div class="contact__infos" itemscope itemtype="https://schema.org/Organization">
+                        <div class="contact__infos">
                             <div class="contact__image">
                                 <div class="contact__layer-diagonal-light"></div>
                                 <div class="contact__layer-hologram"></div>
                                 <img src="{{ asset('build/images/pages/contact/stamp.svg') }}" alt="">
                             </div>
-                            <p class="name" itemprop="name">elao</p>
-                            <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                            <p class="name">elao</p>
+                            <address>
                                 <a href="{{ site.contact.address.google_maps }}" target="_blank">
-                                    <span itemprop="streetAddress">{{ site.contact.address.street_address }}</span><br/>
-                                    <span itemprop="addressLocality">{{ site.contact.address.address_locality }}</span>
+                                    <span>{{ site.contact.address.street_address }}</span><br/>
+                                    <span>{{ site.contact.address.address_postalCode }} {{ site.contact.address.address_locality }}</span>
                                 </a>
                             </address>
                             <address>
-                                <a href="tel:+33482533719" itemprop="telephone">{{ site.contact.phone }}</a>
-                                <a href="mailto:contact@elao.com" itemprop="email" data-contact-target="email">{{ site.contact.email }}</a>
+                                <a href="tel:+33482533719">{{ site.contact.phone }}</a>
+                                <a href="mailto:contact@elao.com" data-contact-target="email">{{ site.contact.email }}</a>
                             </address>
                         </div>
                     </div>

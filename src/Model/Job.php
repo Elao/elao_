@@ -23,8 +23,9 @@ class Job
     public JobContractType $contractType;
     public string $place;
     public ?string $formation;
-    public ?string $experience;
-    public ?string $remuneration;
+    public ?int $experience;
+    public ?int $remunerationMin = null;
+    public ?int $remunerationMax = null;
 
     public bool $active = false;
 
@@ -34,6 +35,28 @@ class Job
     public function getFullTitle(): string
     {
         return implode(' ', $this->title);
+    }
+
+    public function getFullRemuneration(): ?string
+    {
+        if (null !== $this->remunerationMin && null !== $this->remunerationMax) {
+            return sprintf('%s - %s K€', $this->remunerationMin / 1000, $this->remunerationMax / 1000);
+        }
+
+        if (null !== $this->remunerationMin && null === $this->remunerationMax) {
+            return sprintf('%s K€', $this->remunerationMin / 1000);
+        }
+
+        return null;
+    }
+
+    public function getExperienceInMonths(): ?string
+    {
+        if ($this->experience !== null) {
+            return sprintf('%s', $this->experience * 12);
+        }
+
+        return null;
     }
 
     public function __construct()

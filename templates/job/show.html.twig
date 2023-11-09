@@ -6,6 +6,98 @@
 {% block og_image absolute_url(asset(job.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(job.twitterImage|glide_image_preset('twitter_card'))) %}
 
+{% block structured_data %}
+        {% set data =
+            {
+                '@context': 'https://schema.org',
+                '@type': 'JobPosting',
+                'title': job.title[1],
+                'description': job.description,
+                'datePosted': job.date|date('c'),
+                'employmentType': job.contractType.readable,
+                'hiringOrganization' : {
+                    '@type': 'Organization',
+                    'name': 'Elao',
+                    'sameAs': url('homepage'),
+                    'logo': absolute_url(asset('images/corpo/logo.svg')),
+                },
+                'jobLocation': {
+                '@type': 'Place',
+                    'address': {
+                        '@type': 'PostalAddress',
+                        'streetAddress': site.contact.address.street_address,
+                        'postalCode': site.contact.address.address_postalCode,
+                        'addressLocality': site.contact.address.address_locality,
+                        'addressRegion': site.contact.address.address_region,
+                        'addressCountry': site.contact.address.address_country,
+                    }
+                },
+                'jobStartDate': job.hiringDate ? job.hiringDate|date('c') : 'Dès que possible',
+            }
+        %}
+
+        {% if job.remunerationMin is not null %}
+            {% if job.remunerationMax is not null %}
+                {% set salary = {
+                    'baseSalary': {
+                        '@type': 'MonetaryAmount',
+                        'currency': 'EUR',
+                        'value': {
+                            '@type': 'QuantitativeValue',
+                            'minValue': job.remunerationMin,
+                            'maxValue': job.remunerationMax,
+                            'unitText': "YEAR",
+                        }
+                    }
+                } %}
+            {% else %}
+                {%  set salary = {
+                    'baseSalary': {
+                        '@type': 'MonetaryAmount',
+                        'currency': 'EUR',
+                        'value': {
+                            '@type': 'QuantitativeValue',
+                            'value': job.remunerationMin,
+                            'unitText': 'YEAR',
+                        }
+                    }
+                } %}
+            {% endif %}
+            {% set data = data|merge(salary) %}
+        {% endif %}
+
+         {% if job.formation %}
+             {% set formation = {
+                'qualifications' : {
+                    '@type' : 'EducationalOccupationalCredential',
+                    'educationalLevel' : job.formation
+                }
+             } %}
+             {% set data = data|merge(formation) %}
+        {% endif %}
+
+        {% if job.experience %}
+             {% set experience = {
+                 'experienceRequirements' : {
+                     '@type': 'OccupationalExperienceRequirements',
+                     'monthsOfExperience': job.experienceInMonths
+                 }
+             } %}
+             {% set data = data|merge(experience) %}
+        {% endif %}
+
+    {% autoescape false %}
+        <script type="application/ld+json">
+            {{ data|json_encode(
+                constant('JSON_PRETTY_PRINT') b-or
+                constant('JSON_UNESCAPED_SLASHES') b-or
+                constant('JSON_UNESCAPED_UNICODE')
+            ) }}
+        </script>
+    {% endautoescape %}
+
+{% endblock %}
+
 {% block content %}
     <div class="container">
         {{ macros.breadcrumb([
@@ -14,9 +106,9 @@
             {path: '#', label: job.fullTitle},
         ]) }}
 
-        <div itemscope itemtype="https://schema.org/JobPosting">
+        <div>
             <div class="banner">
-                <h1 class="banner__title" data-aos="fade-right" itemprop="title">
+                <h1 class="banner__title" data-aos="fade-right">
                     {% for title in job.title %}
                         {% if loop.first %}
                             {{ title }}
@@ -26,34 +118,32 @@
                     {% endfor %}
                 </h1>
                 <div class="banner__highlight" data-aos="zoom-in">
-                    <p itemprop="description">{{ job.description }}</p>
+                    <p>{{ job.description }}</p>
                 </div>
             </div>
 
-            <div class="page-job-posting" itemscope itemtype="https://schema.org/JobPosting">
+            <div class="page-job-posting">
                 <ul class="tile-list">
                     <li class="tile" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--document" aria-hidden="true"></i>
                             Type de contrat
                         </small>
-                        <p itemprop="employmentType">{{ job.contractType.readable }}</p>
+                        <p>{{ job.contractType.readable }}</p>
                     </li>
                     <li class="tile tile--medium" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--location" aria-hidden="true"></i>
                             Lieu
                         </small>
-                        <p itemprop="jobLocation">{{ job.place }}</p>
+                        <p>{{ job.place }}</p>
                     </li>
                     <li class="tile tile--medium" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--time" aria-hidden="true"></i>
                             Prise de poste
                         </small>
-                        <p itemprop="jobStartDate">
-                            {{ job.hiringDate ? job.hiringDate|format_date(pattern='MMMM Y', locale='fr')|capitalize : 'Dès que possible' }}
-                        </p>
+                        <p>{{ job.hiringDate ? job.hiringDate|format_date(pattern='MMMM Y', locale='fr')|capitalize : 'Dès que possible' }}</p>
                     </li>
                 </ul>
                 <ul class="tile-list">
@@ -62,21 +152,27 @@
                             <i class="icon icon--diploma" aria-hidden="true"></i>
                             Niveau de formation
                         </small>
-                        <p itemprop="educationRequirements">{{ job.formation ?? '-' }}</p>
+                        <p>{{ job.formation ?? '-' }}</p>
                     </li>
                     <li class="tile" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--time" aria-hidden="true"></i>
                             Expérience
                         </small>
-                        <p itemprop="experienceRequirements">{{ job.experience ?? '-' }}</p>
+                        <p>
+                            {% if (job.experience) %}
+                                {{ job.experience }} ans
+                            {% else %}
+                                -
+                            {% endif %}
+                        </p>
                     </li>
                     <li class="tile" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--bill" aria-hidden="true"></i>
                             Rémunération
                         </small>
-                        <p itemprop="estimatedSalary">{{ job.remuneration ?? '-' }}</p>
+                        <p>{{ job.fullRemuneration ?? '-'}} </p>
                     </li>
                 </ul>
 

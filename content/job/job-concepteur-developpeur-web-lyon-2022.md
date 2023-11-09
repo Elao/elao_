@@ -2,15 +2,16 @@
 title:
     - "Nous recherchons"
     - "un·e Concepteur·rice / Développeur·euse d'applications web"
-description:  "Nous recherchons un·e concepteur·rice d'applications web"
-date:         "2022-03-21"
-active:       true
-contractType: CDI
-place:        "Lyon, télétravail partiel possible"
-hiringDate:   ~
-formation:    ~
-experience:   "> 5 ans"
-remuneration: "40 à 45 k €"
+description:     "Nous recherchons un·e concepteur·rice d'applications web"
+date:            "2022-03-21"
+active:          true
+contractType:    CDI
+place:           "Lyon, télétravail partiel possible"
+hiringDate:      ~
+formation:       "Bac +2 minimum"
+experience:      2
+remunerationMin: 40000
+remunerationMax: 45000
 ---
 
 Elao est un **atelier de développement web et mobile** qui propose à ses clients la conception et le développement d’applications métier **sur mesure**. Nous apprécions particulièrement les projets de 3 à 6 mois confiés et pris en charge par une équipe dédiée.

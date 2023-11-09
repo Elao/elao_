@@ -24,16 +24,16 @@
                     <p>Nous sommes en recherche perpétuelle de nouveaux talents.</p>
                 </div>
             </div>
-            <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
             {% if jobs is not empty %}
+                <h2 class="h2--dash" id="offers">Les offres d’emploi ouvertes</h2>
                 <ul class="article-list">
                     {% for job in jobs %}
-                        <li class="miniature-inline" data-aos="fade-up-left" itemscope itemtype="https://schema.org/JobPosting">
+                        <li class="miniature-inline" data-aos="fade-up-left">
                             <div class="miniature-inline__content">
-                                <a href="{{ path('job', { job: job.slug }) }}" class="title" itemprop="title">
+                                <a href="{{ path('job', { job: job.slug }) }}" class="title">
                                     {{ job.fullTitle }}
                                 </a>
-                                <p class="description" itemprop="description">
+                                <p class="description">
                                     {{ job.description }}
                                 </p>
                                 <a href="{{ path('job', { job: job.slug }) }}" class="btn btn--secondary btn--animated">
@@ -47,24 +47,21 @@
                     {% endfor %}
                 </ul>
             {% else %}
-                <ul class="article-list">
-                    <li class="miniature-inline miniature-inline--small no-result" data-aos="fade-up-left">
-                        <div class="miniature-inline__content">
-                            <span class="title">Nous n'avons aucun poste ouvert en ce moment. Vous souhaitez nous envoyer une candidature spontanée ?</span>
-                            <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
-                                <span>
-                                    Envoyez nous un message
-                                    {% include 'partials/svg-arrow.html.twig' %}
-                                </span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+                <div class="offset-content">
+                    <h2>Nous n'avons aucun poste ouvert en ce moment.</h2>
+                    <p>Vous souhaitez nous envoyer une candidature spontanée ?</p>
+                    <a href="{{ path('contact') }}" class="btn btn--secondary btn--animated">
+                        <span>
+                            Envoyez nous un message
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
             {% endif %}
 
             <h2 class="h2--dash">Mais pourquoi venir travailler avec nous ?</h2>
             <div class="offset-content">
-                <p>Vous êtes interessé·e mais vous ne savez pas encore à quoi vous attendre ? Petit tour d'horizon...</p>
+                <p>Vous êtes intéressé·e mais vous ne savez pas encore à quoi vous attendre ? Petit tour d'horizon...</p>
                 <blockquote>Adeptes de l'adage « le talent, c’est d’avoir envie de faire quelque chose », nous privilégions toute personnalité volontaire et motivée par la <strong>soif de nouveaux challenges techniques</strong> au sein d’une <strong>équipe unie.</strong></blockquote>
             </div>
 

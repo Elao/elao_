@@ -9,7 +9,7 @@ contractType: CDI
 place:        "Lyon, télétravail partiel possible"
 hiringDate:   ~
 formation:    ~
-experience:   "> 5 ans"
+experience:   5
 remuneration: "50 à 55 k €"
 ---
 

@@ -2,15 +2,17 @@
 title:
     - "Exemple d'annonce:"
     - "Développeur·euse backend"
-description:  "Nous cherchons un·e développeur·euse backend à Lyon."
-date:         "2021-04-23"
-active:       true
-contractType: CDI # 'CDD', 'CDI', 'INTERNSHIP' ou 'WORK-STUDY'
-place:        "Lyon, remote possible"
-hiringDate:   "2021-06-01"
-formation:    "BAC +3"
-experience:   "> 2 ans"
-remuneration: "Entre 1K€ et 100K€"
+description:     "Nous cherchons un·e développeur·euse backend à Lyon."
+date:            "2021-04-23"
+active:          true
+contractType:    CDI # 'CDD', 'CDI', 'INTERNSHIP' ou 'WORK-STUDY'
+place:           "Lyon, remote possible"
+hiringDate:      "2021-06-01"
+formation:       "BAC +3"
+# Experience in years
+experience:      2 # Ans
+remunerationMin: 1000 # Euros
+remunerationMax: 100000 # Euros
 ---
 
 ## Description

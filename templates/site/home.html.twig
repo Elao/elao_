@@ -9,6 +9,35 @@
     {{ parent() }}
 {% endblock %}
 
+{% block structured_data %}
+    {% autoescape false %}
+    <script type="application/ld+json">
+        {{- {
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'name': site.title|trim('_'),
+            'slogan': site.slogan,
+            'url': url('homepage'),
+            'logo': url('homepage')~'images/corpo/logo.svg',
+            'address': {
+                '@type': 'PostalAddress',
+                'streetAddress': site.contact.address.street_address,
+                'postalCode': site.contact.address.address_postalCode,
+                'addressLocality': site.contact.address.address_locality,
+                'addressRegion': site.contact.address.address_region,
+                'addressCountry': site.contact.address.address_country,
+            },
+            'email': site.contact.email,
+            'telephone': site.contact.phone,
+        }|json_encode(
+            constant('JSON_PRETTY_PRINT') b-or
+            constant('JSON_UNESCAPED_SLASHES') b-or
+            constant('JSON_UNESCAPED_UNICODE')
+        ) }}
+    </script>
+    {% endautoescape %}
+{% endblock %}
+
 {% block content %}
     <div class="page-home container">
         <div class="banner-home">

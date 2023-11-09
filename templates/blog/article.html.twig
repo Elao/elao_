@@ -23,8 +23,8 @@
             '@type': 'NewsArticle',
             headline: article.title,
             image: [absolute_url(article.thumbnail)],
-            datePublished: article.date|format_date('long'),
-            dateModified: article.lastModifiedOrCreated|format_date('long'),
+            datePublished: article.date|date('c'),
+            dateModified: article.lastModifiedOrCreated|date('c'),
             author: article.authorsArray | map(author => {
                 '@type': 'Person',
                 name: author.name,

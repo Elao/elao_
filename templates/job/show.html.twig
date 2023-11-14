@@ -1,7 +1,7 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
-{% block meta_title job.titleSeo ?? job.fullTitle %}
+{% block meta_title job.metaTitle ?? job.fullTitle %}
 {% block meta_description job.metaDescription ?? job.description %}
 {% block og_image absolute_url(asset(job.ogImage|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(job.twitterImage|glide_image_preset('twitter_card'))) %}

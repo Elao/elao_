@@ -28,9 +28,9 @@
             author: article.authorsArray | map(author => {
                 '@type': 'Person',
                 name: author.name,
-                url: absolute_url(author.active
-                    ? path('team_member', { member: author.slug })
-                    : path('team'),
+                url: author.active
+                    ? url('team_member', { member: author.slug })
+                    : url('team')
                 ),
             }),
             keywords: article.tags|map(tag => tag
@@ -49,10 +49,20 @@
 
 {% block content %}
     <div class="container">
-        {{ macros.breadcrumb([
-            {path: path('homepage'), label: 'Accueil'},
-            {path: '#', label: article.title },
-        ]) }}
+        {# TODO:
+            This is used for crawling to work and include parent path links to the build.
+            Remove for more appropriate place if any?
+        #}
+        {% with {
+            parentPath: article.slug|split('/')[0:-1]|join('/'),
+        } %}
+            {{ macros.breadcrumb([
+                { path: path('homepage'), label: 'Accueil' },
+                { path: path('blog'), label: 'Blog' },
+                { path: path('blog_articles_from_path', { path: parentPath }), label: parentPath|u.camel.title },
+                { path: '#', label: article.title },
+            ]) }}
+        {% endwith %}
 
         <div class="article-banner">
             <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>

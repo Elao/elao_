@@ -29,12 +29,19 @@ twig:
                 matomo: '%env(MATOMO_ID)%'
 
             menu:
-                - { path: 'services', label: 'Services' }
-                - { path: 'approach', label: 'Démarche' }
+                - { path: 'services', label: 'Services', routes: [ia, application, hosting, consulting] }
+                - { path: 'approach', label: 'Démarche', routes: [collaboration, methodology] }
                 - { path: 'case_studies', label: 'Études de cas' }
                 - { path: 'values', label: 'Valeurs' }
-                - { path: 'team', label: "L'équipe" }
-                - { path: 'blog', label: 'Blog' }
+                - { path: 'team', label: "L'équipe", routes: ['team_member'] }
+                - path: 'blog'
+                  label: 'Blog'
+                  routes:
+                      - blog_articles_from_path
+                      - blog_articles_from_path_page
+                      - blog_article
+                      - blog_tag
+                      - blog_tag_page
                 - { path: 'contact', label: 'Contact', icon: 'contact', mobileClass: 'nav-mobile__item--large' }
             footer:
                 -

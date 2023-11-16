@@ -1,6 +1,4 @@
 .article-list {
-  margin-left: -20px;
-  margin-right: -20px;
   margin-bottom: 0;
   padding: 0;
   list-style: none;
@@ -9,6 +7,10 @@
 
   .miniature-inline {
     margin: 0 20px 80px;
+  }
+
+  .miniature-inline + .btn {
+    margin: 60px 20px 0;
   }
 }
 

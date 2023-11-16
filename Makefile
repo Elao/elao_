@@ -2,6 +2,11 @@
 .PHONY: build
 
 PORT_PREFIX = 350
+PROJECT_DOMAIN = www.ela.ooo
+
+define manala_project_host
+$(PROJECT_DOMAIN)$(if $(1),:$(PORT_PREFIX)$(shell printf "%02d" $(1)))
+endef
 
 -include .manala/Makefile
 
@@ -45,12 +50,17 @@ serve:
 ## Dev - Start Symfony server
 serve.php: export SYMFONY_PORT ?= $(PORT_PREFIX)80
 serve.php:
+	$(call manala_message, Will be available at http://$(call manala_project_host):$(SYMFONY_PORT) )
+	-open http://www.ela.ooo:$(SYMFONY_PORT)
 	symfony server:start --no-tls --port=$(SYMFONY_PORT)
 
 ## Dev - Start webpack dev server with HMR (Hot reload)
 serve.assets: export WEBPACK_PORT ?= $(PORT_PREFIX)81
 serve.assets:
-	npx encore dev-server --mode=development --port=$(WEBPACK_PORT)
+	npx encore dev-server \
+		--mode=development \
+		--port=$(WEBPACK_PORT) \
+		--host=$(PROJECT_DOMAIN)
 
 ## Dev - Watch assets
 watch.assets:

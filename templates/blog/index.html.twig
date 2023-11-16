@@ -55,6 +55,25 @@
                             </a>
                         </div>
                     </li>
+                    <li class="article-filter">
+                        <ul>
+                            <li class="article-filter__item">
+                                <a href="#" class="btn btn--secondary">#Dev</a>
+                            </li>
+                            <li class="article-filter__item">
+                                <a href="#" class="btn btn--secondary">#Elao</a>
+                            </li>
+                            <li class="article-filter__item">
+                                <a href="#" class="btn btn--secondary">#Infra</a>
+                            </li>
+                            <li class="article-filter__item">
+                                <a href="#" class="btn btn--secondary">#Methodo</a>
+                            </li>
+                            <li class="article-filter__item">
+                                <a href="#" class="btn btn--secondary">#Tech</a>
+                            </li>
+                        </ul>
+                    </li>
                 {% elseif page == minPage and loop.index < 5 %}
                     <li class="miniature-inline" data-aos="fade-left">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">

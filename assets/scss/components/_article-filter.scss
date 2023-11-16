@@ -1,0 +1,36 @@
+.article-filter {
+  margin: 0 20px 80px;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.article-filter__item {
+  margin: 0;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .article-filter__item {
+    width: calc(50% - 10px);
+
+    .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

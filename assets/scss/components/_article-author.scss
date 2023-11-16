@@ -95,6 +95,12 @@
   }
 }
 
+.article-author--large {
+  margin: 0 0 50px;
+  padding: 40px 30px;
+  background-color: $color-dark;
+}
+
 @media (max-width: $screen-xs) {
   .article-author__social {
     width: 100%;

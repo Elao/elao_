@@ -81,15 +81,15 @@
                             {% endfor %}
                         </div>
                         <span class="article-author__info">
-                        Écrit par
-                        {% for author in authors %}
-                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
-                                <strong>{{ author.name }}</strong>
-                            </a>
-                        {% else %}
-                            <strong>La team élao</strong>
-                        {% endfor %}
-                    </span>
+                            Écrit par
+                            {% for author in authors %}
+                                <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                    <strong>{{ author.name }}</strong>
+                                </a>
+                            {% else %}
+                                <strong>La team élao</strong>
+                            {% endfor %}
+                        </span>
                     </div>
                 {% endblock %}
                 <div class="article-info__date">

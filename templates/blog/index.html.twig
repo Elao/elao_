@@ -12,6 +12,33 @@
 
 {% block content %}
     <div class="container">
+
+    {# Todo :
+        - afficher le block si la page blog index est filtrée par auteur
+        - ou simple image si membre inactif ou si l'auteur est Elao
+    #}
+    <div class="article-author article-author--large">
+        <div class="article-author__image">
+            {# Todo :
+                - lien vers la fiche membre (/equipe/membre)
+                - ou simple image si membre inactif ou si l'auteur est Elao
+            #}
+            <a href="#">
+                <img src="https://picsum.photos/200" />
+            </a>
+        </div>
+        <span class="article-author__info">
+            Les articles de
+            {# Todo :
+                - lien vers la fiche membre (/equipe/membre)
+                - ou simple texte si membre inactif ou si l'auteur est Elao
+            #}
+            <a href="#">
+                <strong>Hercule Poirot</strong>
+            </a>
+        </span>
+    </div>
+
     {% block articles %}
         <ul class="article-list">
             {% for article in articles %}
@@ -55,6 +82,7 @@
                             </a>
                         </div>
                     </li>
+                    {# Todo : Liens vers les catégories des articles de blog (identique à l'arborescence dans content/blog, en ignorant "styleguide") #}
                     <li class="article-filter">
                         <ul>
                             <li class="article-filter__item">

@@ -75,23 +75,22 @@ class BlogController extends AbstractController
     }
 
     /**
-     * Attempt to render an article by forwarding to {@link self::article()} if a match is found.
+     * Attempt to render an article by using {@link self::renderArticle()} if a match is found.
      * Otherwise, will attempt to list articles from the same parent path.
      *
      * These routes have lower priority than other ones, since it's almost a catch-all route.
      */
     #[Route('/{path}/{!page}', name: 'blog_articles_from_path_page', requirements: ['page' => '\d+'], priority: -100)]
     #[Route('/{path}', name: 'blog_articles_from_path', requirements: ['path' => '.+'], priority: -100)]
-    public function articlesFromPath(string $path, int $page = 1, int $perPage = 20): Response
+    public function articlesFromPath(Request $request, string $path, int $page = 1, int $perPage = 20): Response
     {
         try {
             // Attempt to find a matching article:
-            $this->manager->getContent(Article::class, $path);
+            $article = $this->manager->getContent(Article::class, $path);
+            $request->attributes->set('_route', 'blog_article');
 
             // and redirect to it if found:
-            return $this->forward('App\Controller\BlogController::article', [
-                'article' => $path,
-            ]);
+            return $this->renderArticle($article);
         } catch (ContentNotFoundException $ex) {
             // If no article matches, continue and try to list articles for the matching path
         }
@@ -120,16 +119,18 @@ class BlogController extends AbstractController
     }
 
     /**
-     * If {@link self::articlesFromPath()} found a match, it'll forward to this action to render the article.
+     * If {@link self::articlesFromPath()} found a match,
+     * it'll execute {@link self::renderArticle()} instead of this action to render the article.
      */
     #[Route('/{article}', name: 'blog_article', requirements: ['article' => '.+'], priority: -100)]
-    public function article(Request $request, Article $article): Response
+    public function article(): void
     {
-        if (!$request->attributes->has('_route')) {
-            // _route attribute might not be set if forwarded from articlesFromPath controller
-            $request->attributes->set('_route', 'blog_article');
-        }
+        // noop, this action is only used for url generation
+        throw new \LogicException('This action should never be reached');
+    }
 
+    private function renderArticle(Article $article): Response
+    {
         return $this->render('blog/article.html.twig', [
             'article' => $article,
         ])->setLastModified($article->getLastModifiedOrCreated());

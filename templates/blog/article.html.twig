@@ -9,9 +9,7 @@
 {% block og_image absolute_url(asset(article.thumbnail|glide_image_preset('opengraph_image'))) %}
 {% block twitter_image absolute_url(asset(article.thumbnail|glide_image_preset('twitter_card'))) %}
 
-{% block meta %}
-    {{ parent() }}
-
+{% block meta_rss %}
     <link rel="alternate" type="application/rss+xml" href="{{ path('blog_rss') }}" title="Le blog de l'équipe d'Elao" />
 {% endblock %}
 
@@ -73,7 +71,7 @@
                     <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                         <div class="article-author__image">
                             {% for author in authors %}
-                                <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                <a {%- if author.active %} href="{{ path('blog_author', { author: author.slug }) }}"{% endif -%}>
                                     <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                                 </a>
                             {% else %}
@@ -83,11 +81,11 @@
                         <span class="article-author__info">
                             Écrit par
                             {% for author in authors %}
-                                <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                <a href="{{ path('blog_author', { author: author.slug }) }}">
                                     <strong>{{ author.name }}</strong>
                                 </a>
                             {% else %}
-                                <strong>La team élao</strong>
+                                <strong>La team elao</strong>
                             {% endfor %}
                         </span>
                     </div>
@@ -195,13 +193,13 @@
                 {% for author in article.authors %}
                     <div class="article-author">
                         <div class="article-author__image">
-                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                            <a {%- if author.active %} href="{{ path('blog_author', { author: author.slug }) }}"{% endif -%}>
                                 <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                             </a>
                         </div>
                         <span class="article-author__info">
                             {{ loop.first ? 'Écrit par' : 'Co-écrit par' }}
-                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                            <a {%- if author.active %} href="{{ path('blog_author', { author: author.slug }) }}"{% endif -%}>
                                 <strong>{{ author.name }}</strong>
                             </a>
                         </span>

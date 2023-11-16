@@ -1,0 +1,51 @@
+{% import "macros.html.twig" as macros %}
+{% extends 'blog/index.html.twig' %}
+
+{% block meta_title 'Les articles de ' ~ author.pseudo ?? author.name ~ ', ' ~ author.position ~ ' chez Elao' %}
+{% block meta_description 'Découvrez les articles techniques (ou non) rédigés par ' ~ author.pseudo ?? author.name ~ ' de l\'équipe Elao !' %}
+
+{% block meta_rss %}
+    <link rel="alternate" type="application/rss+xml" href="{{ path('blog_author_rss', { author: author.slug }) }}" title="Les articles de {{ author.pseudo ?? author.name }}, {{ author.position }} chez Elao" />
+{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        {{ macros.breadcrumb([
+            { path: path('homepage'), label: 'Accueil' },
+            { path: path('blog'), label: 'Blog' },
+            { path: '#', label: author.name  },
+        ]) }}
+
+        <div class="article-author article-author--large">
+            <div class="article-author__image">
+                {% if author.active %}
+                    <a href="{{ path('team_member', { member: author.slug }) }}">
+                        <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
+                    </a>
+                {% else %}
+                    <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
+                {% endif %}
+            </div>
+            <span class="article-author__info">
+                Les articles de
+                {% if author.active %}
+                    <a href="{{ path('team_member', { member: author.slug }) }}">
+                        <strong>{{ author.name }}</strong>
+                    </a>
+                {% else %}
+                    <strong>{{ author.name }}</strong>
+                {% endif %}
+            </span>
+        </div>
+
+
+        {{ block('articles') }}
+    </div>
+
+    {% include 'blog/pagination.html.twig' with {
+        route: 'blog_author_page',
+        minPageRoute: 'blog_author',
+        routeParams: { author: author.slug }
+    } %}
+{% endblock content %}

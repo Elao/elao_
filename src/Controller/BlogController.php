@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Article;
+use App\Model\Member;
 use Stenope\Bundle\ContentManagerInterface;
 use Stenope\Bundle\Exception\ContentNotFoundException;
 use Stenope\Bundle\Service\ContentUtils;
@@ -59,6 +60,27 @@ class BlogController extends AbstractController
         ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
+    #[Route('/auteur/{author}', name: 'blog_author')]
+    #[Route('/auteur/{author}/{!page}', name: 'blog_author_page', requirements: ['page' => '\d+'])]
+    public function articlesFromAuthor(Request $request, Member $author, int $page = 1, int $perPage = 20): Response
+    {
+        $articles = $this->manager->getContents(
+            Article::class,
+            ['date' => false],
+            fn (Article $article): bool => $article->hasAuthor($author)
+        );
+
+        $pageArticles = \array_slice($articles, $perPage * ($page - 1), $perPage);
+
+        return $this->render('blog/author.html.twig', [
+            'author' => $author,
+            'articles' => $pageArticles,
+            'page' => $page,
+            'minPage' => 1,
+            'maxPage' => ceil(\count($articles) / $perPage),
+        ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
+    }
+
     #[Route('/rss.xml', name: 'blog_rss', options: [
         'stenope' => ['sitemap' => false],
     ])]
@@ -69,7 +91,27 @@ class BlogController extends AbstractController
         $response = new Response();
         $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');
 
-        return $this->render('blog/rss.xml.twig', [
+        return $this->render('blog/rss/rss.xml.twig', [
+            'articles' => $articles,
+        ], $response);
+    }
+
+    #[Route('/auteur/{author}/rss.xml', name: 'blog_author_rss', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
+    public function rssFromAuthor(Member $author): Response
+    {
+        $articles = $this->manager->getContents(
+            Article::class,
+            ['date' => false],
+            fn (Article $article): bool => $article->hasAuthor($author)
+        );
+
+        $response = new Response();
+        $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');
+
+        return $this->render('blog/rss/rssFromAuthor.xml.twig', [
+            'author' => $author,
             'articles' => $articles,
         ], $response);
     }

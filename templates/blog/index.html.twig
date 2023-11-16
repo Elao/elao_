@@ -4,41 +4,12 @@
 {% block meta_title "Le blog de l'équipe d'Elao" %}
 {% block meta_description "Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !" %}
 
-{% block meta %}
-    {{ parent() }}
-
+{% block meta_rss %}
     <link rel="alternate" type="application/rss+xml" href="{{ path('blog_rss') }}" title="Le blog de l'équipe d'Elao" />
 {% endblock %}
 
 {% block content %}
     <div class="container">
-
-    {# Todo :
-        - afficher le block si la page blog index est filtrée par auteur
-        - ou simple image si membre inactif ou si l'auteur est Elao
-    #}
-    <div class="article-author article-author--large">
-        <div class="article-author__image">
-            {# Todo :
-                - lien vers la fiche membre (/equipe/membre)
-                - ou simple image si membre inactif ou si l'auteur est Elao
-            #}
-            <a href="#">
-                <img src="https://picsum.photos/200" />
-            </a>
-        </div>
-        <span class="article-author__info">
-            Les articles de
-            {# Todo :
-                - lien vers la fiche membre (/equipe/membre)
-                - ou simple texte si membre inactif ou si l'auteur est Elao
-            #}
-            <a href="#">
-                <strong>Hercule Poirot</strong>
-            </a>
-        </span>
-    </div>
-
     {% block articles %}
         <ul class="article-list">
             {% for article in articles %}
@@ -53,7 +24,7 @@
                                 <div class="article-author {{ authors|length > 1 ? 'article-author--multi' : '' }}">
                                     <div class="article-author__image">
                                         {% for author in authors %}
-                                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                            <a {%- if author.active %} href="{{ path('blog_author', { author: author.slug }) }}"{% endif -%}>
                                                 <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                                             </a>
                                         {% else %}
@@ -63,11 +34,11 @@
                                     <span class="article-author__info">
                                         Écrit par
                                         {% for author in authors %}
-                                            <a {%- if author.active %} href="{{ path('team_member', { member: author.slug }) }}"{% endif -%}>
+                                            <a {%- if author.active %} href="{{ path('blog_author', { author: author.slug }) }}"{% endif -%}>
                                                 <strong>{{ author.name }}</strong>
                                             </a>
                                         {% else %}
-                                            <strong>La team élao</strong>
+                                            <strong>La team elao</strong>
                                         {% endfor %}
                                     </span>
                                     <span class="article-author__info">

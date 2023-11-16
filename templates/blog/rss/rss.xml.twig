@@ -1,0 +1,6 @@
+{% extends 'blog/rss/baseRss.xml.twig' %}
+
+{% block rss_title "Le blog de l'équipe d'Elao" %}
+{% block rss_description "Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !" %}
+{% block rss_link url('blog') %}
+{% block rss_atom_link url('blog_rss') %}

@@ -1,0 +1,6 @@
+{% extends 'blog/rss/baseRss.xml.twig' %}
+
+{% block rss_title "Blog Elao - Les articles de %s, "|format(author.pseudo ?? author.name, author.position) %}
+{% block rss_description "Découvrez les articles techniques (ou non) rédigés par %s de l'équipe Elao"|format(author.pseudo ?? author.name) %}
+{% block rss_link url('blog_author', { author: author.slug }) %}
+{% block rss_atom_link url('blog_author_rss', { author: author.slug }) %}

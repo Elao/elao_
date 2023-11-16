@@ -18,7 +18,7 @@ images: ["content/images/casestudies/mjc-recruteur-mes-offres.png"]
 
 ## Le contexte du projet
 
-**MyJob.Company est une entreprise de recrutement : elle propose une plateforme d'offres d'emploi (job board) utilisant la cooptation.** Sa force est d'avoir une base de d'environ 60&nbsp;000 coopteurs capables de recommander des personnes de leurs réseaux pour les offres d'emploi publiées sur la plateforme. Les coopteurs perçoivent une prime pour les cooptations menant à un recrutement et les recruteurs ont accès une grande communauté de coopteurs.
+**MyJob.Company est une entreprise de recrutement : elle propose une plateforme d'offres d'emploi (job board) utilisant la cooptation.** Sa force est d'avoir une base d'environ 60&nbsp;000 coopteurs capables de recommander des personnes de leurs réseaux pour les offres d'emploi publiées sur la plateforme. Les coopteurs perçoivent une prime pour les cooptations menant à un recrutement et les recruteurs ont accès une grande communauté de coopteurs.
 
 **MyJob.Company a confié à Elao le développement de la refonte de leur plateforme ainsi que le développement de nouvelles fonctionnalités dans le cadre d'un changement de business model.**
 

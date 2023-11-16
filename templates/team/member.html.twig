@@ -154,8 +154,7 @@
                                     </div>
                                 </div>
                             {% endfor %}
-                            {# Todo : Lien vers la page blog filtrée sur les articles du member #}
-                            <a href="#" class="btn btn--secondary btn--animated">
+                            <a href="{{ path('blog_author', { author: member.slug }) }}" class="btn btn--secondary btn--animated">
                                 <span>
                                     Tous ses articles
                                     {% include 'partials/svg-arrow.html.twig' %}

@@ -2,10 +2,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
         <title>Blog Elao - Les articles de Maxime Colin, Développeur</title>
-        <description>Découvrez les articles techniques (ou non), rédigés par Maxime Colin de l'équipe Elao</description>
+        <description>Découvrez les articles techniques (ou non) rédigés par Maxime Colin de l'équipe Elao</description>
         <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/mcolin</link>
-        <pubDate>Fri, 17 Nov 2023 10:31:41 +0000</pubDate>
+        <pubDate>Fri, 17 Nov 2023 10:42:27 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>

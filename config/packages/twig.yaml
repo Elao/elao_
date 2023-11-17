@@ -58,6 +58,13 @@ twig:
                     - { path: 'blog', label: 'Blog' }
                     - { path: 'blog_rss', label: 'RSS' , attributes: { data-no-swup: true } }
 
+            blog:
+                categories:
+                    - { path: 'dev', label: '#Dev' }
+                    - { path: 'elao', label: '#Elao' }
+                    - { path: 'infra', label: '#Infra' }
+                    - { path: 'methodo', label: '#Méthodologie' }
+
         amabla_briefs_demo:
             host: https://elao.amabla.com
             briefs:

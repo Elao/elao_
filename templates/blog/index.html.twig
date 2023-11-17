@@ -82,24 +82,15 @@
                             </a>
                         </div>
                     </li>
-                    {# Todo : Liens vers les catégories des articles de blog (identique à l'arborescence dans content/blog, en ignorant "styleguide") #}
                     <li class="article-filter">
                         <ul>
-                            <li class="article-filter__item">
-                                <a href="#" class="btn btn--secondary">#Dev</a>
-                            </li>
-                            <li class="article-filter__item">
-                                <a href="#" class="btn btn--secondary">#Elao</a>
-                            </li>
-                            <li class="article-filter__item">
-                                <a href="#" class="btn btn--secondary">#Infra</a>
-                            </li>
-                            <li class="article-filter__item">
-                                <a href="#" class="btn btn--secondary">#Methodo</a>
-                            </li>
-                            <li class="article-filter__item">
-                                <a href="#" class="btn btn--secondary">#Tech</a>
-                            </li>
+                            {% for category in site.blog.categories %}
+                                <li class="article-filter__item">
+                                    <a href="{{ path('blog_articles_from_path', { path: category.path }) }}" class="btn btn--secondary">
+                                        {{ category.label }}
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </li>
                 {% elseif page == minPage and loop.index < 5 %}

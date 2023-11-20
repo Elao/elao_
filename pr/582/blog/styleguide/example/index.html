@@ -17,7 +17,7 @@
         <meta name="msapplication-config" content="/elao_/pr/582/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                        <meta name="description" content="Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction." />
+                    <meta name="description" content="Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction." />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/582/blog/styleguide/example" />
 
             <!-- Open Graph / Facebook -->
@@ -36,10 +36,8 @@
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
                                         <meta property="twitter:image" content="https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
-                    
-
-    <link rel="alternate" type="application/rss+xml" href="/elao_/pr/582/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
-
+                            <link rel="alternate" type="application/rss+xml" href="/elao_/pr/582/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
+        
                 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -79,7 +77,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/582/build/app.df6ddecc.css">
+                    <link rel="stylesheet" href="/elao_/pr/582/build/app.ca562f29.css">
         
                         <script src="/elao_/pr/582/build/runtime.4f818f3a.js" defer></script><script src="/elao_/pr/582/build/552.3082ae9c.js" defer></script><script src="/elao_/pr/582/build/571.252b0328.js" defer></script><script src="/elao_/pr/582/build/app.531142c4.js" defer></script>
 
@@ -162,7 +160,7 @@
                                                                                         <span>L&#039;équipe</span>
                                         </a>
                                     </li>
-                                                                    <li class="nav__item ">
+                                                                    <li class="nav__item nav__item--active">
                                         <a href="/elao_/pr/582/blog">
                                                                                         <span>Blog</span>
                                         </a>
@@ -225,7 +223,7 @@
                                                                                         <span>L&#039;équipe</span>
                                         </a>
                                     </li>
-                                                                    <li class="nav-mobile__item  ">
+                                                                    <li class="nav-mobile__item nav-mobile__item--active ">
                                         <a href="/elao_/pr/582/blog">
                                                                                         <span>Blog</span>
                                         </a>
@@ -246,20 +244,30 @@
             </header>
                 <main id="main">
                 <div class="container">
-            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="/elao_/pr/582/">
                 <span itemprop="name">Accueil</span>
             </a>
             <meta itemprop="position" content="1" />
         </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/582/blog">
+                <span itemprop="name">Blog</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/582/blog/styleguide">
+                <span itemprop="name">Styleguide</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
                 <span itemprop="name">Petit guide de style du blog</span>
             </a>
-            <meta itemprop="position" content="2" />
+            <meta itemprop="position" content="4" />
         </li></ol>
 
-
+        
         <div class="article-banner">
             <div class="article-banner__cover" style="background: #f1f1f1 url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60');
     background: #f1f1f1 -webkit-image-set(
@@ -282,7 +290,7 @@
             <div class="article-info" data-aos="zoom-in">
                                                     <div class="article-author article-author--multi">
                         <div class="article-author__image">
-                                                            <a href="/elao_/pr/582/equipe/adefrance">
+                                                            <a href="/elao_/pr/582/blog/auteur/adefrance">
                                     <img     src="/elao_/pr/582/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg"
     srcset="
         /elao_/pr/582/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg 1x,
@@ -308,17 +316,17 @@
                                 </a>
                                                     </div>
                         <span class="article-author__info">
-                        Écrit par
-                                                    <a href="/elao_/pr/582/equipe/adefrance">
-                                <strong>Amélie Defrance</strong>
-                            </a>
-                                                    <a>
-                                <strong>Thomas Jarrand</strong>
-                            </a>
-                                                    <a>
-                                <strong>Christelle Mozzati</strong>
-                            </a>
-                                            </span>
+                            Écrit par
+                                                            <a href="/elao_/pr/582/blog/auteur/adefrance">
+                                    <strong>Amélie Defrance</strong>
+                                </a>
+                                                            <a href="/elao_/pr/582/blog/auteur/tjarrand">
+                                    <strong>Thomas Jarrand</strong>
+                                </a>
+                                                            <a href="/elao_/pr/582/blog/auteur/cmozzati">
+                                    <strong>Christelle Mozzati</strong>
+                                </a>
+                                                    </span>
                     </div>
                                 <div class="article-info__date">
                     <span>Publication <strong>23 septembre 2020</strong></span>
@@ -645,7 +653,7 @@ Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.</p>
         <div class="article-footer" data-aos="fade-in">
                                                 <div class="article-author">
                         <div class="article-author__image">
-                            <a href="/elao_/pr/582/equipe/adefrance">
+                            <a href="/elao_/pr/582/blog/auteur/adefrance">
                                 <img     src="/elao_/pr/582/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg"
     srcset="
         /elao_/pr/582/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg 1x,
@@ -656,7 +664,7 @@ Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.</p>
                         </div>
                         <span class="article-author__info">
                             Écrit par
-                            <a href="/elao_/pr/582/equipe/adefrance">
+                            <a href="/elao_/pr/582/blog/auteur/adefrance">
                                 <strong>Amélie Defrance</strong>
                             </a>
                         </span>

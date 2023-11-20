@@ -17,7 +17,7 @@
         <meta name="msapplication-config" content="/elao_/pr/582/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                        <meta name="description" content="Introduction aux principes de base de l&#039;approvisionnement (ou provisoning) d&#039;environnements de développement, d&#039;exécution, de production ou encore de test" />
+                    <meta name="description" content="Introduction aux principes de base de l&#039;approvisionnement (ou provisoning) d&#039;environnements de développement, d&#039;exécution, de production ou encore de test" />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/582/blog/infra/introduction-au-provisioning" />
 
             <!-- Open Graph / Facebook -->
@@ -36,10 +36,8 @@
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
                                         <meta property="twitter:image" content="https://elao.github.io/elao_/pr/582/resized/content/images/blog/thumbnails/puppet.jpg/c951aebc7b76adf3483935ec3fcc8027.jpg">
-                    
-
-    <link rel="alternate" type="application/rss+xml" href="/elao_/pr/582/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
-
+                            <link rel="alternate" type="application/rss+xml" href="/elao_/pr/582/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
+        
                 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "NewsArticle",
@@ -70,7 +68,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/582/build/app.df6ddecc.css">
+                    <link rel="stylesheet" href="/elao_/pr/582/build/app.ca562f29.css">
         
                         <script src="/elao_/pr/582/build/runtime.4f818f3a.js" defer></script><script src="/elao_/pr/582/build/552.3082ae9c.js" defer></script><script src="/elao_/pr/582/build/571.252b0328.js" defer></script><script src="/elao_/pr/582/build/app.531142c4.js" defer></script>
 
@@ -153,7 +151,7 @@
                                                                                         <span>L&#039;équipe</span>
                                         </a>
                                     </li>
-                                                                    <li class="nav__item ">
+                                                                    <li class="nav__item nav__item--active">
                                         <a href="/elao_/pr/582/blog">
                                                                                         <span>Blog</span>
                                         </a>
@@ -216,7 +214,7 @@
                                                                                         <span>L&#039;équipe</span>
                                         </a>
                                     </li>
-                                                                    <li class="nav-mobile__item  ">
+                                                                    <li class="nav-mobile__item nav-mobile__item--active ">
                                         <a href="/elao_/pr/582/blog">
                                                                                         <span>Blog</span>
                                         </a>
@@ -237,20 +235,30 @@
             </header>
                 <main id="main">
                 <div class="container">
-            <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="/elao_/pr/582/">
                 <span itemprop="name">Accueil</span>
             </a>
             <meta itemprop="position" content="1" />
         </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/582/blog">
+                <span itemprop="name">Blog</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/582/blog/infra">
+                <span itemprop="name">Infra</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
                 <span itemprop="name">Introduction au provisioning</span>
             </a>
-            <meta itemprop="position" content="2" />
+            <meta itemprop="position" content="4" />
         </li></ol>
 
-
+        
         <div class="article-banner">
             <div class="article-banner__cover" style="background: #f1f1f1 url('/elao_/pr/582/resized/content/images/blog/headers/php_elao_code.jpg/ad710eb269d6ec4e7af9a15e5d2cc9bc.jpg');
     background: #f1f1f1 -webkit-image-set(
@@ -273,7 +281,7 @@
             <div class="article-info" data-aos="zoom-in">
                                                     <div class="article-author ">
                         <div class="article-author__image">
-                                                            <a href="/elao_/pr/582/equipe/gfaivre">
+                                                            <a href="/elao_/pr/582/blog/auteur/gfaivre">
                                     <img     src="/elao_/pr/582/resized/content/images/members/avatars/gfaivre.jpg/0b15d32360625605c83c974bf168637b.jpg"
     srcset="
         /elao_/pr/582/resized/content/images/members/avatars/gfaivre.jpg/0b15d32360625605c83c974bf168637b.jpg 1x,
@@ -283,11 +291,11 @@
                                 </a>
                                                     </div>
                         <span class="article-author__info">
-                        Écrit par
-                                                    <a href="/elao_/pr/582/equipe/gfaivre">
-                                <strong>Guewen Faivre</strong>
-                            </a>
-                                            </span>
+                            Écrit par
+                                                            <a href="/elao_/pr/582/blog/auteur/gfaivre">
+                                    <strong>Guewen Faivre</strong>
+                                </a>
+                                                    </span>
                     </div>
                                 <div class="article-info__date">
                     <span>Publication <strong>3 février 2016</strong></span>
@@ -382,7 +390,7 @@ De même il devient beaucoup plus facile (attention je n'ai pas dit simple) d'as
         <div class="article-footer" data-aos="fade-in">
                                                 <div class="article-author">
                         <div class="article-author__image">
-                            <a href="/elao_/pr/582/equipe/gfaivre">
+                            <a href="/elao_/pr/582/blog/auteur/gfaivre">
                                 <img     src="/elao_/pr/582/resized/content/images/members/avatars/gfaivre.jpg/0b15d32360625605c83c974bf168637b.jpg"
     srcset="
         /elao_/pr/582/resized/content/images/members/avatars/gfaivre.jpg/0b15d32360625605c83c974bf168637b.jpg 1x,
@@ -393,7 +401,7 @@ De même il devient beaucoup plus facile (attention je n'ai pas dit simple) d'as
                         </div>
                         <span class="article-author__info">
                             Écrit par
-                            <a href="/elao_/pr/582/equipe/gfaivre">
+                            <a href="/elao_/pr/582/blog/auteur/gfaivre">
                                 <strong>Guewen Faivre</strong>
                             </a>
                         </span>

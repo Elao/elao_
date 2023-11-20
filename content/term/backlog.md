@@ -1,8 +1,8 @@
 ---
 name: "Backlog"
 title:
-- "Construire un bon backlog 
-pour suivre votre projet"
+    - "Construire un bon backlog" 
+    - "pour suivre votre projet"
 titleSeo: "La conception du backlog au coeur de vos projets web chez Elao"
 metaDescription : "Découvrez le fonctionnement des backlog pour gérer vos projets web efficacement."
 articles:

@@ -1,8 +1,8 @@
 ---
 name: "Méthodologie"
 title:
-- "Notre méthodologie de projet 
-basée sur l'agilité"
+  - "Notre méthodologie de projet" 
+  - "basée sur l'agilité"
 titleSeo: "La méthodologie Agile pour vos projets web chez Elao"
 metaDescription : "Découvrez les principes de l'agilité avec scrum et Kanban, afin de concevoir un projet web efficace."
 articles:

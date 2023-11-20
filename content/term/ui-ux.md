@@ -1,8 +1,8 @@
 ---
 name: "UI/UX"
 title:
-- "L'expérience utilisateur au coeur 
-de la conception d'un projet web"
+    - "L'expérience utilisateur au coeur" 
+    - "de la conception d'un projet web" 
 titleSeo: "L'expérience utilisateur au centre de vos projets web chez Elao"
 metaDescription : "Découvrez comment intégrer vos utilisateurs au centre de vos projets web pour une expérience optimale."
 articles:

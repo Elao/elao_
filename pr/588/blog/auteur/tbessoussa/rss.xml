@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Tristan Bessoussa, Développeur</title>
+        <title>Blog Elao - Les articles de Tristan Bessoussa, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Tristan Bessoussa de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/tbessoussa</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Tristan Bessoussa, Développeur</title>
+            <title>Blog Elao - Les articles de Tristan Bessoussa, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/tbessoussa</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/tbessoussa/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/the-browserdetectorbundle-working-with-the-kernel-events</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/the-browserdetectorbundle-working-with-the-kernel-events</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/homer.jpg/9356c228a899006d1f32e47bceae63e4.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/homer.jpg/9356c228a899006d1f32e47bceae63e4.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">The BrowserDetectorBundle: working with the Kernel events</media:description>
                                     </media:content>
                                     <category>symfony</category>
@@ -37,7 +45,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/utilisation-de-levenement-kernel-terminate-sous-symfony2</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/utilisation-de-levenement-kernel-terminate-sous-symfony2</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geekon.jpg/8eca6ca248133e0920c22c06ce7b79a4.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geekon.jpg/8eca6ca248133e0920c22c06ce7b79a4.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Utilisation de l&#039;évènement kernel.terminate sous Symfony2</media:description>
                                     </media:content>
                                     <category>bundle</category>
@@ -53,7 +65,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/feedback-monitor-your-symfony2-application-via-stats-d-and-graphite</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/feedback-monitor-your-symfony2-application-via-stats-d-and-graphite</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Feedback : Monitor your Symfony2 application via Stats.d and Graphite</media:description>
                                     </media:content>
                                     <category>carbon</category>
@@ -71,7 +87,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/subdomains-symfony2-2-session-authentication</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/subdomains-symfony2-2-session-authentication</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/turtle.jpg/6aee099b4a06b9c20a8a913cc6b6dde9.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/turtle.jpg/6aee099b4a06b9c20a8a913cc6b6dde9.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Feedback on a side-effect with Symfony 2.2, subdomains and sessions</media:description>
                                     </media:content>
                                     <category>symfony</category>
@@ -85,7 +105,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/install-stats-d-graphite-on-a-debian-server-to-monitor-a-symfony2-application</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Install Stats.d / Graphite on a debian server in order to monitor a Symfony2 application (1/2)</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -100,7 +124,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/monitor-your-symfony2-application-via-stats-d-and-graphite-2</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/monitor-your-symfony2-application-via-stats-d-and-graphite-2</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Monitor your Symfony2 application via Stats.d and Graphite (2/2)</media:description>
                                     </media:content>
                                     <category>monitoring</category>
@@ -117,7 +145,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/how-to-manage-translations-for-your-object-using-sonataadminbundle</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/how-to-manage-translations-for-your-object-using-sonataadminbundle</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rocket.jpg/8eda08bbf6578e73586d7b50bf0c9f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">How to manage translations for your object using SonataAdminBundle</media:description>
                                     </media:content>
                                     <category>bundle</category>

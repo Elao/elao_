@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Xavier R, Développeur</title>
+        <title>Blog Elao - Les articles de Xavier R, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Xavier R de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/xavierr</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Xavier R, Développeur</title>
+            <title>Blog Elao - Les articles de Xavier R, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/xavierr</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/xavierr/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/onboarding-2022</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/onboarding-2022</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/onboarding-2022/eileen-pan-5d5DSRQ5dUc-unsplash.jpg/dcd5c0778d71f849bcd7d914de4f3738.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/onboarding-2022/eileen-pan-5d5DSRQ5dUc-unsplash.jpg/dcd5c0778d71f849bcd7d914de4f3738.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Bienvenue à bord …</media:description>
                                     </media:content>
                                     <category>elao</category>
@@ -35,7 +43,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-chain-of-responsibility</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-chain-of-responsibility</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/chaplin-assembly-line.jpeg/2614bf9d65d46982eba174c6971fc369.jpeg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/chaplin-assembly-line.jpeg/2614bf9d65d46982eba174c6971fc369.jpeg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le Design Pattern &#039;Chain of Responsibility&#039;</media:description>
                                     </media:content>
                                     <category>design-pattern</category>
@@ -49,7 +61,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-decorator</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-decorator</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/decorator_pattern.jpg/6195662bc180b2c81b0b630cf6e84f4f.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/decorator_pattern.jpg/6195662bc180b2c81b0b630cf6e84f4f.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le Design Pattern &#039;Decorator&#039;</media:description>
                                     </media:content>
                                     <category>design-pattern</category>
@@ -63,7 +79,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-abstract-factory</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-abstract-factory</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/schema.jpg/8b7e5dd293761b29bfd19aa5e19cbeeb.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/schema.jpg/8b7e5dd293761b29bfd19aa5e19cbeeb.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le Design Pattern &#039;Abstract Factory&#039;</media:description>
                                     </media:content>
                                     <category>design-pattern</category>
@@ -77,7 +97,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-factory-method</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/design-pattern-factory-method</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/scientist.jpg/8f14830081a18495b6b15bf4c9c62c44.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/scientist.jpg/8f14830081a18495b6b15bf4c9c62c44.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le Design Pattern &#039;Factory Method&#039;</media:description>
                                     </media:content>
                                     <category>design-pattern</category>
@@ -91,7 +115,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/phptour-2016</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/phptour-2016</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">PHP Tour 2016, Merciiiiii</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -108,7 +136,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/django-3eme-partie-les-templates-et-bien-dautres-choses</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/django-3eme-partie-les-templates-et-bien-dautres-choses</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Django (3ème partie) : les templates, et bien d&#039;autres choses ...</media:description>
                                     </media:content>
                                     <category>django</category>
@@ -124,7 +156,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/django-2nde-partie-le-modele-et-ladmin</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/django-2nde-partie-le-modele-et-ladmin</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Django (2nde partie) : le Modèle et l’Admin</media:description>
                                     </media:content>
                                     <category>django</category>
@@ -140,7 +176,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/premiers-pas-avec-le-framework-python-django</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/premiers-pas-avec-le-framework-python-django</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/first_step.jpg/df67ee00ce775a0b7bfa14158e458484.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/first_step.jpg/df67ee00ce775a0b7bfa14158e458484.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Premiers pas avec le framework Python &quot;Django&quot;</media:description>
                                     </media:content>
                                     <category>django</category>
@@ -156,7 +196,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/installation-et-premiers-pas-avec-le-plugin-symfony-sfimagetransformextraplugin</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/installation-et-premiers-pas-avec-le-plugin-symfony-sfimagetransformextraplugin</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/toad.jpg/da4b42c9d834d84950f160ae43e86ca1.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/toad.jpg/da4b42c9d834d84950f160ae43e86ca1.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin</media:description>
                                     </media:content>
                                     <category>developpement</category>

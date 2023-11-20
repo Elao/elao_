@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Eva Quentin, Facilitatrice projets</title>
+        <title>Blog Elao - Les articles de Eva Quentin, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Eva Quentin de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/equentin</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:56 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:38 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Eva Quentin, Facilitatrice projets</title>
+            <title>Blog Elao - Les articles de Eva Quentin, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/equentin</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/equentin/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/methodo/github-project</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/methodo/github-project</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/github-project/banner-github-project.png/ce325f932e864f004fc58a16803598be.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/github-project/banner-github-project.png/ce325f932e864f004fc58a16803598be.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Maximisez l&#039;efficacité de votre gestion de projet avec GitHub Project</media:description>
                                     </media:content>
                                     <category>gestion-de-projet</category>
@@ -36,7 +44,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/rix-et-elao</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/rix-et-elao</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rix-et-elao.jpg/64cdff9ace22675d79be4148aa6a55c9.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/rix-et-elao.jpg/64cdff9ace22675d79be4148aa6a55c9.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Rix et Elao</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -51,7 +63,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/tech/arc-max-quand-l-IA-simplifie-notre-navigation-sur-le-web</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/tech/arc-max-quand-l-IA-simplifie-notre-navigation-sur-le-web</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/arc-max-quand-l-ia-simplifie-notre-navigation-sur-le-web.png/8f62ff743ddeab9502e4dffa8fe97753.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/arc-max-quand-l-ia-simplifie-notre-navigation-sur-le-web.png/8f62ff743ddeab9502e4dffa8fe97753.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">ARC MAX - Quand l’IA simplifie notre navigation sur le web</media:description>
                                     </media:content>
                                     <category>arc</category>
@@ -67,7 +83,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/eva-facilitatrice-projet-portrait</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/eva-facilitatrice-projet-portrait</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/itw-eva/banner.jpeg/84834d44b0b6c0334c8d5bc821be46cd.jpeg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2023/itw-eva/banner.jpeg/84834d44b0b6c0334c8d5bc821be46cd.jpeg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Eva, Facilitatrice projets fraichement arrivée chez Elao</media:description>
                                     </media:content>
                                     <category>elao</category>
@@ -81,7 +101,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/tech/config-2023-notre-selection-de-nouveautes-figma</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/tech/config-2023-notre-selection-de-nouveautes-figma</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/config-2023-notre-selection-de-nouveautes-figma.jpg/f18a797a4c6e2b1325ea8d1d4e3626df.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/config-2023-notre-selection-de-nouveautes-figma.jpg/f18a797a4c6e2b1325ea8d1d4e3626df.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Config 2023: notre sélection de nouveautés Figma</media:description>
                                     </media:content>
                                     <category>figma</category>

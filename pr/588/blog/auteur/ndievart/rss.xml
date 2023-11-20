@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Nicolas Dievart, Développeur</title>
+        <title>Blog Elao - Les articles de Nicolas Dievart, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Nicolas Dievart de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/ndievart</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Nicolas Dievart, Développeur</title>
+            <title>Blog Elao - Les articles de Nicolas Dievart, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/ndievart</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/ndievart/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2018</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2018</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2018-team.jpeg/107a9c0e039a44132dd5e6faa104e66e.jpeg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2018-team.jpeg/107a9c0e039a44132dd5e6faa104e66e.jpeg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Forum PHP 2018</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -38,7 +46,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/ecrire-des-tests-behat-proches-de-son-domaine</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/ecrire-des-tests-behat-proches-de-son-domaine</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png/cfe2265def849b44b9d8a6a610082321.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ecrire-des-tests-behat-proche-de-son-domaine-thumbnail.png/cfe2265def849b44b9d8a6a610082321.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Écrire des tests Behat proches de son domaine</media:description>
                                     </media:content>
                                     <category>behat</category>
@@ -53,7 +65,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2016</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2016</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Forum PHP 2016</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -70,7 +86,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/behat-3-test-fonctionnel-symfony</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/behat-3-test-fonctionnel-symfony</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/behat.png/c856a55f95cbcebc2090fcf42dd4f4e8.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/behat.png/c856a55f95cbcebc2090fcf42dd4f4e8.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Behat 3 pour vos tests fonctionnels Symfony2</media:description>
                                     </media:content>
                                     <category>behat</category>
@@ -86,7 +106,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/best-of-web-2015</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/best-of-web-2015</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geek_evolution.jpg/c9fed0294395543dec9f77c72f139187.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geek_evolution.jpg/c9fed0294395543dec9f77c72f139187.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Best Of Web 2015</media:description>
                                     </media:content>
                                     <category>javascript</category>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Guewen Faivre, DevSecOps
-</title>
+        <title>Blog Elao - Les articles de Guewen Faivre, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Guewen Faivre de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/gfaivre</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Guewen Faivre, DevSecOps
-</title>
+            <title>Blog Elao - Les articles de Guewen Faivre, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/gfaivre</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/gfaivre/rss.xml" rel="self" type="application/rss+xml"/>
@@ -23,9 +25,16 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/methodo/conception-applicative-et-rgpd-feuille-de-route-part-1</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/methodo/conception-applicative-et-rgpd-feuille-de-route-part-1</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/big-data-is-watching.jpg/2b73763d2576bce4f2d335735b45baad.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/big-data-is-watching.jpg/2b73763d2576bce4f2d335735b45baad.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Conception applicative et RGPD, feuille de route - partie 1.</media:description>
-                                            <media:credit role="photographer" scheme="urn:ebu">ev, https://unsplash.com/@ev</media:credit>
+                                            <media:credit
+                            role="photographer"
+                            scheme="urn:ebu"
+                        >ev, https://unsplash.com/@ev</media:credit>
                                     </media:content>
                                     <category>rgpd</category>
                                     <category>conformite</category>
@@ -39,7 +48,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/rebranding-l-avenir</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/rebranding-l-avenir</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-future.jpg/0483ae69dc9eeeeadf7adbdd4c52a6c4.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-future.jpg/0483ae69dc9eeeeadf7adbdd4c52a6c4.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Rebranding 4/4 : L&#039;avenir</media:description>
                                     </media:content>
                                     <category>rebranding</category>
@@ -54,7 +67,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</media:description>
                                     </media:content>
                                     <category>halloween</category>
@@ -68,7 +85,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/nuit-du-hack-XV</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/nuit-du-hack-XV</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ndhxv.png/bb7218aab02cfe7b6f27370d1088959b.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ndhxv.png/bb7218aab02cfe7b6f27370d1088959b.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Nuit du Hack XV</media:description>
                                     </media:content>
                                     <category>sysadmin</category>
@@ -84,7 +105,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/dotscale-paris-2017</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/dotscale-paris-2017</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/dotscale.jpg/50e9d7a36e85084601a5960582d1a778.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/dotscale.jpg/50e9d7a36e85084601a5960582d1a778.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">DotScale Paris 2017</media:description>
                                     </media:content>
                                     <category>devops</category>
@@ -101,7 +126,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/utiliser-l-api-openstack-ovh</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/utiliser-l-api-openstack-ovh</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/openstack.png/c35bcdf50abac4558ffa4e148ed90408.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/openstack.png/c35bcdf50abac4558ffa4e148ed90408.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Utiliser l&#039;API Openstack OVH</media:description>
                                     </media:content>
                                     <category>ovh</category>
@@ -118,7 +147,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/tech/ssh-agent-does-not-automatically-load-passphrases-on-the-osx-sierra-keychain</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/badass_vader.jpg/84159fcbbedaddfbe217aa9cf579180a.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/badass_vader.jpg/84159fcbbedaddfbe217aa9cf579180a.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">SSH-agent does not automatically load passphrases on the OSX Sierra keychain during startup</media:description>
                                     </media:content>
                                     <category>ssh</category>
@@ -132,7 +165,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/introduction-au-provisioning</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/introduction-au-provisioning</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/puppet.jpg/e0854efca64fd543f5fb9984440abdaa.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/puppet.jpg/e0854efca64fd543f5fb9984440abdaa.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Introduction au provisioning</media:description>
                                     </media:content>
                                     <category>ansible</category>
@@ -147,7 +184,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/comprendre-lheritage-des-instructions-de-configuration-de-nginx</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/comprendre-lheritage-des-instructions-de-configuration-de-nginx</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geek_love.jpg/cbd9134858efa352128a7d72a07bd976.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/geek_love.jpg/cbd9134858efa352128a7d72a07bd976.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Comprendre l&#039;héritage des instructions de configuration de Nginx</media:description>
                                     </media:content>
                                     <category>infra</category>
@@ -162,7 +203,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/le-teletravail-point-de-vue</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/le-teletravail-point-de-vue</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/RemoteMountain.jpg/94ab7d78352e0bb055e0f761fb5708da.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/RemoteMountain.jpg/94ab7d78352e0bb055e0f761fb5708da.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le télétravail, point de vue</media:description>
                                     </media:content>
                                     <category>teletravail</category>
@@ -176,7 +221,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/ssl-generer-une-demande-de-signature-de-certificat-csr</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/ssl-generer-une-demande-de-signature-de-certificat-csr</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/crypto.jpg/08cce7c72caa325669db6b56a3f4dff9.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/crypto.jpg/08cce7c72caa325669db6b56a3f4dff9.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">SSL - Générer une demande de signature de certificat</media:description>
                                     </media:content>
                                     <category>infra</category>
@@ -193,7 +242,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/authentification-http-avec-haproxy</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/authentification-http-avec-haproxy</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/lock.png/a496552b1768d16a2d96a87e95ca1f03.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/lock.png/a496552b1768d16a2d96a87e95ca1f03.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Authentification HTTP avec HA Proxy</media:description>
                                     </media:content>
                                     <category>infra</category>
@@ -209,7 +262,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/creer-un-cluster-2-nodes-proxmox</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/creer-un-cluster-2-nodes-proxmox</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/matryoshka.jpg/374ba9e8181bd6d10705634082334d51.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/matryoshka.jpg/374ba9e8181bd6d10705634082334d51.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Créer un cluster 2 nodes Proxmox</media:description>
                                     </media:content>
                                     <category>proxmox</category>
@@ -224,7 +281,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/utiliser-supervisor-pour-controler-ses-services-applicatifs</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/utiliser-supervisor-pour-controler-ses-services-applicatifs</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ice_bulb.jpg/feea06c1542ba2277877572e5c75ab3f.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/ice_bulb.jpg/feea06c1542ba2277877572e5c75ab3f.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Controller ses services applicatifs avec supervisor</media:description>
                                     </media:content>
                                     <category>services</category>
@@ -241,7 +302,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/installer-graphite-sur-debian-wheezy</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/installer-graphite-sur-debian-wheezy</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/dashboard.png/871588bcadd1c6da53fb6cebf443a42c.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/dashboard.png/871588bcadd1c6da53fb6cebf443a42c.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Installer graphite sur Debian Wheezy</media:description>
                                     </media:content>
                                     <category>monitoring</category>
@@ -258,7 +323,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/utiliser-les-depots-officiels-nginx-sur-debian-wheezy</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/utiliser-les-depots-officiels-nginx-sur-debian-wheezy</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/server.jpg/0719477ba4735b521e5d7b5dec9cb0c8.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/server.jpg/0719477ba4735b521e5d7b5dec9cb0c8.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Utiliser les dépôts officiels Nginx sur Debian Wheezy</media:description>
                                     </media:content>
                                     <category>infra</category>
@@ -274,7 +343,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/partitionnement-d-un-serveur-proxmox</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/partitionnement-d-un-serveur-proxmox</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/hdd_partition.jpg/b6e51fd5cba743d28b3d833bbba66eb3.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/hdd_partition.jpg/b6e51fd5cba743d28b3d833bbba66eb3.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Partitionnement d&#039;un serveur proxmox</media:description>
                                     </media:content>
                                     <category>proxmox</category>
@@ -290,7 +363,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/tech/creer-une-cle-bootable-osx-10-10-yosemite</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/tech/creer-une-cle-bootable-osx-10-10-yosemite</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/yosemite.jpg/f2e46c5643060c87ccf54c726a3d5fe3.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/yosemite.jpg/f2e46c5643060c87ccf54c726a3d5fe3.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Créer une clé bootable OSX 10.10 Yosemite</media:description>
                                     </media:content>
                                     <category>osx</category>
@@ -303,7 +380,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/migrer-un-site-web-sans-interruption-de-service-grace-au-reverse-proxy-dapache</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/migrer-un-site-web-sans-interruption-de-service-grace-au-reverse-proxy-dapache</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/pulp_starwars.png/1707c353a5256f94766603cb4a76d3c6.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/pulp_starwars.png/1707c353a5256f94766603cb4a76d3c6.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Migrer un site web sans interruption de service grâce au reverse proxy d&#039;Apache.</media:description>
                                     </media:content>
                                     <category>apache</category>
@@ -318,7 +399,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/creer-une-autorite-de-certification-et-des-certificats-ssl-auto-signes</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/creer-une-autorite-de-certification-et-des-certificats-ssl-auto-signes</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/matryoshka.jpg/374ba9e8181bd6d10705634082334d51.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/matryoshka.jpg/374ba9e8181bd6d10705634082334d51.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Créer une autorité de certification et des certificats SSL auto-signés</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -332,7 +417,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/propel-utiliser-des-champs-calcules</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/propel-utiliser-des-champs-calcules</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/mailers.jpg/615ee5022a206794c29440eefc8e30f1.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/mailers.jpg/615ee5022a206794c29440eefc8e30f1.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Propel - Utiliser des champs calculés</media:description>
                                     </media:content>
                                     <category>propel</category>
@@ -348,7 +437,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/utilisation-de-la-commande-find-cas-pratiques</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/utilisation-de-la-commande-find-cas-pratiques</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/homer-do-not-care.png/84b17d1b4dbacd90751abcfab63f7081.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/homer-do-not-care.png/84b17d1b4dbacd90751abcfab63f7081.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Utilisation de la commande find - cas pratiques</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -363,7 +456,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/authentifications-multiples-a-partir-de-cles-ssh</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/authentifications-multiples-a-partir-de-cles-ssh</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/keep-calm-and-connect-to-ssh.png/5f7184e82a78b3271a862c9c1e7af9b2.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/keep-calm-and-connect-to-ssh.png/5f7184e82a78b3271a862c9c1e7af9b2.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Authentifications multiples à partir de clés SSH</media:description>
                                     </media:content>
                                     <category>ssh</category>
@@ -379,7 +476,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/securiser-ses-acces-serveur-authentification-par-cles-ssh</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/securiser-ses-acces-serveur-authentification-par-cles-ssh</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/hdd_partition.jpg/b6e51fd5cba743d28b3d833bbba66eb3.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/hdd_partition.jpg/b6e51fd5cba743d28b3d833bbba66eb3.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Sécuriser ses accès serveur: Authentification par clés SSH</media:description>
                                     </media:content>
                                     <category>ssh</category>
@@ -393,7 +494,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/installation-de-fuse-et-s3fs-sur-une-debian-lenny</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/installation-de-fuse-et-s3fs-sur-une-debian-lenny</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/danbo_on_drops.jpg/9feb0b0e5912fda9f9759bd61dbcfdae.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/danbo_on_drops.jpg/9feb0b0e5912fda9f9759bd61dbcfdae.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Installation de FUSE et s3fs sur une Debian Lenny</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -408,7 +513,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/syntaxe-des-enregistrements-spf-sender-privacy-framework</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/syntaxe-des-enregistrements-spf-sender-privacy-framework</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/mail_bottle.jpeg/8edd6c4be11748a92813e14955cfeb08.jpeg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/mail_bottle.jpeg/8edd6c4be11748a92813e14955cfeb08.jpeg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Syntaxe des enregistrements SPF (Sender Privacy Framework)</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -423,7 +532,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/operation-sur-un-fichier-avec-la-commande-find</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/operation-sur-un-fichier-avec-la-commande-find</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/linux_fix.jpg/2ed52de3a9a3ee469d862f5c49e0ba99.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/linux_fix.jpg/2ed52de3a9a3ee469d862f5c49e0ba99.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Opération sur un fichier avec la commande find</media:description>
                                     </media:content>
                                     <category>linux</category>
@@ -437,7 +550,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/infra/installation-d-un-depot-svn</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/infra/installation-d-un-depot-svn</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/kenny.jpg/01a45891086d8fabb61d105609aebf42.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/kenny.jpg/01a45891086d8fabb61d105609aebf42.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Installation d&#039;un dépôt SVN</media:description>
                                     </media:content>
                                     <category>linux</category>

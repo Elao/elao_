@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Richard Hanna, Développeur</title>
+        <title>Blog Elao - Les articles de Richard Hanna, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Richard Hanna de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/rhanna</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Richard Hanna, Développeur</title>
+            <title>Blog Elao - Les articles de Richard Hanna, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/rhanna</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/rhanna/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2018</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2018</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2018-team.jpeg/107a9c0e039a44132dd5e6faa104e66e.jpeg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2018-team.jpeg/107a9c0e039a44132dd5e6faa104e66e.jpeg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Forum PHP 2018</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -38,7 +46,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/comment-demarrer-tdd-en-php</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/comment-demarrer-tdd-en-php</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/tdd.jpg/f35716c1b8a2898bc2d1bff885113960.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/tdd.jpg/f35716c1b8a2898bc2d1bff885113960.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Comment démarrer en TDD en PHP ?</media:description>
                                     </media:content>
                                     <category>php</category>
@@ -53,7 +65,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/commander-au-clavier-app-symfony-grace-au-routing</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/commander-au-clavier-app-symfony-grace-au-routing</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg/51589ade28108ee836bab09ac7b6d074.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2018/commander-au-clavier-app-symfony-grace-au-routing/thumbnail.jpg/51589ade28108ee836bab09ac7b6d074.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Commander au clavier une application Symfony grâce au Routing</media:description>
                                     </media:content>
                                     <category>symfony</category>
@@ -68,7 +84,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/progressive-web-app-chalkboard-education-elearning-sans-internet</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/progressive-web-app-chalkboard-education-elearning-sans-internet</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2017/chalkboard-education/woman-phone.jpg/51b8407365a94174051e665545fb8b1a.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2017/chalkboard-education/woman-phone.jpg/51b8407365a94174051e665545fb8b1a.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">E-learning sans internet ou presque</media:description>
                                     </media:content>
                                     <category>progressive-web-app</category>
@@ -84,7 +104,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/planification-de-rdv-avec-optaplanner</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/planification-de-rdv-avec-optaplanner</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png/e80d1b8c077a36beb78c17e125d609c9.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2017/planification-de-rdv-avec-optaplanner/optaplanner-teacher-agenda.png/e80d1b8c077a36beb78c17e125d609c9.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Planification de rendez-vous avec OptaPlanner</media:description>
                                     </media:content>
                                     <category>planification</category>
@@ -98,7 +122,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/la-revanche-du-web-par-les-progressive-web-apps</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/la-revanche-du-web-par-les-progressive-web-apps</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/pwa-general.jpg/6729298e4fce53c736a6836a7d0b94d2.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/pwa-general.jpg/6729298e4fce53c736a6836a7d0b94d2.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Le web n&#039;est pas mort, la revanche par les Progressives Web Apps</media:description>
                                     </media:content>
                                     <category>progressive-web-app</category>
@@ -114,7 +142,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/methodo/notre-quotidien-equipe-projet-auto-organisee</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/methodo/notre-quotidien-equipe-projet-auto-organisee</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/equipe_projet.jpg/130fba3183ad1a38d028040c929fb1f7.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/equipe_projet.jpg/130fba3183ad1a38d028040c929fb1f7.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Notre quotidien d&#039;équipe projet auto-organisée</media:description>
                                     </media:content>
                                     <category>agile</category>
@@ -128,7 +160,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2016</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2016</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Forum PHP 2016</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -145,7 +181,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/symfonycon-2015</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/symfonycon-2015</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/symfonycon-2015.jpg/645889d82ff93ab070eaef3de66bbbe1.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/symfonycon-2015.jpg/645889d82ff93ab070eaef3de66bbbe1.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur la SymfonyCon 2015</media:description>
                                     </media:content>
                                     <category>conference</category>
@@ -160,7 +200,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2015</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/forum-php-2015</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/haphpybirthday.jpg/8ff31a16eb5be9ae98e358de4eb4a7b7.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/haphpybirthday.jpg/8ff31a16eb5be9ae98e358de4eb4a7b7.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Forum PHP 2015</media:description>
                                     </media:content>
                                     <category>conference</category>
@@ -174,7 +218,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/nodeschool-paris</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/nodeschool-paris</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/nodejs.png/7f9255fabba5e55253189ed5a464000f.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/nodejs.png/7f9255fabba5e55253189ed5a464000f.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur la NodeSchool Paris</media:description>
                                     </media:content>
                                     <category>javascript</category>
@@ -189,7 +237,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/symfony-live-2015</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/symfony-live-2015</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/SymfonyLive.png/e029c30e3fa5a7860e296762afe38d36.png" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/SymfonyLive.png/e029c30e3fa5a7860e296762afe38d36.png"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Retour sur le Symfony Live 2015</media:description>
                                     </media:content>
                                     <category>conference</category>

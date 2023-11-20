@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, Alternante en intégration</title>
+        <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Sabrina Ludovic de Lys de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/sludovicdelys</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, Alternante en intégration</title>
+            <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/sludovicdelys</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/sludovicdelys/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/sabrina-alternante-en-integration</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/sabrina-alternante-en-integration</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/sabrina-ludo-samoens.jpg/da7877f9c6d902fd6e62dd646f9bce66.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/sabrina-ludo-samoens.jpg/da7877f9c6d902fd6e62dd646f9bce66.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Sabrina, alternante en intégration fraîchement arrivée dans l&#039;équipe ✨</media:description>
                                     </media:content>
                                     <category>elao</category>

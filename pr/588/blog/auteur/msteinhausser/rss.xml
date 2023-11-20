@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Ogi, Développeur</title>
+        <title>Blog Elao - Les articles de Ogi, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Ogi de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/msteinhausser</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Ogi, Développeur</title>
+            <title>Blog Elao - Les articles de Ogi, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/msteinhausser</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/msteinhausser/rss.xml" rel="self" type="application/rss+xml"/>
@@ -22,9 +26,16 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/react-component-slots</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/react-component-slots</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/react-component-slots.jpg/4e03c706b952d736887f23158f95172b.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/react-component-slots.jpg/4e03c706b952d736887f23158f95172b.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Concevoir vos composants React avec des slots multiples</media:description>
-                                            <media:credit role="photographer" scheme="urn:ebu">Lautaro Andreani, https://unsplash.com/@lautaroandreani</media:credit>
+                                            <media:credit
+                            role="photographer"
+                            scheme="urn:ebu"
+                        >Lautaro Andreani, https://unsplash.com/@lautaroandreani</media:credit>
                                     </media:content>
                                     <category>react</category>
                                     <category>slots</category>
@@ -40,9 +51,16 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/webpack-tips-reload-arbitrary-file-changed</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/webpack-tips-reload-arbitrary-file-changed</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/webpack-tips-reload-arbitrary-file-changed.jpg/32be23bdbc31bc3d47acd052769f5647.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/webpack-tips-reload-arbitrary-file-changed.jpg/32be23bdbc31bc3d47acd052769f5647.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Observer les changements de fichiers arbitraires avec Webpack</media:description>
-                                            <media:credit role="photographer" scheme="urn:ebu">Olena Bohovyk, https://www.pexels.com/fr-fr/photo/tranches-de-fruits-orange-dans-un-verre-a-boire-transparent-3323682/</media:credit>
+                                            <media:credit
+                            role="photographer"
+                            scheme="urn:ebu"
+                        >Olena Bohovyk, https://www.pexels.com/fr-fr/photo/tranches-de-fruits-orange-dans-un-verre-a-boire-transparent-3323682/</media:credit>
                                     </media:content>
                                     <category>webpack</category>
                                     <category>javascript</category>
@@ -58,7 +76,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/dev/stenope-skeleton</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/dev/stenope-skeleton</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/b77e359f0625fd754383d6188502b89d.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/stenope-skeleton.jpg/b77e359f0625fd754383d6188502b89d.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Un kit pour démarrer votre site statique avec Stenope</media:description>
                                     </media:content>
                                     <category>stenope</category>
@@ -74,7 +96,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/rebranding-la-tech</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/rebranding-la-tech</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-tech.jpg/7b7175bf16399bf45363ae0085e86cd8.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-tech.jpg/7b7175bf16399bf45363ae0085e86cd8.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Rebranding 3/4 : la tech</media:description>
                                     </media:content>
                                     <category>rebranding</category>
@@ -91,7 +117,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</media:description>
                                     </media:content>
                                     <category>halloween</category>
@@ -105,7 +135,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/phptour-2016</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/phptour-2016</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">PHP Tour 2016, Merciiiiii</media:description>
                                     </media:content>
                                     <category>developpement</category>

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
     <channel>
-        <title>Blog Elao - Les articles de Amélie Defrance, Intégratrice HTML/CSS</title>
+        <title>Blog Elao - Les articles de Amélie Defrance, </title>
         <description>Découvrez les articles techniques (ou non) rédigés par Amélie Defrance de l&#039;équipe Elao</description>
-        <copyright>Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner lieu au versement d’une rémunération. Contact : contact@elao.com</copyright>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
         <link>https://elao.github.io/elao_/pr/588/blog/auteur/adefrance</link>
-        <pubDate>Fri, 17 Nov 2023 16:24:58 +0000</pubDate>
+        <pubDate>Mon, 20 Nov 2023 08:59:40 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/588/apple-touch-icon.png</url>
-            <title>Blog Elao - Les articles de Amélie Defrance, Intégratrice HTML/CSS</title>
+            <title>Blog Elao - Les articles de Amélie Defrance, </title>
             <link>https://elao.github.io/elao_/pr/588/blog/auteur/adefrance</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/588/blog/auteur/adefrance/rss.xml" rel="self" type="application/rss+xml"/>
@@ -21,7 +25,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/amelie-integratrice-depuis-5-ans</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/amelie-integratrice-depuis-5-ans</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2022/itw-amelie/banner.jpg/fce4f89e2d59f6bfb2e98ad7ec03b037.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/2022/itw-amelie/banner.jpg/fce4f89e2d59f6bfb2e98ad7ec03b037.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Amélie, intégratrice chez Elao depuis 5 ans</media:description>
                                     </media:content>
                                     <category>elao</category>
@@ -35,7 +43,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/conference-accesseo-2021</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/conference-accesseo-2021</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/afup-day-2019.jpg/5affa46b4a81624172abbcd37943e62f.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/afup-day-2019.jpg/5affa46b4a81624172abbcd37943e62f.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Elao au Forum PHP pour parler accessibilité et SEO !</media:description>
                                     </media:content>
                                     <category>developpement</category>
@@ -51,7 +63,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/rebranding-la-tech</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/rebranding-la-tech</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-tech.jpg/7b7175bf16399bf45363ae0085e86cd8.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/headers/elao-rebrand-banner-tech.jpg/7b7175bf16399bf45363ae0085e86cd8.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Rebranding 3/4 : la tech</media:description>
                                     </media:content>
                                     <category>rebranding</category>
@@ -68,9 +84,16 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/styleguide/example</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/styleguide/example</link>
-                <media:content url="https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" width="1200" height="627">
+                <media:content
+                    url="https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">Petit guide de style du blog</media:description>
-                                            <media:credit role="photographer" scheme="urn:ebu">Jon Tyson, https://unsplash.com/@jontyson</media:credit>
+                                            <media:credit
+                            role="photographer"
+                            scheme="urn:ebu"
+                        >Jon Tyson, https://unsplash.com/@jontyson</media:credit>
                                     </media:content>
                                     <category>tag-1</category>
                                     <category>tag-2</category>
@@ -84,7 +107,11 @@
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</guid>
                 <link>https://elao.github.io/elao_/pr/588/blog/elao/halloween-2019</link>
-                <media:content url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg" width="1200" height="627">
+                <media:content
+                    url="https://elao.github.io/elao_/pr/588/resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg"
+                    width="1200"
+                    height="627"
+                >
                     <media:description type="plain">🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</media:description>
                                     </media:content>
                                     <category>halloween</category>

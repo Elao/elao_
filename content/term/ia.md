@@ -2,21 +2,23 @@
 name: "IA"
 title:
 - "Les intelligences artificielles génératives'"
-titleSeo: ""
-metaDescription : ""
+titleSeo: "Les intelligences artificielles aux services de vos projets chez Elao"
+metaDescription : "Les intelligences artificielles génératives s'intègrent dans le quotidien des utilisateurs. Découvrez comment nous les utilisons chez Elao."
 articles:
 ---
 
-Qu'est-ce que les IA génératives ? Comment peuvent-elles améliorer notre quotidien en tant qu'atelier web. On vous explique tout ça ! 
+Que sont les IA génératives ? Comment peuvent-elles améliorer notre quotidien en tant qu'atelier web. On vous explique tout ça ! 
 
 ### L'origine
 
-Les IA, machines dont le but est de se tourner au plus près du comportement humain, sont présentes depuis de nombreuses années et leur essor représente aujourd'hui une avancée majeure dans le domaine de la technologie.
-Cette évolution technologique n'est pas nouvelle, puisque le terme d'"IA" a été introduit en **1955** par John McCarthy. Cependant, au fil des années, les IA se sont intégrées dans notre quotidien, devenant des outils indispensables grâce à leur capacité à effectuer des calcules à une vitesse impressionnante et à prendre les meilleurs décisions.
+L'IA désigne la possibilité pour une machine de reproduire au plus près un ou plusieurs aspects du comportement humain. Elle existe depuis de nombreuses de nombreuses années et son essor représente aujourd'hui une avancée majeure dans le domaine de la technologie.
+Cette évolution technologique n'est pas nouvelle, puisque le terme d'_IA_ a été introduit en **1955** par [John McCarthy](https://fr.wikipedia.org/wiki/John_McCarthy). Cependant, au fil des années, les IA se sont intégrées dans notre quotidien, devenant des outils indispensables grâce à leur capacité à effectuer des calculs à une vitesse impressionnante et ainsi livrer des résultats qui s'appuient sur davantages de données.
 
 ### Le déploiement des IA génératives
 
-Parmi les différentes catégories d'IA, les **IA génératives** se distinguent par leur capacité à créer du contenu de manière autonome en se basant sur des données déjà existantes. Elles sont capables de produire du texte, de l'image, de la vidéo etc. Ces IA génératives ont récemment gagné en notoriété grâce à des avancées importantes, notamment avec l'avènement de **ChatGPT**. Aujourd'hui, elles sont devenues un outil utilisé quotidiennement par de plus en plus d'utilisateurs et tendent à évoluer considérablement.
+Parmi les différentes catégories d'IA, les **IA génératives** se distinguent par leur capacité à créer du contenu de manière autonome en se basant sur des données déjà existantes. Elles sont capables de produire du texte, de l'image, de la vidéo etc. Ces IA génératives ont récemment gagné en notoriété grâce à des avancées importantes, notamment avec l'avènement de **ChatGPT**. 
+
+Aujourd'hui, elles sont devenues un outil utilisé quotidiennement par de plus en plus de personnes et de services, qui tendent à évoluer considérablement.
 
 ### Elao et les IA
 

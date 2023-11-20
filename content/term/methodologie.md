@@ -1,9 +1,10 @@
 ---
 name: "Méthodologie"
 title:
-- "Notre méthodologie de projet basée sur l'agilité"
-titleSeo: ""
-metaDescription : ""
+- "Notre méthodologie de projet 
+basée sur l'agilité"
+titleSeo: "La méthodologie Agile pour vos projets web chez Elao"
+metaDescription : "Découvrez les principes de l'agilité avec scrum et Kanban, afin de concevoir un projet web efficace."
 articles:
 ---
 
@@ -11,7 +12,7 @@ L'Agilité est aujourd'hui la méthode de prédilection dans le développement d
 
 ## Le principe de la méthodologie Agile 
 
-Méthodologie aujourd'hui majoritairement utilisée, l'aglité à pour but de gagner en **souplesse** et en **performance** lors du développement d'un projet web.
+Méthodologie aujourd'hui majoritairement utilisée, l'aglité a pour but de gagner en **souplesse** et en **performance** lors du développement d'un projet web.
 
 Avant que la méthode Agile s'impose comme LA méthode à adopter dans notre secteur, les projets étaient davantages construits sur le modèle dit "en cascade" ou du "cycle en v". Les projets avançaient tâche par tâche de manière très linéaire. Ce process n'était alors pas adapté aux projets web qui sont amenés à **évoluer au fil de l'eau**, avec des clients pouvant voir leurs **besoins** se modifier. Face à ce constat, la méthode Agile a vu le jour et a su évoluer à travers de grandes typologies de process.
 
@@ -23,7 +24,7 @@ Parmi les modèles d'agilité, la méthode **SCRUM** est aujourd'hui celle que n
 
 Ce fonctionnement est mis en place jusqu'au dernier sprint qui débouchera sur une mise en ligne du projet.
 
-Cette méthode permet d'**ajuster le projet en cours de route pour s'adapter aux évolutions des besoins**, renforce la **transparence** et la **collaboration** de l'équipe, permet de **réduire les risques** et d'améliorer la **satisfaction de vos clients**.
+Cette méthode permet d'**ajuster le projet en cours de route pour s'adapter aux évolutions des besoins**, renforce la **transparence** et la **collaboration** de l'équipe, permet de **réduire les risques** et d'améliorer la **satisfaction client**.
 
 <figure>
     <img src="content/images/terms/methodologie-scrum.png" alt="schéma méthodologie scrum">

@@ -62,8 +62,9 @@ twig:
                 categories:
                     - { path: 'dev', label: '#Dev' }
                     - { path: 'elao', label: '#Elao' }
-                    - { path: 'infra', label: '#Infra' }
+#                    - { path: 'infra', label: '#Infra' } # The blog articles in this directory are quite old, not displaying this folder at the moment
                     - { path: 'methodo', label: '#Méthodologie' }
+                    - { path: 'tech', label: '#Tech' }
 
         amabla_briefs_demo:
             host: https://elao.amabla.com

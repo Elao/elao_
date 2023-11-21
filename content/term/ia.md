@@ -26,4 +26,4 @@ Chez Elao, nous avons toujours accordé une attention particulière au domaine d
 
 Actuellement, nous travaillons activement sur le développement d'un produit qui permettra à nos clients de tirer parti de la puissance des IA dans le cadre de leurs **besoins spécifiques**. Cette initiative vise à offrir à nos clients une **solution sur mesure** pour optimiser leur utilisation des IA génératives à travers leurs tâches quotidiennes.
 
-On vous en dis plus juste [ici](https://www.elao.com/nos-services/ia) ! 
+On vous en dis plus juste [ici](./nos-services/ia) ! 

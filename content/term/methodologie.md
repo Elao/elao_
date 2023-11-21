@@ -1,8 +1,8 @@
 ---
 name: "Méthodologie"
 title:
-  - "Notre méthodologie de projet" 
-  - "basée sur l'agilité"
+    - "Notre méthodologie de projet" 
+    - "basée sur l'agilité"
 titleSeo: "La méthodologie Agile pour vos projets web chez Elao"
 metaDescription : "Découvrez les principes de l'agilité avec scrum et Kanban, afin de concevoir un projet web efficace."
 articles:
@@ -14,7 +14,7 @@ L'Agilité est aujourd'hui la méthode de prédilection dans le développement d
 
 Méthodologie aujourd'hui majoritairement utilisée, l'aglité a pour but de gagner en **souplesse** et en **performance** lors du développement d'un projet web.
 
-Avant que la méthode Agile s'impose comme LA méthode à adopter dans notre secteur, les projets étaient davantages construits sur le modèle dit "en cascade" ou du "cycle en v". Les projets avançaient tâche par tâche de manière très linéaire. Ce process n'était alors pas adapté aux projets web qui sont amenés à **évoluer au fil de l'eau**, avec des clients pouvant voir leurs **besoins** se modifier. Face à ce constat, la méthode Agile a vu le jour et a su évoluer à travers de grandes typologies de process.
+Avant que la méthode Agile s'impose comme LA méthode à adopter dans notre secteur, les projets étaient davantage construits sur le modèle dit "en cascade" ou du "cycle en v". Les projets avançaient tâche par tâche de manière très linéaire. Ce process n'était alors pas adapté aux projets web qui sont amenés à **évoluer au fil de l'eau**, avec des clients pouvant voir leurs **besoins** se modifier. Face à ce constat, la méthode Agile a vu le jour et a su évoluer à travers de grandes typologies de process.
 
 ## Scrum et Kanban
 
@@ -35,6 +35,6 @@ Cette méthode permet d'**ajuster le projet en cours de route pour s'adapter aux
 </figure>
 
 Chez Elao, nous utilisons davantage la méthode **Kanban**. Cette dernière repose également sur la rédaction d'user stories et la mise en place d'un Product Backlog, mais nous avançons fonctionnalité par fonctionnalité. Ainsi, nous pouvons tester au fur et à mesure les fonctionnalités et les déployer sur l'environnement de staging afin que les clients puissent tester. Si la fonctionnalité est validée par le client, nous sommes à même de déployer cette dernière sur leur environnement de production.
-Cette méthodologie nous apparaissait plus adaptée au vu des **typologies de projet** que nous avons chez Elao, notammant ceux qui sont en phase de **run**.
+Cette méthodologie nous apparaissait plus adaptée au vu des **typologies de projet** que nous avons chez Elao, notamment ceux qui sont en phase de **run**.
 
-Il est important de noter que ces process dépendent des types de projets, de la taille de vos équipe et de votre culture organisationnelle. Vous pouvez tout à fait vous en inspirer en l'adaptant à votre propre fonctionnement, à vos visions en interne.
+Il est important de noter que ces process dépendent des types de projets, de la taille de vos équipes et de votre culture organisationnelle. Vous pouvez tout à fait vous en inspirer en l'adaptant à votre propre fonctionnement, à vos visions en interne.

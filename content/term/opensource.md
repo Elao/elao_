@@ -1,7 +1,8 @@
 ---
 name: "Open source"
 title:
-- "Le riche écosystème de l'Open source"
+    - "Le riche écosystème"
+    - "de l'Open source"
 titleSeo: "Contribuez à l'Open source à travers les projets que vous confiez à Elao"
 metaDescription : "L'open source reposant sur le principe du projet communautaire, évolue dans un écosystème riche et impactant. Découvrez notre contribution chez Elao."
 articles:
@@ -24,6 +25,6 @@ L'open source est dans notre quotidien, sans que l'on s'en rende compte : LibreO
 Chez Elao, ce principe de l'open source est très présent et fait partie intégrante de notre **ADN**.  
 Nous considérons cet **écosystème** comme une ressource à laquelle il nous faut contribuer pour en bénéficier, que ce soit en l'intégrant dans nos projets pour des fonctionnalités spécifiques ou en partageant nos propres produits pour le profit de tous. 
 
-Retouvez sur notre [compte GitHub Elao](https://github.com/Elao) ainsi que sur celui de [Manala](https://github.com/manala) les différentes contributions open source des membres de l'équipe. 
+Retrouvez sur notre [compte GitHub Elao](https://github.com/Elao) ainsi que sur celui de [Manala](https://github.com/manala) les différentes contributions open source des membres de l'équipe. 
 
- Chez Elao, nous contribuons également à l'écosystème Symfony, ce framework php open source. À travers plusieurs membres de notre équipe, nous avons à coeur de faire évoluer et maintenir cet environnement. L'un d'eux fait notamment partie de la [Symfony Core Team](https://symfony.com/doc/current/contributing/code/core_team.html) qui regroupe les développeurs auyant une contribution de longue date, un engagement important et qui oeuvrent pour l'évolution de ce framework. 
+Chez Elao, nous contribuons également à l'écosystème Symfony, ce framework php open source. À travers plusieurs membres de notre équipe, nous avons à coeur de faire évoluer et maintenir cet environnement. L'un d'eux fait notamment partie de la [Symfony Core Team](https://symfony.com/doc/current/contributing/code/core_team.html) qui regroupe les développeurs ayant une contribution de longue date, un engagement important et qui œuvrent pour l'évolution de ce framework. 

@@ -21,7 +21,7 @@ Vous pouvez également mettre en place des **tests utilisateurs** afin d’analy
 
 Au quotidien, nous faisons des **wireframes**, des ateliers de **story mapping**, afin de valider en amont l’expérience utilisateur, plutôt que de se lancer tête baissée dans le développement. Cette étape est primordiale. Elle permet de prendre en considération vos besoins, de les adapter, de les mettre rapidement en forme pour que l’on puisse mieux savoir ce que vous avez en tête.
 
-Ce fût le cas sur le projet [Efire Calage](https://www.elao.com/etudes-de-cas/efire). L’idée était de créer des écrans pour de la création/gestion de photos sur tablette, en vue de générer des images vectorielles utilisées par la suite dans l’industrie. L’un des enjeux principaux était de proposer une navigation et un enchaînement fluide entre les écrans de prise de photo, de validation et de traitement de la photo. Nous avons donc réalisé les **wireframes** sur **Figma**, afin de travailler en collaboration avec le client, sur l’agencement des fonctionnalités tout en considérant les besoins utilisateurs.
+Ce fût le cas sur le projet [Efire Calage](./etudes-de-cas/efire). L’idée était de créer des écrans pour de la création/gestion de photos sur tablette, en vue de générer des images vectorielles utilisées par la suite dans l’industrie. L’un des enjeux principaux était de proposer une navigation et un enchaînement fluide entre les écrans de prise de photo, de validation et de traitement de la photo. Nous avons donc réalisé les **wireframes** sur **Figma**, afin de travailler en collaboration avec le client, sur l’agencement des fonctionnalités tout en considérant les besoins utilisateurs.
 
 <figure>
     <img src="content/images/terms/ui-ux.png" alt="wireframes pour le projet Efire Calage">
@@ -35,4 +35,6 @@ Chez Elao, nous avons à coeur d’intégrer les designers qui nous accompagneme
 
 Nous aimons également faire intervenir notre intégratrice et développeuse front-end lors de phases de **run** ou de **build**, afin de prendre en considération leurs expertises dans les choix UI.
 
-L'UX et l'UI passent aussi par l'accessibilité. On vous en dit pluhttps://www.elao.com/glossaire/accessibilite) !
+## En savoir plus
+
+L'UX et l'UI passent aussi par l'accessibilité. [On vous en dit plus ici](./accessibilite.md) !

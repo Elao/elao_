@@ -88,5 +88,5 @@ Thé, j'ai été team café, mais une mauvaise expérience digestive m'a fait ch
 telle une mauvaise cuite de jeunesse. 🤢
 
 ### PHP ou JS ?
-PHP / Symfony pour l'instant. J'ai presque toujours fait du JS pour mettre en place le front,
-j'ai été frustrée par ce côté bazar et bricolage, mais ReactJS et TypeScript me font changer d'avis déjà ! 🤩
+PHP / [Symfony](../../term/symfony.md) pour l'instant. J'ai presque toujours fait du JS pour mettre en place le front,
+j'ai été frustrée par ce côté bazar et bricolage, mais [ReactJS](../../term/react.md) et TypeScript me font changer d'avis déjà ! 🤩

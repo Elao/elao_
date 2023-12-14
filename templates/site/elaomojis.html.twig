@@ -21,7 +21,7 @@
                 <span>de nos Elaomojis 🥁🥁🥁</span>
             </h1>
             <div class="banner__highlight" data-aos="zoom-in">
-                <p>À l’occasion de la Journée Mondiale des Emojis 2021 (World Emoji Day), nous sommes ravis de vous présenter une sélection de nos :emojis-favoris:</p>
+                <p>Voici une sélection de nos Elaomojis préférés. Vous trouverez aussi les Elaomojis qui représentent chaque membre de la magic team ! 😃</p>
             </div>
         </div>
 
@@ -41,22 +41,6 @@
                 </ul>
             {% endfor %}
         {% endfor %}
-
-        {# TODO : set tweet ID in elaomojis.config.json once tweeted 🐦 #}
-        {% if config.tweetId is not empty %}
-            <div class="bricks">
-                <div class="brick-comment">
-                    <p class="title">Et vous ?</p>
-                    <p>
-                        Quels sont vos emojis préférés ?
-                        <a href="{{ external_url('twitter_like', { tweet_id: config.tweetId }) }}" target="_blank" class="animated-link animated-link--light">
-                            Poursuivons la discussion sur twitter !
-                        </a>
-                    </p>
-                    <div id="tweet-container" class="tweet-container" data-tweet-id="{{ config.tweetId }}"></div>
-                </div>
-            </div>
-        {% endif %}
     </div>
 {% endblock %}
 

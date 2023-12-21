@@ -13,7 +13,9 @@
             {path: '#', label: 'Brief'},
         ]) }}
         <div class="banner-services">
-            <h1 class="banner-services__title" data-aos="fade-right">L'IA au service de votre conception projet <span>par Amabla et elao</span></h1>
+            <h1 class="banner-services__title" data-aos="fade-right">
+                L'IA au service de votre conception projet <span>par Amabla et elao</span>
+            </h1>
             <div class="banner-services__content">
                 <div class="image"
                      data-aos="fade-left"
@@ -37,8 +39,8 @@
                 <iframe
                     id="brief"
                     {{ stimulus_controller('ia/brief/iframe', {
-                        host: amabla_briefs_demo.host,
-                        briefs: amabla_briefs_demo.briefs,
+                        host: amabla.briefs_demo.host,
+                        briefs: amabla.briefs_demo.briefs,
                     }) }}
                     title="Brief projet"
                 >

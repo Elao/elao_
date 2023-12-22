@@ -80,13 +80,13 @@ en rééquilibrant la **visibilité** des hommes et femmes.
 
 ## Et l'accessibilité dans tout ça ?
 
-L'**accessibilité**, c'est le fait de rendre un contenu accessible à tous, et notamment aux 
+L'[**accessibilité**](../../term/accessibilite.md), c'est le fait de rendre un contenu accessible à tous, et notamment aux 
 **personnes en situation de handicap**.
 
 Je me suis intéressée en particulier à la question des liseurs de texte (ou lecteurs d'écran), qui permettent à des personnes 
 **aveugles ou malvoyantes** de naviguer sur le web, et de lire des contenus.
 
-Je me demandais comment l'**écriture inclusive** s'accorde avec **l'accessibilité**, en particulier
+Je me demandais comment l'**écriture inclusive** s'accorde avec [**l'accessibilité**](../../term/accessibilite.md), en particulier
 la forme avec le **point médian**, qui est celle qui déchaîne le plus les passions.
 
 ![Cat in front of a computer with glasses](./../../images/blog/2023/accessibilite-et-ecriture-inclusive/cat_glasses_computer.gif)
@@ -174,7 +174,7 @@ qui facilitent la prononciation de textes utilisant l'**écriture inclusive**.
 
 !!! Success "Ressource vidéo : Écriture inclusive et **accessibilité** numérique"
     Voici une [vidéo portée par la **fédération des Aveugles et des Amblyopes de France**](https://www.youtube.com/watch?v=hJeHc3ckou8) 
-    sur l'**accessibilité** et **l'écriture inclusive**.
+    sur l'[**accessibilité**](../../term/accessibilite.md) et **l'écriture inclusive**.
     Elle donne des points de vue et des arguments très intéressants, discutés avec des personnes concernées.
 
 !!! note "Petite parenthèse sur **l'amblyopie**"

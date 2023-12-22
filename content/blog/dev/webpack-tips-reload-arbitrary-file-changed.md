@@ -37,7 +37,7 @@ de l'option [`devServer.watchFiles`](https://webpack.js.org/configuration/dev-se
 ### Avec Webpack
 
 Par exemple, vous pourriez vouloir recharger automatiquement la page dans votre navigateur lorsque vous modifiez
-un fichier Twig ou de l'un des contenus rendus dans votre application Symfony :
+un fichier Twig ou de l'un des contenus rendus dans votre application [Symfony](../../term/symfony.md) :
 
 ```js
 // webpack.config.js
@@ -59,7 +59,7 @@ la page dès lors que vous modifierez un fichier correspondant à l'un des patte
 
 ### Avec Webpack Encore
 
-Si vous développez une application Symfony, il y a toutes les chances que vous utilisiez
+Si vous développez une application [Symfony](../../term/symfony.md), il y a toutes les chances que vous utilisiez
 [Webpack Encore](https://symfony.com/doc/current/frontend.html).
 
 Auquel cas, la configuration est similaire :

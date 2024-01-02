@@ -79,6 +79,18 @@
         color: white;
         padding: 40px;
         position: relative;
+        color: $color-secondary;
+
+        a {
+          color: $color-secondary;
+          text-decoration: underline;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: #fff;
+            }
+        }
       }
 
       .step {
@@ -137,6 +149,10 @@
           }
           &:before, &:after {
             display: none;
+          }
+
+          a {
+            color: #fff;
           }
         }
       }

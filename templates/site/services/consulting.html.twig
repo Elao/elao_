@@ -107,7 +107,9 @@
                 {% set delay = delay + delayGap %}
                 <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
                     <i class="icon icon--backlog" aria-hidden="true"></i>
-                    Construire avec vous le backlog de votre produit
+                    <span class="supports__item__content">
+                        Construire avec vous le <strong><a href="{{ path('glossary_term', {term: 'backlog'}) }}">backlog</a></strong> de votre produit
+                    </span>
                 </li>
                 {% set delay = delay + delayGap %}
                 <li class="supports__item" data-aos="fade-up" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">

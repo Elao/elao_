@@ -153,6 +153,14 @@
 
           a {
             color: #fff;
+            text-decoration: underline;
+            transition: color ease-in .1s;
+
+            &:hover,
+            &:active,
+            &:focus {
+              color: $color-brand;
+            }
           }
         }
       }

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Thu, 21 Dec 2023 13:14:44 +0000</pubDate>
+        <pubDate>Tue, 02 Jan 2024 10:15:15 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -150,7 +150,7 @@
                                             </item>
                     <item>
                 <title>L&#039;accessibilité de l&#039;écriture inclusive, ça donne quoi ?</title>
-                <pubDate>Thu, 21 Dec 2023 13:13:36 +0000</pubDate>
+                <pubDate>Tue, 02 Jan 2024 10:11:57 +0000</pubDate>
                 <description>
                     <![CDATA[ Expérimentations autour de l&#039;accessibilité liée à l&#039;écriture inclusive. ]]>
                 </description>
@@ -242,25 +242,6 @@
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>
-                                            </item>
-                    <item>
-                <title>Config 2023: notre sélection de nouveautés Figma</title>
-                <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ À travers cet article, retrouvez notre sélection et avis sur les nouveautés Figma, présentées lors de la Config 2023. ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/blog/tech/config-2023-notre-selection-de-nouveautes-figma</guid>
-                <link>https://elao.github.io/elao_/blog/tech/config-2023-notre-selection-de-nouveautes-figma</link>
-                <media:content
-                    url="https://elao.github.io/elao_/resized/content/images/blog/thumbnails/config-2023-notre-selection-de-nouveautes-figma.jpg/f18a797a4c6e2b1325ea8d1d4e3626df.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Config 2023: notre sélection de nouveautés Figma</media:description>
-                                    </media:content>
-                                    <category>figma</category>
-                                    <category>conference</category>
-                                    <category>webdesign</category>
                                             </item>
             </channel>
 </rss>

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Tue, 02 Jan 2024 17:07:06 +0000</pubDate>
+        <pubDate>Mon, 08 Jan 2024 12:43:15 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -150,7 +150,7 @@
                                             </item>
                     <item>
                 <title>L&#039;accessibilité de l&#039;écriture inclusive, ça donne quoi ?</title>
-                <pubDate>Tue, 02 Jan 2024 17:05:53 +0000</pubDate>
+                <pubDate>Mon, 08 Jan 2024 12:41:57 +0000</pubDate>
                 <description>
                     <![CDATA[ Expérimentations autour de l&#039;accessibilité liée à l&#039;écriture inclusive. ]]>
                 </description>
@@ -203,42 +203,6 @@
                     height="627"
                 >
                     <media:description type="plain">Camille, développeuse web chez Elao depuis 1 an</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
-                    <item>
-                <title>Eva, Facilitatrice projets fraichement arrivée chez Elao</title>
-                <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[  ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/eva-facilitatrice-projet-portrait</guid>
-                <link>https://elao.github.io/elao_/blog/elao/eva-facilitatrice-projet-portrait</link>
-                <media:content
-                    url="https://elao.github.io/elao_/resized/content/images/blog/2023/itw-eva/banner.jpeg/84834d44b0b6c0334c8d5bc821be46cd.jpeg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Eva, Facilitatrice projets fraichement arrivée chez Elao</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
-                    <item>
-                <title>Laurie, développeuse front-end chez Elao</title>
-                <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[  ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/laurie-developpeuse-front-end</guid>
-                <link>https://elao.github.io/elao_/blog/elao/laurie-developpeuse-front-end</link>
-                <media:content
-                    url="https://elao.github.io/elao_/resized/content/images/blog/2023/itw-laurie/banner.JPEG/212abc833ec91d4854a76e2b9ac5e5f3.JPEG"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Laurie, développeuse front-end chez Elao</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>

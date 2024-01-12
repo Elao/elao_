@@ -44,7 +44,7 @@ Depuis la mise en production, nous avons continué à développer de nouvelles f
 
 ## Les applications
 
-### Pour les recruteurs : un ATS pour publier des offres et suivre les candidures
+### Pour les recruteurs : un ATS pour publier des offres et suivre les candidatures
 
 Un <abbr title="Applications Tracking System">ATS</abbr> est un logiciel permettant gérer un flux de candidatures à travers un parcours de recrutement. MyJob.Company souhaitait offrir à ses clients recruteurs davantage de contrôle et de suivi sur les candidatures. L'application devait proposer plusieurs parcours configurables afin de s'adapter aux différents processus de recrutement de ses clients.
 
@@ -65,7 +65,7 @@ L'autre enjeu était la qualité des offres proposées sur la plateforme. Grâce
 
 ### Pour les coopteurs : un moteur de recherche et un suivi de leurs cooptés
 
-Le coopteur devait pouvoir accéder aux offres d'emploi grâce à un moteur de recherche multi-critères et géolocalisé. MyJob.Company souhaitait également offrir davantage de suivi et de transparence à ses coopteurs. L'application devait donc leur permettre de suivre l'avancement des candidatures qu'ils ont générées ainsi que leur statut : si elle ont été acceptées ou refusées et pour quelle raison.
+Le coopteur devait pouvoir accéder aux offres d'emploi grâce à un moteur de recherche multi-critères et géolocalisé. MyJob.Company souhaitait également offrir davantage de suivi et de transparence à ses coopteurs. L'application devait donc leur permettre de suivre l'avancement des candidatures qu'ils ont générées ainsi que leur statut : si elles ont été acceptées ou refusées et pour quelle raison.
 
 **Les contraintes étaient les suivantes :**
 * Permettre de recommander simplement un profil ou partager l'offre à ses réseaux ;

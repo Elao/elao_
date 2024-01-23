@@ -325,7 +325,7 @@
 
                                             </li>
                                     <li class="table-of-content__item">
-                        <a href="#notre-premier-dp-la-factory-method">Factory MethodNotre premier DP : la </a>
+                        <a href="#notre-premier-dp-la-factory-method">Notre premier DP : la Factory Method</a>
 
                                             </li>
                             </ol>
@@ -380,7 +380,7 @@
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span></span></code></pre>
 <p>Ne me faites pas dire ce que je n'ai pas dit ... Je ne prétends pas du tout que le code ci-dessus relève d'une mauvaise conception. Ni que cette classe n'est pas une <em>factory</em>. Simplement, si l'on se réfère à la définition exacte du pattern <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code>, on s'apercevra que l'on n'est pas en présence d'un pattern.</p>
-<p>Pour autant, cela ne signifie pas que ce code mérite l'anathème, loin de là. J'évoquais tout à l'heure les principes d'une bonne conception objet, et parmi les bonnes pratiques, il est préconisé d'isoler ce qui varie (<em>encapsulate what varies</em>). Or c'est exactement ce que fait cette classe : elle isole en son sein un pan de code qui repose sur un embranchement (<em>switch</em>). De ce point de vue, ce code est parfaitement valide.</p>
+<p>Pour autant, cela ne signifie pas que ce code mérite l'anathème, loin de là. J'évoquais tout à l'heure les principes d'une bonne conception objet, et parmi les bonnes pratiques, il est préconisé d'isoler ce qui varie (<em>encapsulate what varies</em>). Or c'est exactement ce que fait cette classe : elle isole en son sein un pan de code qui repose sur un embranchement (<em>switch</em>) pour retourner un objet. De ce point de vue, ce code est parfaitement valide.</p>
 <p>Noter que cette bonne pratique objet qui consiste à isoler ce qui varie est mentionnée parmi d'autres dans le livre <em>Head First Design Pattern</em>. Citons-en quelques-unes :</p>
 <ul>
 <li>favoriser la composition plutôt que l'héritage (citée également par le <em>Gang of Four</em>)</li>
@@ -390,7 +390,7 @@
 <li>etc.</li>
 </ul>
 <p>Mais nous aurons l'occasion d'y revenir ...</p>
-<h2 id="notre-premier-dp-la-factory-method" class="anchor-title"><code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code><a href="#notre-premier-dp-la-factory-method">Notre premier DP : la </a></h2>
+<h2 id="notre-premier-dp-la-factory-method" class="anchor-title"><a href="#notre-premier-dp-la-factory-method">Notre premier DP : la Factory Method</a></h2>
 <h3 id="introduction" class="anchor-title"><a href="#introduction">Introduction</a></h3>
 <p>Les principes d'une bonne conception objet recommandent de programmer pour des interfaces plutôt que des implémentations (c'est au demeurant un principe qui s'accommode très bien avec celui de l'injection de dépendance). Concrètement, cela consiste par exemple à privilégier des méthodes de classes qui acceptent en arguments des interfaces (ou classes abstraites) plutôt que des classes concrètes. Cela étant, même si l'on programme pour des interfaces, nous devons nécessairement nous résoudre à instancier des objets concrets pour que notre application s'exécute. Et c'est là qu'entrent en scène les design patterns de création, et notamment les deux Design patterns de <em>Factory</em> identifiés par le <em>Gang of Four</em>, à savoir la <code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> et l'<code class="code-inline" id="3266b075d74acc656ed95e166300fd26">Abstract Factory</code>.</p>
 <p>Pour l'heure, intéressons-nous au premier de ces deux patterns de <em>Factory</em>.</p>
@@ -437,7 +437,7 @@
 <li>nous avons créé un couplage très fort (trop fort ?) entre nos deux classes.</li>
 </ul>
 <p>Il est possible qu'en l'état actuel de l'application, ce code fasse parfaitement l'affaire. Mais il est préférable de rendre son code ouvert aux évolutions, et c'est particulièrement vrai lorsque l'on développe des services destinés à être consommés par des tiers (librairie <em>open source</em> par exemple) ou bien des classes métiers dont les spécifications sont susceptibles d'évoluer fréquemment.</p>
-<h3 id="le-design-pattern-factory-method-a-la-rescousse" class="anchor-title"><code class="code-inline" id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> à la rescousse<a href="#le-design-pattern-factory-method-a-la-rescousse">Le design pattern </a></h3>
+<h3 id="le-design-pattern-factory-method-a-la-rescousse" class="anchor-title"><a href="#le-design-pattern-factory-method-a-la-rescousse">Le design pattern Factory Method à la rescousse</a></h3>
 <p>Nous allons à présent modifier notre classe <code class="code-inline" id="f454b76d1cda09695d0fe30bb3447acd">OrderHandler</code> pour nous rapprocher du pattern :</p>
 <pre class="code-multiline language-php"><code class="language-php" id="21e2b1250e9a91bef21ab903fc656839"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
     <span class="token keyword">class</span> <span class="token class-name-definition class-name">OrderHandler</span> <span class="token punctuation">{</span>

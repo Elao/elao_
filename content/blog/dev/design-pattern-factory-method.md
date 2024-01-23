@@ -73,7 +73,7 @@ Après un préambule assez verbeux j'en conviens, laissez-moi à présent vous g
 
 Ne me faites pas dire ce que je n'ai pas dit ... Je ne prétends pas du tout que le code ci-dessus relève d'une mauvaise conception. Ni que cette classe n'est pas une _factory_. Simplement, si l'on se réfère à la définition exacte du pattern `Factory Method`, on s'apercevra que l'on n'est pas en présence d'un pattern.
 
-Pour autant, cela ne signifie pas que ce code mérite l'anathème, loin de là. J'évoquais tout à l'heure les principes d'une bonne conception objet, et parmi les bonnes pratiques, il est préconisé d'isoler ce qui varie (_encapsulate what varies_). Or c'est exactement ce que fait cette classe : elle isole en son sein un pan de code qui repose sur un embranchement (_switch_). De ce point de vue, ce code est parfaitement valide.
+Pour autant, cela ne signifie pas que ce code mérite l'anathème, loin de là. J'évoquais tout à l'heure les principes d'une bonne conception objet, et parmi les bonnes pratiques, il est préconisé d'isoler ce qui varie (_encapsulate what varies_). Or c'est exactement ce que fait cette classe : elle isole en son sein un pan de code qui repose sur un embranchement (_switch_) pour retourner un objet. De ce point de vue, ce code est parfaitement valide.
 
 Noter que cette bonne pratique objet qui consiste à isoler ce qui varie est mentionnée parmi d'autres dans le livre _Head First Design Pattern_. Citons-en quelques-unes :
 
@@ -85,7 +85,7 @@ Noter que cette bonne pratique objet qui consiste à isoler ce qui varie est men
 
 Mais nous aurons l'occasion d'y revenir ...
 
-## Notre premier DP : la `Factory Method`
+## Notre premier DP : la Factory Method
 
 ### Introduction
 
@@ -147,7 +147,7 @@ Nous pouvons craindre que cette classe `OrderHandler` et la classe concrète `Pr
 
 Il est possible qu'en l'état actuel de l'application, ce code fasse parfaitement l'affaire. Mais il est préférable de rendre son code ouvert aux évolutions, et c'est particulièrement vrai lorsque l'on développe des services destinés à être consommés par des tiers (librairie _open source_ par exemple) ou bien des classes métiers dont les spécifications sont susceptibles d'évoluer fréquemment.
 
-### Le design pattern `Factory Method` à la rescousse
+### Le design pattern Factory Method à la rescousse
 
 Nous allons à présent modifier notre classe `OrderHandler` pour nous rapprocher du pattern :
 

@@ -6,7 +6,6 @@ description: "Voici une sélection de nos Elaomojis préférés. Vous trouverez 
  qui représentent chaque membre de la magic team ! | Elao"
 
 categories:
-
     - title: "Les collections spéciales 🐱"
       sections:
           -   title: 'La happy team !'
@@ -219,3 +218,15 @@ categories:
                   path: corporate/new-elao.png
                 - code: ":magic-team:"
                   path: corporate/magic-team.png
+    - title: "Les natifs"
+      sections:
+          - title: "Les réactions rapides 🚀"
+            emojis:
+              - code: ":sparkles:"
+                path: native/sparkles.png
+              - code: ":waving-hand:"
+                path: native/waving-hand.png
+              - code: ":folded-hands:"
+                path: native/folded-hands.png
+              - code: ":check-mark:"
+                path: native/check-mark.png

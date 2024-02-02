@@ -44,7 +44,7 @@ tableOfContent: 3
 
 ### Les éléments typographiques
 
-Nous avons des paragraphes, [des liens](https://www.elao.com/fr/), parfois du `code inline`.
+Nous avons des paragraphes, [des liens](https://www.elao.com/), parfois du `code inline`.
 
 - des listes de choses
 - des listes de choses

@@ -29,7 +29,7 @@ Spécialistes open source et experts Symfony/JS dotés d'une grosse culture devo
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
+Backend, frontend et/ou devops, [les équipes](https://www.elao.com/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
 Au sein d'une équipe jeune et dynamique à taille humaine, vous serez en charge des développements Web/Mobile en JavaScript : analyse des besoins, conception, développement des fonctionnalités et rédaction des tests. Vous évoluerez au sein de l'équipe lyonnaise sur des projets à forte orientation applicative et technique. Nous travaillons essentiellement en interne avec des équipes de 3 personnes dédiées à un projet.
 

@@ -25,7 +25,7 @@ Ces rappels (ou découvertes pour certains) de l'utilisation de l'objet dans son
 
 Cette conférence nous a permis de questionner nos approches de l'agilité : les estimations sont-elles fiables ? Est-il vraiment possible de compter dessus ?
 SCRUM est-elle vraiment une méthodologie agile ? Autant de questions nécessaires pour réfléchir sur nos organisations au sein d'équipes de développement.
-Au fait, [on en avait déjà parlé !](https://blog.elao.com/fr/elao/mixit-2018/#cessons-les-estimations)
+Au fait, [on en avait déjà parlé !](https://www.elao.com/blog/elao/mixit-2018/#cessons-les-estimations)
 
 - <a href="https://www.youtube.com/watch?v=aXq05_mdCqE" target="_blank">Comment j’ai commencé à aimer ce qu’ils appellent « design pattern »</a> par Samuel Roze
 

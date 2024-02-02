@@ -42,7 +42,7 @@ __Une mission commune à tous :__
 - Travailler de manière «agile» avec une bonne dose de pragmatisme
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
-<br/> Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
+<br/> Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/nos-experiences/).
 
 Nous apportons un soin particulier, et ce avant même les dernières législations, à la protection des données.
 <br/>Nous avons une bonne sensibilité à la sécurité même s'il ne s'agit pas de notre métier premier (Nous avons des partenaires spécialisés).

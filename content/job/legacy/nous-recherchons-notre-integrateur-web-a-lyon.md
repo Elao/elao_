@@ -22,7 +22,7 @@ Spécialistes open source et experts Symfony/JS avec une grosse culture devops, 
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste pragmatique mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
+Backend, frontend et/ou devops, [les équipes](https://www.elao.com/la-tribu) disposent de la marge de manoeuvre et de l’autonomie nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
 Rien de plus parlant :-)
 
@@ -69,6 +69,6 @@ On en discute selon votre profil.
 --------------------------------------------------------
 
 Au plaisir d’échanger de vive voix et de recevoir votre candidature.
-N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/fr/la-tribu) pour savoir précisément à quoi vous attendre.
+N’hésitez pas à vous munir des références à votre actif et n'hésitez pas non plus à solliciter la [Team](https://www.elao.com/la-tribu) pour savoir précisément à quoi vous attendre.
 
 A bientôt sur jobs@elao.com

@@ -16,7 +16,7 @@ authors:        ["rhanna"]
 
 ## Le contexte
 
-Notre client, Proximum Group avec son produit [Vimeet](https://www.elao.com/fr/etudes-de-cas/vimeet/) propose à des
+Notre client, Proximum Group avec son produit [Vimeet](https://www.elao.com/etudes-de-cas/vimeet/) propose à des
 organisateurs d’événements une plateforme de gestion de rendez-vous B2B.
 
 Avant l’événement les participants s’inscrivent sur la plateforme et consultent le catalogue des participants :
@@ -448,7 +448,7 @@ Le participant a ensuite son agenda des rendez-vous accessible sur son ordinateu
 
 ## Bilan
 
-Notre instance d'OptaPlanner pour [Vimeet](https://www.elao.com/fr/etudes-de-cas/vimeet/) a maintenant réalisé la planification de dizaines d'événements depuis début
+Notre instance d'OptaPlanner pour [Vimeet](https://www.elao.com/etudes-de-cas/vimeet/) a maintenant réalisé la planification de dizaines d'événements depuis début
 2017. Les organisateurs ont noté en moyenne une __augmentation de 10%__ des rendez-vous positionnés par rapport à
 l'ancienne application de planification des rendez-vous.
 

@@ -16,7 +16,7 @@ authors:            ["mcolin"]
 
 ## Manala
 
-[Manala](http://www.manala.io/) est la boîte à outils pour [Ansible](https://www.ansible.com/) créée par [Elao](https://www.elao.com/fr/). Elle se compose d'une multitude de rôles **Ansible** pensés autour de la même philosophie : une installation et une configuration simple d'un environnement serveur.
+[Manala](http://www.manala.io/) est la boîte à outils pour [Ansible](https://www.ansible.com/) créée par [Elao](https://www.elao.com/). Elle se compose d'une multitude de rôles **Ansible** pensés autour de la même philosophie : une installation et une configuration simple d'un environnement serveur.
 
 Si vous n'êtes pas famillier avec **Ansible**, je vous encourage à [découvrir ce magnifique outil](http://docs.ansible.com/ansible/index.html).
 

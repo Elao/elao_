@@ -29,7 +29,7 @@ Dans le blog comme dans les études de cas, le `h1` est le titre de l'article. D
 
 ## Les éléments typographiques
 
-Nous avons des paragraphes, [des liens](https://www.elao.com/fr/), parfois du `code inline`.
+Nous avons des paragraphes, [des liens](https://www.elao.com/), parfois du `code inline`.
 
 - des listes de choses
 - des listes de choses

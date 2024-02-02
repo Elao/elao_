@@ -32,7 +32,7 @@ Nous prenons en charge des projets d'applications web et mobile. Cette mission c
 Nous travaillons sur des projets à forte orientation applicative et technique. Nous faisons essentiellement du symfony en back et du React en front mais nous sommes ouverts à toute autre technologie.
 
 Nos clients vont des grands groupes aux startups. Les projets sont menés avec la proximité nécessaire avec nos clients.
-Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
+Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/nos-experiences/).
 
 ## Votre savoir-faire
 

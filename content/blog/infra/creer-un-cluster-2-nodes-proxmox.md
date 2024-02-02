@@ -28,7 +28,7 @@ Pour ceux d'entres vous qui souhaitent faire ça entre deux data-centres différ
 <img src="https://placeimg.com/300/300/any" alt="" class="outside-left" />
 Rien de surprenant ici, la première étape consistera à installer une distribution Proxmox sur vos deux machines.
 
-L'installation de base de la distribution peut convenir pour tester la solution mais dans le cas d'une exploitation un peu plus poussée je vous conseille de jeter un oeil à [**ce post**](http://www.elao.com/fr/blog/partitionnement-d-un-serveur-proxmox) qui concerne le partitionement des machines.
+L'installation de base de la distribution peut convenir pour tester la solution mais dans le cas d'une exploitation un peu plus poussée je vous conseille de jeter un oeil à [**ce post**](http://www.elao.com/blog/partitionnement-d-un-serveur-proxmox) qui concerne le partitionement des machines.
 
 ## Préparer le réseau
 

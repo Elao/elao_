@@ -36,7 +36,7 @@ Mais nous restons bien entendu ouverts à d'autres technologies.
 
 Le profil de nos clients va des grands comptes aux startups. Nous mettons un point d'honneur à maintenir un dialogue permanent tout au long du cycle de vie des projets (accompagnement à l'expression des besoins, recettes régulières, rétrospectives, onboarding, etc.)
 
-N'hésitez pas à consulter notre site internet pour avoir un [aperçu de nos projets](https://www.elao.com/fr/nos-experiences/).
+N'hésitez pas à consulter notre site internet pour avoir un [aperçu de nos projets](https://www.elao.com/nos-experiences/).
 
 ## Votre profil
 
@@ -105,7 +105,7 @@ Parmi les avantages proposés à nos collaborateurs :
 
 <span class="side-note">📨</span>  Envoyez-nous votre CV accompagné d'un petit mot composé de votre plus belle écriture (ou en Arial taille 12, c'est bien aussi) à **jobs@elao.com**.
 
-Si vous souhaitez nous rencontrer avant d'entamer des démarches formelles, n'hésitez pas à nous aborder ! [L'équipe](https://www.elao.com/fr/la-tribu/) se fera une joie et un devoir de répondre à toutes vos questions.
+Si vous souhaitez nous rencontrer avant d'entamer des démarches formelles, n'hésitez pas à nous aborder ! [L'équipe](https://www.elao.com/la-tribu/) se fera une joie et un devoir de répondre à toutes vos questions.
 
 ---
 

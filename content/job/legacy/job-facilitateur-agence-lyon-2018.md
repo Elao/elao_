@@ -44,7 +44,7 @@ Vous ne serez pas tout seul dans cette tâche, car je la pratique au **quotidien
 
 Contributeurs et bénéficiaires d’un eco-système qui avance vite, très vite, nous offrons un environnement technique et humain épanouissant et adapté aux projets complexes, concrets et innovants. Élao reste **pragmatique** mais ne transige pas sur la qualité au quotidien.
 
-Backend, frontend et/ou devops, [les équipes](https://www.elao.com/fr/la-tribu) disposent de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
+Backend, frontend et/ou devops, [les équipes](https://www.elao.com/la-tribu) disposent de la marge de manoeuvre et de **l’autonomie** nécessaires pour travailler ensemble. Elles sont à votre disposition pour témoigner de leur quotidien chez élao.
 
 ## Rémunération
 
@@ -60,7 +60,7 @@ Nous limitons nos effectifs pour garantir un vrai **esprit d'équipe** avec une 
 
 ## Le poste m'intéresse !
 
-Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la [page contact](https://www.elao.com/fr/nous-contacter/), nous serons heureux de faire votre connaissance !
+Si vous vous reconnaissez dans le profil recherché et que vous avez envie d'en savoir un peu plus, n'hésitez pas à nous pousser un petit email sur [jobs@elao.com](mailto:jobs@elao.com) ou de passer par la [page contact](https://www.elao.com/nous-contacter/), nous serons heureux de faire votre connaissance !
 
 [**Développeur(se) Frontend**](/fr/elao/job-frontend-developpeur-agence-lyon-2018)
 

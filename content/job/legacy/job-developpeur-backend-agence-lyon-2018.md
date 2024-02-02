@@ -30,7 +30,7 @@ Dans un cadre dynamique, nous prenons en charge des projets d'applications web e
 - Travailler de manière «agile» avec une bonne dose de pragmatisme
 
 Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
-Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/fr/nos-experiences/).
+Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/nos-experiences/).
 
 ## Votre savoir-faire
 

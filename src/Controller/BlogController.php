@@ -39,8 +39,12 @@ class BlogController extends AbstractController
         ])->setLastModified(ContentUtils::max($pageArticles, 'lastModifiedOrCreated'));
     }
 
-    #[Route('/tag/{tag}', name: 'blog_tag')]
-    #[Route('/tag/{tag}/{!page}', name: 'blog_tag_page', requirements: ['page' => '\d+'])]
+    #[Route('/tag/{tag}', name: 'blog_tag', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
+    #[Route('/tag/{tag}/{!page}', name: 'blog_tag_page', requirements: ['page' => '\d+'], options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function tag(string $tag, int $page = 1, int $perPage = 20): Response
     {
         $articles = $this->manager->getContents(

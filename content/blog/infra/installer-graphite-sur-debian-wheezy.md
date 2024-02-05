@@ -38,7 +38,7 @@ Nous allons, dans un premier temps, avoir besoin des paquets suivants (Les versi
 - pkg-config (0.26-1)
 - libyaml-dev (0.1.4-2+deb7u5)
 
-_Attention  l'installation de la version 1.6.2 de Nginx nécessite <a href="http://www.elao.com/blog/utiliser-les-depots-officiels-nginx-sur-debian-wheezy" target="_blank">**d'utiliser les dépôts officiels Nginx**</a> et non pas ceux de Debian dans lesquels Nginx est fourni en version 1.2.1._
+_Attention  l'installation de la version 1.6.2 de Nginx nécessite **[d'utiliser les dépôts officiels Nginx](utiliser-les-depots-officiels-nginx-sur-debian-wheezy.md)** et non pas ceux de Debian dans lesquels Nginx est fourni en version 1.2.1._
 
 ```
 apt-get install nginx python-dev python-pip memcached  libcairo2-dev pkg-config git libyaml-dev

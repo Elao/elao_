@@ -113,6 +113,7 @@ class BlogController extends AbstractController
 
         $response = new Response();
         $response->headers->set('Content-Type', 'application/xml; charset=UTF-8');
+        $response->headers->set('X-Robots-Tag', 'noindex, nofollow');
 
         return $this->render('blog/rss/rssFromAuthor.xml.twig', [
             'author' => $author,

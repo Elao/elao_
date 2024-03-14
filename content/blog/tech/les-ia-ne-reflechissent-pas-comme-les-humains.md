@@ -6,9 +6,7 @@ description: "Découvrez à travers cet article le fonctionnement des IA et plus
 authors: [equentin] # (multiple acceptés)
 tableOfContent: false # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [ia, chatgpt, llm, prompt]
-thumbnail: 
-#banner: images/posts/headers/arc-max-quand-l-ia-simplifie-notre-navigation-sur-le-web.jpg # Uniquement si différent de la minitature (thumbnail)
-#credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
+thumbnail: null
 tweetId: '' # Ajouter l'id du Tweet après publication.
 outdated: false # `true` pour marquer un article comme obsolète ou une chaîne de caractère pour un message spécifique à afficher
 ---

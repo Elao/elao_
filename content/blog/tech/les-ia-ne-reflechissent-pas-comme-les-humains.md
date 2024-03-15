@@ -11,15 +11,15 @@ tweetId: '' # Ajouter l'id du Tweet après publication.
 outdated: false # `true` pour marquer un article comme obsolète ou une chaîne de caractère pour un message spécifique à afficher
 ---
 
-À la sortie de [**ChatGPT**](https://chat.openai.com/), nous avons été nombreux·se à tester cet outil qui est apparu comme une nouvelle attraction révolutionnaire. Nous avons commencé à lui poser des questions, plus ou moins précises, à échanger avec lui, à le tester et à tenter de découvrir ses limites. 
+À la sortie de [**ChatGPT**](https://chat.openai.com/), nous avons été nombreux·euses à tester cet outil qui est apparu comme une nouvelle attraction révolutionnaire. Nous avons commencé à lui poser des questions, plus ou moins précises, à échanger avec lui, à le tester et à tenter de découvrir ses limites. 
 
-Au sein de l’agence, nous avons été quelques uns à nous intéresser de plus près à ChatGPT mais surtout au fonctionnement de ces IA génératives afin de mieux les appréhender. Comprendre le mécanisme de ces outils nous a ainsi permis d’aller plus loin dans leur utilisation et de mesurer l’intérêt qu’ils peuvent avoir dans notre quotidien professionnel.💡
+Au sein de l’agence, nous avons été plusieurs à nous intéresser de plus près à ChatGPT mais surtout au fonctionnement de ces IA génératives afin de mieux les appréhender. Comprendre le mécanisme de ces outils nous a ainsi permis d’aller plus loin dans leur utilisation et de mesurer l’intérêt qu’ils peuvent avoir dans notre quotidien professionnel.💡
 
-À travers notre veille personnelle, notre participation à des conférences, à nos études sur des lectures spécialisées, nous avons réalisé une chose essentielle :  l**es IA ne possèdent pas une capacité de réflexion similaire à celle des êtres humains . Ce sont avant tout des outils entraînés, capables d’assimiler des données et de compiler des informations.** En partant de ce postulat, le fonctionnement de ces assistants et la manière de créer des prompts nous est apparu plus clair, notamment pour la création de notre produit [**Amabla**](https://www.amabla.com).  
+À travers notre veille personnelle, notre participation à des conférences, à nos études sur des lectures spécialisées, nous avons réalisé une chose essentielle :  **les IA ne possèdent pas une capacité de réflexion similaire à celle des êtres humains . Ce sont avant tout des outils entraînés, capables d’assimiler des données et de compiler des informations.** En partant de ce postulat, le fonctionnement de ces assistants et la manière de créer des prompts nous est apparu plus clair, notamment pour la création de notre produit [**Amabla**](https://www.amabla.com).  
 
 ## De manière très simple, comment fonctionne une IA générative ?
 
-L’univers de l’intelligence artificielle est présent depuis déjà de nombreuses années (dès les années 50). Avec le développement de l’informatique et son déploiement auprès du grand public, les IA ont commencé à connaître un succès important dans les années 2000, notamment avec l’une des avancées majeure de l’IA : le **machine learning** (ou l’art pour les machines d’apprendre par elles-mêmes en analysant des données et en améliorant leurs performances au fil du temps). 
+L’univers de l’intelligence artificielle est présent depuis déjà de nombreuses années (dès les années 50). Avec le développement de l’informatique et son déploiement auprès du grand public, les IA ont commencé à connaître un succès important dans les années 2000, notamment avec l’une des avancées majeures de l’IA : le **machine learning** (ou l’art pour les machines d’apprendre par elles-mêmes en analysant des données et en améliorant leurs performances au fil du temps). 
 
 C’est dans les années 2020 que nous allons voir apparaître la notion de **modèle de fondation** (capable de comprendre et de générer du contenu) connaissant une popularisation grandissante avec l’arrivée de l’outil ChatGPT.
 
@@ -49,11 +49,11 @@ Plus concrètement, les LLM ne vont pas travailler directement sur les mots en e
 !!! note "Pour info"
     Si vous souhaitez comprendre le fonctionnement de tokénisation et tester vos propres contenus, OpenAI propose un outil qui comptabilise votre phrase en tokens (en fonction du modèle - ChatGPT 3 OU 4) https://platform.openai.com/tokenizer
 
-Chaque LLM possède son propre fonctionnement de tokenisation et est capable de générer plus ou moins de token. Par exemple, actuellement **ChatGPT 4** (OpenAI) peut générer en une seule fois (ce qu’on appelle la fenêtre de contexte) 8 000 tokens, soit 6 000 mots. À l’inverse, **Gemini** (Google), peut générer 32 000 tokens, soit 24 000 mots. 
+Chaque LLM possède son propre fonctionnement de tokenisation et est capable de générer plus ou moins de tokens. Par exemple, actuellement **ChatGPT 4** (OpenAI) peut générer en une seule fois (ce qu’on appelle la fenêtre de contexte) 8 000 tokens, soit 6 000 mots. À l’inverse, **Gemini** (Google), peut générer 32 000 tokens, soit 24 000 mots. 
 
 ### Les IA génératives adaptent les mots à leur propre langage 
 
-Pour rappel, les modèles d’IA génératives, se reposant sur des principes mathématiques, ne sont pas capables de comprendre un mot en langage naturel. Elles vont donc devoir trouver un moyen de le transformer dans leur  langage à elles. Pour cela, elles vont transformer un mot en un vecteur. 
+Pour rappel, les modèles d’IA génératives, se reposant sur des principes mathématiques, ne sont pas capables de comprendre un mot en langage naturel. Elles vont donc devoir trouver un moyen de le transformer dans leur langage à elles. Pour cela, elles vont transformer un mot en un vecteur. 
 
 Avec ce principe là, elles vont pouvoir traiter le terme et donner une suite logique à ce dernier. Bien qu’un autre élément va intervenir afin de produire un contenu encore plus précis. 
 
@@ -61,7 +61,7 @@ Avec ce principe là, elles vont pouvoir traiter le terme et donner une suite lo
 
 Afin de pouvoir anticiper le prochain mot et créer un contenu cohérent, les IA vont devoir positionner un terme dans son ensemble dans le but de lui donner du sens, via un système de coordonnées. C’est ce que l’on appelle l’**embedding**. 
 
-Prenons l’exemple développé par Science Étonnante**. Nous souhaitons positionner le mot “chat”. Nous prenons deux dimensions en compte : sa domestication et sa taille. 
+Prenons l’exemple développé par **Science Étonnante**. Nous souhaitons positionner le mot “chat”. Nous prenons deux dimensions en compte : sa domestication et sa taille. 
 Ainsi, nous positionnons le chat (bien domestiqué et plutôt petit) sur un graphique. Le chien va apparaître à côté (car encore plus domestiqué et un peu plus grand). Si nous souhaitons positionner le lynx, ce dernier va apparaître au-dessus du chat (car plus sauvage et plus grand), de même pour le loup. Ainsi, on va attribuer à chacun de ces termes deux nombres, comprenant donc deux dimensions. Cela va nous permettre de positionner un terme dans son ensemble.⛓️ 
 
 <figure>

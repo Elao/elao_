@@ -18,7 +18,7 @@ class ResizedUrlGenerator
         private GlideUrlBuilder $glideUrlBuilder,
         private array $presetsNames = [],
         private bool $preGenerate = false,
-        LoggerInterface $logger = null
+        ?LoggerInterface $logger = null
     ) {
         $this->logger = $logger ?? new NullLogger();
     }

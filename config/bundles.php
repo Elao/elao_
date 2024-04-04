@@ -14,4 +14,5 @@ return [
     Stenope\Bundle\StenopeBundle::class => ['all' => true],
     App\Bridge\Glide\Bundle\GlideBundle::class => ['all' => true],
     Elao\Enum\Bridge\Symfony\Bundle\ElaoEnumBundle::class => ['all' => true],
+    Symfony\UX\StimulusBundle\StimulusBundle::class => ['all' => true],
 ];

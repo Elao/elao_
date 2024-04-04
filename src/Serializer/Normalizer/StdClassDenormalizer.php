@@ -21,7 +21,7 @@ class StdClassDenormalizer implements DenormalizerInterface, DenormalizerAwareIn
         $this->propertyAccessor = $propertyAccessor;
     }
 
-    public function denormalize($data, string $type, string $format = null, array $context = []): mixed
+    public function denormalize($data, string $type, ?string $format = null, array $context = []): mixed
     {
         $context[self::PROCESSING] = true;
 
@@ -39,12 +39,19 @@ class StdClassDenormalizer implements DenormalizerInterface, DenormalizerAwareIn
         return $object;
     }
 
-    public function supportsDenormalization($data, string $type, string $format = null, array $context = []): bool
+    public function supportsDenormalization($data, string $type, ?string $format = null, array $context = []): bool
     {
         if (isset($context[self::PROCESSING])) {
             return false;
         }
 
         return is_a($type, \stdClass::class, true);
+    }
+
+    public function getSupportedTypes(?string $format): array
+    {
+        return [
+            \stdClass::class => false,
+        ];
     }
 }

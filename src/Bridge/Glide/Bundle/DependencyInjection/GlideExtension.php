@@ -63,10 +63,13 @@ class GlideExtension extends Extension
             $config['skipped_types'],
         );
 
-        $publicCacheDir = (new Fs())->makePathRelative(
-            $container->getParameterBag()->resolveValue($config['cache']),
-            $container->getParameterBag()->resolveValue($config['public_dir']),
-        );
+        $cacheDir = $container->getParameterBag()->resolveValue($config['cache']);
+        $publicDir = $container->getParameterBag()->resolveValue($config['public_dir']);
+
+        \assert(\is_string($cacheDir));
+        \assert(\is_string($publicDir));
+
+        $publicCacheDir = (new Fs())->makePathRelative($cacheDir, $publicDir);
         $container->setParameter('glide_public_cache_path', trim($publicCacheDir, '/'));
     }
 

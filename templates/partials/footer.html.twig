@@ -64,10 +64,10 @@
                         <a href="{{ path('contact') }}">Contact</a>
                     </li>
                     <li>
-                        <a href="tel://{{ site.contact.phone }}">{{ site.contact.phone }}</a>
+                        <a href="tel:{{ site.contact.phone }}">{{ site.contact.phone }}</a>
                     </li>
                     <li>
-                        <a href="mailto://{{ site.contact.email }}">{{ site.contact.email }}</a>
+                        <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>
                     </li>
                     <li>{{ site.contact.address.street_address }}</li>
                     <li>{{ site.contact.address.address_postalCode }} {{ site.contact.address.address_locality }}</li>

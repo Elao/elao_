@@ -1,4 +1,4 @@
-name: Deploy production
+name: Deploy production on Kube
 
 on:
   workflow_dispatch: ~
@@ -14,8 +14,8 @@ concurrency:
 
 jobs:
 
-  deploy-production:
-    name: '🚧  Build & deploy 🚀'
+  build-production:
+    name: '🚧  Build 🚀'
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
@@ -23,14 +23,16 @@ jobs:
       name: production
       url: ${{ vars.WEBSITE_URL }}
 
+    permissions:
+      contents: read
+      packages: write
+
     steps:
       - name: 'Checkout'
         uses: actions/checkout@v4
 
-      - name: 'Configure deployer SSH key'
-        uses: webfactory/ssh-agent@v0.8.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_DEPLOY_KEY_PRODUCTION }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
       # https://github.com/actions/setup-node
       - name: 'Setup node'
@@ -86,8 +88,6 @@ jobs:
       - name: 'Build static site'
         run: |
           bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
-          bin/console app:generate-redirections --target=site --no-interaction -vv --ansi > build/redirections-site.conf
-          bin/console app:generate-redirections --target=blog --no-interaction -vv --ansi > build/redirections-blog.conf
         env:
           APP_ENV: prod
           ROUTER_DEFAULT_URI: ${{ vars.WEBSITE_URL }}
@@ -95,16 +95,76 @@ jobs:
           SHOW_UNPUBLISHED_ARTICLES: 0
           MATOMO_ID: ${{ vars.MATOMO_ID }}
 
-      - name: '🚀 Deploy'
-        run: |
-          rsync build/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ vars.DEPLOY_PATH }} \
-            --human-readable \
-            --compress \
-            --archive \
-            --delete \
-            --rsh "ssh -o StrictHostKeyChecking=no" \
-            --itemize-changes \
-          ;
+      - name: 'Login to GitHub Container Registry'
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: elao-tools
+          password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Reload Nginx config'
-        run: ssh ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} 'sudo /bin/systemctl reload nginx'
+      - name: 'Build and push the Docker image for website prod'
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: kubernetes/Dockerfile
+          push: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          tags: |
+            ghcr.io/elao/website:latest
+
+  deploy-helm:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    needs: [build-production]
+
+    steps:
+      - name: 'Set the Kubernetes context'
+        uses: azure/k8s-set-context@v4
+        with:
+          method: kubeconfig
+          kubeconfig: $${{ secrets.KUBERNETES_KUBECONFIG }}
+          context: kubernetes-admin@elao_argon-website-prod
+
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: 'Render charts website'
+        uses: azure/k8s-bake@v2.4
+        id: bake_website
+        with:
+          renderEngine: helm
+          helmChart: kubernetes/charts/website
+          helm-version: latest
+          silent: false
+
+      - name: 'Deploy to the Kubernetes cluster'
+        uses: azure/k8s-deploy@v5
+        with:
+          action: deploy
+          force: true
+          namespace: website-prod
+          manifests: ${{ steps.bake_website.outputs.manifestsBundle }}
+          pull-images: false
+
+  deploy-image:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    needs: [deploy-helm]
+
+    steps:
+      - name: 'Set the Kubernetes context'
+        uses: azure/k8s-set-context@v4
+        with:
+          method: kubeconfig
+          kubeconfig: $${{ secrets.KUBERNETES_KUBECONFIG }}
+          context: kubernetes-admin@elao_argon-website-prod
+
+      - uses: azure/setup-kubectl@v4
+        name: Setup kubectl
+        with:
+          version: v1.28.2
+
+      - name: 'Rollout deployment website'
+        run: |
+          kubectl rollout restart deployment/website --namespace website-prod

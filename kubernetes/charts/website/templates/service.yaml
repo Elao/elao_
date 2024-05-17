@@ -1,0 +1,15 @@
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ include "fullname" . }}-service
+  labels:
+    {{- include "labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "selectorLabels" . | nindent 4 }}
+  type: ClusterIP
+  ports:
+    - name: web
+      port: 8080

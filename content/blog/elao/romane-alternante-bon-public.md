@@ -29,7 +29,7 @@ C'est quand j'ai rencontré des développeurs que j'ai compris que ça pouvait �
 
 ## Qu'est-ce que tu fais au quotidien chez Elao ?
 
-Dans le cadre de mon Master, j'alterne deux semaines en entreprise et deux semaines en école. De ce fait, je suis souvent sur des tâches à froid et peu urgentes. Je suis très curieuse et touche à tout, Back, Front, Mobile, même devOps, j'ai envie de tout apprendre et surtout de tout comprendre ! 
+Dans le cadre de mon Master, j'alterne deux semaines en entreprise et deux semaines en école. De ce fait, je suis souvent sur des tâches à froid et peu urgentes. Je suis très curieuse et touche à tout, Back, Front, Mobile, même [devOps](../../term/devops.md), j'ai envie de tout apprendre et surtout de tout comprendre ! 
 
 ### Et quand tu ne travailles pas ?
 

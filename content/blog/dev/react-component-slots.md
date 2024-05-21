@@ -18,7 +18,7 @@ tweetId:            "1650771626332487681"
 
 ## Introduction
 
-En tant que développeur React, vous avez probablement déjà été confrontés à la création de composants génériques.
+En tant que développeur [React](../../term/react.md), vous avez probablement déjà été confrontés à la création de composants génériques.
 Ces composants sont souvent utilisés pour mutualiser des comportements communs à plusieurs endroits de votre application 
 et nécessitent d'être suffisamment personnalisables pour pouvoir s'adapter à la situation.
 
@@ -155,7 +155,7 @@ Le [concept](https://developer.mozilla.org/fr/docs/Web/API/Web_components/Using_
 
 ## Les slots dans React
 
-React n'évoque à proprement parler jamais la notion de slots.   
+[React](../../term/react.md) n'évoque à proprement parler jamais la notion de slots.   
 Cependant, il est bel et bien possible de se baser sur cette notion lors de la conception de vos composants. 
 _Vous l'avez probablement déjà fait sans le savoir._
 
@@ -163,7 +163,7 @@ _Vous l'avez probablement déjà fait sans le savoir._
 
 Le cas le plus simple est celui d'un composant qui ne possède qu'un seul slot, celui par défaut, connu comme la
 propriété [`children`](https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children) disponible dans
-tout composant React :
+tout composant [React](../../term/react.md) :
 
 ```jsx
 // App.jsx
@@ -279,7 +279,7 @@ acceptant du JSX.
 ### Slots multiple via JSX
 
 Il est possible d'obtenir une structure plus naturelle en utilisant le markup JSX pour définir les slots, des
-sous-composants React pour chaque et en utilisant [les APIs React](https://fr.reactjs.org/docs/react-api.html#reactchildren)
+sous-composants [React](../../term/react.md) pour chaque et en utilisant [les APIs React](https://fr.reactjs.org/docs/react-api.html#reactchildren)
 visant à manipuler la propriété `children`.
 
 Afin d'aboutir à une telle syntaxe :
@@ -409,7 +409,7 @@ l'implémentation d'un composant `<DropMenu>` utilisant cette approche, TypeScri
 
 ## Conclusion
 
-React ne suggère pas de manière explicite la notion de slots, mais il est possible de s'inspirer de ce concept en
+[React](../../term/react.md) ne suggère pas de manière explicite la notion de slots, mais il est possible de s'inspirer de ce concept en
 exploitant les propriétés de JSX et `children` afin de simuler l'utilisation de slots multiples avec une syntaxe proche
 du HTML, semblable à ce qui peut se faire avec d'autres frameworks.
 

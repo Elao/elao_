@@ -13,7 +13,7 @@ tweetId: '' # Ajouter l'id du Tweet après publication.
 outdated: false # `true` pour marquer un article comme obsolète ou une chaîne de caractère pour un message spécifique à afficher
 ---
 
-Comme vous le savez, chez Elao ainsi que dans d’autres structures, l’**IA** prend de plus en plus de place que ce soit à travers nos projets internes ou pour le compte de nos clients.
+Comme vous le savez, chez Elao ainsi que dans d’autres structures, [l'**IA**](../../term/ia.md) prend de plus en plus de place que ce soit à travers nos projets internes ou pour le compte de nos clients.
 
 À l’agence, nous sommes plusieurs à utiliser quotidiennement le [navigateur ARC](https://arc.net/). Basé sur **Chromium** (également utilisé par Google Chrome), nous avons été ravis d’apprendre que de nouvelles fonctionnalités basées sur l’intelligence artificielle avaient vu le jour.
 

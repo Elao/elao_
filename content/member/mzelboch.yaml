@@ -1,0 +1,31 @@
+active: true
+🚲: false
+
+# Bio
+name: Murielle Zelboch
+gender: female
+bio: |
+    Murielle est en charge des communications (internes, externes et commerciales) chez Elao, structurer les activités et asseoir la croissance de l'entreprise.
+
+    Elle a occupé pendant plus de 20 ans des postes en direction marketing et communication en entreprises IT (notamment chez LDLC) et en agences, à Paris et Lyon.
+
+    Après un parcours en psycho et en communication & marketing, elle a repris récemment un MBA en RH et conduite du changement.
+    Elle aime comprendre le fonctionnement humain et d'une entreprise pour contribuer à faire voir ce qu'il y a d'unique et différent en chacun.
+
+    Quand elle ne travaille pas, elle aime s'occuper de ses filles, faire du Krav maga et voyager pour découvrir de nouvelles façons de voir le monde et ses différents modes de pensées.
+position: Communicante
+integrationDate: 25-03-2024
+
+# Social
+#github: ~
+#instagram: ~
+linkedIn: muriellez
+#twitter: ~
+email: murielle.zelboch@elao.com
+avatar: content/images/members/avatars/mzelboch.jpg
+
+emojis:
+    - 👧
+    - 🥊
+    - 🧘🏼‍♀️
+    - 🧳

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Petit guide de style du blog</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/elao_/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/elao_/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/elao_/favicon-16x16.png">
+        <link rel="manifest" href="/elao_/site.webmanifest">
+        <link rel="mask-icon" href="/elao_/safari-pinned-tab.svg" color="#ff4344">
+        <link rel="shortcut icon" href="/elao_/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ff4344">
+        <meta name="msapplication-config" content="/elao_/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+                    <meta name="description" content="Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction." />
+            <link rel="canonical" href="https://elao.github.io/elao_/blog/styleguide/example" />
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:title" content="Petit guide de style du blog" />
+            <meta property="og:locale" content="fr" />
+            <meta property="og:description" content="Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction." />
+            <meta property="og:url" content="https://elao.github.io/elao_/blog/styleguide/example" />
+            <meta property="og:site_name" content="elao_" />
+
+                                        <meta property="og:image" content="https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
+            
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image">
+            <meta property="twitter:title" content="Petit guide de style du blog">
+            <meta property="twitter:description" content="Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction.">
+            <meta property="twitter:site" content="@elao">
+            <meta property="twitter:creator" content="@elao">
+                                        <meta property="twitter:image" content="https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60">
+                            <link rel="alternate" type="application/rss+xml" href="/elao_/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
+        
+                <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Petit guide de style du blog",
+    "image": [
+        "https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+    ],
+    "datePublished": "2020-09-23T00:00:00+00:00",
+    "dateModified": "2021-03-17T00:00:00+00:00",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "Amélie Defrance",
+            "url": "https://elao.github.io/elao_/equipe/adefrance"
+        },
+        {
+            "@type": "Person",
+            "name": "Thomas Jarrand",
+            "url": "https://elao.github.io/elao_/equipe"
+        },
+        {
+            "@type": "Person",
+            "name": "Christelle Mozzati",
+            "url": "https://elao.github.io/elao_/equipe"
+        }
+    ],
+    "keywords": [
+        "Tag1",
+        "Tag2"
+    ]
+}
+    </script>
+    
+                            <meta name="robots" content="noindex" />
+        
+        <script>
+                        document.querySelector('html').classList.remove('no-js');
+        </script>
+
+                    <link rel="stylesheet" href="/elao_/build/app.7d0b0eaa.css">
+        
+                        <script src="/elao_/build/runtime.c3b9d4eb.js" defer></script><script src="/elao_/build/552.3082ae9c.js" defer></script><script src="/elao_/build/769.7dfbbe52.js" defer></script><script src="/elao_/build/app.d906f729.js" defer></script>
+
+                    
+
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+    <script>
+        window.onload = (function(){
+            var tweets = document.querySelectorAll('.tweet-container');
+            tweets.forEach(function(tweet) {
+                // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+                twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                    conversation: 'none',
+                    cards: 'hidden',
+                    theme: 'light',
+                    lang: 'fr',
+                    align: 'center',
+                    width: 550, // default
+                    dnt: true,
+                })
+            })
+        });
+    </script>
+
+        <!-- S.E.E. -->
+        <meta name="see" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;build&#x5C;&#x2F;see.ace7bf9f.js&quot;&#x5D;">
+        <meta name="see_style" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;build&#x5C;&#x2F;see.d77e78f8.css&quot;&#x5D;">
+    </head>
+    <body
+        data-controller="swup-plugins symfony--ux-swup--swup swup-matomo" data-symfony--ux-swup--swup-containers-value="&#x5B;&quot;&#x23;main&quot;,&quot;&#x23;nav&quot;&#x5D;" data-symfony--ux-swup--swup-cache-value="true" data-symfony--ux-swup--swup-animate-history-browsing-value="true" data-symfony--ux-swup--swup-debug-value="false" data-symfony--ux-swup--swup-link-selector-value="a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;_profiler&quot;&#x5D;&#x29;,a&#x5B;href&#x5E;&#x3D;&quot;&#x2F;&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;_profiler&quot;&#x5D;&#x29;" data-swup-matomo-enabled-value="false">
+                    <header id="nav" class="header">
+                <div class="container">
+                    <!--
+                        Todo :
+                        - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
+                     -->
+                    <a href="/elao_/">
+                        <span class="screen-reader">Petit guide de style du blog</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
+                                <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
+                                    c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
+                                    c-0.2-7.9-4.1-10.9-11.3-10.9S20.7,41.8,19.6,49.3z"/>
+                                <path d="M71.2,0.1H90v86.5H71.2V0.1z"/>
+                                <path d="M166.1,24.7v61.8h-18.8V72.7c-3.5,9.8-10.5,15.1-20.4,15.1c-17.7,0-27.4-12.9-27.4-32
+                                    c0-19.4,9.3-32.2,26.2-32.2c10.5,0,18,5.4,21.6,15.6V24.7H166.1z M147.9,55.7c0-10.4-4.8-15.2-15.1-15.2c-9.9,0-14.6,4.8-14.6,15.2
+                                    c0,10.1,4.7,14.9,14.6,14.9C143.1,70.7,147.9,65.9,147.9,55.7L147.9,55.7z"/>
+                                <path d="M242.8,55.8c0,19.9-15.3,32-33.6,32s-33.6-12.1-33.6-32s15.3-32.2,33.6-32.2S242.8,35.8,242.8,55.8z M224,55.8
+                                    c0-10.4-4.7-15.2-14.8-15.2c-10.1,0-14.8,4.8-14.8,15.2c0,10.1,4.7,14.9,14.8,14.9S224,65.9,224,55.8L224,55.8z"/>
+                                <rect x="243.1" y="86.5" width="56.7" height="15"/>
+                            </svg>
+                                            </a>
+
+                                            <!-- Desktop nav -->
+                        <nav class="nav">
+                            <ul>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/nos-services/">
+                                                                                        <span>Services</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/demarche">
+                                                                                        <span>Démarche</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/etudes-de-cas">
+                                                                                        <span>Études de cas</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/nos-valeurs">
+                                                                                        <span>Valeurs</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/equipe">
+                                                                                        <span>L&#039;équipe</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item nav__item--active">
+                                        <a href="/elao_/blog">
+                                                                                        <span>Blog</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/contact">
+                                                                                            <i class="icon icon--contact" aria-hidden="true"></i>
+                                                                                        <span>Contact</span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    
+                                            <!-- Mobile nav -->
+                        <nav class="nav-mobile" data-controller="toggle">
+                            <div class="nav-mobile__header">
+                                <a href="/elao_/">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
+                                <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
+                                    c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
+                                    c-0.2-7.9-4.1-10.9-11.3-10.9S20.7,41.8,19.6,49.3z"/>
+                                <path d="M71.2,0.1H90v86.5H71.2V0.1z"/>
+                                <path d="M166.1,24.7v61.8h-18.8V72.7c-3.5,9.8-10.5,15.1-20.4,15.1c-17.7,0-27.4-12.9-27.4-32
+                                    c0-19.4,9.3-32.2,26.2-32.2c10.5,0,18,5.4,21.6,15.6V24.7H166.1z M147.9,55.7c0-10.4-4.8-15.2-15.1-15.2c-9.9,0-14.6,4.8-14.6,15.2
+                                    c0,10.1,4.7,14.9,14.6,14.9C143.1,70.7,147.9,65.9,147.9,55.7L147.9,55.7z"/>
+                                <path d="M242.8,55.8c0,19.9-15.3,32-33.6,32s-33.6-12.1-33.6-32s15.3-32.2,33.6-32.2S242.8,35.8,242.8,55.8z M224,55.8
+                                    c0-10.4-4.7-15.2-14.8-15.2c-10.1,0-14.8,4.8-14.8,15.2c0,10.1,4.7,14.9,14.8,14.9S224,65.9,224,55.8L224,55.8z"/>
+                                <rect x="243.1" y="86.5" width="56.7" height="15"/>
+                            </svg>
+                        
+                                </a>
+                                <button class="nav-toggle nav-toggle--close">
+                                    <i class="icon icon--close" aria-hidden="true"></i>
+                                    <span class="screen-reader">Fermer le menu</span>
+                                </button>
+                            </div>
+                            <ul>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/nos-services/">
+                                                                                        <span>Services</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/demarche">
+                                                                                        <span>Démarche</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/etudes-de-cas">
+                                                                                        <span>Études de cas</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/nos-valeurs">
+                                                                                        <span>Valeurs</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/equipe">
+                                                                                        <span>L&#039;équipe</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item nav-mobile__item--active ">
+                                        <a href="/elao_/blog">
+                                                                                        <span>Blog</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  nav-mobile__item--large">
+                                        <a href="/elao_/contact">
+                                                                                            <i class="icon icon--contact" aria-hidden="true"></i>
+                                                                                        <span>Contact</span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                        <button class="nav-toggle nav-toggle--open">
+                            <i class="icon icon--hamburger" aria-hidden="true"></i>
+                            <span class="screen-reader">Ouvrir le menu</span>
+                        </button>
+                                    </div>
+            </header>
+                <main id="main">
+                <div class="container">
+                                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/blog">
+                <span itemprop="name">Blog</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/blog/styleguide">
+                <span itemprop="name">Styleguide</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Petit guide de style du blog</span>
+            </a>
+            <meta itemprop="position" content="4" />
+        </li></ol>
+
+        
+        <div class="article-banner">
+            <div class="article-banner__cover" style="background: #f1f1f1 url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60');
+    background: #f1f1f1 -webkit-image-set(
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 1x,
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 2x
+    );
+    background: #f1f1f1 -moz-image-set(
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 1x,
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 2x
+    );
+    background: #f1f1f1 -ms-image-set(
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 1x,
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 2x
+    );
+    background: #f1f1f1 image-set(
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 1x,
+        url('https://images.unsplash.com/photo-1533142266415-ac591a4deae9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60') 2x
+    );" data-aos="fade-down"></div>
+
+            <div class="article-info" data-aos="zoom-in">
+                                                    <div class="article-author article-author--multi">
+                        <div class="article-author__image">
+                                                            <a href="/elao_/blog/auteur/adefrance">
+                                    <img     src="/elao_/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg 1x,
+        /elao_/resized/content/images/members/avatars/adefrance.jpg/da2a224ea55ca75b3e4022fcc055fa4d.jpg 2x
+    "
+ />
+                                </a>
+                                                            <a>
+                                    <img     src="/elao_/resized/content/images/members/avatars/tjarrand.jpg/894c1e98953d7bdbea2a416068e774e1.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/tjarrand.jpg/894c1e98953d7bdbea2a416068e774e1.jpg 1x,
+        /elao_/resized/content/images/members/avatars/tjarrand.jpg/2a475fd724fe92bb6af6783087befdce.jpg 2x
+    "
+ />
+                                </a>
+                                                            <a>
+                                    <img     src="/elao_/resized/content/images/members/avatars/cmozzati.jpg/908233cbae0db3327301fcf23c8bd025.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/cmozzati.jpg/908233cbae0db3327301fcf23c8bd025.jpg 1x,
+        /elao_/resized/content/images/members/avatars/cmozzati.jpg/18109a783237cb2fcac6cfddc5d3cc7a.jpg 2x
+    "
+ />
+                                </a>
+                                                    </div>
+                        <span class="article-author__info">
+                            Écrit par
+                                                            <a href="/elao_/blog/auteur/adefrance">
+                                    <strong>Amélie Defrance</strong>
+                                </a>
+                                                            <a href="/elao_/blog/auteur/tjarrand">
+                                    <strong>Thomas Jarrand</strong>
+                                </a>
+                                                            <a href="/elao_/blog/auteur/cmozzati">
+                                    <strong>Christelle Mozzati</strong>
+                                </a>
+                                                    </span>
+                    </div>
+                                <div class="article-info__date">
+                    <span>Publication <strong>23 septembre 2020</strong></span>
+                                                                <span>Modification <strong>17 mars 2021</strong></span>
+                                    </div>
+            </div>
+
+            <div class="article-header" data-aos="zoom-in-up">
+                <h1>Petit guide de style du blog</h1>
+                <p>Tour d&#039;horizon de ce qu&#039;on a pour faire de beaux articles. Et quelques bonnes pratiques de rédaction.</p>
+                <ul class="article-tag-list">
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/blog/tag/tag-1" rel="nofollow">#Tag1</a>
+                        </li>
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/blog/tag/tag-2" rel="nofollow">#Tag2</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+
+                    <ol class="table-of-content" data-aos="fade-up">
+                                    <li class="table-of-content__item">
+                        <a href="#style">Style</a>
+
+                                                    <ol class="table-of-content__sub-level">
+                                                                        <li>
+                                            <a href="#les-titres">Les titres</a>
+                                        </li>
+                                                            </ol>
+                                            </li>
+                                    <li class="table-of-content__item">
+                        <a href="#h2-laceat-quas-odio-atque-molestiae">h2 laceat quas odio atque molestiae</a>
+
+                                                    <ol class="table-of-content__sub-level">
+                                                                        <li>
+                                            <a href="#h3-laceat-quas-odio-atque-molestiae">h3 laceat quas odio atque molestiae</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#le-sommaire">Le sommaire</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#les-elements-typographiques">Les éléments typographiques</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#les-images">Les images</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#le-code">Le code</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#bonus">Bonus</a>
+                                        </li>
+                                                            </ol>
+                                            </li>
+                                    <li class="table-of-content__item">
+                        <a href="#quelques-regles-typographiques">Quelques règles typographiques</a>
+
+                                                    <ol class="table-of-content__sub-level">
+                                                                        <li>
+                                            <a href="#ponctuation">Ponctuation</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#unites">Unités</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#utiliser-les-bonnes-abreviations">Utiliser les bonnes abréviations</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#faut-il-un-point-a-la-fin-d-une-abreviation">Faut-il un point à la fin d&#039;une abréviation ?</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#nombres">Nombres</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#listes">Listes</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#d-autres-petites-regles-bien-utiles">D&#039;autres petites règles bien utiles</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#l-ecriture-inclusive">L&#039;écriture inclusive</a>
+                                        </li>
+                                                                        <li>
+                                            <a href="#pour-aller-plus-loin">Pour aller plus loin</a>
+                                        </li>
+                                                            </ol>
+                                            </li>
+                            </ol>
+        
+        <div class="article-content">
+            <main class="article-content__main">
+
+                
+                
+                <h2 id="style" class="anchor-title"><a href="#style">Style</a></h2>
+<h3 id="les-titres" class="anchor-title"><a href="#les-titres">Les titres</a></h3>
+<p>1 page = 1 titre principal <code class="code-inline" id="346b81a32e7007eccadf60252bb599f0">h1</code>.</p>
+<p>Dans le blog, le <code class="code-inline" id="346b81a32e7007eccadf60252bb599f0">h1</code> est le titre de l'article. Dans le corps de l'article, on commence donc par des <code class="code-inline" id="490b2834e65737c1fce95e468cc8b8bf">h2</code>.</p>
+<h2 id="h2-laceat-quas-odio-atque-molestiae" class="anchor-title"><a href="#h2-laceat-quas-odio-atque-molestiae">h2 laceat quas odio atque molestiae</a></h2>
+<h3 id="h3-laceat-quas-odio-atque-molestiae" class="anchor-title"><a href="#h3-laceat-quas-odio-atque-molestiae">h3 laceat quas odio atque molestiae</a></h3>
+<h4 id="h4-laceat-quas-odio-atque-molestiae" class="anchor-title"><a href="#h4-laceat-quas-odio-atque-molestiae">h4 laceat quas odio atque molestiae</a></h4>
+<h5 id="h5-laceat-quas-odio-atque-molestiae" class="anchor-title"><a href="#h5-laceat-quas-odio-atque-molestiae">h5 laceat quas odio atque molestiae</a></h5>
+<h6 id="h6-laceat-quas-odio-atque-molestiae" class="anchor-title"><a href="#h6-laceat-quas-odio-atque-molestiae">h6 laceat quas odio atque molestiae</a></h6>
+<h3 id="le-sommaire" class="anchor-title"><a href="#le-sommaire">Le sommaire</a></h3>
+<p>Le sommaire permet d'afficher les <code class="code-inline" id="490b2834e65737c1fce95e468cc8b8bf">h2</code> et les <code class="code-inline" id="6f207f8b5dfe1eebac63467930df5189">h3</code> présents dans l'article. Selon le besoin, précisez le niveau de titre à faire figurer au sommaire.</p>
+<pre class="code-multiline language-yaml"><code class="language-yaml" id="cea79fd2a5f1fad0ebceec07adc1542b"><span class="token key atrule">tableOfContent</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+<span class="token comment"># identique à:</span>
+<span class="token comment"># tableOfContent: 2</span></code></pre>
+<p>ou</p>
+<pre class="code-multiline language-yaml"><code class="language-yaml" id="9e631ce685c2ec390629c1b4833d6fa7"><span class="token key atrule">tableOfContent</span><span class="token punctuation">:</span> <span class="token number">3</span></code></pre>
+<h3 id="les-elements-typographiques" class="anchor-title"><a href="#les-elements-typographiques">Les éléments typographiques</a></h3>
+<p>Nous avons des paragraphes, <a href="https://www.elao.com/" target="_blank">des liens</a>, parfois du <code class="code-inline" id="9fa6930e1f74d2f2b478973b1972d4ab">code inline</code>.</p>
+<ul>
+<li>des listes de choses</li>
+<li>des listes de choses</li>
+<li>des listes de choses</li>
+</ul>
+<blockquote>
+<p>Nous avons aussi des citations.
+<cite>- Jane Doe</cite></p>
+</blockquote>
+<p>Un coup sur deux, on a un style différent de citation, sinon on s'ennuie.</p>
+<blockquote>
+<p>Quoi ? Un deuxième style de citation ? Eos officia, vel corporis eaque architecto eveniet voluptatibus, ullam impedit excepturi quis quidem sint facere laboriosam harum error esse iusto. Asperiores, placeat.
+<cite>John Doe</cite></p>
+</blockquote>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur.</p>
+<div class="admonition titre">
+<p class="admonition-title">Titre</p>
+<p>
+    Nous avons des <code class="code-inline" id="e43fd1f89dbc258fe651ac8ecaa7a61a">admonition</code> pour les <a href="https://www.elao.com" target="_blank">informations</a> à faire ressortir.
+</p>
+</div>
+<p>Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="admonition success">
+<p class="admonition-title">Titre</p>
+<p>
+    Le même <a href="https://www.elao.com" target="_blank">composant</a> dans le style "success".
+</p>
+</div>
+<p>Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<div class="admonition danger">
+<p class="admonition-title">Titre</p>
+<p>
+    Le même <a href="https://www.elao.com" target="_blank">composant</a> dans le style "danger".
+</p>
+</div>
+<h3 id="les-images" class="anchor-title"><a href="#les-images">Les images</a></h3>
+<p>Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une légende, et si possible on crédite son auteur·ice.</p>
+<figure>
+    <img src="https://images.unsplash.com/photo-1530023868717-cdb5554aea96?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=788&amp;q=80" alt="vivamus bibendum" id="vivamus-bibendum">
+    <figcaption>
+      <span class="figure__legend">David sous l'eau 🐬</span>
+      <span class="figure__credits">Crédit photo : <a href="https://unsplash.com/@jbsinger1970" target="_blank">Jonathan Singer</a></span>
+    </figcaption>
+</figure>
+<pre class="code-multiline language-html"><code class="language-html" id="373c2c117fe3c2abade446c9a3a539fd"><span class="token comment">&lt;!-- Comme ceci --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figure</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>content/images/blog/styleguide/photo.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>photo de ...<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>figure__legend<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Photo de ...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>figure__credits<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Crédit photo : <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nom de l'auteur<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figcaption</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>figure</span><span class="token punctuation">&gt;</span></span></code></pre>
+<p>Pour les autres images, utilisez simplement la syntaxe Markdown classique (<em>cf sections suivantes</em>).</p>
+<h4 id="images-retina" class="anchor-title"><a href="#images-retina">Images retina</a></h4>
+<p>Les images inclues dans un contenu sont automatiquement adaptée et fournies en version rétina et non-rétina lorsque cela le permet.</p>
+<h5 id="depuis-la-racine-du-projet" class="anchor-title"><a href="#depuis-la-racine-du-projet">Depuis la racine du projet</a></h5>
+<img src="/elao_/resized/content/images/blog/styleguide/exemple-image.jpg/6bda512686956a3df0bc5aef03d8e1c0.jpg" alt="Image d'exemple depuis la racine du projet" title="Image d'exemple depuis la racine du projet" srcset="/elao_/resized/content/images/blog/styleguide/exemple-image.jpg/6bda512686956a3df0bc5aef03d8e1c0.jpg 1x,
+/elao_/resized/content/images/blog/styleguide/exemple-image.jpg/460bc80c1807a1298f6305e117c1f5b0.jpg 2x," id="image-d-exemple-depuis-la-racine-du-projet">
+<pre class="code-multiline language-md"><code class="language-md" id="67b7b635728f51238624203075f65e79"><span class="token url"><span class="token operator">!</span>[<span class="token content">Image d'exemple depuis la racine du projet</span>](<span class="token url">content/images/blog/styleguide/exemple-image.jpg</span>)</span></code></pre>
+<h5 id="avec-un-chemin-relatif-au-contenu-recommande" class="anchor-title"><a href="#avec-un-chemin-relatif-au-contenu-recommande">Avec un chemin relatif au contenu (recommandé)</a></h5>
+<img src="/elao_/resized/content/images/blog/styleguide/exemple-image-relative.jpg/470cd3cf457415c4960a560c201fc694.jpg" alt="Image d'exemple en relatif" title="Image d'exemple en relatif" srcset="/elao_/resized/content/images/blog/styleguide/exemple-image-relative.jpg/470cd3cf457415c4960a560c201fc694.jpg 1x,
+/elao_/resized/content/images/blog/styleguide/exemple-image-relative.jpg/7b2c4debf6c584f73e5afaaa462ddb16.jpg 2x," id="image-d-exemple-en-relatif">
+<pre class="code-multiline language-md"><code class="language-md" id="ee00b8cdeb05f342f62f571b92e28890"><span class="token url"><span class="token operator">!</span>[<span class="token content">Image d'exemple en relatif</span>](<span class="token url">./../../images/blog/styleguide/exemple-image-relative.jpg</span>)</span></code></pre>
+<div class="admonition info">
+<p>
+    Les GIFs ne peuvent être redimensionnés mais peuvent tout de même être référencés
+</p>
+</div>
+<img src="/elao_/resized/content/images/blog/styleguide/exemple-gif.gif/26720a805a265753b6f13e5a03fba4b5.gif" alt="Test gif" title="Test gif" id="test-gif">
+<pre class="code-multiline language-md"><code class="language-md" id="ed8e31e0468e4f28fb4e6384dbbaac75"><span class="token url"><span class="token operator">!</span>[<span class="token content">Test gif</span>](<span class="token url">./../../images/blog/styleguide/exemple-gif.gif</span>)</span></code></pre>
+<h3 id="le-code" class="anchor-title"><a href="#le-code">Le code</a></h3>
+<p>Pensez à préciser dans le markdown le langage dans lequel est votre code, si vous voulez des couleurs ! 🌈</p>
+<pre class="code-multiline"><code id="9199b95e1c688d073a23297366524506">&lt;html&gt;
+  &lt;head&gt;&lt;/head&gt;
+  &lt;body&gt;
+    Oups
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<pre class="code-multiline language-html"><code class="language-html" id="30818c7aaacb9a325b2838ae0a979532"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    C'est mieux
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<h3 id="bonus" class="anchor-title"><a href="#bonus">Bonus</a></h3>
+<p>Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : <a href="https://unsplash.com/" target="_blank">Unsplash</a> (chouchou ❤️), <a href="https://www.pexels.com/" target="_blank">Pexels</a>, etc.</p>
+<p>Pour créditer l'auteur de la photo de couverture, renseignez la clé <code class="code-inline" id="928735d6f2c63bee316dd511c8ccaf55">credits</code> dans le header de l'article :</p>
+<pre class="code-multiline language-yaml"><code class="language-yaml" id="ba7beb5ef96c9ce8644388243e30b8dc"><span class="token key atrule">credits</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> <span class="token string">'Jane Doe'</span><span class="token punctuation">,</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">'https://unsplash.com/@janedoe'</span> <span class="token punctuation">}</span></code></pre>
+<h2 id="quelques-regles-typographiques" class="anchor-title"><a href="#quelques-regles-typographiques">Quelques règles typographiques</a></h2>
+<h3 id="ponctuation" class="anchor-title"><a href="#ponctuation">Ponctuation</a></h3>
+<ul>
+<li>Les signes simples comme <code class="code-inline" id="c0cb5f0fcf239ab3d9c1fcd31fff1efc">,</code> et <code class="code-inline" id="5058f1af8388633f609cadb75a75dc9d">.</code> ne sont précédés d'aucune espace ;<br>
+<em>Exemple : Je suis contente, aujourd'hui il fait grand soleil, ça faisait longtemps que ça n'était pas arrivé.</em></li>
+<li>Les signes doubles comme <code class="code-inline" id="9033e0e305f247c0c3c80d0c7848c8b3">!</code> , <code class="code-inline" id="d1457b72c3fb323a2671125aef3eab5d">?</code> , <code class="code-inline" id="9eecb7db59d16c80417c72d1e1f4fbf1">;</code> , <code class="code-inline" id="853ae90f0351324bd73ea615e6487517">:</code>, <code class="code-inline" id="5da659e548f2d9ce639044cb8025ff5f">«</code>, <code class="code-inline" id="04bcb216c41a3234e3343c54fc9eb89c">»</code> sont toujours entourés de deux espaces ;<br>
+<em>Exemple : Bonjour, comment vas-tu ? Je suis contente de te revoir !</em></li>
+<li><strong>Cette règle ne fonctionne pas en anglais</strong> où le signe double n'a pas d'espace avant <em>(Hello!)</em>. </li>
+<li>Attention à bien utiliser les vrais points de suspension <code class="code-inline" id="2f8ed7fafd3c1784a3be4da8eb3d106a">…</code> et non 3 points à la suite <code class="code-inline" id="2f43b42fd833d1e77420a8dae7419000">...</code> . Sur Mac, <kbd>⌥ alt</kbd> + <kbd>.</kbd></li>
+<li>Les points de suspension sont suivis d'une espace ; </li>
+<li>Préférez les guillemets français pour vos citations : <code class="code-inline" id="45afcff9f8748a2b7f4bb2a87c32d4cd">« »</code>. Sur Mac, <kbd>⌥ alt</kbd> + <kbd>è</kbd> et  <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>è</kbd>. </li>
+</ul>
+<h3 id="unites" class="anchor-title"><a href="#unites">Unités</a></h3>
+<ul>
+<li>Toutes les unités suivant une valeur doivent avoir une espace insécable qui les précède ;<br>
+<em>Exemple : <strong>10 %</strong> et non <del>10%</del>, <strong>10 h</strong> et non <del>10h</del>, <strong>10 €</strong> et non <del>10€</del>, <strong>10 km</strong> et non <del>10km</del>.</em></li>
+<li>En français, cela marche avec absolument toutes les unités. On écrira donc plutôt "<strong>10 km / h</strong>" et non "<del>10km/h</del>" ;</li>
+<li>Cette règle ne fonctionne pas en anglais où l'on accole l'unité à la valeur (10$ ou $10) ;</li>
+<li>Les abréviations d'unités ne sont jamais mises au pluriels : <del>10 kms</del>, <del>10 cms</del>.</li>
+</ul>
+<h3 id="utiliser-les-bonnes-abreviations" class="anchor-title"><a href="#utiliser-les-bonnes-abreviations">Utiliser les bonnes abréviations</a></h3>
+<p>Souvent, les abréviations officielles sont assez méconnues. En voici quelques-unes : </p>
+<ul>
+<li><strong>M.</strong> et non <del>Mr</del>;</li>
+<li><strong>Mme</strong> ;</li>
+<li><strong>Mlle</strong> et non <del>Melle</del> ;</li>
+<li><strong>10 min</strong> et non <del>10 mn</del>;</li>
+<li><strong>10 h</strong> et non <del>10 hr</del>;</li>
+<li><strong>1er, 1re, 2e, 3e, 4e</strong> et non <del>1ère</del>, <del>2eme</del> ou <del>2ème</del> ; </li>
+<li><strong>15 Mo, 15 Go, 15 To</strong> et non <del>15mb</del>, <del>15gb</del>, <del>15tb</del>.</li>
+</ul>
+<h3 id="faut-il-un-point-a-la-fin-d-une-abreviation" class="anchor-title"><a href="#faut-il-un-point-a-la-fin-d-une-abreviation">Faut-il un point à la fin d'une abréviation ?</a></h3>
+<p>Une abréviation est suivie d’un point, sauf :</p>
+<ul>
+<li>les abréviations des unités de mesure, pour lesquelles le point n’est jamais utilisé ;</li>
+<li>les abréviations construites en conservant la dernière lettre du mot : <em>« bd » pour boulevard</em>.
+Autre cas particulier : il faut inclure un espace dans l'abréviation de Nota Bene, <code class="code-inline" id="f4acf275aa26095bdae42272d534433b">N. B.</code></li>
+</ul>
+<h3 id="nombres" class="anchor-title"><a href="#nombres">Nombres</a></h3>
+<p>Le séparateur de millier est l’espace insécable, le séparateur de décimale est la virgule.<br>
+<em>Exemple : « Le solde est de 3 586,12 euros ».</em></p>
+<h3 id="listes" class="anchor-title"><a href="#listes">Listes</a></h3>
+<h4 id="listes-a-puces" class="anchor-title"><a href="#listes-a-puces">Listes à puces</a></h4>
+<p>Les items d'une liste à puces commencent toujours avec une majuscule et finissent par un point-virgule, sauf le dernier qui se termine par un point.  </p>
+<p><em>Exemple :</em><br>
+Pour se sentir mieux :</p>
+<ul>
+<li>Pensez à faire des pauses plusieurs fois dans la journée ; </li>
+<li>Levez les yeux de votre écran plusieurs fois par heure ; </li>
+<li>Évitez de consommer trop d'excitants (café, thé, etc.).</li>
+</ul>
+<p><strong>N. B. : la règle étant à la base pour l'édition de documents imprimés, il est admis pour les présentations et interfaces web de ne pas surcharger et de ne pas suivre la règle des ponctuations de liste. Mais si vous souhaitez en mettre, c'est cette règle qu'il faut suivre.</strong></p>
+<h4 id="listes-numerotees" class="anchor-title"><a href="#listes-numerotees">Listes numérotées</a></h4>
+<p>Les items d'une liste numérotée commencent toujours avec une majuscule et finissent par un point.  </p>
+<p><em>Exemple :</em><br>
+Les valeurs d'Elao sont :</p>
+<ol>
+<li>L'humain avant tout. </li>
+<li>Rester humbles et apprendre de nos erreurs.</li>
+<li>S’ouvrir, partager, ne rien garder pour soi.</li>
+</ol>
+<h4 id="l-emploi-du-etc" class="anchor-title"><a href="#l-emploi-du-etc">L'emploi du "etc"</a></h4>
+<p>Quand on fait une liste qui se termine par "etc", celui-ci est précédé d'une virgule et suivi d'un point. Il n'est JAMAIS suivi de points de suspension "<del>etc...</del>".<br>
+<em>Exemple : « Pensez à acheter des fruits : pommes, bananes, clémentines<strong>, etc.</strong> »</em></p>
+<h3 id="d-autres-petites-regles-bien-utiles" class="anchor-title"><a href="#d-autres-petites-regles-bien-utiles">D'autres petites règles bien utiles</a></h3>
+<ul>
+<li>Dans le web, l'usage du <strong>souligné</strong> est utilisé strictement pour signifier un lien. Pour mettre l'emphase sur un mot, préférez le gras.</li>
+<li>Il est inutile de mettre un point final <code class="code-inline" id="5058f1af8388633f609cadb75a75dc9d">.</code> à un titre ;</li>
+<li>Il est inutile de mettre deux points <code class="code-inline" id="853ae90f0351324bd73ea615e6487517">:</code> après un titre ou un <code class="code-inline" id="d304ba20e96d87411588eeabac850e34">label</code> de formulaire, puisqu'ils introduisent toujours leur sujet, c'est redondant ;</li>
+<li>Les <code class="code-inline" id="4de1b7a4dc53e4a84c25ffb7cdb580ee">et</code> ne doivent jamais être précédés d'une virgule, sauf dans des cas exceptionnels comme l'énumération ;</li>
+<li>L’usage du mot « <strong>Éditer</strong> » pour « Modifier » est incorrect. Éditer, c’est « publier, diffuser », non « corriger » ;</li>
+<li>L'usage du mot « <strong>Adresser</strong> » pour « Traiter » est incorrect. En français, « adresser » signifie « envoyer », « émettre des paroles », ou « diriger quelqu’un vers la personne qui convient », par exemple <em>adresser un malade à un spécialiste</em>. On ne dira donc pas « Adresser un problème/sujet » mais plutôt « Traiter », « Aborder », « S'attaquer à » ;</li>
+<li>L'adjectif « Transverse » est un anglicisme. On lui préfère sa traduction française « Transversal » ;</li>
+<li>Les guillemets servent à citer quelqu’un et <strong>c’est tout</strong>, jamais à insister sur un mot ni à couvrir une approximation ;
+<em>Exemple : gérer un projet en mode “agile” ou “classique” =&gt; gérer un projet en mode agile ou classique</em> ;</li>
+<li>Accentuez les majuscules ! Cela rend la lecture plus facile. Sur Mac, il suffit d'activer le capslock avant d'appuyer sur la touche à accentuer. </li>
+</ul>
+<h3 id="l-ecriture-inclusive" class="anchor-title"><a href="#l-ecriture-inclusive">L'écriture inclusive</a></h3>
+<p>Si vous souhaitez être inclusif·ve dans votre rédaction, voici quelques solutions possibles pour que cela reste lisible en fonction du contexte.
+Chacun est libre, en tant qu'auteur en son nom propre, de l'utiliser ou non lors de la rédaction de son article. </p>
+<p>Nous les présentons ici par ordre de préférence dans leur mise en application sur le blog, mais il est à votre discrétion d'utiliser la formule la plus adaptée en fonction du contexte.</p>
+<h4 id="utiliser-des-formules-non-genrees-epicene" class="anchor-title"><a href="#utiliser-des-formules-non-genrees-epicene">Utiliser des formules non genrées (épicène)</a></h4>
+<p><em>Exemple 1 : « L'ensemble de l'équipe doit faire sa demande de congés sur Lucca. »</em><br>
+<em>Exemple 2 : « Bonjour tout le monde ! »</em></p>
+<h4 id="doubler-au-feminin-la-formule-masculine" class="anchor-title"><a href="#doubler-au-feminin-la-formule-masculine">Doubler au féminin la formule masculine</a></h4>
+<p><em>Exemple 1 : « Chaque employé et employée doit faire sa demande de congés sur Lucca. »</em><br>
+<em>Exemple 2 : « Bonjour à toutes et à tous ! »</em></p>
+<h4 id="utiliser-le-point-median" class="anchor-title"><a href="#utiliser-le-point-median">Utiliser le point médian</a></h4>
+<p><em>Exemple 1 : « Chaque employé·e doit faire sa demande de congés sur Lucca. »</em><br>
+<em>Exemple 2 : « Bonjour à tou·te·s ! »</em></p>
+<p>Pour faire un point médian :<br>
+Sur Mac : <kbd>⌥ alt</kbd> + <kbd>⇧ maj</kbd> + <kbd>F</kbd> ;<br>
+Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.</p>
+<h3 id="pour-aller-plus-loin" class="anchor-title"><a href="#pour-aller-plus-loin">Pour aller plus loin</a></h3>
+<p>Quelques ressources intéressantes :</p>
+<ul>
+<li>La page Wikipédia des <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques" target="_blank">Conventions typographiques</a> ; </li>
+<li>L'article <a href="http://romy.tetue.net/feminiser-au-point-median" target="_blank">« Féminiser au point médian »</a> ;</li>
+<li>Suivez <a href="https://twitter.com/typochef" target="_blank">TypoChef</a> sur Twitter.</li>
+</ul>
+                                                            <div class="article-credits">
+                            Crédits: photo de couverture par
+                                                            <a href="https://unsplash.com/@jontyson">
+                                    Jon Tyson
+                                </a>
+                                                    </div>
+                                                </main>
+            <aside class="article-content__aside">
+                                    <a href="https://twitter.com/intent/like?tweet_id=1369737350830583811" class="kudo" target="_blank">
+                        <span class="kudo__button" aria-hidden="true"></span>
+                        <span class="screen-reader">Cet article m’a été utile</span>
+                        <span class="kudo__label" aria-hidden="true">Kudos</span>
+                    </a>
+                            </aside>
+        </div>
+
+        <div class="article-footer" data-aos="fade-in">
+                                                <div class="article-author">
+                        <div class="article-author__image">
+                            <a href="/elao_/blog/auteur/adefrance">
+                                <img     src="/elao_/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg 1x,
+        /elao_/resized/content/images/members/avatars/adefrance.jpg/da2a224ea55ca75b3e4022fcc055fa4d.jpg 2x
+    "
+ />
+                            </a>
+                        </div>
+                        <span class="article-author__info">
+                            Écrit par
+                            <a href="/elao_/blog/auteur/adefrance">
+                                <strong>Amélie Defrance</strong>
+                            </a>
+                        </span>
+
+                        <div class="article-author__social">
+                                                                                        <a href="https://github.com/ameliedefrance " class="social social--small">
+                                    <i class="icon icon--github" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte github de Amélie Defrance</span>
+                                </a>
+                                                                                </div>
+                    </div>
+                                    <div class="article-author">
+                        <div class="article-author__image">
+                            <a>
+                                <img     src="/elao_/resized/content/images/members/avatars/tjarrand.jpg/894c1e98953d7bdbea2a416068e774e1.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/tjarrand.jpg/894c1e98953d7bdbea2a416068e774e1.jpg 1x,
+        /elao_/resized/content/images/members/avatars/tjarrand.jpg/2a475fd724fe92bb6af6783087befdce.jpg 2x
+    "
+ />
+                            </a>
+                        </div>
+                        <span class="article-author__info">
+                            Co-écrit par
+                            <a>
+                                <strong>Thomas Jarrand</strong>
+                            </a>
+                        </span>
+
+                        <div class="article-author__social">
+                                                            <a href="https://twitter.com/tom32i" class="social social--small">
+                                    <i class="icon icon--x" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte Twitter de Thomas Jarrand</span>
+                                </a>
+                                                                                        <a href="https://github.com/Tom32i " class="social social--small">
+                                    <i class="icon icon--github" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte github de Thomas Jarrand</span>
+                                </a>
+                                                                                        <a href="https://thomas.jarrand.fr" class="social social--small">
+                                    <i class="icon icon--website" aria-hidden="true"></i>
+                                    <span class="screen-reader">Site personnel de Thomas Jarrand</span>
+                                </a>
+                                                    </div>
+                    </div>
+                                    <div class="article-author">
+                        <div class="article-author__image">
+                            <a>
+                                <img     src="/elao_/resized/content/images/members/avatars/cmozzati.jpg/908233cbae0db3327301fcf23c8bd025.jpg"
+    srcset="
+        /elao_/resized/content/images/members/avatars/cmozzati.jpg/908233cbae0db3327301fcf23c8bd025.jpg 1x,
+        /elao_/resized/content/images/members/avatars/cmozzati.jpg/18109a783237cb2fcac6cfddc5d3cc7a.jpg 2x
+    "
+ />
+                            </a>
+                        </div>
+                        <span class="article-author__info">
+                            Co-écrit par
+                            <a>
+                                <strong>Christelle Mozzati</strong>
+                            </a>
+                        </span>
+
+                        <div class="article-author__social">
+                                                                                                            </div>
+                    </div>
+                                    </div>
+
+                <div class="bricks">
+                            <div class="brick-comment">
+                    <p class="title">Commenter</p>
+                    <p>
+                        Des commentaires ?
+                        <a href="https://twitter.com/Elao/status/1369737350830583811" target="_blank" class="animated-link animated-link--light">
+                            Poursuivons la discussion sur twitter !
+                        </a>
+                    </p>
+                    <div id="tweet-container" class="tweet-container" data-tweet-id="1369737350830583811"></div>
+                </div>
+            
+                            <div class="brick-contribute">
+                    <p>
+                        Une typo ?
+                        <a href="https://github.com/Elao/elao_/edit/master/content/blog/styleguide/example.md/" target="_blank" class="animated-link animated-link--light">
+                            Modifier cet article sur Github
+                        </a>
+                    </p>
+                </div>
+                    </div>
+            </div>
+        </main>
+                    
+<footer class="footer">
+    <div class="container">
+        <section class="footer__links">
+            <p class="h1">
+                elao
+                <span>développe</span>
+                <span>du lien</span>
+            </p>
+            <div class="links">
+                                    <ul>
+                                                    <li>
+                                <a href="/elao_/nos-services/" >Services</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/demarche" >Démarche</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/etudes-de-cas" >Études de cas</a>
+                            </li>
+                                            </ul>
+                                    <ul>
+                                                    <li>
+                                <a href="/elao_/nos-valeurs" >Valeurs</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/equipe" >L&#039;équipe</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/blog" >Blog</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/blog/rss.xml"  data-no-swup="data-no-swup">RSS</a>
+                            </li>
+                                            </ul>
+                                <ul>
+                    <li>
+                                                <a href="/elao_/recrutement">
+                            Nous recrutons
+                                                            <span class="bullet">1</span>
+                                                    </a>
+                    </li>
+                    <li>
+                        <a href="/elao_/glossaire/">Glossaire 🧐</a>
+                    </li>
+                    <li>
+                        <a href="/elao_/elaomojis">Elaomojis 🎉</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li>
+                        <a href="https://github.com/elao" target="_blank">
+                            <i class="icon icon--github"></i>
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/elao" target="_blank">
+                            <i class="icon icon--x"></i>
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/elao/mycompany/" target="_blank">
+                            <i class="icon icon--linkedin"></i>
+                            Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts">
+                <ul>
+                    <li>
+                        <a href="/elao_/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="tel:04 82 53 37 19">04 82 53 37 19</a>
+                    </li>
+                    <li>
+                        <a href="mailto:contact@elao.com">contact@elao.com</a>
+                    </li>
+                    <li>34 rue Jean Broquin</li>
+                    <li>69006 Lyon</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="footer__legals">
+            <span>© 2005 - 2024 - ELAO - Tous droits réservés</span>
+            <a href="/elao_/legal">Mentions légales</a>
+            <a href="/elao_/confidentialite">Protection des données</a>
+            <a id="see" href="#ssss">🐍</a>
+        </section>
+    </div>
+</footer>
+
+            </body>
+</html>

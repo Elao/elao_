@@ -96,4 +96,7 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: build # The folder the action should deploy.
           clean: true # Automatically remove deleted files from the deploy branch
-          clean-exclude: 'pr/*' # Don't clean the PR deployments
+          # Don't clean the PR deployments nor their resized images
+          clean-exclude: |
+            pr/*
+            resized/*

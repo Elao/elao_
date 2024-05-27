@@ -5,6 +5,6 @@ glide_image_resize:
         path: ".+"
 
 glide_image_resized_url:
-    path: '%glide_public_cache_path%/{path}'
+    path: '%glide_public_cache_path_resolved%/{path}'
     requirements:
         path: ".+"

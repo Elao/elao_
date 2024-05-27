@@ -77,6 +77,8 @@ jobs:
         env:
           APP_ENV: prod
           WEBPACK_PUBLIC_PATH: /elao_/pr/${{ github.event.number }}/build
+          # Will re-use the staging resized images folder in resized image URLs
+          GLIDE_RESIZED_URL_BASE_PATH: '../../resized'
 
       - name: 'Build static site'
         run: bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
@@ -85,6 +87,28 @@ jobs:
           APP_FORCE_NO_INDEX: 1
           APP_GITHUB_REF: ${{ github.head_ref }}
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          # Will re-use the staging resized images folder in resized image URLs
+          GLIDE_RESIZED_URL_BASE_PATH: '../../resized'
+
+      - name: 'Deduplicate images'
+        run: |
+          # Merge the resized images from PR build folder to the cached folder (`public/resized`)
+          rsync -a build/resized/ public/resized/
+
+          # Remove the build resized images folder
+          rm -rf build/resized/
+
+      - name: '🖼️ Push resized images'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          commit-message: |
+            [AUTO] Deploy PR #${{ github.event.number }} images
+
+            for commit ${{ github.sha }}
+          branch: gh-pages
+          folder: public/resized
+          target-folder: resized
+          clean: false # Sync we rsynced the images to merge from all source, we'll never delete anything from here.
 
       # https://github.com/marketplace/actions/deploy-to-github-pages
       - name: '🚀 Deploy'

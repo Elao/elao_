@@ -1,3 +1,6 @@
+parameters:
+    glide_public_cache_path_resolved: '%env(string:default:glide_public_cache_path:GLIDE_RESIZED_URL_BASE_PATH)%'
+
 glide:
     base_url: /image/resize
     source: '%kernel.project_dir%'

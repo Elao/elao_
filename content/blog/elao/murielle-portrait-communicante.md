@@ -1,6 +1,6 @@
 ---
 title: 'Murielle, communicante chez Elao'
-date: '2024-06-01' # Au format YYYY-MM-DD
+date: '2024-05-27' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: Murielle se présente aujourd'hui, en charge des communications (interne, externe et commerciale) avec les équipes, chez Elao depuis mars 2024.
 authors: [elao, mzelboch] # multiple acceptés
@@ -12,7 +12,7 @@ thumbnail: content/images/blog/2024/itw-mzelboch/banner.jpg
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
-## Ton parcours;
+## Ton parcours
 
 Durant plus de 20 ans, j’ai occupé des postes en direction marketing et communication en entreprises essentiellement
 IT (notamment chez LDLC) et en agences, à Paris et Lyon. 

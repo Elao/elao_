@@ -77,6 +77,8 @@ jobs:
         env:
           APP_ENV: prod
           WEBPACK_PUBLIC_PATH: /elao_/pr/${{ github.event.number }}/build
+          # Will re-use the staging resized images folder in resized image URLs
+          GLIDE_RESIZED_URL_BASE_PATH: '../../resized'
 
       - name: 'Build static site'
         run: bin/console stenope:build --no-interaction -vv --ansi --ignore-content-not-found
@@ -85,6 +87,8 @@ jobs:
           APP_FORCE_NO_INDEX: 1
           APP_GITHUB_REF: ${{ github.head_ref }}
           ROUTER_DEFAULT_URI: https://elao.github.io/elao_/pr/${{ github.event.number }}
+          # Will re-use the staging resized images folder in resized image URLs
+          GLIDE_RESIZED_URL_BASE_PATH: '../../resized'
 
       - name: 'Deduplicate images'
         run: |
@@ -93,10 +97,6 @@ jobs:
 
           # Remove the build resized images folder
           rm -rf build/resized/
-
-          # and symlink to the gh-pages root `resized` image folder
-          cd build
-          ln -sf ../../resized/ resized
 
       - name: '🖼️ Push resized images'
         uses: JamesIves/github-pages-deploy-action@v4

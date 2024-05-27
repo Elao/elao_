@@ -26,7 +26,7 @@ class TeamController extends AbstractController
     #[Route(name: 'team')]
     public function list(): Response
     {
-        $members = $this->manager->getContents(Member::class, ['name' => true], ['active' => true]);
+        $members = $this->manager->getContents(Member::class, ['name' => true], ['active' => true, 'meta' => false]);
 
         return $this->render('team/index.html.twig', [
             'members' => $members,

@@ -100,7 +100,7 @@
                     {% set member = content_get('App\\Model\\Member', memberSlug) %}
                     <li class="project-team__member" data-aos="fade-in" data-aos-delay="{{ loop.index * 150 }}">
                         <a
-                            {%- if member.active %}
+                            {%- if member.active and not member.meta %}
                                 href="{{ path('team_member', { member: member.slug }) }}"
                             {% endif -%}
                         >

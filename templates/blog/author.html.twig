@@ -19,7 +19,7 @@
 
         <div class="article-author article-author--large">
             <div class="article-author__image">
-                {% if author.active %}
+                {% if author.active and not author.meta %}
                     <a href="{{ path('team_member', { member: author.slug }) }}">
                         <img {{ macros.imageSrcset(author.avatar(), 'author_avatar') }} />
                     </a>
@@ -29,7 +29,7 @@
             </div>
             <span class="article-author__info">
                 Les articles de
-                {% if author.active %}
+                {% if author.active and not author.meta %}
                     <a href="{{ path('team_member', { member: author.slug }) }}">
                         <strong>{{ author.name }}</strong>
                     </a>

@@ -1,4 +1,5 @@
-active: false
+meta: true # Group of members
+active: true
 
 name: La team Elao
 position: "Atelier de conception d'applications web et mobile sur-mesure | Experts Symfony et React"

@@ -20,7 +20,7 @@ class SiteController extends AbstractController
     {
         /** @var Article[] $articles */
         $articles = $manager->getContents(Article::class, ['date' => false]);
-        $members = $manager->getContents(Member::class, [], ['active' => true]);
+        $members = $manager->getContents(Member::class, [], ['active' => true, 'meta' => false]);
         $caseStudies = $manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]);
 
         return $this->render('site/home.html.twig', [
@@ -51,7 +51,7 @@ class SiteController extends AbstractController
     #[Route('/nos-valeurs', name: 'values')]
     public function values(ContentManagerInterface $manager): Response
     {
-        $activeMembers = $manager->getContents(Member::class, null, static fn (Member $member): bool => $member->active);
+        $activeMembers = $manager->getContents(Member::class, null, ['active' => true, 'meta' => false]);
         $count = \count($activeMembers);
         $velotafCount = \count(array_filter($activeMembers, static fn (Member $member): bool => $member->🚲));
 

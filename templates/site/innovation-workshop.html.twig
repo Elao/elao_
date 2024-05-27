@@ -123,7 +123,7 @@
                         </span>
                     </div>
                     <div class="thumbnail">
-                        {% set membersCount = content_list('App\\Model\\Member', filterBy = '_.active') | length %}
+                        {% set membersCount = content_list('App\\Model\\Member', filterBy = '_.active and not _.meta') | length %}
                         <span class="number">{{ membersCount }}</span>
                         <span class="detail">expert·e·s passionné·e·s</span>
                         <a href="{{ path('team') }}">

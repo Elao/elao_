@@ -66,7 +66,7 @@ class BlogController extends AbstractController
 
     #[Route('/auteur/{author}', name: 'blog_author')]
     #[Route('/auteur/{author}/{!page}', name: 'blog_author_page', requirements: ['page' => '\d+'])]
-    public function articlesFromAuthor(Request $request, Member $author, int $page = 1, int $perPage = 20): Response
+    public function articlesFromAuthor(Member $author, int $page = 1, int $perPage = 20): Response
     {
         $articles = $this->manager->getContents(
             Article::class,

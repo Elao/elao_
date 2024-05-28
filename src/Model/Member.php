@@ -6,10 +6,11 @@ namespace App\Model;
 
 use Stenope\Bundle\Attribute\SuggestedDebugQuery;
 
-#[SuggestedDebugQuery('Actifs', filters: '_.active', orders: 'desc:integrationDate')]
-#[SuggestedDebugQuery('Anciens', filters: 'not _.active', orders: 'desc:integrationDate')]
-#[SuggestedDebugQuery('Vélotaffeurs', filters: '_.🚲 and _.active', orders: 'desc:integrationDate')]
-#[SuggestedDebugQuery('Piétons', filters: 'not _.🚲 and _.active', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Actifs', filters: '_.active and not _.meta', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Anciens', filters: 'not _.active and not _.meta', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Vélotaffeurs', filters: '_.🚲 and _.active and not _.meta', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Piétons', filters: 'not _.🚲 and _.active and not _.meta', orders: 'desc:integrationDate')]
+#[SuggestedDebugQuery('Meta members', filters: '_.meta', orders: 'desc:integrationDate')]
 class Member
 {
     public string $slug;
@@ -45,6 +46,9 @@ class Member
     // Flags
 
     public bool $active = false;
+
+    /** Group of members: ex: "La team elao" */
+    public bool $meta = false;
 
     /** Vélotafeur */
     public bool $🚲 = false;

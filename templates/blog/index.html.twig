@@ -38,7 +38,9 @@
                                                 <strong>{{ author.name }}</strong>
                                             </a>
                                         {% else %}
-                                            <strong>La team elao</strong>
+                                            <a href="{{ path('blog_author', { author: 'elao' }) }}">
+                                                <strong>La team elao</strong>
+                                            </a>
                                         {% endfor %}
                                     </span>
                                     <span class="article-author__info">

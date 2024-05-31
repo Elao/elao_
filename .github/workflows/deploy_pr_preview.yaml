@@ -28,7 +28,7 @@ jobs:
 
       # https://github.com/actions/setup-node
       - name: 'Setup node'
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
@@ -41,7 +41,7 @@ jobs:
           php-version: "8.3"
 
       - name: 'Cache resized images'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: public/resized
           key: resized-images-${{ github.workflow }}-${{ secrets.CACHE_VERSION }}
@@ -51,7 +51,7 @@ jobs:
         run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
 
       - name: 'Cache composer dependencies'
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ steps.composer-cache.outputs.dir }}
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}

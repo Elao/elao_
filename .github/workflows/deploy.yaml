@@ -1,4 +1,4 @@
-name: Deploy production on Kube
+name: Deploy production
 
 on:
   workflow_dispatch: ~

@@ -8,15 +8,13 @@ metadata:
     {{- include "labels" . | nindent 4 }}
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
 spec:
   ingressClassName: nginx
   tls:
     - hosts:
         - www.elao.com
       secretName: www.elao.com.tls
-    - hosts:
-        - blog.elao.com
-      secretName: blog.elao.com.tls
   rules:
     # Proxied to redirectionio service
     - host: www.elao.com
@@ -29,6 +27,24 @@ spec:
                 name: redirectionio-service
                 port:
                   number: 8080
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "fullname" . }}-blog-ingress
+  labels:
+    {{- include "labels" . | nindent 4 }}
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - blog.elao.com
+      secretName: blog.elao.com.tls
+  rules:
     # Proxied to redirectionio service
     - host: blog.elao.com
       http:

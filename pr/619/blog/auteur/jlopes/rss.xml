@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Johan Lopes, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Johan Lopes de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/619/blog/auteur/jlopes</link>
+        <pubDate>Mon, 10 Jun 2024 09:19:55 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/619/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Johan Lopes, </title>
+            <link>https://elao.github.io/elao_/pr/619/blog/auteur/jlopes</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/619/blog/auteur/jlopes/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Plusieurs mailer dans une application Symfony 2</title>
+                <pubDate>Fri, 11 Oct 2013 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Plusieurs mailer dans une application Symfony 2 ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/619/blog/dev/plusieurs-mailer-dans-une-application-symfony-2</guid>
+                <link>https://elao.github.io/elao_/pr/619/blog/dev/plusieurs-mailer-dans-une-application-symfony-2</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/619/%2E%2E/../resized/content/images/blog/thumbnails/mailers.jpg/615ee5022a206794c29440eefc8e30f1.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Plusieurs mailer dans une application Symfony 2</media:description>
+                                    </media:content>
+                                    <category>symfony</category>
+                                    <category>errornotifierbundle</category>
+                                    <category>swiftmailer</category>
+                                    <category>mailer-transport</category>
+                                            </item>
+            </channel>
+</rss>

@@ -393,9 +393,9 @@ grâce aux resolvers locaux Apollo.
 <p>Dans le développement d'une application web, il est courant que le front-end et le back-end soient développés de
 manière indépendante, parfois par deux équipes distinctes.
 Il peut alors être difficile de se coordonner sur le développement des fonctionnalités.
-En particulier, l'équipe front peut vite être bloqué par le manque de spécifications de l'API, de son implémentation
+En particulier, l'équipe front peut vite être bloquée par le manque de spécifications de l'API, de son implémentation
 concrète ou encore de données suffisantes à consommer.</p>
-<p>Il convient de se mettre d'accord rapidement sur les principes de fonctionnements du dialogue entre le client et le serveur,
+<p>Il convient de se mettre d'accord rapidement sur les principes de fonctionnement du dialogue entre le client et le serveur,
 en identifiant les besoins de chacun et en établissant un premier contrat d'API. Pour autant, la capacité de l'équipe
 back à fournir à temps tous les éléments nécessaires à ce que le front puisse avancer de façon autonome n'est pas
 toujours suffisante.</p>
@@ -409,7 +409,7 @@ toujours suffisante.</p>
 </div>
 <p>Dans ce contexte, il est intéressant de pouvoir simuler tout ou partie d'une API GraphQL, en minimisant le plus possible
 les impacts sur le code fonctionnel du client front-end. C'est-à-dire en évitant l'introduction de dette technique
-de part l'entremêlement du code fonctionnel avec du code visant à simuler les appels au serveur. Code qu'il faudra
+de part <strong>l'entremêlement du code fonctionnel avec du code visant à simuler les appels au serveur</strong>. Code qu'il faudra
 revoir avec plus ou moins de difficultés lorsque nous consommerons le véritable serveur.</p>
 <p>C'est là qu'interviennent <em>les resolvers locaux Apollo</em>.</p>
 <div class="admonition danger">
@@ -439,7 +439,7 @@ that data in any way you define, such as by fetching data from a back-end databa
 <p>Un resolver local est donc une fonction définie et exécutée uniquement par le client pour résoudre les champs d'une
 requête GraphQL, marqués d'une directive spéciale : <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>.</p>
 <p>L'exemple donné par la documentation Apollo cherche à fournir un état local pour un panier d'achat, en ajoutant un flag
-<code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> à une liste de produits. Cela permet de réaliser un panier d'achat sans avoir à exposer cette donnée sur
+<code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> à une liste de produits. Cela permet de réaliser un système de panier sans avoir à exposer cette donnée sur
 chaque produit côté serveur, ni dans un store Redux ou local storage complètement distinct de notre cache Apollo.</p>
 <pre class="code-multiline language-graphql"><code class="language-graphql" id="aae2cbed1601b8cd5dc139b017aa0c46"><span class="token keyword">query</span> <span class="token definition-query function">ProductDetails</span><span class="token punctuation">(</span><span class="token variable">$productId</span><span class="token punctuation">:</span> <span class="token scalar">ID</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token property-query">product</span><span class="token punctuation">(</span><span class="token attr-name">id</span><span class="token punctuation">:</span> <span class="token variable">$productId</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -448,8 +448,8 @@ chaque produit côté serveur, ni dans un store Redux ou local storage complète
     <span class="token property">isInCart</span> <span class="token directive function">@client</span> <span class="token comment"># &lt;- 👀</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>La directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> indique à Apollo de chercher un resolver local pour résoudre ce champ.
-Ce champ ne sera par ailleurs pas communiqué au serveur dans la définition de la query lors de son exécution.</p>
+<p>La <strong>directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong> sur le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> indique à Apollo de chercher un resolver local pour résoudre ce champ.
+Ce champ ne sera par ailleurs <strong>pas communiqué au serveur</strong> dans la définition de la query lors de son exécution.</p>
 <p>Le resolver pour <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> peut être défini ainsi, au niveau du client Apollo:</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="c429a7e08d4174a7235323c57823e923"><span class="token keyword">const</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ApolloClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
   cache<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">InMemoryCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
@@ -467,11 +467,11 @@ Ce champ ne sera par ailleurs pas communiqué au serveur dans la définition de 
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>Lors de l'exécution de la query <code class="code-inline" id="684a7f94af7046125f90be3235636181">ProductDetails</code>, qui est un mélange de champs distants et locaux, Apollo récupère la
-réponse du serveur, puis essaye de trouver un resolver local pour notre champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> marqué avec la
+<p>Lors de l'exécution de la query <code class="code-inline" id="684a7f94af7046125f90be3235636181">ProductDetails</code>, <em>qui est un mélange de champs distants et locaux</em>, Apollo récupère la
+réponse du serveur, puis essaye de trouver un resolver local pour notre champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> annoté avec la
 directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>.<br>
-Si un resolver est trouvé, il est exécuté, et le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> est fusionné avec la réponse du serveur dans le cache.</p>
-<p>➜ Nos données distantes et locales cohabitent ainsi au sein d'un seul et même store de données.</p>
+Si un resolver est trouvé, il est exécuté, et le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> est <strong>fusionné</strong> avec la réponse du serveur dans le cache.</p>
+<p>➜ Nos données distantes et locales cohabitent ainsi au sein d'<strong>un seul et même store de données</strong>.</p>
 <p><em>Découvrons maintenant comment nous pouvons utiliser cette fonctionnalité pour simuler tout ou partie d'une API GraphQL
 et poursuivre nos développements front sans introduire de dette technique ni de code fonctionnel spécifique à retirer
 une fois que nous consommerons le serveur.</em></p>
@@ -481,17 +481,17 @@ une fois que nous consommerons le serveur.</em></p>
 <img src="/elao_/pr/621/%2E%2E/../resized/content/images/blog/2024/apollo-mock-data-local-resolvers/widgets.png/e4731decde386b402ad7feac279a4cc0.png" alt="Liste d'indicateurs" title="Liste d'indicateurs" srcset="/elao_/pr/621/%2E%2E/../resized/content/images/blog/2024/apollo-mock-data-local-resolvers/widgets.png/e4731decde386b402ad7feac279a4cc0.png 1x,
 /elao_/pr/621/%2E%2E/../resized/content/images/blog/2024/apollo-mock-data-local-resolvers/widgets.png/65d982318c365af4661e2af320c5cfa4.png 2x," id="liste-d-indicateurs">
 <p>Un utilisateur peut ainsi créer son tableau de bord en ajoutant et configurant des indicateurs à partir de modèles
-pré-existant. puis les organiser, supprimer, ou en mettre en favoris.</p>
+pré-existants. Puis les organiser, supprimer, ou en mettre en favoris.</p>
 <h3 id="simuler-une-query-complete-de-listing" class="anchor-title"><a href="#simuler-une-query-complete-de-listing">Simuler une query complète de listing</a></h3>
 <p>Un resolver peut-être utilisé à <strong>n'importe quel niveau du schéma GraphQL</strong>.
 Cela veut dire qu'il est possible de surcharger toute une query en définissant une directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur celle-ci et
-un résolver sur le champ correspondant de votre objet <code class="code-inline" id="bf1e1e9a52f888f2e473ceaab39689ad">ROOT_QUERY</code> (Généralement <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code>).</p>
-<p>Par exemple, afin de simuler une requête pour obtenir la liste des indicateurs:</p>
-<pre class="code-multiline language-graphql"><code class="language-graphql" id="d1882dacd50bec04801348493e267c3a"><span class="token comment"># queries/getWidgets.graphql</span>
+un resolver sur le champ correspondant de votre objet <code class="code-inline" id="bf1e1e9a52f888f2e473ceaab39689ad">ROOT_QUERY</code> (Généralement <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code>).</p>
+<p>Par exemple, afin de simuler une requête pour obtenir la liste des indicateurs :</p>
+<pre class="code-multiline language-graphql"><code class="language-graphql" id="d7b970169d637e12d893868cb1ecc892"><span class="token comment"># queries/getWidgets.graphql</span>
 
 <span class="token keyword">query</span> <span class="token definition-query function">GetWidgets</span> <span class="token punctuation">{</span>
   <span class="token property">getWidgets</span>
-    <span class="token comment"># On adjoint à la query la directive @client</span>
+    <span class="token comment"># On annote la query avec la directive @client</span>
     <span class="token comment"># pour indiquer qu'on souhaite utiliser un resolver local:</span>
     <span class="token directive function">@client</span>
   <span class="token punctuation">{</span>
@@ -506,7 +506,7 @@ un résolver sur le champ correspondant de votre objet <code class="code-inline"
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<p>on définit une liste de resolvers qu'on passera à notre client Apollo:</p>
+<p>on définit une liste de resolvers qu'on passera à notre client Apollo :</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="258d1528be9939a4a15397b02fda8bfb"><span class="token comment">// client.ts</span>
 <span class="token keyword">import</span> resolvers <span class="token keyword">from</span> <span class="token string">'./resolvers'</span><span class="token punctuation">;</span>
 
@@ -514,8 +514,8 @@ un résolver sur le champ correspondant de votre objet <code class="code-inline"
   cache<span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">InMemoryCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
   resolvers<span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>et on définit le resolver pour le champ <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> de notre root <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code>:</p>
-<pre class="code-multiline language-typescript"><code class="language-typescript" id="16c1d5a96e5039e288ec67b2d4c14e46"><span class="token comment">// resolvers.ts</span>
+<p>et on définit le resolver pour le champ <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> de notre root <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code> :</p>
+<pre class="code-multiline language-typescript"><code class="language-typescript" id="47ea54a7de01afe54d05dd7254567da9"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">Resolvers</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> fakeWidgetsData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>
 
@@ -523,10 +523,10 @@ un résolver sur le champ correspondant de votre objet <code class="code-inline"
   Query<span class="token operator">:</span> <span class="token punctuation">{</span>
     getWidgets<span class="token operator">:</span> fakeWidgetsData<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span> satisfies Resolvers <span class="token operator">|</span> Resolvers<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> satisfies Resolvers<span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> resolvers<span class="token punctuation">;</span></code></pre>
-<p>Voici le code de notre resolver <code class="code-inline" id="f1879903a813f5941141ad4b4731cdbb">fakeWidgetsData</code>:</p>
+<p>🤲 Voici le code de notre resolver <code class="code-inline" id="f1879903a813f5941141ad4b4731cdbb">fakeWidgetsData</code>:</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="5c9451c112185faf4b8858ff156f2047"><span class="token comment">// hardcoded/widgets.ts</span>
 
 <span class="token comment">// Nos données simulées:</span>
@@ -594,7 +594,7 @@ usant de la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <p>Nous définissons un resolver local pour cette mutation:</p>
-<pre class="code-multiline language-typescript"><code class="language-typescript" id="f486dd1a15cc7db5318be931d0c6667e"><span class="token comment">// resolvers.ts</span>
+<pre class="code-multiline language-typescript"><code class="language-typescript" id="07a4991069397d6d802b480286d5c75c"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> toggleWidgetStar <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">const</span> resolvers <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -602,7 +602,7 @@ usant de la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3
   Mutation<span class="token operator">:</span> <span class="token punctuation">{</span>
     toggleWidgetStar<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span> satisfies Resolvers <span class="token operator">|</span> Resolvers<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<span class="token punctuation">}</span> satisfies Resolvers<span class="token punctuation">;</span></code></pre>
 <p>Le resolver prend en paramètre quelques variables utiles, que nous allons utiliser pour générer notre réponse:</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="d6dbdae7da8945c8ced13c11f5413a48"><span class="token keyword">export</span> <span class="token keyword">const</span> toggleWidgetStar<span class="token operator">:</span> <span class="token function-variable function">Resolver</span> <span class="token operator">=</span> <span class="token punctuation">(</span>_<span class="token punctuation">,</span> variables<span class="token punctuation">,</span> <span class="token punctuation">{</span> cache <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
   <span class="token comment">// À partir des données existantes dans le cache, </span>
@@ -670,27 +670,27 @@ conséquence pour mettre à jour notre cache:</p>
   <span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <ul>
-<li>notre mutation est reçue et exécutée par le serveur, <strong>omettant les champs avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong></li>
-<li>bien que celui-ci ne retourne aucune donnée, notre resolver local est appelé car la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> est présente
+<li>Notre mutation est reçue et exécutée par le serveur, <strong>omettant les champs avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong></li>
+<li>Bien que le serveur ne retourne aucune donnée, notre resolver local est appelé car la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> est présente
 sur l'un des champs attendus en retour de la mutation</li>
-<li>notre resolver accède au cache et s'en sert pour retourner une réponse qui sera <strong>fusionnée</strong> avec l'état existant du
+<li>Notre resolver accède au cache et s'en sert pour retourner une réponse qui sera <strong>fusionnée</strong> avec l'état existant du
 cache Apollo</li>
-<li>l'instance de l'indicateur, <em>identifiée et tracée par Apollo via son <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code></em>, est automatiquement mise à jour dans le
+<li>L'instance de l'indicateur, <em>identifiée et tracée par Apollo via son <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code></em>, est automatiquement mise à jour dans le
 cache. En conséquence, son nouvel état est reflété dans l'interface (<em>l'icône change</em>).</li>
-<li>nous pouvons également réagir suite à la mutation grâce à la clé <code class="code-inline" id="3ac340832f29c11538fbe2d6f75e8bcc">update</code> pour réordonner les indicateurs présents
+<li>Nous pouvons également réagir suite à la mutation grâce à la clé <code class="code-inline" id="3ac340832f29c11538fbe2d6f75e8bcc">update</code> pour réordonner les indicateurs présents
 dans le cache afin de placer les favoris en haut de la liste.</li>
 </ul>
 <div class="admonition note">
 <p>
-    <em>Notez la particularité de ce que nous venons d'effectuer :</em> nous avons marqué les champs <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code> et <code class="code-inline" id="dd68bf97c522179d38337a47626e8e47">starred</code> de notre
+    <em>Notez la particularité de ce que nous venons d'effectuer :</em> nous avons annoté les champs <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code> et <code class="code-inline" id="dd68bf97c522179d38337a47626e8e47">starred</code> de notre
     mutation avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>. Pourtant, nous n'avons pas défini de resolver local pour ces champs et c'est
     à la place le resolver de la mutation <code class="code-inline" id="201153965340874427ca398a54d49ece">toggleWidgetStarred</code> qui a été appelé.<br>
     Il aurait tout à fait été possible de définir un resolver pour chacun de ces champs comme nous le verrons dans le
     prochain exemple. Mais nous souhaitons ici réagir à cette mutation précisément.
 </p>
 </div>
-<p>De la même façon, nous pourrions simuler le retour de mutations pour ajouter ou supprimer un indicateur et modifier la
-liste en cache. Ce qui sera automatiquement reflété dans l'interface avec l'apparition ou la disparition de l'indicateur.</p>
+<p><em>De la même façon, nous pourrions simuler le retour de mutations pour ajouter ou supprimer un indicateur et modifier la
+liste en cache. Ce qui sera automatiquement reflété dans l'interface avec l'apparition ou la disparition de l'indicateur.</em></p>
 <p>Le jour où l'implémentation serveur sera complétée, <strong>il suffira de retirer les directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong>.</p>
 <p>➜ <strong>Aucun autre impact sur le code fonctionnel ne sera nécessaire et les mise à jour du cache auront été prévues en
 amont.</strong></p>
@@ -702,11 +702,11 @@ Ou encore, de réagir à la présence de certains champs distants pour simuler d
 <p>Afin d'afficher un graphique représentatif de nos indicateurs, nous allons avoir besoin de données dans le champs
 <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de chacun d'entre eux.<br>
 Il existe en réalité plusieurs types d'indicateurs, avec leur dataset et rendus spécifiques. Mais le back-end — <em>bien
-qu'ayant entre temps mis à jour la query de liste des widgets pour nous retourner des données</em> — n'en retourne pour
-l'instant aucune dans le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code>.</p>
+qu'ayant entre temps mis à jour la query de liste des widgets pour nous retourner des données</em> — ne retourne pour
+l'instant rien dans le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code>.</p>
 <p>Or l'équipe front aimerait pouvoir avancer sur l'affichage de chacun de ces types de graphiques, sans attendre
 l'implémentation du serveur.</p>
-<p>Nous allons donc déplacer notre directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code>:</p>
+<p>Nous allons donc déplacer notre directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> :</p>
 <pre class="code-multiline language-graphql"><code class="language-graphql" id="bbc84d657985e6108709cf9b680959a6"><span class="token comment"># queries/getWidgets.graphql</span>
 
 <span class="token keyword">query</span> <span class="token definition-query function">getWidgets</span> <span class="token punctuation">{</span>
@@ -724,8 +724,8 @@ l'implémentation du serveur.</p>
 <span class="token punctuation">}</span></code></pre>
 <p>A partir de là, différentes solutions s'offrent à nous 👇🏻</p>
 <h4 id="surcharge-par-champs" class="anchor-title"><a href="#surcharge-par-champs">Surcharge par champs</a></h4>
-<p>Cette fois-ci, nous allons définir un resolver pour les champ du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code>, et non pour une query ou une mutation:</p>
-<pre class="code-multiline language-typescript"><code class="language-typescript" id="09df5483a52fd3dd08dfd5bb412454b8"><span class="token comment">// resolvers.ts</span>
+<p>Cette fois-ci, nous allons définir un resolver pour les champ du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code>, et non pour une query ou une mutation :</p>
+<pre class="code-multiline language-typescript"><code class="language-typescript" id="2514c9466a69021e850f5470d2c9e311"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">Resolvers</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> fakeWidgetsDataset <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>
 
@@ -733,10 +733,10 @@ l'implémentation du serveur.</p>
   Widget<span class="token operator">:</span> <span class="token punctuation">{</span>
     dataset<span class="token operator">:</span> fakeWidgetsDataset<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span> satisfies Resolvers <span class="token operator">|</span> Resolvers<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> satisfies Resolvers<span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> resolvers<span class="token punctuation">;</span></code></pre>
-<p>Le resolver ainsi appelé accède aux données retournées par le serveur et peut retourner un dataset simulé :</p>
+<p>Le resolver ainsi appelé accède aux données transmises par le serveur et peut retourner un dataset simulé :</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="edddf0e6714daa4ed8e9a02184815fac"><span class="token keyword">export</span> <span class="token keyword">const</span> fakeWidgetsDataset<span class="token operator">:</span> Resolver <span class="token operator">=</span> <span class="token punctuation">(</span>
   <span class="token comment">// le 1er argument fourni à notre resolver est l'objet retourné par le resolver du champ parent.</span>
   <span class="token comment">// Dans notre cas, il s'agit du widget retourné par le serveur dans notre query.</span>
@@ -761,20 +761,20 @@ l'implémentation du serveur.</p>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <ul>
 <li>Tous les indicateurs affichés dans notre liste auront désormais un dataset fictif</li>
-<li>Il est possible de réagir en fonction d'autre champs de l'objet parent (ici, l'indicateur) pour retourner des données
-différentes (par exemple en fonction de son <code class="code-inline" id="599dcce2998a6b40b1e38e8c6006cb0a">type</code>).</li>
+<li>Il est possible de réagir en fonction d'autres champs de l'objet parent (<em>ici, l'indicateur</em>) pour retourner des données
+différentes (<em>par exemple en fonction de son <code class="code-inline" id="599dcce2998a6b40b1e38e8c6006cb0a">type</code></em>).</li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Attention</p>
 <p>
-    Cependant, le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> étant marqué avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>, <strong>celui-ci n'a
+    Cependant, le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> étant annoté avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>, <strong>celui-ci n'a
     jamais été transmis au serveur</strong>. Ainsi, même si le serveur était en mesure de nous retourner des données pour ce
     champ, elles n'arriveront jamais jusqu'à notre client et au sein de l'argument <code class="code-inline" id="9d2b1ad5bbc16c44d49116dc213c53f2">widget</code> de notre resolver.
 </p>
 </div>
 <h4 id="surcharge-d-une-partie-de-la-query" class="anchor-title"><a href="#surcharge-d-une-partie-de-la-query">Surcharge d'une partie de la query</a></h4>
-<p>Comme pour notre mutation, nous pourrions également définir un resolver pour notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code>:</p>
-<pre class="code-multiline language-typescript"><code class="language-typescript" id="b92f67bea9aa63083a6f1fdb98872c0f"><span class="token comment">// resolvers.ts</span>
+<p>Comme pour notre mutation, nous pourrions également définir un resolver pour notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> :</p>
+<pre class="code-multiline language-typescript"><code class="language-typescript" id="18a6ba0151ecd014aaec32de057fbc35"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">Resolvers</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> partiallyFakedWidgetsData <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>
 
@@ -782,7 +782,7 @@ différentes (par exemple en fonction de son <code class="code-inline" id="599dc
   Query<span class="token operator">:</span> <span class="token punctuation">{</span>
     getWidgets<span class="token operator">:</span> partiallyFakedWidgetsData<span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span> satisfies Resolvers <span class="token operator">|</span> Resolvers<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> satisfies Resolvers<span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> resolvers<span class="token punctuation">;</span></code></pre>
 <p>et dans notre resolver, compléter la réponse du serveur:</p>
@@ -809,14 +809,13 @@ différentes (par exemple en fonction de son <code class="code-inline" id="599dc
 <li>Il est possible de fournir plusieurs champs locaux à la fois et gérer d'éventuelles résolutions de dépendances entre eux.</li>
 <li>Le second argument fourni à notre resolver est l'ensemble des variables de la query.</li>
 </ul>
-<p>Enfin il est possible au travers d'une petite astuce de ne simuler des données que pour les champs absents de la réponse
+<p>Enfin, il est possible au travers d'une petite astuce de ne simuler des données que pour les champs absents de la réponse
 du serveur.  </p>
 <h3 id="astuce-ne-simuler-que-les-donnees-absentes" class="anchor-title"><a href="#astuce-ne-simuler-que-les-donnees-absentes">Astuce : ne simuler que les données absentes</a></h3>
-<p>Comme évoqué précédemment, le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> étant marqué avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>,
-celui-ci n'a jamais été transmis au serveur. Ainsi, même si le serveur était en mesure de nous retourner des données
-pour ce champ, elles n'arriveront jamais jusqu'à notre client et au sein de l'argument <code class="code-inline" id="9d2b1ad5bbc16c44d49116dc213c53f2">widget</code> de notre resolver.</p>
+<p>Comme évoqué précédemment, le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de notre query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> étant annoté avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>,
+celui-ci n'a jamais été transmis au serveur et ses données n'aboutiront donc jamais dans notre resolver.</p>
 <p>Nous pourrions alors requêter à la fois un champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> local et un champ distant :</p>
-<pre class="code-multiline language-graphql"><code class="language-graphql" id="5f7329deded93a3e830d9fe938078232"><span class="token comment"># queries/getWidgets.graphql</span>
+<pre class="code-multiline language-graphql"><code class="language-graphql" id="a22f6d7dfbafbb68db22579836393e6a"><span class="token comment"># queries/getWidgets.graphql</span>
 
 <span class="token keyword">query</span> <span class="token definition-query function">getWidgets</span> <span class="token punctuation">{</span>
   <span class="token object">getWidgets</span> <span class="token punctuation">{</span>
@@ -827,7 +826,7 @@ pour ce champ, elles n'arriveront jamais jusqu'à notre client et au sein de l'a
       <span class="token keyword">type</span>
       <span class="token property">position</span>
       <span class="token property">starred</span>
-      <span class="token property">dataset</span> <span class="token comment"># &lt;- 👈🏻Les données peuvent nous être retournées ou non par le serveur selon la progression de l'équipe back</span>
+      <span class="token property">dataset</span> <span class="token comment"># &lt;- 👈🏻 Les données peuvent être présent ou absentes selon la progression de l'équipe back</span>
       <span class="token property">hardcodedDataset</span> <span class="token directive function">@client</span> <span class="token comment"># &lt;- 👈🏻 Nous utilisons un resolver local pour fournir des données simulées</span>
     <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
@@ -852,16 +851,16 @@ serveur :</p>
 directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query.</p>
 <h2 id="avantages-et-comparaisons" class="anchor-title"><a href="#avantages-et-comparaisons">Avantages et comparaisons</a></h2>
 <ul>
-<li>Les resolvers locaux ont la capacité d'offrir à une équipe front la possibilité de simuler tout ou partie d'une API, et
-de poursuivre le développement de son fonctionnel sans attendre que le serveur ait terminé son implémentation.</li>
+<li>Les resolvers locaux ont la capacité d'offrir à une équipe front la possibilité de <strong>simuler tout ou partie d'une API</strong>,
+et de poursuivre le développement de son fonctionnel <strong>sans attendre que le serveur ait finalisé son implémentation</strong>.</li>
 <li>Ils permettent de faire cohabiter des données simulées pour une portion de l'API tout en utilisant le véritable
 serveur pour d'autres.</li>
-<li>Ils ne requièrent aucun changement structurel notable dans l'application, et ne rentre pas en conflit avec du code
-fonctionnel.</li>
+<li>Ils ne requièrent <strong>aucun changement structurel</strong> notable dans l'application, et ne rentre pas en conflit avec du
+<strong>code fonctionnel</strong>.</li>
 <li>Les effets des interactions avec les données et l'UI sont répercutés et testables avant même que le serveur ne soit
 prêt, grâce aux mises à jour des données dans le cache Apollo.</li>
-<li>Le code produit est facilement débrayable une fois le serveur prêt, simplement en supprimant les directives <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>
-des queries et mutations.</li>
+<li>Le code produit est <strong>facilement débrayable</strong> une fois le serveur prêt, simplement en supprimant les directives
+<code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> des queries et mutations.</li>
 </ul>
 <p>D'autres solutions peuvent répondre au besoin de simuler des données :</p>
 <ul>
@@ -873,7 +872,7 @@ En outre, ce provider n'a été pensé qu'à des fins de tests unitaires.</li>
 <li>Il est possible d'<a href="https://www.apollographql.com/docs/react/local-state/local-resolvers/#initializing-the-cache" target="_blank">initialiser un cache pré-peuplé</a> au démarrage de l'application.<br>
 Cela permet de fournir un état initial de l'application avec des données fictives, mais ne permet pas à lui seul de répondre dynamiquement à des interactions, notamment des mutations.</li>
 </ul>
-<p>Mais aucune de ces solutions n'est aussi complète, flexible et peu intrusive que les resolvers locaux Apollo.</p>
+<p>Aucune de ces solutions n'est aussi complète, flexible et peu intrusive que les resolvers locaux Apollo.</p>
 <h2 id="disclaimer" class="anchor-title"><a href="#disclaimer">Disclaimer</a></h2>
 <p>Bon… il y a un hic. 😬</p>
 <p>Les resolvers locaux sont une fonctionnalité <a href="https://github.com/apollographql/apollo-client/issues/10061" target="_blank"><strong>dépréciée</strong></a>
@@ -885,13 +884,14 @@ par des <a href="https://www.apollographql.com/docs/react/local-state/managing-s
 <a href="https://www.apollographql.com/docs/react/local-state/reactive-variables/" target="_blank">reactive variables</a> pour ce qui est de
 définir un état purement local.</p>
 <p>La fonctionnalité de resolver côté client devrait néanmoins aboutir en un <a href="https://github.com/apollographql/apollo-client/issues/10060" target="_blank"><code class="code-inline" id="2a304a1348456ccd2234cd71a81bd338">link</code> spécifique</a>
-permettant les mêmes usages, assurant malgré tout un avenir à ce concept.</p>
+permettant les mêmes usages et assurant malgré tout un avenir à ce concept.</p>
 <div class="admonition note">
-<p class="admonition-title">Mon conseil</p>
+<p class="admonition-title">« My 2 cents »</p>
 <p>
-    Quoiqu'il advienne, cela en devrait néanmoins pas vous prévenir d'utiliser cette fonctionnalité pour le cas d'usage
+    Quoiqu'il advienne, cela ne devrait néanmoins pas vous prévenir d'utiliser cette fonctionnalité pour le cas d'usage
     spécifique visant à temporairement simuler une partie de votre API. En effet, ces resolvers sont un tel atout qu'il
-    serait dommage de s'en priver et n'entâche en rien la pérennité de votre code ; n'étant que temporaire et non intrusif.
+    serait dommage de s'en priver et n'entâche en rien la pérennité de votre code ; n'étant que temporaires et non
+    intrusifs.
 </p>
 </div>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>

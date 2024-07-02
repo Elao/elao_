@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Eva Quentin, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Eva Quentin de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/621/blog/auteur/equentin</link>
+        <pubDate>Tue, 02 Jul 2024 11:58:22 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/621/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Eva Quentin, </title>
+            <link>https://elao.github.io/elao_/pr/621/blog/auteur/equentin</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/621/blog/auteur/equentin/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Maximisez l&#039;efficacité de votre gestion de projet avec GitHub Project</title>
+                <pubDate>Thu, 16 Nov 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ GitHub Project, fonctionnalité de GitHub, propose une gestion de projet efficace et pertinente pour les applications web. Chez Elao, on l’a adopté il y a déjà quelque temps et on vous dit pourquoi. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/621/blog/methodo/github-project</guid>
+                <link>https://elao.github.io/elao_/pr/621/blog/methodo/github-project</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/621/%2E%2E/../resized/content/images/blog/2023/github-project/banner-github-project.png/ce325f932e864f004fc58a16803598be.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Maximisez l&#039;efficacité de votre gestion de projet avec GitHub Project</media:description>
+                                    </media:content>
+                                    <category>gestion-de-projet</category>
+                                    <category>github</category>
+                                    <category>tableau-de-bord</category>
+                                            </item>
+                    <item>
+                <title>Rix et Elao</title>
+                <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ RIX, structure spécialisée en hébergement et infrastructure, est historiquement liée à Elao. Désormais partenaires de longue date, nous avons souhaité mettre en lumière notre manière de travailler ensemble. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/621/blog/elao/rix-et-elao</guid>
+                <link>https://elao.github.io/elao_/pr/621/blog/elao/rix-et-elao</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/621/%2E%2E/../resized/content/images/blog/thumbnails/rix-et-elao.jpg/64cdff9ace22675d79be4148aa6a55c9.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Rix et Elao</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>hebergement</category>
+                                    <category>manala</category>
+                                            </item>
+                    <item>
+                <title>ARC MAX - Quand l’IA simplifie notre navigation sur le web</title>
+                <pubDate>Tue, 10 Oct 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Cet article met en avant le développement de l&#039;intégration de l&#039;IA, illustrée par l&#039;exemple du navigateur ARC MAX, permettant d&#039;améliorer l&#039;efficacité et la qualité des usages web, tout en soulignant la nécessité de gérer de manière éthique les enjeux liés à l&#039;intelligence artificielle. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/621/blog/tech/arc-max-quand-l-IA-simplifie-notre-navigation-sur-le-web</guid>
+                <link>https://elao.github.io/elao_/pr/621/blog/tech/arc-max-quand-l-IA-simplifie-notre-navigation-sur-le-web</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/621/%2E%2E/../resized/content/images/blog/thumbnails/arc-max-quand-l-ia-simplifie-notre-navigation-sur-le-web.png/8f62ff743ddeab9502e4dffa8fe97753.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">ARC MAX - Quand l’IA simplifie notre navigation sur le web</media:description>
+                                    </media:content>
+                                    <category>arc</category>
+                                    <category>navigateur</category>
+                                    <category>ia</category>
+                                    <category>browser</category>
+                                            </item>
+                    <item>
+                <title>Eva, Facilitatrice projets fraichement arrivée chez Elao</title>
+                <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/621/blog/elao/eva-facilitatrice-projet-portrait</guid>
+                <link>https://elao.github.io/elao_/pr/621/blog/elao/eva-facilitatrice-projet-portrait</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/621/%2E%2E/../resized/content/images/blog/2023/itw-eva/banner.jpeg/84834d44b0b6c0334c8d5bc821be46cd.jpeg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Eva, Facilitatrice projets fraichement arrivée chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+                    <item>
+                <title>Config 2023: notre sélection de nouveautés Figma</title>
+                <pubDate>Thu, 29 Jun 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ À travers cet article, retrouvez notre sélection et avis sur les nouveautés Figma, présentées lors de la Config 2023. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/621/blog/tech/config-2023-notre-selection-de-nouveautes-figma</guid>
+                <link>https://elao.github.io/elao_/pr/621/blog/tech/config-2023-notre-selection-de-nouveautes-figma</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/621/%2E%2E/../resized/content/images/blog/thumbnails/config-2023-notre-selection-de-nouveautes-figma.jpg/f18a797a4c6e2b1325ea8d1d4e3626df.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Config 2023: notre sélection de nouveautés Figma</media:description>
+                                    </media:content>
+                                    <category>figma</category>
+                                    <category>conference</category>
+                                    <category>webdesign</category>
+                                            </item>
+            </channel>
+</rss>

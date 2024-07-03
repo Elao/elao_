@@ -487,14 +487,12 @@ pré-existants. Puis les organiser, supprimer, ou en mettre en favoris.</p>
 Cela veut dire qu'il est possible de surcharger toute une query en définissant une directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur celle-ci et
 un resolver sur le champ correspondant de votre objet <code class="code-inline" id="bf1e1e9a52f888f2e473ceaab39689ad">ROOT_QUERY</code> (Généralement <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code>).</p>
 <p>Par exemple, afin de simuler une requête pour obtenir la liste des indicateurs :</p>
-<pre class="code-multiline language-graphql"><code class="language-graphql" id="d7b970169d637e12d893868cb1ecc892"><span class="token comment"># queries/getWidgets.graphql</span>
+<pre class="code-multiline language-graphql"><code class="language-graphql" id="c2eee4748a0cb5d67d6aa7e64abb4452"><span class="token comment"># queries/getWidgets.graphql</span>
 
 <span class="token keyword">query</span> <span class="token definition-query function">GetWidgets</span> <span class="token punctuation">{</span>
-  <span class="token property">getWidgets</span>
-    <span class="token comment"># On annote la query avec la directive @client</span>
-    <span class="token comment"># pour indiquer qu'on souhaite utiliser un resolver local:</span>
-    <span class="token directive function">@client</span>
-  <span class="token punctuation">{</span>
+  <span class="token comment"># On annote la query avec la directive @client</span>
+  <span class="token comment"># pour indiquer qu'on souhaite utiliser un resolver local:</span>
+  <span class="token property">getWidgets</span> <span class="token directive function">@client</span> <span class="token punctuation">{</span> <span class="token comment"># &lt;- 👈🏻</span>
     <span class="token property">count</span>
     <span class="token object">rows</span> <span class="token punctuation">{</span>
       <span class="token property">id</span>
@@ -568,14 +566,10 @@ un resolver sur le champ correspondant de votre objet <code class="code-inline" 
 </p>
 </div>
 <p>Le jour où nous souhaiterons consommer le serveur, <strong>il suffira de retirer la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query</strong>:</p>
-<pre class="code-multiline language-diff"><code class="language-diff" id="993ee4b74a11c1e5e55550f1974f1eac"># queries/getWidgets.graphql
+<pre class="code-multiline language-diff"><code class="language-diff" id="f291672c0fe7c6012949e307f037cb7f"># queries/getWidgets.graphql
 
 query GetWidgets {
-<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">  getWidgets
-</span><span class="token prefix deleted">-</span><span class="token line">    # On annote la query avec la directive @client
-</span><span class="token prefix deleted">-</span><span class="token line">    # pour indiquer qu'on souhaite utiliser un resolver local:
-</span><span class="token prefix deleted">-</span><span class="token line">    @client
-</span><span class="token prefix deleted">-</span><span class="token line">  {
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">  getWidgets @client {
 </span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">  getWidgets {
 </span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   count
 </span><span class="token prefix unchanged"> </span><span class="token line">   rows {

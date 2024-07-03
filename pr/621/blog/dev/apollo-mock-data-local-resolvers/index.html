@@ -409,7 +409,7 @@ toujours suffisante.</p>
 </div>
 <p>Dans ce contexte, il est intéressant de pouvoir simuler tout ou partie d'une API GraphQL, en minimisant le plus possible
 les impacts sur le code fonctionnel du client front-end. C'est-à-dire en évitant l'introduction de dette technique
-de part <strong>l'entremêlement du code fonctionnel avec du code visant à simuler les appels au serveur</strong>. Code qu'il faudra
+induite par <strong>l'entremêlement du code fonctionnel avec du code visant à simuler les appels au serveur</strong>. Code qu'il faudra
 revoir avec plus ou moins de difficultés lorsque nous consommerons le véritable serveur.</p>
 <p>C'est là qu'interviennent <em>les resolvers locaux Apollo</em>.</p>
 <div class="admonition danger">
@@ -589,7 +589,7 @@ encore aucune donnée.</p>
 <li>de réagir à la réponse pour refléter les changements dans l'interface </li>
 </ul>
 <p><em>(à savoir, mettre à jour l'icône d'ajout en favoris, et déplacer le widget en haut de liste).</em></p>
-<p>Sans que l'implémentation serveur ne soit complétée, nous pouvons fournir nous-même le résultat de cette mutation en
+<p>Sans que l'implémentation serveur ne soit complétée, nous pouvons fournir nous-mêmes le résultat de cette mutation en
 usant de la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> :</p>
 <pre class="code-multiline language-graphql"><code class="language-graphql" id="5afe0b9420a2e2c559867edc4b6299f3"><span class="token comment"># mutations/toggleWidgetStarred.graphql</span>
 
@@ -691,18 +691,18 @@ dans le cache afin de placer les favoris en haut de la liste.</li>
 </ul>
 <div class="admonition note">
 <p>
-    <em>Notez la particularité de ce que nous venons d'effectuer :</em> nous avons annoté les champs <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code> et <code class="code-inline" id="dd68bf97c522179d38337a47626e8e47">starred</code> de notre
-    mutation avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>. Pourtant, nous n'avons pas défini de resolver local pour ces champs et c'est
-    à la place le resolver de la mutation <code class="code-inline" id="201153965340874427ca398a54d49ece">toggleWidgetStarred</code> qui a été appelé.<br>
+    <em>Notez au passage cette particularité :</em> nous avons annoté les champs <code class="code-inline" id="b80bb7740288fda1f201890375a60c8f">id</code> et <code class="code-inline" id="dd68bf97c522179d38337a47626e8e47">starred</code> de notre mutation avec la
+    directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>. Pourtant, nous n'avons pas défini de resolver local pour ces champs et c'est à la place le
+    resolver de la mutation <code class="code-inline" id="201153965340874427ca398a54d49ece">toggleWidgetStarred</code> qui a été appelé.<br>
     Il aurait tout à fait été possible de définir un resolver pour chacun de ces champs comme nous le verrons dans le
     prochain exemple. Mais nous souhaitons ici réagir à cette mutation précisément.
 </p>
 </div>
 <p><em>De la même façon, nous pourrions simuler le retour de mutations pour ajouter ou supprimer un indicateur et modifier la
 liste en cache. Ce qui sera automatiquement reflété dans l'interface avec l'apparition ou la disparition de l'indicateur.</em></p>
-<p>Le jour où l'implémentation serveur sera complétée, <strong>il suffira de retirer les directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong>.</p>
-<p>➜ <strong>Aucun autre impact sur le code fonctionnel ne sera nécessaire et les mises à jour du cache auront été prévues en
-amont.</strong></p>
+<p>Le jour où l'implémentation serveur sera complétée, <strong>il suffira de retirer les directives <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong>.</p>
+<p>➜ <strong>Aucun autre changement sur le code fonctionnel ne sera nécessaire et les mises à jour du cache auront été prévues
+en amont.</strong></p>
 <h3 id="simuler-partiellement-des-donnees" class="anchor-title"><a href="#simuler-partiellement-des-donnees">Simuler partiellement des données</a></h3>
 <p>Nous venons de voir qu'il était possible de faire cohabiter des données distantes et locales dans une même query ou
 mutation.</p>
@@ -711,7 +711,7 @@ Ou encore, de réagir à la présence de certains champs distants pour simuler d
 <p>Afin d'afficher un graphique représentatif de nos indicateurs, nous allons avoir besoin de données dans le champs
 <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code> de chacun d'entre eux.<br>
 Il existe en réalité plusieurs types d'indicateurs, avec leur dataset et rendus spécifiques. Mais le back-end — <em>bien
-qu'ayant entre temps mis à jour la query de liste des widgets pour nous retourner des données</em> — ne retourne pour
+qu'ayant entre-temps mis à jour la query de liste des widgets pour nous retourner des données</em> — ne retourne pour
 l'instant rien dans le champ <code class="code-inline" id="3c4d09e4ef50b370ae0efacdb43ec2dd">dataset</code>.</p>
 <p>Or l'équipe front aimerait pouvoir avancer sur l'affichage de chacun de ces types de graphiques, sans attendre
 l'implémentation du serveur.</p>
@@ -860,11 +860,11 @@ serveur :</p>
 directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query.</p>
 <h2 id="avantages-et-comparaisons" class="anchor-title"><a href="#avantages-et-comparaisons">Avantages et comparaisons</a></h2>
 <ul>
-<li>Les resolvers locaux ont la capacité d'offrir à une équipe front la possibilité de <strong>simuler tout ou partie d'une API</strong>,
-et de poursuivre le développement de son fonctionnel <strong>sans attendre que le serveur ait finalisé son implémentation</strong>.</li>
+<li>Les resolvers locaux offrent à une équipe front la possibilité de <strong>simuler tout ou partie d'une API</strong>, et de
+poursuivre le développement de son fonctionnel <strong>sans attendre que le serveur ait finalisé son implémentation</strong>.</li>
 <li>Ils permettent de faire cohabiter des données simulées pour une portion de l'API tout en utilisant le véritable
 serveur pour d'autres.</li>
-<li>Ils ne requièrent <strong>aucun changement structurel</strong> notable dans l'application, et ne rentre pas en conflit avec du
+<li>Ils ne requièrent <strong>aucun changement structurel</strong> notable dans l'application, et ne rentrent pas en conflit avec le
 <strong>code fonctionnel</strong>.</li>
 <li>Les effets des interactions avec les données et l'UI sont répercutés et testables avant même que le serveur ne soit
 prêt, grâce aux mises à jour des données dans le cache Apollo.</li>
@@ -899,8 +899,8 @@ permettant les mêmes usages et assurant malgré tout un avenir à ce concept.</
 <p>
     Quoiqu'il advienne, cela ne devrait néanmoins pas vous prévenir d'utiliser cette fonctionnalité pour le cas d'usage
     spécifique visant à temporairement simuler une partie de votre API. En effet, ces resolvers sont un tel atout qu'il
-    serait dommage de s'en priver et n'entâche en rien la pérennité de votre code ; n'étant que temporaires et non
-    intrusifs.
+    serait dommage de s'en priver et ils n'entâchent en rien la pérennité de votre code dans la mesure où leur
+    utilisation est non intrusive et temporaire.
 </p>
 </div>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>

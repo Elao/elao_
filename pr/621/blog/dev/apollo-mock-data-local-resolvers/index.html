@@ -401,7 +401,7 @@ back à fournir à temps tous les éléments nécessaires à ce que le front pui
 toujours suffisante.</p>
 <div class="admonition note">
 <p>
-    À Elao, nombreuses de nos applications consistent en un back-end servant API GraphQL construite avec le framework PHP
+    À Elao, nombreuses de nos applications consistent en un back-end servant une API GraphQL construite avec le framework PHP
     <a href="/elao_/pr/621/glossaire/symfony">Symfony</a>, et un front-end en <a href="/elao_/pr/621/glossaire/react">React</a> avec le client Apollo GraphQL.
     Il nous arrive également d'intervenir sur des projets uniquement sur le client front-end, et devoir se coordonner avec
     une équipe back-end externe.
@@ -415,7 +415,7 @@ revoir avec plus ou moins de difficultés lorsque nous consommerons le véritabl
 <div class="admonition danger">
 <p class="admonition-title">Comprendre le cache Apollo</p>
 <p>
-    La suite de cet article fait appel à des connaissances concernant la façon dont fonctionne le cache avec le client GraphQL Apollo.<br>
+    La suite de cet article survole des connaissances quant au fonctionnement du cache avec le client GraphQL Apollo.<br>
     Si vous n'êtes pas tout-à-fait à l'aise avec ces principes, je vous invite à lire notre article sur le sujet:
     <a href="/elao_/pr/621/blog/dev/apollo-graphql-cache">Comprendre le cache du client GraphQL Apollo</a>.<br>
     L'article traite d'une ancienne version (2.x) d'Apollo, mais les principes restent les mêmes.
@@ -426,18 +426,18 @@ revoir avec plus ou moins de difficultés lorsque nous consommerons le véritabl
 Apollo (<a href="https://www.apollographql.com/blog/announcing-apollo-client-2-5-c12230cabbb7#2-write-a-local-resolver-for-your-data" target="_blank">introduits en 2.5</a>)
 permettant d'<strong>interroger et manipuler un état local de votre application</strong>, propre au client et sans lien direct avec
 le serveur, comme vous pourriez le faire avec un store tel que Redux.<br>
-À la différence que vous utiliserez des <strong>queries et mutations GraphQL</strong> ainsi que l'API du cache Apollo pour interagir
-avec cet état, de la même manière que vous le feriez avec un serveur.</p>
-<p>C'est cette homogénéité d'API qui va nous intéresser particulièrement, puisqu'elle nous permettre de décrocher
+À la différence que vous utiliserez des <strong>queries et mutations GraphQL</strong> ainsi que l'API Javascript du cache Apollo pour interagir
+avec cet état, de la même manière que vous si vous consommiez un serveur.</p>
+<p>C'est cette homogénéité d'API qui va nous intéresser particulièrement, puisqu'elle va nous permettre de décrocher
 facilement du code jusqu'alors uniquement client vers un échange client/serveur. </p>
-<p>Un <code class="code-inline" id="f8609e719e58d9fd43255f51f3b48e8e">resolver</code> GraphQL est une fonction, habituellement exécutée par le serveur, afin de résoudre un champ d'une requête GraphQL.</p>
+<p>Un <code class="code-inline" id="f8609e719e58d9fd43255f51f3b48e8e">resolver</code> GraphQL est une fonction, d'ordinaire exécutée par le serveur, afin de résoudre un champ d'une requête GraphQL.</p>
 <blockquote>
 <p>A resolver is a function that's responsible for populating the data for a single field in your schema. It can populate
 that data in any way you define, such as by fetching data from a back-end database or a third-party API.<br>
 <cite>— <a href="https://www.apollographql.com/docs/apollo-server/data/resolvers" target="_blank">documentation Apollo server</a></cite></p>
 </blockquote>
 <p>Un resolver local est donc une fonction définie et exécutée uniquement par le client pour résoudre les champs d'une
-requête GraphQL, marqués d'une directive spéciale : <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>.</p>
+requête GraphQL, annotés d'une directive spéciale : <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>.</p>
 <p>L'exemple donné par la documentation Apollo cherche à fournir un état local pour un panier d'achat, en ajoutant un flag
 <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> à une liste de produits. Cela permet de réaliser un système de panier sans avoir à exposer cette donnée sur
 chaque produit côté serveur, ni dans un store Redux ou local storage complètement distinct de notre cache Apollo.</p>
@@ -545,9 +545,9 @@ un resolver sur le champ correspondant de votre objet <code class="code-inline" 
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 <p>Enfin, nous consommerons cette query dans un composant React, comme nous le ferions pour communiquer avec le serveur:</p>
-<pre class="code-multiline language-tsx"><code class="language-tsx" id="684e4a10b7ccec5f9cba7b3f0308802f"><span class="token comment">// ./pages/widgets.tsx</span>
+<pre class="code-multiline language-tsx"><code class="language-tsx" id="8ee0f80f202131a381dab2f9277bdf52"><span class="token comment">// ./pages/widgets.tsx</span>
 
-<span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> useLazyQuery <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token imports"><span class="token punctuation">{</span> useQuery <span class="token punctuation">}</span></span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token constant">GET_WIDGETS</span> <span class="token keyword">from</span> <span class="token string">'./queries/getWidgets.graphql'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">function</span> <span class="token function">Widgets</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -692,7 +692,7 @@ dans le cache afin de placer les favoris en haut de la liste.</li>
 <p><em>De la même façon, nous pourrions simuler le retour de mutations pour ajouter ou supprimer un indicateur et modifier la
 liste en cache. Ce qui sera automatiquement reflété dans l'interface avec l'apparition ou la disparition de l'indicateur.</em></p>
 <p>Le jour où l'implémentation serveur sera complétée, <strong>il suffira de retirer les directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code></strong>.</p>
-<p>➜ <strong>Aucun autre impact sur le code fonctionnel ne sera nécessaire et les mise à jour du cache auront été prévues en
+<p>➜ <strong>Aucun autre impact sur le code fonctionnel ne sera nécessaire et les mises à jour du cache auront été prévues en
 amont.</strong></p>
 <h3 id="simuler-partiellement-des-donnees" class="anchor-title"><a href="#simuler-partiellement-des-donnees">Simuler partiellement des données</a></h3>
 <p>Nous venons de voir qu'il était possible de faire cohabiter des données distantes et locales dans une même query ou
@@ -724,7 +724,7 @@ l'implémentation du serveur.</p>
 <span class="token punctuation">}</span></code></pre>
 <p>A partir de là, différentes solutions s'offrent à nous 👇🏻</p>
 <h4 id="surcharge-par-champs" class="anchor-title"><a href="#surcharge-par-champs">Surcharge par champs</a></h4>
-<p>Cette fois-ci, nous allons définir un resolver pour les champ du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code>, et non pour une query ou une mutation :</p>
+<p>Cette fois-ci, nous allons définir un resolver pour les champs du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code>, et non pour une query ou une mutation :</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="2514c9466a69021e850f5470d2c9e311"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">Resolvers</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> fakeWidgetsDataset <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>

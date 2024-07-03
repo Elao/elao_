@@ -561,14 +561,29 @@ un resolver sur le champ correspondant de votre objet <code class="code-inline" 
 <span class="token punctuation">}</span></code></pre>
 <div class="admonition note">
 <p>
-    Étant donné que nous avons choisi de marquer l'ensemble de la query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>,
+    Étant donné que nous avons choisi d'annoter l'ensemble de la query <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> avec la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>,
     <strong>aucune requête ne sera envoyée au serveur</strong>.<br>
     Apollo va directement chercher un resolver pour le champ <code class="code-inline" id="958ed13ce63d86efb5fcbbe303e48ebb">getWidgets</code> dans notre objet <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code> local et retourner
     les données que nous lui avons fournies.
 </p>
 </div>
-<p>Le jour où nous souhaiterons consommer le serveur, <strong>il suffira de retirer la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query</strong>. La
-requête sera alors envoyée au serveur, et notre resolver local ne sera plus utilisé.</p>
+<p>Le jour où nous souhaiterons consommer le serveur, <strong>il suffira de retirer la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query</strong>:</p>
+<pre class="code-multiline language-diff"><code class="language-diff" id="993ee4b74a11c1e5e55550f1974f1eac"># queries/getWidgets.graphql
+
+query GetWidgets {
+<span class="token deleted-sign deleted"><span class="token prefix deleted">-</span><span class="token line">  getWidgets
+</span><span class="token prefix deleted">-</span><span class="token line">    # On annote la query avec la directive @client
+</span><span class="token prefix deleted">-</span><span class="token line">    # pour indiquer qu'on souhaite utiliser un resolver local:
+</span><span class="token prefix deleted">-</span><span class="token line">    @client
+</span><span class="token prefix deleted">-</span><span class="token line">  {
+</span></span><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">  getWidgets {
+</span></span><span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   count
+</span><span class="token prefix unchanged"> </span><span class="token line">   rows {
+</span><span class="token prefix unchanged"> </span><span class="token line">     …
+</span><span class="token prefix unchanged"> </span><span class="token line">   }
+</span><span class="token prefix unchanged"> </span><span class="token line"> }
+</span></span>}</code></pre>
+<p>✅ La requête sera alors envoyée au serveur, et notre resolver local ne sera plus utilisé.</p>
 <p>➜ <strong>Cette façon de faire possède ainsi l'avantage de ne pas nécessiter la moindre modification de notre code fonctionnel.</strong></p>
 <h3 id="simuler-le-retour-d-une-mutation" class="anchor-title"><a href="#simuler-le-retour-d-une-mutation">Simuler le retour d'une mutation</a></h3>
 <p>Imaginons que notre back-end ait défini la mutation pour mettre un widget en favoris, mais que cette fonctionnalité ne

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Mocker une API GraphQL avec les resolvers locaux Apollo</title>
+        <title>Mocker une API GraphQL avec les resolvers locaux du client Apollo</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/elao_/pr/621/apple-touch-icon.png">
@@ -17,16 +17,16 @@
         <meta name="msapplication-config" content="/elao_/pr/621/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                    <meta name="description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, sans impacter votre code fonctionnel,
-grâce aux resolvers locaux Apollo.
+                    <meta name="description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
+sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
 " />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/621/blog/dev/apollo-mock-data-local-resolvers" />
 
             <!-- Open Graph / Facebook -->
-            <meta property="og:title" content="Mocker une API GraphQL avec les resolvers locaux Apollo" />
+            <meta property="og:title" content="Mocker une API GraphQL avec les resolvers locaux du client Apollo" />
             <meta property="og:locale" content="fr" />
-            <meta property="og:description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, sans impacter votre code fonctionnel,
-grâce aux resolvers locaux Apollo.
+            <meta property="og:description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
+sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
 " />
             <meta property="og:url" content="https://elao.github.io/elao_/pr/621/blog/dev/apollo-mock-data-local-resolvers" />
             <meta property="og:site_name" content="elao_" />
@@ -35,9 +35,9 @@ grâce aux resolvers locaux Apollo.
             
             <!-- Twitter -->
             <meta property="twitter:card" content="summary_large_image">
-            <meta property="twitter:title" content="Mocker une API GraphQL avec les resolvers locaux Apollo">
-            <meta property="twitter:description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, sans impacter votre code fonctionnel,
-grâce aux resolvers locaux Apollo.
+            <meta property="twitter:title" content="Mocker une API GraphQL avec les resolvers locaux du client Apollo">
+            <meta property="twitter:description" content="Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
+sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
 ">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
@@ -47,7 +47,7 @@ grâce aux resolvers locaux Apollo.
                 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "NewsArticle",
-    "headline": "Mocker une API GraphQL avec les resolvers locaux Apollo",
+    "headline": "Mocker une API GraphQL avec les resolvers locaux du client Apollo",
     "image": [
         "https://elao.github.io/elao_/pr/621/blog/dev/content/images/blog/2024/apollo-mock-data-local-resolvers/apollo-local-resolvers.png"
     ],
@@ -115,7 +115,7 @@ grâce aux resolvers locaux Apollo.
                         - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
                      -->
                     <a href="/elao_/pr/621/">
-                        <span class="screen-reader">Mocker une API GraphQL avec les resolvers locaux Apollo</span>
+                        <span class="screen-reader">Mocker une API GraphQL avec les resolvers locaux du client Apollo</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
                                 <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
                                     c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
@@ -260,7 +260,7 @@ grâce aux resolvers locaux Apollo.
             <meta itemprop="position" content="3" />
         </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
-                <span itemprop="name">Mocker une API GraphQL avec les resolvers locaux Apollo</span>
+                <span itemprop="name">Mocker une API GraphQL avec les resolvers locaux du client Apollo</span>
             </a>
             <meta itemprop="position" content="4" />
         </li></ol>
@@ -310,9 +310,9 @@ grâce aux resolvers locaux Apollo.
             </div>
 
             <div class="article-header" data-aos="zoom-in-up">
-                <h1>Mocker une API GraphQL avec les resolvers locaux Apollo</h1>
-                <p>Découvrez comment simuler tout ou partie d&#039;une API GraphQL, sans impacter votre code fonctionnel,
-grâce aux resolvers locaux Apollo.
+                <h1>Mocker une API GraphQL avec les resolvers locaux du client Apollo</h1>
+                <p>Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
+sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
 </p>
                 <ul class="article-tag-list">
                                             <li class="article-tag-list__item">
@@ -345,7 +345,7 @@ grâce aux resolvers locaux Apollo.
 
                                                     <ol class="table-of-content__sub-level">
                                                                         <li>
-                                            <a href="#simuler-une-query-complete-de-listing">Simuler une query complète de listing</a>
+                                            <a href="#simuler-une-query-de-listing">Simuler une query de listing</a>
                                         </li>
                                                                         <li>
                                             <a href="#simuler-le-retour-d-une-mutation">Simuler le retour d&#039;une mutation</a>
@@ -482,7 +482,7 @@ une fois que nous consommerons le serveur.</em></p>
 /elao_/pr/621/%2E%2E/../resized/content/images/blog/2024/apollo-mock-data-local-resolvers/widgets.png/65d982318c365af4661e2af320c5cfa4.png 2x," id="liste-d-indicateurs">
 <p>Un utilisateur peut ainsi créer son tableau de bord en ajoutant et configurant des indicateurs à partir de modèles
 pré-existants. Puis les organiser, supprimer, ou en mettre en favoris.</p>
-<h3 id="simuler-une-query-complete-de-listing" class="anchor-title"><a href="#simuler-une-query-complete-de-listing">Simuler une query complète de listing</a></h3>
+<h3 id="simuler-une-query-de-listing" class="anchor-title"><a href="#simuler-une-query-de-listing">Simuler une query de listing</a></h3>
 <p>Un resolver peut-être utilisé à <strong>n'importe quel niveau du schéma GraphQL</strong>.
 Cela veut dire qu'il est possible de surcharger toute une query en définissant une directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> sur celle-ci et
 un resolver sur le champ correspondant de votre objet <code class="code-inline" id="bf1e1e9a52f888f2e473ceaab39689ad">ROOT_QUERY</code> (Généralement <code class="code-inline" id="66c1b4c7f3dc385b68a9fa903ccd016d">Query</code>).</p>

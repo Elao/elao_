@@ -402,8 +402,8 @@ toujours suffisante.</p>
 <div class="admonition note">
 <p>
     À Elao, nombreuses de nos applications consistent en un back-end servant une API GraphQL construite avec le framework PHP
-    <a href="/elao_/pr/621/glossaire/symfony">Symfony</a>, et un front-end en <a href="/elao_/pr/621/glossaire/react">React</a> avec le client Apollo GraphQL.
-    Il nous arrive également d'intervenir sur des projets uniquement sur le client front-end, et devoir se coordonner avec
+    <a href="/elao_/pr/621/glossaire/symfony">Symfony</a> et un front-end en <a href="/elao_/pr/621/glossaire/react">React</a> avec le client Apollo GraphQL.
+    Il nous arrive également d'intervenir sur des projets uniquement sur le client front-end et devoir se coordonner avec
     une équipe back-end externe.
 </p>
 </div>
@@ -470,7 +470,7 @@ Ce champ ne sera par ailleurs <strong>pas communiqué au serveur</strong> dans l
 <p>Lors de l'exécution de la query <code class="code-inline" id="684a7f94af7046125f90be3235636181">ProductDetails</code>, <em>qui est un mélange de champs distants et locaux</em>, Apollo récupère la
 réponse du serveur, puis essaye de trouver un resolver local pour notre champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> annoté avec la
 directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code>.<br>
-Si un resolver est trouvé, il est exécuté, et le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> est <strong>fusionné</strong> avec la réponse du serveur dans le cache.</p>
+Si un resolver est trouvé, il est exécuté et le champ <code class="code-inline" id="657cad12cc119d1ba80f0f8046731da5">isInCart</code> est <strong>fusionné</strong> avec la réponse du serveur dans le cache.</p>
 <p>➜ Nos données distantes et locales cohabitent ainsi au sein d'<strong>un seul et même store de données</strong>.</p>
 <p><em>Découvrons maintenant comment nous pouvons utiliser cette fonctionnalité pour simuler tout ou partie d'une API GraphQL
 et poursuivre nos développements front sans introduire de dette technique ni de code fonctionnel spécifique à retirer
@@ -577,7 +577,7 @@ query GetWidgets {
 </span><span class="token prefix unchanged"> </span><span class="token line">   }
 </span><span class="token prefix unchanged"> </span><span class="token line"> }
 </span></span>}</code></pre>
-<p>✅ La requête sera alors envoyée au serveur, et notre resolver local ne sera plus utilisé.</p>
+<p>✅ La requête sera alors envoyée au serveur et notre resolver local ne sera plus utilisé.</p>
 <p>➜ <strong>Cette façon de faire possède ainsi l'avantage de ne pas nécessiter la moindre modification de notre code fonctionnel.</strong></p>
 <h3 id="simuler-le-retour-d-une-mutation" class="anchor-title"><a href="#simuler-le-retour-d-une-mutation">Simuler le retour d'une mutation</a></h3>
 <p>Imaginons que notre back-end ait défini la mutation pour mettre un widget en favoris, mais que cette fonctionnalité ne
@@ -588,7 +588,7 @@ encore aucune donnée.</p>
 <li>d'envoyer une mutation</li>
 <li>de réagir à la réponse pour refléter les changements dans l'interface </li>
 </ul>
-<p><em>(à savoir, mettre à jour l'icône d'ajout en favoris, et déplacer le widget en haut de liste).</em></p>
+<p><em>(à savoir, mettre à jour l'icône d'ajout en favoris et déplacer le widget en haut de liste).</em></p>
 <p>Sans que l'implémentation serveur ne soit complétée, nous pouvons fournir nous-mêmes le résultat de cette mutation en
 usant de la directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> :</p>
 <pre class="code-multiline language-graphql"><code class="language-graphql" id="5afe0b9420a2e2c559867edc4b6299f3"><span class="token comment"># mutations/toggleWidgetStarred.graphql</span>
@@ -733,7 +733,7 @@ l'implémentation du serveur.</p>
 <span class="token punctuation">}</span></code></pre>
 <p>A partir de là, différentes solutions s'offrent à nous 👇🏻</p>
 <h4 id="surcharge-par-champs" class="anchor-title"><a href="#surcharge-par-champs">Surcharge par champs</a></h4>
-<p>Cette fois-ci, nous allons définir un resolver pour les champs du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code>, et non pour une query ou une mutation :</p>
+<p>Cette fois-ci, nous allons définir un resolver pour les champs du type <code class="code-inline" id="6ed562a0d4381eef12d92c87520f3208">Widget</code> et non pour une query ou une mutation :</p>
 <pre class="code-multiline language-typescript"><code class="language-typescript" id="2514c9466a69021e850f5470d2c9e311"><span class="token comment">// resolvers.ts</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> <span class="token keyword">type</span> <span class="token class-name">Resolvers</span> <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@apollo/client'</span><span class="token punctuation">;</span>
 <span class="token keyword">import</span> <span class="token punctuation">{</span> fakeWidgetsDataset <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./fake/widgets'</span><span class="token punctuation">;</span>
@@ -860,11 +860,11 @@ serveur :</p>
 directive <code class="code-inline" id="bf8e6a25e328d202e9f1634545f3575a">@client</code> de notre query.</p>
 <h2 id="avantages-et-comparaisons" class="anchor-title"><a href="#avantages-et-comparaisons">Avantages et comparaisons</a></h2>
 <ul>
-<li>Les resolvers locaux offrent à une équipe front la possibilité de <strong>simuler tout ou partie d'une API</strong>, et de
+<li>Les resolvers locaux offrent à une équipe front la possibilité de <strong>simuler tout ou partie d'une API</strong> et de
 poursuivre le développement de son fonctionnel <strong>sans attendre que le serveur ait finalisé son implémentation</strong>.</li>
 <li>Ils permettent de faire cohabiter des données simulées pour une portion de l'API tout en utilisant le véritable
 serveur pour d'autres.</li>
-<li>Ils ne requièrent <strong>aucun changement structurel</strong> notable dans l'application, et ne rentrent pas en conflit avec le
+<li>Ils ne requièrent <strong>aucun changement structurel</strong> notable dans l'application et ne rentrent pas en conflit avec le
 <strong>code fonctionnel</strong>.</li>
 <li>Les effets des interactions avec les données et l'UI sont répercutés et testables avant même que le serveur ne soit
 prêt, grâce aux mises à jour des données dans le cache Apollo.</li>
@@ -897,10 +897,10 @@ permettant les mêmes usages et assurant malgré tout un avenir à ce concept.</
 <div class="admonition note">
 <p class="admonition-title">« My 2 cents »</p>
 <p>
-    Quoiqu'il advienne, cela ne devrait néanmoins pas vous prévenir d'utiliser cette fonctionnalité pour le cas d'usage
-    spécifique visant à temporairement simuler une partie de votre API. En effet, ces resolvers sont un tel atout qu'il
-    serait dommage de s'en priver et ils n'entâchent en rien la pérennité de votre code dans la mesure où leur
-    utilisation est non intrusive et temporaire.
+    Quoiqu'il advienne, cela ne devrait néanmoins pas vous prévenir d'utiliser cette fonctionnalité <strong>pour le cas
+    d'usage spécifique visant à temporairement simuler une partie de votre API</strong>. En effet, ces resolvers sont un tel
+    atout qu'il serait dommage de s'en priver et ils n'entâchent en rien la pérennité de votre code dans la mesure où
+    leur utilisation est non intrusive et temporaire.
 </p>
 </div>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>

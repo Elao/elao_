@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/621/blog</link>
-        <pubDate>Wed, 03 Jul 2024 15:58:03 +0000</pubDate>
+        <pubDate>Fri, 05 Jul 2024 13:46:08 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/621/apple-touch-icon.png</url>
@@ -19,7 +19,7 @@
         <atom:link href="https://elao.github.io/elao_/pr/621/blog/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
                 <title>Mocker une API GraphQL avec les resolvers locaux du client Apollo</title>
-                <pubDate>Thu, 04 Jul 2024 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
                 <description>
                     <![CDATA[ Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
 sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.

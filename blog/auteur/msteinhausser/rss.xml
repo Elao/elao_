@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/msteinhausser</link>
-        <pubDate>Mon, 08 Jul 2024 10:51:37 +0000</pubDate>
+        <pubDate>Tue, 09 Jul 2024 08:43:49 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -38,7 +38,8 @@ sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
                                     <category>apollo</category>
                                     <category>graphql</category>
                                     <category>api</category>
-                                            </item>
+                                                    <comments>https://twitter.com/Elao/status/1810590609163309213</comments>
+                            </item>
                     <item>
                 <title>Concevoir vos composants React avec des slots multiples</title>
                 <pubDate>Tue, 25 Apr 2023 00:00:00 +0000</pubDate>

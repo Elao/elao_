@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Florian Rey, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Florian Rey de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/622/blog/auteur/frey</link>
+        <pubDate>Fri, 26 Jul 2024 09:39:03 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/622/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Florian Rey, </title>
+            <link>https://elao.github.io/elao_/pr/622/blog/auteur/frey</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/622/blog/auteur/frey/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</title>
+                <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Quelques idées pour rendre votre soirée d&#039;Halloween un peu plus effrayante ou étrange ... 👻 ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/622/blog/elao/halloween-2019</guid>
+                <link>https://elao.github.io/elao_/pr/622/blog/elao/halloween-2019</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/622/%2E%2E/../resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</media:description>
+                                    </media:content>
+                                    <category>halloween</category>
+                                    <category>cinema</category>
+                                            </item>
+            </channel>
+</rss>

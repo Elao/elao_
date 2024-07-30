@@ -147,17 +147,19 @@
                     </li>
                 </ul>
                 <ul class="tile-list">
-                    <li class="tile" data-aos="zoom-in-down">
-                        <small>
-                            <i class="icon icon--diploma" aria-hidden="true"></i>
-                            Niveau de formation
-                        </small>
-                        <p>{{ job.formation ?? '-' }}</p>
-                    </li>
+                    {% if job.formation %}
+                        <li class="tile" data-aos="zoom-in-down">
+                            <small>
+                                <i class="icon icon--diploma" aria-hidden="true"></i>
+                                Niveau de formation
+                            </small>
+                            <p>{{ job.formation ?? '-' }}</p>
+                        </li>
+                    {% endif %}
                     <li class="tile" data-aos="zoom-in-down">
                         <small>
                             <i class="icon icon--time" aria-hidden="true"></i>
-                            Expérience
+                            Expérience minimum
                         </small>
                         <p>
                             {% if (job.experience) %}

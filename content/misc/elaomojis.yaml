@@ -230,3 +230,5 @@ categories:
                 path: native/folded-hands.png
               - code: ":check-mark:"
                 path: native/check-mark.png
+              - code: ":info:"
+                path: native/info.png

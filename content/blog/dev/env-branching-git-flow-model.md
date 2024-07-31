@@ -16,16 +16,19 @@ outdated: false
 Aujourd’hui, quand on demande quel workflow git utilise un développeur, on tombe très souvent sur l’un des plus connus : la méthode gitflow.  
 ll existe néanmoins une autre gestion de ses branches git qui assure tout aussi bien une communication fluide entre les développeurs, entre les clients, et une livraison de code de haute qualité : la méthode env-branching.
 
-Cet article explore ces deux modèles (version elao) pas à pas pour vous en proposer une comparaison fluide qui vous permettra peut-être de choisir quelle est la meilleure option pour vos besoins.
+Cet article explore ces deux modèles pas à pas pour vous en proposer une comparaison fluide qui vous permettra peut-être de choisir quelle est la meilleure option pour vos besoins.
+
+!!! Note ""
+    On adopte chez Elao une version personnalisée de la méthode env-branching, qui s’adapte à nos besoins et à notre manière de travailler. 
+    C’est ce modèle que nous allons vous présenter ici.
 
 ## Au commencement, Dieu créa les cieux et la terre
 
-Pour vous exposer une comparaison claire et précise, nous allons vous comparer sous forme de schéma pas à pas les deux méthodes.
 Pour commencer, les deux méthodes se distinguent par leur structure : 
 
 ![Schéma 1](content/images/blog/2024/env-branching-git-flow-model/schema_1.svg)
 
-- **gitflow** est centralisée autour d’une branche `Develop` qui sert de fil conducteur et de racine aux releases menant aux mises en production de l’application. C’est ici que les clients testent les nouvelles PR. 
+- **gitflow** est centralisée autour d’une branche `Develop` qui sert de fil conducteur et de racine aux releases menant aux mises en production de l’application.
 
 - **env-Branching** lui est découplé par environnement. `Staging` est une branche qui correspond à un environnement de pré-prod. `Main` est la branche pivot du workflow et correspond à l’environnement de production.
 
@@ -34,20 +37,22 @@ Pour commencer, les deux méthodes se distinguent par leur structure :
 ![Schéma 2](content/images/blog/2024/env-branching-git-flow-model/schema_2.svg)
 
 Deux branches ont été créées : `Feature 1` et `Feature 2`.
-Côté **gitflow** on remarquera que les branches sont issues de la branche `Develop`, contrairement à **Env-branching** où les branches ont comme racine Main.
+- Côté **gitflow** on remarquera que les branches sont issues de la branche `Develop`.
+- Contrairement à l'**env-branching** où les branches ont comme racine `Main`.
 
 Une fois le développement de ces deux branches terminé, elles sont proposées pour une review technique et mises en recette pour le client.
 
+!!! Note ""
+Les reviews techniques se déroulent généralement directement sur la pull request, contrairement aux reviews clientes que l'on
+appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est nécessaire de déployer la feature sur un environnement de test.
+
 ![Schéma 3](content/images/blog/2024/env-branching-git-flow-model/schema_3.svg)
 
-!!! Note ""
-    Les reviews techniques se déroulent généralement directement sur la pull request, contrairement aux reviews clientes que l'on 
-    appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est nécessaire de déployer la feature sur un environnement de test. 
-
-Pour ces reviews clientes, **gitflow** propose la chose suivante : on merge `Feature 1` et `Feature 2` en fermant leurs pull request respectives dans `Develop`. 
+Pour ces reviews clientes :
+- **gitflow** propose la chose suivante : on merge `Feature 1` et `Feature 2` en fermant leurs pull request respectives dans `Develop`. 
 A partir de la branche `Develop`, on deploie sur un environnement de recette pour le client. Ainsi il pourra reviewer les nouvelles fonctionnalités.
 
-Le **env-branching** propose de pousser les modification dans `Staging` **sans fermer** les PR associées. Elles sont dites en recette, pour la review cliente.
+- **env-branching** propose de pousser les modifications dans `Staging` **sans fermer les PR associées**. Elles sont toujours ouvertes et taggées "en recette", pour la review cliente.
 
 ## Les ennuis commencent 
 

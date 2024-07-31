@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Laurence Hoizey, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Laurence Hoizey de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/624/blog/auteur/lhoizey</link>
+        <pubDate>Wed, 31 Jul 2024 17:12:17 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/624/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Laurence Hoizey, </title>
+            <link>https://elao.github.io/elao_/pr/624/blog/auteur/lhoizey</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/624/blog/auteur/lhoizey/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Le Blend Web Mix 2017 arrive !</title>
+                <pubDate>Wed, 18 Oct 2017 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/blendwebmix-2017</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/blendwebmix-2017</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/pre-blend-2017.jpg/755af7c78fd11695abcc51c96f3bc2a7.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le Blend Web Mix 2017 arrive !</media:description>
+                                    </media:content>
+                                    <category>web</category>
+                                    <category>conference</category>
+                                    <category>blend</category>
+                                    <category>lyon</category>
+                                    <category>developpement</category>
+                                    <category>design</category>
+                                    <category>business</category>
+                                            </item>
+                    <item>
+                <title>Blend Web Mix 2016 : un gros coup de boost</title>
+                <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/blendwebmix-2016</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/blendwebmix-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/blend2016.jpg/5accf869b77a901f4df49101f402228f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Blend Web Mix 2016 : un gros coup de boost</media:description>
+                                    </media:content>
+                                    <category>web</category>
+                                    <category>conference</category>
+                                    <category>blend</category>
+                                    <category>lyon</category>
+                                    <category>developpement</category>
+                                    <category>design</category>
+                                    <category>business</category>
+                                            </item>
+                    <item>
+                <title>Retour sur le Forum PHP 2016</title>
+                <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Nous étions au Forum PHP 2016 de l&#039;AFUP ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/forum-php-2016</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/forum-php-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Retour sur le Forum PHP 2016</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>forumphp</category>
+                                            </item>
+                    <item>
+                <title>PHP Tour 2016, Merciiiiii</title>
+                <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l&#039;occasion l&#039;Afup et Clermont&#039;ech ont à nouveau réuni la communauté open source PHP. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/phptour-2016</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/phptour-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">PHP Tour 2016, Merciiiiii</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>conference</category>
+                                    <category>afup</category>
+                                    <category>clermont-ech</category>
+                                            </item>
+                    <item>
+                <title>Retour sur Paris Web 2015</title>
+                <pubDate>Wed, 14 Oct 2015 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Paris Web, la conférence francophone des gens qui font le web ! ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/retour-paris-web</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/retour-paris-web</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/unicorn.jpg/42071b3dfb7570b1f128207e5df71bb6.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Retour sur Paris Web 2015</media:description>
+                                    </media:content>
+                                    <category>parisweb</category>
+                                    <category>conferences</category>
+                                            </item>
+            </channel>
+</rss>

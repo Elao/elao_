@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Lod Lapeyre, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Lod Lapeyre de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/624/blog/auteur/llapeyre</link>
+        <pubDate>Wed, 31 Jul 2024 17:12:16 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/624/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Lod Lapeyre, </title>
+            <link>https://elao.github.io/elao_/pr/624/blog/auteur/llapeyre</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/624/blog/auteur/llapeyre/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Rix et Elao</title>
+                <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ RIX, structure spécialisée en hébergement et infrastructure, est historiquement liée à Elao. Désormais partenaires de longue date, nous avons souhaité mettre en lumière notre manière de travailler ensemble. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/elao/rix-et-elao</guid>
+                <link>https://elao.github.io/elao_/pr/624/blog/elao/rix-et-elao</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/624/%2E%2E/../resized/content/images/blog/thumbnails/rix-et-elao.jpg/64cdff9ace22675d79be4148aa6a55c9.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Rix et Elao</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>hebergement</category>
+                                    <category>manala</category>
+                                            </item>
+            </channel>
+</rss>

@@ -43,8 +43,8 @@ Deux branches ont été créées : `Feature 1` et `Feature 2`.
 Une fois le développement de ces deux branches terminé, elles sont proposées pour une review technique et mises en recette pour le client.
 
 !!! Note ""
-Les reviews techniques se déroulent généralement directement sur la pull request, contrairement aux reviews clientes que l'on
-appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est nécessaire de déployer la feature sur un environnement de test.
+    Les reviews techniques se déroulent généralement directement sur la pull request, contrairement aux reviews clientes que l'on
+    appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est nécessaire de déployer la feature sur un environnement de test.
 
 ![Schéma 3](content/images/blog/2024/env-branching-git-flow-model/schema_3.svg)
 
@@ -60,7 +60,7 @@ Imaginons maintenant que `Feature 2` est validée (chouette :sparkles:) mais que
 
 ![Schéma 4](content/images/blog/2024/env-branching-git-flow-model/schema_4.svg)
 
-:info: Côté **gitflow**, la branche `Develop` est dans un état tel qu’elle embarque malgré elle un commit erroné à corriger. Côté **env-branching**, `Staging` embarque elle aussi le commit de la PR à corriger. 
+:info: Côté **gitflow**, la branche `Develop` est dans un état tel qu’elle embarque malgré elle un commit erroné à corriger, tout comme `Staging` pour l'**env-branching** qui embarque elle aussi le commit de la PR à corriger. 
 
 Pour faire les corrections :
 ![Schéma 5](content/images/blog/2024/env-branching-git-flow-model/schema_5.svg)
@@ -75,14 +75,14 @@ Cette fois, c’est bon, les features sont bonnes, on est fin prêt à les mettr
 ![Schéma 6](content/images/blog/2024/env-branching-git-flow-model/schema_6.svg)
 
 
-**Gitflow** gère sa release en créant une nouvelle branche `Release` à qui nous associons un tag de version. 
+- **Gitflow** gère sa release en créant une nouvelle branche `Release` à qui nous associons un tag de version. 
 Celle-ci est issue de la branche `Develop` une fois qu’elle est dans un état prêt à être mis en production. 
 
 :info: ll n’est donc pas possible de mettre en production une seule feature si une autre est aussi présente sur Develop, sauf en effectuant de nombreuses manipulations afin de trouver un nouvel état que l’on souhaite mettre en production. 
 
 Cette branche `Release` est ensuite mergée dans `Main` et dans `Develop` pour le déploiement.
 
-**Env-branching** se considère comme une méthode se passant de release. 
+- **Env-branching** se considère comme une méthode se passant de release. 
 Virtuellement, à tout moment, on peut constituer une "release" en choisissant les PR souhaitées et en les mergeant dans `Main`.
 
 !!! Note ""
@@ -90,42 +90,43 @@ Virtuellement, à tout moment, on peut constituer une "release" en choisissant l
     _Ce numéro de version est important pour le suivi de l’évolution de l’application et pour les rapports erreurs Sentry par exemple._ 
     On crée un objet release sur github avec le changelog qui décrit toutes les PR qui sont embarquées dans celle-ci. 
 
-## Une petite comparaison pas à pas
+## Un petit bilan pas à pas
 
-### La gestion des pull request 
+### Pour la gestion des pull request 
 
 - **gitflow** :  Quand les PR sont mergées dans `Develop`, elles sont fermées. Elles sont validées en review technique mais la feature, elle, n’a pas encore sa validation cliente. 
     Si une modification doit être faite, une nouvelle PR doit être réouverte et ça déclenche tout un nouveau cycle de review (pour la même feature).
 - **env-branching** : Les PR son mergées dans `Staging` mais sans être fermées. Elles portent la responsabilité de traiter l’issue de la feature de bout en bout. 
 Une fois validées par review technique et cliente (sur l’environnement staging), elles sont taggées comme “ready to merge”, et attendent d’être choisies pour une mise en production.
 
-### La gestion des états 
+### Pour la gestion des états 
 
 - **gitflow** : La branche `Develop` est racine de toutes les nouvelles features. Elle permet d’ajouter une protection accrue pour branche `Main` en décalant la gestion des conflits sur une branche dédiée.
 Par contre, quand un bugfix est ajouté à une branche `Release`, celle-ci doit être mergée dans `Develop`, et ça crée des arbres git moins linéaires. 
 
 - **env-branching** : La branche `Staging` correspond à un environnement de pré-prod, la branche `Main` correspond à un environnement de prod. 
 Les pull request qui partent de `Main` n’étant pas fermées, on peut les merger à loisir sur `Staging` pour les tester et les corriger afin d’obtenir des PR-feature complètes et prêtes à être mise en production sans plus de manipulations. 
+
 :info: Par contre, contrairement au gitflow qui maintient un tronc commun à partir duquel partent toutes les nouvelles features, env-branching lui nécessite une attention particulière sur les éléments techniques impactants (_changement de règles de linting, corrections de déprecations, issues critiques ou concernant la stack de développement_). 
-Toutes ces PRs doivent être le plus rapidement possible mergées dans `Main` pour être mise à la disposition des développeurs dans le tronc commun.  
+Avec la méthode **env-branching**, toutes ces PRs doivent être le plus rapidement possible mergées dans `Main` pour être mise à la disposition des développeurs dans le tronc commun.  
 
 !!! Note ""
-    Par contre, avantage considérable, chez elao l’env-branching nous permet de multiplier les environnements (Staging 1, Staging 2, etc).
+    :sparkles: Avantage considérable : chez elao l’env-branching nous permet de multiplier les environnements (Staging 1, Staging 2, etc).
     Ainsi nous pouvons tester plusieurs features en parallèle sans qu’elles ne se marchent dessus.
 
-### Déploiement des fonctionnalités
+### Pour le déploiement des fonctionnalités
 
 - **gitflow** : Les fonctionnalités se stackent et doivent attendre la prochaine release, qui embarque tout, pour être déployées.
 - **env-Branching** : Les fonctionnalités peuvent être deployées indépendamment dès qu’elles sont prêtes. Il est aussi possible d’en deployer plusieurs sur une seule release. Il est ainsi possible de revoir entièrement la priorité des fonctionnels et quand les déployer.
 
 
 ## Conclusion
-Le modèle d’env-branching que l’on applique à Elao offre une flexibilité et une rapidité accrue par rapport au gitflow classique. Il permet de développer, valider et déployer des fonctionnalités indépendamment, réduisant les conflits et accélérant le cycle de développement.  
-Pour les développements cherchant à améliorer le flux de travail Git et une livraison de fonctionnalités plus rapide, le env-branching constitue une excellente option.
+Le modèle d’**env-branching** que l’on applique à Elao offre une flexibilité et une rapidité accrue par rapport au gitflow classique. Il permet de développer, valider et déployer des fonctionnalités indépendamment, réduisant les conflits et accélérant le cycle de développement.  
+Pour les développements cherchant à améliorer le flux de travail Git et une livraison de fonctionnalités plus rapide, l'**env-branching** constitue une excellente option.
 
-Néanmoins, le gitflow reste un modèle robuste et largement utilisé dans l’industrie, qui s’adapte aux plus grandes équipes qui nécessitent une structure de branche plus rigide. Son cycle s’adapte bien aux développements planifiés et aux projets-produits plus conséquents. 
+Néanmoins, le **gitflow** reste un modèle robuste et largement utilisé dans l’industrie, qui s’adapte aux plus grandes équipes qui nécessitent une structure de branche plus rigide. Son cycle s’adapte bien aux développements planifiés et aux projets-produits plus conséquents. 
 
-//insert schema bilan
+![Schéma 7](content/images/blog/2024/env-branching-git-flow-model/schema_7.svg)
 
 #### Sources
 

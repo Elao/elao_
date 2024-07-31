@@ -9,6 +9,13 @@ authors: [msteinhausser]
 tableOfContent: 3
 tags: [javascript, apollo, graphql, api]
 thumbnail: content/images/blog/2024/apollo-mock-data-local-resolvers/apollo-local-resolvers-2.png
+thumbnailResizeOptions:
+  article_thumbnail.lg:
+      fit: fill
+      bg: white
+bannerResizeOptions:
+  fit: fill
+  bg: white
 tweetId: "1810590609163309213"
 outdated: false
 ---

@@ -10,6 +10,10 @@ use Stenope\Bundle\Attribute\SuggestedDebugQuery;
 use Stenope\Bundle\Processor\TableOfContentProcessor;
 use Stenope\Bundle\TableOfContent\TableOfContent;
 
+/**
+ * @phpstan-type ThumbnailPreset "article_thumbnail.xs" | "article_thumbnail.sm" | "article_thumbnail.md" | "article_thumbnail.lg"
+ * @phpstan-type BannerPreset "article_banner"
+ */
 #[SuggestedDebugQuery('Scheduled', filters: 'not _.isPublished()', orders: 'desc:date')]
 #[SuggestedDebugQuery('Outdated', filters: '_.outdated', orders: 'desc:date')]
 #[SuggestedDebugQuery('Written in english', filters: '_.lang == "en"', orders: 'desc:date')]
@@ -30,9 +34,30 @@ class Article
      */
     public string $thumbnail;
     /**
+     * Allows to provide resize options specific to this article if needed.
+     * It allows a more fine-grained control over the rendering of the same image in different context,
+     * and can even provide options per preset used.
+     *
+     * @var array<string, array>|array<ThumbnailPreset, array<string, array>> Preset name as key, options as value
+     *
+     * @see https://glide.thephpleague.com/1.0/api/quick-reference/
+     */
+    public ?array $thumbnailResizeOptions = null;
+
+    /**
      * If provided, the image to use on top of the show article view instead of the thumbnail image.
      */
     public ?string $banner = null;
+    /**
+     * Allows to provide resize options specific to this article if needed.
+     * It allows a more fine-grained control over the rendering of the same image in different context,
+     * and can even provide options per preset used.
+     *
+     * @var array<string, array>|array<ThumbnailPreset, array<string, array>> Preset name as key, options as value
+     *
+     * @see https://glide.thephpleague.com/1.0/api/quick-reference/
+     */
+    public ?array $bannerResizeOptions = null;
 
     /** @var string[] */
     public array $tags = [];

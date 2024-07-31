@@ -147,7 +147,10 @@
                             {% for article in articles %}
                                 <div class="miniature-inline miniature-inline--small" data-aos="fade-in" data-aos-delay="{{ loop.index0 * 100 }}">
                                     <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                                        <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs') }}"></span>
+                                        <span
+                                            class="image"
+                                            style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.xs', null, article.thumbnailResizeOptions) }}"
+                                        ></span>
                                     </a>
                                     <div class="miniature-inline__content">
                                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

@@ -63,7 +63,11 @@
         {% endwith %}
 
         <div class="article-banner">
-            <div class="article-banner__cover" style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner') }}" data-aos="fade-down"></div>
+            <div
+                class="article-banner__cover"
+                style="{{ macros.backgroundImageSrcset(article.banner ?? article.thumbnail, 'article_banner', null, article.bannerResizeOptions) }}"
+                data-aos="fade-down"
+            ></div>
 
             <div class="article-info" data-aos="zoom-in">
                 {% set authors = article.authors|length > 5 ? [] : article.authors %}

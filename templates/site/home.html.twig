@@ -262,7 +262,10 @@
                     {% for article in lastTwoArticles %}
                     <li class="last-article">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md', null, article.thumbnailResizeOptions) }}"
+                            ></span>
                         </a>
                         <div class="last-article__content" data-aos="zoom-in">
                             <div class="info">

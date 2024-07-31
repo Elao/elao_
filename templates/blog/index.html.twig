@@ -16,7 +16,10 @@
                 {% if page == minPage and loop.first %}
                     <li class="miniature-highlight">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-highlight__image" data-aos="fade-down">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.lg') }}"></span>
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.lg', null, article.thumbnailResizeOptions) }}"
+                            ></span>
                         </a>
                         <div class="miniature-highlight__content" data-aos="zoom-in">
                             <div class="info">
@@ -69,7 +72,10 @@
                 {% elseif page == minPage and loop.index < 5 %}
                     <li class="miniature-inline" data-aos="fade-left">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature-inline__image">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md') }}"></span>
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md', null, article.thumbnailResizeOptions) }}"
+                            ></span>
                         </a>
                         <div class="miniature-inline__content">
                             <span class="date">{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
@@ -97,7 +103,10 @@
                 {% else %}
                     <li class="miniature" data-aos="fade-in">
                         <a href="{{ path('blog_article', { article: article.slug }) }}" class="miniature__image">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm', null, article.thumbnailResizeOptions) }}"
+                            ></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ path('blog_article', { article: article.slug }) }}" class="title">{{ article.title }}</a>

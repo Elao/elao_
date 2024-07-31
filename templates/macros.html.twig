@@ -1,14 +1,18 @@
-{% macro backgroundImageSrcset(path, preset, bgColor = '#f1f1f1') -%}
-    background: {{ bgColor }} url('{{ asset(path|glide_image_preset(preset)) }}');
+{% macro backgroundImageSrcset(path, preset, bgColor, options) -%}
+    {%- set bgColor = bgColor ?? '#f1f1f1' -%}
+    {%- set options = options ?? {} -%}
+    {# Check for specific entry for the preset name: #}
+    {%- set options = options[preset] ?? options -%}
+    background: {{ bgColor }} url('{{ asset(path|glide_image_preset(preset, options)) }}');
     {% for prefix in ['webkit', 'moz', 'ms'] -%}
     background: {{ bgColor }} -{{ prefix }}-image-set(
-        url('{{ asset(path|glide_image_preset(preset)) }}') 1x,
-        url('{{ asset(path|glide_image_preset(preset, { dpr: 2 })) }}') 2x
+        url('{{ asset(path|glide_image_preset(preset, options)) }}') 1x,
+        url('{{ asset(path|glide_image_preset(preset, options|merge({ dpr: 2 }))) }}') 2x
     );
     {% endfor -%}
     background: {{ bgColor }} image-set(
-        url('{{ asset(path|glide_image_preset(preset)) }}') 1x,
-        url('{{ asset(path|glide_image_preset(preset, { dpr: 2 })) }}') 2x
+        url('{{ asset(path|glide_image_preset(preset, options)) }}') 1x,
+        url('{{ asset(path|glide_image_preset(preset, options|merge({ dpr: 2 }))) }}') 2x
     );
 {%- endmacro %}
 

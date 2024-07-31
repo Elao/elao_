@@ -61,7 +61,10 @@
                         {% set url = path('blog_article', { article: article.slug }) %}
                         <li class="miniature" data-aos="fade-in" data-aos-delay="{{ (loop.index / 4)|round(0, 'ceil') * 150 }}">
                         <a href="{{ url }}" class="miniature__image">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm') }}"></span>
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.sm', null, article.thumbnailResizeOptions) }}"
+                            ></span>
                         </a>
                         <div class="miniature__content">
                             <a href="{{ url }}" class="title">{{ article.title }}</a>

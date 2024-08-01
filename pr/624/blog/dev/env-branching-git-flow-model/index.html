@@ -17,16 +17,16 @@
         <meta name="msapplication-config" content="/elao_/pr/624/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
-                    <meta name="description" content="Découvrez pourquoi adopter le modèle de workflow env-branching peut améliorer votre gestion des branches Git, 
-en offrant une flexibilité accrue et des déploiements plus rapides, tout en préservant l&#039;intégrité de votre code.
+                    <meta name="description" content="Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
 " />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/624/blog/dev/env-branching-git-flow-model" />
 
             <!-- Open Graph / Facebook -->
             <meta property="og:title" content="Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?" />
             <meta property="og:locale" content="fr" />
-            <meta property="og:description" content="Découvrez pourquoi adopter le modèle de workflow env-branching peut améliorer votre gestion des branches Git, 
-en offrant une flexibilité accrue et des déploiements plus rapides, tout en préservant l&#039;intégrité de votre code.
+            <meta property="og:description" content="Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
 " />
             <meta property="og:url" content="https://elao.github.io/elao_/pr/624/blog/dev/env-branching-git-flow-model" />
             <meta property="og:site_name" content="elao_" />
@@ -36,8 +36,8 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
             <!-- Twitter -->
             <meta property="twitter:card" content="summary_large_image">
             <meta property="twitter:title" content="Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?">
-            <meta property="twitter:description" content="Découvrez pourquoi adopter le modèle de workflow env-branching peut améliorer votre gestion des branches Git, 
-en offrant une flexibilité accrue et des déploiements plus rapides, tout en préservant l&#039;intégrité de votre code.
+            <meta property="twitter:description" content="Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
 ">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
@@ -266,7 +266,9 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
 
         
         <div class="article-banner">
-            <div class="article-banner__cover" style="background: #f1f1f1 url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/5723972d8d177ea87a4854762d4240bc.png');
+            <div
+                class="article-banner__cover"
+                style="background: #f1f1f1 url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/5723972d8d177ea87a4854762d4240bc.png');
     background: #f1f1f1 -webkit-image-set(
         url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/5723972d8d177ea87a4854762d4240bc.png') 1x,
         url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/6f4d519bb230d2f4767470f902554cce.png') 2x
@@ -282,7 +284,9 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
     background: #f1f1f1 image-set(
         url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/5723972d8d177ea87a4854762d4240bc.png') 1x,
         url('/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/6f4d519bb230d2f4767470f902554cce.png') 2x
-    );" data-aos="fade-down"></div>
+    );"
+                data-aos="fade-down"
+            ></div>
 
             <div class="article-info" data-aos="zoom-in">
                                                     <div class="article-author ">
@@ -310,8 +314,8 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
 
             <div class="article-header" data-aos="zoom-in-up">
                 <h1>Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</h1>
-                <p>Découvrez pourquoi adopter le modèle de workflow env-branching peut améliorer votre gestion des branches Git, 
-en offrant une flexibilité accrue et des déploiements plus rapides, tout en préservant l&#039;intégrité de votre code.
+                <p>Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
 </p>
                 <ul class="article-tag-list">
                                             <li class="article-tag-list__item">
@@ -329,7 +333,7 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
 
                     <ol class="table-of-content" data-aos="fade-up">
                                     <li class="table-of-content__item">
-                        <a href="#au-commencement-dieu-crea-les-cieux-et-la-terre">Au commencement, Dieu créa les cieux et la terre</a>
+                        <a href="#once-upon-a-time">Once Upon a Time...</a>
 
                                             </li>
                                     <li class="table-of-content__item">
@@ -383,24 +387,24 @@ en offrant une flexibilité accrue et des déploiements plus rapides, tout en pr
                         </div>
                     </div>
                 
-                <p>Aujourd’hui, quand on demande quel workflow git utilise un développeur, on tombe très souvent sur l’un des plus connus : la méthode gitflow.<br>
-ll existe néanmoins une autre gestion de ses branches git qui assure tout aussi bien une communication fluide entre les développeurs, entre les clients, et une livraison de code de haute qualité : la méthode env-branching.</p>
+                <p>Aujourd’hui, quand on demande quel workflow git utilise un développeur, on tombe très souvent sur l’un des plus connus : la méthode <strong>gitflow</strong>.<br>
+ll existe néanmoins une autre gestion de ses branches git qui assure tout aussi bien une communication fluide entre les développeurs, entre les clients, et une livraison de code de haute qualité : la méthode <strong>env-branching</strong>.</p>
 <p>Cet article explore ces deux modèles pas à pas pour vous en proposer une comparaison fluide qui vous permettra peut-être de choisir quelle est la meilleure option pour vos besoins.</p>
 <div class="admonition note">
 <p>
-    On adopte chez Elao une version personnalisée de la méthode env-branching, qui s’adapte à nos besoins et à notre manière de travailler.
+    On adopte chez Elao une version personnalisée de la méthode <strong>env-branching</strong>, qui s’adapte à nos besoins et à notre manière de travailler.
     C’est ce modèle que nous allons vous présenter ici.
 </p>
 </div>
-<h2 id="au-commencement-dieu-crea-les-cieux-et-la-terre" class="anchor-title"><a href="#au-commencement-dieu-crea-les-cieux-et-la-terre">Au commencement, Dieu créa les cieux et la terre</a></h2>
+<h2 id="once-upon-a-time" class="anchor-title"><a href="#once-upon-a-time">Once Upon a Time...</a></h2>
 <p>Pour commencer, les deux méthodes se distinguent par leur structure : </p>
 <img src="/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/schema_1.svg/ce7da11563caee0f3ead9f1c6f12db6f.svg" alt="Schéma 1" title="Schéma 1" id="schema-1">
 <ul>
 <li>
-<p><strong>gitflow</strong> est centralisée autour d’une branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> qui sert de fil conducteur et de racine aux releases menant aux mises en production de l’application.</p>
+<p><strong>gitflow</strong> s'articule autour d’une branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> qui sert de fil conducteur et de racine aux releases menant aux mises en production (MEP) de l’application.</p>
 </li>
 <li>
-<p><strong>env-Branching</strong> lui est découplé par environnement. <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> est une branche qui correspond à un environnement de pré-prod. <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> est la branche pivot du workflow et correspond à l’environnement de production.</p>
+<p><strong>env-Branching</strong> lui est centré autour des environnements. <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> est une branche qui correspond à un environnement de pré-prod. <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> est la branche pivot du workflow et correspond à l’environnement de production.</p>
 </li>
 </ul>
 <h2 id="le-cycle-continue-developpement-de-features" class="anchor-title"><a href="#le-cycle-continue-developpement-de-features">Le cycle continue : développement de features</a></h2>
@@ -414,18 +418,18 @@ ll existe néanmoins une autre gestion de ses branches git qui assure tout aussi
 <div class="admonition note">
 <p>
     Les reviews techniques se déroulent généralement directement sur la pull request, contrairement aux reviews clientes que l'on
-    appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est nécessaire de déployer la feature sur un environnement de test.
+    appelle généralement recette. Pour que le client puisse tester les nouvelles fonctionnalités, il est souvent nécessaire de déployer la feature sur un environnement de test.
 </p>
 </div>
 <img src="/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/schema_3.svg/ca0fc6be2cbc6e6509527f33e6edaa51.svg" alt="Schéma 3" title="Schéma 3" id="schema-3">
 <p>Pour ces reviews clientes :</p>
 <ul>
 <li>
-<p><strong>gitflow</strong> propose la chose suivante : on merge <code class="code-inline" id="4a46a893d824549ae3d1ef3d7a2109ee">Feature 1</code> et <code class="code-inline" id="70914a40fd903f2835fddb95d62751d6">Feature 2</code> en fermant leurs pull request respectives dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>.
-A partir de la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>, on deploie sur un environnement de recette pour le client. Ainsi il pourra reviewer les nouvelles fonctionnalités.</p>
+<p><strong>gitflow</strong> propose la chose suivante : on merge <code class="code-inline" id="4a46a893d824549ae3d1ef3d7a2109ee">Feature 1</code> et <code class="code-inline" id="70914a40fd903f2835fddb95d62751d6">Feature 2</code> dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>. Ce qui a pour conséquence de fermer leurs pull requests respectives.
+A partir de la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>, on deploie sur un environnement de pré-prod pour le client. Ainsi il pourra recetter les nouvelles fonctionnalités.</p>
 </li>
 <li>
-<p><strong>env-branching</strong> propose de pousser les modifications dans <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> <strong>sans fermer les PR associées</strong>. Elles sont toujours ouvertes et taggées "en recette", pour la review cliente.</p>
+<p><strong>env-branching</strong> propose de pousser les modifications dans <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> <strong>sans fermer les PRs associées</strong>. Elles sont toujours ouvertes et taggées "en recette", pour la review cliente.</p>
 </li>
 </ul>
 <h2 id="les-ennuis-commencent" class="anchor-title"><a href="#les-ennuis-commencent">Les ennuis commencent</a></h2>
@@ -434,7 +438,8 @@ A partir de la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc3
 /elao_/pr/624/build/images/elaomojis/miscellaneous/gremlin-ohno.36e36a70.png 2x," id="gremlin-ohno">).</p>
 <img src="/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/schema_4.svg/a0405cf231c65bb2c13529ca79004cea.svg" alt="Schéma 4" title="Schéma 4" id="schema-4">
 <p><img class="emoji" src="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png" alt="info" srcset="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 1x,
-/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> Côté <strong>gitflow</strong>, la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> est dans un état tel qu’elle embarque malgré elle un commit erroné à corriger, tout comme <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> pour l'<strong>env-branching</strong> qui embarque elle aussi le commit de la PR à corriger. </p>
+/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> Côté <strong>gitflow</strong>, la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> est dans un état tel qu’elle embarque un commit erroné à corriger.
+C'est également le cas sur <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> pour l'<strong>env-branching</strong>, cependant, comme nous le verrons, les conséquences ne sont pas les mêmes.</p>
 <p>Pour faire les corrections :</p>
 <img src="/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/schema_5.svg/bb524ad65745df518a8b8325cae1ff1e.svg" alt="Schéma 5" title="Schéma 5" id="schema-5">
 <ul>
@@ -449,56 +454,62 @@ A partir de la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc3
 Celle-ci est issue de la branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> une fois qu’elle est dans un état prêt à être mis en production. </li>
 </ul>
 <p><img class="emoji" src="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png" alt="info" srcset="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 1x,
-/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> ll n’est donc pas possible de mettre en production une seule feature si une autre est aussi présente sur Develop, sauf en effectuant de nombreuses manipulations afin de trouver un nouvel état que l’on souhaite mettre en production. </p>
+/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> Il n’est donc pas possible de mettre en production une feature si une autre nécessitant un correctif  est aussi présente sur <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>.
+À moins d'effectuer de nombreuses manipulations pour constituer un nouvel état que l’on souhaitera mettre en production.</p>
 <p>Cette branche <code class="code-inline" id="b8e7b465df7c5979dc731d06e84ce2cf">Release</code> est ensuite mergée dans <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> et dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> pour le déploiement.</p>
 <ul>
 <li><strong>Env-branching</strong> se considère comme une méthode se passant de release.
-Virtuellement, à tout moment, on peut constituer une "release" en choisissant les PR souhaitées et en les mergeant dans <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code>.</li>
+Virtuellement, à tout moment, on peut constituer une "release" en choisissant les PRs l'on souhaite livrer en production en les mergeant dans <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code>.</li>
 </ul>
 <div class="admonition note">
 <p>
-    Pour préparer la release chez elao, on incrémente le numéro de version avec un commit que l’on pousse sur <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code>.
-    <em>Ce numéro de version est important pour le suivi de l’évolution de l’application et pour les rapports erreurs Sentry par exemple.</em>
-    On crée un objet release sur github avec le changelog qui décrit toutes les PR qui sont embarquées dans celle-ci.
+    Le processus exact de préparation de la release peut varier selon l'applicatif.
+    Mais de façon courante à Elao, suite au merge des PRs concernées, on incrémente un numéro de version dans le code avec un commit que l’on pousse sur <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code>.<br>
+    <em>Ce numéro de version peut par exemple servir à l'affichage au sein de l'application ainsi que pour le versionning des rapports d'erreurs &amp; artefacts Sentry.</em>
+    On crée enfin un objet release sur GitHub avec un changelog qui décrit toutes les features et bug fixes embarquées dans celle-ci.
 </p>
 </div>
 <h2 id="un-petit-bilan-pas-a-pas" class="anchor-title"><a href="#un-petit-bilan-pas-a-pas">Un petit bilan pas à pas</a></h2>
 <h3 id="pour-la-gestion-des-pull-request" class="anchor-title"><a href="#pour-la-gestion-des-pull-request">Pour la gestion des pull request</a></h3>
 <ul>
-<li><strong>gitflow</strong> :  Quand les PR sont mergées dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>, elles sont fermées. Elles sont validées en review technique mais la feature, elle, n’a pas encore sa validation cliente.
-Si une modification doit être faite, une nouvelle PR doit être réouverte et ça déclenche tout un nouveau cycle de review (pour la même feature).</li>
-<li><strong>env-branching</strong> : Les PR son mergées dans <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> mais sans être fermées. Elles portent la responsabilité de traiter l’issue de la feature de bout en bout.
-Une fois validées par review technique et cliente (sur l’environnement staging), elles sont taggées comme “ready to merge”, et attendent d’être choisies pour une mise en production.</li>
+<li><strong>gitflow</strong> :  Quand les PRs sont mergées dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>, elles sont fermées. Elles sont validées par une revue technique mais la feature, elle, n’a pas encore sa validation client.
+Si une modification doit être faite, une nouvelle PR doit être réouverte, ce qui déclenche un tout nouveau cycle de vie (pour la même feature).</li>
+<li><strong>env-branching</strong> : Les PRs sont mergées dans <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> mais sans être fermées. Elles portent la responsabilité de traiter l’issue de la feature de bout en bout.
+Une fois validées par review technique et cliente (sur l’environnement staging), elles sont libellées comme “ready to merge”, et attendent d’être choisies pour une mise en production.</li>
 </ul>
 <h3 id="pour-la-gestion-des-etats" class="anchor-title"><a href="#pour-la-gestion-des-etats">Pour la gestion des états</a></h3>
 <ul>
 <li>
-<p><strong>gitflow</strong> : La branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> est racine de toutes les nouvelles features. Elle permet d’ajouter une protection accrue pour branche <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> en décalant la gestion des conflits sur une branche dédiée.
+<p><strong>gitflow</strong> : La branche <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code> est la racine de toutes les nouvelles features. Elle permet d’ajouter une protection accrue pour branche <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> en décalant la gestion des conflits sur une branche dédiée.
 Par contre, quand un bugfix est ajouté à une branche <code class="code-inline" id="b8e7b465df7c5979dc731d06e84ce2cf">Release</code>, celle-ci doit être mergée dans <code class="code-inline" id="1bedc6fb14c15b2e99872ebdbc317bf2">Develop</code>, et ça crée des arbres git moins linéaires. </p>
 </li>
 <li>
 <p><strong>env-branching</strong> : La branche <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> correspond à un environnement de pré-prod, la branche <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> correspond à un environnement de prod.
-Les pull request qui partent de <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> n’étant pas fermées, on peut les merger à loisir sur <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> pour les tester et les corriger afin d’obtenir des PR-feature complètes et prêtes à être mise en production sans plus de manipulations. </p>
+Les pull requests qui partent de <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> n’étant pas fermées, on peut les merger à loisir sur <code class="code-inline" id="1bee0d8aaede29ac319901e96850adee">Staging</code> pour les tester et les corriger afin d’obtenir des PR-feature complètes et prêtes à être mise en production sans plus de manipulations. </p>
 </li>
 </ul>
 <p><img class="emoji" src="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png" alt="info" srcset="/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 1x,
-/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> Par contre, contrairement au gitflow qui maintient un tronc commun à partir duquel partent toutes les nouvelles features, env-branching lui nécessite une attention particulière sur les éléments techniques impactants (<em>changement de règles de linting, corrections de déprecations, issues critiques ou concernant la stack de développement</em>).
+/elao_/pr/624/build/images/elaomojis/native/info.41913318.png 2x," id="info"> Par contre, contrairement au <strong>gitflow</strong> qui maintient un tronc commun à partir duquel partent toutes les nouvelles features, <strong>env-branching</strong> nécessite une attention particulière sur les éléments techniques ayant un impact important sur la codebase (<em>changement de règles de linting, corrections de déprecations, issues critiques ou concernant le socle de développement</em>).
 Avec la méthode <strong>env-branching</strong>, toutes ces PRs doivent être le plus rapidement possible mergées dans <code class="code-inline" id="a02c83a7dbd96295beaefb72c2bee2de">Main</code> pour être mise à la disposition des développeurs dans le tronc commun.  </p>
 <div class="admonition note">
 <p>
     <img class="emoji" src="/elao_/pr/624/build/images/elaomojis/native/sparkles.429b3a16.png" alt="sparkles" srcset="/elao_/pr/624/build/images/elaomojis/native/sparkles.429b3a16.png 1x,
-/elao_/pr/624/build/images/elaomojis/native/sparkles.429b3a16.png 2x," id="sparkles"> Avantage considérable : chez elao l’env-branching nous permet de multiplier les environnements (Staging 1, Staging 2, etc).
+/elao_/pr/624/build/images/elaomojis/native/sparkles.429b3a16.png 2x," id="sparkles"> Avantage considérable : chez elao l’<strong>env-branching</strong> nous permet de multiplier les environnements (Staging 1, Staging 2, etc).
     Ainsi nous pouvons tester plusieurs features en parallèle sans qu’elles ne se marchent dessus.
 </p>
 </div>
 <h3 id="pour-le-deploiement-des-fonctionnalites" class="anchor-title"><a href="#pour-le-deploiement-des-fonctionnalites">Pour le déploiement des fonctionnalités</a></h3>
 <ul>
-<li><strong>gitflow</strong> : Les fonctionnalités se stackent et doivent attendre la prochaine release, qui embarque tout, pour être déployées.</li>
+<li><strong>gitflow</strong> : Les fonctionnalités s'accumulent et doivent attendre la prochaine release, qui embarque tout, pour être déployées.</li>
 <li><strong>env-Branching</strong> : Les fonctionnalités peuvent être deployées indépendamment dès qu’elles sont prêtes. Il est aussi possible d’en deployer plusieurs sur une seule release. Il est ainsi possible de revoir entièrement la priorité des fonctionnels et quand les déployer.</li>
 </ul>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
-<p>Le modèle d’<strong>env-branching</strong> que l’on applique à Elao offre une flexibilité et une rapidité accrue par rapport au gitflow classique. Il permet de développer, valider et déployer des fonctionnalités indépendamment, réduisant les conflits et accélérant le cycle de développement.<br>
-Pour les développements cherchant à améliorer le flux de travail Git et une livraison de fonctionnalités plus rapide, l'<strong>env-branching</strong> constitue une excellente option.</p>
+<blockquote>
+<p>ENV branching gives us the agility to develop a wide range of features simultaneously without being tied to a release schedule. Features are deployed as they are completed, which keeps us our applications shipping and our developers building.
+<cite>— <a href="https://www.wearefine.com/news/insights/env-branching-with-git/" target="_blank">James Kurczodyna</a>, Director of Application Technology at FINE.</cite></p>
+</blockquote>
+<p>Le modèle d’<strong>env-branching</strong> que l’on applique à Elao offre une flexibilité par rapport au <strong>gitflow classique</strong>. Il permet de développer, valider et déployer des fonctionnalités indépendamment, réduisant les conflits et accélérant le cycle de développement.<br>
+Pour les développeurs cherchant à améliorer le flux de travail Git et une livraison de fonctionnalités plus rapide, l'<strong>env-branching</strong> constitue une excellente option.</p>
 <p>Néanmoins, le <strong>gitflow</strong> reste un modèle robuste et largement utilisé dans l’industrie, qui s’adapte aux plus grandes équipes qui nécessitent une structure de branche plus rigide. Son cycle s’adapte bien aux développements planifiés et aux projets-produits plus conséquents. </p>
 <img src="/elao_/pr/624/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/schema_7.svg/eb9ba6707b72fba25089db9ff26e247d.svg" alt="Schéma 7" title="Schéma 7" id="schema-7">
 <h4 id="sources" class="anchor-title"><a href="#sources">Sources</a></h4>

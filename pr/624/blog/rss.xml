@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/624/blog</link>
-        <pubDate>Wed, 31 Jul 2024 17:08:57 +0000</pubDate>
+        <pubDate>Thu, 01 Aug 2024 07:59:48 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/624/apple-touch-icon.png</url>
@@ -21,8 +21,8 @@
                 <title>Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</title>
                 <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
                 <description>
-                    <![CDATA[ Découvrez pourquoi adopter le modèle de workflow env-branching peut améliorer votre gestion des branches Git, 
-en offrant une flexibilité accrue et des déploiements plus rapides, tout en préservant l&#039;intégrité de votre code.
+                    <![CDATA[ Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
  ]]>
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/624/blog/dev/env-branching-git-flow-model</guid>

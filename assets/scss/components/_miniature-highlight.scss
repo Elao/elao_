@@ -73,7 +73,8 @@
   .details {
     padding: 50px 60px;
     width: 730px;
-    height: 300px;
+    min-height: 300px;
+    max-height: 400px;
     background: $color-brand;
     color: #fff;
     border: none;

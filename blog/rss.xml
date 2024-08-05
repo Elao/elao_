@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Wed, 31 Jul 2024 17:26:23 +0000</pubDate>
+        <pubDate>Mon, 05 Aug 2024 12:54:45 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,27 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</title>
+                <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Challengez votre workflow git avec la méthode env-branching, 
+une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/dev/env-branching-git-flow-model</guid>
+                <link>https://elao.github.io/elao_/blog/dev/env-branching-git-flow-model</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/658cd9c0513e756a1c2ad2c78133964c.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</media:description>
+                                    </media:content>
+                                    <category>git</category>
+                                    <category>github</category>
+                                    <category>web</category>
+                                            </item>
                     <item>
                 <title>Mocker une API GraphQL avec les resolvers locaux du client Apollo</title>
                 <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>

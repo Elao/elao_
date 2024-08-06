@@ -230,5 +230,10 @@ categories:
                 path: native/folded-hands.png
               - code: ":check-mark:"
                 path: native/check-mark.png
+    - title : "Utilisées pour le blog"
+      hidden: true
+      sections:
+          - title: "Les outillages"
+            emojis:
               - code: ":info:"
-                path: native/info.png
+                path: blog/info.png

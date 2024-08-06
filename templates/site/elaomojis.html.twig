@@ -25,7 +25,7 @@
             </div>
         </div>
 
-        {% for category in config.categories %}
+        {% for category in config.categories|filter(c => not c.hidden ?? false) %}
             <h2>{{ category.title }}</h2>
             {% for section in category.sections %}
                 <h3>{{ section.title }}</h3>

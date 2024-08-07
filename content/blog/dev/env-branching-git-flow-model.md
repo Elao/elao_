@@ -10,6 +10,7 @@ tableOfContent: 6
 tags: [Git, Github, Web]
 banner: content/images/blog/2024/env-branching-git-flow-model/git-illustration.png
 thumbnail: content/images/blog/2024/env-branching-git-flow-model/git-illustration.png
+tweetId: "1821093926826086505"
 outdated: false
 ---
 

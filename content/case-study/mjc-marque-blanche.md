@@ -1,5 +1,5 @@
 ---
-title: "Marque blanche MyJob.Company"
+title: "Marque blanche MJC"
 lastModified: "2024-09-06"
 date: "2024-09-06"
 
@@ -12,7 +12,7 @@ clients: MyJob.Company
 size: 1 an
 services: ["Développement", "conception"]
 terms: ["symfony", "elasticsearch", "next.js", "react", "graphql", "pwa"]
-members: ["mcolin", "qbrouillet", "adefrance"]
+members: ["mcolin", "qbrouillet", "adefrance", "lvilleneuve"]
 images: ["content/images/casestudies/mjc-marqueblanche/ecran-dashboard-mjc.jpg"]
 ---
 

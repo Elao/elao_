@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Delphine Gauthier, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Delphine Gauthier de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/628/blog/auteur/dgauthier</link>
+        <pubDate>Fri, 06 Sep 2024 08:33:10 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/628/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Delphine Gauthier, </title>
+            <link>https://elao.github.io/elao_/pr/628/blog/auteur/dgauthier</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/628/blog/auteur/dgauthier/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>AFUP Day 2019 à Lyon : le compte-rendu de l&#039;équipe</title>
+                <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Notre compte-rendu de l&#039;Afup Day à Lyon, du 17 mai 2019. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/628/blog/elao/afup-day-lyon-2019</guid>
+                <link>https://elao.github.io/elao_/pr/628/blog/elao/afup-day-lyon-2019</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/628/%2E%2E/../resized/content/images/blog/thumbnails/afup-day-2019.jpg/5affa46b4a81624172abbcd37943e62f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">AFUP Day 2019 à Lyon : le compte-rendu de l&#039;équipe</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>afupday</category>
+                                            </item>
+            </channel>
+</rss>

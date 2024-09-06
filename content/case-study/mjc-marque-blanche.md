@@ -11,7 +11,7 @@ shortDescription: "MyJob.Company - Conception d'une marque blanche reposant sur 
 clients: MyJob.Company
 size: 1 an
 services: ["Développement", "conception"]
-terms: ["symfony", "elasticsearch", "next.js", "react.js", "graphql", "pwa"]
+terms: ["symfony", "elasticsearch", "next.js", "react", "graphql", "pwa"]
 members: ["mcolin", "qbrouillet", "adefrance"]
 images: ["content/images/casestudies/mjc-marqueblanche/ecran-dashboard-mjc.jpg"]
 ---

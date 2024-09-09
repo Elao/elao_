@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Xavier Gorse, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Xavier Gorse de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/629/blog/auteur/xgorse</link>
+        <pubDate>Mon, 09 Sep 2024 09:01:29 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/629/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Xavier Gorse, </title>
+            <link>https://elao.github.io/elao_/pr/629/blog/auteur/xgorse</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/629/blog/auteur/xgorse/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Rebranding 1/4 : le fond</title>
+                <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ On pose les bases. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/629/blog/elao/rebranding-le-fond</guid>
+                <link>https://elao.github.io/elao_/pr/629/blog/elao/rebranding-le-fond</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/629/%2E%2E/../resized/content/images/blog/headers/elao-rebrand-banner-fond.jpg/580f9bccb56bbb7d69152560ab14a8e8.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Rebranding 1/4 : le fond</media:description>
+                                    </media:content>
+                                    <category>rebranding</category>
+                                    <category>elao</category>
+                                                    <comments>https://twitter.com/Elao/status/1384417140346920962</comments>
+                            </item>
+                    <item>
+                <title>Blend Web Mix 2016 : un gros coup de boost</title>
+                <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/629/blog/elao/blendwebmix-2016</guid>
+                <link>https://elao.github.io/elao_/pr/629/blog/elao/blendwebmix-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/629/%2E%2E/../resized/content/images/blog/thumbnails/blend2016.jpg/5accf869b77a901f4df49101f402228f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Blend Web Mix 2016 : un gros coup de boost</media:description>
+                                    </media:content>
+                                    <category>web</category>
+                                    <category>conference</category>
+                                    <category>blend</category>
+                                    <category>lyon</category>
+                                    <category>developpement</category>
+                                    <category>design</category>
+                                    <category>business</category>
+                                            </item>
+                    <item>
+                <title>Retour sur le Forum PHP 2016</title>
+                <pubDate>Mon, 07 Nov 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Nous étions au Forum PHP 2016 de l&#039;AFUP ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/629/blog/elao/forum-php-2016</guid>
+                <link>https://elao.github.io/elao_/pr/629/blog/elao/forum-php-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/629/%2E%2E/../resized/content/images/blog/thumbnails/forumphp2016-thumb.jpg/b1eb67bf55af010b8ed02402c6140bf8.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Retour sur le Forum PHP 2016</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>forumphp</category>
+                                            </item>
+            </channel>
+</rss>

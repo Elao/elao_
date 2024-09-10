@@ -6,11 +6,11 @@ date: "2024-09-06"
 # Params
 metaDescription: "MyJob.Company - Conception d'une marque blanche"
 description: "MyJob.Company - Conception d'une marque blanche reposant sur le principe de la cooptation"
-websiteUrl: https://myjob.company/fr/
+websiteUrl: https://app.myjob.company/
 shortDescription: "MyJob.Company - Conception d'une marque blanche reposant sur le principe de la cooptation"
 clients: MyJob.Company
 size: 1 an
-services: ["Développement", "conception"]
+services: ["Développement", "Conception", "Maintenance"]
 terms: ["symfony", "elasticsearch", "next.js", "react", "graphql", "pwa"]
 members: ["mcolin", "qbrouillet", "adefrance", "lvilleneuve"]
 images: ["content/images/casestudies/mjc-marqueblanche/ecran-dashboard-mjc.jpg"]
@@ -41,7 +41,7 @@ La société a donc confié à Elao la conception et le développement de cette 
 Comme a l'accoutumée, Elao a mis en place plusieurs ateliers de recueil du besoin afin de cadrer plus précisément les attentes et le périmètre du projet. 
 
 Tatiana, PO du projet, a réalisé en amont des **wireframes** permettant d'exprimer les besoins et les grandes fonctionnalités attendues. 
-C'est ensuite la société Bien Fondé qui a pris le relais et qui a réalisé les **parcours utilisateurs** (UX) ainsi que les **maquettes** (UI) des écrans principaux, en mobile et en desktop. 
+C'est ensuite la société <a href="https://www.bien-fonde.com/fr/" target="blank">Bien Fondé</a> qui a pris le relais et qui a réalisé les **parcours utilisateurs** (UX) ainsi que les **maquettes** (UI) des écrans principaux, en mobile et en desktop. 
 
 En parallèle, nous avons conçu le board projet, le **backlog** avec les différents tickets composant les grandes fonctionnalités et les **itérations** de la marque blanche. 
 
@@ -56,19 +56,26 @@ La nouvelle architecture est désormais composée d'une **API**, développée av
 
 #### Première étape
 
-La première étape a été d'introduire la notion de marque blanche, puis de cloisonner les données par marques blanches et de développer une API exposant le code métier existant. Cela fut rendu facile par l'utilisation d'une <a href="https://www.elao.com/blog/dev/architecture-hexagonale-symfony" target="blank">architecture hexagonale</a> depuis le début du projet en 2018. Nous avons donc pu **réexploiter le code métier existant** avec très peu de modifications. Cela a également permis de minimiser les **régressions**, de ne pas avoir à tout redévelopper et de n'avoir qu'une seule base de code à maintenir pendant la cohabitation avec l'application en production et le développement de la nouvelle version.
+La première étape a été d'introduire la notion de marque blanche, puis de cloisonner les données par marques blanches et de développer une API exposant le code métier existant. Cela fut rendu facile par l'utilisation d'une <a href="https://www.elao.com/blog/dev/architecture-hexagonale-symfony" target="blank">**architecture hexagonale**</a> depuis le début du projet en 2018. Nous avons donc pu **réexploiter le code métier existant** avec très peu de modifications. Cela a également permis de minimiser les **régressions**, de ne pas avoir à tout redévelopper et de n'avoir qu'une seule base de code à maintenir pendant la cohabitation avec l'application en production et le développement de la nouvelle version.
 
 Les **tests unitaires** et fonctionnels couvrant déjà une très grande partie de l'application historique ainsi que des déploiements fréquents nous ont permis d'avancer sereinement en vérifiant qu'aucun bug n'était introduit pendant cette phase. Les ajouts et adaptations étaient régulièrement mergés / intégrés dans la base de code de production et déployés, nous assurant ainsi une retro-compatibilité constante.
 
+<figure>
+    <img src="content/images/casestudies/mjc-marqueblanche/ecran-mes-offres-mjc.jpg" alt="Écran mes offres">
+    <figcaption>
+      <span class="figure__legend">Écran "Mes offres"</span>
+    </figcaption>
+</figure>
+
 #### Seconde étape
 
-La seconde étape a été de développer les deux applications front et admin en React. Ces deux applications communiquaient avec le métier via la nouvelle API évoquée plus haut. 
+La seconde étape a été de développer les deux applications **front** et **admin** en React. Ces deux applications communiquaient avec le métier via la nouvelle API évoquée plus haut. 
 
-Moins risqué car utilisé par un nombre restreint d'utilisateurs, nous avons mis en ligne en premier la nouvelle application d'administration. D'abord en cohabitation avec l'ancien admin pour que les utilisateurs puissent nous faire des retours, tester les nouvelles fonctionnalités, le tout sans être bloqué en cas de régression. Une fois l'application stabilisée et jugée assez complète par les utilisateurs, l'ancien admin a été débranché.
+Moins risqué car utilisé par un nombre restreint d'utilisateurs, nous avons mis en ligne en premier la nouvelle application d'administration. D'abord en cohabitation avec l'ancien admin pour que les utilisateurs puissent nous faire des retours, tester les nouvelles fonctionnalités, le tout sans être bloqué en cas de régression. Une fois l'application **stabilisée** et jugée assez **complète** par les utilisateurs, l'ancien admin a été débranché.
 
 Nous nous sommes ensuite concentrés sur la finalisation de l'application front. Un **MVP** (Minimum Viable Product) a été défini comprenant les fonctionnalités historiques ainsi que quelques nouveautés justifiant la bascule. Une fois l'ensemble de ces fonctionnalités développées, et après une phase de **recette** intense, le front a été à son tour basculé vers la nouvelle application.
 
-Les nouvelles applications étant alimentées par la même source de données que l’ancienne application monolithique, les bascules ont été transparentes pour les utilisateurs qui ont pu conserver leurs données ainsi que leurs identifiants de connexion.
+Les nouvelles applications étant alimentées par la même source de données que l’ancienne application monolithique, les bascules ont été transparentes pour les utilisateurs qui ont pu **conserver leurs données ainsi que leurs identifiants de connexion**.
 
 ### Phase de mise en production 
 
@@ -93,13 +100,13 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
 
 Qui dit marque blanche dit **personnalisation**. Couleurs, logos, titres, ... le design des marques blanches de MyJob.Company est **configurable** pour correspondre à l’identité de chaque client. De nombreuses fonctionnalités sont activables et paramètrables par marque blanche selon l’expérience utilisateur souhaitée. MyJob.Company propose également l’intégration avec de nombreux acteurs du marché afin de mettre à disposition une interopérabilité avec les **SI** de ses clients.
 
-À long terme, MyJob.Company a pour ambition de rendre **autonomes** les clients dans la création et la configuration de leur propre marque blanche. Actuellement, c'est aux administrateur MJC de les créer. Ainsi, un espace admin a été conçu, permettant à MyJob.Company de créer et piloter la gestion de leurs nouveaux clients. 
+À long terme, MyJob.Company a pour ambition de rendre **autonomes** les clients dans la création et la configuration de leur propre marque blanche. Actuellement, c'est aux administrateurs MJC de les créer. Ainsi, un espace admin a été conçu, permettant à MyJob.Company de créer et piloter la gestion de leurs nouveaux clients. 
 
-Une fois son accès créé, le client est autonome sur la création et la gestion de son espace (offres d'emploi, candidats, recruteurs, coopteurs, traitement des candidatures etc.) et le fonctionnement que l'on connaît déjà à travers MyJob.Company reste le même. 
+Une fois son accès créé, le client est autonome sur la création et la gestion de son espace (offres d'emploi, candidats, recruteurs, coopteurs, traitement des candidatures, etc.) et le fonctionnement que l'on connaît déjà à travers MyJob.Company reste le même. 
 
 Les contraintes étaient les suivantes :
 
-* Cloisonnement des données entre marque blanches
+* Cloisonnement des données entre marques blanches
 * Personnalisation du design par marque blanche
 * Activation et paramètrage des fonctionnalités par marque blanche (feature flags)
 
@@ -114,7 +121,7 @@ Les contraintes étaient les suivantes :
 
 La **cooptation** est le coeur de métier de MyJob.Company. Il consiste à proposer à tout un chacun de recommander des proches, des connaissances ou des membres de son réseau professionnel pour des offres d’emploi. Les recruteurs touchent ainsi un public différent de celui des jobboards classiques. Les coopteurs (c’est comme cela que l'on appelle les utilisateurs de la plateforme) obtiennent une prime lorsque leur recommandation débouche sur une embauche.
 
-La cooptation interne reprend ce principe mais à l’échelle d’une unique entreprise ou d’un groupe. Les coopteurs sont les employés de cette entreprise et les offres d’emploi sont des postes à pourvoir dans l’entreprise. MyJob.Company propose donc son expérience du recrutement par cooptation en marque blanche permettant aux entreprises de mobiliser les réseaux de l’ensemble de ses employés pour dynamiser ses recrutements.
+La cooptation interne reprend ce principe mais à l’échelle d’une unique entreprise ou d’un groupe. Les coopteurs sont les employés de cette entreprise et les offres d’emploi sont des postes à pourvoir dans l’entreprise. MyJob.Company propose donc son expérience du recrutement par cooptation en marque blanche, permettant aux entreprises de mobiliser les réseaux de l’ensemble de leurs employés pour dynamiser leurs recrutements.
 
 La cooptation interne peut être également utilisée pour favoriser la **mobilité interne**. Les employés ayant accès aux offres d’emploi de leur entreprise, ils peuvent soit eux-mêmes postuler pour changer de poste, soit recommander un collègue qui souhaite rester dans l’entreprise mais changer de poste.
 
@@ -122,3 +129,5 @@ Les contraintes étaient les suivantes :
 
 * Possibilité de faire une plateforme privée, accessible uniquement aux employés de l’entreprise
 * Permettre l’interfaçage avec le SI de l’entreprise (connexion ATS, import des offres, etc)
+
+> L’équipe avec laquelle je collabore est bonne dans le conseil et le développement pur. Souvent même le résultat dépasse nos attentes ! Ils sont réactifs sur des sujets urgents, au-delà d’être de bon conseil. — Tatiana

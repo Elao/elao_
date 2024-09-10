@@ -3,13 +3,12 @@ active: true
 # Bio
 name: Lilian Asse
 gender: male
-bio:
-    Lilian, actuellement en étude à l’IDRAC, est notre alternant business developer. Spécialisé en prospection téléphonique, il a pour mission de conquérir de nouveaux super clients ! 
+bio: |
+    Lilian, actuellement en étude à l’IDRAC, est notre alternant business developer.
+    Spécialisé en prospection téléphonique, il a pour mission de conquérir de nouveaux super clients !
 
+    Ses passions hormis la vente ? S’intéresser au mindset, au lifestyle, à la communication non-verbale.
 
-    Ses passions hormis la vente ? s’intéresser au mindset, au lifestyle, à la communication non-verbale.
-
-    
     À côté de ça, Lilian aime particulièrement la musculation, la boxe et a une véritable passion pour le théâtre !
 position: Alternant business developer
 integrationDate: 19-08-2024

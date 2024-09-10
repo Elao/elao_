@@ -1,0 +1,28 @@
+active: true
+
+# Bio
+name: Lilian Asse
+gender: male
+bio:
+    Lilian, actuellement en étude à l’IDRAC, est notre alternant business developer. Spécialisé en prospection téléphonique, il a pour mission de conquérir de nouveaux super clients ! 
+
+
+    Ses passions hormis la vente ? s’intéresser au mindset, au lifestyle, à la communication non-verbale.
+
+    
+    À côté de ça, Lilian aime particulièrement la musculation, la boxe et a une véritable passion pour le théâtre !
+position: Alternant business developer
+integrationDate: 19-08-2024
+
+# Social
+linkedIn: lilian-asse
+email: lilian.asse@elao.com
+avatar: content/images/members/lilian.jpg
+
+certifications: []
+
+emojis:
+    - 💪
+    - 💼
+    - 🧑‍🎓
+    - 📞

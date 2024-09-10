@@ -243,7 +243,7 @@
                         <ul>
                                                     </ul>
                         <!-- Si aucun lien vers le site possible, ajouter .hidden au bouton pour le cacher et ne pas casser le layout -->
-                        <a href="https://myjob.company/fr/" class="btn btn--secondary btn--animated " target="_blank" data-aos="fade-left">
+                        <a href="https://app.myjob.company/" class="btn btn--secondary btn--animated " target="_blank" data-aos="fade-left">
                             <span>
                                 Voir le site
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -336,20 +336,27 @@
 <h3 id="phase-de-conception" class="anchor-title"><a href="#phase-de-conception">Phase de conception</a></h3>
 <p>Comme a l'accoutumée, Elao a mis en place plusieurs ateliers de recueil du besoin afin de cadrer plus précisément les attentes et le périmètre du projet. </p>
 <p>Tatiana, PO du projet, a réalisé en amont des <strong>wireframes</strong> permettant d'exprimer les besoins et les grandes fonctionnalités attendues.
-C'est ensuite la société Bien Fondé qui a pris le relais et qui a réalisé les <strong>parcours utilisateurs</strong> (UX) ainsi que les <strong>maquettes</strong> (UI) des écrans principaux, en mobile et en desktop. </p>
+C'est ensuite la société <a href="https://www.bien-fonde.com/fr/" target="blank">Bien Fondé</a> qui a pris le relais et qui a réalisé les <strong>parcours utilisateurs</strong> (UX) ainsi que les <strong>maquettes</strong> (UI) des écrans principaux, en mobile et en desktop. </p>
 <p>En parallèle, nous avons conçu le board projet, le <strong>backlog</strong> avec les différents tickets composant les grandes fonctionnalités et les <strong>itérations</strong> de la marque blanche. </p>
 <h3 id="phase-de-developpement-build" class="anchor-title"><a href="#phase-de-developpement-build">Phase de développement (build)</a></h3>
 <p>Lors de la phase de développement, l'enjeu principal a été de <strong>maintenir</strong> l'application historique, tout en introduisant la notion de marque blanche et en développant les nouvelles fonctionnalités requises pour le lancement.</p>
 <p>L'application historique utilisait une <strong>architecture monolithique</strong>. Développée avec <a href="https://www.elao.com/glossaire/symfony" target="blank"><strong>Symfony</strong></a>, une seule application comprenait la partie front et la partie admin.</p>
 <p>La nouvelle architecture est désormais composée d'une <strong>API</strong>, développée avec Symfony sur la base de code existante et de deux nouvelles applications (front et admin) développées en <a href="https://www.elao.com/glossaire/react" target="blank"><strong>React</strong></a>.</p>
 <h4 id="premiere-etape" class="anchor-title"><a href="#premiere-etape">Première étape</a></h4>
-<p>La première étape a été d'introduire la notion de marque blanche, puis de cloisonner les données par marques blanches et de développer une API exposant le code métier existant. Cela fut rendu facile par l'utilisation d'une <a href="https://www.elao.com/blog/dev/architecture-hexagonale-symfony" target="blank">architecture hexagonale</a> depuis le début du projet en 2018. Nous avons donc pu <strong>réexploiter le code métier existant</strong> avec très peu de modifications. Cela a également permis de minimiser les <strong>régressions</strong>, de ne pas avoir à tout redévelopper et de n'avoir qu'une seule base de code à maintenir pendant la cohabitation avec l'application en production et le développement de la nouvelle version.</p>
+<p>La première étape a été d'introduire la notion de marque blanche, puis de cloisonner les données par marques blanches et de développer une API exposant le code métier existant. Cela fut rendu facile par l'utilisation d'une <a href="https://www.elao.com/blog/dev/architecture-hexagonale-symfony" target="blank"><strong>architecture hexagonale</strong></a> depuis le début du projet en 2018. Nous avons donc pu <strong>réexploiter le code métier existant</strong> avec très peu de modifications. Cela a également permis de minimiser les <strong>régressions</strong>, de ne pas avoir à tout redévelopper et de n'avoir qu'une seule base de code à maintenir pendant la cohabitation avec l'application en production et le développement de la nouvelle version.</p>
 <p>Les <strong>tests unitaires</strong> et fonctionnels couvrant déjà une très grande partie de l'application historique ainsi que des déploiements fréquents nous ont permis d'avancer sereinement en vérifiant qu'aucun bug n'était introduit pendant cette phase. Les ajouts et adaptations étaient régulièrement mergés / intégrés dans la base de code de production et déployés, nous assurant ainsi une retro-compatibilité constante.</p>
+<figure>
+    <img src="/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/mjc-marqueblanche/ecran-mes-offres-mjc.jpg/5eeaef9fe2b4a410f42b862e0fd0caf5.jpg" alt="Écran mes offres" srcset="/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/mjc-marqueblanche/ecran-mes-offres-mjc.jpg/5eeaef9fe2b4a410f42b862e0fd0caf5.jpg 1x,
+/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/mjc-marqueblanche/ecran-mes-offres-mjc.jpg/576dbc4a16f4d2fd655333b6000a61ca.jpg 2x," id="ecran-mes-offres">
+    <figcaption>
+      <span class="figure__legend">Écran "Mes offres"</span>
+    </figcaption>
+</figure>
 <h4 id="seconde-etape" class="anchor-title"><a href="#seconde-etape">Seconde étape</a></h4>
-<p>La seconde étape a été de développer les deux applications front et admin en React. Ces deux applications communiquaient avec le métier via la nouvelle API évoquée plus haut. </p>
-<p>Moins risqué car utilisé par un nombre restreint d'utilisateurs, nous avons mis en ligne en premier la nouvelle application d'administration. D'abord en cohabitation avec l'ancien admin pour que les utilisateurs puissent nous faire des retours, tester les nouvelles fonctionnalités, le tout sans être bloqué en cas de régression. Une fois l'application stabilisée et jugée assez complète par les utilisateurs, l'ancien admin a été débranché.</p>
+<p>La seconde étape a été de développer les deux applications <strong>front</strong> et <strong>admin</strong> en React. Ces deux applications communiquaient avec le métier via la nouvelle API évoquée plus haut. </p>
+<p>Moins risqué car utilisé par un nombre restreint d'utilisateurs, nous avons mis en ligne en premier la nouvelle application d'administration. D'abord en cohabitation avec l'ancien admin pour que les utilisateurs puissent nous faire des retours, tester les nouvelles fonctionnalités, le tout sans être bloqué en cas de régression. Une fois l'application <strong>stabilisée</strong> et jugée assez <strong>complète</strong> par les utilisateurs, l'ancien admin a été débranché.</p>
 <p>Nous nous sommes ensuite concentrés sur la finalisation de l'application front. Un <strong>MVP</strong> (Minimum Viable Product) a été défini comprenant les fonctionnalités historiques ainsi que quelques nouveautés justifiant la bascule. Une fois l'ensemble de ces fonctionnalités développées, et après une phase de <strong>recette</strong> intense, le front a été à son tour basculé vers la nouvelle application.</p>
-<p>Les nouvelles applications étant alimentées par la même source de données que l’ancienne application monolithique, les bascules ont été transparentes pour les utilisateurs qui ont pu conserver leurs données ainsi que leurs identifiants de connexion.</p>
+<p>Les nouvelles applications étant alimentées par la même source de données que l’ancienne application monolithique, les bascules ont été transparentes pour les utilisateurs qui ont pu <strong>conserver leurs données ainsi que leurs identifiants de connexion</strong>.</p>
 <h3 id="phase-de-mise-en-production" class="anchor-title"><a href="#phase-de-mise-en-production">Phase de mise en production</a></h3>
 <p>La mise en production s'est faite fin mai 2024 après avoir développé toutes les fonctionnalités nécessaires afin d'obtenir un produit utilisable. </p>
 <h3 id="phase-de-run-ou-plutot-de-build-actif" class="anchor-title"><a href="#phase-de-run-ou-plutot-de-build-actif">Phase de run ou plutôt de build actif</a></h3>
@@ -365,11 +372,11 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
 <h2 id="la-marque-blanche" class="anchor-title"><a href="#la-marque-blanche">La marque blanche</a></h2>
 <h3 id="le-principe-d-une-nouvelle-marque-blanche" class="anchor-title"><a href="#le-principe-d-une-nouvelle-marque-blanche">Le principe d'une nouvelle marque blanche</a></h3>
 <p>Qui dit marque blanche dit <strong>personnalisation</strong>. Couleurs, logos, titres, ... le design des marques blanches de MyJob.Company est <strong>configurable</strong> pour correspondre à l’identité de chaque client. De nombreuses fonctionnalités sont activables et paramètrables par marque blanche selon l’expérience utilisateur souhaitée. MyJob.Company propose également l’intégration avec de nombreux acteurs du marché afin de mettre à disposition une interopérabilité avec les <strong>SI</strong> de ses clients.</p>
-<p>À long terme, MyJob.Company a pour ambition de rendre <strong>autonomes</strong> les clients dans la création et la configuration de leur propre marque blanche. Actuellement, c'est aux administrateur MJC de les créer. Ainsi, un espace admin a été conçu, permettant à MyJob.Company de créer et piloter la gestion de leurs nouveaux clients. </p>
-<p>Une fois son accès créé, le client est autonome sur la création et la gestion de son espace (offres d'emploi, candidats, recruteurs, coopteurs, traitement des candidatures etc.) et le fonctionnement que l'on connaît déjà à travers MyJob.Company reste le même. </p>
+<p>À long terme, MyJob.Company a pour ambition de rendre <strong>autonomes</strong> les clients dans la création et la configuration de leur propre marque blanche. Actuellement, c'est aux administrateurs MJC de les créer. Ainsi, un espace admin a été conçu, permettant à MyJob.Company de créer et piloter la gestion de leurs nouveaux clients. </p>
+<p>Une fois son accès créé, le client est autonome sur la création et la gestion de son espace (offres d'emploi, candidats, recruteurs, coopteurs, traitement des candidatures, etc.) et le fonctionnement que l'on connaît déjà à travers MyJob.Company reste le même. </p>
 <p>Les contraintes étaient les suivantes :</p>
 <ul>
-<li>Cloisonnement des données entre marque blanches</li>
+<li>Cloisonnement des données entre marques blanches</li>
 <li>Personnalisation du design par marque blanche</li>
 <li>Activation et paramètrage des fonctionnalités par marque blanche (feature flags)</li>
 </ul>
@@ -382,13 +389,16 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
 </figure>
 <h3 id="la-cooptation-interne" class="anchor-title"><a href="#la-cooptation-interne">La cooptation interne</a></h3>
 <p>La <strong>cooptation</strong> est le coeur de métier de MyJob.Company. Il consiste à proposer à tout un chacun de recommander des proches, des connaissances ou des membres de son réseau professionnel pour des offres d’emploi. Les recruteurs touchent ainsi un public différent de celui des jobboards classiques. Les coopteurs (c’est comme cela que l'on appelle les utilisateurs de la plateforme) obtiennent une prime lorsque leur recommandation débouche sur une embauche.</p>
-<p>La cooptation interne reprend ce principe mais à l’échelle d’une unique entreprise ou d’un groupe. Les coopteurs sont les employés de cette entreprise et les offres d’emploi sont des postes à pourvoir dans l’entreprise. MyJob.Company propose donc son expérience du recrutement par cooptation en marque blanche permettant aux entreprises de mobiliser les réseaux de l’ensemble de ses employés pour dynamiser ses recrutements.</p>
+<p>La cooptation interne reprend ce principe mais à l’échelle d’une unique entreprise ou d’un groupe. Les coopteurs sont les employés de cette entreprise et les offres d’emploi sont des postes à pourvoir dans l’entreprise. MyJob.Company propose donc son expérience du recrutement par cooptation en marque blanche, permettant aux entreprises de mobiliser les réseaux de l’ensemble de leurs employés pour dynamiser leurs recrutements.</p>
 <p>La cooptation interne peut être également utilisée pour favoriser la <strong>mobilité interne</strong>. Les employés ayant accès aux offres d’emploi de leur entreprise, ils peuvent soit eux-mêmes postuler pour changer de poste, soit recommander un collègue qui souhaite rester dans l’entreprise mais changer de poste.</p>
 <p>Les contraintes étaient les suivantes :</p>
 <ul>
 <li>Possibilité de faire une plateforme privée, accessible uniquement aux employés de l’entreprise</li>
 <li>Permettre l’interfaçage avec le SI de l’entreprise (connexion ATS, import des offres, etc)</li>
 </ul>
+<blockquote>
+<p>L’équipe avec laquelle je collabore est bonne dans le conseil et le développement pur. Souvent même le résultat dépasse nos attentes ! Ils sont réactifs sur des sujets urgents, au-delà d’être de bon conseil.</p>
+</blockquote>
 
             <h2 class="h2--dash">La tribu</h2>
             <p>Voici les personnes de l'équipe qui ont contribué au projet.</p>
@@ -420,8 +430,7 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
                         </a>
                     </li>
                                                         <li class="project-team__member" data-aos="fade-in" data-aos-delay="450">
-                        <a                                href="/elao_/pr/628/equipe/adefrance"
-                            >
+                        <a>
                             <img     src="/elao_/pr/628/%2E%2E/../resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg"
     srcset="
         /elao_/pr/628/%2E%2E/../resized/content/images/members/avatars/adefrance.jpg/c3476f2098a7c67170dae13520b095e0.jpg 1x,
@@ -449,30 +458,30 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
             <h2 class="h2--dash">D'autres études de cas</h2>
             <ul class="article-list">
                                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="150">
-                        <a href="/elao_/pr/628/etudes-de-cas/spine" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a6cdb51f5c9971245c1aab30e4be00c7.jpg');
+                        <a href="/elao_/pr/628/etudes-de-cas/vimeet" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/bd4d2663b4cd5f22848dd46167610591.png');
     background: #f1f1f1 -webkit-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a6cdb51f5c9971245c1aab30e4be00c7.jpg') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a435c60fdbd4aa2b9632ba425d81e018.jpg') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/bd4d2663b4cd5f22848dd46167610591.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/7ad7a1256956e743ebc6819c83f2b6bd.png') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a6cdb51f5c9971245c1aab30e4be00c7.jpg') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a435c60fdbd4aa2b9632ba425d81e018.jpg') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/bd4d2663b4cd5f22848dd46167610591.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/7ad7a1256956e743ebc6819c83f2b6bd.png') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a6cdb51f5c9971245c1aab30e4be00c7.jpg') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a435c60fdbd4aa2b9632ba425d81e018.jpg') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/bd4d2663b4cd5f22848dd46167610591.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/7ad7a1256956e743ebc6819c83f2b6bd.png') 2x
     );
     background: #f1f1f1 image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a6cdb51f5c9971245c1aab30e4be00c7.jpg') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/headers/spine-banner.jpg/a435c60fdbd4aa2b9632ba425d81e018.jpg') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/bd4d2663b4cd5f22848dd46167610591.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/vimeet-gdr.png/7ad7a1256956e743ebc6819c83f2b6bd.png') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Université de Bordeaux</span>
-                            <a href="/elao_/pr/628/etudes-de-cas/spine" class="title">Spine</a>
-                            <p class="description">Une application tablette qui permet au grand public d’annoter des IRM du cerveau pour faire avancer la recherche.</p>
-                            <a href="/elao_/pr/628/etudes-de-cas/spine" class="btn btn--secondary btn--animated">
+                            <span class="info">Proximum Group</span>
+                            <a href="/elao_/pr/628/etudes-de-cas/vimeet" class="title">Vimeet</a>
+                            <p class="description">Vimeet permet l&#039;organisation d&#039;événements et la planification de rendez-vous d&#039;affaires B2B.</p>
+                            <a href="/elao_/pr/628/etudes-de-cas/vimeet" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">
@@ -484,30 +493,30 @@ L'équipe Elao continue d'avancer quotidiennement sur le projet en collaboration
                         </div>
                     </li>
                                         <li class="miniature miniature--large" data-aos="fade-in" data-aos-delay="300">
-                        <a href="/elao_/pr/628/etudes-de-cas/onsort" class="miniature__image">
-                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/1bf4809d447fb784ff5430ee50eb2b17.png');
+                        <a href="/elao_/pr/628/etudes-de-cas/panneaupocket" class="miniature__image">
+                            <span class="image" style="background: #f1f1f1 url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/e32bfdf3df61d50cc4e3075dc36bedca.png');
     background: #f1f1f1 -webkit-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/1bf4809d447fb784ff5430ee50eb2b17.png') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/0647615bcb7ca58e309a6a282765bd9a.png') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/e32bfdf3df61d50cc4e3075dc36bedca.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/816c6495bc159132c90bcc060b776459.png') 2x
     );
     background: #f1f1f1 -moz-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/1bf4809d447fb784ff5430ee50eb2b17.png') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/0647615bcb7ca58e309a6a282765bd9a.png') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/e32bfdf3df61d50cc4e3075dc36bedca.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/816c6495bc159132c90bcc060b776459.png') 2x
     );
     background: #f1f1f1 -ms-image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/1bf4809d447fb784ff5430ee50eb2b17.png') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/0647615bcb7ca58e309a6a282765bd9a.png') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/e32bfdf3df61d50cc4e3075dc36bedca.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/816c6495bc159132c90bcc060b776459.png') 2x
     );
     background: #f1f1f1 image-set(
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/1bf4809d447fb784ff5430ee50eb2b17.png') 1x,
-        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/on-sort-tablet.png/0647615bcb7ca58e309a6a282765bd9a.png') 2x
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/e32bfdf3df61d50cc4e3075dc36bedca.png') 1x,
+        url('/elao_/pr/628/%2E%2E/../resized/content/images/casestudies/panneaupocket-web.png/816c6495bc159132c90bcc060b776459.png') 2x
     );"></span>
                         </a>
                         <div class="miniature__content">
-                            <span class="info">Mairie d&#039;Orléans</span>
-                            <a href="/elao_/pr/628/etudes-de-cas/onsort" class="title">On sort !</a>
-                            <p class="description">L&#039;application On Sort ! est un agenda des sorties dans la métropole orléanaise. Les organisateurs peuvent suggérer leurs événements en quelques clics.</p>
-                            <a href="/elao_/pr/628/etudes-de-cas/onsort" class="btn btn--secondary btn--animated">
+                            <span class="info">PanneauPocket</span>
+                            <a href="/elao_/pr/628/etudes-de-cas/panneaupocket" class="title">PanneauPocket</a>
+                            <p class="description">PanneauPocket est une solution mobile et web permettant aux mairies et acteurs de la vie publique de communiquer des informations essentielles et des alertes aux habitants.</p>
+                            <a href="/elao_/pr/628/etudes-de-cas/panneaupocket" class="btn btn--secondary btn--animated">
                                 <span>
                                     Voir l'étude de cas
                                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 40 20">

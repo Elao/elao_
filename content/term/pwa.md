@@ -3,7 +3,8 @@ name: "PWA"
 logo: "build/images/technos/pwa.svg"
 title: 
     - "Progressive Web App"
-articles: []
+articles:
+    - "tech/native-application-or-pwa"
 titleSeo: "Développement PWA, accompagnement et expertise - Elao (Lyon)"
 metaDescription : "Chez Elao, nous développons des Progressive Web Apps (PWA). Nous pouvons réaliser votre projet ou accompagner vos équipes à Lyon."
 ---

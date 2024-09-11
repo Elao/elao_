@@ -18,10 +18,9 @@ images: ["content/images/casestudies/mjc-marqueblanche/ecran-dashboard-mjc.jpg"]
 
 ## Le contexte du projet
 
-MyJob.Companny est une agence spécialisée dans le **recrutement** via la **cooptation** (technique de recrutement qui consiste à recommander un profil de son réseau). <a href="https://www.elao.com/etudes-de-cas/mjc" target="blank">Cliente d’Elao depuis plusieurs années</a>, MJC nous a contactés dans le but de faire évoluer <a href="https://myjob.company/" target="blank">son produit</a> en proposant des fonctionnalités de **marque blanche** et de cooptation interne. 
+MyJob.Company est une plateforme de **mise en relation** entre les candidats et les recruteurs basée sur la **cooptation** (technique de recrutement qui consiste à recommander un profil de son réseau). <a href="https://www.elao.com/etudes-de-cas/mjc" target="blank">Cliente d’Elao depuis plusieurs années</a>, MJC nous a contactés dans le but de faire évoluer <a href="https://myjob.company/" target="blank">son produit</a> en proposant des fonctionnalités de **marque blanche** et de cooptation interne.
 
-
-Face à un besoin qui se fait ressentir en interne et à une concurrence proposant des services de cooptation interne en marque blanche, il est apparu naturel pour MyJob.Companny de s'ouvrir à ce marché. À cela, s'ajoute le besoin de diversifier leur **modèle économique**, de capitaliser sur leur expérience du recrutement par cooptation et sur le développement réalisé dans le cadre du **jobboard** MyJob.Company. 
+Face à une demande croissante de leurs clients et à une concurrence proposant des services de cooptation interne en marque blanche, il est apparu naturel pour MyJob.Companny de s'ouvrir à ce marché. À cela, s'ajoute le besoin de diversifier leur **modèle économique**, de capitaliser sur leur expérience du recrutement par cooptation et sur le développement réalisé dans le cadre du **jobboard** MyJob.Company. 
 
 En parallèle, après avoir constaté que plus de la moitié de leur trafic provenait du **mobile**, MyJob.Company a saisi l'occasion de ce projet en marque blanche pour repenser l'**interface** de MyJob.Company en privilégiant une conception "mobile first".
 
@@ -40,7 +39,7 @@ La société a donc confié à Elao la conception et le développement de cette 
 
 Comme a l'accoutumée, Elao a mis en place plusieurs ateliers de recueil du besoin afin de cadrer plus précisément les attentes et le périmètre du projet. 
 
-Tatiana, PO du projet, a réalisé en amont des **wireframes** permettant d'exprimer les besoins et les grandes fonctionnalités attendues. 
+Tatiana, Product Owner du chez MyJob.Company, a réalisé en amont des **wireframes** permettant d'exprimer les besoins et les grandes fonctionnalités attendues. 
 C'est ensuite la société <a href="https://www.bien-fonde.com/fr/" target="blank">Bien Fondé</a> qui a pris le relais et qui a réalisé les **parcours utilisateurs** (UX) ainsi que les **maquettes** (UI) des écrans principaux, en mobile et en desktop. 
 
 En parallèle, nous avons conçu le board projet, le **backlog** avec les différents tickets composant les grandes fonctionnalités et les **itérations** de la marque blanche. 
@@ -79,7 +78,7 @@ Les nouvelles applications étant alimentées par la même source de données qu
 
 ### Phase de mise en production 
 
-La mise en production s'est faite fin mai 2024 après avoir développé toutes les fonctionnalités nécessaires afin d'obtenir un produit utilisable. 
+La mise en production s'est faite fin mai 2024 après avoir développé toutes les fonctionnalités nécessaires afin d'obtenir un produit opérationnel. 
 
 ### Phase de run ou plutôt de build actif 
 
@@ -130,4 +129,5 @@ Les contraintes étaient les suivantes :
 * Possibilité de faire une plateforme privée, accessible uniquement aux employés de l’entreprise
 * Permettre l’interfaçage avec le SI de l’entreprise (connexion ATS, import des offres, etc)
 
-> L’équipe avec laquelle je collabore est bonne dans le conseil et le développement pur. Souvent même le résultat dépasse nos attentes ! Ils sont réactifs sur des sujets urgents, au-delà d’être de bon conseil. — Tatiana
+> L’équipe avec laquelle je collabore est compétente dans le conseil et le développement pur. Souvent même le résultat dépasse nos attentes ! Ils sont réactifs sur des sujets urgents, au-delà d’être de bon conseil. 
+> — Tatiana

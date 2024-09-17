@@ -48,7 +48,7 @@ Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https:
 
 Nous recherchons un·e **développeur·euse front** spécialisé·e dans les **interfaces**, à l’aise avec les 
 **design systems** et les **frameworks UI** dans un environnement **React/TypeScript**.   
-Nous avons besoin d’un·e collaborateur·rice capable de **structurer
+Nous avons besoin d’un·e collaborateur·rice avec une culture web et un bon bagage technique, capable de **structurer
 et d’accompagner l’équipe sur les problématiques UI/UX** tout en apportant un regard critique sur nos pratiques.
 
 Nos développeur·euses, spécialisé·es sur la partie fonctionnelle, ont besoin d’un cadre pour **exploiter et maintenir
@@ -63,11 +63,11 @@ Vos missions :
 - Cadrer et normaliser les interfaces pour améliorer la DX, et garantir efficacité et plaisir dans le travail sur les
   projets
 
-Les savoirs que nous aimerions retrouver sont les suivants :
+Ce que nous aimerions retrouver chez vous :
 
-- Étre à l'aise avec **React**, **TypeScript** et son écosystème
-- De l'expérience avec des **Design System**
-- A déjà utilisé des framework UI et/ou composants headless et CSS-in-JS (_MUI, Tailwind, Emotion, ..._)
+- Être à l'aise avec **React**, **TypeScript** et son écosystème
+- De l'expérience et de l'intérêt pour les **Design System**
+- Avoir déjà utilisé des frameworks UI et/ou composants headless ainsi que du CSS-in-JS (_MUI, Tailwind, Emotion, ..._)
 - Une appétence **UI/UX**
 
 Si en plus de ça, vous avez une expérience des éléments suivants, ce serait notre petite cerise sur le gâteau 🍒 :

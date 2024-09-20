@@ -15,7 +15,7 @@ Chez Elao, lors de l’élaboration d’un projet, on se pose les bonnes questio
 
 Il est nécessaire de prendre le temps de répondre à ces questions, en proposant notamment des **ateliers UX**. Lors de ces ateliers, le but est d’adapter le parcours que l’on va proposer sur notre solution, en fonction des **attentes de la cible**.
 
-Une autre manière d’avancer sur la partie UX, est d’aller directement à la rencontre de vos **personas**, de recueillir leurs besoins afin de co-construire la meilleure application possible. Ils pourront vous faire part des difficultés potentiellement rencontrées sur votre solution, des points de frictions, des éléments attendus qu’ils ne retrouvent pas aujourd’hu, etc.
+Une autre manière d’avancer sur la partie UX, est d’aller directement à la rencontre de vos **personas**, de recueillir leurs besoins afin de co-construire la meilleure application possible. Ils pourront vous faire part des difficultés potentiellement rencontrées sur votre solution, des points de frictions, des éléments attendus qu’ils ne retrouvent pas aujourd’hui, etc.
 
 Vous pouvez également mettre en place des **tests utilisateurs** afin d’analyser le comportement face à votre solution fonctionnelle. Pour cela, vous pouvez utiliser un prototype, une application déjà existante en ligne ou en staging (votre environnement de test) auprès de béta testeurs, ou encore rencontrer vos utilisateurs sur le terrain pour bien cerner l’utilisation qu’ils font de votre solution.
 

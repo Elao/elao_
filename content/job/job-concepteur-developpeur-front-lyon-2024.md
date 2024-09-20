@@ -2,7 +2,7 @@
 title:
     - "Nous recherchons"
     - "un·e développeur·euse front-end"
-description:     "Nous recherchons un·e développeur·euse front-end d'applications web"
+description:     "Nous recherchons un·e développeur·euse d'interfaces, ayant une expérience des design systems dans un écosystème React"
 date:            "2024-07-29"
 active:          true
 contractType:    CDI
@@ -16,15 +16,22 @@ remunerationMax: 45000
 
 # Qui sommes-nous ?
 
-Elao est une agence tech qui aide les entreprises à gagner du temps, optimiser leurs process ou déployer leur business en développant des **applications web ou mobile sur-mesure** avec une vraie compréhension des métiers et de leurs spécificités.
+Elao est une agence tech qui aide les entreprises à gagner du temps, optimiser leurs process ou déployer leur business
+en développant des **applications web ou mobile sur-mesure** avec une vraie compréhension des métiers et de leurs
+spécificités.
 
-Nous sommes une équipe d'**experts engagés**, réunis par des **valeurs humaines communes** dont le but est d'accompagner nos clients sur leurs problématiques en leur délivrant, de manière efficace, un maximum de valeur ajoutée afin de les aider dans le conception de leur projet. Nous apprécions particulièrement les projets de 3 à 6 mois confiés et pris en charge par une équipe dédiée.
+Nous sommes une équipe d'**experts engagés**, réunis par des **valeurs humaines communes** dont le but est d'accompagner
+nos clients sur leurs problématiques en leur délivrant, de manière efficace, un maximum de valeur ajoutée afin de les
+aider dans le conception de leur projet. Nous apprécions particulièrement les projets de 3 à 6 mois confiés et pris en
+charge par une équipe dédiée.
 
-En bref, nous sommes une équipe expérimentée, fidèle, agile, soucieuse de prendre plaisir dans notre travail quotidien et nos projets clients, tout en innovant et en restant attentifs aux sujets tech de demain.
+En bref, nous sommes une équipe expérimentée, fidèle, agile, soucieuse de prendre plaisir dans notre travail quotidien
+et nos projets clients, tout en innovant et en restant attentifs aux sujets tech de demain.
 
 # Notre, votre mission
 
-Afin de renforcer notre équipe et de nous aider à répondre au mieux à nos clients, nous sommes à la recherche d'un nouveau membre de notre Magic Team ✨.
+Afin de renforcer notre équipe et de nous aider à répondre au mieux à nos clients, nous sommes à la recherche d'un
+nouveau membre de notre Magic Team ✨.
 
 **Notre mission quotidienne ?**
 
@@ -33,24 +40,37 @@ Afin de renforcer notre équipe et de nous aider à répondre au mieux à nos cl
 - Réaliser dans le respect de la **qualité** et de la **satisfaction** des utilisateurs
 - Travailler de manière « agile » avec une bonne dose de **pragmatisme**
 
-Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à bien en interne avec toute la proximité nécessaire avec nos clients.
+Nous travaillons sur des projets à forte orientation applicative et technique. Les projets sont principalement menés à
+bien en interne avec toute la proximité nécessaire avec nos clients.
 Vous pouvez découvrir quelques projets et leurs études de cas par [ici](https://www.elao.com/nos-experiences/).
 
 ## Votre savoir-faire
 
-Nous recherchons **un·e développeur·euse front expérimenté·e avec un background technique solide et une sensibilité pour le design, l'UI/UX**.
-Avant tout, nous avons besoin d'un· e collaborateur·rice capable de nous fournir une direction cohérente, d'**être lead sur le front** en prenant en considération les démarches mises en place jusqu'à présent, tout en nous challengeant.
+Nous recherchons un·e **développeur·euse front** spécialisé·e dans les **interfaces**, à l’aise avec les 
+**design systems** et les **frameworks UI** dans un environnement **React/TypeScript**.   
+Nous avons besoin d’un·e collaborateur·rice avec une culture web et un bon bagage technique, capable de **structurer
+et d’accompagner l’équipe sur les problématiques UI/UX** tout en apportant un regard critique sur nos pratiques.
 
-Les savoirs que nous aimerions retrouver sont les suivants :
+Nos développeur·euses, spécialisé·es sur la partie fonctionnelle, ont besoin d’un cadre pour **exploiter et maintenir
+les composants UI à travers les projets**, assurant une cohérence sur toute la durée de vie de ceux-ci, notamment pour
+**améliorer l’expérience développeur (DX)**.
 
-- Des connaissances avancées sur **React** et son écosystème
-- Design System
-- Typescript
-- **UI/UX** et maquettes/wireframes (Figma, ...)
-- Framework UI, composants headless et CSS-in-JS (MUI, Tailwind, Emotion, ...)
-- Environnement GIT
+Vos missions :
 
-Si en plus de ça, vous avez une maîtrise des éléments suivants, ce serait notre petite cerise sur le gâteau 🍒 :
+- Structurer et maintenir le design system des projets
+- Accompagner le client et l’équipe sur les problématiques UI/UX
+- Augmenter la qualité des interfaces (_UX, accessibilité, performances_)
+- Cadrer et normaliser les interfaces pour améliorer la DX, et garantir efficacité et plaisir dans le travail sur les
+  projets
+
+Ce que nous aimerions retrouver chez vous :
+
+- Être à l'aise avec **React**, **TypeScript** et son écosystème
+- De l'expérience et de l'intérêt pour les **Design System**
+- Avoir déjà utilisé des frameworks UI et/ou composants headless ainsi que du CSS-in-JS (_MUI, Tailwind, Emotion, ..._)
+- Une appétence **UI/UX**
+
+Si en plus de ça, vous avez une expérience des éléments suivants, ce serait notre petite cerise sur le gâteau 🍒 :
 - React Native
 - Tests E2E (Playwright, Cypress, ...)
 - Tests unitaires (Vitest, Jest, ...)
@@ -58,10 +78,12 @@ Si en plus de ça, vous avez une maîtrise des éléments suivants, ce serait no
 - Client Apollo
 - Des notions de PWA (Progressive Web Apps)
 - Storybook
+- Maquettes/wireframes (Figma, ...)
 
-Vous participerez également aux différents ateliers de réflexion technique afin de **conseiller** les clients dans les meilleurs choix à faire pour leur projet.
+Vous participerez également aux différents **ateliers de conception** afin de **conseiller** les clients dans
+les meilleurs choix à faire pour leur projet.
 
-## Ce que nous allons aimer chez vous par dessus tout
+## Ce que nous allons aimer chez vous par-dessus tout
 
 - Votre **passion**
 - Votre **curiosité** avec un bel esprit d'équipe et une bonne capacité d'analyse

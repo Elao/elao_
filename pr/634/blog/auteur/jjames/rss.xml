@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Jérémy James, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Jérémy James de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/634/blog/auteur/jjames</link>
+        <pubDate>Thu, 26 Sep 2024 11:05:10 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/634/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Jérémy James, </title>
+            <link>https://elao.github.io/elao_/pr/634/blog/auteur/jjames</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/634/blog/auteur/jjames/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Comment bien préparer sa conférence ?</title>
+                <pubDate>Tue, 03 Jun 2014 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comment bien préparer sa conférence ? ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/634/blog/elao/hs-bien-preparer-sa-conference</guid>
+                <link>https://elao.github.io/elao_/pr/634/blog/elao/hs-bien-preparer-sa-conference</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/634/%2E%2E/../resized/content/images/blog/thumbnails/yosemite.jpg/f2e46c5643060c87ccf54c726a3d5fe3.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Comment bien préparer sa conférence ?</media:description>
+                                    </media:content>
+                                    <category>talk</category>
+                                    <category>aisance</category>
+                                    <category>conference</category>
+                                    <category>oral</category>
+                                    <category>preparation</category>
+                                            </item>
+            </channel>
+</rss>

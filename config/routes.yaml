@@ -27,6 +27,11 @@ errors_404:
         stenope:
             sitemap: false
 
+# Redirect some old URLs to new ones
+redirects:
+    resource: routes/redirects.yaml
+
+# Main app controllers
 controllers:
     resource:
         path: ../src/Controller/

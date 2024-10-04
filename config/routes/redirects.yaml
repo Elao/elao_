@@ -1,0 +1,9 @@
+member_lilian:
+    # Initial member file was not respecting the naming convention.
+    # Redirecting to the correct one, since the URL was already shared.
+    path: /equipe/lilian
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+    defaults:
+        route: 'team_member'
+        member: 'lasse'
+        permanent: true

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Thu, 03 Oct 2024 09:01:15 +0000</pubDate>
+        <pubDate>Fri, 04 Oct 2024 09:51:04 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,24 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Lilian, alternant business developer</title>
+                <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Lilian se présente aujourd&#039;hui, en charge de la prospection, chez Elao depuis Août 2024. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/lilian-alternant-business-developer</guid>
+                <link>https://elao.github.io/elao_/blog/elao/lilian-alternant-business-developer</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2024/itw-lasse/banner.jpg/ab3eb1090617b79c61027b2248cc0065.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Lilian, alternant business developer</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
                     <item>
                 <title>La pratique du DDD au quotidien</title>
                 <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>

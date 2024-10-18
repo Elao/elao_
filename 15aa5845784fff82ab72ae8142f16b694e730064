@@ -1,0 +1,25 @@
+---------------------------------------------------------------------------
+
+by ogizanagi at 2024-10-18T09:11:31Z
+
+Tu as eu besoin de faire un update des dépendences ? (le package et composer lock ont été modifiés, d'où l'erreur en CI sur l'upgrade de php-cs-fixer).
+
+Si ce n'était pas nécessaire, autant les revert et on s'occupera des montées de versions dans une autre PR.
+
+---------------------------------------------------------------------------
+
+by ogizanagi at 2024-10-18T09:12:49Z
+
+Ou si tu veux le fixer ici: https://github.com/Elao/elao_/blob/0c3ce26df35efa7e1613498e48fc120f141acd42/.php-cs-fixer.dist.php#L30
+
+changer pour :
+
+```php
+'yoda_style' => ['equal' => null, 'identical' => null, 'less_and_greater' => null],
+```
+
+---------------------------------------------------------------------------
+
+by gfaivre at 2024-10-18T09:47:53Z
+
+Je ne sais pas ce que j'ai foutu, j'ai revert, tu as raison, ça mérite une PR dédiée.

@@ -25,12 +25,11 @@ MANALA_DOCKER_COMPOSE_ENV += \
 	MANALA_DIR=$(realpath $(MANALA_DIR)) \
 	MANALA_CACHE_DIR=$(realpath $(shell dir=$(MANALA_DIR)/$(MANALA_CACHE_DIR) ; mkdir -p $${dir} ; echo $${dir}))
 
-define manala_docker_command
-	$(manala_docker_compose) exec \
-		--user lazy \
-		$(1) \
-		system
-endef
+# Command
+MANALA_DOCKER_COMMAND = exec --user lazy
+MANALA_DOCKER_COMMAND_SERVICE = system
+
+# Services
 
 ##########
 # System #
@@ -41,11 +40,11 @@ ifndef MANALA_DOCKER
 
 MANALA_HELP += $(call manala_help_section, System)
 
-MANALA_HELP += $(call manala_help,up,   Create and start local system (WAIT))
+MANALA_HELP += $(call manala_help,up,   Create and start local system (WAIT|DEBUG))
+up: MANALA_DOCKER_DEBUG = $(if $(DEBUG),1)
 up:
 	@$(call manala_log, Builds$(,) creates and starts docker containers…)
 	$(manala_docker_compose) up \
-		--build \
 		$(if $(WAIT), --wait)
 .PHONY: up
 
@@ -55,9 +54,14 @@ stop:
 	$(manala_docker_compose) stop
 .PHONY: stop
 
-MANALA_HELP += $(call manala_help,sh,   Open a local system shell)
+MANALA_HELP += $(call manala_help,sh,   Shell to local system (DIR))
+sh: MANALA_DOCKER_COMMAND_DIR ?= $(if $(findstring command line,$(origin DIR)),$(DIR))
 sh:
-	$(manala_docker_command) bash --login
+	if [ ! -t 0 ] ; then \
+		$(call manala_docker_command, --no-TTY) sh -s ; \
+	else \
+		$(manala_docker_command) bash --login ; \
+	fi
 .PHONY: sh
 
 MANALA_HELP += $(call manala_help,clean,Clean local system)
@@ -72,7 +76,7 @@ clean:
 	$(manala_docker) images \
 		--filter reference='elao:*' \
 		--format "{{.ID}}" \
-			| xargs $(manala_docker) rmi --force
+			| xargs -r $(manala_docker) rmi --force
 	@$(call manala_log, Delete cache dir…)
 	rm -Rf $(MANALA_DIR)/$(MANALA_CACHE_DIR)
 .PHONY: clean

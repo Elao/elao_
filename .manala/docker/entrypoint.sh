@@ -2,18 +2,28 @@
 
 set -e
 
-# If ssh-agent bind differs from sock, establish an unprivileged relay
-if [ -n "${SSH_AUTH_SOCK}" ] && [ -n "${MANALA_SSH_AUTH_SOCK_BIND}" ] && [ "${SSH_AUTH_SOCK}" != "${MANALA_SSH_AUTH_SOCK_BIND}" ]; then
-  socat \
-    UNIX-LISTEN:"${SSH_AUTH_SOCK}",fork,mode=777 \
-    UNIX-CONNECT:"${MANALA_SSH_AUTH_SOCK_BIND}" &
+# Ssh agent bridge
+if [ -n "${SSH_AUTH_SOCK}" ]; then
+  sh -c " \
+    while sleep 1; do \
+      rm -f /var/run/ssh-auth-bridge.sock ;
+      socat \
+        UNIX-LISTEN:/var/run/ssh-auth-bridge.sock,fork,mode=777 \
+        UNIX-CONNECT:/var/run/ssh-auth.sock ; \
+    done \
+  " &
 fi
 
-# If docker bind differs from sock, establish an unprivileged relay
-if [ -n "${MANALA_DOCKER_SOCK}" ] && [ -n "${MANALA_DOCKER_SOCK_BIND}" ] && [ "${MANALA_DOCKER_SOCK}" != "${MANALA_DOCKER_SOCK_BIND}" ]; then
-  socat -t600 \
-    UNIX-LISTEN:"${MANALA_DOCKER_SOCK}",fork,mode=777 \
-    UNIX-CONNECT:"${MANALA_DOCKER_SOCK_BIND}" &
+# Docker bridge
+if [ -n "${DOCKER_HOST}" ]; then
+  sh -c " \
+    while sleep 1; do \
+      rm -f /var/run/docker-bridge.sock ;
+      socat -t 600 \
+        UNIX-LISTEN:/var/run/docker-bridge.sock,fork,mode=777 \
+        UNIX-CONNECT:/var/run/docker.sock ; \
+    done \
+  " &
 fi
 
 # As a consequence of running the container as root user,

@@ -22,7 +22,7 @@ Install the dependencies using
 make install
 ```
 
-> **Note**
+> [!Note]
 > You're done! **Next:** see how to [serve the app](#dev).
 
 <details>
@@ -42,7 +42,7 @@ Then, log into the container using
 make sh
 ```
 
-> **Warning**
+> [!Warning]
 > When **using Docker**, you must use `make sh`
 > to log into the container before running any command.
 
@@ -65,7 +65,7 @@ make serve
 
 The Symfony CLI exposes you the URL at which the site is available.
 
-> **Note**
+> [!Note]
 > When using a local install, `make serve` is enough to serve both PHP app and assets.  
 > You're ready to dev!
 
@@ -80,7 +80,7 @@ When using a Docker install, serve the PHP application using:
 make up
 ```
 
-> **Warning**
+> [!Warning]
 > The site is now available at http://localhost:8000, but you need to build or serve the assets.
 
 For development purposes, start a Webpack dev-server using:

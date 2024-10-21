@@ -4,7 +4,7 @@ title:
     - "un·e développeur·euse front-end"
 description:     "Nous recherchons un·e développeur·euse d'interfaces, ayant une expérience des design systems dans un écosystème React"
 date:            "2024-07-29"
-active:          true
+active:          false
 contractType:    CDI
 place:           "Lyon, télétravail partiel possible"
 hiringDate:      ~

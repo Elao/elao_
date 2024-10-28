@@ -1,0 +1,29 @@
+active: true
+#🚲: true # velo-taffeur
+
+# Bio
+name: Paul-Émile Moreau
+pseudo: ~
+#gender: female
+bio: |
+    Lorem ipsum
+    Color sit amet
+    consectetur […]
+position: Frontend Developer
+integrationDate: 28-10-2024
+
+# Social
+website: ~
+twitter: ~ # your username
+github: ~ # your username
+email: ~
+avatar: content/images/members/avatars/pmoreau.jpg
+
+#certifications:
+#    - symfony
+#    - opquast
+
+emojis:
+    - 🎲
+    - 🎮
+    - 📷

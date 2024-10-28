@@ -53,9 +53,6 @@ class Member
     /** Vélotafeur */
     public bool $🚲 = false;
 
-    /** Use an anonymous team picture */
-    public bool $anonymousTeamPicture = false;
-
     public ?\DateTime $integrationDate = null;
     public ?\DateTimeInterface $lastModified = null;
 
@@ -70,7 +67,7 @@ class Member
 
     public function getTeamPicture(): string
     {
-        return sprintf('content/images/members/%s.jpg', $this->anonymousTeamPicture ? 'default' : $this->slug);
+        return sprintf('content/images/members/%s.jpg', $this->slug);
     }
 
     public function getAvatar(): ?string

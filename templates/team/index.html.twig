@@ -74,7 +74,7 @@
                                         {% set certif = content_get('App\\Model\\Certification', c) %}
                                         <span class="certification">
                                             <img src="{{ asset(certif.logoPath) }}" alt="" />
-                                            <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} <span>{{ certif.title|u.title }}</span></p>
+                                            <p>{{ 'certification_description'|trans({ member_gender: member.gender }) }} {{ certif.title|u.title }}</p>
                                         </span>
                                     {% endfor %}
                                 </a>

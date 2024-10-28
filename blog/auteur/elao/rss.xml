@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/elao</link>
-        <pubDate>Mon, 28 Oct 2024 12:18:15 +0000</pubDate>
+        <pubDate>Mon, 28 Oct 2024 13:06:10 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,24 @@
             <link>https://elao.github.io/elao_/blog/auteur/elao</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/elao/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Emmanuelle, alternante en Direction Artistique</title>
+                <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/emmanuelle-alternante-direction-artistique</guid>
+                <link>https://elao.github.io/elao_/blog/elao/emmanuelle-alternante-direction-artistique</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2024/itw-emmanuelle/banner.jpg/428dd54ae4f0ff2420f9e65a707734fe.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Emmanuelle, alternante en Direction Artistique</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
                     <item>
                 <title>Lilian, alternant business developer</title>
                 <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>

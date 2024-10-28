@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Django (2nde partie) : le Modèle et l’Admin</title>
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/elao_/pr/639/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/elao_/pr/639/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/elao_/pr/639/favicon-16x16.png">
+        <link rel="manifest" href="/elao_/pr/639/site.webmanifest">
+        <link rel="mask-icon" href="/elao_/pr/639/safari-pinned-tab.svg" color="#ff4344">
+        <link rel="shortcut icon" href="/elao_/pr/639/favicon.ico">
+        <meta name="msapplication-TileColor" content="#ff4344">
+        <meta name="msapplication-config" content="/elao_/pr/639/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+
+                    <meta name="description" content="Django (2nde partie) : le Modèle et l’Admin" />
+            <link rel="canonical" href="https://elao.github.io/elao_/pr/639/blog/dev/django-2nde-partie-le-modele-et-ladmin" />
+
+            <!-- Open Graph / Facebook -->
+            <meta property="og:title" content="Django (2nde partie) : le Modèle et l’Admin" />
+            <meta property="og:locale" content="fr" />
+            <meta property="og:description" content="Django (2nde partie) : le Modèle et l’Admin" />
+            <meta property="og:url" content="https://elao.github.io/elao_/pr/639/blog/dev/django-2nde-partie-le-modele-et-ladmin" />
+            <meta property="og:site_name" content="elao_" />
+
+                                        <meta property="og:image" content="https://elao.github.io/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg">
+            
+            <!-- Twitter -->
+            <meta property="twitter:card" content="summary_large_image">
+            <meta property="twitter:title" content="Django (2nde partie) : le Modèle et l’Admin">
+            <meta property="twitter:description" content="Django (2nde partie) : le Modèle et l’Admin">
+            <meta property="twitter:site" content="@elao">
+            <meta property="twitter:creator" content="@elao">
+                                        <meta property="twitter:image" content="https://elao.github.io/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/1f736f5fde3845b1e613e001cdf5bb68.jpg">
+                            <link rel="alternate" type="application/rss+xml" href="/elao_/pr/639/blog/rss.xml" title="Le blog de l'équipe d'Elao" />
+        
+                <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Django (2nde partie) : le Modèle et l’Admin",
+    "image": [
+        "https://elao.github.io/elao_/pr/639/blog/dev/content/images/blog/thumbnails/django.jpg"
+    ],
+    "datePublished": "2010-10-06T00:00:00+00:00",
+    "dateModified": "2010-10-06T00:00:00+00:00",
+    "author": [
+        {
+            "@type": "Person",
+            "name": "Xavier R",
+            "url": "https://elao.github.io/elao_/pr/639/equipe/xavierr"
+        }
+    ],
+    "keywords": [
+        "Django",
+        "Framework",
+        "Mvc",
+        "Python"
+    ]
+}
+    </script>
+    
+                            <meta name="robots" content="noindex" />
+        
+        <script>
+                        document.querySelector('html').classList.remove('no-js');
+        </script>
+
+                    <link rel="stylesheet" href="/elao_/pr/639/build/app.c7f452ba.css">
+        
+                        <script src="/elao_/pr/639/build/runtime.d5fd42aa.js" defer></script><script src="/elao_/pr/639/build/552.3082ae9c.js" defer></script><script src="/elao_/pr/639/build/769.7dfbbe52.js" defer></script><script src="/elao_/pr/639/build/app.d906f729.js" defer></script>
+
+                    
+
+    <script src="https://platform.twitter.com/widgets.js"></script>
+    <script async defer src="//platform.instagram.com/en_US/embeds.js"></script>
+
+    <script>
+        window.onload = (function(){
+            var tweets = document.querySelectorAll('.tweet-container');
+            tweets.forEach(function(tweet) {
+                // https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/guides/embedded-tweet-parameter-reference
+                twttr.widgets.createTweet(tweet.getAttribute('data-tweet-id'), tweet, {
+                    conversation: 'none',
+                    cards: 'hidden',
+                    theme: 'light',
+                    lang: 'fr',
+                    align: 'center',
+                    width: 550, // default
+                    dnt: true,
+                })
+            })
+        });
+    </script>
+
+        <!-- S.E.E. -->
+        <meta name="see" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;pr&#x5C;&#x2F;639&#x5C;&#x2F;build&#x5C;&#x2F;see.ace7bf9f.js&quot;&#x5D;">
+        <meta name="see_style" content="&#x5B;&quot;&#x5C;&#x2F;elao_&#x5C;&#x2F;pr&#x5C;&#x2F;639&#x5C;&#x2F;build&#x5C;&#x2F;see.d77e78f8.css&quot;&#x5D;">
+    </head>
+    <body
+        data-controller="swup-plugins symfony--ux-swup--swup swup-matomo" data-symfony--ux-swup--swup-containers-value="&#x5B;&quot;&#x23;main&quot;,&quot;&#x23;nav&quot;&#x5D;" data-symfony--ux-swup--swup-cache-value="true" data-symfony--ux-swup--swup-animate-history-browsing-value="true" data-symfony--ux-swup--swup-debug-value="false" data-symfony--ux-swup--swup-link-selector-value="a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;pr&#x2F;639&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;pr&#x2F;639&#x2F;_profiler&quot;&#x5D;&#x29;,a&#x5B;href&#x5E;&#x3D;&quot;&#x2F;&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;pr&#x2F;639&#x2F;_profiler&quot;&#x5D;&#x29;" data-swup-matomo-enabled-value="false">
+                    <header id="nav" class="header">
+                <div class="container">
+                    <!--
+                        Todo :
+                        - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
+                     -->
+                    <a href="/elao_/pr/639/">
+                        <span class="screen-reader">Django (2nde partie) : le Modèle et l’Admin</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
+                                <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
+                                    c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
+                                    c-0.2-7.9-4.1-10.9-11.3-10.9S20.7,41.8,19.6,49.3z"/>
+                                <path d="M71.2,0.1H90v86.5H71.2V0.1z"/>
+                                <path d="M166.1,24.7v61.8h-18.8V72.7c-3.5,9.8-10.5,15.1-20.4,15.1c-17.7,0-27.4-12.9-27.4-32
+                                    c0-19.4,9.3-32.2,26.2-32.2c10.5,0,18,5.4,21.6,15.6V24.7H166.1z M147.9,55.7c0-10.4-4.8-15.2-15.1-15.2c-9.9,0-14.6,4.8-14.6,15.2
+                                    c0,10.1,4.7,14.9,14.6,14.9C143.1,70.7,147.9,65.9,147.9,55.7L147.9,55.7z"/>
+                                <path d="M242.8,55.8c0,19.9-15.3,32-33.6,32s-33.6-12.1-33.6-32s15.3-32.2,33.6-32.2S242.8,35.8,242.8,55.8z M224,55.8
+                                    c0-10.4-4.7-15.2-14.8-15.2c-10.1,0-14.8,4.8-14.8,15.2c0,10.1,4.7,14.9,14.8,14.9S224,65.9,224,55.8L224,55.8z"/>
+                                <rect x="243.1" y="86.5" width="56.7" height="15"/>
+                            </svg>
+                                            </a>
+
+                                            <!-- Desktop nav -->
+                        <nav class="nav">
+                            <ul>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/nos-services/">
+                                                                                        <span>Services</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/demarche">
+                                                                                        <span>Démarche</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/etudes-de-cas">
+                                                                                        <span>Études de cas</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/nos-valeurs">
+                                                                                        <span>Valeurs</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/equipe">
+                                                                                        <span>L&#039;équipe</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item nav__item--active">
+                                        <a href="/elao_/pr/639/blog">
+                                                                                        <span>Blog</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav__item ">
+                                        <a href="/elao_/pr/639/contact">
+                                                                                            <i class="icon icon--contact" aria-hidden="true"></i>
+                                                                                        <span>Contact</span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    
+                                            <!-- Mobile nav -->
+                        <nav class="nav-mobile" data-controller="toggle">
+                            <div class="nav-mobile__header">
+                                <a href="/elao_/pr/639/">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
+                                <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
+                                    c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
+                                    c-0.2-7.9-4.1-10.9-11.3-10.9S20.7,41.8,19.6,49.3z"/>
+                                <path d="M71.2,0.1H90v86.5H71.2V0.1z"/>
+                                <path d="M166.1,24.7v61.8h-18.8V72.7c-3.5,9.8-10.5,15.1-20.4,15.1c-17.7,0-27.4-12.9-27.4-32
+                                    c0-19.4,9.3-32.2,26.2-32.2c10.5,0,18,5.4,21.6,15.6V24.7H166.1z M147.9,55.7c0-10.4-4.8-15.2-15.1-15.2c-9.9,0-14.6,4.8-14.6,15.2
+                                    c0,10.1,4.7,14.9,14.6,14.9C143.1,70.7,147.9,65.9,147.9,55.7L147.9,55.7z"/>
+                                <path d="M242.8,55.8c0,19.9-15.3,32-33.6,32s-33.6-12.1-33.6-32s15.3-32.2,33.6-32.2S242.8,35.8,242.8,55.8z M224,55.8
+                                    c0-10.4-4.7-15.2-14.8-15.2c-10.1,0-14.8,4.8-14.8,15.2c0,10.1,4.7,14.9,14.8,14.9S224,65.9,224,55.8L224,55.8z"/>
+                                <rect x="243.1" y="86.5" width="56.7" height="15"/>
+                            </svg>
+                        
+                                </a>
+                                <button class="nav-toggle nav-toggle--close">
+                                    <i class="icon icon--close" aria-hidden="true"></i>
+                                    <span class="screen-reader">Fermer le menu</span>
+                                </button>
+                            </div>
+                            <ul>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/pr/639/nos-services/">
+                                                                                        <span>Services</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/pr/639/demarche">
+                                                                                        <span>Démarche</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/pr/639/etudes-de-cas">
+                                                                                        <span>Études de cas</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/pr/639/nos-valeurs">
+                                                                                        <span>Valeurs</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  ">
+                                        <a href="/elao_/pr/639/equipe">
+                                                                                        <span>L&#039;équipe</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item nav-mobile__item--active ">
+                                        <a href="/elao_/pr/639/blog">
+                                                                                        <span>Blog</span>
+                                        </a>
+                                    </li>
+                                                                    <li class="nav-mobile__item  nav-mobile__item--large">
+                                        <a href="/elao_/pr/639/contact">
+                                                                                            <i class="icon icon--contact" aria-hidden="true"></i>
+                                                                                        <span>Contact</span>
+                                        </a>
+                                    </li>
+                                                            </ul>
+                        </nav>
+                        <button class="nav-toggle nav-toggle--open">
+                            <i class="icon icon--hamburger" aria-hidden="true"></i>
+                            <span class="screen-reader">Ouvrir le menu</span>
+                        </button>
+                                    </div>
+            </header>
+                <main id="main">
+                <div class="container">
+                                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/639/">
+                <span itemprop="name">Accueil</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/639/blog">
+                <span itemprop="name">Blog</span>
+            </a>
+            <meta itemprop="position" content="2" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/elao_/pr/639/blog/dev">
+                <span itemprop="name">Dev</span>
+            </a>
+            <meta itemprop="position" content="3" />
+        </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="#">
+                <span itemprop="name">Django (2nde partie) : le Modèle et l’Admin</span>
+            </a>
+            <meta itemprop="position" content="4" />
+        </li></ol>
+
+        
+        <div class="article-banner">
+            <div
+                class="article-banner__cover"
+                style="background: #f1f1f1 url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/54aec324e1babdef385173de2723c636.jpg');
+    background: #f1f1f1 -webkit-image-set(
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/54aec324e1babdef385173de2723c636.jpg') 1x,
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/b93305178723ab651b4b8464f099bac7.jpg') 2x
+    );
+    background: #f1f1f1 -moz-image-set(
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/54aec324e1babdef385173de2723c636.jpg') 1x,
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/b93305178723ab651b4b8464f099bac7.jpg') 2x
+    );
+    background: #f1f1f1 -ms-image-set(
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/54aec324e1babdef385173de2723c636.jpg') 1x,
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/b93305178723ab651b4b8464f099bac7.jpg') 2x
+    );
+    background: #f1f1f1 image-set(
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/54aec324e1babdef385173de2723c636.jpg') 1x,
+        url('/elao_/pr/639/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/b93305178723ab651b4b8464f099bac7.jpg') 2x
+    );"
+                data-aos="fade-down"
+            ></div>
+
+            <div class="article-info" data-aos="zoom-in">
+                                                    <div class="article-author ">
+                        <div class="article-author__image">
+                                                            <a href="/elao_/pr/639/blog/auteur/xavierr">
+                                    <img     src="/elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/401e4ebf653f048af7a31e583f17e399.jpg"
+    srcset="
+        /elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/401e4ebf653f048af7a31e583f17e399.jpg 1x,
+        /elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/483510c48265ecfc9142de1a8a2bc614.jpg 2x
+    "
+ />
+                                </a>
+                                                    </div>
+                        <span class="article-author__info">
+                            Écrit par
+                                                            <a href="/elao_/pr/639/blog/auteur/xavierr">
+                                    <strong>Xavier R</strong>
+                                </a>
+                                                    </span>
+                    </div>
+                                <div class="article-info__date">
+                    <span>Publication <strong>6 octobre 2010</strong></span>
+                                                        </div>
+            </div>
+
+            <div class="article-header" data-aos="zoom-in-up">
+                <h1>Django (2nde partie) : le Modèle et l’Admin</h1>
+                <p>Django (2nde partie) : le Modèle et l’Admin</p>
+                <ul class="article-tag-list">
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/639/blog/tag/django" rel="nofollow">#Django</a>
+                        </li>
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/639/blog/tag/framework" rel="nofollow">#Framework</a>
+                        </li>
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/639/blog/tag/mvc" rel="nofollow">#Mvc</a>
+                        </li>
+                                            <li class="article-tag-list__item">
+                            <a href="/elao_/pr/639/blog/tag/python" rel="nofollow">#Python</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+
+        
+        <div class="article-content">
+            <main class="article-content__main">
+
+                
+                
+                <p>Bonjour à toutes et à tous,</p>
+<p>Aujourd'hui, dans notre série consacrée à Django, nous abordons un second volet autrement plus intéressant que le premier (pour ceux qui ont raté l'épisode précédent, c'est <a href="/dev/premiers-pas-avec-le-framework-python-django" target="_blank">ici</a> que ça se passe). En effet, ce billet sera consacré d'une part au Modèle, que nous avions négligé précédemment, d'autre part à l'interface d'administration fournie par Django (<em>Django Admin Site</em>). J'aurais pu consacrer un article entier à la couche "Modèle" et aborder les nombreuses possibilités offertes par le Framework dans ce domaine. Mais mon précédent billet avait essentiellement pour but de nous familiariser avec Django, aussi d'un point de vue purement fonctionnel, le résultat finalement obtenu pouvait nous laisser sur notre faim. J'ai donc choisi ici de dépeindre le modèle dans ses grandes lignes, plutôt que d'entrer dans le détail, afin que nous puissions rapidement mettre en pratique nos connaissances, par le biais de l'interface d'Administration de Django. Mais sachez que les points importants sur lesquels nous ferons l'impasse aujourd'hui feront l'objet de futurs articles.</p>
+<p>Avant de débuter ce tutoriel, assurez-vous que Python et Django sont installés sur votre ordinateur. Si tel n'est pas le cas, référez-vous à notre <a href="/dev/premiers-pas-avec-le-framework-python-django" target="_blank">introduction au Framework Django</a> pour connaître la marche à suivre.</p>
+<h3 id="presentation-du-projet-et-du-modele" class="anchor-title"><a href="#presentation-du-projet-et-du-modele">Présentation du projet et du modèle</a></h3>
+<p>Le projet qui va nous servir de fil rouge tout au long de cet article (et ceux qui suivront) consiste en un site de vente d'articles de sport. Nous allons donc dans un premier temps créer notre projet (je nommerai ce projet "elao", c'est un nom court, concis, idéal donc pour un nom de projet) et une application que je nommerai "shop". Allez, c'est parti !</p>
+<p>Nous ouvrons donc une ligne de commande, nous nous plaçons dans le répertoire qui contient nos projets Django ("workspace-django" en ce qui me concerne), et nous lançons les commandes nécessaires pour initialiser le projet et créer l'application "shop" :</p>
+<pre class="code-multiline language-bash"><code class="language-bash" id="da823825aaba8aa6d507ea1f6edbbaad"><span class="token builtin class-name">cd</span> ~/workspace-django
+django-admin.py startproject elao
+<span class="token builtin class-name">cd</span> elao
+python manage.py startapp shop</code></pre>
+<p>Nous allons à présent configurer les accès à notre base de données et activer l'application que nous venons de créer. Pour cela, nous allons éditer le fichier <em>settings.py</em> qui se trouve à la racine de notre projet. Comme nous souhaitons nous initier à Django, nous opterons pour le moteur de base de données SQLite qui présente l'avantage d'être inclus dans les dernières distributions de Python et ne nécessite donc pas d'installation supplémentaire. Noter pour la petite histoire que les créateurs du Framework ne semblent pas être de fervents défenseurs de MySQL, auquel ils préfèrent Postgres ...</p>
+<blockquote>
+<p>Si vous souhaitez utiliser MySQL à la place de SQLite, il vous faudra installer un driver Python permettant d'accéder aux bases de données MySQL, <a href="http://sourceforge.net/projects/mysql-python/" target="_blank">MySQL for Python</a>, par exemple. Sachez toutefois que ce driver nécessite la présence des headers de MySQL et que son installation requiert donc, si vous aviez installé une version binaire de MySQL, quelques compétences en administration que je ne possède hélas pas.</p>
+<p><strong>Nota bene</strong> : Si vous utilisez une distribution <strong>Linux</strong>, il est probable que votre gestionnaire de paquets vous permette d'installer le driver MySQL sans douleur. Par exemple, sous Ubuntu, recherchez un paquet nommé "python-mysqldb". En revanche, si vous utilisez <strong>MacOS</strong>, je vous invite à faire une recherche sur <a href="http://www.google.fr/search?hl=fr&amp;q=Python+MySQL+MacOS+trouble" target="_blank">Google</a> ; a priori, l'installation du driver sous cet OS ne relève pas de la sinécure, de nombreuses personnes s'y sont déjà cassé les dents. Pour les utilisateurs de <strong>Windows</strong>, il existe des exécutables permettant d'installer un driver MySQL, mais je n'ai pas pu les tester. Je vous renvoie donc à Google, mais a priori, veillez à télécharger un driver compatible avec votre version de Python.</p>
+</blockquote>
+<p>Dans le fichier <em>settings.py</em>, nous allons mentionner les chemins absolus de notre base de données, du répertoire hébergeant les templates, celui contenant les fichiers statiques ... Aussi, pour rendre notre projet portable, nous allons dans un premier temps créer une constante ROOT_DIR correspondant à la racine de notre projet, et par la suite, tous les chemins absolus se baseront sur cette constante. Pour cela, ajoutez les deux lignes suivantes au début du fichier de configuration du projet :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="2b7ac1d9a900249fdb303a8743c879b2"><span class="token comment"># settings.py</span>
+<span class="token keyword">import</span> os
+ROOT_DIR <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>__file__<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'/'</span></code></pre>
+<p>Pour configurer les accès à notre base de données, nous allons modifier la constante <em>DATABASES</em> (qui correspond à la structure de données de type "<a href="http://docs.python.org/tutorial/datastructures.html#dictionaries" target="_blank">dictionnaire</a>" dans le langage Python) :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="159b699d71b52a5b267a971d6a509096"><span class="token comment"># settings.py</span>
+<span class="token comment"># ...</span>
+DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.sqlite3'</span><span class="token punctuation">,</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>ROOT_DIR<span class="token punctuation">,</span> <span class="token string">'elao.db'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>Enfin, activons l'application "shop" que nous venons de créer, et profitons-en au passage pour activer l'Admin de Django en décommentant la dernière ligne du fichier <em>settings.py</em> (<em>INSTALLED_APPS</em> correspond à une structure Python de type <a href="http://docs.python.org/tutorial/datastructures.html#tuples-and-sequences" target="_blank">tuple</a>) :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="1341c2d2f17c58f3337d52bce26879ae"><span class="token comment"># settings.py</span>
+<span class="token comment"># ...</span>
+INSTALLED_APPS <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token string">'django.contrib.auth'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.contenttypes'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sessions'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.sites'</span><span class="token punctuation">,</span>
+    <span class="token string">'django.contrib.messages'</span><span class="token punctuation">,</span>
+    <span class="token comment"># Uncomment the next line to enable the admin:</span>
+    <span class="token string">'django.contrib.admin'</span><span class="token punctuation">,</span>
+    <span class="token string">'shop'</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span></code></pre>
+<p>Nous allons à présent entamer la définition de notre modèle. Pour l'heure, nous nous contenterons de rédiger deux classes du Modèle, mais sachez que ce modèle s'enrichira à mesure que nous monterons en compétences. Nous créons donc dans le fichier <em>shop/models.py</em> une classe "Item" correspondant aux articles que nous mettrons en vente sur notre site et une classe "Sport" qui nous permettra de regrouper les articles par sport (un item appartient à un sport, un sport comporte plusieurs articles, nous sommes donc dans le cadre d'une relation one-to-many).</p>
+<pre class="code-multiline language-python"><code class="language-python" id="865906f537a05f381cfd3a2954f9c1e4"><span class="token comment"># shop/models.py</span>
+
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
+<span class="token keyword">import</span> datetime
+
+<span class="token keyword">class</span> <span class="token class-name">Sport</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  slug <span class="token operator">=</span> models<span class="token punctuation">.</span>SlugField<span class="token punctuation">(</span>null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">def</span> <span class="token function">__unicode__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>name
+
+  <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+    db_table <span class="token operator">=</span> <span class="token string">'elao_sport'</span>
+    ordering <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span> <span class="token punctuation">]</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Item</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">255</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  slug <span class="token operator">=</span> models<span class="token punctuation">.</span>SlugField<span class="token punctuation">(</span>null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> unique<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  description <span class="token operator">=</span> models<span class="token punctuation">.</span>TextField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  picture <span class="token operator">=</span> models<span class="token punctuation">.</span>ImageField<span class="token punctuation">(</span>upload_to <span class="token operator">=</span> <span class="token string">'pictures/items/'</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+  created_at <span class="token operator">=</span> models<span class="token punctuation">.</span>DateField<span class="token punctuation">(</span>null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> default<span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">)</span>
+  stock <span class="token operator">=</span> models<span class="token punctuation">.</span>IntegerField<span class="token punctuation">(</span>blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  price <span class="token operator">=</span> models<span class="token punctuation">.</span>FloatField<span class="token punctuation">(</span>blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  public <span class="token operator">=</span> models<span class="token punctuation">.</span>BooleanField<span class="token punctuation">(</span>null<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> blank<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+  sport <span class="token operator">=</span> models<span class="token punctuation">.</span>ForeignKey<span class="token punctuation">(</span>Sport<span class="token punctuation">)</span>
+
+  <span class="token keyword">def</span> <span class="token function">__unicode__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> self<span class="token punctuation">.</span>name
+
+  <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
+    db_table <span class="token operator">=</span> <span class="token string">'elao_item'</span>
+    ordering <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span> <span class="token punctuation">]</span></code></pre>
+<p>Avant de commenter ce code, vérifions que notre modèle est valide :</p>
+<pre class="code-multiline"><code id="d1f086d15b6492fd1c932b4fd69b5979">python manage.py validate</code></pre>
+<p>Corrigez si nécessaire le code de votre modèle, jusqu'à obtenir le message suivant après avoir relancé la commande <em>validate</em> :</p>
+<pre class="code-multiline"><code id="d1425f456ec96b0f1c9a4946816a8f74">0 errors found</code></pre>
+<blockquote>
+<p>Comme nous utilisons un champ de type <em>ImageField</em>, il est nécessaire que la librairie PIL (Python Image Library) soit installée sur votre ordinateur. Pour les utilisateurs de Linux, il est probable que votre distribution vous permette de l'installer à partir de votre gestionnaire de paquetages. Si vous utilisez MacOS ou Windows, téléchargez et installez PIL en suivant les instructions disponibles sur cette page consacrée à la <a href="http://www.pythonware.com/products/pil/" target="_blank">Bibliothèque PIL</a>.
+Si vous ne souhaitez pas installer PIL, il vous suffit de changer le type du champ <em>picture</em> en <strong>CharField</strong>.</p>
+</blockquote>
+<p>La définition des classes de notre modèle appelle quelques remarques. Tout d'abord, notez que les objets du modèle destinés à être manipulées par l'ORM (<a href="http://en.wikipedia.org/wiki/Object-relational_mapping" target="_blank"><em>Object-Relational Mapping</em></a>) de Django héritent de la classe <em>django.db.models.Model</em>. En Python, la syntaxe de l'héritage se présente donc sous la forme <em> class MaClasse(ClasseHéritée)</em></p>
+<blockquote>
+<p>Pour en savoir plus sur la programmation objet avec Python, n'hésitez pas à consulter la <a href="http://docs.python.org/tutorial/classes.html" target="_blank">documentation officielle</a>. On notera en particulier que Python supporte l'héritage multiple.</p>
+</blockquote>
+<p>Ensuite, chaque propriété de la classe se voit attribuer un type de champ (FloatField, CharField, etc.). Pour connaître tous les types proposés par Django, visitez cette page : <a href="http://docs.djangoproject.com/en/1.2/ref/models/fields/" target="_blank">Model Field Reference</a>. Nous remarquerons au passage que les types proposés par Django sont généralement plus riches que les types élémentaires fournis par votre serveur de base de données. Il est ainsi possible de définir une propriété de type slug, XML, email, url, fichier, fichier image ... Choisir un de ces types permet de garantir non seulement une vérification des données selon les contraintes définies au niveau de la base de données (taille du champ, unicité, <em>null</em> non autorisé ...) mais également une validation des objets par l'ORM de Django, qui est fonction du type choisi (par exemple, pour un champ de type <em>EmailField</em>, la valeur est-elle conforme au pattern attendu par une adresse email ?). Noter enfin les types <em>ForeignKey</em> (utilisé dans notre exemple dans la classe <em>Item</em> pour référencer un objet de la classe <em>Sport</em>), ou bien <em>models.ManyToManyField</em>, que nous utiliserons sans doute à l'occasion d'un prochain tutoriel.</p>
+<p>Pour chaque champ, on définit des options (<em>null</em> autorisé, valeur par défaut ...). Encore une fois, celles proposées par Django sont plus riches que celles des serveurs de bases de données ; je citerais par exemple l'option <em>unique_for_date</em> ou <em>unique_for_month</em>. Pour découvrir ces options et toutes celles proposées par Django, n'hésitez pas à consulter la documentation officielle de Django : <a href="http://docs.djangoproject.com/en/1.2/ref/models/fields/#field-options" target="_blank">Field Options</a>.</p>
+<p>La méthode <em><strong>unicode</strong>(self)</em> (attention, elle commence et se termine par un caractère "_" double !) nous permet de définir sous quelle forme littérale nous souhaitons afficher l'objet, par exemple lorsque nous passons cet objet à la méthode <em>print</em> ou lorsque nous afficherons cet objet dans les vues (templates).</p>
+<p>Enfin, pour chaque classe, nous pouvons définir une classe interne <em>Meta</em> qui nous permet de définir des propriétés au niveau de la table et non pas de chaque objet. Nous pouvons ainsi préciser le nom de la table en base de données, le champ sur lequel nous souhaitons trier les enregistrements par défaut, les contraintes d'unicité portant sur plusieurs champs, etc. Pour connaître toutes les options de cette classe, voir la documentation de Django : <a href="http://docs.djangoproject.com/en/1.2/ref/models/options/" target="_blank">Model Meta options</a>.</p>
+<p>A présent, nous allons générer les tables en base de données (si vous utilisez SQLite, la base de données sera créée, sinon, il vous faudra préalablement créer une base de données portant le nom que vous avez défini dans le fichier <em>settings.py</em>) :</p>
+<pre class="code-multiline"><code id="9592e63e2f51a8abf1405d0a61098761">python manage.py syncdb</code></pre>
+<p>Par défaut, Django active les applications nécessaires pour gérer les utilisateurs et les permissions, et lorsque vous lancez la commande ci-dessus, il vous est demandé si vous souhaitez créer un <em>superuser</em>. Répondez "yes" et saisissez lorsque l'invitation vous le demande le nom du <em>superuser</em> ainsi que son email et son mot de passe (nous aurons par la suite besoin de ces identifiants pour accéder à l'interface d'administration de Django).</p>
+<blockquote>
+<p>Si vous avez répondu "no" par erreur, sachez qu'il est possible par la suite de créer un super-utilisateur au moyen de la commande suivante
+<code class="code-inline" id="a88ff9509578d3ff3c7f5fecda483c8b">python manage.py createsuperuser</code></p>
+</blockquote>
+<p>Si vous voulez connaître les instruction SQL exécutées par Django pour créer ces tables, vous pouvez lancer une de ces deux commandes :</p>
+<pre class="code-multiline"><code id="099a0e589f60f27d4ba5e328782a05bf">python manage.py sql shop
+python manage.py sqlall shop # où 'shop' correspond à notre application</code></pre>
+<blockquote>
+<p><strong>Rappel :</strong> Pour connaître toutes les commandes Django disponibles, tapez simplement :<br><br> [php] python manage.py [/php]<br> Page de la documentation officielle de Django : <a href="http://docs.djangoproject.com/en/1.2/ref/django-admin/" target="_blank">django-admin.py &amp; manage.py</a></p>
+</blockquote>
+<p>Nous allons à présent manipuler la classe <em>Sport</em> au moyen d'un shell interactif très pratique, en particulier lorsque l'on débute sous Django et Python. N'hésitez pas à en abuser lorsque vous souhaitez expérimenter Python et/ou Django pour vous familiariser avec ces deux technologies !</p>
+<pre class="code-multiline language-python"><code class="language-python" id="0cdadc049e32372654c9a50cdfb9424a">python manage<span class="token punctuation">.</span>py shell</code></pre>
+<p>Saisissez dans cette console les instructions suivantes :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="db2e4cac7595846fcc801283903f0d2d"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> elao<span class="token punctuation">.</span>shop<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sport
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport <span class="token operator">=</span> Sport<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"Football"</span><span class="token punctuation">,</span> slug<span class="token operator">=</span><span class="token string">"football"</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport<span class="token punctuation">.</span><span class="token builtin">id</span>
+<span class="token number">1</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport<span class="token punctuation">.</span>name
+<span class="token string">'Football'</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport <span class="token operator">=</span> Sport<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"Arts martiaux"</span><span class="token punctuation">,</span> slug<span class="token operator">=</span><span class="token string">"arts-martiaux"</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sport<span class="token punctuation">.</span>name
+<span class="token string">'Arts martiaux'</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Sport<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">all</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token operator">&lt;</span>Sport<span class="token punctuation">:</span> Arts martiaux<span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token operator">&lt;</span>Sport<span class="token punctuation">:</span> Football<span class="token operator">&gt;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Sport<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token builtin">id</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span>Sport<span class="token punctuation">:</span> Football<span class="token operator">&gt;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> Sport<span class="token punctuation">.</span>objects<span class="token punctuation">.</span><span class="token builtin">filter</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"Football"</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token operator">&lt;</span>Sport<span class="token punctuation">:</span> Football<span class="token operator">&gt;</span><span class="token punctuation">]</span></code></pre>
+<p>Rien de très compliqué. Nous venons de créer deux objets de la classe "Sport", que nous avons sauvegardés en base de données. Ensuite, nous avons utilisé un gestionnaire de Modèle, <em>ModelManager</em>, en l'occurrence <em>sport.objects</em>, pour exécuter des requêtes sur la table <em>elao_sport</em>. Nous aurons l'occasion de revenir sur cette notion de <em>ModelManager</em> à l'occasion de futurs articles. Pour quitter le shell interactif, il suffit de saisir <strong>CTL + D</strong> au clavier.</p>
+<p>Voilà, nous n'avons fait qu'effleurer le sujet du Modèle de Django, nous aurons l'occasion d'y revenir, mais pour l'heure, il est temps de passer à l'Admin de Django, histoire de constater de visu les ajouts que nous avons faits en base de données au moyen de l'ORM !</p>
+<h3 id="le-site-d-administration-de-django" class="anchor-title"><a href="#le-site-d-administration-de-django">Le site d'Administration de Django</a></h3>
+<p>Pour accéder à l'interface d'administration de Django, il faut dans un premier temps activer l'admin en mettant à jour le tuple INSTALLED_APPS ; cela consiste à décommenter la ligne <em>django.contrib.admin</em> du fichier <em>settings.py</em> (si vous avez suivi les étapes depuis le début, nous l'avons déjà fait). Il faut également décommenter la route permettant d'accéder à l'Admin. Pour cela, il faut éditer le fichier <em>urls.py</em> et décommenter la ligne correspondante :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="b0a90c7553fb57534f701970db9c00a0"><span class="token comment"># urls.py</span>
+<span class="token comment"># ...</span>
+<span class="token comment"># Uncomment the next line to enable the admin:</span>
+<span class="token punctuation">(</span><span class="token string">r'^admin/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span>admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span></code></pre>
+<p>Et également décommenter les lignes suivantes (toujours dans le fichier urls.py).</p>
+<pre class="code-multiline language-python"><code class="language-python" id="116b6bc3c779a00d47c4c9f658419dbf"><span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+admin<span class="token punctuation">.</span>autodiscover<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>A présent, nous allons démarrer le serveur ...</p>
+<pre class="code-multiline"><code id="7f3b27fe44ab000ce56db013e33e31de">python manage.py runserver</code></pre>
+<p>... et admirer le résultat en nous rendant à l'URL suivante : <a href="http://localhost:8000/admin/" target="_blank"></a><a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a>. Nous sommes alors invités à nous loguer :</p>
+<img src="/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/django-admin.gif/fcfc4dbf4086d2e164b7587a9743a81a.gif" alt="django admin Django (2nde partie) : le Modèle et lAdmin" title="django admin Django (2nde partie) : le Modèle et lAdmin" id="django-admin-django-2nde-partie-le-modele-et-ladmin">
+<p>Saisissez les identifiants que vous aviez précisés lorsque nous avions lancé la commande <em>python manage.py syncdb</em>. Voici le résultat après login :</p>
+<img src="/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png/94a4f0522087ea29d91f40f1f12b9a43.png" alt='Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%' title='Capture Site administration Django site admin Mozilla Firefox Django (2nde partie) : le Modèle et lAdmin" width="75%' srcset="/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png/94a4f0522087ea29d91f40f1f12b9a43.png 1x,
+/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Capture-Site-administration-Django-site-admin-Mozilla-Firefox.png/ea9d9a85cf3a9ebbbc42bb126739f945.png 2x," id="capture-site-administration-django-site-admin-mozilla-firefox-django-2nde-partie-le-modele-et-ladmin-width-75">
+<p>A présent, nous allons éditer le fichier contenant la définition de nos deux classes du modèle, <em>Item</em> et <em>Sport</em>, afin qu'elles soient prises en compte par l'Admin de Django. Pour cela, nous allons éditer le fichier <em>shop/models.py</em> et y ajouter les lignes suivantes :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="d746deef2dc3156abdba1feb01dcba3a"><span class="token comment"># shop/models.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>contrib <span class="token keyword">import</span> admin
+<span class="token comment"># ...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SportAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  list_display <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'slug'</span> <span class="token punctuation">]</span>
+  search_fields <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span> <span class="token punctuation">]</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ItemAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  list_display <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'slug'</span><span class="token punctuation">,</span> <span class="token string">'description'</span><span class="token punctuation">,</span> <span class="token string">'picture'</span><span class="token punctuation">,</span> <span class="token string">'stock'</span><span class="token punctuation">,</span> <span class="token string">'price'</span><span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">,</span> <span class="token string">'sport'</span> <span class="token punctuation">]</span>
+  search_fields <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span> <span class="token punctuation">]</span>
+
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Sport<span class="token punctuation">,</span> SportAdmin<span class="token punctuation">)</span>
+admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>register<span class="token punctuation">(</span>Item<span class="token punctuation">,</span> ItemAdmin<span class="token punctuation">)</span></code></pre>
+<p>Rendez-vous à présent sur la page <a href="http://localhost:8000/admin/" target="_blank"></a><a href="http://localhost:8000/admin/" target="_blank">http://localhost:8000/admin/</a> pour constater que l'Admin de Django a bien enregistré nos deux classes du modèle. Si tout s'est correctement déroulé, vous devriez voir la liste des entités gérées sur la page d'accueil :</p>
+<img src="/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Django-Admin-Model-Classes.png/4e8c3a6825283b6c8bdfe4fde13fc0b3.png" alt="Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin" title="Django Admin Model Classes Django (2nde partie) : le Modèle et lAdmin" srcset="/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Django-Admin-Model-Classes.png/4e8c3a6825283b6c8bdfe4fde13fc0b3.png 1x,
+/elao_/pr/639/%2E%2E/../resized/content/images/blog/2010/Django-Admin-Model-Classes.png/b33d78819d0fc4184445607a7530de45.png 2x," id="django-admin-model-classes-django-2nde-partie-le-modele-et-ladmin">
+<p>N'hésitez pas à naviguer dans l'interface d'Administration de Django pour découvrir les nombreuses fonctionnalités offertes, mais avant de créer des articles, nous devons préalablement déterminer le chemin du répertoire "<em>media</em>" où seront notamment placées les images liées aux articles. Pour cela, nous allons préciser la valeur de la constante <em>MEDIA_ROOT</em> dans le fichier <em>settings.py</em>, puis créer une nouvelle route destinée à servir les fichiers statiques contenus dans ce répertoire "<em>media</em>".</p>
+<blockquote>
+<p>Pour savoir comment faire appel à des fichiers statiques (fichiers javascript, feuilles de style, images, ...) sous Django, n'hésitez pas à consulter cette page : <a href="http://docs.djangoproject.com/en/dev/howto/static-files/" target="_blank">How to Serve Static Files</a>. Il y est notamment rappelé que Django n'a pas vocation à gérer les fichiers statiques car il préfère déléguer cette tâche au serveur Web, dont c'est une des responsabilités. Cependant, en mode développement, c'est exceptionnellement Django qui s'acquitte de cette tâche, et la page mentionnée ci-dessus décrit la manière de procéder (et c'est cette méthode que nous allons mettre en oeuvre dans notre exemple).</p>
+</blockquote>
+<p>Nous allons donc modifier le fichier <em>settings.py</em> pour préciser le nom du répertoire contenant les fichiers statiques ...</p>
+<pre class="code-multiline language-python"><code class="language-python" id="51799b3041026661f27ca06b981f20e7"><span class="token comment"># settings.py</span>
+<span class="token comment"># Absolute path to the directory that holds media.</span>
+<span class="token comment"># Example: "/home/media/media.lawrence.com/"</span>
+MEDIA_ROOT <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>ROOT_DIR<span class="token punctuation">,</span> <span class="token string">'media'</span><span class="token punctuation">)</span></code></pre>
+<p>... puis créer ce répertoire ...</p>
+<pre class="code-multiline"><code id="430eacc69867af0858eb937f2482d4b2">mkdir media
+chmod -R 777 media</code></pre>
+<p>... et enfin, créer une route responsable des contenus statiques, en mentionnant dans le fichier <em>urls.py</em> la constante <em>MEDIA_ROOT</em> précédemment définie :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="aedabbc518dd3455994ec014337be027"><span class="token comment"># urls.py</span>
+<span class="token comment"># ...</span>
+
+<span class="token keyword">if</span> settings<span class="token punctuation">.</span>DEBUG<span class="token punctuation">:</span>
+    urlpatterns <span class="token operator">+=</span> patterns<span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span>
+        <span class="token punctuation">(</span><span class="token string">r'^site-media/(?P&lt;path&gt;.*)$'</span><span class="token punctuation">,</span> <span class="token string">'django.views.static.serve'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">'document_root'</span><span class="token punctuation">:</span> settings<span class="token punctuation">.</span>MEDIA_ROOT <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span></code></pre>
+<blockquote>
+<p>Noter que nous avons choisi <em>site-media</em> pour URL : évitez d'utiliser l'URL <em>media</em>, car elle est déjà réservée par l'Admin de Django.<br></p>
+</blockquote>
+<p>L'Admin de Django facilite notamment la saisie des champs de type "slug". Pour cela, nous allons ajouter une ligne dans chacune des classes <em>XXXAdmin</em> concernées par un champ de type "<em>slug</em>" :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="6146873d4b65d13916179f704d964e5b"><span class="token comment"># shop/models.py</span>
+<span class="token comment"># ...</span>
+<span class="token keyword">class</span> <span class="token class-name">SportAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># ...</span>
+  prepopulated_fields <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"slug"</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ItemAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># ...</span>
+  prepopulated_fields <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"slug"</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">}</span></code></pre>
+<p>A présent, lorsque vous créez ou éditez un sport ou un article, à mesure que vous remplissez le champ "<em>name</em>", vous remarquerez que le champ "<em>slug</em>" se met à jour automatiquement. Sympa !</p>
+<p>Nous allons à présent mettre en oeuvre une fonctionnalité très intéressante de l'Admin Django : les formulaires <em>inline</em>. Cette fonctionnalité permet notamment de faciliter la saisie de plusieurs enregistrements dans le cadre d'une relation <em>one-to-many</em>. Ainsi, dans notre exemple, lorsque nous créons ou éditons un sport, nous allons également autoriser l'édition et l'ajout d'articles associés au sport courant. Pour cela, nous modifions comme suit le fichier <em>shop/models.py</em> :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="306845a63166e87564d26c600e307631"><span class="token comment"># shop/models.py</span>
+<span class="token comment"># ...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Item</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># ...</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ItemInline</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>TabularInline<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  model <span class="token operator">=</span> Item
+  extra <span class="token operator">=</span> <span class="token number">0</span>
+
+<span class="token keyword">class</span> <span class="token class-name">SportAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token comment"># ...</span>
+  inlines <span class="token operator">=</span> <span class="token punctuation">[</span>ItemInline<span class="token punctuation">]</span></code></pre>
+<p>Nous venons donc de créer une nouvelle classe <em>ItemInline</em> héritant de <em>admin.TabularInline</em>, puis nous avons ajouté un attribut <em>inlines</em> dans la classe <em>SportAdmin</em>, faisant référence à la classe <em>ItemInline</em>. A présent, si vous créez ou éditez un nouveau sport, vous remarquerez que le formulaire principal embarque désormais plusieurs formulaires associés à la classe "<em>Item</em>". Bon, là je dois admettre que cela donne un résultat assez chargé compte tenu du nombre d'attributs définis dans la classe <em>Item</em>. Cet exemple avait essentiellement pour but de vous faire connaître l'existence des formulaires <em>inlines</em> dans l'Admin de Django. Ce type de formulaires imbriqués est sans doute plus adapté dans le cas d'une relation one-to-many dans laquelle le modèle "enfant" est moins riche ... Cela étant, Django propose un système de formulaires orientés objets qui nous permettraient de définir une version "allégée" des formulaires "<em>ItemForm</em>" et donc davantage candidate à une imbrication dans un formulaire parent. Nous pourrions alors les utiliser dans notre exemple, mais comme nous n'avons pas encore étudié les formulaires orientés Objet de Django, nous remettons ces améliorations à plus tard ... Pour l'heure, soyez conscients de l'existence de ces formulaires <em>inlines</em>, qui peuvent s'avérer très pratiques.</p>
+<blockquote>
+<p>Si vous souhaitez dès à présent en savoir plus sur l'imbrication de formulaires dans l'Admin de Django, et notamment connaître les différentes options possibles (model, extra ...), je vous invite à consulter le chapitre consacré aux <a href="http://docs.djangoproject.com/en/1.2/ref/contrib/admin/#inlinemodeladmin-objects" target="_blank">objets de la classe InlineModelAdmin</a>.<br><br> Sachez que ces objets sont également utilisables dans le cadre d'une relation de type <em>many-to-many</em>. Quant aux formulaires orientés objets proposés par Django, plusieurs chapitres de la <a href="http://docs.djangoproject.com/en/1.2/" target="_blank">documentation de Django</a> leur sont consacrés, mais nous aurons l'occasion d'y revenir.</p>
+</blockquote>
+<p>Et pour finir notre étude de l'Admin, nous allons rédiger une méthode qui va nous permettre de modifier le statut d'un article (attribut dénommé "<em>public</em>" de la classe <em>Item</em>) à partir de la liste des articles. Cela nous donne l'occasion de voir comment afficher des colonnes personnalisées dans la vue "<em>liste</em>" et d'ajouter des fonctionnalités supplémentaires dans l'Admin. Nous allons donc créer une nouvelle méthode permettant d'inverser le statut d'un article, puis ajouter une route pointant sur cette méthode, et enfin ajouter une colonne dans la liste des articles, affichant
+Nous ajoutons donc la méthode <em>toggle_public</em> dans le fichier <em>shop/views.py</em> ...</p>
+<pre class="code-multiline language-python"><code class="language-python" id="16f398dbad25257586765c03656218cd"><span class="token comment"># shop/views.py</span>
+<span class="token keyword">from</span> shop<span class="token punctuation">.</span>models <span class="token keyword">import</span> Item
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>http <span class="token keyword">import</span> HttpResponseRedirect
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>core<span class="token punctuation">.</span>urlresolvers <span class="token keyword">import</span> reverse
+
+<span class="token keyword">def</span> <span class="token function">toggle_public</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  item <span class="token operator">=</span> Item<span class="token punctuation">.</span>objects<span class="token punctuation">.</span>get<span class="token punctuation">(</span>pk<span class="token operator">=</span><span class="token builtin">id</span><span class="token punctuation">)</span>
+  item<span class="token punctuation">.</span>public <span class="token operator">=</span> <span class="token keyword">not</span> item<span class="token punctuation">.</span>public
+  item<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> HttpResponseRedirect<span class="token punctuation">(</span>reverse<span class="token punctuation">(</span><span class="token string">"admin:shop_item_changelist"</span><span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre>
+<p>... puis créons une route pointant sur cette nouvelle méthode ...</p>
+<pre class="code-multiline language-python"><code class="language-python" id="b0eec3764dfb163288feb5b0db09f918"><span class="token comment"># urls.py</span>
+<span class="token comment"># ...</span>
+<span class="token punctuation">(</span><span class="token string">r'^admin/item_toggle/(?P&lt;id&gt;\\d+)/$'</span><span class="token punctuation">,</span> <span class="token string">'shop.views.toggle_public'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">r'^admin/'</span><span class="token punctuation">,</span> include<span class="token punctuation">(</span>admin<span class="token punctuation">.</span>site<span class="token punctuation">.</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token comment"># ...</span></code></pre>
+<p>... puis une méthode de la classe <em>Item</em> permettant d'afficher un lien pointant sur cette méthode ...</p>
+<pre class="code-multiline language-python"><code class="language-python" id="475473f360b1a8fad8122840c58795e1"><span class="token comment"># shop/models.py</span>
+<span class="token keyword">from</span> django<span class="token punctuation">.</span>core<span class="token punctuation">.</span>urlresolvers <span class="token keyword">import</span> reverse
+<span class="token comment"># ...</span>
+<span class="token keyword">class</span> <span class="token class-name">Item</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token comment"># ...</span>
+ <span class="token keyword">def</span> <span class="token function">toggle_public</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+   <span class="token keyword">return</span> <span class="token string">'&lt;a href="%s"&gt;Toggle&lt;/a&gt;'</span> <span class="token operator">%</span> reverse<span class="token punctuation">(</span><span class="token string">'shop.views.toggle_public'</span><span class="token punctuation">,</span> args<span class="token operator">=</span><span class="token punctuation">[</span>self<span class="token punctuation">.</span>pk<span class="token punctuation">]</span><span class="token punctuation">)</span>
+ toggle_public<span class="token punctuation">.</span>allow_tag <span class="token operator">=</span> <span class="token boolean">True</span>
+<span class="token comment"># ...</span></code></pre>
+<p>... et enfin, on affiche cette nouvelle colonne dans l'Admin :</p>
+<pre class="code-multiline language-python"><code class="language-python" id="f2aeb945e85ce410db1aa34deed2028a"><span class="token comment"># models.py</span>
+<span class="token comment"># ...</span>
+<span class="token keyword">class</span> <span class="token class-name">ItemAdmin</span><span class="token punctuation">(</span>admin<span class="token punctuation">.</span>ModelAdmin<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  list_display <span class="token operator">=</span> <span class="token punctuation">[</span> <span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'slug'</span><span class="token punctuation">,</span> <span class="token string">'description'</span><span class="token punctuation">,</span> <span class="token string">'picture'</span><span class="token punctuation">,</span> <span class="token string">'stock'</span><span class="token punctuation">,</span> <span class="token string">'price'</span><span class="token punctuation">,</span> <span class="token string">'public'</span><span class="token punctuation">,</span> <span class="token string">'toggle_public'</span><span class="token punctuation">,</span> <span class="token string">'sport'</span> <span class="token punctuation">]</span>
+<span class="token comment"># ...</span></code></pre>
+<p>Voilà qui clôt le chapitre consacré à la découverte de l'Admin de Django. Sachez qu'il existe d'autres fonctionnalités que nous n'avons pas explorées (notamment la pagination) et sachez également que si vos besoins le justifient, vous avez la possibilité de rédéfinir les méthodes et les templates de l'Admin. Pour ceux qui souhaitent en savoir plus sur cette possibilité, il existe plusieurs ressources disponibles sur Internet. Je citerais notamment la documentation officielle de Django qui consacre un paragraphe à ce sujet : <a href="http://docs.djangoproject.com/en/dev/ref/contrib/admin/#overriding-admin-templates" target="_blank">Overriding Admin Templates</a>. Pour ce qui concerne plus généralement l'Admin, si vous souhaitez connaître l'ensemble des fonctionnalités disponibles, voici les deux chapitres de la documentation qui traitent de ce sujet : <a href="http://docs.djangoproject.com/en/1.2/ref/contrib/admin/" target="_blank">Admin Site</a> et <a href="http://docs.djangoproject.com/en/1.2/ref/contrib/admin/actions/" target="_blank">Admin Actions</a>.</p>
+<h3 id="conclusion-partielle" class="anchor-title"><a href="#conclusion-partielle">Conclusion (partielle)</a></h3>
+<p>Aujourd'hui, nous avons étendu nos connaissances du framework Django, en abordant le modèle dans ses grandes lignes, et en exploitant certaines fonctionnalités proposées par l'Admin de Django. Au cours d'un prochain article, nous développerons une page qui nous permettra de lister les différents articles disponibles. Cette page comportera un moteur de recherche (assez basique), les résultats seront paginés et pourront être triés à partir des en-têtes de colonnes. Ce sera donc l'occasion de consolider certaines notions déja étudiées, et d'aborder de nouveaux concepts par la pratique, parmi lesquels l'organisation et la réutilisation des templates, la pagination, l'interrogation des données en base de données à l'aide des <em>ModelManagers</em>, la génération de vignettes, la création de <em>fixtures</em> ... <em>Stay tuned !</em></p>
+                                                                </main>
+            <aside class="article-content__aside">
+                            </aside>
+        </div>
+
+        <div class="article-footer" data-aos="fade-in">
+                                                <div class="article-author">
+                        <div class="article-author__image">
+                            <a href="/elao_/pr/639/blog/auteur/xavierr">
+                                <img     src="/elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/401e4ebf653f048af7a31e583f17e399.jpg"
+    srcset="
+        /elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/401e4ebf653f048af7a31e583f17e399.jpg 1x,
+        /elao_/pr/639/%2E%2E/../resized/content/images/members/avatars/xavierr.jpg/483510c48265ecfc9142de1a8a2bc614.jpg 2x
+    "
+ />
+                            </a>
+                        </div>
+                        <span class="article-author__info">
+                            Écrit par
+                            <a href="/elao_/pr/639/blog/auteur/xavierr">
+                                <strong>Xavier R</strong>
+                            </a>
+                        </span>
+
+                        <div class="article-author__social">
+                                                                                        <a href="https://github.com/xavier-rdo " class="social social--small">
+                                    <i class="icon icon--github" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte github de Xavier R</span>
+                                </a>
+                                                                                </div>
+                    </div>
+                                    </div>
+
+                <div class="bricks">
+            
+                            <div class="brick-contribute">
+                    <p>
+                        Une typo ?
+                        <a href="https://github.com/Elao/elao_/edit/team-default-avatars/content/blog/dev/django-2nde-partie-le-modele-et-ladmin.md/" target="_blank" class="animated-link animated-link--light">
+                            Modifier cet article sur Github
+                        </a>
+                    </p>
+                </div>
+                    </div>
+            </div>
+        </main>
+                    
+<footer class="footer">
+    <div class="container">
+        <section class="footer__links">
+            <p class="h1">
+                elao
+                <span>développe</span>
+                <span>du lien</span>
+            </p>
+            <div class="links">
+                                    <ul>
+                                                    <li>
+                                <a href="/elao_/pr/639/nos-services/" >Services</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/pr/639/demarche" >Démarche</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/pr/639/etudes-de-cas" >Études de cas</a>
+                            </li>
+                                            </ul>
+                                    <ul>
+                                                    <li>
+                                <a href="/elao_/pr/639/nos-valeurs" >Valeurs</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/pr/639/equipe" >L&#039;équipe</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/pr/639/blog" >Blog</a>
+                            </li>
+                                                    <li>
+                                <a href="/elao_/pr/639/blog/rss.xml"  data-no-swup="data-no-swup">RSS</a>
+                            </li>
+                                            </ul>
+                                <ul>
+                    <li>
+                                                <a href="/elao_/pr/639/recrutement">
+                            Nous recrutons
+                                                            <span class="bullet">2</span>
+                                                    </a>
+                    </li>
+                    <li>
+                        <a href="/elao_/pr/639/glossaire/">Glossaire 🧐</a>
+                    </li>
+                    <li>
+                        <a href="/elao_/pr/639/elaomojis">Elaomojis 🎉</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li>
+                        <a href="https://github.com/elao" target="_blank">
+                            <i class="icon icon--github"></i>
+                            Github
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/elao" target="_blank">
+                            <i class="icon icon--x"></i>
+                            Twitter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/company/elao/mycompany/" target="_blank">
+                            <i class="icon icon--linkedin"></i>
+                            Linkedin
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts">
+                <ul>
+                    <li>
+                        <a href="/elao_/pr/639/contact">Contact</a>
+                    </li>
+                    <li>
+                        <a href="tel:04 82 53 37 19">04 82 53 37 19</a>
+                    </li>
+                    <li>
+                        <a href="mailto:contact@elao.com">contact@elao.com</a>
+                    </li>
+                    <li>34 rue Jean Broquin</li>
+                    <li>69006 Lyon</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="footer__legals">
+            <span>© 2005 - 2024 - ELAO - Tous droits réservés</span>
+            <a href="/elao_/pr/639/legal">Mentions légales</a>
+            <a href="/elao_/pr/639/confidentialite">Protection des données</a>
+            <a id="see" href="#ssss">🐍</a>
+        </section>
+    </div>
+</footer>
+
+            </body>
+</html>

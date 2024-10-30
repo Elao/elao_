@@ -1,7 +1,7 @@
 ---
 title: "Marque blanche MJC"
-lastModified: "2024-09-06"
-date: "2024-09-06"
+lastModified: "2024-10-30"
+date: "2024-10-30"
 
 # Params
 metaDescription: "MyJob.Company - Conception d'une marque blanche"

@@ -22,7 +22,7 @@ A ce moment-là, je voulais faire des jeux vidéo.
 
 Mon IUT était très axé développement web, c'est avec eux que j'ai fait mes premiers sites un peu sympa-chouettes. Ca m'a donné le gout du développement front-end, alors qu'en parallèle, l'envie de faire des jeux vidéo s'atténuait.
 
-Ensuite j'ai fait une licence générale, en prévision d'un master. Le côté théorique ne m'allant pas, je me suis arrêté après cette première année et j'ai rejoins ma première boite de dev.
+Ensuite j'ai fait une licence générale, en prévision d'un master. Le côté théorique ne m'allant pas, je me suis arrêté après cette première année et j'ai rejoins ma première boite de dev. Ils m'ont formés à React, ça a été un coup de foudre. Cela fait maintenant plus de 6 ans que cette techno est présente dans mon quotidien, désormais souvent accompagnée de Next. Et même si je lui suis pour l'instant fidèle, j'explore en parallèle les autres possibilités, comme Vue et Svelte notamment.
 
 
 

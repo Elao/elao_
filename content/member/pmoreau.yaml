@@ -1,0 +1,33 @@
+active: true
+#🚲: true # velo-taffeur
+
+# Bio
+name: Paul-Émile Moreau
+pseudo: Polémil
+gender: male
+bio: |
+    Polémil est notre nouveau sorcier du front-end. Féru de CSS, il adule les beaux visuels et fait la guerre aux sites moches.
+    
+    Après un IUT et une licence générale en informatique, il a travaillé pour différentes boites comme Artprice, Soluti et Cultura, où il s'est forgé de solides connaissances en front-end.
+    
+    En plus de son expertise technique, Polémil est passionné par de nombreuses formes d’art. Il dessine depuis petit et désormais écrit un roman de fantasy ainsi que compose de la musique orchestrale.
+
+    Et il adore manger.
+position: Développeur Front-end
+integrationDate: 28-10-2024
+
+# Social
+website: https://polemil.dev
+twitter: ~ # your username
+github: ~ https://github.com/le-Polemil
+email: ~
+avatar: content/images/members/avatars/pmoreau.jpg
+
+#certifications:
+#    - symfony
+#    - opquast
+
+emojis:
+    - 🎨
+    - ✍🏻
+    - 🫕

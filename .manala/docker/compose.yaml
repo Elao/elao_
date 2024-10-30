@@ -11,7 +11,7 @@ services:
         build:
             context: ..
             dockerfile: docker/Dockerfile
-        image: elao:20241018093356
+        image: elao:20241028151543
         restart: always
         ports:
             - 8000:80

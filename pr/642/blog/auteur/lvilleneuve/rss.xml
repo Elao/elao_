@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Laurie Villeneuve, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Laurie Villeneuve de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/642/blog/auteur/lvilleneuve</link>
+        <pubDate>Thu, 31 Oct 2024 15:01:45 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/642/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Laurie Villeneuve, </title>
+            <link>https://elao.github.io/elao_/pr/642/blog/auteur/lvilleneuve</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/642/blog/auteur/lvilleneuve/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Laurie, développeuse front-end chez Elao</title>
+                <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/642/blog/elao/laurie-developpeuse-front-end</guid>
+                <link>https://elao.github.io/elao_/pr/642/blog/elao/laurie-developpeuse-front-end</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/642/%2E%2E/../resized/content/images/blog/2023/itw-laurie/banner.JPEG/212abc833ec91d4854a76e2b9ac5e5f3.JPEG"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Laurie, développeuse front-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+            </channel>
+</rss>

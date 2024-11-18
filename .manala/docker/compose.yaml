@@ -11,10 +11,10 @@ services:
         build:
             context: ..
             dockerfile: docker/Dockerfile
-        image: elao:20241028151543
+        image: elao:20241118105153
         restart: always
         ports:
-            - 8000:80
+            - 35080:80
             - 8080:8080
         volumes:
             - ../..:${MANALA_DIR}

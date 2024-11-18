@@ -81,7 +81,7 @@ make up
 ```
 
 > [!Warning]
-> The site is now available at http://localhost:8000, but you need to build or serve the assets.
+> The site is now available at http://www.ela.ooo:35080, but you need to build or serve the assets.
 
 For development purposes, start a Webpack dev-server using:
 

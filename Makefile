@@ -10,6 +10,15 @@ endef
 
 -include .manala/Makefile
 
+## System - Setup the project for the first time with Docker
+setup:
+	WAIT=1 make up
+	$(manala_docker_command) make install build.assets
+	$(call manala_message, Will be available at http://$(call manala_project_host, 80))
+
+## System - Stop local system
+halt: stop
+
 ###########
 # Install #
 ###########
@@ -39,20 +48,26 @@ update.browserslist:
 # Development #
 ###############
 
-# Alias for serve
-start: serve
-
+ifndef MANALA_DOCKER
 ## Dev - Start the whole application for development purposes (local only)
 serve:
 	# https://www.npmjs.com/package/concurrently
 	npx concurrently "make serve.php" "make serve.assets" --names="Symfony,Webpack" --prefix=name --kill-others --kill-others-on-fail
+else
+## Dev - Start the application dependant processes for development purposes (docker only)
+serve:
+	$(call manala_message, Will be available at http://$(call manala_project_host, 80))
+	make serve.assets
+endif
 
+ifndef MANALA_DOCKER
 ## Dev - Start Symfony server
 serve.php: export SYMFONY_PORT ?= $(PORT_PREFIX)80
 serve.php:
 	$(call manala_message, Will be available at http://$(call manala_project_host):$(SYMFONY_PORT) )
 	-open http://www.ela.ooo:$(SYMFONY_PORT)
 	symfony server:start --no-tls --port=$(SYMFONY_PORT)
+endif
 
 ## Dev - Start webpack dev server with HMR (Hot reload)
 serve.assets: export WEBPACK_PORT ?= $(PORT_PREFIX)81
@@ -77,6 +92,8 @@ clear.images:
 #########
 # Build #
 #########
+
+build: build.assets
 
 ## Build - Build assets
 build.assets:

@@ -16,13 +16,13 @@ Aujourd'hui, on vous présente Paul-Émile, développeur **front-end** chez Elao
 
 ## Ton parcours
 
-La première fois que j'ai touché à du code, c'était **en 2012**. on m'avait filé un bot sur un jeu flash, et je m'amusais à créer de nouvelles commandes. 
-Ensuite, je me suis mis au **C++ en seconde**, j'avais codé un petit script qui permettait de résoudre les exercices classiques de math, type formule du second degré (dérivée, tableau de signes, etc). En terminale, c'est mon professeur de spé. maths qui me pousse vers un **IUT informatique**.
+La première fois que j'ai touché à du code, c'était **en 2012**. On m'avait filé un bot sur un jeu flash, et je m'amusais à créer de nouvelles commandes. 
+Ensuite, je me suis mis au **C++ en seconde**, j'avais codé un petit script qui permettait de résoudre les exercices classiques de math, type formule du second degré (dérivée, tableau de signes, etc). En terminale, c'est mon professeur de spé' maths qui me pousse vers un **IUT informatique**.
 A ce moment-là, je voulais faire des jeux vidéo.
 
 Mon IUT était très axé développement web, c'est avec eux que j'ai fait mes premiers sites un peu *sympa-chouettes*. **Ca m'a donné le gout du développement front-end**, alors qu'en parallèle, l'envie de faire des jeux vidéo s'amenuisait *(notamment dû à la réalité du marché)*.
 
-Ensuite j'ai fait une **licence générale**, en prévision d'un master. Le côté théorique ne m'allant pas, je me suis arrêté après cette première année et j'ai rejoins ma première boite de dev. Ils m'ont formés à *React*, **ça a été un coup de foudre.** Cela fait maintenant **plus de 6 ans** que cette techno est présente dans mon quotidien, désormais souvent accompagnée de *Next*. Et même si je lui suis pour l'instant fidèle, j'explore en parallèle les autres possibilités, comme *Vue* et *Svelte* notamment.
+Ensuite j'ai fait une **licence générale**, en prévision d'un master. Le côté théorique ne m'allant pas, je me suis arrêté après cette première année et j'ai rejoins ma première boite de dev. Ils m'ont formé à *React*, **ça a été un coup de foudre.** Cela fait maintenant **plus de 6 ans** que cette techno est présente dans mon quotidien, désormais souvent accompagnée de *Next*. Et même si je lui suis pour l'instant fidèle, j'explore en parallèle les autres possibilités, comme *Vue* et *Svelte* notamment.
 
 
 
@@ -53,7 +53,7 @@ Quand j'ai le temps, et que je veux me ressourcer seul, **je dessine, j'écris, 
 
 ### Un projet sur lequel tu aimerais vraiment travailler
 
-Soit un projet *"zone de confort"* avec la stack parfaite pour moi, React, TypeScript et GraphQL. Ou à l'inverse, un projet qui me sortirait de cette zone et me permettrait d'approfondir des connaissances. *(Par exemple développer mes compétences sur Figma, ou avec Svelte, Flutter, ...)*
+Soit un projet *"zone de confort"* avec la stack parfaite pour moi, React, TypeScript et GraphQL. Ou à l'inverse, un projet qui me sortirait de cette zone et me permettrait d'approfondir des connaissances *(Par exemple développer mes compétences sur Figma, ou avec Svelte, Flutter, ...)*.
 
 ### Plutôt Slack ou call ?
 
@@ -65,5 +65,5 @@ Chocolat *viennois*. ☕️
 
 ### PHP ou JS ?
 
-JS, enfin plutôt **TS** maintenant. C'est le langage que j'utilise depuis plus de 6 ans, et surtout c'est le langage d'un site **dynamique et réactif aux intéractions**.
+JS, enfin plutôt **TS** maintenant. C'est le langage que j'utilise depuis plus de 6 ans, et surtout c'est le langage d'un site **dynamique et réactif aux interactions**.
 

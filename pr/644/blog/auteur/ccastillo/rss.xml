@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Supericam, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Supericam de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/644/blog/auteur/ccastillo</link>
+        <pubDate>Mon, 18 Nov 2024 15:00:38 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/644/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Supericam, </title>
+            <link>https://elao.github.io/elao_/pr/644/blog/auteur/ccastillo</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/644/blog/auteur/ccastillo/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>L&#039;accessibilité de l&#039;écriture inclusive, ça donne quoi ?</title>
+                <pubDate>Mon, 18 Nov 2024 14:53:35 +0000</pubDate>
+                <description>
+                    <![CDATA[ Expérimentations autour de l&#039;accessibilité liée à l&#039;écriture inclusive. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/644/blog/elao/accessibilite-et-ecriture-inclusive</guid>
+                <link>https://elao.github.io/elao_/pr/644/blog/elao/accessibilite-et-ecriture-inclusive</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/644/%2E%2E/../resized/content/images/blog/2023/accessibilite-et-ecriture-inclusive/accessibility_bg_v2.jpg/5f1978bce063158658803df11e969fe3.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">L&#039;accessibilité de l&#039;écriture inclusive, ça donne quoi ?</media:description>
+                                    </media:content>
+                                    <category>ecriture-inclusive</category>
+                                    <category>accessibilite</category>
+                                            </item>
+                    <item>
+                <title>Camille, développeuse web chez Elao depuis 1 an</title>
+                <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/644/blog/elao/camille-developpeuse-web</guid>
+                <link>https://elao.github.io/elao_/pr/644/blog/elao/camille-developpeuse-web</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/644/%2E%2E/../resized/content/images/blog/2023/itw-camille/banner.jpg/c10e5aa3bb4166d61608750b5e8ac5bf.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Camille, développeuse web chez Elao depuis 1 an</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+            </channel>
+</rss>

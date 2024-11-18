@@ -42,9 +42,9 @@ Quand j'ai le temps, je dessine, j'écris, je fais de la musique. Ou quand je pe
 ## L'interview :fast-parrot:
 
 ### Tes 3 emojis préf du Slack
-- le `cest-genial` 👌 parce que c'est génial.
-- le `tintin` 😲 pour montrer mon étonnement.
-- le `samoyede` 🐶 parce que les chiens.
+- le `cest-genial` 👌 parce que je le dis toujours avec la voix de Patrick Sébastien.
+- le `tintin` 😲 qui s'étonne comiquement.
+- le `animal-gentleman` 🐶 parce que c'est mon merveilleux toutou.
 
 ### Les 3 trucs qui traînent toujours autour de ton bureau
 - mon mug
@@ -58,7 +58,7 @@ Soit un projet qui sort de cette zone  serait un projet qui me permettrait d'app
 
 ### Plutôt Slack ou call ?
 
-Ca dépend. J'aime beaucoup le pair programming et vu que j'étais longtemps en télétravail, j'avais pris l'habitude d'être sur un channel discord toute la journée pour s'entraider entre collègues du même projet. En présentiel, ça n'a plus trop de sens (mais ça reste utile lorsqu'il y a l'un des deux en télétravail du coup).
+Ca dépend. J'aime beaucoup le pair programming et vu que j'étais longtemps en télétravail, j'avais pris l'habitude d'être sur discord toute la journée pour s'entraider ou discuter entre collègues afin de se débloquer les uns les autres. En présentiel, je me tourne sur du message Slack, ou je me déplace jusqu'au bureau de la personne.
 
 ### Thé ou Café ?
 

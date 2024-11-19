@@ -7,7 +7,13 @@ authors: [equentin] # multiple acceptés
 tableOfContent: false # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team, alternance]
 thumbnail: content/images/blog/2024/alternants/episode1.jpg
-#banner: content/images/blog/interviews/banners/trame-itw.jpg # Uniquement si différent de la minitature (thumbnail)
+thumbnailResizeOptions:
+  article_thumbnail.md:
+    fit: fill
+    bg: F9DFDE
+  article_thumbnail.lg:
+    fit: fill
+    bg: F9DFDE
 #credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---

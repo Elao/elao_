@@ -18,9 +18,9 @@ thumbnailResizeOptions:
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
-!!! note
-Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) (sinon vous
-risquez d’être perdus🙃).
+!!! note "Cette article fait partie d'une série de 5 épisodes"
+    Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) 
+    (sinon vous risquez d’être perdus 🙃).
 
 Vous l’aurez compris, cette série d'articles a pour objectif de partager notre vision et notre démarche d’accompagnement
 des alternant.es, dans le but d'inspirer ou d’apporter des idées. Conscients que cette approche en est encore à ses

@@ -18,9 +18,9 @@ thumbnailResizeOptions:
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
-!!! note
-Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) (sinon vous
-risquez d’être perdus🙃).
+!!! note "Cette article fait partie d'une série de 5 épisodes"
+    Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) 
+    (sinon vous risquez d’être perdus 🙃).
 
 Notre alternante est arrivé·e depuis quelques semaines, il/elle prend ses marques et du côté des tuteur·rices on prépare
 les grandes phases du suivi tout au long de l’année sans oublier d’anticiper la suite (la fin de l’alternance et/ou le

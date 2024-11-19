@@ -18,8 +18,9 @@ thumbnailResizeOptions:
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
-!!! note
-Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) (sinon vous risquez d’être perdus🙃).
+!!! note "Cette article fait partie d'une série de 5 épisodes"
+    Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) 
+    (sinon vous risquez d’être perdus 🙃).
 
 Après le constat, c’est désormais l’heure de la préparation. Lors de notre travail sur la restructuration de
 l’accompagnement d’un alternant au sein de l’agence, nous avons repensé l’ensemble du processus, de l’arrivée jusqu’au

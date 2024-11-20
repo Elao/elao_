@@ -90,6 +90,8 @@ categories:
                   path: miscellaneous/approving-hermine.png
                 - code: ":amaze:"
                   path: miscellaneous/amaze.gif
+                - code: ":cest-genial:"
+                  path: miscellaneous/cest-genial.jpg
           - title: "Réaction : hmm... 👎"
             emojis:
                 - code: ":judging-hermine:"
@@ -136,6 +138,8 @@ categories:
                   path: miscellaneous/wowspin.gif
                 - code: ":balance:"
                   path: miscellaneous/balance.png
+                - code: ":tintin:"
+                  path: miscellaneous/tintin.png
     - title: "Quelques collections 🙌"
       sections:
           - title: Ah ! - Denis Brogniart
@@ -237,3 +241,6 @@ categories:
             emojis:
               - code: ":info:"
                 path: blog/info.png
+              - code: ":animal-gentleman:"
+                path: dogs/animal-gentleman.png
+

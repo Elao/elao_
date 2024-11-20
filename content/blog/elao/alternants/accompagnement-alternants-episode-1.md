@@ -20,14 +20,13 @@ thumbnailResizeOptions:
 
 
 En début d’année 2024 nous avons entrepris un projet en interne : **améliorer l’accompagnement de nos alternants au sein
-de l’agence**.  
+de l’agence**.
 
 Après bientôt 1 an de mise en pratique, nous vous partageons, à travers un format de plusieurs épisodes (articles), 
-ce que nous avons mis en place, les procédures par lesquelles nous sommes passées et le premier bilan que
+ce que nous avons mis en place, les procédures par lesquelles nous sommes passés et le premier bilan que
 nous pouvons en faire. Ces épisodes visent à expliquer **notre démarche**, à vous inspirer si vous traversez une
 situation similaire à la nôtre et, surtout, à partager les **bonnes pratiques** qui constituent notre manière de faire
-actuelle. Bien que perfectible, cette approche reste en évolution, et nous sommes convaincus que nous avons encore des
-éléments à apprendre pour l’améliorer.
+actuelle. Cette approche est perfectible et continue donc d'évoluer pour s'améliorer !
 
 Dans ce premier épisode, nous vous parlons plus précisément du **contexte** de cet accompagnement, de la **prise de
 conscience** qui a motivé notre démarche et du **but** recherché. C’est parti ! 😀
@@ -37,7 +36,7 @@ conscience** qui a motivé notre démarche et du **but** recherché. C’est par
 La **formation** est dans notre ADN depuis quelques années, et intégrer des alternant·e·s au sein de l’agence est une
 démarche importante pour nous.
 Nous aimons particulièrement transmettre, accompagner un nouveau·elle collaborateur·rice dans son apprentissage et bâtir
-une relation qui nous apporte tout autant d’enrichissement.
+une relation qui nous enrichit mutuellement.
 
 Il y a un an, nous avons fait un constat : nous sommes compétents dans l’accompagnement de leur cœur de métier pour ce
 qui est du développement web, mais le suivi de leur **satisfaction globale**, de leur **bien-être**, de leurs **attentes
@@ -57,18 +56,18 @@ leurs besoins et leurs objectifs.
 
 En janvier 2024, en binôme, nous avons commencé à mettre en forme un suivi plus régulier pour nos trois alternantes de
 l’époque. Ce suivi consistait à faire un point tous les deux mois pour aborder des **sujets récurrents** (niveau de
-bien-être dans l’entreprise, charge de travail au sein de l’agence et à l’école, moral etc.) mais également des sujets *
-*propres à chacunes** des alternantes et en lien avec leur métier.  
+bien-être dans l’entreprise, charge de travail au sein de l’agence et à l’école, moral, etc.) mais également des sujets *
+**propres à chacunes** des alternantes et en lien avec leur métier.  
 
 Les premiers retours ont été plutôt positifs, mais nous avions pour volonté d’aller plus loin et de structurer davantage
 ces tutorats pour les prochains **cycles d’alternance** (1 cycle = 1 année) ou pour les nouveaux·elles tutoré·e·s à
 rejoindre l’agence. Nous avons donc suivi une formation au sein de
 l’organisme <a href="https://www.dawan.fr/" target="blank">**Dawan**</a>  afin de consolider nos connaissances et de
-revenir à Elao avec des bagages encore plus importants et efficaces.
-Ainsi, nous avons profité de l’été 2024 pour restructurer tout notre accompagnement dans le but de démarrer septembre
+revenir à Elao avec des outils encore plus efficaces.
+Ainsi, nous avons profité de l’été 2024 pour restructurer tout notre accompagnement dans le but de démarrer la rentrée 
 2024 sur des bases solides.💪
 
-Bien que notre processus soit encore neuf et tendra à évoluer pour se perfectionner, nous vous partagerons ses grandes
+Bien que notre processus soit encore récent et continue d'évoluer pour se perfectionner, nous vous partagerons ses grandes
 caractéristiques dans le prochain épisode ! 
 
 

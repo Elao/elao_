@@ -1,6 +1,6 @@
 ---
 title: 'Polémil, développeur front-end chez Elao'
-date: '2024-11-25' # Au format YYYY-MM-DD
+date: '2024-11-20' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
 authors: [elao, pmoreau] # multiple acceptés
@@ -23,8 +23,6 @@ A ce moment-là, je voulais faire des jeux vidéo.
 Mon IUT était très axé développement web, c'est avec eux que j'ai fait mes premiers sites un peu *sympa-chouettes*. **Ca m'a donné le gout du développement front-end**, alors qu'en parallèle, l'envie de faire des jeux vidéo s'amenuisait *(notamment dû à la réalité du marché)*.
 
 Ensuite j'ai fait une **licence générale**, en prévision d'un master. Le côté théorique ne m'allant pas, je me suis arrêté après cette première année et j'ai rejoins ma première boite de dev. Ils m'ont formé à *React*, **ça a été un coup de foudre.** Cela fait maintenant **plus de 6 ans** que cette techno est présente dans mon quotidien, désormais souvent accompagnée de *Next*. Et même si je lui suis pour l'instant fidèle, j'explore en parallèle les autres possibilités, comme *Vue* et *Svelte* notamment.
-
-
 
 ## Qu'est-ce que tu préfères dans le quotidien de ton métier ?
 

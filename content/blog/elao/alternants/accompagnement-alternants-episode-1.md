@@ -1,6 +1,6 @@
 ---
 title: '[Épisode 1/5] Panique ! Nos alternants ont été lâchés en eau libre'
-date: '2024-11-30' # Au format YYYY-MM-DD
+date: '2024-11-29' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
 authors: [equentin] # multiple acceptés

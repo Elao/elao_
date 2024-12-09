@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/646/blog/auteur/elao</link>
-        <pubDate>Tue, 19 Nov 2024 17:36:00 +0000</pubDate>
+        <pubDate>Mon, 09 Dec 2024 11:15:12 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/646/apple-touch-icon.png</url>
@@ -17,6 +17,24 @@
             <link>https://elao.github.io/elao_/pr/646/blog/auteur/elao</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/646/blog/auteur/elao/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Polémil, développeur front-end chez Elao</title>
+                <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/646/blog/elao/polemil-developpeur-frontend</guid>
+                <link>https://elao.github.io/elao_/pr/646/blog/elao/polemil-developpeur-frontend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/646/%2E%2E/../resized/content/images/blog/2024/itw-pmoreau/bekansabo.png/58e9ea0801384ff4f067f18658e570e9.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Polémil, développeur front-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
                     <item>
                 <title>Emmanuelle, alternante en Direction Artistique</title>
                 <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>

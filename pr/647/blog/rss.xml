@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/647/blog</link>
-        <pubDate>Tue, 19 Nov 2024 17:37:38 +0000</pubDate>
+        <pubDate>Mon, 09 Dec 2024 11:16:41 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/647/apple-touch-icon.png</url>
@@ -37,8 +37,8 @@
                                     <category>alternance</category>
                                             </item>
                     <item>
-                <title>[Épisode 2/5] Notre alternant arrive : on prépare et on accueille</title>
-                <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+                <title>[Épisode 2/5] Notre alternant·e arrive : on prépare et on accueille</title>
+                <pubDate>Wed, 11 Dec 2024 00:00:00 +0000</pubDate>
                 <description>
                     <![CDATA[  ]]>
                 </description>
@@ -49,15 +49,15 @@
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">[Épisode 2/5] Notre alternant arrive : on prépare et on accueille</media:description>
+                    <media:description type="plain">[Épisode 2/5] Notre alternant·e arrive : on prépare et on accueille</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>
                                     <category>alternance</category>
                                             </item>
                     <item>
-                <title>[Épisode 1/5] Panique ! Nos alternants ont été lâchés en eau libre</title>
-                <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
+                <title>[Épisode 1/5] Panique ! Nos alternant·e·s ont été lâché·e·s en eau libre</title>
+                <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
                 <description>
                     <![CDATA[  ]]>
                 </description>
@@ -68,11 +68,29 @@
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">[Épisode 1/5] Panique ! Nos alternants ont été lâchés en eau libre</media:description>
+                    <media:description type="plain">[Épisode 1/5] Panique ! Nos alternant·e·s ont été lâché·e·s en eau libre</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>
                                     <category>alternance</category>
+                                            </item>
+                    <item>
+                <title>Polémil, développeur front-end chez Elao</title>
+                <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/647/blog/elao/polemil-developpeur-frontend</guid>
+                <link>https://elao.github.io/elao_/pr/647/blog/elao/polemil-developpeur-frontend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/647/%2E%2E/../resized/content/images/blog/2024/itw-pmoreau/bekansabo.png/58e9ea0801384ff4f067f18658e570e9.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Polémil, développeur front-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
                                             </item>
                     <item>
                 <title>Emmanuelle, alternante en Direction Artistique</title>
@@ -173,23 +191,5 @@ sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
                                     <category>api</category>
                                                     <comments>https://twitter.com/Elao/status/1810590609163309213</comments>
                             </item>
-                    <item>
-                <title>Murielle, communicante chez Elao</title>
-                <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Murielle se présente aujourd&#039;hui, en charge des communications (interne, externe et commerciale) avec les équipes, chez Elao depuis mars 2024. ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/647/blog/elao/murielle-portrait-communicante</guid>
-                <link>https://elao.github.io/elao_/pr/647/blog/elao/murielle-portrait-communicante</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/647/%2E%2E/../resized/content/images/blog/2024/itw-mzelboch/banner.jpg/8b071b497a4771f9bdaed83ff6f284a6.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Murielle, communicante chez Elao</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
             </channel>
 </rss>

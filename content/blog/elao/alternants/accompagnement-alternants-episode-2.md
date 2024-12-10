@@ -53,14 +53,14 @@ Pour cela :
               personnes concernées, en fonction du sujet évoqué, afin de faire évoluer notre fonctionnement.
 
 <figure>
-    <img src="content/images/blog/2024/alternants/doc-12-facteurs.png" alt="document 12 facteurs">
+    <img src="content/images/blog/2024/alternants/doc-12-facteurs.png" alt="document 12 facteurs" width="530">
     <figcaption>
         <span class="figure__legend">Capture du fichier des 12 facteurs de motivation</span>
     </figcaption>
 </figure>
 
 <figure>
-    <img src="content/images/blog/2024/alternants/doc-rapport-etonnement.png" alt="document rapport étonnement">
+    <img src="content/images/blog/2024/alternants/doc-rapport-etonnement.png" alt="document rapport étonnement" width="530">
     <figcaption>
         <span class="figure__legend">Capture du fichier du rapport d'étonnement</span>
     </figcaption>

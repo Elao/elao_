@@ -1,12 +1,12 @@
 ---
-title: '[Épisode 3/5] On suit son développement et on prépare la suite'
+title: "[Épisode 3/5] On suit le développement de l'alternant•e et on prépare la suite"
 date: '2025-01-07' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
 authors: [equentin] # multiple acceptés
 tableOfContent: false # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
 tags: [elao, team, alternance]
-thumbnail: content/images/blog/2024/alternants/episode3.jpg
+thumbnail: content/images/blog/2024/alternants/episode3.png
 thumbnailResizeOptions:
   article_thumbnail.md:
     fit: fill

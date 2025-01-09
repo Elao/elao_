@@ -44,7 +44,7 @@
             <span class="banner-home__title" data-aos="fade-right">
                 elao
                 <span>développe</span>
-                <span>du lien</span>
+                <span>de la valeur</span>
             </span>
             <div class="banner-home__content" data-aos="zoom-in">
                 <h1>{{ site.description }}</h1>
@@ -93,13 +93,13 @@
             </ul>
         </div>
 
-        <section class="illustrated-section" data-aos="fade-left">
+        {# <section class="illustrated-section" data-aos="fade-left">
             <div class="illustrated-section__content">
                 {% include 'partials/ia-brief.html.twig' %}
             </div>
-        </section>
+        </section> #}
 
-        <section class="illustrated-section" data-aos="fade-right">
+        {# <section class="illustrated-section" data-aos="fade-right">
             <div class="illustrated-section__content">
                 <div class="quote-home">
                     <picture data-aos="fade-left">
@@ -118,58 +118,84 @@
                     <blockquote class="quote-home__blockquote" data-aos="zoom-in">Conseiller et concevoir des applications web sur-mesure, animé par des experts passionnés.</blockquote>
                 </div>
             </div>
+        </section> #}
+-
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Et pourquoi ?</h2>
+                <p>Nous aidons les entreprises à gagner du temps, optimiser leurs process ou déployer leur business en développant des applications web ou mobile à façon avec une vraie compréhension des métiers et leurs spécificités.
+Nous sommes votre partenaire facilitateur, à vos côtés tout au long du projet car il est aussi le notre ! 
+Elao est apporteur de solutions digitales fiables et performantes pour plus de 200 clients depuis 20 ans</p>
+ 
         </section>
 
         <section class="illustrated-section" data-aos="fade-left">
             <div class="illustrated-section__content">
-                <h2 class="h2--dash">Les services que nous proposons <br> chez Elao</h2>
+                <h2 class="h2--dash">Et si on n’est pas tech ?</h2>
+                <p>En bref, que vous soyez tech ou pas, Elao, ce sont des équipes expertes sympas (sans jargon ni chichi) et engagées, réunies par des valeurs humaines communes (lien vers page Valeurs), qui prennent plaisir à s'immerger dans vos problématiques, les comprendre en profondeur avant de développer pour penser avec vous des projets de qualité et singuliers ! 
+</p>
+ 
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Et qui se cache derrière l’agence ?</h2>
+                <p>Nous sommes une équipe expérimentée et fidèle, située en France, à taille humaine (environ 20 personnes). 
+
+Agile et soucieuse de prendre plaisir au quotidien, dans nos projets et avec nos clients ; nous avons à cœur d’être toujours à la pointe, d’innover et de penser aux sujets tech de demain pour répondre à vos besoins !  </p>
+ 
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Ce qu’on fait  <br> chez Elao</h2>
                 <p>En tant qu'atelier de co-conception, nous avons pour objectif de contribuer à l'élaboration de vos projets, en <strong>collaboration</strong>  étroite avec vous, tout en mettant l'accent sur la satisfaction de vos utilisateurs. Cette approche passe par notre <strong>expertise</strong> sur différents services.</p>
                 <ul class="services-home">
                     <li class="services-home__card">
                         <i class="icon icon--code"></i>
-                        <h3>Développement web et mobile sur-mesure</h3>
+                        <h3>Concevoir : conseiller et accompagner</h3>
+                        <p>Pour garantir le succès de votre projet, de la compréhension du besoin à la définition d’une solution</p>
                         <ul>
-                            <li>Développement sur-mesure</li>
-                            <li>Application web</li>
-                            <li>Application mobile</li>
-                            <li>Intégration et accessibilité</li>
-                            <li>Expert Symfony - React - React Native</li>
-                            <li>Architecture applicative</li>
+                            <li>Cadrage du sujet</li>
+                            <li> Ateliers collaboratifs (UX, fonctionnel et technique…)</li>
+                            <li>Estimation temps, ressources et budget</li>
                         </ul>
                         <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
                         <i class="icon icon--bulb"></i>
-                        <h3>Conseil et accompagnement</h3>
+                        <h3>Développer : des applications web et mobile sur-mesure</h3>
+                        <p>Une méthode itérative et des solutions techniques qui s’adaptent à vous et votre éco-système</p>
                         <ul>
-                            <li>Audit technique</li>
-                            <li>Accompagnement global</li>
-                            <li>Méthodologie Agile (mais pas que)</li>
-                            <li>Facilitation de projet</li>
-                            <li>Ateliers participatifs</li>
-                            <li>Parcours utilisateur</li>
+                            <li>Applications web et mobiles (IOS, Android, PWA)</li>
+                            <li>API & intégrations</li>
+                            <li>Accessibilité numérique</li>
+                            <li>Organisation et gestion du projet </li>
                         </ul>
                         <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
                         <i class="icon icon--hosting"></i>
-                        <h3>Gestion d'infrastructure et d'hébergement</h3>
+                        <h3>Grandir : suivre et optimiser</h3>
+                        <p>Ecouter, tester et superviser avec vous chaque étape pour un projet fluide qui atteint ses objectifs</p>
                         <ul>
-                            <li>Déploiement continu</li>
-                            <li>Expertise DevOps</li>
-                            <li>Hébergement et maintenance</li>
-                            <li>Pilotage d'infrastructures</li>
+                            <li>Définition des indicateurs de performance</li>
+                            <li>Etapes de suivi et validation</li>
+                            <li>Capitalisation et optimisation</li>
                         </ul>
                         <a href="{{ path('hosting') }}" class="link link--brand">En savoir plus</a>
                     </li>
                     <li class="services-home__card">
                         <i class="icon icon--ia"></i>
-                        <h3>Solutions basées sur l'IA</h3>
+                        <h3>Valoriser et innover : pour plus d’impact et d’efficacité dans vos projets</h3>
+                        <p>Aller plus loin avec des fonctionnalités intelligentes et mettre au centre vos datas pour vous rendre pleinement autonomes 
+</p>
                         <ul>
-                            <li>IA génératives</li>
-                            <li>Assistants personnalisés</li>
-                            <li>Intégration ChatGPT</li>
-                            <li><strong><a href="{{ amabla.url }}" target="_blank" title="{{ amabla.seoTitle }}">Amabla ©</a></strong></li>
+                            <li> Intégration de chatbot et d’IA générative </li>
+                            <li>Développements en Opensource pour les rendre accessibles, transparents et optimisés</li>
+                            <li>Enrichissement, organisation et exploitation des datas pour mettre en lumière les projets et les équipes
+</li>
                         </ul>
                         <a href="{{ path('ia') }}" class="link link--brand">En savoir plus</a>
                     </li>
@@ -177,33 +203,103 @@
             </div>
         </section>
 
+
+
+
+
+
+
+
+
         <section class="illustrated-section" data-aos="fade-right">
             <div class="illustrated-section__content">
-                <h2 class="h2--dash">Un atelier expert sur les technos utilisées</h2>
+                <h2 class="h2--dash">Comment on le fait</h2>
                 <div class="section__techno">
-                    <div class="illustration">
-                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                        +
-                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo Symfony">
-                        = ❤️
-                    </div>
-                    <p>Nous sommes avant tout des experts sur les technologies que nous utilisons au quotidien, avec principalement :</p>
+                    <p>En tant que partenaire, notre engagement, c’est vous donner toutes les informations pour que vous puissiez prendre les bonnes décisions tout au long du projet. 
+C’est aussi prendre plaisir à construire ensemble des solutions pour vous !</p>
                     <ul>
-                        <li><strong><a href="{{ path('glossary_term', {term: 'symfony'}) }}">Symfony</a></strong>, LE <strong>framework <a href="{{ path('glossary_term', {term: 'php'}) }}">PHP</a></strong> que nous utilisons depuis notre création (nous avons mis notre première application web en ligne en 2006, avant la version 1 de Symfony !). On aime son efficacité, sa modularité, sa robustesse et le dynamisme de sa communauté qui en a fait une référence depuis presque 20 ans.</li>
-                        <li><strong><a href="{{ path('glossary_term', {term: 'react'}) }}">React/ReactNative</a></strong>, pour le côté front, qui va rendre vos sites et vos applications dynamiques, responsives et permettre une expérience utilisateurs optimale.</li>
+                        <li><strong>Une expertise technique et une expérience fonctionnelle reconnues</strong>: cela fait 20 ans que nous travaillons avec Symfony, React et sur l’intégration d'API. Notre équipe se compose d’une dizaine de développeurs (et facilitateurs) seniors, tous basés en France (Lyon).</li>
                     </ul>
-                    <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes et évolutives possibles.</p>
-                    <p>Pour découvrir l'ensemble de nos outils cliquez sur "En savoir plus_" !</p>
-                    <a href="{{ path('application') }}#techno" class="btn btn--secondary btn--animated">
-                        <span>
-                            En savoir plus
-                            {% include 'partials/svg-arrow.html.twig' %}
-                        </span>
-                    </a>
+                    <ul>
+                        <li><strong>Une approche collaborative unique pour gagner du temps et optimiser le budget</strong> chez nous, pas de chef de projet ni d’intermédiaire, mais un facilitateur garant du bon déroulement de notre accompagnement et une petite équipe de développeurs qui intervient à toutes les étapes du projet et qui seront vos interlocuteurs privilégiés. La communication entre vous et nous est ainsi facilitée ! </li>
+                    </ul>
+                    <ul>
+                        <li><strong>Une méthode agile itérative pour plus de flexibilité et d’efficacité</strong>: car il est important que nous puissions nous adapter à votre rythme, vos activités, aux changements au sein de votre entreprise...</li>
+                    </ul>
+                    <ul>
+                        <li><strong>Une transparence complète pour avancer en toute confiance</strong>: chez nous, la tech communique et est limpide ! Vous fixez les priorités du projet et nous vous fournissons toutes les infos (temps, estimation de budget, planning, avancement des étapes) afin que vous puissiez le piloter selon vos besoins et vos objectifs.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
+
+        <section class="illustrated-section" data-aos="fade-right">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Ce qu’on en dit </h2>
+                <div class="section__techno">
+                    <blockquote class="blockquote-secondary">
+                        <p>Ils ont une méthode folle ! Et ils captent tout. Je n’ai jamais eu autant de facilité à communiquer et comprendre qu’ils avaient tout compris : Evelyne Tiev</p>
+                    </blockquote>
+                    <blockquote class="blockquote-secondary">
+                        <p>Plonger dans le sujet même complexe pour en maîtriser les tenants et aboutissants pour produire un outil qui correspondait aux besoins : Sébastien Maimon - Gaillard </p>
+                    </blockquote>
+                    <blockquote class="blockquote-secondary">
+                        <p>Quand il y avait une problématique, il y avait toujours des solutions proposées : Stéphane Misse – Groupe Efire</p>
+                    </blockquote>
+                    <blockquote class="blockquote-secondary">
+                        <p>On conçoit ensemble l’outil, on s’appuie sur leur expertise, c’est vraiment un partenaire : Tatiana Lanchec - Myjobcompany</p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Nos dernières actus</h2>
+                <p>Nous attachons une grande importance à <strong>partager, redistribuer et favoriser</strong> la vitalité de notre <strong>écosystème</strong>. C'est la raison pour laquelle nous apprécions prendre part à des conférences et diffuser des articles liés à notre domaine d'expertise.</p>
+                <ul class="last-articles">
+                    {% for article in lastTwoArticles %}
+                    <li class="last-article">
+                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
+                            <span
+                                class="image"
+                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md', null, article.thumbnailResizeOptions) }}"
+                            ></span>
+                        </a>
+                        <div class="last-article__content" data-aos="zoom-in">
+                            <div class="info">
+                                <span>{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
+                                {% block tags %}
+                                    <ul class="tag-list">
+                                        {% for tag in article.tags %}
+                                            <li class="tag-list__item">
+                                                <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                    #{{ tag|u.camel.title }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endblock %}
+                            </div>
+                            <h3>
+                                <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
+                                    {{ article.title }}
+                                </a>
+                            </h3>
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
+                        </div>
+                    </li>
+                    {% endfor %}
+
+                    <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
+                    <span>
+                        Voir le blog
+                        {% include 'partials/svg-arrow.html.twig' %}
+                    </span>
+                    </a>
+                </ul>
+            </div>
+        </section>
         <section class="illustrated-section" data-aos="fade-left">
             <div class="illustrated-section__content">
                 <h2 class="h2--dash">Nos derniers projets</h2>
@@ -254,53 +350,7 @@
             </div>
         </section>
 
-        <section class="illustrated-section" data-aos="fade-left">
-            <div class="illustrated-section__content">
-                <h2 class="h2--dash">Nos dernières actus</h2>
-                <p>Nous attachons une grande importance à <strong>partager, redistribuer et favoriser</strong> la vitalité de notre <strong>écosystème</strong>. C'est la raison pour laquelle nous apprécions prendre part à des conférences et diffuser des articles liés à notre domaine d'expertise.</p>
-                <ul class="last-articles">
-                    {% for article in lastTwoArticles %}
-                    <li class="last-article">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
-                            <span
-                                class="image"
-                                style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md', null, article.thumbnailResizeOptions) }}"
-                            ></span>
-                        </a>
-                        <div class="last-article__content" data-aos="zoom-in">
-                            <div class="info">
-                                <span>{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
-                                {% block tags %}
-                                    <ul class="tag-list">
-                                        {% for tag in article.tags %}
-                                            <li class="tag-list__item">
-                                                <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
-                                                    #{{ tag|u.camel.title }}
-                                                </a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endblock %}
-                            </div>
-                            <h3>
-                                <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
-                                    {{ article.title }}
-                                </a>
-                            </h3>
-                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
-                        </div>
-                    </li>
-                    {% endfor %}
 
-                    <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
-                    <span>
-                        Voir le blog
-                        {% include 'partials/svg-arrow.html.twig' %}
-                    </span>
-                    </a>
-                </ul>
-            </div>
-        </section>
         <div class="bricks">
             <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
                 <h3 class="title">Vous souhaitez nous en dire plus sur vos idées, trouver un partenaire expert pour vous accompagner dans la conception et le développement de votre projet ?</h3>

@@ -41,19 +41,11 @@
 {% block content %}
     <div class="page-home container">
         <div class="banner-home">
-            <span class="banner-home__title" data-aos="fade-right">
-                elao
-                <span>développe</span>
-                <span>de la valeur</span>
-            </span>
+
             <div class="banner-home__content" data-aos="zoom-in">
-                <h1>{{ site.description }}</h1>
+                <h1>Elao concoit et développe des applications web et mobiles sur-mesure</h1>
             </div>
-            <div class="banner-home__image" data-aos="fade-left">
-                <figure>
-                    <div class="image" style="background: url('{{asset('build/images/pages/home/home-banner.jpg') }}')"></div>
-                </figure>
-            </div>
+
             <ul class="banner-home__list">
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
                 <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
@@ -93,55 +85,25 @@
             </ul>
         </div>
 
-        {# <section class="illustrated-section" data-aos="fade-left">
-            <div class="illustrated-section__content">
-                {% include 'partials/ia-brief.html.twig' %}
-            </div>
-        </section> #}
-
-        {# <section class="illustrated-section" data-aos="fade-right">
-            <div class="illustrated-section__content">
-                <div class="quote-home">
-                    <picture data-aos="fade-left">
-                        <source
-                            type="image/webp"
-                            srcset="{{ asset('build/images/pages/home/coding.webp') }} 1x,
-                                {{ asset('build/images/pages/home/coding@2x.webp') }} 2x"
-                        >
-                        <source
-                            type="image/jpeg"
-                            srcset="{{ asset('build/images/pages/home/coding.jpg') }} 1x,
-                                {{ asset('build/images/pages/home/coding@2x.jpg') }} 2x"
-                        >
-                        <img class="quote-home__img" src="{{ asset('build/images/pages/home/coding.jpg') }}" alt="" />
-                    </picture>
-                    <blockquote class="quote-home__blockquote" data-aos="zoom-in">Conseiller et concevoir des applications web sur-mesure, animé par des experts passionnés.</blockquote>
-                </div>
-            </div>
-        </section> #}
--
 
         <section class="illustrated-section" data-aos="fade-left">
             <div class="illustrated-section__content">
-                <h2 class="h2--dash">Elao, votre partenaire numérique sur-mesure</h2>
-                <p>Depuis 20 ans, nous aidons plus de 200 clients à gagner du temps, optimiser leurs processus et développer leur activité. Nos solutions ? Des applications web et mobiles sur-mesure, fiables et performantes, pensées pour répondre précisément aux besoins de votre métier. Chez Elao, chaque projet est une aventure commune, portée par une vraie compréhension de vos enjeux.</p>
-
-                <h2 >Une équipe à l’écoute et accessible</h2>
-                <p>Que vous soyez ou non expert en tech, notre équipe passionnée parle votre langage. Sans jargon, sans chichi, nous prenons plaisir à nous immerger dans vos problématiques pour mieux les comprendre et co-construire avec vous des projets uniques et adaptés. La collaboration et l’échange sont au cœur de notre méthode. 
-</p>
- 
-
-                <h2 >Une expertise agile et innovante</h2>
-                <p>Basée en France, notre équipe à taille humaine (environ 20 personnes) cultive un esprit agile et une forte curiosité pour les technologies de demain. Toujours à la pointe, nous travaillons avec sérieux mais sans oublier le plaisir, que ce soit dans nos projets ou avec nos clients. Ensemble, nous relevons vos défis et construisons l’avenir.</p>
- 
+                <h2 class="h2--dash">Vos besoins, nos solutions : une réussite à construire ensemble</h2>
+                <p>Depuis 20 ans, nous aidons les entreprises à <strong>gagner du temps</strong>, <strong>optimiser leurs process</strong> ou <strong>développer leur business</strong>.</p>
+                <p>Nous mettons notre <strong>expertise</strong> et notre <strong>passion</strong> au service de vos projets, pour concevoir des applications web et mobiles robustes, évolutives, et parfaitement adaptées à vos besoins.</p>
+                <p>Elao, ce sont des équipes <strong>expertes</strong> (sympas !) et <strong>engagées</strong>, réunies par des <a href="{{ path('values') }}" >valeurs humaines communes</a> qui aiment s'immerger dans vos problématiques, les comprendre en profondeur avant de développer.</p>
+                <p>Avec un esprit <strong>collaboratif</strong> et une méthodologie <strong>itérative</strong>, nous co-construisons des solutions qui font sens, en plaçant <strong>vos utilisateurs</strong> et <strong>vos ambitions</strong> au centre de chaque décision.</p>
+                <p>Basés en <strong>France</strong>, nous combinons créativité, pragmatisme et technologies innovantes pour <strong>relever vos défis</strong> avec engagement et sincérité.</p>
+                <a href="{{ path('values') }}" class="link link--brand">En savoir plus</a>
         </section>
 
 <section class="illustrated-section" data-aos="fade-left">
     <div class="illustrated-section__content">
         <h2 class="h2--dash">Ce qu'on fait chez Elao</h2>
+        <p>Elao est votre <strong>partenaire facilitateur</strong> à votre écoute sur toutes les étapes de votre projet. Que vous soyez <strong>novice</strong> ou <strong>expérimenté</strong> dans la réalisation de projets web,  nous vous accompagnons en vous <strong>transmettant notre culture projet et nos bonnes pratiques</strong></p>
         <ul class="services-home">
             <li class="services-home__card">
-                <i class="icon icon--code"></i>
+                <i class="icon icon--bulb"></i>
                 <h3>Concevoir : comprendre et conseiller</h3>
                 <p>Pour garantir le succès de votre projet, nous commençons par une phase essentielle de compréhension et de définition de la solution.</p>
                 <ul>
@@ -151,11 +113,11 @@
                     <li>Estimation des ressources et du budget</li>
                     <li>Construction de la roadmap projet</li>
                 </ul>
-                <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
+                <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
             </li>
             
             <li class="services-home__card">
-                <i class="icon icon--bulb"></i>
+                <i class="icon icon--code"></i>
                 <h3>Construire : développer et mettre en ligne</h3>
                 <p>Une méthode itérative et des solutions techniques qui s'adaptent à vous et votre écosystème pour développer des applications performantes et évolutives.</p>
                 <ul>
@@ -165,7 +127,7 @@
                     <li>Tests et qualité du code</li>
                     <li>Accessibilité et performance des applications</li>
                 </ul>
-                <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
+                <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
             </li>
 
             <li class="services-home__card">
@@ -208,24 +170,23 @@
 
         <section class="illustrated-section" data-aos="fade-right">
             <div class="illustrated-section__content">
-                <h2 class="h2--dash">Comment on le fait</h2>
+                <h2 class="h2--dash">Une démarche claire pour sécuriser et réussir votre projet</h2>
                 <div class="section__techno">
-                    <p>En tant que partenaire, notre engagement, c’est vous donner toutes les informations pour que vous puissiez prendre les bonnes décisions tout au long du projet. 
-C’est aussi prendre plaisir à construire ensemble des solutions pour vous !</p>
+                    <p>Chez Elao, nous nous engageons à vous accompagner avec <strong>transparence</strong> et <strong>expertise</strong>, pour que vous puissiez prendre les <strong>meilleures décisions</strong> tout au long de votre projet. Ensemble, nous construisons des solutions sur-mesure dans un esprit de collaboration et de plaisir partagé.</p>
                     <ul>
-                        <li><strong>Une expertise technique et une expérience fonctionnelle reconnues</strong>: cela fait 20 ans que nous travaillons avec Symfony, React et sur l’intégration d'API. Notre équipe se compose d’une dizaine de développeurs (et facilitateurs) seniors, tous basés en France (Lyon).</li>
-                    </ul>
-                    <ul>
-                        <li><strong>Une approche collaborative unique pour gagner du temps et optimiser le budget</strong> chez nous, pas de chef de projet ni d’intermédiaire, mais un facilitateur garant du bon déroulement de notre accompagnement et une petite équipe de développeurs qui intervient à toutes les étapes du projet et qui seront vos interlocuteurs privilégiés. La communication entre vous et nous est ainsi facilitée ! </li>
-                    </ul>
-                    <ul>
-                        <li><strong>Une méthode agile itérative pour plus de flexibilité et d’efficacité</strong>: car il est important que nous puissions nous adapter à votre rythme, vos activités, aux changements au sein de votre entreprise...</li>
-                    </ul>
-                    <ul>
-                        <li><strong>Une transparence complète pour avancer en toute confiance</strong>: chez nous, la tech communique et est limpide ! Vous fixez les priorités du projet et nous vous fournissons toutes les infos (temps, estimation de budget, planning, avancement des étapes) afin que vous puissiez le piloter selon vos besoins et vos objectifs.</li>
-                    </ul>
+                        <li><strong>Une expertise technique et fonctionnelle reconnues</strong>: Forte de 20 ans d'expérience, notre équipe basée à Lyon maîtrise des technologies clés comme Symfony, React et l’intégration d’API, pour développer des solutions robustes et adaptées à vos besoins.</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Une collaboration directe et efficace pour sécuriser le budget</strong>: Sans intermédiaires, nos développeurs et facilitateurs travaillent main dans la main avec vous à chaque étape, pour garantir un suivi fluide et un budget optimisé.</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Une méthode agile et flexible</strong>: Notre approche itérative s’ajuste à votre rythme, vos contraintes et les évolutions de votre activité, pour vous offrir une réactivité et une efficacité maximales.</li>
+                        </ul>
+                        <ul>
+                            <li><strong>Une transparence totale pour avancer en toute confiance</strong>:  Chez nous la tech n'est pas une boite noire. Avec des informations claires sur le planning, le budget et l’avancement, nous vous donnons les clés pour piloter votre projet avec sérénité et confiance.</li>
+                     </ul>
+                     <a href="{{ path('approach') }}" class="link link--brand">En savoir plus</a>
                 </div>
-            </div>
         </section>
 
 
@@ -236,7 +197,7 @@ C’est aussi prendre plaisir à construire ensemble des solutions pour vous !</
                     <blockquote class="blockquote-secondary">
                         <p>Ils ont une méthode folle ! Et ils captent tout. Je n’ai jamais eu autant de facilité à communiquer et comprendre qu’ils avaient tout compris : Evelyne Tiev</p>
                     </blockquote>
-                    <blockquote class="blockquote-secondary">
+                    {# <blockquote class="blockquote-secondary">
                         <p>Plonger dans le sujet même complexe pour en maîtriser les tenants et aboutissants pour produire un outil qui correspondait aux besoins : Sébastien Maimon - Gaillard </p>
                     </blockquote>
                     <blockquote class="blockquote-secondary">
@@ -244,7 +205,7 @@ C’est aussi prendre plaisir à construire ensemble des solutions pour vous !</
                     </blockquote>
                     <blockquote class="blockquote-secondary">
                         <p>On conçoit ensemble l’outil, on s’appuie sur leur expertise, c’est vraiment un partenaire : Tatiana Lanchec - Myjobcompany</p>
-                    </blockquote>
+                    </blockquote> #}
                 </div>
             </div>
         </section>

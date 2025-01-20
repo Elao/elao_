@@ -27,7 +27,8 @@ twig:
             social:
                 github: https://github.com/elao
                 twitter: https://twitter.com/elao
-                linkedin: https://www.linkedin.com/company/elao/mycompany/
+                bluesky: https://bsky.app/profile/elao.com
+                linkedin: https://www.linkedin.com/company/elao/
 
             trackers:
                 matomo: '%env(MATOMO_ID)%'

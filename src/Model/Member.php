@@ -30,6 +30,7 @@ class Member
     // Social
     public ?string $website = null;
     public ?string $twitter = null;
+    public ?string $bluesky = null;
     public ?string $github = null;
     public ?string $email = null;
     public ?string $avatar = null;

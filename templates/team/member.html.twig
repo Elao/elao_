@@ -61,7 +61,15 @@
                             <li>
                                 <a href="https://twitter.com/{{ member.twitter }}" target="_blank">
                                     <i class="icon icon--x" aria-hidden="true"></i>
-                                    <span class="screen-reader">Compte Twitter de {{ member.name }}</span>
+                                    <span class="screen-reader">Compte X de {{ member.name }}</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% if member.bluesky %}
+                            <li>
+                                <a href="https://bsky.app/profile/{{ member.bluesky }}" target="_blank">
+                                    <i class="icon icon--bluesky" aria-hidden="true"></i>
+                                    <span class="screen-reader">Compte Bluesky de {{ member.name }}</span>
                                 </a>
                             </li>
                         {% endif %}

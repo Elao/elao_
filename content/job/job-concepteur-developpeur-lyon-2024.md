@@ -4,7 +4,7 @@ title:
     - "un·e Concepteur·rice / Développeur·euse d'applications web"
 description:     "Nous recherchons un·e concepteur·rice d'applications web"
 date:            "2024-10-18"
-active:          true
+active:          false
 contractType:    CDI
 place:           "Lyon, télétravail partiel possible"
 hiringDate:      ~

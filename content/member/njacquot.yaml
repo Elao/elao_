@@ -1,0 +1,32 @@
+active: true
+#🚲: true # velo-taffeur
+
+# Bio
+name: Nathan Jacquot
+pseudo: Nathan
+gender: male
+bio: |
+    Développeur touche-à-tout, Nathan aime jongler entre le front et le back-end, avec une préférence assumée pour les défis techniques. Toujours curieux, il se passionne pour les nouvelles technologies et adore se creuser la tête sur des problèmes complexes.
+
+    Avec une licence en métiers du web et du multimédia en poche, il a multiplié les expériences dans des domaines variés comme l’immobilier et la communication notamment en travaillant pour de gros groupes comme le Groupe SEB, Tefal et Moulinex.
+
+    Quand il ne code pas, Nathan troque son clavier pour une spatule en cuisine, passe du temps avec ses proches, ou part explorer la nature à la recherche de paysages inspirants.
+position: Développeur Back-end
+integrationDate: 06-01-2025
+
+# Social
+website: ~
+twitter: ~ # your username
+github: ~
+email: ~
+avatar: content/images/members/avatars/njacquot.jpg
+
+#certifications:
+#    - symfony
+#    - opquast
+
+emojis:
+    - 🍾
+    - 🍽️
+    - 🥾
+    - 🎢

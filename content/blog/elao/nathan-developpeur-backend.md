@@ -6,7 +6,7 @@ description: ''
 authors: [elao, njacquot] # multiple acceptés
 tableOfContent: false
 tags: [elao, team]
-thumbnail: content/images/blog/2025/itw-njacquot/njacquot2.png
+thumbnail: content/images/blog/2025/itw-njacquot/njacquot.png
 #banner: content/images/blog/2025/itw-njacquot/njacquot.png # Uniquement si différent de la minitature (thumbnail)
 #credit: { name: 'Thomas Jarrand', url: 'https://unsplash.com/@tom32i' } # Pour créditer la photo utilisée en miniature
 #tweetId: ~ # Ajouter l'id du Tweet après publication.

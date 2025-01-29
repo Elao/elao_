@@ -1,6 +1,6 @@
 ---
 title: 'Nathan, développeur back-end chez Elao'
-date: '2025-01-06' # Au format YYYY-MM-DD
+date: '2025-01-29' # Au format YYYY-MM-DD
 lastModified: ~ # À utiliser pour indiquer explicitement qu'un article à été mis à jour
 description: ''
 authors: [elao, njacquot] # multiple acceptés

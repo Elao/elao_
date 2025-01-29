@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Mon, 20 Jan 2025 15:53:09 +0000</pubDate>
+        <pubDate>Wed, 29 Jan 2025 12:22:26 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,24 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Nathan, développeur back-end chez Elao</title>
+                <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/nathan-developpeur-backend</guid>
+                <link>https://elao.github.io/elao_/blog/elao/nathan-developpeur-backend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2025/itw-njacquot/njacquot.png/d6cad0d99fa3ae1fd5ab500fd842fc06.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Nathan, développeur back-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
                     <item>
                 <title>[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</title>
                 <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>

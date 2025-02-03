@@ -19,6 +19,13 @@ h1, .h1 {
   }
 }
 
+.h1--black {
+  @extend .h1;
+
+  color: #000;
+  margin: 60px 0 30px 0;
+}
+
 h2, .h2 {
   margin: 50px 0 25px;
   position: relative;

@@ -1,0 +1,99 @@
+{% set noindex = true %}
+{% import "macros.html.twig" as macros %}
+
+{% set swupContainers = [] %}
+{% block meta_title "Optimiser : consolider et évoluer | Elao" %}
+{% block meta_description "Ecouter, tester et superviser avec vous chaque étape pour un projet fluide qui atteint ses objectifs | Elao" %}
+
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container page-optimiser">
+        {{ macros.breadcrumb([
+            {path: path('homepage'), label: 'Accueil'},
+            {path: path('services'), label: 'Nos services'},
+            {path: '#', label: 'Optimiser : consolider et évoluer'},
+        ]) }}
+
+        <div class="banner-services">
+            <h1 class="banner-services__title" data-aos="fade-right">Optimiser : consolider et évoluer</h1>
+            <div class="banner-services__content">
+                <div class="image"
+                     data-aos="fade-left"
+                     style="background-image: {{ asset('build/images/pages/services/optimiser/optimiser-header.jpg') }};
+                         background-image: image-set(url({{ asset('build/images/pages/services/optimiser/optimiser-header.jpg') }}) 1x,
+                         url({{ asset('build/images/pages/services/optimiser/optimiser-header@2x.jpg') }}) 2x);">
+                </div>
+                <span class="highlight" data-aos="zoom-in">
+                    <p>Ecouter, tester et superviser avec vous chaque étape pour un projet fluide qui atteint ses objectifs</p>
+                </span>
+            </div>
+            <ul class="banner-services__text">
+                <li>Définition des indicateurs de performance</li>
+                <li>Etapes de suivi et validation</li>
+                <li>Capitalisation et optimisation</li>
+            </ul>
+            <p class="banner-services__text">
+                Chez Elao, nous savons qu’un projet réussi est celui qui atteint ses objectifs et repose sur une <strong>collaboration étroite</strong> à chaque étape.
+                Car la mise en ligne d’une solution n’est que le début d’une autre phase. Nous avons à cœur qu’elle puisse continuer à évoluer avec vous,
+                en toute confiance, et pour qu’elle reste <strong>fidèle à ce qu’on a construit ensemble</strong> depuis le début.
+            </p>
+            <p class="banner-services__text">
+                Nous sommes un partenaire engagé pour des résultats mesurables !
+            </p>
+            <p class="banner-services__text">
+                Et cela commence avant tout et simplement, par être pleinement à votre écoute pour être proactifs en apportant d’autres perspectives, des innovations et grandir ensemble tout au long du projet…
+            </p>
+        </div>
+
+        <div class="page-services">
+            <h2 class="h2--dash">Écouter pour comprendre, adapter et faire de ce projet le notre</h2>
+            <div class="offset-content">
+                <p>
+                    Un projet performant commence par une compréhension claire de vos spécificités, de votre métier et de votre culture. C’est à nous de nous
+                    adapter au mieux à cela et construire une <strong>vision partagée</strong> qui guidera pas à pas chaque étape : de l’alignement sur les objectifs jusqu’à la
+                    fin du projet et même après ! En tant que partenaire, nous sommes une équipe supplétive à vos côtés, durablement, pour un projet de qualité.
+                </p>
+                <ul>
+                    <li><strong>Ecouter, observer, échanger</strong> pour bien saisir vos enjeux et votre écosystème</li>
+                    <li>S’approprier votre métier pour <strong>faire de ce projet le notre</strong></li>
+                    <li>Définir ensemble des indicateurs de performance clés (KPI) pour mesurer <strong>le succès et la qualité</strong> du projet et de chaque pas par rapport à ses objectifs pour être toujours pleinement en phase.</li>
+                </ul>
+            </div>
+
+            <section class="testing">
+                <h2 class="h2--dash">Tester et valider chaque étape pour un projet maîtrisé et agréable</h2>
+                <div class="offset-content">
+                    <p>
+                        La transparence et l’agilité sont au cœur de notre démarche et de notre état d’esprit. Nous fonctionnons de manière itérative pour avoir des feedbacks
+                        les plus rapides et pertinents possible. Nous mettons ainsi <strong>l’humain et les interactions</strong> au coeur de nos projets.
+                    </p>
+                    <ul>
+                        <li>Vous impliquer activement dans les décisions critiques.</li>
+                        <li>Identifier vos enjeux et attentes spécifiques au début mais aussi mettre en place des points réguliers sur toute la durée de l’accompagnement en fonction de votre actualité, vos priorités et de la vie du projet…</li>
+                        <li>Prototyper et tester rapidement pour valider les fonctionnalités clés.</li>
+                        <li>Réagir efficacement aux retours et ajuster au besoin pour garantir que le produit reste aligné avec vos attentes et surtout celles de vos <strong>utilisateurs</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="illustrated-section__image">
+                    <img src="{{ asset('build/images/pages/services/optimiser/tester-valider-projet-maitrise.jpg') }}" alt="Elao - Réunion de travail">
+                    <i class="icon icon--chevrons-right" aria-hidden="true"></i>
+                </div>
+            </section>
+
+            <h2 class="h2--dash">Capitaliser pour une optimisation continue</h2>
+            <div class="offset-content">
+                <p>
+                    Notre mission ne s’arrête pas à la livraison de votre application. Nous veillons à ce que votre <strong>solution évolue et s’améliore</strong>
+                    avec le temps. Nous oeuvrons pour transformer des idées et des expériences en succès grâce à :
+                </p>
+                <ul>
+                    <li>Une <strong>capitalisation des apprentissages</strong> tout au long du projet pour affiner votre stratégie.</li>
+                    <li>Une optimisation continue pour maximiser les performances et <strong>l’expérience utilisateur</strong>.</li>
+                    <li>Une passation efficace pour vous rendre pleinement <strong>autonomes</strong> sur votre outil, construire et <strong>embarquer</strong> vos équipes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

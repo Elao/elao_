@@ -1,0 +1,50 @@
+.page-optimiser {
+  .testing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+
+    h2 {
+      flex-basis: 100%;
+    }
+
+    > div {
+        flex-basis: 49%;
+    }
+
+    .illustrated-section__image{
+      &:before {
+        bottom: 100px;
+      }
+
+      .icon {
+        bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-md) {
+  .page-optimiser {
+    .testing {
+      flex-direction: column;
+      gap: 0;
+
+      > div {
+        flex-basis: 100%;
+      }
+
+      .illustrated-section__image{
+        &:before {
+          bottom: -30px;
+        }
+
+        .icon {
+          bottom: -60px;
+        }
+      }
+    }
+  }
+}

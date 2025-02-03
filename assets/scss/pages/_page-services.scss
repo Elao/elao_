@@ -352,6 +352,16 @@
     &:first-of-type {
       margin: 90px 0 30px;
     }
+
+    &__image {
+      &.half {
+        max-width: 50%;
+
+        @media (max-width: $screen-lg) {
+          max-width: 100%;
+        }
+      }
+    }
   }
 
   .bricks {

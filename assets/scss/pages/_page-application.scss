@@ -1,0 +1,58 @@
+.page-application {
+  .picture-full {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .image {
+      height: 100%;
+    }
+  }
+
+  .advice__image {
+    height: 400px;
+    width: 418px;
+    object-fit: cover;
+  }
+
+  .architecture {
+    display: flex;
+    grid-column: 1 / 11;
+    margin: 100px 0 80px;
+  }
+
+  .tests {
+    align-items: flex-start;
+    display: flex;
+    grid-column: 2 / 13;
+    margin: 0 0 80px;
+  }
+
+  .audit {
+    display: flex;
+    grid-column: 1 / 12;
+    margin: 0 0 40px;
+  }
+
+  .review {
+    grid-column: 2 / 8;
+    margin: 0 0 100px;
+  }
+
+  .architecture, .audit {
+    img {
+      margin: 0 40px 0 0;
+    }
+  }
+
+  .tests, .review {
+    img {
+      margin: 0 0 0 40px;
+    }
+  }
+
+  .offset {
+    margin-bottom: 110px;
+    margin-left: 110px;
+  }
+}

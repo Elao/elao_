@@ -12,9 +12,9 @@ printf "\033[34m    =- =- -=.--\"\033[0m\n"
 printf "\n"
 printf " \033[36m‣ nginx \033[35m1.24\033[0m\n"
 printf " \033[36m‣ php \033[35m8.3\033[0m\n"
-printf " \033[36m‣ nodejs \033[35m16\033[0m\n"
-printf "\n"
+printf " \033[36m‣ nodejs \033[35m22\033[0m\n"
 
+printf "\n"
 printf " \033[36m• php-xdebug \033[35m[on|off] \033[37m- enable/disable php xdebug\033[0m\n"
 printf "\n"
 php-xdebug () {

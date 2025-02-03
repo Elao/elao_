@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Xavier R, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Xavier R de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/655/blog/auteur/xavierr</link>
+        <pubDate>Mon, 03 Feb 2025 15:53:43 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/655/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Xavier R, </title>
+            <link>https://elao.github.io/elao_/pr/655/blog/auteur/xavierr</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/655/blog/auteur/xavierr/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>La pratique du DDD au quotidien</title>
+                <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Quelques réflexions sur notre pratique quotidienne du DDD, ses avantages et certains écueils ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/ddd-practice</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/ddd-practice</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/2024/ddd-bg.jpg/47831a03d18d34eaf700081625c72862.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">La pratique du DDD au quotidien</media:description>
+                                    </media:content>
+                                    <category>ddd</category>
+                                    <category>conception</category>
+                                            </item>
+                    <item>
+                <title>Bienvenue à bord …</title>
+                <pubDate>Tue, 13 Jun 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ L&#039;accueil et l&#039;accompagnement des nouveaux développeurs et développeuses chez elao ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/elao/onboarding-2022</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/elao/onboarding-2022</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/2023/onboarding-2022/eileen-pan-5d5DSRQ5dUc-unsplash.jpg/dcd5c0778d71f849bcd7d914de4f3738.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Bienvenue à bord …</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+                    <item>
+                <title>Le Design Pattern &#039;Chain of Responsibility&#039;</title>
+                <pubDate>Sat, 13 May 2017 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Nouvel article consacré aux Design Patterns. Aujourd&#039;hui : le pattern Chain of Responsibility ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-chain-of-responsibility</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-chain-of-responsibility</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/chaplin-assembly-line.jpeg/2614bf9d65d46982eba174c6971fc369.jpeg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le Design Pattern &#039;Chain of Responsibility&#039;</media:description>
+                                    </media:content>
+                                    <category>design-pattern</category>
+                                    <category>conception</category>
+                                            </item>
+                    <item>
+                <title>Le Design Pattern &#039;Decorator&#039;</title>
+                <pubDate>Thu, 04 May 2017 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Présentation du pattern &#039;Decorator&#039; dans le cadre d&#039;une série consacrée aux Design Patterns ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-decorator</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-decorator</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/decorator_pattern.jpg/6195662bc180b2c81b0b630cf6e84f4f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le Design Pattern &#039;Decorator&#039;</media:description>
+                                    </media:content>
+                                    <category>design-pattern</category>
+                                    <category>conception</category>
+                                            </item>
+                    <item>
+                <title>Le Design Pattern &#039;Abstract Factory&#039;</title>
+                <pubDate>Tue, 11 Apr 2017 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Deuxième article d&#039;une série consacrée aux Design Patterns. Aujourd&#039;hui : le pattern Abstract Factory ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-abstract-factory</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-abstract-factory</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/schema.jpg/8b7e5dd293761b29bfd19aa5e19cbeeb.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le Design Pattern &#039;Abstract Factory&#039;</media:description>
+                                    </media:content>
+                                    <category>design-pattern</category>
+                                    <category>conception</category>
+                                            </item>
+                    <item>
+                <title>Le Design Pattern &#039;Factory Method&#039;</title>
+                <pubDate>Mon, 10 Apr 2017 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Premier article d&#039;une série consacrée aux Design Patterns. Aujourd&#039;hui : le pattern Factory Method ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-factory-method</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/design-pattern-factory-method</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/scientist.jpg/8f14830081a18495b6b15bf4c9c62c44.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le Design Pattern &#039;Factory Method&#039;</media:description>
+                                    </media:content>
+                                    <category>design-pattern</category>
+                                    <category>conception</category>
+                                            </item>
+                    <item>
+                <title>PHP Tour 2016, Merciiiiii</title>
+                <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Les 23 et 24 mai se déroulait à Clermont-Ferrand le PHP Tour 2016. Pour l&#039;occasion l&#039;Afup et Clermont&#039;ech ont à nouveau réuni la communauté open source PHP. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/elao/phptour-2016</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/elao/phptour-2016</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/phptour-thumbnail.jpg/b8c83585f28f53d9a8bd190561081f31.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">PHP Tour 2016, Merciiiiii</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>conference</category>
+                                    <category>afup</category>
+                                    <category>clermont-ech</category>
+                                            </item>
+                    <item>
+                <title>Django (3ème partie) : les templates, et bien d&#039;autres choses ...</title>
+                <pubDate>Fri, 15 Oct 2010 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Django (3ème partie) : les templates, et bien d&#039;autres choses ... ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/django-3eme-partie-les-templates-et-bien-dautres-choses</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/django-3eme-partie-les-templates-et-bien-dautres-choses</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Django (3ème partie) : les templates, et bien d&#039;autres choses ...</media:description>
+                                    </media:content>
+                                    <category>django</category>
+                                    <category>framework</category>
+                                    <category>mvc</category>
+                                    <category>python</category>
+                                            </item>
+                    <item>
+                <title>Django (2nde partie) : le Modèle et l’Admin</title>
+                <pubDate>Wed, 06 Oct 2010 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Django (2nde partie) : le Modèle et l’Admin ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/django-2nde-partie-le-modele-et-ladmin</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/django-2nde-partie-le-modele-et-ladmin</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/django.jpg/f6fe85b8f806a5f6b5cf0d04635f4648.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Django (2nde partie) : le Modèle et l’Admin</media:description>
+                                    </media:content>
+                                    <category>django</category>
+                                    <category>framework</category>
+                                    <category>mvc</category>
+                                    <category>python</category>
+                                            </item>
+                    <item>
+                <title>Premiers pas avec le framework Python &quot;Django&quot;</title>
+                <pubDate>Wed, 15 Sep 2010 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Premiers pas avec le framework Python &quot;Django&quot; ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/premiers-pas-avec-le-framework-python-django</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/premiers-pas-avec-le-framework-python-django</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/first_step.jpg/df67ee00ce775a0b7bfa14158e458484.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Premiers pas avec le framework Python &quot;Django&quot;</media:description>
+                                    </media:content>
+                                    <category>django</category>
+                                    <category>framework</category>
+                                    <category>mvc</category>
+                                    <category>python</category>
+                                            </item>
+                    <item>
+                <title>Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin</title>
+                <pubDate>Mon, 12 Jul 2010 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/dev/installation-et-premiers-pas-avec-le-plugin-symfony-sfimagetransformextraplugin</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/dev/installation-et-premiers-pas-avec-le-plugin-symfony-sfimagetransformextraplugin</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/thumbnails/toad.jpg/da4b42c9d834d84950f160ae43e86ca1.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Installation et premiers pas avec le plugin Symfony sfImageTransformExtraPlugin</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>php</category>
+                                    <category>symfony</category>
+                                            </item>
+            </channel>
+</rss>

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/648/blog</link>
-        <pubDate>Mon, 06 Jan 2025 16:06:36 +0000</pubDate>
+        <pubDate>Mon, 10 Feb 2025 09:14:58 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/648/apple-touch-icon.png</url>
@@ -37,7 +37,25 @@
                                     <category>alternance</category>
                                             </item>
                     <item>
-                <title>[Épisode 3/5] On suit son développement et on prépare la suite</title>
+                <title>Nathan, développeur back-end chez Elao</title>
+                <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/648/blog/elao/nathan-developpeur-backend</guid>
+                <link>https://elao.github.io/elao_/pr/648/blog/elao/nathan-developpeur-backend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/648/%2E%2E/../resized/content/images/blog/2025/itw-njacquot/njacquot.png/d6cad0d99fa3ae1fd5ab500fd842fc06.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Nathan, développeur back-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</title>
                 <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
                 <description>
                     <![CDATA[  ]]>
@@ -45,11 +63,11 @@
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/648/blog/elao/alternants/accompagnement-alternants-episode-3</guid>
                 <link>https://elao.github.io/elao_/pr/648/blog/elao/alternants/accompagnement-alternants-episode-3</link>
                 <media:content
-                    url="https://elao.github.io/elao_/pr/648/%2E%2E/../resized/content/images/blog/2024/alternants/episode3.jpg/db71b8138d0c7bd5850167e7d571d694.jpg"
+                    url="https://elao.github.io/elao_/pr/648/%2E%2E/../resized/content/images/blog/2024/alternants/episode3.png/3e7bc937b2d0f28896b3f30b335d5002.png"
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">[Épisode 3/5] On suit son développement et on prépare la suite</media:description>
+                    <media:description type="plain">[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>
@@ -165,50 +183,5 @@
                                     <category>ddd</category>
                                     <category>conception</category>
                                             </item>
-                    <item>
-                <title>Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</title>
-                <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Challengez votre workflow git avec la méthode env-branching, 
-une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
- ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/648/blog/dev/env-branching-git-flow-model</guid>
-                <link>https://elao.github.io/elao_/pr/648/blog/dev/env-branching-git-flow-model</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/648/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/658cd9c0513e756a1c2ad2c78133964c.png"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</media:description>
-                                    </media:content>
-                                    <category>git</category>
-                                    <category>github</category>
-                                    <category>web</category>
-                                                    <comments>https://twitter.com/Elao/status/1821093926826086505</comments>
-                            </item>
-                    <item>
-                <title>Mocker une API GraphQL avec les resolvers locaux du client Apollo</title>
-                <pubDate>Tue, 09 Jul 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Découvrez comment simuler tout ou partie d&#039;une API GraphQL, depuis votre application front, 
-sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
- ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/648/blog/dev/apollo-mock-data-local-resolvers</guid>
-                <link>https://elao.github.io/elao_/pr/648/blog/dev/apollo-mock-data-local-resolvers</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/648/%2E%2E/../resized/content/images/blog/2024/apollo-mock-data-local-resolvers/apollo-local-resolvers-2.png/63dd8262c4b2e0e83ff24c37477af142.png"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Mocker une API GraphQL avec les resolvers locaux du client Apollo</media:description>
-                                    </media:content>
-                                    <category>javascript</category>
-                                    <category>apollo</category>
-                                    <category>graphql</category>
-                                    <category>api</category>
-                                                    <comments>https://twitter.com/Elao/status/1810590609163309213</comments>
-                            </item>
             </channel>
 </rss>

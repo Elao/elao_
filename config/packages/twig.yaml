@@ -9,7 +9,7 @@ twig:
         forceNoIndex: '%env(bool:APP_FORCE_NO_INDEX)%'
         site:
             title: "Elao_"
-            description: "Elao est une agence web tech de conception d’applications web et mobile sur mesure."
+            description: "Elao est une agence qui <strong>conçoit</strong> et <strong>développe</strong> des applications web et mobile <strong>sur-mesure</strong>"
             slogan: "Développe de la valeur"
             birthdate: 01/01/2005
             contact:

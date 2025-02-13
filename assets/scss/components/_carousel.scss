@@ -1,0 +1,32 @@
+.carousel-container {
+  display: flex;
+  overflow-x: clip;
+  position: relative;
+
+  .carousel-item {
+    max-width: 100%;
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+}
+
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+
+  .carousel__dot {
+    width: 12px;
+    height: 12px;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &.active {
+      background-color: $color-primary;
+    }
+  }
+}

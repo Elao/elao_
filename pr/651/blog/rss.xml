@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/651/blog</link>
-        <pubDate>Tue, 14 Jan 2025 10:28:55 +0000</pubDate>
+        <pubDate>Thu, 13 Feb 2025 12:29:36 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/651/apple-touch-icon.png</url>
@@ -17,6 +17,43 @@
             <link>https://elao.github.io/elao_/pr/651/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/651/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>[Épisode 4/5] On fait le bilan ?</title>
+                <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/elao/alternants/accompagnement-alternants-episode-4</guid>
+                <link>https://elao.github.io/elao_/pr/651/blog/elao/alternants/accompagnement-alternants-episode-4</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2024/alternants/episode4.jpg/594ff927b8820565ed669759a05a3f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 4/5] On fait le bilan ?</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
+                    <item>
+                <title>Nathan, développeur back-end chez Elao</title>
+                <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/elao/nathan-developpeur-backend</guid>
+                <link>https://elao.github.io/elao_/pr/651/blog/elao/nathan-developpeur-backend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2025/itw-njacquot/njacquot.png/d6cad0d99fa3ae1fd5ab500fd842fc06.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Nathan, développeur back-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
                     <item>
                 <title>[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</title>
                 <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
@@ -146,27 +183,5 @@
                                     <category>ddd</category>
                                     <category>conception</category>
                                             </item>
-                    <item>
-                <title>Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</title>
-                <pubDate>Tue, 06 Aug 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Challengez votre workflow git avec la méthode env-branching, 
-une alternative à gitflow qui  offre une flexibilité accrue dans vos déploiements.
- ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/dev/env-branching-git-flow-model</guid>
-                <link>https://elao.github.io/elao_/pr/651/blog/dev/env-branching-git-flow-model</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2024/env-branching-git-flow-model/git-illustration.png/658cd9c0513e756a1c2ad2c78133964c.png"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Pourquoi choisir Env-branching (version Elao) comme modèle de workflow git ?</media:description>
-                                    </media:content>
-                                    <category>git</category>
-                                    <category>github</category>
-                                    <category>web</category>
-                                                    <comments>https://twitter.com/Elao/status/1821093926826086505</comments>
-                            </item>
             </channel>
 </rss>

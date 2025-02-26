@@ -2,7 +2,7 @@
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
-{% block meta_title "Application web et mobile sur-mesure" %}
+{% block meta_title "Construire : développer et mettre en ligne" %}
 {% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     {{ macros.breadcrumb([
         {path: path('homepage'), label: 'Accueil'},
         {path: path('services'), label: 'Nos services'},
-        {path: '#', label: 'Application web et mobile sur-mesure'},
+        {path: '#', label: 'Construire : développer et mettre en ligne'},
     ]) }}
     <div class="banner-services">
         <h1 class="banner-services__title" data-aos="fade-right">Application web et mobile <span>sur-mesure</span></h1>

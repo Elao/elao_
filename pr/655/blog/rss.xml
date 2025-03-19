@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/655/blog</link>
-        <pubDate>Mon, 10 Mar 2025 14:02:18 +0000</pubDate>
+        <pubDate>Wed, 19 Mar 2025 10:41:35 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/655/apple-touch-icon.png</url>
@@ -17,6 +17,25 @@
             <link>https://elao.github.io/elao_/pr/655/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/655/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</title>
+                <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ 5ème et dernier épisode de notre série d&#039;articles sur l&#039;accompagnement de nos alternant·e·s ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/655/blog/elao/alternants/accompagnement-alternants-episode-5</guid>
+                <link>https://elao.github.io/elao_/pr/655/blog/elao/alternants/accompagnement-alternants-episode-5</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/655/%2E%2E/../resized/content/images/blog/2025/alternants/episode5.jpg/96a38341a6589fce10ddc77fe1f96724.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
                     <item>
                 <title>[Épisode 4/5] On fait le bilan ?</title>
                 <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>

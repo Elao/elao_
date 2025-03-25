@@ -52,7 +52,7 @@ Heureusement, des solutions existent.
         "https://elao.github.io/elao_/pr/658/blog/dev/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8oeie5t00052y22jwph4bbr.jpg"
     ],
     "datePublished": "2025-03-28T00:00:00+00:00",
-    "dateModified": "2025-03-25T11:59:39+00:00",
+    "dateModified": "2025-03-25T12:12:42+00:00",
     "author": [
         {
             "@type": "Person",
@@ -391,7 +391,7 @@ Heureusement, des solutions existent.
                 
                 <p>Tester du code dont la logique repose sur le temps peut compliquer l'écriture de scénarios de tests. Il s'agit de l'une
 des erreurs les plus courantes pouvant mener à des tests fragiles et produisant des échecs hasardeux.<br>
-Cette typologie de tests menant a des erreurs "aléatoires" est appelée <dfn>transient tests</dfn> car ceux-ci dépendent
+Cette typologie de tests menant à des erreurs "aléatoires" est appelée <dfn>transient tests</dfn> car ceux-ci dépendent
 d'un ou plusieurs facteurs parasites et non-maitrisés. Ici, l'élément parasite est le temps et l'horloge système.</p>
 <h2 id="contexte" class="anchor-title"><a href="#contexte">Contexte</a></h2>
 <p>Au travers d'un exemple concret au sein d'une application Symfony, nous allons voir comment écrire des tests insensibles
@@ -443,10 +443,7 @@ significative a été réalisée dans les 6 derniers mois :</p>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">findAllForRecords</span><span class="token punctuation">(</span><span class="token keyword type-hint">int</span> <span class="token variable">$months</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">array</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>et son implémentation :</p>
-<pre class="code-multiline language-php"><code class="language-php" id="8ba58d54e39e6c90bc9b4f49b2b283c4"><span class="token doc-comment comment">/**
- * <span class="token keyword">@extends</span> ServiceEntityRepository&lt;Opportunity&gt;
- */</span>
-<span class="token keyword">class</span> <span class="token class-name-definition class-name">OpportunityRepository</span> <span class="token keyword">extends</span> <span class="token class-name">ServiceEntityRepository</span> <span class="token keyword">implements</span> <span class="token class-name">OpportunityRepositoryInterface</span>
+<pre class="code-multiline language-php"><code class="language-php" id="26b9360457ba1b46bf300d6b6bdfcea4"><span class="token keyword">class</span> <span class="token class-name-definition class-name">OpportunityRepository</span> <span class="token keyword">extends</span> <span class="token class-name">ServiceEntityRepository</span> <span class="token keyword">implements</span> <span class="token class-name">OpportunityRepositoryInterface</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">__construct</span><span class="token punctuation">(</span><span class="token class-name type-declaration">ManagerRegistry</span> <span class="token variable">$registry</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
@@ -471,17 +468,13 @@ significative a été réalisée dans les 6 derniers mois :</p>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
 <h3 id="les-tests" class="anchor-title"><a href="#les-tests">Les tests</a></h3>
-<p>Pour tester ce fonctionnel API, nous avons pour habitude d'opter pour des tests fonctionnels, en utilisant PHPUnit avec un boilerplate custom basé sur le <code class="code-inline" id="b14eeed2817c718fb8c990fcc8c5ab0d">WebTestCase</code> de Symfony :</p>
-<pre class="code-multiline language-php"><code class="language-php" id="7e04273ec066d9d4596b5af352f77647"><span class="token doc-comment comment">/**
- * <span class="token keyword">@phpstan-import-type</span> ListOpportunitiesQueryLimit from \App\Infra\Opportunity\GraphQL\Resolver\OpportunityResolver
- */</span>
-<span class="token keyword">class</span> <span class="token class-name-definition class-name">OpportunityTest</span> <span class="token keyword">extends</span> <span class="token class-name">GraphQLTestCase</span>
+<p>Pour tester ce fonctionnel API, nous avons pour habitude d'opter pour des tests fonctionnels, en utilisant PHPUnit avec
+un boilerplate personnalisé basé sur le <code class="code-inline" id="b14eeed2817c718fb8c990fcc8c5ab0d">WebTestCase</code> de Symfony :</p>
+<pre class="code-multiline language-php"><code class="language-php" id="78f26c9f9aeb3971300facc04b12bbd6"><span class="token keyword">class</span> <span class="token class-name-definition class-name">OpportunityTest</span> <span class="token keyword">extends</span> <span class="token class-name">GraphQLTestCase</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">use</span> <span class="token package">ResetDatabase</span><span class="token punctuation">;</span>
 
     <span class="token doc-comment comment">/**
-     * <span class="token keyword">@param</span> <span class="token class-name">ListOpportunitiesQueryLimit<span class="token punctuation">|</span><span class="token keyword">null</span></span> <span class="token parameter">$limit</span>
-     *
      * <span class="token keyword">@dataProvider</span> provide testListAsCustomerRecords data
      */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> <span class="token function-definition function">testListAsCustomerRecords</span><span class="token punctuation">(</span><span class="token operator">?</span><span class="token keyword type-hint">array</span> <span class="token variable">$limit</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">void</span>
@@ -497,9 +490,6 @@ significative a été réalisée dans les 6 derniers mois :</p>
         <span class="token this keyword">$this</span><span class="token operator">-&gt;</span><span class="token function">assertJsonResponseMatchesExpectations</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 
-    <span class="token doc-comment comment">/**
-     * <span class="token keyword">@return</span> <span class="token class-name">iterable</span>&lt;ListOpportunitiesQueryLimit|null&gt;
-     */</span>
     <span class="token keyword">public</span> <span class="token keyword">function</span> provide testListAsCustomerRecords <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword return-type">iterable</span>
     <span class="token punctuation">{</span>
         <span class="token keyword">yield</span> <span class="token string single-quoted-string">'use default month limit'</span> <span class="token operator">=&gt;</span> <span class="token punctuation">[</span><span class="token constant">null</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -511,7 +501,7 @@ significative a été réalisée dans les 6 derniers mois :</p>
 test, exécutons une requête et vérifions la validité de la réponse. Enfin, nous faisons une assertion sur le
 contenu de la réponse sur le principe du <strong>« Snapshot testing »</strong>, c'est-à-dire en comparant le contenu de la réponse
 avec un fichier de référence, préalablement enregistrée.  </p>
-<p>Ici, un par jeu retourné par le fournisseur de données (<code class="code-inline" id="a482093bd4fce9e33252356b4ad1cfa7">dataProvider</code>):</p>
+<p>Ici, un fichier par jeu retourné par le fournisseur de données (<code class="code-inline" id="a482093bd4fce9e33252356b4ad1cfa7">dataProvider</code>):</p>
 <ul>
 <li><code class="code-inline" id="87bca798fce7c28bf946ec216b44d52e">./expected/testListAsCustomerRecords with data set "use default month limit".json</code></li>
 <li><code class="code-inline" id="a0d77337e9a9e2db911638573df2ba7a">./expected/testListAsCustomerRecords with data set "last 6 months".json</code></li>
@@ -664,9 +654,8 @@ class OpportunityRepository extends ServiceEntityRepository implements Opportuni
 permet d'accéder à un service qui implémente <code class="code-inline" id="976ed25be31992cb3c1f1462cf57e954">ClockInterface</code>. Celui-ci nous permet de récupérer la date et heure
 actuelle selon une horloge que nous pouvons contrôler arbitrairement.</p>
 <h3 id="modifications-dans-les-tests" class="anchor-title"><a href="#modifications-dans-les-tests">Modifications dans les tests</a></h3>
-<p>L'horloge par défaut est celle du système
-(<a href="https://github.com/symfony/symfony/blob/7.2/src/Symfony/Component/Clock/NativeClock.php" target="_blank"><code class="code-inline" id="1b46ddd4220992f5c706f84fc64a4efa">NativeClock</code></a>) et est
-identique à appeler <code class="code-inline" id="518ed7be330b47bcc1d93b4a8b250092">new \DateTimeImmutable()</code>.<br>
+<p>L'horloge par défaut (<a href="https://github.com/symfony/symfony/blob/7.2/src/Symfony/Component/Clock/NativeClock.php" target="_blank"><code class="code-inline" id="1b46ddd4220992f5c706f84fc64a4efa">NativeClock</code></a>)
+se base sur celle du système et est identique à appeler <code class="code-inline" id="518ed7be330b47bcc1d93b4a8b250092">new \DateTimeImmutable()</code>.<br>
 Mais il nous est possible de la modifier au besoin, à tout hasard, dans notre test :</p>
 <pre class="code-multiline language-diff"><code class="language-diff" id="4115cc9e1982f60d481471fda81dbc35"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">use Symfony\Component\Clock\Test\ClockSensitiveTrait;
 </span></span>

@@ -52,7 +52,7 @@ Heureusement, des solutions existent.
         "https://elao.github.io/elao_/pr/658/blog/dev/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8oeie5t00052y22jwph4bbr.jpg"
     ],
     "datePublished": "2025-03-28T00:00:00+00:00",
-    "dateModified": "2025-03-25T12:12:42+00:00",
+    "dateModified": "2025-03-25T12:45:39+00:00",
     "author": [
         {
             "@type": "Person",
@@ -507,8 +507,8 @@ avec un fichier de référence, préalablement enregistrée.  </p>
 <li><code class="code-inline" id="a0d77337e9a9e2db911638573df2ba7a">./expected/testListAsCustomerRecords with data set "last 6 months".json</code></li>
 <li><code class="code-inline" id="4044319a977098e7a607190b40ffb5bf">./expected/testListAsCustomerRecords with data set "last month".json</code></li>
 </ul>
-<figure>
-    <img style="max-width: 700px" src="/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/snapshot-testing-cm8na7g4c00002y22z6a4vmkm.png/37ef5d02c45b63853795d42555484526.png" alt="Principe de nos tests fonctionnels avec snapshot testing" srcset="/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/snapshot-testing-cm8na7g4c00002y22z6a4vmkm.png/37ef5d02c45b63853795d42555484526.png 1x,
+<figure style="max-width: 700px; margin-left: auto; margin-right: auto">
+    <img src="/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/snapshot-testing-cm8na7g4c00002y22z6a4vmkm.png/37ef5d02c45b63853795d42555484526.png" alt="Principe de nos tests fonctionnels avec snapshot testing" srcset="/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/snapshot-testing-cm8na7g4c00002y22z6a4vmkm.png/37ef5d02c45b63853795d42555484526.png 1x,
 /elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/snapshot-testing-cm8na7g4c00002y22z6a4vmkm.png/ae452c016d1282b7ac13a3111c1ff18e.png 2x," id="principe-de-nos-tests-fonctionnels-avec-snapshot-testing">
     <figcaption>
         <span class="figure__legend">
@@ -631,7 +631,7 @@ tester le fonctionnel <em>« Les dossiers clients du dernier mois »</em>  sans 
 <h2 id="solutions" class="anchor-title"><a href="#solutions">Solutions</a></h2>
 <h3 id="modifications-dans-le-code" class="anchor-title"><a href="#modifications-dans-le-code">Modifications dans le code</a></h3>
 <p>Moyennant quelques ajustements, il est aisé de résoudre cette situation, à commencer par modifier notre <em>repository</em>
-pour calculer la date de à partir de laquelle récupérer nos opportunités en utilisant une horloge de référence :</p>
+pour calculer la date à partir de laquelle récupérer nos opportunités en utilisant une horloge de référence :</p>
 <pre class="code-multiline language-diff"><code class="language-diff" id="f4ada10dabecc796de8a552330f5245c">// […]
 <span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">use Symfony\Component\Clock\ClockAwareTrait;
 </span></span>
@@ -656,7 +656,7 @@ actuelle selon une horloge que nous pouvons contrôler arbitrairement.</p>
 <h3 id="modifications-dans-les-tests" class="anchor-title"><a href="#modifications-dans-les-tests">Modifications dans les tests</a></h3>
 <p>L'horloge par défaut (<a href="https://github.com/symfony/symfony/blob/7.2/src/Symfony/Component/Clock/NativeClock.php" target="_blank"><code class="code-inline" id="1b46ddd4220992f5c706f84fc64a4efa">NativeClock</code></a>)
 se base sur celle du système et est identique à appeler <code class="code-inline" id="518ed7be330b47bcc1d93b4a8b250092">new \DateTimeImmutable()</code>.<br>
-Mais il nous est possible de la modifier au besoin, à tout hasard, dans notre test :</p>
+Mais il nous est possible de la modifier au besoin. À tout hasard, dans notre test :</p>
 <pre class="code-multiline language-diff"><code class="language-diff" id="4115cc9e1982f60d481471fda81dbc35"><span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">use Symfony\Component\Clock\Test\ClockSensitiveTrait;
 </span></span>
 // […]
@@ -754,7 +754,7 @@ fonctions natives de PHP (<code class="code-inline" id="07cc694b9b3fc636710fa08b
 Par exemple, un appel à <code class="code-inline" id="715bc99999ef88ad30eeac2a6aad8ee5">sleep(10)</code> fera avancer l'horloge d'exactement 10 secondes, indépendamment de la charge du
 serveur, et en bonus, sans bloquer réellement votre suite de tests pendant ces 10 secondes (<em>le composant Clock fournit
 cette même fonctionnalité avec la classe <a href="https://github.com/symfony/symfony/blob/7.2/src/Symfony/Component/Clock/MockClock.php" target="_blank">MockClock</a></em>).</p>
-<p><a href="https://github.com/php-fig/fig-standards/pull/1224" target="_blank">En 2021</a>, le groupe <a href="https://www.php-fig.org/" target="_blank">PHP-fig</a>,
+<p><a href="https://github.com/php-fig/fig-standards/pull/1224" target="_blank">En 2021</a>, le groupe <a href="https://www.php-fig.org/" target="_blank">PHP-FIG</a>,
 qui vise à établir des standards d'interopérabilité au sein des projets PHP, a proposé la
 <a href="https://www.php-fig.org/psr/psr-20/" target="_blank">PSR-20 Clock</a> pour
 <a href="https://www.php-fig.org/psr/psr-20/meta/#2-why-bother" target="_blank">analyser les pratiques existantes, leurs avantages et inconvénients</a>,
@@ -765,8 +765,8 @@ et proposer une interface qui puisse répondre à ces deux problématiques :</p>
 </ul>
 <p><a href="https://symfony.com/blog/new-in-symfony-6-2-clock-component" target="_blank">Symfony 6.2</a> introduit alors son composant
 <a href="https://symfony.com/doc/current/components/clock.html" target="_blank"><code class="code-inline" id="98a892aea3359481ae30e7b66c44d7a8">Clock</code></a>, conçu autour de cette interface.</p>
-<p>D'autres implémentations <code class="code-inline" id="bcd95b321514c6be52927351aa423329">psr/clock-implementation</code>, dont celles qui ont fait office de référence pour les auteurs de la
-PSR-20, sont disponibles sur Packagist: <a href="https://packagist.org/providers/psr/clock-implementation" target="_blank">https://packagist.org/providers/psr/clock-implementation</a></p>
+<p>D'autres implémentations <code class="code-inline" id="bcd95b321514c6be52927351aa423329">psr/clock-implementation</code>, dont celles qui ont fait office de références pour les auteurs de
+la PSR-20, sont disponibles sur Packagist: <a href="https://packagist.org/providers/psr/clock-implementation" target="_blank">https://packagist.org/providers/psr/clock-implementation</a></p>
 <h2 id="liens-references" class="anchor-title"><a href="#liens-references">Liens &amp; références</a></h2>
 <ul>
 <li><a href="https://www.php-fig.org/psr/psr-20/" target="_blank">La PSR-20 Clock</a> et sa <a href="https://www.php-fig.org/psr/psr-20/meta/" target="_blank">méta-analyse de l'écosystème PHP sur le sujet</a></li>

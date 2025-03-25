@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</title>
+        <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="180x180" href="/elao_/pr/658/apple-touch-icon.png">
@@ -18,15 +18,15 @@
         <meta name="theme-color" content="#ffffff">
 
                     <meta name="description" content="Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
-Heureusement, des solutions existent.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
 " />
             <link rel="canonical" href="https://elao.github.io/elao_/pr/658/blog/dev/ecrire-tests-insensible-au-temps" />
 
             <!-- Open Graph / Facebook -->
-            <meta property="og:title" content="Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry" />
+            <meta property="og:title" content="Guide pratique pour l&#039;écriture de tests sensibles au temps" />
             <meta property="og:locale" content="fr" />
             <meta property="og:description" content="Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
-Heureusement, des solutions existent.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
 " />
             <meta property="og:url" content="https://elao.github.io/elao_/pr/658/blog/dev/ecrire-tests-insensible-au-temps" />
             <meta property="og:site_name" content="elao_" />
@@ -35,9 +35,9 @@ Heureusement, des solutions existent.
             
             <!-- Twitter -->
             <meta property="twitter:card" content="summary_large_image">
-            <meta property="twitter:title" content="Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry">
+            <meta property="twitter:title" content="Guide pratique pour l&#039;écriture de tests sensibles au temps">
             <meta property="twitter:description" content="Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
-Heureusement, des solutions existent.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
 ">
             <meta property="twitter:site" content="@elao">
             <meta property="twitter:creator" content="@elao">
@@ -47,12 +47,12 @@ Heureusement, des solutions existent.
                 <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@type": "NewsArticle",
-    "headline": "Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry",
+    "headline": "Guide pratique pour l'écriture de tests sensibles au temps",
     "image": [
         "https://elao.github.io/elao_/pr/658/blog/dev/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8oeie5t00052y22jwph4bbr.jpg"
     ],
     "datePublished": "2025-03-28T00:00:00+00:00",
-    "dateModified": "2025-03-25T12:59:34+00:00",
+    "dateModified": "2025-03-25T14:39:12+00:00",
     "author": [
         {
             "@type": "Person",
@@ -75,7 +75,7 @@ Heureusement, des solutions existent.
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/658/build/app.cbc460ed.css">
+                    <link rel="stylesheet" href="/elao_/pr/658/build/app.fd4bf0ea.css">
         
                         <script src="/elao_/pr/658/build/runtime.c0bba27c.js" defer></script><script src="/elao_/pr/658/build/552.3082ae9c.js" defer></script><script src="/elao_/pr/658/build/769.7dfbbe52.js" defer></script><script src="/elao_/pr/658/build/app.d906f729.js" defer></script>
 
@@ -115,7 +115,7 @@ Heureusement, des solutions existent.
                         - only on homepage : on scroll .logo.logo--animated becomes .logo.logo--animated.logo--active (triggers its animation)
                      -->
                     <a href="/elao_/pr/658/">
-                        <span class="screen-reader">Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</span>
+                        <span class="screen-reader">Guide pratique pour l&#039;écriture de tests sensibles au temps</span>
                                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 300 100" class="logo logo--animated">
                                 <path d="M61.6,61.6H19.7C21,69,24.8,72.2,32.6,72.2c5.9,0,8.8-1.9,11.7-7.8l16.1,6.9C56.2,82,46.9,87.8,32.1,87.8
                                     c-19.1,0-32-12.6-32-31.6c0-19.5,12.6-32.6,31.4-32.6c18.1,0,30.3,12.6,30.3,31.6C61.7,57.2,61.7,58.9,61.6,61.6z M19.6,49.3h23.6
@@ -260,7 +260,7 @@ Heureusement, des solutions existent.
             <meta itemprop="position" content="3" />
         </li>        <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="#">
-                <span itemprop="name">Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</span>
+                <span itemprop="name">Guide pratique pour l&#039;écriture de tests sensibles au temps</span>
             </a>
             <meta itemprop="position" content="4" />
         </li></ol>
@@ -314,9 +314,9 @@ Heureusement, des solutions existent.
             </div>
 
             <div class="article-header" data-aos="zoom-in-up">
-                <h1>Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</h1>
+                <h1>Guide pratique pour l&#039;écriture de tests sensibles au temps</h1>
                 <p>Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
-Heureusement, des solutions existent.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
 </p>
                 <ul class="article-tag-list">
                                             <li class="article-tag-list__item">
@@ -424,7 +424,7 @@ significative a été réalisé dans les 6 derniers mois :</p>
 <ul>
 <li>l'opportunité a été créée dans les 6 derniers mois</li>
 <li>la date de premier rendez-vous est dans les 6 derniers mois</li>
-<li>une simulation a été créée dans les 6 derniers mois (<em>pour simplifier ici, nous ommetrons ce cas de la démonstration</em>)</li>
+<li>une simulation a été créée dans les 6 derniers mois (<em>pour simplifier ici, nous omettrons ce cas de la démonstration</em>)</li>
 </ul>
 <p>Notre <em>repository</em> ressemble alors à ceci :</p>
 <pre class="code-multiline language-php"><code class="language-php" id="fbb69a791803ac831c714f368b351d2e"><span class="token keyword">interface</span> <span class="token class-name-definition class-name">OpportunityRepositoryInterface</span>
@@ -500,7 +500,7 @@ un boilerplate personnalisé basé sur le <code class="code-inline" id="b14eeed2
 <p>L'expression de nos scénarios de tests GraphQL est relativement concise et uniforme : nous chargeons des données de
 test, exécutons une requête et vérifions la validité de la réponse. Enfin, nous faisons une assertion sur le
 contenu de la réponse sur le principe du <strong>« Snapshot testing »</strong>, c'est-à-dire en comparant le contenu de la réponse
-avec un fichier de référence, préalablement enregistrée.  </p>
+avec un fichier de référence, préalablement enregistré.  </p>
 <p>Ici, un fichier par jeu retourné par le fournisseur de données (<code class="code-inline" id="a482093bd4fce9e33252356b4ad1cfa7">dataProvider</code>):</p>
 <ul>
 <li><code class="code-inline" id="87bca798fce7c28bf946ec216b44d52e">./expected/testListAsCustomerRecords with data set "use default month limit".json</code></li>
@@ -518,7 +518,6 @@ avec un fichier de référence, préalablement enregistrée.  </p>
     </figcaption>
 </figure>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>
     Nous ferons l'impasse sur le détail des méthodes <code class="code-inline" id="063fab832f8954ef0573bad1d1fe9ca5">executeGraphQL</code>, <code class="code-inline" id="cb1447d30ada6402caa4ea8f66a91b99">assertValidGraphQLResponse</code> et
     <code class="code-inline" id="0536133b831d9f370d617d162ccd018e">assertJsonResponseMatchesExpectations</code> qui sont propres à notre <code class="code-inline" id="09260b4233dabf42f5ff1268fe52094d">GraphQLTestCase</code>.
@@ -684,7 +683,13 @@ class OpportunityTest extends GraphQLTestCase
 </span></span>
 <span class="token unchanged"><span class="token prefix unchanged"> </span><span class="token line">   // […]
 </span></span>}</code></pre>
-<p>La méthode <code class="code-inline" id="0758bfe800019ac05943364c334c58e8">ClockSensitiveTrait::mockTime()</code> nous permet de fixer l'horloge de référence à une date et heure arbitraire pour toute l'exécution du test, puis de restaurer l'horloge à son état initial à la fin ce celui-ci.</p>
+<p>La méthode <code class="code-inline" id="0758bfe800019ac05943364c334c58e8">ClockSensitiveTrait::mockTime()</code> nous permet de fixer l'horloge de référence à une date et heure arbitraire
+pour toute l'exécution du test.</p>
+<div class="admonition tip">
+<p>
+    À la fin du test, le trait <code class="code-inline" id="d5a992153f9e671f05562adb45d71780">ClockSensitiveTrait</code> s'occupe de restaurer l'horloge à son état initial.
+</p>
+</div>
 <p>Enfin, nous devons adapter légèrement nos données de test pour utiliser cette même horloge dans notre <em>story</em> :</p>
 <pre class="code-multiline language-diff"><code class="language-diff" id="3110beb8fe5355550ddf1ce19ce51fb5">// […]
 <span class="token inserted-sign inserted"><span class="token prefix inserted">+</span><span class="token line">use Symfony\Component\Clock\Clock;
@@ -722,10 +727,10 @@ class ListAsCustomerRecordsStory extends Story
 </span><span class="token prefix unchanged"> </span><span class="token line">   }
 </span></span>}</code></pre>
 <p>Et voilà ! En seulement quelques lignes peu structurantes, nous avons résolu notre problème : la génération de nos
-données de tests restent expressives et se base sur une horloge de référence que nous pouvons contrôler arbitrairement.
+données de tests reste expressive et se base sur une horloge de référence que nous pouvons contrôler arbitrairement.
 Cette même horloge est partagée par notre <em>repository</em> et notre test fournit une date de référence arbitraire pour
 garantir leur stabilité dans le temps.  </p>
-<p>Les dates qui apparaitront dans nos <em>snapshots</em> sont alors entièrement prédictibles et stables, quelque soit le moment
+<p>Les dates qui apparaitront dans nos <em>snapshots</em> sont alors entièrement prédictibles et stables, quel que soit le moment
 d'exécution de nos tests, ou la configuration de l'horloge système : </p>
 <pre class="code-multiline language-json"><code class="language-json" id="8c9948dfc00da2a9fe752560b96739fe"><span class="token punctuation">{</span>
   <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
@@ -761,7 +766,7 @@ qui vise à établir des standards d'interopérabilité au sein des projets PHP,
 et proposer une interface qui puisse répondre à ces deux problématiques :</p>
 <ul>
 <li>Fournir une méthode simple et "mockable" pour obtenir une date et heure de référence </li>
-<li>Favoriser l'interopérabilité entre les bibliothèques qui manipulerait cette horloge</li>
+<li>Favoriser l'interopérabilité entre les bibliothèques qui manipuleraient cette horloge</li>
 </ul>
 <p><a href="https://symfony.com/blog/new-in-symfony-6-2-clock-component" target="_blank">Symfony 6.2</a> introduit alors son composant
 <a href="https://symfony.com/doc/current/components/clock.html" target="_blank"><code class="code-inline" id="98a892aea3359481ae30e7b66c44d7a8">Clock</code></a>, conçu autour de cette interface.</p>

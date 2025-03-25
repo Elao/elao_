@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/658/blog/auteur/msteinhausser</link>
-        <pubDate>Tue, 25 Mar 2025 13:00:46 +0000</pubDate>
+        <pubDate>Tue, 25 Mar 2025 14:40:27 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/658/apple-touch-icon.png</url>
@@ -18,11 +18,11 @@
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/658/blog/auteur/msteinhausser/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
-                <title>Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</title>
-                <pubDate>Tue, 25 Mar 2025 12:59:34 +0000</pubDate>
+                <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
+                <pubDate>Tue, 25 Mar 2025 14:39:12 +0000</pubDate>
                 <description>
                     <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
-Heureusement, des solutions existent.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
  ]]>
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/658/blog/dev/ecrire-tests-insensible-au-temps</guid>
@@ -32,7 +32,7 @@ Heureusement, des solutions existent.
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">Écrire des tests insensibles au temps : exemple complet avec Symfony, PHPUnit et Foundry</media:description>
+                    <media:description type="plain">Guide pratique pour l&#039;écriture de tests sensibles au temps</media:description>
                                     </media:content>
                                     <category>php</category>
                                     <category>tests</category>

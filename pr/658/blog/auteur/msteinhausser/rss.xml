@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/658/blog/auteur/msteinhausser</link>
-        <pubDate>Tue, 25 Mar 2025 14:40:27 +0000</pubDate>
+        <pubDate>Tue, 25 Mar 2025 14:47:00 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/658/apple-touch-icon.png</url>
@@ -19,7 +19,7 @@
         <atom:link href="https://elao.github.io/elao_/pr/658/blog/auteur/msteinhausser/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
                 <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
-                <pubDate>Tue, 25 Mar 2025 14:39:12 +0000</pubDate>
+                <pubDate>Tue, 25 Mar 2025 14:45:56 +0000</pubDate>
                 <description>
                     <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
 Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
@@ -28,7 +28,7 @@ Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Fo
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/658/blog/dev/ecrire-tests-insensible-au-temps</guid>
                 <link>https://elao.github.io/elao_/pr/658/blog/dev/ecrire-tests-insensible-au-temps</link>
                 <media:content
-                    url="https://elao.github.io/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8oeie5t00052y22jwph4bbr.jpg/637513d9a58d38eddd96a3aa1aac87c0.jpg"
+                    url="https://elao.github.io/elao_/pr/658/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8olxtb700072y22fq10ubtr.jpg/6d7e2adc0f256610ecb3bb2ba91da452.jpg"
                     width="1200"
                     height="627"
                 >

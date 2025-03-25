@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Quentin Brouillet, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Quentin Brouillet de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/658/blog/auteur/qbrouillet</link>
+        <pubDate>Tue, 25 Mar 2025 11:26:34 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/658/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Quentin Brouillet, </title>
+            <link>https://elao.github.io/elao_/pr/658/blog/auteur/qbrouillet</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/658/blog/auteur/qbrouillet/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Application native ou PWA ?</title>
+                <pubDate>Fri, 01 Dec 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Dans le domaine de l&#039;accès aux applications depuis des appareils mobiles, deux mondes s&#039;affrontent : les applications natives et les PWA. Mais à quoi correspondent ces deux termes et comment choisir l&#039;option qui correspondra le mieux à son besoin ? Petit tour d&#039;horizon des caractéristiques de ces deux alternatives ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/658/blog/tech/native-application-or-pwa</guid>
+                <link>https://elao.github.io/elao_/pr/658/blog/tech/native-application-or-pwa</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/658/%2E%2E/../resized/content/images/blog/thumbnails/native-application-or-pwa.png/d428e06c79310c3b6ced1f66d4f4d04a.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Application native ou PWA ?</media:description>
+                                    </media:content>
+                                    <category>pwa</category>
+                                    <category>application</category>
+                                    <category>mobile</category>
+                                            </item>
+                    <item>
+                <title>Quentin, développeur chez Elao depuis 1 an</title>
+                <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/658/blog/elao/quentin-developpeur-web</guid>
+                <link>https://elao.github.io/elao_/pr/658/blog/elao/quentin-developpeur-web</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/658/%2E%2E/../resized/content/images/blog/2023/itw-quentin/banner-qb.jpg/f363a8735005d8b30af95bec8229eed5.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Quentin, développeur chez Elao depuis 1 an</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+            </channel>
+</rss>

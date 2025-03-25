@@ -52,7 +52,7 @@ Heureusement, des solutions existent.
         "https://elao.github.io/elao_/pr/658/blog/dev/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8oeie5t00052y22jwph4bbr.jpg"
     ],
     "datePublished": "2025-03-28T00:00:00+00:00",
-    "dateModified": "2025-03-25T11:19:26+00:00",
+    "dateModified": "2025-03-25T11:59:39+00:00",
     "author": [
         {
             "@type": "Person",
@@ -763,7 +763,8 @@ une classe <a href="https://symfony.com/doc/current/components/phpunit_bridge.ht
 fonctions natives de PHP (<code class="code-inline" id="07cc694b9b3fc636710fa08b6922c42b">time</code>, <code class="code-inline" id="605ac13117bae148bd010f610833baad">microtime</code>, <code class="code-inline" id="c9fab33e9458412c527c3fe8a13ee37d">sleep</code>, <code class="code-inline" id="79e11e2e1ecc516520ad19a2c6c38af0">usleep</code>, …), afin de résoudre d'autres problématiques de
 <em>transient tests</em> basés sur le temps.<br>
 Par exemple, un appel à <code class="code-inline" id="715bc99999ef88ad30eeac2a6aad8ee5">sleep(10)</code> fera avancer l'horloge d'exactement 10 secondes, indépendamment de la charge du
-serveur, et en bonus, sans bloquer réellement votre suite de tests pendant ces 10 secondes.</p>
+serveur, et en bonus, sans bloquer réellement votre suite de tests pendant ces 10 secondes (<em>le composant Clock fournit
+cette même fonctionnalité avec la classe <a href="https://github.com/symfony/symfony/blob/7.2/src/Symfony/Component/Clock/MockClock.php" target="_blank">MockClock</a></em>).</p>
 <p><a href="https://github.com/php-fig/fig-standards/pull/1224" target="_blank">En 2021</a>, le groupe <a href="https://www.php-fig.org/" target="_blank">PHP-fig</a>,
 qui vise à établir des standards d'interopérabilité au sein des projets PHP, a proposé la
 <a href="https://www.php-fig.org/psr/psr-20/" target="_blank">PSR-20 Clock</a> pour

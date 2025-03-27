@@ -178,40 +178,49 @@
         </section>
 
         <section class="illustrated-section" data-aos="fade-right">
-            <div class="content">
+            <div class="content content-carousel">
                 <h2 class="h2--dash">Ce qu’on en dit </h2>
                 <div class="section__techno">
-                    <div data-controller="carousel">
+                    <div
+                        class="carousel"
+                        data-carousel-gap-value="0"
+                        data-carousel-slides-to-scroll-value="1"
+                        data-carousel-slides-to-show-value="1"
+                        data-controller="carousel"
+                    >
                         <div class="carousel-container">
-                            <div class="blockquote carousel-item"  data-carousel-target="slide">
-                                <div class="logo">
-                                    <img src="{{ asset('build/images/partners/mjc-colors.svg') }}" alt="logo Mjc">
-                                </div>
-                                <blockquote class="blockquote-secondary">
-                                    <p>Avec Elao, on conçoit ensemble l'outil, on s'appuie sur leur expertise, c'est vraiment un partenaire. Ils sont réactifs sur des sujets urgents au-delà des bons conseils. L'équipe avec laquelle je collabore est bonne dans les recommandations et le développement pur. Souvent même le résultat dépasse nos attentes !</p>
 
-                                    <p><strong>Tatiana Lanchec - MyJobCompany</strong></p>
-                                </blockquote>
-                            </div>
-                            <div class="blockquote carousel-item"  data-carousel-target="slide">
-                                <div class="logo">
-                                    <img src="{{ asset('build/images/partners/ansara-icon.svg') }}" alt="logo Ansara Pharmacare">
-                                </div>
-                                <blockquote class="blockquote-secondary">
-                                    <p>Elao a une méthode folle ! Et ils captent tout. Je n'ai jamais eu autant de facilité à communiquer et comprendre qu'ils avaient tout compris.</p>
+                            <div class="carousel-track">
+                                <div class="blockquote carousel-item item" data-carousel-target="slide">
+                                    <div class="logo">
+                                        <img src="{{ asset('build/images/partners/mjc-colors.svg') }}" alt="logo Mjc">
+                                    </div>
+                                    <blockquote class="blockquote-secondary">
+                                        <p>Avec Elao, on conçoit ensemble l'outil, on s'appuie sur leur expertise, c'est vraiment un partenaire. Ils sont réactifs sur des sujets urgents au-delà des bons conseils. L'équipe avec laquelle je collabore est bonne dans les recommandations et le développement pur. Souvent même le résultat dépasse nos attentes !</p>
 
-                                    <p><strong>Evelyne Tiev - Ansara Pharmacare</strong></p>
-                                </blockquote>
-                            </div>
-                            <div class="blockquote carousel-item"  data-carousel-target="slide">
-                                <div class="logo">
-                                    <img src="{{ asset('build/images/partners/panneau-pocket-small.svg') }}" alt="logo Panneau pocket">
+                                        <p><strong>Tatiana Lanchec - MyJobCompany</strong></p>
+                                    </blockquote>
                                 </div>
-                                <blockquote class="blockquote-secondary">
-                                    <p>Elao est un vrai partenaire tech. Ce sont non seulement des dev mais aussi des accompagnateurs du changement. Ils aiment proposer et être partie prenante de la réflexion. Pour moi, Elao est un couteau suisse et avec Rix, il y a une vision 360, c'est top !</p>
+                                <div class="blockquote carousel-item item"  data-carousel-target="slide">
+                                    <div class="logo">
+                                        <img src="{{ asset('build/images/partners/ansara-icon.svg') }}" alt="logo Ansara Pharmacare">
+                                    </div>
+                                    <blockquote class="blockquote-secondary">
+                                        <p>Elao a une méthode folle ! Et ils captent tout. Je n'ai jamais eu autant de facilité à communiquer et comprendre qu'ils avaient tout compris.</p>
 
-                                    <p><strong>Caroline Lafforgue - Panneau Pocket</strong></p>
-                                </blockquote>
+                                        <p><strong>Evelyne Tiev - Ansara Pharmacare</strong></p>
+                                    </blockquote>
+                                </div>
+                                <div class="blockquote carousel-item item"  data-carousel-target="slide">
+                                    <div class="logo">
+                                        <img src="{{ asset('build/images/partners/panneau-pocket-small.svg') }}" alt="logo Panneau pocket">
+                                    </div>
+                                    <blockquote class="blockquote-secondary">
+                                        <p>Elao est un vrai partenaire tech. Ce sont non seulement des dev mais aussi des accompagnateurs du changement. Ils aiment proposer et être partie prenante de la réflexion. Pour moi, Elao est un couteau suisse et avec Rix, il y a une vision 360, c'est top !</p>
+
+                                        <p><strong>Caroline Lafforgue - Panneau Pocket</strong></p>
+                                    </blockquote>
+                                </div>
                             </div>
                         </div>
                     </div>

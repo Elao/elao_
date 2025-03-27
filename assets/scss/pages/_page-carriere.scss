@@ -1,0 +1,550 @@
+.page-carriere {
+  section {
+    position: relative;
+    width: 100%;
+  }
+
+  /** Section Header */
+  .header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-between;
+    margin-bottom: 160px;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 40px;
+    }
+
+    &__title {
+      color: $color-brand;
+      line-height: 1.3;
+      width: 25%;
+      font:{
+        family: 'faktum bold';
+        size: 58px;
+        weight: 700;
+      }
+
+      @media (max-width: $screen-xs) {
+        width: 100%;
+        font-size: 44px;
+      }
+
+      span {
+        color: $color-primary;
+      }
+
+      &:after {
+        color: $color-brand;
+        content: '_';
+      }
+    }
+
+    &__image {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-height: 404px;
+      height: 100%;
+      width: 70%;
+
+      img {
+        &:first-child, &:last-child {
+          flex: 1;
+          height: 224px;
+          width: 210px;
+          object-fit: cover;
+        }
+
+        &:nth-child(2) {
+          flex: 0 0 50%;
+          height: 404px;
+          width: 404px;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__content {
+      background: $color-brand;
+      margin-top: -170px;
+      padding: 50px 35px;
+      width: 45%;
+
+      @media (max-width: $screen-xs) {
+        margin-top: 0;
+        width: 100%;
+      }
+
+      h1 {
+        color: #fff;
+        margin: 0;
+        font:{
+          family: 'antikor regular';
+          size: 20px !important;
+        }
+
+        @media (max-width: $screen-xs) {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+
+  /** Section Découvrez-nous */
+  .advices {
+    .carousel {
+      margin-bottom: 160px;
+
+      .item {
+        &__image {
+          margin-bottom: 0;
+          max-height: 220px;
+          object-fit: cover;
+          object-position: 50% 20%;
+          width: 100%;
+        }
+
+        &__description {
+          background-color: $color-primary;
+          margin-bottom: 40px;
+          padding: 10px 25px;
+
+          p {
+            color: #FFF;
+            margin: 0;
+            font:{
+              family: 'antikor bold';
+              size: 16px;
+              weight: 700;
+            }
+
+            &:first-child {
+              color: $color-brand;
+              font:{
+                family: 'faktum bold';
+                size: 25px;
+                weight: 700;
+              }
+            }
+          }
+        }
+
+        &__content {
+          padding: 0 25px;
+          font:{
+            family: 'faktum regular';
+            size: 16px;
+          }
+        }
+
+        &__cta {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  /** Section Envie de rejoindre la team ? */
+  .join-team {
+    .bricks {
+      a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 50px;
+
+        @media (max-width: $screen-xs) {
+          padding: 24px;
+          flex-direction: column;
+        }
+
+        h3 {
+          font-size: 40px;
+
+          @media (max-width: $screen-xs) {
+            font-size: 24px;
+          }
+        }
+
+        svg {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+
+  /** Section En savoir plus */
+  .know-more, .values {
+    margin: 0 0 160px;
+
+    @media (max-width: $screen-xs) {
+      margin: 0 0 40px;
+    }
+
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 100px;
+
+      @media (max-width: $screen-xs) {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  }
+
+  .know-more {
+    margin: 0 0 90px;
+
+    @media (max-width: $screen-xs) {
+      margin: 0 0 10px;
+    }
+
+    &__content {
+      @media (max-width: $screen-xs) {
+        order: 1;
+      }
+
+      p.content {
+        width: 55%;
+      }
+
+      .key-figures {
+        width: 45%;
+      }
+
+      @media (max-width: $screen-xs) {
+        p.content, .key-figures {
+          width: 100%;
+        }
+      }
+    }
+
+    .item.active {
+      p {
+        @media (max-width: $screen-xs) {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+
+  /** Section Ce qui nous tient à coeur */
+  .values {
+    &__content {
+      align-items: flex-start;
+      width: 100%;
+      gap: 44px;
+      margin-top: 70px;
+    }
+
+    &__items {
+      &:first-child {
+        width: 44%;
+
+        @media (max-width: $screen-xs) {
+          width: 100%;
+        }
+      }
+
+      .item {
+        width: 100% !important;
+      }
+    }
+
+    &__description {
+      position: relative;
+
+      .item {
+        width: 100%;
+
+        img {
+          margin: 0;
+          max-height: 400px;
+          width: 100%;
+          object-fit: cover;
+        }
+
+        p {
+          background: $color-brand;
+          bottom: -80%;
+          color: #FFF;
+          max-width: 560px;
+          padding: 37px;
+          position: absolute;
+          right: 0;
+          transform: translate(0, -50%);
+
+          @media (max-width: $screen-xs) {
+            position: relative;
+            max-width: 100%;
+            bottom: 0;
+            transform: translate(0);
+          }
+        }
+
+        &:first-child, &:last-child {
+            p {
+                bottom: -110%;
+            }
+        }
+
+        &:nth-child(3) {
+          p {
+            bottom: -120%;
+          }
+        }
+      }
+    }
+  }
+
+  .picture-full {
+    margin-bottom: 160px;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 40px;
+    }
+
+    img {
+      max-height: 532px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  /** Section Pourquoi rejoindre Elao ? */
+  .join-us {
+    margin-bottom: 160px;
+
+    @media (max-width: $screen-xs) {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 70px;
+    }
+
+    a {
+      color: #FFF;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  /** Section Nos offres */
+  .offers {
+    margin-bottom: 80px;
+
+    .offers-grid {
+      display: grid;
+      gap: 16px;
+
+      &.one-offer {
+        grid-template-columns: 1fr;
+
+        .item__details {
+          display: flex;
+          flex-direction: row;
+          gap: 50px;
+
+          @media (max-width: $screen-xs) {
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+
+      &.multiple-offers {
+        grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+
+        @media (max-width: $screen-xs) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    .item {
+      padding: 30px;
+
+      &__created-at {
+        color: #FFF;
+        font:{
+          family: 'faktum regular';
+          size: 16px;
+        }
+      }
+
+      &__title {
+        color: #FFF;
+        font:{
+          family: 'antikor regular';
+          size: 28px;
+        }
+      }
+
+      &__details {
+        .detail {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          color: #FFF;
+          margin-bottom: 23px;
+          font:{
+            family: 'faktum regular';
+            size: 20px;
+          }
+        }
+
+        span {
+          color: #FFF;
+        }
+      }
+
+      .cta {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          font:{
+            family: 'antikor regular';
+            size: 16px;
+            weight: 700;
+          }
+
+          span {
+            text-decoration: underline;
+          }
+
+          .icon {
+            color: #FFF;
+          }
+        }
+      }
+
+
+      &:nth-child(3n + 1) {
+        background-color: $color-dark;
+
+        .item__title, a {
+          color: $color-light;
+        }
+
+        .detail {
+          svg {
+            path {
+              fill: #FF4345;
+            }
+          }
+        }
+      }
+
+      /* Styles pour les blocs du milieu */
+      &:nth-child(3n + 2) {
+        background-color: $color-primary;
+
+        .detail {
+          svg {
+            path {
+              fill: $color-light;
+            }
+          }
+        }
+
+        .cta {
+          a {
+            color: #FFF;
+          }
+        }
+      }
+
+      /* Styles pour les blocs de droite */
+      &:nth-child(3n + 3) {
+        background-color: $color-secondary;
+
+        .item__created-at {
+          color: $color-primary;
+        }
+
+        .item__title {
+          color: $color-brand;
+        }
+
+        .detail {
+          color: $color-primary;
+
+          svg {
+            path {
+              fill: $color-primary;
+            }
+          }
+        }
+
+        .cta {
+          a {
+            color: $color-brand;
+          }
+
+          svg {
+            path {
+              fill: $color-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .offers-no-content {
+      p {
+        font:{
+          family: 'faktum regular';
+          size: 20px !important;
+        }
+      }
+    }
+  }
+
+  .bricks {
+    &.spontaneous-application {
+      margin-top: 60px;
+
+      a {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 50px;
+
+        @media (max-width: $screen-xs) {
+          flex-direction: column;
+        }
+
+        h3 {
+          font-size: 40px;
+
+          @media (max-width: $screen-xs) {
+            font-size: 24px;
+          }
+        }
+
+        svg {
+          margin-right: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .page-carriere {
+  }
+}

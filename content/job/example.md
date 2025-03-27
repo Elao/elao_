@@ -4,7 +4,7 @@ title:
     - "Développeur·euse backend"
 description:     "Nous cherchons un·e développeur·euse backend à Lyon."
 date:            "2021-04-23"
-active:          true
+active:          false
 contractType:    CDI # 'CDD', 'CDI', 'INTERNSHIP' ou 'WORK-STUDY'
 place:           "Lyon, remote possible"
 hiringDate:      "2021-06-01"

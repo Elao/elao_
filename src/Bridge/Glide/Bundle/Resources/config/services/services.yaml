@@ -37,3 +37,9 @@ services:
         arguments:
             - '@League\Glide\Server'
             - # $signKey set by the extension
+
+    App\Twig\Extension\FormatKExtension:
+        tags: [ 'twig.extension' ]
+
+    App\Twig\Extension\TimeAgoExtension:
+        tags: [ 'twig.extension' ]

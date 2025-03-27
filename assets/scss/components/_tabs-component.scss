@@ -1,0 +1,181 @@
+.tabs-component {
+  margin-top: 35px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+
+    .tab {
+      color: $color-brand;
+      min-width: 200px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      font:{
+        family: 'antikor bold';
+        weight: 700;
+      }
+
+      span {
+        &:after {
+          color: $color-primary;
+          content: "_";
+        }
+      }
+
+      @media (max-width: $screen-xs) {
+        min-width: auto;
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+      &:hover, &.active {
+        cursor: pointer;
+        background-color: $color-secondary;
+      }
+
+      &::after {
+        background-color: $color-primary;
+        content: "";
+        height: 36px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        display: none;
+      }
+
+      &:not(.active) + .tab:not(.active)::after {
+        display: block;
+      }
+
+      &.active + .tab::after {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    background-color: $color-secondary;
+    padding: 60px 0 100px;
+
+    @media (max-width: $screen-xs) {
+      padding: 0;
+    }
+
+    .item {
+      display: none;
+
+      &.active {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        @media (max-width: $screen-xs) {
+          flex-direction: column;
+          gap: 24px;
+        }
+      }
+
+      &__categories {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        justify-content: center;
+        width: 35%;
+
+        @media (max-width: $screen-xs) {
+          flex-direction: column;
+          gap: 0;
+          width: 100%;
+        }
+
+        .category {
+          align-items: center;
+          color: $color-dark;
+          display: flex;
+          line-height: 1;
+          min-height: 68px;
+          padding: 12px 30px;
+          font:{
+            family: 'faktum bold';
+            size: 24px;
+            weight: 700;
+          }
+
+          @media (max-width: $screen-xs) {
+            font-size: 16px;
+          }
+
+          &.active, &:hover {
+            cursor: pointer;
+            background-color: $color-dark;
+            color: $color-light;
+            font-size: 28px;
+
+            @media (max-width: $screen-xs) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      &__contents {
+        position: relative;
+        width: 65%;
+
+        @media (max-width: $screen-xs) {
+          width: 100%;
+        }
+
+        .content {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+
+          p {
+            background-color: $color-brand;
+            bottom: -70px;
+            color: #FFF;
+            left: 0;
+            max-width: 560px;
+            padding: 35px;
+            position: absolute;
+            font:{
+              size: 18px;
+              weight: 500;
+            }
+
+            @media (max-width: $screen-xs) {
+              position: relative;
+              font-size: 16px;
+              bottom: 0;
+              margin-bottom: 0;
+            }
+          }
+
+          img {
+            width: 670px;
+            height: 440px;
+            object-fit: cover;
+            margin-right: 0;
+
+            @media (max-width: $screen-xs) {
+              max-width: 100%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

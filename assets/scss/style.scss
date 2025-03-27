@@ -110,6 +110,9 @@ html.no-js [data-aos] {
 @import "components/_values";
 @import "components/_social-post";
 @import "components/_swup-progress-bar";
+@import "components/_carousel";
+@import "components/_tabs-component";
+@import "components/_category-switch";
 
 // generic
 @import "generic/_a";
@@ -139,3 +142,4 @@ html.no-js [data-aos] {
 @import "pages/page-innovation-workshop";
 @import "pages/page-ia";
 @import "pages/_page-hosting";
+@import "pages/_page-carriere";

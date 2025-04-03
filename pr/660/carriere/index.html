@@ -44,9 +44,9 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/660/build/app.ffec0b6e.css">
+                    <link rel="stylesheet" href="/elao_/pr/660/build/app.1694bc3c.css">
         
-                    <script src="/elao_/pr/660/build/runtime.3c4e92bc.js" defer></script><script src="/elao_/pr/660/build/947.b56b79b1.js" defer></script><script src="/elao_/pr/660/build/769.7dfbbe52.js" defer></script><script src="/elao_/pr/660/build/app.3732a93a.js" defer></script>
+                    <script src="/elao_/pr/660/build/runtime.3c4e92bc.js" defer></script><script src="/elao_/pr/660/build/947.b56b79b1.js" defer></script><script src="/elao_/pr/660/build/769.7dfbbe52.js" defer></script><script src="/elao_/pr/660/build/app.e47fd89c.js" defer></script>
 
                     
         <!-- S.E.E. -->
@@ -217,7 +217,7 @@
                 class="carousel"
                 data-controller="carousel"
                 data-carousel-slides-to-show-value="3"
-                data-carousel-slides-to-scroll-value="3"
+                data-carousel-slides-to-scroll-value="1"
                 data-carousel-gap-value="115"
             >
                 <div class="carousel-container">
@@ -357,7 +357,7 @@
 
         <section class="join-team">
             <div class="bricks">
-                <a href="/contact" class="brick-send-message aos-init aos-animate zoom-in-down" data-aos="zoom-in-down">
+                <a href="#nos-offres" class="brick-send-message aos-init aos-animate zoom-in-down" data-aos="zoom-in-down">
                     <h3 class="title">Envie de rejoindre la team ?</h3>
                     <span class="animation">
                         <svg width="77" height="63" viewBox="0 0 77 63" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,26 +374,38 @@
         <section class="know-more">
             <h2 class="h2--dash">En savoir plus sur nous</h2>
 
-            <div class="know-more__content">
-                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-
-                <div class="know-more__key-figures card-hover">
-                    <div class="item">
+            <div class="card-hover" data-controller="category-switch" role="tablist">
+                <div class="card-hover__content">
+                    <div class="item active" data-category-switch-target="item" role="tabpanel">
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 2</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 3</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 4</p>
+                    </div>
+                </div>
+                <div class="card-hover__categories">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>7</span>
                         <p>ans d'ancienneté en moyenne</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>35</span>
                         <p>ans : la moyenne d’âge chez Elao</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>X</span>
                         <p>évènements internes par an</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>14%</span>
                         <p>la part du temps dédié au partage en interne</p>
                     </div>
@@ -404,9 +416,9 @@
         <section class="values">
             <h2 class="h2--dash">Ce qui nous tient à coeur</h2>
 
-            <div class="values__content">
-                <div class="values__items card-hover">
-                    <div class="item">
+            <div class="values__content card-hover" data-controller="category-switch" role="tablist">
+                <div class="values__items card-hover__categories">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>
                             <svg width="113" height="104" viewBox="0 0 113 104" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="path-1-outside-1_164_505" maskUnits="userSpaceOnUse" x="0" y="0" width="113" height="104" fill="black">
@@ -438,7 +450,7 @@
                         <p>S'ouvrir</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="113" height="98" viewBox="0 0 113 98" fill="none">
                               <path d="M56.0538 97.7127L8.63443 50.306C3.06465 44.7362 0 37.3353 0 29.4639C0 21.5924 3.06465 14.1915 8.63443 8.62171C20.13 -2.8739 38.8358 -2.8739 50.3315 8.62171L56.0538 14.3441L61.7762 8.62171C73.2718 -2.8739 91.9776 -2.8739 103.473 8.62171C109.043 14.1915 112.108 21.5924 112.108 29.4639C112.108 37.3353 109.043 44.7362 103.473 50.306L56.0538 97.7127ZM29.4766 6.34548C23.5507 6.34548 17.6376 8.59628 13.1233 13.1106C8.76159 17.4723 6.34548 23.2837 6.34548 29.4639C6.34548 35.644 8.74887 41.4427 13.1233 45.8171L56.0411 88.7349L98.9589 45.8171C107.975 36.8012 107.975 22.1392 98.9589 13.1233C89.943 4.10739 75.2683 4.10739 66.2651 13.1233L56.0411 23.3473L45.8171 13.1233C41.3283 8.59628 35.4024 6.34548 29.4766 6.34548Z" fill="#7F1A55"></path>
@@ -447,7 +459,7 @@
                         <p>Prendre plaisir</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="119" height="143" viewBox="0 0 119 143" fill="none">
                               <mask id="path-1-outside-1_66_856" maskUnits="userSpaceOnUse" x="10.627" y="0" width="62" height="66" fill="black">
@@ -467,7 +479,7 @@
                         <p>Donner du sens</p>
                     </div>
 
-                    <div class="item">
+                    <div class="category" data-category-switch-target="category" data-action="click->category-switch#select" role="tab" aria-selected="true">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="130" height="130" viewBox="0 0 130 130" fill="none">
                               <path d="M96.661 44.284L96.6465 44.4044L96.7321 44.4904C103.582 51.3708 108.003 60.2963 109.324 69.9147L109.349 70.093L109.526 70.1264C111.067 70.4169 112.497 71.1317 113.654 72.1904L114.124 72.6203L114.072 71.9855C113.529 65.3641 111.65 58.9215 108.549 53.046C105.448 47.1706 101.189 41.984 96.0291 37.799L95.646 38.1009C96.5644 40.0238 96.9165 42.1684 96.661 44.284Z" fill="#7F1A55" stroke="#7F1A55" stroke-width="0.5"></path>
@@ -497,9 +509,23 @@
                     </div>
                 </div>
 
-                <div class="values__description">
-                    <img class="values__image" src="/elao_/pr/660/build/images/pages/carriere/meeting_working.fcefeac2.jpg" alt="logo Mjc">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <div class="values__description card-hover__content">
+                    <div class="item active" data-category-switch-target="item" role="tabpanel">
+                        <img class="values__image" src="/elao_/pr/660/build/images/pages/carriere/meeting_working.fcefeac2.jpg" alt="logo Mjc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <img class="values__image" src="/elao_/pr/660/build/images/pages/carriere/meeting_working.fcefeac2.jpg" alt="logo Mjc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 2</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <img class="values__image" src="/elao_/pr/660/build/images/pages/carriere/meeting_working.fcefeac2.jpg" alt="logo Mjc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 3</p>
+                    </div>
+                    <div class="item" data-category-switch-target="item" role="tabpanel">
+                        <img class="values__image" src="/elao_/pr/660/build/images/pages/carriere/meeting_working.fcefeac2.jpg" alt="logo Mjc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 4</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -520,71 +546,86 @@
                 <div class="tabs-component__content">
                     <div class="item active" data-tabs-target="item">
                         <div class="item__categories">
-                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Journées teambuilding</div>
+                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Une bonne mutuelle</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Tickets restaurants</div>
                             <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Cycle de travail</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Last Thursday Talk</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Mutuelle à 100%</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Télétravail à la carte</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Forfait mobilité</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">PEE : Plan Epargne Entreprise </div>
                         </div>
                         <div class="item__contents">
                             <div class="content active" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Journées teambuilding</p>
+                                <p>Chez Elao la mutuelle est prise en charge à 100% par l'agence, que ce soit pour le salarié mais également pour son/ses enfant(s).  Cette dernière donne également accès à des consultations médicales en ligne et à une écoute psychologique.</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cycle de vie</p>
+                                <p>Les tickets restaurant sont à hauteur de 10€ et pris en charge à 60% par Elao. Ces titres restaurants sont crédités sur une carte Swile.</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. LTT</p>
+                                <p>Chez Elao, nous mettons un point d'honneur à ce que nos collaborateurs puissent travailler sur un rythme qui leur convient. Pour cela, nous avons mis en place le cycle de travail, permettant aux salariés de choisir leur rythme : 5J, 4,5J et même 4J. Tous les détails sont dans cet article.</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mutuelle</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item" data-tabs-target="item">
-                        <div class="item__categories">
-                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Journées teambuilding 2</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Cycle de travail 2</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Last Thursday Talk 2</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Mutuelle à 100% 2</div>
-                        </div>
-                        <div class="item__contents">
-                            <div class="content" data-tabs-target="content">
-                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.2</p>
+                                <p>Pour répondre au même principe évoqué dans le sujet du cycle de travail, le télétravail est libre chez Elao. Les collaborateurs s'organisent en fonction de leurs besoins. Cependant, nous ne faisons pas de full remote. On aime se retrouver régulièrement au bureau !</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.2</p>
+                                <p>Afin de répondre aux divers modes de mobilité des collaborateurs, un forfait de 40€/mois est en place. Bien que la majorité de l'équipe soit adepte du deux roues, d'autres préfèrent les railles. C'est pourquoi nous remboursons la moitié de l'abonnement de train aux salariés empruntant ce mode de transport.</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. LTT 2</p>
-                            </div>
-                            <div class="content" data-tabs-target="content">
-                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. MUTUELLE 2</p>
+                                <p>PEE</p>
                             </div>
                         </div>
                     </div>
                     <div class="item" data-tabs-target="item">
                         <div class="item__categories">
-                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Journées teambuilding 3</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Cycle de travail 3</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Last Thursday Talk 3</div>
-                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Mutuelle à 100% 3</div>
+                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Last Thursday Talks</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Journées team building</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Partage</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Système de suivi collaborateurs</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Accompagnement formation alternants</div>
                         </div>
                         <div class="item__contents">
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 3</p>
+                                <p>Chaque dernier jeudi du mois, toute l'équipe se rassemble pour échanger sur des sujets variés, qu'ils soient techniques ou non. Une ou plusieurs personnes présentent un thème qu'elles souhaitent partager, qu'il s'agisse d'un projet récent, d'une veille technologique ou même de leurs dernières vacances au soleil. Le tout dans une ambiance conviviale, accompagné d'un goûter sélectionné par l'organisateur du LTT.</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 3</p>
+                                <p>Chez Elao pas de séminaires sur plusieurs journées. Nous sommes plutôt adepte de partager 2 journées dans l'année afin de se retrouver pour un moment de déconnexion. Chaque membre de l'équipe est libre d'organiser cette journée qui est souvent orientée autour d'une activité sportive : randonnée, canoë, accrobranche etc.</p>
+                            </div>
+                            <div class="content" data-tabs-target="content">
+                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
+                                <p>Le partage est au cœur de notre quotidien. Qu'il s'agisse de retours d'expérience, de rétrospectives internes organisées deux fois par an, de one-on-one entre les collaborateur·rices et notre RH, ou encore de sessions de veille technique,  cet esprit d’échange fait partie intégrante de notre manière de travailler.</p>
+                            </div>
+                            <div class="content" data-tabs-target="content">
+                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
+                                <p>Nous mettons en place plusieurs rendez-vous récurrents afin de faire un suivi auprès de nos collaborateur·rices. Les one:one après notre RH peuvent être fait une fois par mois en fonction du besoin du salarié. Nous réalisons également 2 entretiens de cycle par an et un suivi auprès des développeurs avec la facilitatrice projet une fois tous les 3 mois.</p>
+                            </div>
+                            <div class="content" data-tabs-target="content">
+                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
+                                <p>Nous aimons former nos futur·es collaborateur·rices et en particulier nos alternant·es. Dès leur arrivé, un suivi est mis en place avec une entretien tous les deux mois, des one:one en début de semaine d'entreprise afin de préparer les tâches et des one:one en fin de semaine afin de faire le bilan. Tout notre process d'accompagnement est disponible à travers 5 épisodes d'articles de blog</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item" data-tabs-target="item">
+                        <div class="item__categories">
+                            <div class="category active" data-tabs-target="category" data-action="click->tabs#changeCategory">Un poste de travail qualitatif</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Une équipe Infra et DevOps à proximité</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Un écosystème GitHub complet</div>
+                            <div class="category" data-tabs-target="category" data-action="click->tabs#changeCategory">Des outils IA à dispo</div>
+                        </div>
+                        <div class="item__contents">
+                            <div class="content" data-tabs-target="content">
+                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
+                                <p>Étant une agence web, il nous paraît primordial de proposer des outils qui permettront aux collaborateur·rices d'être pleinement à l'aise dans leur quotidien. C'est pourquoi notre parc de Macbook est récent et renouvelé fréquemment (tous les 3 ans). Les postes de travail sont larges, composés de plusieurs écrans et chaque salariés peut adresser des besoins spécifiques (clavier, souris, etc.).</p>
+                            </div>
+                            <div class="content" data-tabs-target="content">
+                                <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
+                                <p>Treelogie, société mère d'Elao, regroupe également une seconde entreprise : RIX. Spécialisée dans l'infrastructure et le DevOps, cette équipe partage nos locaux et collabore régulièrement avec nous. D'autant plus que plusieurs de ses membres faisaient autrefois partie d'Elao (Rix a été créé en 2020 afin de pouvoir développer pleinement son activité). De quoi faciliter grandement la collaboration !</p>
                             </div>
                             <div class="content" data-tabs-target="content">
                                 <img class="advice__image" src="/elao_/pr/660/build/images/pages/carriere/meeting.1e0a4e0c.jpg" alt="logo Mjc">
@@ -600,7 +641,7 @@
             </div>
         </section>
 
-        <section class="offers">
+        <section class="offers" id="nos-offres">
             <h2 class="h2--dash">Nos offres</h2>
 
                                             <div class="offers-grid one-offer">
@@ -639,6 +680,120 @@
                             </div>
                         </div>
                                     </div>
+            
+
+            <div class="offers-grid multiple-offers" style="margin-top: 80px">
+                <div class="item">
+                    <p class="item__created-at">Publié il y a 2 jours</p>
+                    <h3 class="item__title">Développeur React</h3>
+
+                    <div class="item__details">
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+                                <path d="M25.2 5.47368H19.6V2.73684C19.6 1.21789 18.354 0 16.8 0H11.2C9.646 0 8.4 1.21789 8.4 2.73684V5.47368H2.8C1.246 5.47368 0.014 6.69158 0.014 8.21053L0 23.2632C0 24.7821 1.246 26 2.8 26H25.2C26.754 26 28 24.7821 28 23.2632V8.21053C28 6.69158 26.754 5.47368 25.2 5.47368ZM16.8 5.47368H11.2V2.73684H16.8V5.47368Z" fill="#FFF"></path>
+                            </svg>
+                            CDI
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none">
+                                <path d="M10 0C4.47143 0 0 4.382 0 9.8C0 17.15 10 28 10 28C10 28 20 17.15 20 9.8C20 4.382 15.5286 0 10 0ZM10 13.3C8.02857 13.3 6.42857 11.732 6.42857 9.8C6.42857 7.868 8.02857 6.3 10 6.3C11.9714 6.3 13.5714 7.868 13.5714 9.8C13.5714 11.732 11.9714 13.3 10 13.3Z" fill="#FFF"></path>
+                            </svg>
+                            Lyon
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
+                                <path d="M25.2 0H2.8C1.246 0 0.014 1.22375 0.014 2.75L0 19.25C0 20.7763 1.246 22 2.8 22H25.2C26.754 22 28 20.7763 28 19.25V2.75C28 1.22375 26.754 0 25.2 0ZM25.2 19.25H2.8V11H25.2V19.25ZM25.2 5.5H2.8V2.75H25.2V5.5Z" fill="#FFF"></path>
+                            </svg>
+                            40K - 55k
+                        </div>
+                    </div>
+
+                    <div class="cta">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.5C0 6.30848 0.0790126 6.12481 0.219656 5.98938C0.360299 5.85396 0.551052 5.77788 0.749952 5.77788H18.4383L13.7181 1.23429C13.5773 1.0987 13.4982 0.914793 13.4982 0.723033C13.4982 0.531273 13.5773 0.347366 13.7181 0.211771C13.8589 0.0761763 14.0499 4.51803e-09 14.2491 0C14.4482 -4.51803e-09 14.6392 0.0761763 14.7801 0.211771L20.7797 5.98874C20.8495 6.05582 20.9049 6.1355 20.9427 6.22324C20.9805 6.31097 21 6.40502 21 6.5C21 6.59498 20.9805 6.68903 20.9427 6.77676C20.9049 6.8645 20.8495 6.94418 20.7797 7.01126L14.7801 12.7882C14.6392 12.9238 14.4482 13 14.2491 13C14.0499 13 13.8589 12.9238 13.7181 12.7882C13.5773 12.6526 13.4982 12.4687 13.4982 12.277C13.4982 12.0852 13.5773 11.9013 13.7181 11.7657L18.4383 7.22212H0.749952C0.551052 7.22212 0.360299 7.14604 0.219656 7.01062C0.0790126 6.87519 0 6.69152 0 6.5Z" fill="white"></path>
+                            </svg>
+                            <span>Voir plus</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="item__created-at">Publié il y a 2 jours</p>
+                    <h3 class="item__title">Développeur React</h3>
+
+                    <div class="item__details">
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+                                <path d="M25.2 5.47368H19.6V2.73684C19.6 1.21789 18.354 0 16.8 0H11.2C9.646 0 8.4 1.21789 8.4 2.73684V5.47368H2.8C1.246 5.47368 0.014 6.69158 0.014 8.21053L0 23.2632C0 24.7821 1.246 26 2.8 26H25.2C26.754 26 28 24.7821 28 23.2632V8.21053C28 6.69158 26.754 5.47368 25.2 5.47368ZM16.8 5.47368H11.2V2.73684H16.8V5.47368Z" fill="#FFF"></path>
+                            </svg>
+                            CDI
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none">
+                                <path d="M10 0C4.47143 0 0 4.382 0 9.8C0 17.15 10 28 10 28C10 28 20 17.15 20 9.8C20 4.382 15.5286 0 10 0ZM10 13.3C8.02857 13.3 6.42857 11.732 6.42857 9.8C6.42857 7.868 8.02857 6.3 10 6.3C11.9714 6.3 13.5714 7.868 13.5714 9.8C13.5714 11.732 11.9714 13.3 10 13.3Z" fill="#FFF"></path>
+                            </svg>
+                            Lyon
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
+                                <path d="M25.2 0H2.8C1.246 0 0.014 1.22375 0.014 2.75L0 19.25C0 20.7763 1.246 22 2.8 22H25.2C26.754 22 28 20.7763 28 19.25V2.75C28 1.22375 26.754 0 25.2 0ZM25.2 19.25H2.8V11H25.2V19.25ZM25.2 5.5H2.8V2.75H25.2V5.5Z" fill="#FFF"></path>
+                            </svg>
+                            40K - 55k
+                        </div>
+                    </div>
+
+                    <div class="cta">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.5C0 6.30848 0.0790126 6.12481 0.219656 5.98938C0.360299 5.85396 0.551052 5.77788 0.749952 5.77788H18.4383L13.7181 1.23429C13.5773 1.0987 13.4982 0.914793 13.4982 0.723033C13.4982 0.531273 13.5773 0.347366 13.7181 0.211771C13.8589 0.0761763 14.0499 4.51803e-09 14.2491 0C14.4482 -4.51803e-09 14.6392 0.0761763 14.7801 0.211771L20.7797 5.98874C20.8495 6.05582 20.9049 6.1355 20.9427 6.22324C20.9805 6.31097 21 6.40502 21 6.5C21 6.59498 20.9805 6.68903 20.9427 6.77676C20.9049 6.8645 20.8495 6.94418 20.7797 7.01126L14.7801 12.7882C14.6392 12.9238 14.4482 13 14.2491 13C14.0499 13 13.8589 12.9238 13.7181 12.7882C13.5773 12.6526 13.4982 12.4687 13.4982 12.277C13.4982 12.0852 13.5773 11.9013 13.7181 11.7657L18.4383 7.22212H0.749952C0.551052 7.22212 0.360299 7.14604 0.219656 7.01062C0.0790126 6.87519 0 6.69152 0 6.5Z" fill="white"></path>
+                            </svg>
+                            <span>Voir plus</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <p class="item__created-at">Publié il y a 2 jours</p>
+                    <h3 class="item__title">Développeur React</h3>
+
+                    <div class="item__details">
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
+                                <path d="M25.2 5.47368H19.6V2.73684C19.6 1.21789 18.354 0 16.8 0H11.2C9.646 0 8.4 1.21789 8.4 2.73684V5.47368H2.8C1.246 5.47368 0.014 6.69158 0.014 8.21053L0 23.2632C0 24.7821 1.246 26 2.8 26H25.2C26.754 26 28 24.7821 28 23.2632V8.21053C28 6.69158 26.754 5.47368 25.2 5.47368ZM16.8 5.47368H11.2V2.73684H16.8V5.47368Z" fill="#FFF"></path>
+                            </svg>
+                            CDI
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none">
+                                <path d="M10 0C4.47143 0 0 4.382 0 9.8C0 17.15 10 28 10 28C10 28 20 17.15 20 9.8C20 4.382 15.5286 0 10 0ZM10 13.3C8.02857 13.3 6.42857 11.732 6.42857 9.8C6.42857 7.868 8.02857 6.3 10 6.3C11.9714 6.3 13.5714 7.868 13.5714 9.8C13.5714 11.732 11.9714 13.3 10 13.3Z" fill="#FFF"></path>
+                            </svg>
+                            Lyon
+                        </div>
+                        <div class="detail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
+                                <path d="M25.2 0H2.8C1.246 0 0.014 1.22375 0.014 2.75L0 19.25C0 20.7763 1.246 22 2.8 22H25.2C26.754 22 28 20.7763 28 19.25V2.75C28 1.22375 26.754 0 25.2 0ZM25.2 19.25H2.8V11H25.2V19.25ZM25.2 5.5H2.8V2.75H25.2V5.5Z" fill="#FFF"></path>
+                            </svg>
+                            40K - 55k
+                        </div>
+                    </div>
+
+                    <div class="cta">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="13" viewBox="0 0 21 13" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.5C0 6.30848 0.0790126 6.12481 0.219656 5.98938C0.360299 5.85396 0.551052 5.77788 0.749952 5.77788H18.4383L13.7181 1.23429C13.5773 1.0987 13.4982 0.914793 13.4982 0.723033C13.4982 0.531273 13.5773 0.347366 13.7181 0.211771C13.8589 0.0761763 14.0499 4.51803e-09 14.2491 0C14.4482 -4.51803e-09 14.6392 0.0761763 14.7801 0.211771L20.7797 5.98874C20.8495 6.05582 20.9049 6.1355 20.9427 6.22324C20.9805 6.31097 21 6.40502 21 6.5C21 6.59498 20.9805 6.68903 20.9427 6.77676C20.9049 6.8645 20.8495 6.94418 20.7797 7.01126L14.7801 12.7882C14.6392 12.9238 14.4482 13 14.2491 13C14.0499 13 13.8589 12.9238 13.7181 12.7882C13.5773 12.6526 13.4982 12.4687 13.4982 12.277C13.4982 12.0852 13.5773 11.9013 13.7181 11.7657L18.4383 7.22212H0.749952C0.551052 7.22212 0.360299 7.14604 0.219656 7.01062C0.0790126 6.87519 0 6.69152 0 6.5Z" fill="white"></path>
+                            </svg>
+                            <span>Voir plus</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="offers-no-content">
+                <h2>Nous n'avons aucun poste ouvert en ce moment.</h2>
+                <p>Nous n’avons aucune offre d’emploi pour le moment 💼 Pour être sûr.e de ne pas rater une future occasion, nous t’invitons à t’abonner à nos page LinkedIn, X (Twitter) et Bluesky ! Et sinon, tu peux toujours nous envoyer une candidature spontanée grâce au lien juste en dessous.</p>
+            </div>
+
+
             
             <div class="bricks spontaneous-application">
                 <a href="/contact" class="brick-send-message aos-init aos-animate zoom-in-down" data-aos="zoom-in-down">

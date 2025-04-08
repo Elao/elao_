@@ -32,6 +32,10 @@ pre {
   margin: 30px 0 !important;
   padding: 20px 30px !important;
   font-size: 18px;
+
+  @media (max-width: $screen-sm) {
+    padding: 10px !important;
+  }
 }
 
 .code-inline {
@@ -41,6 +45,14 @@ pre {
   background: $color-secondary;
   border-radius: 5px;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+// Fixes an issue were inline code in an admonition might break the mobile layout when too long
+.admonition {
+  .code-inline {
+    word-break: break-word;
+  }
 }
 
 .token {
@@ -64,7 +76,6 @@ pre {
   &.tag,
   &.attr-name,
   &.namespace,
-  &.deleted,
   &.important,
   &.atrule,
   &.keyword,
@@ -84,6 +95,7 @@ pre {
     color: $code-info;
   }
 
+  &.deleted,
   &.comment,
   &.block-comment,
   &.comment *,

@@ -10,6 +10,10 @@
   line-height: 1.6;
   background: $color-light;
 
+  @media (max-width: $screen-sm) {
+    padding: 45px 20px 20px;
+  }
+
   &:before,
   &:after {
     position: absolute;
@@ -91,7 +95,7 @@
 
 .admonition.danger {
   background: $color-tertiary;
-  color: $color-text;
+  color: white;
 
   &:before {
     background: $color-tertiary;

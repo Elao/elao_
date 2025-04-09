@@ -30,7 +30,7 @@
 .banner-home__content {
   padding: 0 110px;
   height: 310px;
-  width: 950px;
+  width: 750px;
   display: flex;
   align-items: center;
   background: $color-brand;
@@ -42,12 +42,13 @@
     font-size: 32px !important;
     font-weight: normal;
     color: #fff;
+    display: block;
   }
 }
 
 .banner-home__image {
   position: absolute;
-  top: 0;
+  top: 40px;
   right: 0;
   display: flex;
   flex-direction: column;

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/651/blog</link>
-        <pubDate>Mon, 03 Mar 2025 14:31:35 +0000</pubDate>
+        <pubDate>Wed, 09 Apr 2025 09:16:03 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/651/apple-touch-icon.png</url>
@@ -17,6 +17,47 @@
             <link>https://elao.github.io/elao_/pr/651/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/651/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
+                <pubDate>Wed, 09 Apr 2025 09:12:48 +0000</pubDate>
+                <description>
+                    <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/dev/ecrire-tests-insensible-au-temps</guid>
+                <link>https://elao.github.io/elao_/pr/651/blog/dev/ecrire-tests-insensible-au-temps</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8olxtb700072y22fq10ubtr.jpg/6d7e2adc0f256610ecb3bb2ba91da452.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Guide pratique pour l&#039;écriture de tests sensibles au temps</media:description>
+                                    </media:content>
+                                    <category>php</category>
+                                    <category>tests</category>
+                                    <category>clock</category>
+                                    <category>symfony</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</title>
+                <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ 5ème et dernier épisode de notre série d&#039;articles sur l&#039;accompagnement de nos alternant·e·s ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/elao/alternants/accompagnement-alternants-episode-5</guid>
+                <link>https://elao.github.io/elao_/pr/651/blog/elao/alternants/accompagnement-alternants-episode-5</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2025/alternants/episode5.jpg/96a38341a6589fce10ddc77fe1f96724.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
                     <item>
                 <title>[Épisode 4/5] On fait le bilan ?</title>
                 <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
@@ -146,42 +187,6 @@
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>
-                                            </item>
-                    <item>
-                <title>Lilian, alternant business developer</title>
-                <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Lilian se présente aujourd&#039;hui, en charge de la prospection, chez Elao depuis Août 2024. ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/elao/lilian-alternant-business-developer</guid>
-                <link>https://elao.github.io/elao_/pr/651/blog/elao/lilian-alternant-business-developer</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2024/itw-lasse/banner.jpg/ab3eb1090617b79c61027b2248cc0065.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Lilian, alternant business developer</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
-                    <item>
-                <title>La pratique du DDD au quotidien</title>
-                <pubDate>Wed, 02 Oct 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Quelques réflexions sur notre pratique quotidienne du DDD, ses avantages et certains écueils ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/651/blog/dev/ddd-practice</guid>
-                <link>https://elao.github.io/elao_/pr/651/blog/dev/ddd-practice</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/651/%2E%2E/../resized/content/images/blog/2024/ddd-bg.jpg/47831a03d18d34eaf700081625c72862.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">La pratique du DDD au quotidien</media:description>
-                                    </media:content>
-                                    <category>ddd</category>
-                                    <category>conception</category>
                                             </item>
             </channel>
 </rss>

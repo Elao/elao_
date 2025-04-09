@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/660/blog</link>
-        <pubDate>Fri, 04 Apr 2025 07:42:28 +0000</pubDate>
+        <pubDate>Wed, 09 Apr 2025 11:04:37 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/660/apple-touch-icon.png</url>
@@ -17,6 +17,28 @@
             <link>https://elao.github.io/elao_/pr/660/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/660/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
+                <pubDate>Wed, 09 Apr 2025 11:03:22 +0000</pubDate>
+                <description>
+                    <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/660/blog/dev/ecrire-tests-insensible-au-temps</guid>
+                <link>https://elao.github.io/elao_/pr/660/blog/dev/ecrire-tests-insensible-au-temps</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/660/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8olxtb700072y22fq10ubtr.jpg/6d7e2adc0f256610ecb3bb2ba91da452.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Guide pratique pour l&#039;écriture de tests sensibles au temps</media:description>
+                                    </media:content>
+                                    <category>php</category>
+                                    <category>tests</category>
+                                    <category>clock</category>
+                                    <category>symfony</category>
+                                            </item>
                     <item>
                 <title>[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</title>
                 <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
@@ -162,24 +184,6 @@
                     height="627"
                 >
                     <media:description type="plain">Emmanuelle, alternante en Direction Artistique</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
-                    <item>
-                <title>Lilian, alternant business developer</title>
-                <pubDate>Mon, 07 Oct 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Lilian se présente aujourd&#039;hui, en charge de la prospection, chez Elao depuis Août 2024. ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/660/blog/elao/lilian-alternant-business-developer</guid>
-                <link>https://elao.github.io/elao_/pr/660/blog/elao/lilian-alternant-business-developer</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/660/%2E%2E/../resized/content/images/blog/2024/itw-lasse/banner.jpg/ab3eb1090617b79c61027b2248cc0065.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Lilian, alternant business developer</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>

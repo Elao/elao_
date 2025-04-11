@@ -6,9 +6,11 @@ namespace App\Controller;
 
 use App\Model\Article;
 use App\Model\CaseStudy;
+use App\Model\Job;
 use App\Model\Member;
 use App\Model\Misc;
 use Stenope\Bundle\ContentManagerInterface;
+use Stenope\Bundle\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -64,6 +66,16 @@ class SiteController extends AbstractController
     public function contact(): Response
     {
         return $this->render('site/contact.html.twig');
+    }
+
+    #[Route('/carriere', name: 'carriere')]
+    public function carriere(ContentManagerInterface $manager): Response
+    {
+        $jobs = $manager->getContents(Job::class, ['date' => false], ['active' => true]);
+
+        return $this->render('site/carriere.html.twig', [
+            'jobs' => $jobs,
+        ])->setLastModified(\count($jobs) > 0 ? ContentUtils::max($jobs, 'lastModified') : null);
     }
 
     #[Route('/legal', name: 'legal')]

@@ -1,0 +1,44 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .carousel-container {
+    width: 100%;
+    overflow: hidden;
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+
+      .carousel-item {
+        flex: 0 0 auto;
+      }
+    }
+  }
+}
+
+.carousel__dots {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 100px;
+
+  @media (max-width: $screen-lg) {
+    margin-top: 36px;
+  }
+
+  .carousel__dot {
+    background-color: $color-secondary;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    height: 12px;
+    transition: background-color 0.3s;
+    width: 12px;
+
+    &.active {
+      background-color: $color-primary;
+    }
+  }
+}

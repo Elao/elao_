@@ -8,7 +8,7 @@ description: |
 thumbnail: "content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8olxtb700072y22fq10ubtr.jpg"
 tags: ["PHP", "Tests", "Clock", "Symfony"]
 authors: ["msteinhausser"]
-tweetId: ~
+tweetId: '1909513841374806184'
 ---
 
 Tester du code dont la logique repose sur le temps peut compliquer l'écriture de scénarios de tests. Il s'agit de l'une

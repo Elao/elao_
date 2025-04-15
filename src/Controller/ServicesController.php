@@ -50,4 +50,10 @@ class ServicesController extends AbstractController
     {
         return $this->render('site/services/consulting.html.twig');
     }
+
+    #[Route('/optimiser', name: 'services_optimiser')]
+    public function servicesOptimiser(): Response
+    {
+        return $this->render('site/services/optimiser.html.twig');
+    }
 }

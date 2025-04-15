@@ -19,6 +19,30 @@ h1, .h1 {
   }
 }
 
+.h1--dash {
+  @extend .h1;
+  position: relative;
+  margin-top: 70px;
+  padding-top: 65px;
+
+  &:before {
+    width: 50px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    background: $color-tertiary;
+  }
+}
+
+.h1--black {
+  @extend .h1;
+
+  color: #000;
+  margin: 60px 0 30px 0;
+}
+
 h2, .h2 {
   margin: 50px 0 25px;
   position: relative;

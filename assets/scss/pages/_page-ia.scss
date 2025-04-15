@@ -1,8 +1,16 @@
+.container-ia {
+  .banner-services__content {
+    .highlight {
+      font-size: 20px;
+      top: -60px;
+    }
+  }
+}
+
 .page-ia {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   row-gap: 40px;
-
   .h2--dash {
     grid-column: 2 / 13;
   }

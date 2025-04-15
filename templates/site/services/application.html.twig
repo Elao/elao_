@@ -2,31 +2,31 @@
 {% extends 'base.html.twig' %}
 
 {% set interval = date('now').diff(date(site.birthdate)) %}
-{% block meta_title "Application web et mobile sur-mesure" %}
+{% block meta_title "Construire : développer et mettre en ligne" %}
 {% block meta_description "Nous vous accompagnons dans la conception et le développement de votre application web et mobile sur-mesure | Elao" %}
 
 {% block content %}
-<div class="container">
+<div class="container page-application">
     {{ macros.breadcrumb([
         {path: path('homepage'), label: 'Accueil'},
         {path: path('services'), label: 'Nos services'},
-        {path: '#', label: 'Application web et mobile sur-mesure'},
+        {path: '#', label: 'Construire : développer et mettre en ligne'},
     ]) }}
     <div class="banner-services">
-        <h1 class="banner-services__title" data-aos="fade-right">Application web et mobile <span>sur-mesure</span></h1>
+        <h1 class="banner-services__title" data-aos="fade-right">Construire : <span>développer et mettre en ligne</span></h1>
         <div class="banner-services__content">
             <div class="image"
                  data-aos="fade-left"
-                 style="background-image: url('{{ asset('build/images/pages/services/banner-application.jpg') }}');
-                        background-image: image-set(url('{{ asset('build/images/pages/services/banner-application.jpg') }}') 1x,
-                                                    url('{{ asset('build/images/pages/services/banner-application@2x.jpg') }}') 2x)">
+                 style="background-image: url('{{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header.jpg') }}');
+                        background-image: image-set(url('{{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header.jpg') }}') 1x,
+                                                    url('{{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header@2x.jpg') }}') 2x)">
             </div>
             <span class="highlight" data-aos="zoom-in">
                 <p>Co-concevoir un projet sur-mesure, fiable et évolutif</p>
                 <i class="icon icon--square-brackets-right" aria-hidden="true"></i>
             </span>
         </div>
-        <p class="banner-services__text">
+        <p class="banner-se rvices__text">
             Le <strong>développement d'application web et mobile</strong> est l'ADN d'Elao depuis sa création il y a {{ interval.y}} ans. Notre position <strong>d'expert</strong>, notamment sur les techno que nous utilisons au quotidien, assoie notre volonté de <strong>co-concevoir</strong> avec nos clients un projet qui répond à leurs <strong>besoins</strong>, leurs <strong>challenges</strong> et leurs <strong>ambitions</strong>.
         </p>
     </div>
@@ -79,6 +79,10 @@
                     </li>
                 {% endwith %}
             </ul>
+
+                <img class="advice__image" src="{{ asset('build/images/pages/services/construire/concevoir-developper.jpg') }}" alt="Banner">
+
+            </div>
         </div>
 
         <h2 class="h2--dash">Conception d'application</h2>

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/660/blog</link>
-        <pubDate>Fri, 11 Apr 2025 07:35:01 +0000</pubDate>
+        <pubDate>Wed, 07 May 2025 12:11:34 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/660/apple-touch-icon.png</url>
@@ -19,7 +19,7 @@
         <atom:link href="https://elao.github.io/elao_/pr/660/blog/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
                 <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
-                <pubDate>Fri, 11 Apr 2025 07:33:49 +0000</pubDate>
+                <pubDate>Wed, 07 May 2025 12:07:41 +0000</pubDate>
                 <description>
                     <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
 Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
@@ -38,7 +38,8 @@ Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Fo
                                     <category>tests</category>
                                     <category>clock</category>
                                     <category>symfony</category>
-                                            </item>
+                                                    <comments>https://twitter.com/Elao/status/1909513841374806184</comments>
+                            </item>
                     <item>
                 <title>[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</title>
                 <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
@@ -166,24 +167,6 @@ Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Fo
                     height="627"
                 >
                     <media:description type="plain">Polémil, développeur front-end chez Elao</media:description>
-                                    </media:content>
-                                    <category>elao</category>
-                                    <category>team</category>
-                                            </item>
-                    <item>
-                <title>Emmanuelle, alternante en Direction Artistique</title>
-                <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[  ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/660/blog/elao/emmanuelle-alternante-direction-artistique</guid>
-                <link>https://elao.github.io/elao_/pr/660/blog/elao/emmanuelle-alternante-direction-artistique</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/660/%2E%2E/../resized/content/images/blog/2024/itw-emmanuelle/banner.jpg/428dd54ae4f0ff2420f9e65a707734fe.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Emmanuelle, alternante en Direction Artistique</media:description>
                                     </media:content>
                                     <category>elao</category>
                                     <category>team</category>

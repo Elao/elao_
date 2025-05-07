@@ -15,19 +15,43 @@
             <div class="banner-services__content">
                 <div class="image"
                      data-aos="fade-left"
-                     style="background-image: url({{ asset('build/images/pages/services/services-banner.jpg') }});
-                            background-image: image-set(url({{ asset('build/images/pages/services/services-banner.jpg') }}) 1x,
-                                              url({{ asset('build/images/pages/services/services-banner@2x.jpg') }}) 2x);"></div>
+                     style="background-image: url({{ asset('build/images/pages/services/services-header.jpg') }});
+                            background-image: image-set(url({{ asset('build/images/pages/services/services-header.jpg') }}) 1x,
+                                              url({{ asset('build/images/pages/services/services-header@2x.jpg') }}) 2x);"></div>
                 <span class="highlight" data-aos="zoom-in">
-                    <p>Développement web et mobile, conseil et accompagnement technique</p>
+                    <p>Concevoir, développer, suivre et optimiser vos projets</p>
                 </span>
             </div>
         </div>
 
         <div class="page-services">
-            <p>Notre équipe vous accompagne tout au long de votre projet : à travers nos <strong>conseils</strong> en tant qu'experts concepteurs, lors de l'étape de <strong>développement</strong> de votre produit ou service, via un <strong>hébergement</strong> adapté à vos besoins ou encore grâce à des solutions sur-mesure basées sur les <strong><a href="{{ path('glossary_term', {term: 'ia'}) }}">IA génératives</a></strong>.</p>
+            <p>Notre équipe vous accompagne tout au long de votre projet : à travers nos conseils en tant qu'<strong>experts concepteurs</strong>, lors de l'étape de développement de votre produit ou service. Et même après votre projet pour être sûrs qu’il réponde <strong>durablement</strong> à vos objectifs et qu’il soit pleinement intégré dans votre organisation.</p>
 
-            <h2 class="h2--dash">Des applications web et mobiles sur-mesure</h2>
+            <h2 class="h2--dash">Concevoir : comprendre et conseiller</h2>
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>Chez Elao, nous pensons que chaque projet web mérite une attention et des conseils experts tout au long de son cycle de vie. Nous sommes à votre écoute et <strong>force de proposition</strong> afin de construire avec vous votre solution. Que cela soit sur l'essence même de votre produit ou service, sur son <strong>environnement</strong>, sur la connaissance de vos <strong>utilisateurs</strong>, ou encore sur les process du projet, nous sortons le nez de notre écran pour construire avec vous le chemin le plus rayonnant pour votre solution.</p>
+                    <a href="{{ path('consulting') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Découvrez notre démarche
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+                <div class="illustrated-section__image half" data-aos="fade-right">
+                    <picture>
+                        <source
+                            type="image/jpeg"
+                            srcset="{{ asset('build/images/pages/services/concevoir-comprendre-conseiller.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/concevoir-comprendre-conseiller@2x.jpg') }} 2x"
+                        >
+                        <img src="{{ asset('build/images/pages/services/concevoir-comprendre-conseiller.jpg') }}" alt=""/>
+                    </picture>
+                    <i class="icon icon--chevrons-left" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <h2 class="h2--dash">Construire : développer et mettre en ligne</h2>
             <div class="illustrated-section">
                 <div class="illustrated-section__content">
                     <p>À travers les projets d'application web et mobile, nous souhaitons avant tout concevoir un projet commun avec vous, main dans la main. Notre équipe d'experts nous permet de vous accompagner depuis les prémices de votre projet jusqu'à son <strong>déploiement</strong> et ses futures <strong>évolutions</strong>. Nos maîtres mots : <strong>sur-mesure, fiabilité, évolutivité</strong>.</p>
@@ -38,73 +62,66 @@
                         </span>
                     </a>
                 </div>
-                 <div class="illustrated-section__image" data-aos="fade-right">
+                 <div class="illustrated-section__image half" data-aos="fade-right">
                      <picture>
-                        <source type="image/webp"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/applications-responsive.webp') }}"
-                        >
-                        <source type="image/jpeg"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/applications-responsive.jpg') }}"
-                        >
-                        <source
-                            type="image/webp"
-                            srcset="{{ asset('build/images/pages/services/applications.webp') }} 1x,
-                                    {{ asset('build/images/pages/services/applications@2x.webp') }} 2x"
-                        >
                         <source
                             type="image/jpeg"
-                            srcset="{{ asset('build/images/pages/services/applications.jpg') }} 1x,
-                                    {{ asset('build/images/pages/services/applications@2x.jpg') }} 2x"
+                            srcset="{{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header@2x.jpg') }} 2x"
                         >
-                        <img src="{{ asset('build/images/pages/services/applications.jpg') }}" alt=""/>
+                        <img src="{{ asset('build/images/pages/services/construire/construire-developper-mettre-en-ligne-header.jpg') }}" alt=""/>
                      </picture>
                      <i class="icon icon--brackets-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <h2 class="h2--dash">Conseil et accompagnement</h2>
+            <h2 class="h2--dash">Optimiser : consolider et évoluer</h2>
             <div class="illustrated-section">
                 <div class="illustrated-section__content">
-                    <p>Chez Elao nous pensons que chaque projet web mérite une attention et des conseils experts tout au long de son cycle de vie. Nous sommes à votre écoute et <strong>force de proposition</strong> afin de construire avec vous votre solution. Que cela soit sur l'essence même de votre produit ou service, sur son <strong>environnement</strong>, sur la connaissance de vos <strong>utilisateurs</strong>, ou encore sur les process du projet, nous sortons le nez de notre écran pour construire avec vous le chemin le plus rayonnant pour votre solution.</p>
-                    <a href="{{ path('consulting') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                    <p>Parce qu’il est indispensable que votre projet vous ressemble pleinement et évolue en fonction de vous et votre organisation, nous dédions du temps à veiller à avancer pas à pas selon vos priorités. Et à chaque étape, nous faisons un point pour <strong>capitaliser</strong> sur ce qui a été bénéfique et optimiser le reste selon vos indicateurs de performance. Et cela, pendant et après le projet pour <strong>apprendre et grandir ensemble</strong> !</p>
+                    <a href="{{ path('services_optimiser') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                         <span>
-                            Découvrez notre démarche
+                            Optimisons votre projet
                             {% include 'partials/svg-arrow.html.twig' %}
                         </span>
                     </a>
                 </div>
-                <div class="illustrated-section__image" data-aos="fade-right">
+                <div class="illustrated-section__image half" data-aos="fade-right">
                     <picture>
-                        <source type="image/webp"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/consulting-responsive.webp') }}"
-                        >
-                        <source type="image/jpeg"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/consulting-responsive.jpg') }}"
-                        >
-                        <source
-                            type="image/webp"
-                            srcset="{{ asset('build/images/pages/services/consulting.webp') }} 1x,
-                                    {{ asset('build/images/pages/services/consulting@2x.webp') }} 2x"
-                        >
                         <source
                             type="image/jpeg"
-                            srcset="{{ asset('build/images/pages/services/consulting.jpg') }} 1x,
-                                    {{ asset('build/images/pages/services/consulting@2x.jpg') }} 2x"
+                            srcset="{{ asset('build/images/pages/services/optimiser/optimiser-header.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/optimiser/optimiser-header@2x.jpg') }} 2x"
                         >
-                        <img src="{{ asset('build/images/pages/services/consulting.jpg') }}" alt=""/>
-                     </picture>
-                     <i class="icon icon--chevrons-left" aria-hidden="true"></i>
+                        <img src="{{ asset('build/images/pages/services/optimiser/optimiser-header.jpg') }}" alt=""/>
+                    </picture>
+                    <i class="icon icon--brackets-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <h2 class="h2--dash">Hébergement et infrastructure</h2>
+            <h2 class="h2--dash">Inspirer, challenger et innover</h2>
             <div class="illustrated-section">
                 <div class="illustrated-section__content">
-                    <p>Nous vous accompagnons sur votre hébergement et votre infrastructure, par le biais de <strong>Rix</strong>, notre partenaire <strong><a href="{{ path('glossary_term', {term: 'devops'}) }}">Devops</a></strong>. Fort de ses 15 années d'expérience, Rix dispose de toute l'expertise pour vous conduire dans l'élaboration d'une infrastructure pérenne et en adéquation avec vos besoins (à travers le diagnostic de problématiques appréciatives, la mise en place de l'environnement de développement, la maintenance, l'hébergement, le conseil, la conception et le pilotage d'infrastructure sur-msure).</p>
+                    <p><a href="{{ path('glossary_term', {term: 'ia'}) }}">L'<strong>IA</strong></a> et la <strong>data</strong> sont au cœur de nos projets. Nous les intégrons comme des <strong>outils</strong> et les adaptons facilement à votre environnement pour vous permettre d’<strong>améliorer votre quotidien</strong>, de <strong>gagner du temps</strong> et de <strong>mettre en valeur</strong> vos métiers, vos projets et vos équipes, en toute autonomie.</p>
+                    <a href="{{ path('ia') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
+                        <span>
+                            Innovons ensemble
+                            {% include 'partials/svg-arrow.html.twig' %}
+                        </span>
+                    </a>
+                </div>
+                <div class="illustrated-section__image half" data-aos="fade-right">
+                    <img src="{{ asset('build/images/pages/services/inspirer/inspirer-challenger-innover.jpg') }}" alt="exemple d'écran d'amabla">
+                    <i class="icon icon--brackets-right" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div class="h1--black h1--dash">Et pour ceux qui en veulent plus !</div>
+
+            <h2>Hébergement et infrastructure</h2>
+            <div class="illustrated-section">
+                <div class="illustrated-section__content">
+                    <p>Nous vous accompagnons sur votre <strong>hébergement</strong> et votre <strong>infrastructure</strong>, par le biais de <strong><a href="https://www.rix.fr/" target="_blank">Rix</a></strong>, notre <strong>partenaire <a href="{{ path('glossary_term', {term: 'devops'}) }}">Devops</a></strong>. Fort de ses 15 années d'expérience, Rix dispose de toute l'expertise pour vous conduire dans l'élaboration d'une <strong>infrastructure pérenne</strong> et en adéquation avec vos besoins (à travers le diagnostic de problématiques appréciatives, la mise en place de l'environnement de développement, la maintenance, l'hébergement, le conseil, la conception et le pilotage d'infrastructure sur-mesure).</p>
                     <a href="{{ path('hosting') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
                         <span>
                             Aller plus loin sur l'hébergement
@@ -112,57 +129,19 @@
                         </span>
                     </a>
                 </div>
-                 <div class="illustrated-section__image" data-aos="fade-right">
+                 <div class="illustrated-section__image half" data-aos="fade-right">
                      <picture>
-                        <source type="image/webp"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/hosting-responsive.webp') }}"
-                        >
-                        <source type="image/jpeg"
-                                media="(min-width: 760px) and (max-width: 1220px)"
-                                srcset="{{ asset('build/images/pages/services/hosting-responsive.jpg') }}"
-                        >
-                        <source
-                            type="image/webp"
-                            srcset="{{ asset('build/images/pages/services/hosting.webp') }} 1x,
-                                    {{ asset('build/images/pages/services/hosting@2x.webp') }} 2x"
-                        >
                         <source
                             type="image/jpeg"
-                            srcset="{{ asset('build/images/pages/services/hosting.jpg') }} 1x,
-                                    {{ asset('build/images/pages/services/hosting@2x.jpg') }} 2x"
+                            srcset="{{ asset('build/images/pages/services/hosting/hebergement-banner.jpg') }} 1x,
+                                    {{ asset('build/images/pages/services/hosting/hebergement-banner@2x.jpg') }} 2x"
                         >
-                        <img src="{{ asset('build/images/pages/services/hosting.jpg') }}" alt=""/>
+                        <img src="{{ asset('build/images/pages/services/hosting/hebergement-banner.jpg') }}" alt=""/>
                      </picture>
                      <i class="icon icon--chevrons-right" aria-hidden="true"></i>
                 </div>
             </div>
 
-            <h2 class="h2--dash">Solutions basées sur l'IA</h2>
-            <div class="illustrated-section">
-                <div class="illustrated-section__content">
-                    <p>
-                        Depuis quelque temps, <strong><a href="{{ path('glossary_term', {term: 'ia'}) }}">
-                        l'IA</a></strong> est au cœur de nos projets chez Elao, avant tout comme un
-                        <strong>outil</strong> nous permettant de gagner du temps dans nos tâches quotidiennes
-                        afin de nous focaliser sur notre valeur ajoutée. De l'intégration dans votre site
-                        à l'utilisation
-                        d'<strong><a href="{{ amabla.url }}" target="_blank" title="{{ amabla.seoTitle }}">Amabla</a></strong>,
-                        <strong>un service d'assistants sur-mesure</strong> basé sur l'IA générative,
-                        nous concevons avec vous des solutions permettant de répondre à vos besoins métier.
-                    </p>
-                    <a href="{{ path('ia') }}" class="btn btn--secondary btn--animated" data-aos="fade-left">
-                        <span>
-                            On vous en dit plus
-                            {% include 'partials/svg-arrow.html.twig' %}
-                        </span>
-                    </a>
-                </div>
-                <div class="illustrated-section__image" data-aos="fade-right">
-                    <img src="{{ asset('build/images/pages/services/ia/amabla-screenshot.jpg') }}" alt="exemple d'écran d'amabla">
-                    <i class="icon icon--brackets-right" aria-hidden="true"></i>
-                </div>
-            </div>
             <div class="bricks">
                 {% include 'partials/brick-development.html.twig' %}
             </div>

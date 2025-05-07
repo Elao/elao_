@@ -60,7 +60,7 @@ sh:
 	if [ ! -t 0 ] ; then \
 		$(call manala_docker_command, --no-TTY) sh -s ; \
 	else \
-		$(manala_docker_command) bash --login ; \
+		$(manala_docker_command) zsh --login ; \
 	fi
 .PHONY: sh
 

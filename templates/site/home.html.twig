@@ -11,29 +11,29 @@
 
 {% block structured_data %}
     {% autoescape false %}
-    <script type="application/ld+json">
+        <script type="application/ld+json">
         {{- {
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            'name': site.title|trim('_'),
-            'slogan': site.slogan,
-            'url': url('homepage'),
-            'logo': url('homepage')~'images/corpo/logo.svg',
-            'address': {
-                '@type': 'PostalAddress',
-                'streetAddress': site.contact.address.street_address,
-                'postalCode': site.contact.address.address_postalCode,
-                'addressLocality': site.contact.address.address_locality,
-                'addressRegion': site.contact.address.address_region,
-                'addressCountry': site.contact.address.address_country,
-            },
-            'email': site.contact.email,
-            'telephone': site.contact.phone,
-        }|json_encode(
-            constant('JSON_PRETTY_PRINT') b-or
-            constant('JSON_UNESCAPED_SLASHES') b-or
-            constant('JSON_UNESCAPED_UNICODE')
-        ) }}
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                'name': site.title|trim('_'),
+                'slogan': site.slogan,
+                'url': url('homepage'),
+                'logo': url('homepage')~'images/corpo/logo.svg',
+                'address': {
+                    '@type': 'PostalAddress',
+                    'streetAddress': site.contact.address.street_address,
+                    'postalCode': site.contact.address.address_postalCode,
+                    'addressLocality': site.contact.address.address_locality,
+                    'addressRegion': site.contact.address.address_region,
+                    'addressCountry': site.contact.address.address_country,
+                },
+                'email': site.contact.email,
+                'telephone': site.contact.phone,
+            }|json_encode(
+                constant('JSON_PRETTY_PRINT') b-or
+                constant('JSON_UNESCAPED_SLASHES') b-or
+                constant('JSON_UNESCAPED_UNICODE')
+            ) }}
     </script>
     {% endautoescape %}
 {% endblock %}
@@ -41,135 +41,129 @@
 {% block content %}
     <div class="page-home container">
         <div class="banner-home">
-            <span class="banner-home__title" data-aos="fade-right">
-                elao
-                <span>développe</span>
-                <span>du lien</span>
-            </span>
             <div class="banner-home__content" data-aos="zoom-in">
-                <h1>{{ site.description }}</h1>
+                <h1>{{ site.description|raw }}</h1>
             </div>
             <div class="banner-home__image" data-aos="fade-left">
                 <figure>
-                    <div class="image" style="background: url('{{asset('build/images/pages/home/home-banner.jpg') }}')"></div>
+                    <div class="image" style="background: url('{{asset('build/images/pages/home/banner.jpg') }}')"></div>
                 </figure>
             </div>
             <ul class="banner-home__list">
                 {% with { duration: 600, delayGap: 200, delay: 0 } %}
-                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <a href="{{ path('services') }}" class="item">
-                        <span class="number">{{ interval.y }}</span>
-                        ans d'expérience
-                        <small>(et d'expérimentations)</small>
-                        <span class="item__link">
+                    <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <a href="{{ path('services') }}" class="item">
+                            <span class="number">{{ interval.y }}</span>
+                            ans d'expérience
+                            <small>(et d'expérimentations)</small>
+                            <span class="item__link">
                         Nos services
                         <i class="icon icon--arrow" aria-hidden="true"></i>
                     </span>
-                    </a>
-                </li>
-                {% set delay = delay + delayGap %}
-                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <a href="{{ path('case_studies') }}" class="item">
-                        <span class="number">200+</span>
-                        projets
-                        <span class="item__link">
+                        </a>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <a href="{{ path('case_studies') }}" class="item">
+                            <span class="number">200+</span>
+                            projets
+                            <span class="item__link">
                         Nos études de cas
                         <i class="icon icon--arrow" aria-hidden="true"></i>
                     </span>
-                    </a>
-                </li>
-                {% set delay = delay + delayGap %}
-                <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
-                    <a href="{{ path('team') }}" class="item">
-                        <span class="number">{{ membersCount }}</span>
-                        expert·e·s passionné·e·s
-                        <span class="item__link">
+                        </a>
+                    </li>
+                    {% set delay = delay + delayGap %}
+                    <li data-aos="fade-in" data-aos-duration="{{ duration }}" data-aos-delay="{{ delay }}">
+                        <a href="{{ path('team') }}" class="item">
+                            <span class="number">{{ membersCount }}</span>
+                            expert·e·s passionné·e·s
+                            <span class="item__link">
                             La team elao
                             <i class="icon icon--arrow" aria-hidden="true"></i>
                         </span>
-                    </a>
-                </li>
+                        </a>
+                    </li>
                 {% endwith %}
             </ul>
         </div>
 
         <section class="illustrated-section" data-aos="fade-left">
             <div class="illustrated-section__content">
-                {% include 'partials/ia-brief.html.twig' %}
+                <h2 class="h2--dash">Vos besoins, nos solutions : une réussite à construire ensemble</h2>
+                <p>Depuis 20 ans, nous aidons les entreprises à <strong>gagner du temps</strong>, <strong>optimiser leurs process</strong> ou <strong>développer leur business</strong>.</p>
+                <p>Nous mettons notre <strong>expertise</strong> et notre <strong>passion</strong> au service de vos projets, pour concevoir des applications web et mobiles robustes, évolutives, et parfaitement adaptées à vos besoins.</p>
+                <p>Basés en <strong>France</strong> (Lyon), nous combinons créativité, pragmatisme et technologies innovantes pour <strong>relever vos défis</strong> avec engagement et sincérité.</p>
+                <p>Elao, ce sont des équipes <strong>expertes</strong> (sympas !) et <strong>engagées</strong>, réunies par des <a href="{{ path('values') }}" >valeurs humaines communes</a> qui aiment s'immerger dans vos problématiques, les comprendre en profondeur avant de développer.</p>
+                <p>Avec un esprit <strong>collaboratif</strong> et une méthodologie <strong>itérative</strong>, nous co-construisons des solutions qui font sens, en plaçant <strong>vos utilisateurs</strong> et <strong>vos ambitions</strong> au centre de chaque décision.</p>
+                <a href="{{ path('values') }}" class="link link--brand">En savoir plus</a>
             </div>
-        </section>
 
-        <section class="illustrated-section" data-aos="fade-right">
-            <div class="illustrated-section__content">
-                <div class="quote-home">
-                    <picture data-aos="fade-left">
-                        <source
-                            type="image/webp"
-                            srcset="{{ asset('build/images/pages/home/coding.webp') }} 1x,
-                                {{ asset('build/images/pages/home/coding@2x.webp') }} 2x"
-                        >
-                        <source
-                            type="image/jpeg"
-                            srcset="{{ asset('build/images/pages/home/coding.jpg') }} 1x,
-                                {{ asset('build/images/pages/home/coding@2x.jpg') }} 2x"
-                        >
-                        <img class="quote-home__img" src="{{ asset('build/images/pages/home/coding.jpg') }}" alt="" />
-                    </picture>
-                    <blockquote class="quote-home__blockquote" data-aos="zoom-in">Conseiller et concevoir des applications web sur-mesure, animé par des experts passionnés.</blockquote>
-                </div>
+            <div class="images illustrated-section__image">
+                <img src="{{ asset('build/images/pages/home/brainstorm.jpg') }}" alt=""/>
+                <img src="{{ asset('build/images/pages/home/vos-besoins-nos-solutions.jpg') }}" alt=""/>
+                <i class="icon icon--chevrons-right" aria-hidden="true"></i>
             </div>
+
         </section>
 
         <section class="illustrated-section" data-aos="fade-left">
-            <div class="illustrated-section__content">
-                <h2 class="h2--dash">Les services que nous proposons <br> chez Elao</h2>
-                <p>En tant qu'atelier de co-conception, nous avons pour objectif de contribuer à l'élaboration de vos projets, en <strong>collaboration</strong>  étroite avec vous, tout en mettant l'accent sur la satisfaction de vos utilisateurs. Cette approche passe par notre <strong>expertise</strong> sur différents services.</p>
+            <div class="content">
+                <h2 class="h2--dash">Ce qu'on fait chez Elao</h2>
+                <p>Elao est votre <strong>partenaire facilitateur</strong> à votre écoute sur toutes les étapes de votre projet. Que vous soyez <strong>novice</strong> ou <strong>expérimenté</strong> dans la réalisation de projets web,  nous vous accompagnons en vous <strong>transmettant notre culture projet et nos bonnes pratiques</strong></p>
                 <ul class="services-home">
                     <li class="services-home__card">
-                        <i class="icon icon--code"></i>
-                        <h3>Développement web et mobile sur-mesure</h3>
-                        <ul>
-                            <li>Développement sur-mesure</li>
-                            <li>Application web</li>
-                            <li>Application mobile</li>
-                            <li>Intégration et accessibilité</li>
-                            <li>Expert Symfony - React - React Native</li>
-                            <li>Architecture applicative</li>
-                        </ul>
-                        <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
-                    </li>
-                    <li class="services-home__card">
                         <i class="icon icon--bulb"></i>
-                        <h3>Conseil et accompagnement</h3>
+                        <h3>Concevoir : comprendre et conseiller</h3>
+                        <p>Pour garantir le succès de votre projet, nous commençons par une phase essentielle de compréhension et de définition de la solution.</p>
                         <ul>
-                            <li>Audit technique</li>
-                            <li>Accompagnement global</li>
-                            <li>Méthodologie Agile (mais pas que)</li>
-                            <li>Facilitation de projet</li>
-                            <li>Ateliers participatifs</li>
-                            <li>Parcours utilisateur</li>
+                            <li>Cadrage du sujet et analyse des besoins métier</li>
+                            <li>Ateliers collaboratifs (UX, fonctionnel et technique)</li>
+                            <li>Définition de l'architecture technique et des choix technologiques</li>
+                            <li>Estimation des ressources et du budget</li>
+                            <li>Construction de la roadmap projet</li>
                         </ul>
                         <a href="{{ path('consulting') }}" class="link link--brand">En savoir plus</a>
                     </li>
+
+                    <li class="services-home__card">
+                        <i class="icon icon--code"></i>
+                        <h3>Construire : développer et mettre en ligne</h3>
+                        <p>Une méthode itérative et des solutions techniques qui s'adaptent à vous et votre écosystème pour développer des applications performantes et évolutives.</p>
+                        <ul>
+                            <li>Développement d'applications web et mobiles sur-mesure (Symfony, React, React Native)</li>
+                            <li>Intégration avec vos systèmes existants (API & connecteurs)</li>
+                            <li>Déploiement et mise en production sécurisée</li>
+                            <li>Tests et qualité du code</li>
+                            <li>Accessibilité et performance des applications</li>
+                        </ul>
+                        <a href="{{ path('application') }}" class="link link--brand">En savoir plus</a>
+                    </li>
+
                     <li class="services-home__card">
                         <i class="icon icon--hosting"></i>
-                        <h3>Gestion d'infrastructure et d'hébergement</h3>
+                        <h3>Optimiser : consolider et évoluer</h3>
+                        <p>Un accompagnement proactif pour assurer la pérennité et l'évolution de vos solutions, avec un suivi régulier et une maintenance préventive.</p>
                         <ul>
-                            <li>Déploiement continu</li>
-                            <li>Expertise DevOps</li>
-                            <li>Hébergement et maintenance</li>
-                            <li>Pilotage d'infrastructures</li>
+                            <li>Supervision et monitoring des applications</li>
+                            <li>Maintenance préventive et corrective</li>
+                            <li>Optimisation continue des performances</li>
+                            <li>Accompagnement des utilisateurs</li>
+                            <li>Évolutions fonctionnelles et techniques</li>
                         </ul>
                         <a href="{{ path('hosting') }}" class="link link--brand">En savoir plus</a>
                     </li>
+
                     <li class="services-home__card">
                         <i class="icon icon--ia"></i>
-                        <h3>Solutions basées sur l'IA</h3>
+                        <h3>Inspirer : valoriser et innover</h3>
+                        <p>Nous mettons notre expertise technique et notre expérience métier au service de votre projet pour le faire grandir et innover ensemble.</p>
                         <ul>
-                            <li>IA génératives</li>
-                            <li>Assistants personnalisés</li>
-                            <li>Intégration ChatGPT</li>
-                            <li><strong><a href="{{ amabla.url }}" target="_blank" title="{{ amabla.seoTitle }}">Amabla ©</a></strong></li>
+                            <li>Intégration de solutions innovantes (IA, chatbot, automatisation)</li>
+                            <li>Exploitation et valorisation de vos données</li>
+                            <li>Développements en open source pour plus de transparence</li>
+                            <li>Veille technologique et R&D appliquée à vos besoins</li>
+                            <li>Co-construction des évolutions futures</li>
                         </ul>
                         <a href="{{ path('ia') }}" class="link link--brand">En savoir plus</a>
                     </li>
@@ -177,56 +171,51 @@
             </div>
         </section>
 
-        <section class="illustrated-section" data-aos="fade-right">
-            <div class="illustrated-section__content">
-                <h2 class="h2--dash">Un atelier expert sur les technos utilisées</h2>
-                <div class="section__techno">
-                    <div class="illustration">
-                        <img src="{{ asset('build/images/technos/symfony.svg') }}" alt="logo Symfony">
-                        +
-                        <img src="{{ asset('build/images/technos/react.svg') }}" alt="logo Symfony">
-                        = ❤️
-                    </div>
-                    <p>Nous sommes avant tout des experts sur les technologies que nous utilisons au quotidien, avec principalement :</p>
-                    <ul>
-                        <li><strong><a href="{{ path('glossary_term', {term: 'symfony'}) }}">Symfony</a></strong>, LE <strong>framework <a href="{{ path('glossary_term', {term: 'php'}) }}">PHP</a></strong> que nous utilisons depuis notre création (nous avons mis notre première application web en ligne en 2006, avant la version 1 de Symfony !). On aime son efficacité, sa modularité, sa robustesse et le dynamisme de sa communauté qui en a fait une référence depuis presque 20 ans.</li>
-                        <li><strong><a href="{{ path('glossary_term', {term: 'react'}) }}">React/ReactNative</a></strong>, pour le côté front, qui va rendre vos sites et vos applications dynamiques, responsives et permettre une expérience utilisateurs optimale.</li>
-                    </ul>
-                    <p>Nous faisons le choix de technologies éprouvées, reconnues et maintenables, vous garantissant les solutions les plus qualitatives, robustes et évolutives possibles.</p>
-                    <p>Pour découvrir l'ensemble de nos outils cliquez sur "En savoir plus_" !</p>
-                    <a href="{{ path('application') }}#techno" class="btn btn--secondary btn--animated">
-                        <span>
-                            En savoir plus
-                            {% include 'partials/svg-arrow.html.twig' %}
-                        </span>
-                    </a>
-                </div>
-            </div>
+        <section class="illustrated-section illustrated-section__image bandeau" data-aos="fade-left">
+            <img src="{{ asset('build/images/pages/home/bandeau.jpg') }}" alt="Hosting banner illustration">
+
+            <i class="icon icon--brackets-right" aria-hidden="true"></i>
         </section>
 
-        <section class="illustrated-section" data-aos="fade-left">
-            <div class="illustrated-section__content">
-                <h2 class="h2--dash">Nos derniers projets</h2>
-                <p>Ce que l'on aime chez Elao ? Contribuer à des <strong>projets vertueux, utiles</strong> à notre société. Nous sommes animés et ressentons la responsabilité de faire émerger, grandir, des projets ayant des valeurs communes aux nôtres.</p>
-                <ul class="last-projects">
-                    {% for caseStudy in lastThreeCaseStudies %}
-                    <li class="last-project">
-                        <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="last-project__image">
-                            <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
-                        </a>
-                        <div class="last-project__content">
-                            <h3>{{ caseStudy.title }}</h3>
-                            <p>{{ caseStudy.description }}</p>
-                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="btn btn--secondary btn--animated">
-                                <span>
-                                    Découvrir le projet
-                                    {% include 'partials/svg-arrow.html.twig' %}
-                                </span>
-                            </a>
+        <section class="illustrated-section" data-aos="fade-right">
+            <div class="content">
+                <h2 class="h2--dash">Ce qu’on en dit </h2>
+                <div class="section__techno">
+                    <div data-controller="carousel">
+                        <div class="carousel-container">
+                            <div class="blockquote carousel-item"  data-carousel-target="slide">
+                                <div class="logo">
+                                    <img src="{{ asset('build/images/partners/mjc-colors.svg') }}" alt="logo Mjc">
+                                </div>
+                                <blockquote class="blockquote-secondary">
+                                    <p>Avec Elao, on conçoit ensemble l'outil, on s'appuie sur leur expertise, c'est vraiment un partenaire. Ils sont réactifs sur des sujets urgents au-delà des bons conseils. L'équipe avec laquelle je collabore est bonne dans les recommandations et le développement pur. Souvent même le résultat dépasse nos attentes !</p>
+
+                                    <p><strong>Tatiana Lanchec - MyJobCompany</strong></p>
+                                </blockquote>
+                            </div>
+                            <div class="blockquote carousel-item"  data-carousel-target="slide">
+                                <div class="logo">
+                                    <img src="{{ asset('build/images/partners/ansara-icon.svg') }}" alt="logo Ansara Pharmacare">
+                                </div>
+                                <blockquote class="blockquote-secondary">
+                                    <p>Elao a une méthode folle ! Et ils captent tout. Je n'ai jamais eu autant de facilité à communiquer et comprendre qu'ils avaient tout compris.</p>
+
+                                    <p><strong>Evelyne Tiev - Ansara Pharmacare</strong></p>
+                                </blockquote>
+                            </div>
+                            <div class="blockquote carousel-item"  data-carousel-target="slide">
+                                <div class="logo">
+                                    <img src="{{ asset('build/images/partners/panneau-pocket-small.svg') }}" alt="logo Panneau pocket">
+                                </div>
+                                <blockquote class="blockquote-secondary">
+                                    <p>Elao est un vrai partenaire tech. Ce sont non seulement des dev mais aussi des accompagnateurs du changement. Ils aiment proposer et être partie prenante de la réflexion. Pour moi, Elao est un couteau suisse et avec Rix, il y a une vision 360, c'est top !</p>
+
+                                    <p><strong>Caroline Lafforgue - Panneau Pocket</strong></p>
+                                </blockquote>
+                            </div>
                         </div>
-                    </li>
-                    {% endfor %}
-                </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -243,14 +232,40 @@
                     <img src="{{ asset('build/images/partners/panneau-pocket.svg') }}" alt="logo Panneau Pocket">
                     <img src="{{ asset('build/images/partners/bedrock.svg') }}" alt="logo Bedrock">
                     <img src="{{ asset('build/images/partners/rix.svg') }}" alt="logo Rix">
-                    <img src="{{ asset('build/images/partners/inria.svg') }}" alt="logo Inria">
                     <img src="{{ asset('build/images/partners/engie.svg') }}" alt="logo Engie">
-                    <img src="{{ asset('build/images/partners/sensiolabs.svg') }}" alt="logo SensioLabs">
-                    <img src="{{ asset('build/images/partners/la-cuisine-du-web.svg') }}" alt="logo La Cuisine du Web">
                     <img src="{{ asset('build/images/partners/afup.svg') }}" alt="logo AFUP">
                     <img src="{{ asset('build/images/partners/digital-league.svg') }}" alt="logo Digital League">
                     <img src="{{ asset('build/images/partners/seb.svg') }}" alt="logo Seb">
+                    <img src="{{ asset('build/images/partners/sunzil.svg') }}" alt="logo Sunzil">
+                    <img src="{{ asset('build/images/partners/ansara.svg') }}" alt="logo Ansara Pharmacare">
+                    <img src="{{ asset('build/images/partners/activinnov.svg') }}" alt="logo Activinnov">
                 </div>
+            </div>
+        </section>
+
+        <section class="illustrated-section" data-aos="fade-left">
+            <div class="illustrated-section__content">
+                <h2 class="h2--dash">Nos derniers projets</h2>
+                <p>Ce que l'on aime chez Elao ? Contribuer à des <strong>projets vertueux, utiles</strong> à notre société. Nous sommes animés et ressentons la responsabilité de faire émerger, grandir, des projets ayant des valeurs communes aux nôtres.</p>
+                <ul class="last-projects">
+                    {% for caseStudy in lastThreeCaseStudies %}
+                        <li class="last-project">
+                            <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="last-project__image">
+                                <span class="image" style="{{ macros.backgroundImageSrcset(caseStudy.images|first, 'case_study_thumbnail.md') }}"></span>
+                            </a>
+                            <div class="last-project__content">
+                                <h3>{{ caseStudy.title }}</h3>
+                                <p>{{ caseStudy.description }}</p>
+                                <a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}" class="btn btn--secondary btn--animated">
+                                <span>
+                                    Découvrir le projet
+                                    {% include 'partials/svg-arrow.html.twig' %}
+                                </span>
+                                </a>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
         </section>
 
@@ -260,36 +275,36 @@
                 <p>Nous attachons une grande importance à <strong>partager, redistribuer et favoriser</strong> la vitalité de notre <strong>écosystème</strong>. C'est la raison pour laquelle nous apprécions prendre part à des conférences et diffuser des articles liés à notre domaine d'expertise.</p>
                 <ul class="last-articles">
                     {% for article in lastTwoArticles %}
-                    <li class="last-article">
-                        <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
+                        <li class="last-article">
+                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="last-article__image" data-aos="fade-down">
                             <span
                                 class="image"
                                 style="{{ macros.backgroundImageSrcset(article.thumbnail, 'article_thumbnail.md', null, article.thumbnailResizeOptions) }}"
                             ></span>
-                        </a>
-                        <div class="last-article__content" data-aos="zoom-in">
-                            <div class="info">
-                                <span>{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
-                                {% block tags %}
-                                    <ul class="tag-list">
-                                        {% for tag in article.tags %}
-                                            <li class="tag-list__item">
-                                                <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
-                                                    #{{ tag|u.camel.title }}
-                                                </a>
-                                            </li>
-                                        {% endfor %}
-                                    </ul>
-                                {% endblock %}
+                            </a>
+                            <div class="last-article__content" data-aos="zoom-in">
+                                <div class="info">
+                                    <span>{{ article.date|format_datetime('short', 'none', locale='fr') }}</span>
+                                    {% block tags %}
+                                        <ul class="tag-list">
+                                            {% for tag in article.tags %}
+                                                <li class="tag-list__item">
+                                                    <a href="{{ path('blog_tag', { tag: tag }) }}" rel="nofollow">
+                                                        #{{ tag|u.camel.title }}
+                                                    </a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endblock %}
+                                </div>
+                                <h3>
+                                    <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
+                                        {{ article.title }}
+                                    </a>
+                                </h3>
+                                <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
                             </div>
-                            <h3>
-                                <a class="title" href="{{ path('blog_article', { article: article.slug }) }}">
-                                    {{ article.title }}
-                                </a>
-                            </h3>
-                            <a href="{{ path('blog_article', { article: article.slug }) }}" class="link link--brand">Lire l'article</a>
-                        </div>
-                    </li>
+                        </li>
                     {% endfor %}
 
                     <a href="{{ path('blog') }}" class="btn btn--secondary btn--animated">
@@ -301,6 +316,7 @@
                 </ul>
             </div>
         </section>
+
         <div class="bricks">
             <a href="{{ path('contact') }}" class="brick-send-message" data-aos="zoom-in-down">
                 <h3 class="title">Vous souhaitez nous en dire plus sur vos idées, trouver un partenaire expert pour vous accompagner dans la conception et le développement de votre projet ?</h3>

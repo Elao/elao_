@@ -1,7 +1,7 @@
 ---
 title: "Mocker une API GraphQL avec les resolvers locaux du client Apollo"
 date: '2024-07-09'
-lastModified: ~
+lastModified: '2025-05-12'
 description: |
   Découvrez comment simuler tout ou partie d'une API GraphQL, depuis votre application front, 
   sans impacter votre code fonctionnel, grâce aux resolvers locaux Apollo.
@@ -636,6 +636,12 @@ permettant les mêmes usages et assurant malgré tout un avenir à ce concept.
     atout qu'il serait dommage de s'en priver et ils n'entâchent en rien la pérennité de votre code dans la mesure où 
     leur utilisation est non intrusive et temporaire.
 
+!!! Note "🆕 UPDATE 12 Mai 2025"
+    Après discussions et des expérimentations pour déplacer ce fonctionnel au sein d'un `link` spécifique, il semblerait 
+    que la team Apollo ait décidé de ne pas poursuivre cette voie. ([référence: commentaire Github, le 7 Mai 2025](https://github.com/apollographql/apollo-client/issues/10060#issuecomment-2859223414))  
+    ➜ Les resolvers locaux sont donc conservés dans le coeur du client Apollo 4 en tant que fonctionnalité optionnelle, 
+    activable.
+
 ## Conclusion
 
 Les resolvers locaux sont un outil formidable pour les équipes front-end qui souhaitent avancer de manière autonome et
@@ -671,3 +677,4 @@ Pour aller plus loin quant à l'avenir des resolvers locaux :
 - [Deprecation of local resolvers makes adopting GQL more difficult #7072](https://github.com/apollographql/apollo-client/issues/7072)
 - [Release local resolvers back into the link chain #10060](https://github.com/apollographql/apollo-client/issues/10060)
 - [Read method on field's TypePolicy should allow async behaviour #383](https://github.com/apollographql/apollo-feature-requests/issues/383)
+- 🆕 [Les resolvers locaux conservés dans le coeur d'Apollo v4 (commentaire Github, le 7 Mai 2025)](https://github.com/apollographql/apollo-client/issues/10060#issuecomment-2859223414)

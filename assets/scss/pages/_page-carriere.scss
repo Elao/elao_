@@ -51,6 +51,10 @@
       height: 100%;
       width: 70%;
 
+      @media (max-width: $screen-xs) {
+        display: none;
+      }
+
       img {
         &:first-child, &:last-child {
           flex: 1;
@@ -290,13 +294,21 @@
 
         &:first-child, &:last-child {
             p {
-                bottom: -110%;
+              bottom: -110%;
+
+              @media (max-width: $screen-xs) {
+                bottom: 0;
+              }
             }
         }
 
         &:nth-child(3) {
           p {
             bottom: -120%;
+
+            @media (max-width: $screen-xs) {
+              bottom: 0;
+            }
           }
         }
       }

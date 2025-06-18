@@ -16,17 +16,24 @@
         weight: 700;
       }
 
+      @media (max-width: $screen-xs) {
+        min-width: auto;
+        font-size: 14px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-basis: 33%;
+
+        span {
+          width: 100%;
+        }
+      }
+
       span {
         &:after {
           color: $color-primary;
           content: "_";
         }
-      }
-
-      @media (max-width: $screen-xs) {
-        min-width: auto;
-        font-size: 14px;
-        padding: 10px;
       }
 
       &:last-child {
@@ -172,6 +179,7 @@
             @media (max-width: $screen-xs) {
               max-width: 100%;
               margin: 0;
+              max-height: 230px;
             }
           }
         }

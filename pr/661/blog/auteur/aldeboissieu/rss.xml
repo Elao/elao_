@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Anne‑Laure de Boissieu, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Anne‑Laure de Boissieu de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/661/blog/auteur/aldeboissieu</link>
+        <pubDate>Wed, 18 Jun 2025 14:12:32 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/661/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Anne‑Laure de Boissieu, </title>
+            <link>https://elao.github.io/elao_/pr/661/blog/auteur/aldeboissieu</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/661/blog/auteur/aldeboissieu/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Elao au Forum PHP pour parler accessibilité et SEO !</title>
+                <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Anne-Laure et Amélie ont donné une conférence lors du Forum PHP pour parler d&#039;accessibilité, SEO, et plus globalement de qualité web 🪄 ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/conference-accesseo-2021</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/conference-accesseo-2021</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/afup-day-2019.jpg/5affa46b4a81624172abbcd37943e62f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Elao au Forum PHP pour parler accessibilité et SEO !</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>forumphp</category>
+                                            </item>
+                    <item>
+                <title>Anne-Laure, développeuse web chez Elao depuis 3 ans</title>
+                <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/anne-laure-developpeuse-web-chez-elao-depuis-3-ans</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/anne-laure-developpeuse-web-chez-elao-depuis-3-ans</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2021/itw-2b.jpeg/a5bd6413d4d8dedef5d63bf6c369b889.jpeg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Anne-Laure, développeuse web chez Elao depuis 3 ans</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                                    <comments>https://twitter.com/Elao/status/1413061065374580737</comments>
+                            </item>
+                    <item>
+                <title>AFUP Day 2021, jour 1 : le compte-rendu de l&#039;équipe</title>
+                <pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Notre compte-rendu du premier jour de l&#039;Afup Day, édition 2021, à distance ! ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/afup-day-1-2021</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/afup-day-1-2021</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2021/afup-day-2021/afup-day-2021.png/ae56e1558ae0757ea31bc615c98b1dd2.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">AFUP Day 2021, jour 1 : le compte-rendu de l&#039;équipe</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>afupday</category>
+                                            </item>
+                    <item>
+                <title>MiXiT 2021, une conférence 100 % en ligne: retour d&#039;expérience côté organisation</title>
+                <pubDate>Tue, 25 May 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comme la plupart des conférences tech, cette année, l&#039;édition de MiXiT 2021 a eu lieu à distance. Alors, comment ça s&#039;est passé côté orga ? ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/rex-orga-mixit-2021</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/rex-orga-mixit-2021</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2021/mixit/mixit-2021.png/70a3df327c66f7c0ecbf597d53be7cf5.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">MiXiT 2021, une conférence 100 % en ligne: retour d&#039;expérience côté organisation</media:description>
+                                    </media:content>
+                                    <category>conference</category>
+                                    <category>mixit</category>
+                                                    <comments>https://twitter.com/Elao/status/1397886962527309826</comments>
+                            </item>
+                    <item>
+                <title>Rebranding 3/4 : la tech</title>
+                <pubDate>Tue, 04 May 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ On s&#039;outille. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/rebranding-la-tech</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/rebranding-la-tech</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/headers/elao-rebrand-banner-tech.jpg/7b7175bf16399bf45363ae0085e86cd8.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Rebranding 3/4 : la tech</media:description>
+                                    </media:content>
+                                    <category>rebranding</category>
+                                    <category>elao</category>
+                                    <category>stenope</category>
+                                    <category>site-statique</category>
+                                                    <comments>https://twitter.com/Elao/status/1389506062672351242</comments>
+                            </item>
+                    <item>
+                <title>🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</title>
+                <pubDate>Thu, 31 Oct 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Quelques idées pour rendre votre soirée d&#039;Halloween un peu plus effrayante ou étrange ... 👻 ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/halloween-2019</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/halloween-2019</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/halloween-2019.jpg/c91316dd197d364a8700343462c533d2.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">🎃 Films d&#039;Halloween : la sélection de l&#039;équipe 🍿</media:description>
+                                    </media:content>
+                                    <category>halloween</category>
+                                    <category>cinema</category>
+                                            </item>
+                    <item>
+                <title>Mettez en valeur vos offres d&#039;emploi grâce aux données structurées</title>
+                <pubDate>Wed, 18 Jun 2025 14:05:37 +0000</pubDate>
+                <description>
+                    <![CDATA[ Et si vous rendiez vos offres d&#039;emploi plus visibles dans les pages de résultats des moteurs de recherche grâce aux données structurées ?  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/dev/donnees-structurees-offre-emploi</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/dev/donnees-structurees-offre-emploi</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/arrows-square.jpg/8a130c645ee6ceaa6099758f8990dba4.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Mettez en valeur vos offres d&#039;emploi grâce aux données structurées</media:description>
+                                    </media:content>
+                                    <category>seo</category>
+                                    <category>microdata</category>
+                                    <category>rich-snippets</category>
+                                            </item>
+                    <item>
+                <title>Comment empêcher les moteurs de recherche d&#039;indexer votre app Symfony en staging ?</title>
+                <pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Les pages de votre application n&#039;ont pas vocation à être présentes dans les moteurs de recherche ? Voici une courte explication pour vous aider à empêcher le crawl et l&#039;indexation. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/dev/no-index-staging-symfony</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/dev/no-index-staging-symfony</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/judging-sardine-small.jpg/142f0ee66da1c22b206f55231e4e9dbe.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Comment empêcher les moteurs de recherche d&#039;indexer votre app Symfony en staging ?</media:description>
+                                    </media:content>
+                                    <category>symfony</category>
+                                    <category>seo</category>
+                                    <category>no-index</category>
+                                            </item>
+                    <item>
+                <title>AFUP Day 2019 à Lyon : le compte-rendu de l&#039;équipe</title>
+                <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Notre compte-rendu de l&#039;Afup Day à Lyon, du 17 mai 2019. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/afup-day-lyon-2019</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/afup-day-lyon-2019</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/afup-day-2019.jpg/5affa46b4a81624172abbcd37943e62f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">AFUP Day 2019 à Lyon : le compte-rendu de l&#039;équipe</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>afupday</category>
+                                            </item>
+                    <item>
+                <title>Sauvez un cookie 🍪, installez Matomo !</title>
+                <pubDate>Thu, 21 Mar 2019 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Chez Elao, nous mesurons désormais l&#039;audience de nos propres sites grâce à Matomo. Retour d&#039;expérience.  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/dev/retour-experience-matomo</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/dev/retour-experience-matomo</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/matomo.jpg/35559658e0a8cd2a6c701bc6e13e93bc.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Sauvez un cookie 🍪, installez Matomo !</media:description>
+                                    </media:content>
+                                    <category>seo</category>
+                                    <category>rgpd</category>
+                                    <category>matomo</category>
+                                            </item>
+                    <item>
+                <title>Retour sur le Forum PHP 2018</title>
+                <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ En attendant l&#039;AFUP Day, voici notre retour sur le Forum PHP 2018. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/forum-php-2018</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/forum-php-2018</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/thumbnails/forumphp2018-team.jpeg/107a9c0e039a44132dd5e6faa104e66e.jpeg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Retour sur le Forum PHP 2018</media:description>
+                                    </media:content>
+                                    <category>developpement</category>
+                                    <category>web</category>
+                                    <category>afup</category>
+                                    <category>conference</category>
+                                    <category>forumphp</category>
+                                            </item>
+            </channel>
+</rss>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Le blog de l'équipe d'Elao</title>
+        <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/661/blog</link>
+        <pubDate>Wed, 18 Jun 2025 14:08:56 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/661/apple-touch-icon.png</url>
+            <title>Le blog de l'équipe d'Elao</title>
+            <link>https://elao.github.io/elao_/pr/661/blog</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/661/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
+                <pubDate>Wed, 18 Jun 2025 14:05:37 +0000</pubDate>
+                <description>
+                    <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
+Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/dev/ecrire-tests-insensible-au-temps</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/dev/ecrire-tests-insensible-au-temps</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2025/dev/ecrire-tests-insensible-au-temps/thumbnail-cm8olxtb700072y22fq10ubtr.jpg/6d7e2adc0f256610ecb3bb2ba91da452.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Guide pratique pour l&#039;écriture de tests sensibles au temps</media:description>
+                                    </media:content>
+                                    <category>php</category>
+                                    <category>tests</category>
+                                    <category>clock</category>
+                                    <category>symfony</category>
+                                                    <comments>https://twitter.com/Elao/status/1909513841374806184</comments>
+                            </item>
+                    <item>
+                <title>[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</title>
+                <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ 5ème et dernier épisode de notre série d&#039;articles sur l&#039;accompagnement de nos alternant·e·s ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-5</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-5</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2025/alternants/episode5.jpg/96a38341a6589fce10ddc77fe1f96724.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 5/5] La parole aux premier·è·s concerné·e·s : nos alternant·e·s</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 4/5] On fait le bilan ?</title>
+                <pubDate>Tue, 11 Feb 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-4</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-4</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2024/alternants/episode4.jpg/594ff927b8820565ed669759a05a3f7d.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 4/5] On fait le bilan ?</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
+                    <item>
+                <title>Nathan, développeur back-end chez Elao</title>
+                <pubDate>Wed, 29 Jan 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/nathan-developpeur-backend</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/nathan-developpeur-backend</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2025/itw-njacquot/njacquot.png/d6cad0d99fa3ae1fd5ab500fd842fc06.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Nathan, développeur back-end chez Elao</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</title>
+                <pubDate>Tue, 07 Jan 2025 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-3</guid>
+                <link>https://elao.github.io/elao_/pr/661/blog/elao/alternants/accompagnement-alternants-episode-3</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/661/%2E%2E/../resized/content/images/blog/2024/alternants/episode3.png/3e7bc937b2d0f28896b3f30b335d5002.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 3/5] On suit le développement de l&#039;alternant•e et on prépare la suite</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                    <category>alternance</category>
+                                            </item>
+            </channel>
+</rss>

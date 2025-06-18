@@ -1,0 +1,158 @@
+.category-switch {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  @media (max-width: $screen-xs) {
+    flex-direction: column;
+  }
+
+  > div {
+    flex: 1;
+  }
+
+  &__categories {
+    display: grid;
+    gap: 50px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (max-width: $screen-xs) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .category {
+      align-items: center;
+      background-color: $color-secondary;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 50px 25px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+
+      @media (max-width: $screen-xs) {
+        padding: 24px;
+      }
+
+      span {
+        color: $color-primary;
+        line-height: 1;
+        text-align: center;
+        font:{
+          family: 'antikor bold';
+          size: 104px;
+          weight: 500;
+        }
+
+        @media (max-width: $screen-xs) {
+          font-size: 50px;
+        }
+      }
+
+      svg {
+        @media (max-width: $screen-xs) {
+          height: 48px;
+        }
+
+        path {
+          fill: $color-primary;
+          stroke: $color-primary;
+        }
+      }
+
+      p {
+        width: 75%;
+        color: $color-primary;
+        margin: 0;
+        font:{
+          family: 'antikor regular';
+          size: 20px;
+        }
+
+        @media (max-width: $screen-xs) {
+          font-size: 14px;
+        }
+      }
+
+      &:hover, &.active {
+        cursor: pointer;
+
+        p, span {
+          color: #FFF;
+        }
+
+        svg {
+          path {
+            fill: white;
+            stroke: white;
+          }
+        }
+
+        &:before, &:after {
+          background-color: transparent;
+          content: "";
+          height: 54px;
+          position: absolute;
+          transition: opacity 0.3s ease-in-out;
+          width: 45px;
+        }
+
+        &:before {
+          border-left: 12px solid $color-brand;
+          border-top: 12px solid $color-brand;
+          left: -24px;
+          top: -24px;
+        }
+
+        &:after {
+          border-bottom: 12px solid $color-brand;
+          border-right: 12px solid $color-brand;
+          bottom: -24px;
+          right: -24px;
+        }
+
+        &:first-child {
+          background-color: $color-light;
+        }
+
+        &:nth-child(2) {
+          background-color: $color-primary;
+        }
+
+        &:nth-child(3) {
+          background-color: $color-brand;
+        }
+
+        &:last-child {
+          background-color: $color-info;
+        }
+      }
+    }
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+
+    .item {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+
+      @media (max-width: $screen-xs) {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: $screen-xs) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}

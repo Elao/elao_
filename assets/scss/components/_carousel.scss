@@ -1,29 +1,40 @@
-.carousel-container {
-  display: flex;
-  overflow-x: clip;
+.carousel {
+  width: 100%;
   position: relative;
+  overflow-x: clip;
 
-  .carousel-item {
-    max-width: 100%;
-    min-width: 100%;
-    transition: transform 0.5s ease-in-out;
+  .carousel-container {
+    width: 100%;
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+
+      .carousel-item {
+        flex: 0 0 auto;
+      }
+    }
   }
 }
 
 .carousel__dots {
   display: flex;
-  justify-content: center;
   gap: 8px;
-  margin-top: 24px;
+  justify-content: center;
+  margin-top: 100px;
+
+  @media (max-width: $screen-lg) {
+    margin-top: 36px;
+  }
 
   .carousel__dot {
-    width: 12px;
-    height: 12px;
     background-color: $color-secondary;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+    height: 12px;
     transition: background-color 0.3s;
+    width: 12px;
 
     &.active {
       background-color: $color-primary;

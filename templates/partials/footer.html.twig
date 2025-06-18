@@ -20,13 +20,7 @@
                 {% endfor %}
                 <ul>
                     <li>
-                        {% set count = content_list('App\\Model\\Job', null, { active: true })|length %}
-                        <a href="{{ path('jobs') }}">
-                            Nous recrutons
-                            {% if count %}
-                                <span class="bullet">{{ count }}</span>
-                            {% endif %}
-                        </a>
+                        <a href="{{ path('carriere') }}">Page Carrière</a>
                     </li>
                     <li>
                         <a href="{{ path('glossary') }}">Glossaire 🧐</a>

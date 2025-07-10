@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Sabrina Ludovic de Lys de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/662/blog/auteur/sludovicdelys</link>
+        <pubDate>Thu, 10 Jul 2025 16:13:47 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/662/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Sabrina Ludovic de Lys, </title>
+            <link>https://elao.github.io/elao_/pr/662/blog/auteur/sludovicdelys</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/662/blog/auteur/sludovicdelys/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Sabrina, alternante en intégration fraîchement arrivée dans l&#039;équipe ✨</title>
+                <pubDate>Tue, 14 Sep 2021 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/662/blog/elao/sabrina-alternante-en-integration</guid>
+                <link>https://elao.github.io/elao_/pr/662/blog/elao/sabrina-alternante-en-integration</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/662/%2E%2E/../resized/content/images/blog/thumbnails/sabrina-ludo-samoens.jpg/da7877f9c6d902fd6e62dd646f9bce66.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Sabrina, alternante en intégration fraîchement arrivée dans l&#039;équipe ✨</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                                    <comments>https://twitter.com/Elao/status/1440962443228889090</comments>
+                            </item>
+            </channel>
+</rss>

@@ -73,7 +73,7 @@ En parallèle, nous avons mis en place des **outils de qualité de code** adapt�
 Create React App, aujourd'hui déprécié) vers un bundler moderne (Vite).
 
 <figure>
-    <img src="content/images/casestudies/rigby-listing.jpg" alt="Exemple de listing sur l'application Cockpit 360">
+    <img src="../images/casestudies/rigby-listing.jpg" alt="Exemple de listing sur l'application Cockpit 360">
     <figcaption>
       <span class="figure__legend">Exemple de listing</span>
     </figcaption>
@@ -101,7 +101,7 @@ notre travail côté front est alors d'implémenter les composants répondant au
 situations.
 
 <figure>
-    <img src="content/images/casestudies/rigby-onglet-commandes.jpg" alt="Exemple d'agencement de colonnes sur l'application Cockpit 360">
+    <img src="../images/casestudies/rigby-onglet-commandes.jpg" alt="Exemple d'agencement de colonnes sur l'application Cockpit 360">
     <figcaption>
       <span class="figure__legend">Exemple d'agencement de colonnes</span>
     </figcaption>
@@ -119,10 +119,10 @@ elle soit en **accord** avec les fonctionnalités attendues sur le front.
 
 À Elao, nous développons depuis plusieurs années la plupart de nos applications de façon à communiquer au travers d'une
 **API GraphQL**. Ainsi, nous avons une connaissance approfondie de comment architecturer une application front, avec
-**[React](https://www.elao.com/glossaire/react)** et **Apollo** (un client GraphQL). Ce dernier possède un mécanisme de cache des données puissant (on en parle
-juste [ici](https://www.elao.com/blog/dev/apollo-graphql-cache/)), qu'il est essentiel de comprendre pour bénéficier des
-meilleures performances et capacités à faire évoluer une application avec de nombreuses interrogations /manipulations de
-données.
+**[React](../term/react.md)** et **Apollo** (un client GraphQL). Ce dernier possède un mécanisme de cache des données puissant (on en parle
+juste [ici](../blog/dev/apollo-graphql-cache.md)), qu'il est essentiel de comprendre pour bénéficier des
+meilleures performances et capacités à faire évoluer une application avec de nombreuses interrogations / manipulations 
+de données.
 
 Aussi, nous avons eu une étroite collaboration avec l'équipe back pour s'assurer que l'API puisse répondre de la façon
 la plus adaptée à ce que le front puisse bénéficier de ces mécanismes pour répondre au mieux aux exigences de l'
@@ -142,8 +142,8 @@ entièrement, mais dont la signature puisse être suffisante pour avancer.
 Nous l'avons indiqué plus haut, l'application repose sur son API qui définie le cœur de l'application, mais finalement
 de quoi est fait Cockpit 360 ?
 
-Le projet repose sur un principe de **listings de données**, chaque liste possédant une configuration côté back qui est
-retournée par l'API pour :
+Le projet repose sur un principe de **listings générique de données**, chaque liste possédant une configuration 
+côté back qui est retournée par l'API pour :
 
 - choisir le modèle et source de données à afficher
 - choisir les colonnes à afficher et permettre leur réagencement
@@ -165,7 +165,7 @@ Nous sommes intervenus sur :
     - un export
 
 <figure>
-    <img src="content/images/casestudies/rigby-systeme-onglet.jpg" alt="Exemple d'un onglet imbriqué sur l'application Cockpit 360">
+    <img src="../images/casestudies/rigby-systeme-onglet.jpg" alt="Exemple d'un onglet imbriqué sur l'application Cockpit 360">
     <figcaption>
       <span class="figure__legend">Exemple d'un onglet imbriqué</span>
     </figcaption>
@@ -179,7 +179,7 @@ Enfin, une partie **suivi des métriques** au travers d'un espace de création d
 charts, KPI, ...) pour toutes les sources de données a été mis en place.
 
 <figure>
-    <img src="content/images/casestudies/rigby-metriques.jpg" alt="Exemple de métriques sur l'application Cockpit 360">
+    <img src="../images/casestudies/rigby-metriques.jpg" alt="Exemple de métriques sur l'application Cockpit 360">
     <figcaption>
       <span class="figure__legend">Exemple de métriques</span>
     </figcaption>

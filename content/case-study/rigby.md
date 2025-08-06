@@ -9,7 +9,7 @@ description: "Le projet Cockpit 360 a pour but de centraliser la gestion des con
 clients: RIGBY Capital
 size: 1 an
 services: [ "Accompagnement", "Développement" ]
-terms: [ "react", "api", "graphql" ]
+terms: [ "react", "chartjs", "graphql" ]
 members: [ "afarrugia", "adefrance", "msteinhausser", "pmoreau", "equentin" ]
 images: [ "content/images/casestudies/rigby-home-page.jpg" ]
 ---

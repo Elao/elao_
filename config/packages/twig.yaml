@@ -32,6 +32,7 @@ twig:
 
             trackers:
                 matomo: '%env(MATOMO_ID)%'
+                matomo_url: '%env(MATOMO_URL)%'
 
             menu:
                 - { path: 'services', label: 'Services', routes: [ia, application, hosting, consulting] }

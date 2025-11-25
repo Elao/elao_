@@ -72,7 +72,7 @@
                     _paq.push(['trackPageView']);
                     _paq.push(['enableLinkTracking']);
                     (function() {
-                        var u="//metrics.elao.com/";
+                        var u="{{ site.trackers.matomo_url }}";
                         _paq.push(['setTrackerUrl', u+'matomo.php']);
                         _paq.push(['setSiteId', '{{ site.trackers.matomo }}']);
                         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];

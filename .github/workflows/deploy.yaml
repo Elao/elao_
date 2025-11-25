@@ -94,6 +94,7 @@ jobs:
           INCLUDE_SAMPLES: 0
           SHOW_UNPUBLISHED_ARTICLES: 0
           MATOMO_ID: ${{ vars.MATOMO_ID }}
+          MATOMO_URL: ${{ vars.MATOMO_URL }}
 
       - name: 'Login to GitHub Container Registry'
         uses: docker/login-action@v3

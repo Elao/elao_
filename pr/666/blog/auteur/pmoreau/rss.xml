@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/666/blog/auteur/pmoreau</link>
-        <pubDate>Mon, 19 Jan 2026 17:46:39 +0000</pubDate>
+        <pubDate>Mon, 26 Jan 2026 08:31:42 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/666/apple-touch-icon.png</url>
@@ -17,6 +17,27 @@
             <link>https://elao.github.io/elao_/pr/666/blog/auteur/pmoreau</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/666/blog/auteur/pmoreau/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Les 4 nouveautés CSS qui changent tout (et comment les utiliser)</title>
+                <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ CSS Nesting, @layer, Container Queries, :has()… Découvrez les fonctionnalités CSS modernes prêtes pour la production qui transforment notre façon de concevoir les styles.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/666/blog/dev/nouveautes-css-2025</guid>
+                <link>https://elao.github.io/elao_/pr/666/blog/dev/nouveautes-css-2025</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/666/%2E%2E/../resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail.jpg/9d220d4f4a86a04cb1be20c7a1d5764c.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les 4 nouveautés CSS qui changent tout (et comment les utiliser)</media:description>
+                                    </media:content>
+                                    <category>css</category>
+                                    <category>frontend</category>
+                                    <category>responsive</category>
+                                    <category>design-system</category>
+                                            </item>
                     <item>
                 <title>Polémil, développeur front-end chez Elao</title>
                 <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>

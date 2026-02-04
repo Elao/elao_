@@ -5,7 +5,7 @@ lastModified: ~ # À utiliser pour indiquer explicitement qu'un article a été 
 description:  On a posé la question aux équipes des soft-skills qui comptent pour eux et voici leurs réponses…
 authors: [mzelboch, ogandillon]
 tableOfContent: true # `true` pour activer ou `3` pour lister les titres sur 3 niveaux.
-tags: [rh, team, soft-skills]
+tags: [rh, team, soft skills]
 thumbnail: content/images/blog/2026/soft-skills/soft-skills-episode-1.jpg
 ---
 

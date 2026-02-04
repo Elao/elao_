@@ -18,7 +18,7 @@ thumbnailResizeOptions:
 #tweetId: ~ # Ajouter l'id du Tweet après publication.
 ---
 
-!!! note "Cette article fait partie d'une série de 5 épisodes"
+!!! note "Cet article fait partie d'une série de 5 épisodes"
     Pour rattraper ou relire notre premier épisode, c’est par [ici](./accompagnement-alternants-episode-1.md) 
     (sinon vous risquez d’être perdus 🙃).
 

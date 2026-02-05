@@ -68,6 +68,19 @@ blockquote:nth-of-type(even):not(.blockquote-primary),
     font-size: 16px;
     font-style: normal;
     text-align: right;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      font-family: inherit;
+      transition: opacity ease-in .1s;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: .7;
+      }
+    }
   }
 }
 

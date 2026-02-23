@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/ogandillon</link>
-        <pubDate>Thu, 05 Feb 2026 17:11:36 +0000</pubDate>
+        <pubDate>Mon, 23 Feb 2026 08:54:01 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,25 @@
             <link>https://elao.github.io/elao_/blog/auteur/ogandillon</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/ogandillon/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>[Épisode 2] Pédagogie, curiosité et humilité : des nouvelles clés pour s’épanouir chez Elao</title>
+                <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ On a posé la question aux équipes des soft skills qui comptent pour eux et voici leurs réponses… ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/soft-skills/soft-skills-episode-2</guid>
+                <link>https://elao.github.io/elao_/blog/elao/soft-skills/soft-skills-episode-2</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/soft-skills/soft-skills-episode-2.jpg/d22744e13c1485794ad167bbfab6384a.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 2] Pédagogie, curiosité et humilité : des nouvelles clés pour s’épanouir chez Elao</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>soft-skills</category>
+                                            </item>
                     <item>
                 <title>[Épisode 1] Autonomie &amp; esprit d’équipe, deux clés pour s’épanouir chez Elao</title>
                 <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>

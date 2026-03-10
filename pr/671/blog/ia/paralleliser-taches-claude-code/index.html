@@ -52,7 +52,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
         "https://elao.github.io/elao_/pr/671/blog/ia/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg"
     ],
     "datePublished": "2026-03-09T00:00:00+00:00",
-    "dateModified": "2026-03-10T16:23:20+00:00",
+    "dateModified": "2026-03-10T16:27:39+00:00",
     "author": [
         {
             "@type": "Person",
@@ -340,11 +340,6 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                                     <li class="table-of-content__item">
                         <a href="#le-contexte">Le contexte</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#pourquoi-claude-code-plutot-qu-un-script">Pourquoi Claude Code plutôt qu&#039;un script ?</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#les-slash-commands-claude-code">Les slash commands Claude Code</a>
@@ -353,62 +348,18 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                                     <li class="table-of-content__item">
                         <a href="#approche-1-sequentielle">Approche 1 : séquentielle</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#avantages">Avantages</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#inconvenients">Inconvénients</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#approche-2-batch-parallele">Approche 2 : batch parallèle</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#avantages">Avantages</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#inconvenients">Inconvénients</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#approche-3-agent-teams">Approche 3 : Agent Teams</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#comment-ca-fonctionne">Comment ça fonctionne</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#avantages">Avantages</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#inconvenients">Inconvénients</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#mon-avis">Mon avis</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#approche-4-dynamic-worker-pool">Approche 4 : Dynamic Worker Pool</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#la-premiere-tentative-et-son-echec">La première tentative et son échec</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#le-pattern-qui-fonctionne-dispatch-dynamique-par-l-agent-principal">Le pattern qui fonctionne : dispatch dynamique par l&#039;agent principal</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#avantages">Avantages</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#inconvenients">Inconvénients</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#comparatif">Comparatif</a>
@@ -417,20 +368,6 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                                     <li class="table-of-content__item">
                         <a href="#ce-que-j-ai-appris">Ce que j&#039;ai appris</a>
 
-                                                    <ol class="table-of-content__sub-level">
-                                                                        <li>
-                                            <a href="#haiku-pour-les-taches-triviales">Haiku pour les tâches triviales</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#le-dynamic-worker-pool-est-le-meilleur-compromis">Le Dynamic Worker Pool est le meilleur compromis</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#l-overhead-du-parallelisme-n-est-pas-gratuit">L&#039;overhead du parallélisme n&#039;est pas gratuit</a>
-                                        </li>
-                                                                        <li>
-                                            <a href="#la-simplicite-gagne-souvent">La simplicité gagne (souvent)</a>
-                                        </li>
-                                                            </ol>
                                             </li>
                                     <li class="table-of-content__item">
                         <a href="#quelle-approche-choisir">Quelle approche choisir ?</a>
@@ -455,7 +392,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
 <p>Claude Code sait lire les logs d'erreur, ouvrir le fichier concerné, identifier l'enum cible, ajouter le cas manquant avec le bon mapping, et relancer pour vérifier. C'est exactement le genre de tâche répétitive et bien cadrée qui se prête à l'automatisation via <a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code</a>. J'ai donc créé une <strong>slash command</strong> personnalisée (<code class="code-inline" id="ebabf31e67d96c4c43d6cf4dfa4e23c7">/fix-import</code>) qui orchestre tout le processus. Puis j'ai itéré sur la partie la plus lente : l'exécution parallèle des imports.</p>
 <h2 id="les-slash-commands-claude-code" class="anchor-title"><a href="#les-slash-commands-claude-code">Les slash commands Claude Code</a></h2>
 <p>Avant de parler parallélisation, un mot sur le mécanisme utilisé. Claude Code permet de définir des <strong>slash commands</strong> personnalisées sous forme de fichiers Markdown dans <code class="code-inline" id="f0fecf930728109b6326be60d47dbbf9">.claude/commands/</code>. Ces fichiers contiennent des instructions en langage naturel que Claude suit comme un workflow. À noter que ce mécanisme a depuis été fusionné dans le système <strong>Skills</strong> (<code class="code-inline" id="c4ca2f4cbac640b5bc97a701c51c193c">.claude/skills/</code>), mais les fichiers dans <code class="code-inline" id="f0fecf930728109b6326be60d47dbbf9">.claude/commands/</code> continuent de fonctionner.</p>
-<pre class="code-multiline"><code id="5cbd409ff1ddb93c38023d062fb15a9e">.claude/commands/
+<pre class="code-multiline language-tree"><code class="language-tree" id="5cbd409ff1ddb93c38023d062fb15a9e">.claude/commands/
   fix-import.md        # v1 : séquentiel
   fix-import-batch.md  # v2 : batch parallèle
   fix-import-teams.md  # v3 : Agent Teams
@@ -464,8 +401,8 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
 <p>Soyons honnêtes : la version séquentielle était tout à fait acceptable en termes de durée d'exécution (environ 4 minutes), et le gain apporté par la parallélisation dans ce cas précis n'est pas extraordinaire. Mais l'objectif n'était pas forcément de gagner beaucoup de temps : c'était d'avoir un cas d'usage simple et concret me permettant d'explorer les différentes pistes de parallélisation offertes par Claude Code.</p>
 <h2 id="approche-1-sequentielle" class="anchor-title"><a href="#approche-1-sequentielle">Approche 1 : séquentielle</a></h2>
 <p>La première version est la plus simple. Claude exécute chaque commande d'import l'une après l'autre dans la conversation principale :</p>
-<pre class="code-multiline"><code id="926f5b994bf8dc7ac896b188e698f8ed">Pour chaque commande d'import :
-  1. Exécuter la commande Docker
+<pre class="code-multiline language-tree"><code class="language-tree" id="5be06ea4d84a4b16ed0e3b3f922e8a16">Pour chaque commande d'import :
+  1. Exécuter la commande
   2. Analyser la sortie
   3. Passer à la suivante</code></pre>
 <p>C'est l'approche naïve, celle qu'on écrit naturellement et qui fonctionne du premier coup. Tous les imports doivent être exécutés car plusieurs flux utilisent le même adaptateur (même fournisseur de flux). Cela permet de réunir toutes les erreurs par adaptateur et de les dédupliquer avant de mettre à jour les correspondances. À noter que les temps d'exécution sont très hétérogènes : certains imports sont très lents car le flux contient beaucoup de données, d'autres sont quasi instantanés car le flux est très petit.</p>
@@ -503,7 +440,7 @@ Look for error log lines matching these patterns: [...]
 <h2 id="approche-2-batch-parallele" class="anchor-title"><a href="#approche-2-batch-parallele">Approche 2 : batch parallèle</a></h2>
 <p>J'ai naturellement décrit à Claude Code mon souhait de paralléliser les imports via des sous-agents, en limitant le nombre d'agents simultanés pour ne pas avoir trop de processus PHP qui tournent en même temps. Chaque sous-agent devait exécuter un import, extraire les erreurs de mapping et les remonter à l'agent principal qui se chargerait de modifier le code.</p>
 <p>Claude Code m'a tout de suite proposé cette approche par batch : découper les imports en lots et traiter chaque lot en parallèle via l'outil <code class="code-inline" id="eaeb30f9f18e0c50b178676f3eaef45f">Task</code> (renommé <code class="code-inline" id="7446050b848d839fe9847073ff94cfd6">Agent</code> depuis la version 2.1.63 de Claude Code).</p>
-<pre class="code-multiline"><code id="609ea0e7e7e83674df6da1d8e1e300ad">Découper les 10 imports en lots de 4 :
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="609ea0e7e7e83674df6da1d8e1e300ad">Découper les 10 imports en lots de 4 :
   Lot 1 : [import-1, import-2, import-3, import-4]  → 4 agents en parallèle
   Attendre que le lot 1 finisse
   Lot 2 : [import-5, import-6, import-7, import-8]  → 4 agents en parallèle
@@ -543,18 +480,18 @@ that doesn't require a powerful model.</code></pre>
 <p>Claude Code propose une fonctionnalité expérimentale appelée <strong>Agent Teams</strong> (<code class="code-inline" id="f894a29cffed1b73f730598ba92fd144">CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1</code>). J'avais conscience que cette approche serait probablement overkill pour mon cas d'usage, mais c'était l'opportunité de tester cette nouvelle fonctionnalité et de découvrir ses possibilités et ses limites sur un sujet simple.</p>
 <h3 id="comment-ca-fonctionne" class="anchor-title"><a href="#comment-ca-fonctionne">Comment ça fonctionne</a></h3>
 <p>Agent Teams permet de créer une véritable <strong>équipe d'agents</strong> orchestrée par un agent leader. Le leader crée une équipe, définit des tâches dans une liste partagée, puis lance des agents "teammates" qui vont collaborer de façon autonome. Chaque teammate a accès à la liste de tâches commune, peut s'en attribuer une, l'exécuter, puis envoyer un rapport au leader via un système de messagerie intégrée (<code class="code-inline" id="84ea011a8379b1eb533f68d1d12fe6a6">SendMessage</code>). Le leader supervise l'avancement et collecte les résultats.</p>
-<pre class="code-multiline"><code id="9d26b570a90ccaa4bcdd1a092fb6bbd3">1. Créer une équipe "import-flux" (Teammate spawnTeam)
-2. Créer 10 tâches (TaskCreate), une par import
-3. Lancer 4 teammates (Task avec team_name)
-4. Chaque teammate :
-   - Consulte la liste de tâches (TaskList)
-   - Prend la première tâche disponible
-   - Exécute l'import
-   - Envoie le rapport au leader (SendMessage)
-   - Marque la tâche comme terminée
-   - Reprend une tâche disponible
-5. Le leader collecte les résultats
-6. Shutdown de l'équipe (Teammate cleanup)</code></pre>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="9d26b570a90ccaa4bcdd1a092fb6bbd3"><span class="token list punctuation">1.</span> Créer une équipe "import-flux" (Teammate spawnTeam)
+<span class="token list punctuation">2.</span> Créer 10 tâches (TaskCreate), une par import
+<span class="token list punctuation">3.</span> Lancer 4 teammates (Task avec team_name)
+<span class="token list punctuation">4.</span> Chaque teammate :
+   <span class="token list punctuation">-</span> Consulte la liste de tâches (TaskList)
+   <span class="token list punctuation">-</span> Prend la première tâche disponible
+   <span class="token list punctuation">-</span> Exécute l'import
+   <span class="token list punctuation">-</span> Envoie le rapport au leader (SendMessage)
+   <span class="token list punctuation">-</span> Marque la tâche comme terminée
+   <span class="token list punctuation">-</span> Reprend une tâche disponible
+<span class="token list punctuation">5.</span> Le leader collecte les résultats
+<span class="token list punctuation">6.</span> Shutdown de l'équipe (Teammate cleanup)</code></pre>
 <p>C'est le pattern <strong>worker pool</strong> classique : les workers s'auto-assignent les tâches et n'attendent jamais inutilement. Dès qu'un import court finit, le worker enchaîne immédiatement sur le suivant.</p>
 <p>Voici les instructions clés du prompt pour cette approche :</p>
 <pre class="code-multiline language-markdown"><code class="language-markdown" id="513d20dd174b7e818db957c63c6138e9"><span class="token title important"><span class="token punctuation">###</span> Step 2: Create the team and task list</span>
@@ -606,11 +543,11 @@ Once all have shut down, clean up with <span class="token code-snippet code keyw
 <p><strong>Le plan a échoué.</strong> Les sous-agents lancés via <code class="code-inline" id="eaeb30f9f18e0c50b178676f3eaef45f">Task</code> n'ont pas accès aux outils de gestion de tâches (<code class="code-inline" id="b3f0f2eb7b25831c4e3f1d6fb7d48130">TaskList</code>, <code class="code-inline" id="8d6cc70cc6b41ba42770a6efb759a4d9">TaskGet</code>, <code class="code-inline" id="025c9e30d7d743f5c31bf6c0d8e02990">TaskUpdate</code>). Ces outils ne sont disponibles que dans la conversation principale. Les 4 workers ont immédiatement échoué avec un message du type : <em>"The instructions reference TaskList, TaskUpdate, and TaskGet functions that should be available in my toolkit, but they are not currently accessible."</em></p>
 <h3 id="le-pattern-qui-fonctionne-dispatch-dynamique-par-l-agent-principal" class="anchor-title"><a href="#le-pattern-qui-fonctionne-dispatch-dynamique-par-l-agent-principal">Le pattern qui fonctionne : dispatch dynamique par l'agent principal</a></h3>
 <p>J'ai donc redéveloppé la commande avec un pattern différent. Au lieu de demander aux workers de se coordonner entre eux (ce qu'ils ne peuvent pas faire), c'est l'<strong>agent principal qui orchestre tout</strong>. Le principe : chaque worker n'exécute qu'<strong>une seule commande</strong> puis se termine. Quand l'agent principal reçoit la notification de fin d'un worker, il lance immédiatement un nouveau sous-agent avec la tâche suivante.</p>
-<pre class="code-multiline"><code id="8889f2a21b769e89d202142b0e4d5e84">1. Créer 10 tâches (TaskCreate)
-2. Lancer 4 agents en background (1 tâche chacun)
-3. Recevoir notification "worker-1 a fini"
-4. Lancer un nouvel agent en background avec la prochaine tâche
-5. Répéter jusqu'à plus de tâches pending</code></pre>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="8889f2a21b769e89d202142b0e4d5e84"><span class="token list punctuation">1.</span> Créer 10 tâches (TaskCreate)
+<span class="token list punctuation">2.</span> Lancer 4 agents en background (1 tâche chacun)
+<span class="token list punctuation">3.</span> Recevoir notification "worker-1 a fini"
+<span class="token list punctuation">4.</span> Lancer un nouvel agent en background avec la prochaine tâche
+<span class="token list punctuation">5.</span> Répéter jusqu'à plus de tâches pending</code></pre>
 <p>C'est du <strong>push dynamique</strong> plutôt que du pull par les workers, mais l'effet est le même : pas de temps mort, le worker le plus rapide libère son slot immédiatement et un nouveau part sur la tâche suivante.</p>
 <p>La clé du succès : l'agent principal gère toute la coordination (<code class="code-inline" id="b3f0f2eb7b25831c4e3f1d6fb7d48130">TaskList</code>, <code class="code-inline" id="025c9e30d7d743f5c31bf6c0d8e02990">TaskUpdate</code>) et chaque sous-agent reçoit directement sa commande dans le prompt, sans avoir besoin d'accéder au système de tâches.</p>
 <p>Voici les instructions clés du prompt. D'abord, la contrainte documentée en tête de commande :</p>

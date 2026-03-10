@@ -52,7 +52,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
         "https://elao.github.io/elao_/pr/671/blog/ia/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg"
     ],
     "datePublished": "2026-03-09T00:00:00+00:00",
-    "dateModified": "2026-03-10T16:27:39+00:00",
+    "dateModified": "2026-03-10T16:36:15+00:00",
     "author": [
         {
             "@type": "Person",
@@ -386,6 +386,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                 
                 <h2 id="le-contexte" class="anchor-title"><a href="#le-contexte">Le contexte</a></h2>
 <p>Sur l'un de nos projets, nous avons une dizaine de commandes d'import de flux de données externes. Ces commandes reposent toutes sur le même modèle : un adaptateur qui fait correspondre les nomenclatures du flux source avec les enums internes de l'application. Quand un partenaire ajoute une nouvelle valeur dans son flux, l'import échoue avec une erreur de mapping. La correction est mécanique : ouvrir l'adaptateur, trouver l'enum cible, ajouter le cas manquant.</p>
+<img src="/elao_/pr/671/%2E%2E/../resized/content/images/blog/2026/paralleliser-taches-claude-code/schema-contexte.svg/839cf75e26abf51832251dc8b5f315d9.svg" alt="Schéma du problème de mapping : quand une valeur inconnue apparaît dans le flux, l'import échoue" title="Schéma du problème de mapping : quand une valeur inconnue apparaît dans le flux, l'import échoue" id="schema-du-probleme-de-mapping-quand-une-valeur-inconnue-apparait-dans-le-flux-l-import-echoue">
 <p>De plus, les partenaires qui génèrent ces flux exposent rarement une documentation avec la liste complète de leur nomenclature. Le mapping se fait donc de façon empirique : on découvre les valeurs au fil de l'eau, quand elles apparaissent dans les données. Au gré de l'évolution des données publiées dans les flux, de nouvelles valeurs de nomenclature peuvent surgir à tout moment. D'où le besoin de mettre à jour fréquemment nos adaptateurs d'import — une à plusieurs fois par semaine — et c'est franchement rébarbatif pour les développeurs.</p>
 <h3 id="pourquoi-claude-code-plutot-qu-un-script" class="anchor-title"><a href="#pourquoi-claude-code-plutot-qu-un-script">Pourquoi Claude Code plutôt qu'un script ?</a></h3>
 <p>On pourrait se dire qu'un bon vieux script shell ferait l'affaire. Sauf que la correction n'est pas un simple copier-coller : il faut <strong>comprendre</strong> le log d'erreur pour identifier la valeur inconnue, puis <strong>choisir</strong> le bon enum case à associer. Les nomenclatures et les enums sont des catégories avec des intitulés compréhensibles par un humain — des noms de secteurs d'activité, des types de contrat, des niveaux de qualification. Un LLM est capable de comprendre le sens des deux côtés et de faire le rapprochement sémantique : il sait que "CDI de chantier" correspond à <code class="code-inline" id="44672375032e0d318252f70672c93cbf">PermanentContract</code>, que "Achats &amp; Supply Chain" se rattache à <code class="code-inline" id="5f95f5c48171ba26e9f8aa9d8c7ce6c4">Purchasing</code>. C'est cette capacité d'interprétation qui rend la tâche difficilement scriptable mais parfaitement adaptée à un agent IA.</p>

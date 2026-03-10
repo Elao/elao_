@@ -460,6 +460,23 @@
   2. Analyser la sortie
   3. Passer à la suivante</code></pre>
 <p>C'est l'approche naïve, celle qu'on écrit naturellement et qui fonctionne du premier coup. Tous les imports doivent être exécutés car plusieurs flux utilisent le même adaptateur (même fournisseur de flux). Cela permet de réunir toutes les erreurs par adaptateur et de les dédupliquer avant de mettre à jour les correspondances. À noter que les temps d'exécution sont très hétérogènes : certains imports sont très lents car le flux contient beaucoup de données, d'autres sont quasi instantanés car le flux est très petit.</p>
+<p>La slash command est très directe — on décrit simplement le workflow étape par étape en langage naturel :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="4f8cb0348fd630e4c3d845433e79c2f7"><span class="token title important"><span class="token punctuation">###</span> Step 1: Get the list of import commands</span>
+Run the following command to get all import commands:
+docker-compose exec app sh -c "bin/console app:import:list"
+
+<span class="token title important"><span class="token punctuation">###</span> Step 2: Run each import command</span>
+For each import command extracted in Step 1, run it inside Docker:
+docker-compose exec app sh -c "bin/console {command_line}"
+After running each command, carefully read the full output
+looking for ERROR log lines that indicate missing enum mappings.
+
+<span class="token title important"><span class="token punctuation">###</span> Step 3: Identify enum mapping errors</span>
+Look for error log lines matching these patterns: [...]
+
+<span class="token title important"><span class="token punctuation">###</span> Step 4: Fix each mapping error</span>
+[...]</code></pre>
+<p>Claude Code suit ces instructions comme un script, mais avec la capacité de s'adapter aux imprévus.</p>
 <h3 id="avantages" class="anchor-title"><a href="#avantages">Avantages</a></h3>
 <ul>
 <li>Simple à écrire et à débugger</li>
@@ -486,6 +503,20 @@
   Attendre que le lot 3 finisse</code></pre>
 <p>Cette séparation en agent principal / sous-agents a un autre avantage intéressant : elle permet d'utiliser un modèle plus simple (Haiku) pour les sous-agents dont la tâche est triviale (exécuter une commande et extraire des lignes d'erreur), tout en conservant un modèle plus puissant (Opus) sur l'agent principal pour la partie intelligente — choisir le bon enum case pour chaque mapping. On ne peut pas changer de modèle au sein d'un même agent sans perdre le contexte, cette architecture résout donc élégamment le problème.</p>
 <p>La limite de 4 processus simultanés est une contrainte technique liée aux ressources disponibles dans notre environnement Docker.</p>
+<p>La clé technique du prompt est dans cette instruction :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="a13214f4748a67973b3b3c9bf8ed5cdb"><span class="token title important"><span class="token punctuation">###</span> Step 2: Run import commands in parallel batches</span>
+
+Split the import commands into <span class="token bold"><span class="token punctuation">**</span><span class="token content">batches of 4</span><span class="token punctuation">**</span></span>.
+
+For each batch, launch one <span class="token bold"><span class="token punctuation">**</span><span class="token content">Bash agent</span><span class="token punctuation">**</span></span> (via the Task tool)
+per import command, <span class="token bold"><span class="token punctuation">**</span><span class="token content">all in a single message</span><span class="token punctuation">**</span></span> so they run
+concurrently. Wait for the batch to complete before launching
+the next one.
+
+<span class="token bold"><span class="token punctuation">**</span><span class="token content">Use <span class="token code-snippet code keyword">`model: "haiku"`</span> for all import agents</span><span class="token punctuation">**</span></span> — they only need
+to run a command and extract ERROR lines, which is a trivial task
+that doesn't require a powerful model.</code></pre>
+<p>Le point important ici est le <strong>"all in a single message"</strong> : c'est ce qui indique à Claude Code de lancer les sous-agents en parallèle plutôt que séquentiellement. Sans cette précision, il les lancerait un par un.</p>
 <h3 id="avantages" class="anchor-title"><a href="#avantages">Avantages</a></h3>
 <ul>
 <li>Coût tokens réduit grâce à Haiku pour les workers</li>
@@ -516,6 +547,33 @@
 5. Le leader collecte les résultats
 6. Shutdown de l'équipe (Teammate cleanup)</code></pre>
 <p>C'est le pattern <strong>worker pool</strong> classique : les workers s'auto-assignent les tâches et n'attendent jamais inutilement. Dès qu'un import court finit, le worker enchaîne immédiatement sur le suivant.</p>
+<p>Voici les instructions clés du prompt pour cette approche :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="513d20dd174b7e818db957c63c6138e9"><span class="token title important"><span class="token punctuation">###</span> Step 2: Create the team and task list</span>
+
+<span class="token list punctuation">1.</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">Create the team</span><span class="token punctuation">**</span></span> using <span class="token code-snippet code keyword">`Teammate spawnTeam`</span> with team name
+   "import-flux".
+
+<span class="token list punctuation">2.</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">Create one task per import command</span><span class="token punctuation">**</span></span> using <span class="token code-snippet code keyword">`TaskCreate`</span>.
+   Each task description contains les instructions pour le teammate:
+   "Run this import command and report any errors found. [...]
+   Send a message to the team lead with all ERROR lines.
+   Mark the task as completed.
+   Check TaskList for the next available task."
+
+<span class="token title important"><span class="token punctuation">###</span> Step 3: Spawn 4 worker teammates</span>
+
+Spawn <span class="token bold"><span class="token punctuation">**</span><span class="token content">4 teammates</span><span class="token punctuation">**</span></span> using the <span class="token code-snippet code keyword">`Task`</span> tool with
+<span class="token code-snippet code keyword">`team_name: "import-flux"`</span>.
+Launch all 4 in a <span class="token bold"><span class="token punctuation">**</span><span class="token content">single message</span><span class="token punctuation">**</span></span> so they start concurrently.
+<span class="token list punctuation">-</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">model</span><span class="token punctuation">**</span></span>: "haiku"
+<span class="token list punctuation">-</span> Each teammate: check the task list, claim a task, execute it,
+  report via SendMessage, repeat until no more tasks.
+
+<span class="token title important"><span class="token punctuation">###</span> Step 6: Shutdown the team</span>
+
+Send a <span class="token code-snippet code keyword">`shutdown_request`</span> to all workers.
+Once all have shut down, clean up with <span class="token code-snippet code keyword">`Teammate cleanup`</span>.</code></pre>
+<p>La complexité vient du cycle de vie de l'équipe : il faut créer l'équipe, créer les tâches, spawner les teammates, attendre les messages, puis faire le shutdown proprement.</p>
 <h3 id="avantages" class="anchor-title"><a href="#avantages">Avantages</a></h3>
 <ul>
 <li>Utilisation optimale des slots de concurrence</li>
@@ -545,7 +603,43 @@
 4. Lancer un nouvel agent en background avec la prochaine tâche
 5. Répéter jusqu'à plus de tâches pending</code></pre>
 <p>C'est du <strong>push dynamique</strong> plutôt que du pull par les workers, mais l'effet est le même : pas de temps mort, le worker le plus rapide libère son slot immédiatement et un nouveau part sur la tâche suivante.</p>
-<p>La clé du succès : l'agent principal gère toute la coordination (<code class="code-inline" id="b3f0f2eb7b25831c4e3f1d6fb7d48130">TaskList</code>, <code class="code-inline" id="025c9e30d7d743f5c31bf6c0d8e02990">TaskUpdate</code>) et chaque sous-agent reçoit directement sa commande dans le prompt, sans avoir besoin d'accéder au système de tâches. Le prompt de chaque worker est minimal : <em>"exécute cette commande, retourne les erreurs"</em>.</p>
+<p>La clé du succès : l'agent principal gère toute la coordination (<code class="code-inline" id="b3f0f2eb7b25831c4e3f1d6fb7d48130">TaskList</code>, <code class="code-inline" id="025c9e30d7d743f5c31bf6c0d8e02990">TaskUpdate</code>) et chaque sous-agent reçoit directement sa commande dans le prompt, sans avoir besoin d'accéder au système de tâches.</p>
+<p>Voici les instructions clés du prompt. D'abord, la contrainte documentée en tête de commande :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="ececc396040204f37800cce61e957f59"><span class="token bold"><span class="token punctuation">**</span><span class="token content">Key design constraint:</span><span class="token punctuation">**</span></span> Subagents do NOT have access to Task
+tools (TaskList, TaskGet, TaskUpdate). Only the main agent can
+manage tasks. Each worker receives exactly <span class="token bold"><span class="token punctuation">**</span><span class="token content">one command</span><span class="token punctuation">**</span></span> in its
+prompt, executes it, returns the result, and terminates.
+The main agent then dispatches the next task.</code></pre>
+<p>Ensuite, la boucle de dispatch de l'agent principal :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="f14bce2b82a5b723d3890447bb785962"><span class="token title important"><span class="token punctuation">###</span> Step 3: Dispatch loop — spawn workers dynamically</span>
+
+<span class="token list punctuation">1.</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">Initial dispatch</span><span class="token punctuation">**</span></span>: Take the first 4 pending tasks,
+   mark each as <span class="token code-snippet code keyword">`in_progress`</span> via <span class="token code-snippet code keyword">`TaskUpdate`</span>,
+   and spawn 4 background subagents in a <span class="token bold"><span class="token punctuation">**</span><span class="token content">single message</span><span class="token punctuation">**</span></span>.
+
+<span class="token list punctuation">2.</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">On worker completion</span><span class="token punctuation">**</span></span>: When a background agent completes:
+   <span class="token list punctuation">-</span> Extract the ERROR lines from the worker's returned output
+   <span class="token list punctuation">-</span> Update the task via <span class="token code-snippet code keyword">`TaskUpdate`</span>: set status to "completed"
+   <span class="token list punctuation">-</span> If remaining pending tasks: spawn a <span class="token bold"><span class="token punctuation">**</span><span class="token content">new background agent</span><span class="token punctuation">**</span></span>
+   <span class="token list punctuation">-</span> If no more tasks: wait for remaining workers
+
+<span class="token list punctuation">3.</span> <span class="token bold"><span class="token punctuation">**</span><span class="token content">Repeat</span><span class="token punctuation">**</span></span> until all tasks are completed.</code></pre>
+<p>Et le prompt de chaque worker, volontairement minimal :</p>
+<pre class="code-multiline language-markdown"><code class="language-markdown" id="dea945db86b5a4da99bf57a3f7faba87">You are an import worker. Run the following command and report results.
+
+<span class="token title important"><span class="token punctuation">##</span> Command</span>
+{full Docker command}
+
+<span class="token title important"><span class="token punctuation">##</span> Instructions</span>
+<span class="token list punctuation">1.</span> Run the command using <span class="token code-snippet code keyword">`Bash`</span> with a timeout of 300000ms.
+<span class="token list punctuation">2.</span> Extract ALL lines containing "ERROR" from the output.
+<span class="token list punctuation">3.</span> Return: <span class="token bold"><span class="token punctuation">**</span><span class="token content">Status</span><span class="token punctuation">**</span></span>: SUCCESS | FAILURE | TIMEOUT
+   <span class="token bold"><span class="token punctuation">**</span><span class="token content">Error lines</span><span class="token punctuation">**</span></span>: {all ERROR lines, or "None"}
+
+<span class="token title important"><span class="token punctuation">##</span> Important rules</span>
+<span class="token list punctuation">-</span> Do NOT edit any files. Only run the command and report results.
+<span class="token list punctuation">-</span> Do NOT skip or reformat ERROR lines — copy them verbatim.</code></pre>
+<p>Chaque worker ne fait qu'une chose : exécuter et rapporter. Toute l'intelligence reste dans l'agent principal.</p>
 <p>La vraie différence avec l'approche batch est maintenant claire :</p>
 <ul>
 <li><strong>Batch</strong> : vagues de 4, on attend que toute la vague finisse → temps mort si un lot contient un import lent</li>

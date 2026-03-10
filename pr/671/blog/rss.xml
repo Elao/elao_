@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/671/blog</link>
-        <pubDate>Tue, 10 Mar 2026 16:06:49 +0000</pubDate>
+        <pubDate>Tue, 10 Mar 2026 16:24:25 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/671/apple-touch-icon.png</url>
@@ -19,12 +19,14 @@
         <atom:link href="https://elao.github.io/elao_/pr/671/blog/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
                 <title>Paralléliser des tâches avec Claude Code : comparatif de 4 approches</title>
-                <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
+                <pubDate>Tue, 10 Mar 2026 16:23:20 +0000</pubDate>
                 <description>
-                    <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : séquentielle, batch, Agent Teams et Task Worker Pool. ]]>
+                    <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : 
+séquentielle, batch, Agent Teams et Task Worker Pool.
+ ]]>
                 </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/671/blog/dev/paralleliser-taches-claude-code</guid>
-                <link>https://elao.github.io/elao_/pr/671/blog/dev/paralleliser-taches-claude-code</link>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/671/blog/ia/paralleliser-taches-claude-code</guid>
+                <link>https://elao.github.io/elao_/pr/671/blog/ia/paralleliser-taches-claude-code</link>
                 <media:content
                     url="https://elao.github.io/elao_/pr/671/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg"
                     width="1200"

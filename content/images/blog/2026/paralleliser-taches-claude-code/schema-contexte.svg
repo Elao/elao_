@@ -1,0 +1,89 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" width="920" height="520">
+  <!-- svg-source:excalidraw -->
+  <rect x="0" y="0" width="920" height="520" fill="#ffffff"/>
+
+  <!-- Flux externe (partenaire) -->
+  <rect x="30" y="30" width="240" height="310" rx="12" ry="12" fill="#e8f4f8" stroke="#1e88e5" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="150" y="62" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Flux partenaire</text>
+
+  <!-- Valeurs du flux -->
+  <rect x="50" y="82" width="200" height="36" rx="6" ry="6" fill="#ffffff" stroke="#90caf9" stroke-width="1.5"/>
+  <text x="150" y="106" text-anchor="middle" font-size="13" fill="#333">"CDI"</text>
+
+  <rect x="50" y="128" width="200" height="36" rx="6" ry="6" fill="#ffffff" stroke="#90caf9" stroke-width="1.5"/>
+  <text x="150" y="152" text-anchor="middle" font-size="13" fill="#333">"CDD"</text>
+
+  <rect x="50" y="174" width="200" height="36" rx="6" ry="6" fill="#ffffff" stroke="#90caf9" stroke-width="1.5"/>
+  <text x="150" y="198" text-anchor="middle" font-size="13" fill="#333">"Achats &amp; Supply Chain"</text>
+
+  <rect x="50" y="220" width="200" height="36" rx="6" ry="6" fill="#ffffff" stroke="#90caf9" stroke-width="1.5"/>
+  <text x="150" y="244" text-anchor="middle" font-size="13" fill="#333">"Informatique"</text>
+
+  <!-- Nouvelle valeur inconnue ! -->
+  <rect x="50" y="278" width="200" height="36" rx="6" ry="6" fill="#ffebee" stroke="#e53935" stroke-width="2"/>
+  <text x="150" y="302" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">"CDI de chantier"</text>
+  <text x="258" y="292" font-size="20" fill="#e53935">⚡</text>
+
+  <!-- Flèche flux → adaptateur -->
+  <line x1="275" y1="185" x2="345" y2="185" stroke="#666" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="345,180 358,185 345,190" fill="#666"/>
+
+  <!-- Adaptateur -->
+  <rect x="362" y="50" width="200" height="270" rx="10" ry="10" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="462" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="#f57f17">Adaptateur</text>
+  <line x1="375" y1="92" x2="549" y2="92" stroke="#f9a825" stroke-width="1"/>
+
+  <!-- Mappings existants -->
+  <text x="390" y="118" font-size="12" fill="#555">"CDI"</text>
+  <text x="460" y="118" font-size="12" fill="#888">→</text>
+  <text x="482" y="118" font-size="12" fill="#2e7d32" font-weight="bold">Permanent</text>
+
+  <text x="390" y="148" font-size="12" fill="#555">"CDD"</text>
+  <text x="460" y="148" font-size="12" fill="#888">→</text>
+  <text x="482" y="148" font-size="12" fill="#2e7d32" font-weight="bold">FixedTerm</text>
+
+  <text x="390" y="178" font-size="12" fill="#555">"Achats..."</text>
+  <text x="460" y="178" font-size="12" fill="#888">→</text>
+  <text x="482" y="178" font-size="12" fill="#2e7d32" font-weight="bold">Purchasing</text>
+
+  <text x="390" y="208" font-size="12" fill="#555">"Informatique"</text>
+  <text x="460" y="208" font-size="12" fill="#888">→</text>
+  <text x="482" y="208" font-size="12" fill="#2e7d32" font-weight="bold">IT</text>
+
+  <!-- Mapping manquant -->
+  <rect x="378" y="228" width="170" height="32" rx="4" ry="4" fill="#ffebee" stroke="#e53935" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="463" y="249" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">"CDI de chantier" → ???</text>
+
+  <text x="390" y="298" text-anchor="start" font-size="11" fill="#999" font-style="italic">mapping incomplet</text>
+
+  <!-- Flèche adaptateur → enums -->
+  <line x1="567" y1="185" x2="637" y2="185" stroke="#666" stroke-width="2" stroke-dasharray="6,3"/>
+  <polygon points="637,180 650,185 637,190" fill="#666"/>
+
+  <!-- Enums internes -->
+  <rect x="654" y="50" width="230" height="270" rx="10" ry="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2"/>
+  <text x="769" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Enums internes</text>
+  <line x1="667" y1="92" x2="871" y2="92" stroke="#43a047" stroke-width="1"/>
+
+  <text x="676" y="118" font-size="13" fill="#333">PermanentContract</text>
+  <text x="676" y="148" font-size="13" fill="#333">FixedTermContract</text>
+  <text x="676" y="178" font-size="13" fill="#333">Internship</text>
+  <text x="676" y="208" font-size="13" fill="#333">Purchasing</text>
+  <text x="676" y="238" font-size="13" fill="#333">IT</text>
+  <text x="676" y="268" font-size="13" fill="#333">Marketing</text>
+  <text x="676" y="298" font-size="13" fill="#aaa">...</text>
+
+  <!-- Erreur en bas -->
+  <rect x="195" y="390" width="530" height="100" rx="10" ry="10" fill="#ffebee" stroke="#e53935" stroke-width="2"/>
+  <text x="460" y="420" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">Import échoué !</text>
+  <text x="460" y="446" text-anchor="middle" font-size="12" fill="#555" font-family="monospace, Virgil">ERROR: Unknown mapping value "CDI de chantier"</text>
+  <text x="460" y="470" text-anchor="middle" font-size="12" fill="#555" font-family="monospace, Virgil">in ContractTypeAdapter</text>
+
+  <!-- Flèche de l'adaptateur vers l'erreur -->
+  <path d="M462,320 L462,385" stroke="#e53935" stroke-width="2" fill="none"/>
+  <polygon points="457,383 462,396 467,383" fill="#e53935"/>
+
+  <!-- Croix sur la flèche -->
+  <line x1="452" y1="345" x2="472" y2="365" stroke="#e53935" stroke-width="3"/>
+  <line x1="472" y1="345" x2="452" y2="365" stroke="#e53935" stroke-width="3"/>
+</svg>

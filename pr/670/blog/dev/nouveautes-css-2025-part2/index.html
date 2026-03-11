@@ -72,7 +72,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/670/build/app.1832335c.css">
+                    <link rel="stylesheet" href="/elao_/pr/670/build/app.d8b16a2e.css">
         
                         <script src="/elao_/pr/670/build/runtime.19bac6c9.js" defer></script><script src="/elao_/pr/670/build/408.fdfd8cfa.js" defer></script><script src="/elao_/pr/670/build/862.0c910c82.js" defer></script><script src="/elao_/pr/670/build/app.05db16c8.js" defer></script>
 
@@ -340,7 +340,7 @@
                                             <a href="#exemple-en-spa">Exemple en SPA</a>
                                         </li>
                                                                         <li>
-                                            <a href="#exemple-en-mpa-level-2">Exemple en MPA (Level 2)</a>
+                                            <a href="#exemple-en-mpa">Exemple en MPA</a>
                                         </li>
                                                                         <li>
                                             <a href="#support-navigateurs">Support navigateurs</a>
@@ -419,33 +419,44 @@ Cette fois, on monte d'un cran. On parle animation, scroll, et custom properties
 <p>Ces features ne sont plus expérimentales : elles sont là, prêtes à l'emploi, et elles changent radicalement la façon dont on conçoit les interactions en CSS.</p>
 <hr>
 <h2 id="view-transitions-api-des-transitions-de-page-sans-prise-de-tete" class="anchor-title"><a href="#view-transitions-api-des-transitions-de-page-sans-prise-de-tete">View Transitions API : des transitions de page sans prise de tête</a></h2>
-<p>Tu connais cette sensation quand tu navigues sur une SPA et que les pages "popent" sans aucune transition ? Ou quand tu passes 3 jours à câbler Framer Motion pour un simple fondu entre deux vues ?</p>
-<p>La <strong>View Transitions API</strong> règle ça nativement. Elle permet de créer des transitions animées fluides entre différents états ou pages, que ce soit dans une SPA ou une MPA (Multi-Page Application).</p>
+<p>Animer une transition entre deux pages ou deux états d'interface, ça a longtemps rimé avec JavaScript obligatoire — une lib comme Framer Motion, GSAP, ou quelques dizaines de lignes de glue code pour gérer les entrées/sorties.</p>
+<p>La <strong>View Transitions API</strong> change ça. Elle permet de créer des transitions animées fluides entre différents états ou pages — que ce soit dans une application monopage ou un site classique multi-pages — nativement, avec quelques lignes de CSS.</p>
+<p>Le JS reste nécessaire en SPA, mais uniquement pour signaler au navigateur qu'un changement de DOM est sur le point de se produire — c'est lui qui se charge ensuite de capturer les états avant/après et de calculer la transition. Pour un site multi-pages en revanche, même ce minimum de JS disparaît : une ligne de CSS suffit à tout activer.</p>
 <h3 id="exemple-en-spa" class="anchor-title"><a href="#exemple-en-spa">Exemple en SPA</a></h3>
-<pre class="code-multiline language-tsx"><code class="language-tsx" id="3d4bbc3c6d0f8c4db124cfe272e2d1f7"><span class="token keyword">function</span> <span class="token function">navigateTo</span><span class="token punctuation">(</span>newContent<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">startViewTransition</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">querySelector</span><span class="token punctuation">(</span><span class="token string">'#content'</span><span class="token punctuation">)</span><span class="token operator">!</span><span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> newContent<span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<p>Imaginons une galerie : au clic sur une miniature, on affiche l'image en grand. On enveloppe le changement de DOM dans <code class="code-inline" id="46174d8b706c3c6e91b808ecf1809097">startViewTransition()</code>, et on associe un <code class="code-inline" id="5d09bb9d450261df0de06876619cb5d3">view-transition-name</code> aux deux éléments concernés — la miniature et l'image principale.</p>
+<pre class="code-multiline language-html"><code class="language-html" id="7e8aef043bd3db557cd675d2f7599870"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>thumbnail<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>photo.jpg<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>hero<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>photo.jpg<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span></code></pre>
+<pre class="code-multiline language-css"><code class="language-css" id="00e3e96fd62710c16795481f2556f298"><span class="token selector"><span class="token class">.thumbnail</span></span> <span class="token punctuation">{</span>
+  <span class="token property">view-transition-name</span><span class="token punctuation">:</span> selected-image<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.hero</span></span> <span class="token punctuation">{</span>
+  <span class="token property">view-transition-name</span><span class="token punctuation">:</span> selected-image<span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
-<p>Le navigateur capture un "snapshot" de l'état avant, applique ta modification, puis anime la transition entre les deux. Par défaut, tu obtiens un fondu enchaîné. Mais tu peux personnaliser l'animation en CSS :</p>
-<pre class="code-multiline language-css"><code class="language-css" id="aedc2a321d96aca54ca9c778b9ae52f9"><span class="token selector"><span class="token pseudo-element">::view-transition-old</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token property">animation</span><span class="token punctuation">:</span> fade-out <span class="token number">0.3</span><span class="token unit">s</span> ease-out<span class="token punctuation">;</span>
+<pre class="code-multiline language-ts"><code class="language-ts" id="47d75438d35f3fcd0da5fd4d577d92f7">thumbnail<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  document<span class="token punctuation">.</span><span class="token function">startViewTransition</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    hero<span class="token punctuation">.</span>src <span class="token operator">=</span> thumbnail<span class="token punctuation">.</span>src<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>Le navigateur sait que <code class="code-inline" id="158a083418642883a6a6b00e926ccd69">.thumbnail</code> et <code class="code-inline" id="d18bfc9118c309038d70844628c9c6b7">.hero</code> partagent le même <code class="code-inline" id="5d09bb9d450261df0de06876619cb5d3">view-transition-name</code>. Il capture l'état avant (la miniature en bas), applique le changement de DOM, puis anime automatiquement la transition entre les deux positions — un effet "zoom" natif, sans une seule lib.</p>
+<p>Pour une transition plus globale — par exemple faire glisser toute la page sur le côté lors d'un changement de vue — on cible le pseudo-élément <code class="code-inline" id="63a9f0ea7bb98050796b649e85481845">root</code>, qui représente l'ensemble de la page :</p>
+<pre class="code-multiline language-css"><code class="language-css" id="8d9982b36fb1d1f61d8bd1f56acb1fc6"><span class="token selector"><span class="token pseudo-element">::view-transition-old</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> slide-out <span class="token number">0.3</span><span class="token unit">s</span> ease-in forwards<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
 <span class="token selector"><span class="token pseudo-element">::view-transition-new</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
-  <span class="token property">animation</span><span class="token punctuation">:</span> fade-in <span class="token number">0.3</span><span class="token unit">s</span> ease-in<span class="token punctuation">;</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> slide-in <span class="token number">0.3</span><span class="token unit">s</span> ease-out forwards<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token atrule"><span class="token rule">@keyframes</span> fade-out</span> <span class="token punctuation">{</span>
-  <span class="token selector">from</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-  <span class="token selector">to</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> slide-out</span> <span class="token punctuation">{</span>
+  <span class="token selector">to</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">-100</span><span class="token unit">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token atrule"><span class="token rule">@keyframes</span> fade-in</span> <span class="token punctuation">{</span>
-  <span class="token selector">from</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
-  <span class="token selector">to</span> <span class="token punctuation">{</span> <span class="token property">opacity</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> slide-in</span> <span class="token punctuation">{</span>
+  <span class="token selector">from</span> <span class="token punctuation">{</span> <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token unit">%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre>
-<h3 id="exemple-en-mpa-level-2" class="anchor-title"><a href="#exemple-en-mpa-level-2">Exemple en MPA (Level 2)</a></h3>
+<p>Les deux approches sont complémentaires : <code class="code-inline" id="63a9f0ea7bb98050796b649e85481845">root</code> pour les transitions globales de vue, <code class="code-inline" id="5d09bb9d450261df0de06876619cb5d3">view-transition-name</code> pour animer des éléments spécifiques entre deux états.</p>
+<h3 id="exemple-en-mpa" class="anchor-title"><a href="#exemple-en-mpa">Exemple en MPA</a></h3>
 <p>Pour les sites multi-pages (Astro, PHP, bon vieux HTML…), il suffit d'activer l'opt-in CSS :</p>
 <pre class="code-multiline language-css"><code class="language-css" id="5eed5a0f356e142e0645f0ac119c3e70"><span class="token atrule"><span class="token rule">@view-transition</span></span> <span class="token punctuation">{</span>
   <span class="token property">navigation</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
@@ -522,25 +533,26 @@ Cette fois, on monte d'un cran. On parle animation, scroll, et custom properties
 </div>
 <hr>
 <h2 id="animation-composition-combiner-sans-ecraser" class="anchor-title"><a href="#animation-composition-combiner-sans-ecraser">Animation Composition : combiner sans écraser</a></h2>
-<p>Problème classique : tu as un composant avec un <code class="code-inline" id="e2284138cb5575f070288a72e4322700">transform: translateX(10px)</code> en état par défaut, et tu veux lui ajouter une animation qui fait un <code class="code-inline" id="7f9dc224cc00289e2f417953138a3e83">scale(1.1)</code> au hover. Sauf qu'en CSS, la dernière valeur de <code class="code-inline" id="d825c53d89d9cacb3e034bcb138f3d37">transform</code> écrase la précédente. Ton <code class="code-inline" id="8eba217b8d907865c6f677bf4aad39c4">translateX</code> disparaît.</p>
-<p><strong><code class="code-inline" id="b699b55d986a83e582e02835948df40b">animation-composition</code></strong> résout ça. Elle définit comment plusieurs animations se combinent sur une même propriété, au lieu de se remplacer.</p>
-<pre class="code-multiline language-css"><code class="language-css" id="fbf62aac1294b01235c553d644b9fd96"><span class="token selector"><span class="token class">.badge</span></span> <span class="token punctuation">{</span>
+<p>Problème classique : tu as un composant avec un <code class="code-inline" id="e2284138cb5575f070288a72e4322700">transform: translateX(10px)</code> en état par défaut, et tu veux lui ajouter une animation qui déplace encore plus l'élément. Sauf qu'en CSS, la valeur de l'animation remplace celle de la propriété de base. Ton <code class="code-inline" id="8eba217b8d907865c6f677bf4aad39c4">translateX</code> initial disparaît, remplacé par celui de l'animation.</p>
+<p><strong><code class="code-inline" id="b699b55d986a83e582e02835948df40b">animation-composition</code></strong> résout ça. Elle définit comment la valeur d'une animation se combine avec la valeur de base de la propriété, au lieu de simplement l'écraser.</p>
+<pre class="code-multiline language-css"><code class="language-css" id="0bbb184280424072a5ae959fa3892f69"><span class="token selector"><span class="token class">.badge</span></span> <span class="token punctuation">{</span>
   <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token property">animation</span><span class="token punctuation">:</span> pulse <span class="token number">1</span><span class="token unit">s</span> infinite alternate<span class="token punctuation">;</span>
+  <span class="token property">animation</span><span class="token punctuation">:</span> slide <span class="token number">1</span><span class="token unit">s</span> infinite alternate<span class="token punctuation">;</span>
   <span class="token property">animation-composition</span><span class="token punctuation">:</span> accumulate<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 
-<span class="token atrule"><span class="token rule">@keyframes</span> pulse</span> <span class="token punctuation">{</span>
+<span class="token atrule"><span class="token rule">@keyframes</span> slide</span> <span class="token punctuation">{</span>
   <span class="token selector">to</span> <span class="token punctuation">{</span>
-    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">1.1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span><span class="token number">20</span><span class="token unit">px</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span></code></pre>
-<p>Avec <code class="code-inline" id="66d9114ef7aab53cd1f073f42b93bed1">animation-composition: accumulate</code>, les deux transforms se cumulent : l'élément garde son <code class="code-inline" id="d53f5d889bf053c2a1166065d22db147">translateX(10px)</code> <strong>et</strong> pulse en scale. Sans cette propriété, le <code class="code-inline" id="8eba217b8d907865c6f677bf4aad39c4">translateX</code> serait perdu pendant l'animation.</p>
+<span class="token punctuation">}</span>
+<span class="token comment">/* Résultat : translateX(30px) — combinaison arithmétique */</span></code></pre>
+<p>Avec <code class="code-inline" id="66d9114ef7aab53cd1f073f42b93bed1">animation-composition: accumulate</code>, les valeurs de même type se combinent arithmétiquement : <code class="code-inline" id="d53f5d889bf053c2a1166065d22db147">translateX(10px)</code> + <code class="code-inline" id="fcd4280d177fb47c8265eb9f87945747">translateX(20px)</code> = <code class="code-inline" id="362fa3da8e26ec13fd96f1c9974f8d64">translateX(30px)</code>. Sans cette propriété, l'animation remplacerait la valeur de base et l'élément n'irait qu'à <code class="code-inline" id="fcd4280d177fb47c8265eb9f87945747">translateX(20px)</code>.</p>
 <h3 id="les-trois-modes" class="anchor-title"><a href="#les-trois-modes">Les trois modes</a></h3>
 <ul>
 <li><strong><code class="code-inline" id="9dde360102c103867bd2f45872f1129c">replace</code></strong> (défaut) : la valeur de l'animation remplace celle de la propriété. Comportement classique.</li>
-<li><strong><code class="code-inline" id="34ec78fcc91ffb1e54cd85e4a0924332">add</code></strong> : la valeur de l'animation est ajoutée par-dessus la valeur existante (au niveau de la liste de transforms).</li>
-<li><strong><code class="code-inline" id="62d6c5a12df2e321a80a0cc5f17aa520">accumulate</code></strong> : les valeurs sont combinées arithmétiquement (ex. <code class="code-inline" id="d53f5d889bf053c2a1166065d22db147">translateX(10px)</code> + <code class="code-inline" id="fcd4280d177fb47c8265eb9f87945747">translateX(20px)</code> = <code class="code-inline" id="362fa3da8e26ec13fd96f1c9974f8d64">translateX(30px)</code>).</li>
+<li><strong><code class="code-inline" id="34ec78fcc91ffb1e54cd85e4a0924332">add</code></strong> : la valeur de l'animation est ajoutée par-dessus la valeur existante (au niveau de la liste de transforms). C'est le mode à utiliser quand les fonctions sont de types différents — par exemple ajouter un <code class="code-inline" id="7f9dc224cc00289e2f417953138a3e83">scale(1.1)</code> en plus d'un <code class="code-inline" id="8eba217b8d907865c6f677bf4aad39c4">translateX</code> ou d'un <code class="code-inline" id="6f8c8a49f740bca52653317a42933f8c">rotate</code> déjà défini sur l'élément.</li>
+<li><strong><code class="code-inline" id="62d6c5a12df2e321a80a0cc5f17aa520">accumulate</code></strong> : les valeurs sont combinées arithmétiquement quand les fonctions sont du même type (ex. <code class="code-inline" id="d53f5d889bf053c2a1166065d22db147">translateX(10px)</code> + <code class="code-inline" id="fcd4280d177fb47c8265eb9f87945747">translateX(20px)</code> = <code class="code-inline" id="362fa3da8e26ec13fd96f1c9974f8d64">translateX(30px)</code>).</li>
 </ul>
 <p>Très utile dès qu'on travaille avec des composants réutilisables qui ont des transforms de base et qu'on veut animer sans tout casser.</p>
 <h3 id="support-navigateurs" class="anchor-title"><a href="#support-navigateurs">Support navigateurs</a></h3>
@@ -616,9 +628,7 @@ Cette fois, on monte d'un cran. On parle animation, scroll, et custom properties
 </div>
 <hr>
 <h2 id="conclusion" class="anchor-title"><a href="#conclusion">Conclusion</a></h2>
-<p>Avec les View Transitions, les Scroll-Driven Animations, <code class="code-inline" id="b699b55d986a83e582e02835948df40b">animation-composition</code> et <code class="code-inline" id="8fc855cd8e175c03c697b6cdeaa9d063">@property</code>, CSS ne se contente plus de "mettre en forme" : il <strong>anime, compose et structure</strong> les interactions de manière native.</p>
-<p>Le plus frappant, c'est à quel point ces features réduisent la dépendance au JavaScript pour des cas d'usage qui, jusqu'ici, nécessitaient systématiquement des libs tierces. Moins de JS, moins de bundle, de meilleures perfs, et un code plus maintenable.</p>
-<p>Ces fonctionnalités sont supportées (ou en passe de l'être) sur tous les navigateurs majeurs. Le CSS n'a pas fini de se renouveler !</p>
+<p>Si le premier article montrait que CSS pouvait désormais gérer la structure et la logique de sélection sans JS, celui-ci montre qu'il peut aussi prendre en charge l'animation et l'interactivité. La tendance est claire : CSS devient de plus en plus autonome. Et franchement, c'est pas pour déplaire.</p>
                                                                 </main>
             <aside class="article-content__aside">
                             </aside>

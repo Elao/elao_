@@ -94,7 +94,7 @@ Claude Code suit ces instructions comme un script, mais avec la capacité de s'a
 
 ## Approche 2 : batch parallèle
 
-J'ai naturellement décrit à Claude Code mon souhait de paralléliser les imports via des sous-agents, en limitant le nombre d'agents simultanés pour ne pas avoir trop de processus PHP qui tournent en même temps. Chaque sous-agent devait exécuter un import, extraire les erreurs de mapping et les remonter à l'agent principal qui se chargerait de modifier le code.
+J'ai naturellement décrit à Claude Code mon souhait de paralléliser les imports via des [sous-agents](./sub-agents-claude-code.md), en limitant le nombre d'agents simultanés pour ne pas avoir trop de processus PHP qui tournent en même temps. Chaque sous-agent devait exécuter un import, extraire les erreurs de mapping et les remonter à l'agent principal qui se chargerait de modifier le code.
 
 Claude Code m'a tout de suite proposé cette approche par batch : découper les imports en lots et traiter chaque lot en parallèle via l'outil `Task` (renommé `Agent` depuis la version 2.1.63 de Claude Code).
 

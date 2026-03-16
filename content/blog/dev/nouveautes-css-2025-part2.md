@@ -25,43 +25,64 @@ Ces features ne sont plus expérimentales : elles sont là, prêtes à l'emploi,
 
 ## View Transitions API : des transitions de page sans prise de tête
 
-Tu connais cette sensation quand tu navigues sur une SPA et que les pages "popent" sans aucune transition ? Ou quand tu passes 3 jours à câbler Framer Motion pour un simple fondu entre deux vues ?
+Animer une transition entre deux pages ou deux états d'interface, ça a longtemps rimé avec JavaScript obligatoire — une lib comme Framer Motion, GSAP, ou quelques dizaines de lignes de glue code pour gérer les entrées/sorties.
 
-La **View Transitions API** règle ça nativement. Elle permet de créer des transitions animées fluides entre différents états ou pages, que ce soit dans une SPA ou une MPA (Multi-Page Application).
+La **View Transitions API** change ça. Elle permet de créer des transitions animées fluides entre différents états ou pages — que ce soit dans une application monopage ou un site classique multi-pages — nativement, avec quelques lignes de CSS.
+
+Le JS reste nécessaire en SPA, mais uniquement pour signaler au navigateur qu'un changement de DOM est sur le point de se produire — c'est lui qui se charge ensuite de capturer les états avant/après et de calculer la transition. Pour un site multi-pages en revanche, même ce minimum de JS disparaît : une ligne de CSS suffit à tout activer.
 
 ### Exemple en SPA
 
-```tsx
-function navigateTo(newContent: string) {
-  document.startViewTransition(() => {
-    document.querySelector('#content')!.innerHTML = newContent;
-  });
+Imaginons une galerie : au clic sur une miniature, on affiche l'image en grand. On enveloppe le changement de DOM dans `startViewTransition()`, et on associe un `view-transition-name` aux deux éléments concernés — la miniature et l'image principale.
+
+```html
+<img class="thumbnail" src="photo.jpg" />
+<img class="hero" src="photo.jpg" />
+```
+
+```css
+.thumbnail {
+  view-transition-name: selected-image;
+}
+
+.hero {
+  view-transition-name: selected-image;
 }
 ```
 
-Le navigateur capture un "snapshot" de l'état avant, applique ta modification, puis anime la transition entre les deux. Par défaut, tu obtiens un fondu enchaîné. Mais tu peux personnaliser l'animation en CSS :
+```ts
+thumbnail.addEventListener('click', () => {
+  document.startViewTransition(() => {
+    hero.src = thumbnail.src;
+  });
+});
+```
+
+Le navigateur sait que `.thumbnail` et `.hero` partagent le même `view-transition-name`. Il capture l'état avant (la miniature en bas), applique le changement de DOM, puis anime automatiquement la transition entre les deux positions — un effet "zoom" natif, sans une seule lib.
+
+Pour une transition plus globale — par exemple faire glisser toute la page sur le côté lors d'un changement de vue — on cible le pseudo-élément `root`, qui représente l'ensemble de la page :
 
 ```css
 ::view-transition-old(root) {
-  animation: fade-out 0.3s ease-out;
+  animation: slide-out 0.3s ease-in forwards;
 }
 
 ::view-transition-new(root) {
-  animation: fade-in 0.3s ease-in;
+  animation: slide-in 0.3s ease-out forwards;
 }
 
-@keyframes fade-out {
-  from { opacity: 1; }
-  to { opacity: 0; }
+@keyframes slide-out {
+  to { transform: translateX(-100%); }
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes slide-in {
+  from { transform: translateX(100%); }
 }
 ```
 
-### Exemple en MPA (Level 2)
+Les deux approches sont complémentaires : `root` pour les transitions globales de vue, `view-transition-name` pour animer des éléments spécifiques entre deux états.
+
+### Exemple en MPA
 
 Pour les sites multi-pages (Astro, PHP, bon vieux HTML…), il suffit d'activer l'opt-in CSS :
 
@@ -159,31 +180,32 @@ Résultat : un effet de "reveal" fluide, sans une seule ligne de JS, et performa
 
 ## Animation Composition : combiner sans écraser
 
-Problème classique : tu as un composant avec un `transform: translateX(10px)` en état par défaut, et tu veux lui ajouter une animation qui fait un `scale(1.1)` au hover. Sauf qu'en CSS, la dernière valeur de `transform` écrase la précédente. Ton `translateX` disparaît.
+Problème classique : tu as un composant avec un `transform: translateX(10px)` en état par défaut, et tu veux lui ajouter une animation qui déplace encore plus l'élément. Sauf qu'en CSS, la valeur de l'animation remplace celle de la propriété de base. Ton `translateX` initial disparaît, remplacé par celui de l'animation.
 
-**`animation-composition`** résout ça. Elle définit comment plusieurs animations se combinent sur une même propriété, au lieu de se remplacer.
+**`animation-composition`** résout ça. Elle définit comment la valeur d'une animation se combine avec la valeur de base de la propriété, au lieu de simplement l'écraser.
 
 ```css
 .badge {
   transform: translateX(10px);
-  animation: pulse 1s infinite alternate;
+  animation: slide 1s infinite alternate;
   animation-composition: accumulate;
 }
 
-@keyframes pulse {
+@keyframes slide {
   to {
-    transform: scale(1.1);
+    transform: translateX(20px);
   }
 }
+/* Résultat : translateX(30px) — combinaison arithmétique */
 ```
 
-Avec `animation-composition: accumulate`, les deux transforms se cumulent : l'élément garde son `translateX(10px)` **et** pulse en scale. Sans cette propriété, le `translateX` serait perdu pendant l'animation.
+Avec `animation-composition: accumulate`, les valeurs de même type se combinent arithmétiquement : `translateX(10px)` + `translateX(20px)` = `translateX(30px)`. Sans cette propriété, l'animation remplacerait la valeur de base et l'élément n'irait qu'à `translateX(20px)`.
 
 ### Les trois modes
 
 - **`replace`** (défaut) : la valeur de l'animation remplace celle de la propriété. Comportement classique.
-- **`add`** : la valeur de l'animation est ajoutée par-dessus la valeur existante (au niveau de la liste de transforms).
-- **`accumulate`** : les valeurs sont combinées arithmétiquement (ex. `translateX(10px)` + `translateX(20px)` = `translateX(30px)`).
+- **`add`** : la valeur de l'animation est ajoutée par-dessus la valeur existante (au niveau de la liste de transforms). C'est le mode à utiliser quand les fonctions sont de types différents — par exemple ajouter un `scale(1.1)` en plus d'un `translateX` ou d'un `rotate` déjà défini sur l'élément.
+- **`accumulate`** : les valeurs sont combinées arithmétiquement quand les fonctions sont du même type (ex. `translateX(10px)` + `translateX(20px)` = `translateX(30px)`).
 
 Très utile dès qu'on travaille avec des composants réutilisables qui ont des transforms de base et qu'on veut animer sans tout casser.
 
@@ -271,8 +293,4 @@ La transition entre les deux couleurs est interpolée par le navigateur, comme n
 
 ## Conclusion
 
-Avec les View Transitions, les Scroll-Driven Animations, `animation-composition` et `@property`, CSS ne se contente plus de "mettre en forme" : il **anime, compose et structure** les interactions de manière native.
-
-Le plus frappant, c'est à quel point ces features réduisent la dépendance au JavaScript pour des cas d'usage qui, jusqu'ici, nécessitaient systématiquement des libs tierces. Moins de JS, moins de bundle, de meilleures perfs, et un code plus maintenable.
-
-Ces fonctionnalités sont supportées (ou en passe de l'être) sur tous les navigateurs majeurs. Le CSS n'a pas fini de se renouveler !
+Si le premier article montrait que CSS pouvait désormais gérer la structure et la logique de sélection sans JS, celui-ci montre qu'il peut aussi prendre en charge l'animation et l'interactivité. La tendance est claire : CSS devient de plus en plus autonome. Et franchement, c'est pas pour déplaire.

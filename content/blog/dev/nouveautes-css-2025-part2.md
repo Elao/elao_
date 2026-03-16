@@ -9,7 +9,7 @@ description: >
     View Transitions, Scroll-Driven Animations, animation-composition, @property…
     Découvrez les fonctionnalités CSS modernes qui transforment la façon d'animer et de structurer les interactions — sans JavaScript.
 
-thumbnail:          content/images/blog/2026/dev/nouveautes-css-2025/thumbnail.jpg
+thumbnail:          content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part2.png
 #banner:            ~ # Uniquement si différent de la miniature (thumbnail)
 tags:               [css, frontend, animation, design-system]
 authors:            [pmoreau]

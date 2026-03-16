@@ -31,3 +31,7 @@ yarn-error.log
 ###> glide ###
 /public/resized
 ###< glide ###
+
+###> claude code ###
+.claude/settings.local.json
+###< claude code ###

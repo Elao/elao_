@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Blog Elao - Les articles de Océane, </title>
+        <description>Découvrez les articles techniques (ou non) rédigés par Océane de l&#039;équipe Elao</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/680/blog/auteur/ogandillon</link>
+        <pubDate>Mon, 30 Mar 2026 13:33:22 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/680/apple-touch-icon.png</url>
+            <title>Blog Elao - Les articles de Océane, </title>
+            <link>https://elao.github.io/elao_/pr/680/blog/auteur/ogandillon</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/680/blog/auteur/ogandillon/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</title>
+                <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Chez Elao, chaque membre de l&#039;équipe choisit son rythme de travail grâce aux cycles. Après un an de pratique, on vous partage ce qui fonctionne, ce qu&#039;on a dû ajuster et les clés pour que la flexibilité reste un vrai levier. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/680/blog/elao/cycles-de-travail-et-flexibilite</guid>
+                <link>https://elao.github.io/elao_/pr/680/blog/elao/cycles-de-travail-et-flexibilite</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/680/%2E%2E/../resized/content/images/blog/2026/work-cycle/work-cycle.jpg/ba4b78a6dfbcd617a7cf6582cca9e4eb.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>flexibilite</category>
+                                    <category>organisation</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 2] Pédagogie, curiosité et humilité : des nouvelles clés pour s’épanouir chez Elao</title>
+                <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ On a posé la question aux équipes des soft skills qui comptent pour eux et voici leurs réponses… ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/680/blog/elao/soft-skills/soft-skills-episode-2</guid>
+                <link>https://elao.github.io/elao_/pr/680/blog/elao/soft-skills/soft-skills-episode-2</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/680/%2E%2E/../resized/content/images/blog/2026/soft-skills/soft-skills-episode-2.jpg/d22744e13c1485794ad167bbfab6384a.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 2] Pédagogie, curiosité et humilité : des nouvelles clés pour s’épanouir chez Elao</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>soft-skills</category>
+                                            </item>
+                    <item>
+                <title>[Épisode 1] Autonomie &amp; esprit d’équipe, deux clés pour s’épanouir chez Elao</title>
+                <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ On a posé la question aux équipes des soft-skills qui comptent pour eux et voici leurs réponses… ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/680/blog/elao/soft-skills/soft-skills-episode-1</guid>
+                <link>https://elao.github.io/elao_/pr/680/blog/elao/soft-skills/soft-skills-episode-1</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/680/%2E%2E/../resized/content/images/blog/2026/soft-skills/soft-skills-episode-1.jpg/f074e5246ebc2cfbbcbf83ba0d96672b.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">[Épisode 1] Autonomie &amp; esprit d’équipe, deux clés pour s’épanouir chez Elao</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>soft-skills</category>
+                                            </item>
+                    <item>
+                <title>Océane, office manager chez Elao depuis 1 an</title>
+                <pubDate>Thu, 02 Nov 2023 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[  ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/680/blog/elao/oceane-office-manager</guid>
+                <link>https://elao.github.io/elao_/pr/680/blog/elao/oceane-office-manager</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/680/%2E%2E/../resized/content/images/blog/2023/itw-oceane/ogandillon-banner.jpg/186d83be7cc701eb70fbcf887f89505f.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Océane, office manager chez Elao depuis 1 an</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                    <category>team</category>
+                                            </item>
+            </channel>
+</rss>

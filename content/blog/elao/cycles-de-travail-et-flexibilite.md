@@ -2,7 +2,7 @@
 title: 'Cycles de travail : la flexibilité qui marche… à condition de poser un cadre'
 date: '2026-03-30'
 lastModified: ~
-description: "Chez Elao, chaque membre de l'équipe choisit son rythme de travail grâce aux cycles. Après un an de pratique, on vous partage ce qui fonctionne, ce qu'on a dû ajuster et les clés pour que la flexibilité reste un vrai levier."
+description: "Chez Elao, chaque membre de l'équipe choisit son rythme de travail grâce aux cycles. On vous partage ce qui fonctionne, ce qu'on a dû ajuster et les clés pour que la flexibilité reste un vrai levier."
 authors: [ mzelboch, ogandillon ]
 tableOfContent: false
 tags: [ rh, flexibilité, organisation ]

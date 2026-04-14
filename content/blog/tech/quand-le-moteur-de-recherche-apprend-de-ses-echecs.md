@@ -19,9 +19,9 @@ Notre objectif était de réduire cet écart de manière progressive, sans deman
 
 ## La recherche sémantique comme point de départ
 
-Pour combler cet écart de vocabulaire, nous avons mis en place un moteur de recherche sémantique. Contrairement à une recherche classique qui compare des mots, la recherche sémantique compare des **sens**. Concrètement, chaque texte (requête utilisateur ou définition du lexique) est transformé en une représentation mathématique appelée *embedding* (un vecteur numérique) par un LLM. Deux phrases qui expriment la même idée se retrouvent proches dans cet espace, même si elles n'utilisent pas les mêmes mots.
+Pour combler cet écart de vocabulaire, nous avons mis en place un moteur de recherche sémantique. Contrairement à une recherche classique qui compare des mots, la recherche sémantique compare des **sens**. Concrètement, chaque texte (requête utilisateur ou définition du lexique) est transformé en une représentation mathématique appelée *embedding* (un vecteur numérique) par un modèle spécialisé. Deux phrases qui expriment la même idée se retrouvent proches dans cet espace, même si elles n'utilisent pas les mêmes mots.
 
-Le fonctionnement se décompose en trois étapes. L'utilisateur saisit sa recherche, par exemple « faire revenir les oignons ». Cette phrase est d'abord transformée en vecteur par le LLM. Ensuite, ce vecteur est comparé à ceux de toutes les définitions du lexique pour identifier les plus proches. Enfin, une étape de réordonnancement affine les résultats : les 15 meilleurs candidats sont réévalués pour ne retourner que les 5 plus pertinents.
+Le fonctionnement se décompose en trois étapes. L'utilisateur saisit sa recherche, par exemple « faire revenir les oignons ». Cette phrase est d'abord transformée en vecteur par le modèle d'embedding. Ensuite, ce vecteur est comparé à ceux de toutes les définitions du lexique pour identifier les plus proches. Enfin, une étape de réordonnancement affine les résultats : les 15 meilleurs candidats sont réévalués pour ne retourner que les 5 plus pertinents.
 
 ![Pipeline de recherche sémantique en 3 étapes](content/images/blog/2026/recherche-apprend-echecs/pipeline-recherche.svg)
 
@@ -29,11 +29,15 @@ Un point essentiel pour la suite : le vecteur de chaque définition est calculé
 
 ## Capturer les échecs
 
-Pour améliorer le système, il faut d'abord savoir où il échoue. Nous avons mis en place une classification automatique de chaque recherche en fonction du score de pertinence du meilleur résultat retourné. Trois cas de figure se présentent : la recherche aboutit à un résultat convaincant, et il n'y a rien à faire. Le résultat existe mais avec un score moyen, la recherche est alors considérée comme **incertaine**. Ou bien le score est trop bas et aucun résultat ne semble pertinent, la recherche est **non résolue**.
+Pour améliorer le système, il faut d'abord savoir où il échoue. On classe automatiquement chaque recherche en fonction du score de pertinence du meilleur résultat retourné :
 
-Les recherches incertaines et non résolues sont journalisées automatiquement. Nous ne stockons aucune donnée personnelle : uniquement la requête saisie, le score obtenu, et la source de recherche utilisée. Cette journalisation se fait de manière transparente pour l'utilisateur, sans impact sur son expérience.
+- Le résultat est convaincant : rien à faire.
+- Le score est moyen : la recherche est **incertaine**.
+- Le score est trop bas : la recherche est **non résolue**.
 
-Un point important concerne la déduplication. Si dix utilisateurs cherchent « faire revenir les oignons » sur une semaine, nous ne créons pas dix entrées distinctes. Un mécanisme de déduplication sur la requête normalisée permet d'incrémenter un compteur d'occurrences à chaque doublon. Ce compteur devient un signal de priorisation naturel : les expressions les plus fréquemment recherchées sans succès sont celles qui méritent d'être traitées en priorité, car leur résolution bénéficiera au plus grand nombre d'utilisateurs.
+Les recherches incertaines et non résolues sont journalisées automatiquement. On ne stocke aucune donnée personnelle : uniquement la requête saisie, le score obtenu, et la source de recherche utilisée.
+
+Un point important : la déduplication. Si dix utilisateurs cherchent « faire revenir les oignons » sur une semaine, on ne crée pas dix entrées distinctes. Un mécanisme de déduplication sur la requête normalisée incrémente un compteur d'occurrences à chaque doublon. Ce compteur devient un signal de priorisation naturel : les expressions les plus fréquemment recherchées sans succès sont celles qui méritent d'être traitées en priorité.
 
 ![Boucle d'apprentissage continue en 4 étapes](content/images/blog/2026/recherche-apprend-echecs/boucle-apprentissage.svg)
 
@@ -41,39 +45,59 @@ Ce journal de recherches infructueuses constitue la matière première de la bou
 
 ## Le pipeline nocturne : de la recherche ratée à la suggestion de synonyme
 
-Une fois les recherches infructueuses collectées, il faut les exploiter. Nous avons mis en place un pipeline automatisé qui s'exécute chaque nuit et transforme ces recherches en suggestions de synonymes. Ce pipeline se décompose en six étapes successives.
+Une fois les recherches infructueuses collectées, il faut les exploiter. On a mis en place un pipeline automatisé qui s'exécute chaque nuit et transforme ces recherches en suggestions de synonymes, en six étapes.
 
 ![Pipeline nocturne en 6 étapes](content/images/blog/2026/recherche-apprend-echecs/pipeline-nocturne.svg)
 
-La première étape est le **chargement**. Le pipeline récupère un lot de recherches non résolues, triées par fréquence décroissante. Traiter en priorité les requêtes les plus récurrentes permet de maximiser l'impact de chaque cycle : résoudre une expression cherchée cinquante fois par semaine bénéficie à davantage d'utilisateurs qu'une expression apparue une seule fois.
+### Chargement
 
-Vient ensuite le **filtrage**. Toutes les recherches journalisées ne sont pas exploitables. Certaines sont des fautes de frappe incompréhensibles, d'autres sont complètement hors domaine, comme « météo demain » dans un lexique de techniques culinaires. Un LLM évalue chaque requête et écarte celles qui ne correspondent pas au domaine du lexique. Ce tri évite de gaspiller du temps de traitement sur des impasses.
+Le pipeline récupère un lot de recherches non résolues, triées par fréquence décroissante. Traiter en priorité les requêtes les plus récurrentes permet de maximiser l'impact de chaque cycle : résoudre une expression cherchée cinquante fois par semaine bénéficie à davantage d'utilisateurs qu'une expression apparue une seule fois.
 
-La troisième étape est le **clustering**. Parmi les requêtes restantes, beaucoup sont des variantes d'une même intention. « Faire revenir les oignons », « faire sauter à feu vif » et « cuire dans l'huile sans colorer » expriment des idées proches. Le pipeline regroupe ces variantes en comparant la similarité entre leurs vecteurs respectifs. L'algorithme utilisé est un simple chaînage : chaque requête est comparée au représentant de chaque groupe existant, et si la similarité est suffisante, elle y est rattachée. Un seuil élevé garantit que seules les requêtes réellement similaires sont regroupées. À l'issue de cette étape, une seule suggestion sera générée par groupe, ce qui évite de proposer des doublons aux administrateurs.
+### Filtrage
 
-L'étape suivante est le **matching**. Pour chaque groupe de requêtes, le pipeline identifie la définition du lexique la plus proche en comparant les vecteurs. Un seuil minimal empêche de rattacher une requête à une définition sans rapport réel : si aucune définition n'est suffisamment proche, le groupe est écarté plutôt que de produire une suggestion hasardeuse.
+Toutes les recherches journalisées ne sont pas exploitables. Certaines sont des fautes de frappe incompréhensibles, d'autres sont complètement hors domaine, comme « météo demain » dans un lexique de techniques culinaires. Un LLM évalue chaque requête et écarte celles qui ne correspondent pas au domaine du lexique.
 
-Puis vient la **génération**. Le LLM propose un synonyme concret pour chaque paire groupe-définition retenue. Il produit une sortie structurée comprenant le synonyme lui-même, un score de confiance (de 0 à 100), et un raisonnement expliquant pourquoi ce terme correspond à la définition cible. Le score de confiance et le raisonnement seront ensuite présentés aux administrateurs pour les aider à prendre leur décision.
+### Clustering
 
-Enfin, la **déduplication**. Avant d'enregistrer une suggestion, le pipeline vérifie que le synonyme proposé n'existe pas déjà sur la définition cible. Cela évite de soumettre aux administrateurs des suggestions redondantes avec des synonymes déjà en place.
+Parmi les requêtes restantes, beaucoup sont des variantes d'une même intention. « Faire revenir les oignons », « faire sauter à feu vif » et « cuire dans l'huile sans colorer » expriment des idées proches. Le pipeline regroupe ces variantes en comparant la similarité entre leurs vecteurs respectifs via un algorithme de chaînage simple.
 
-En termes de contraintes d'exécution, le pipeline fonctionne avec un lot limité de requêtes par cycle (quelques dizaines), un budget temps contraint, et un verrouillage qui empêche deux exécutions simultanées. Ces garde-fous garantissent un fonctionnement prévisible et maîtrisé. Sur un cycle typique, un lot de cinquante recherches aboutit à une dizaine de suggestions exploitables après filtrage, clustering et déduplication.
+Un seuil élevé garantit que seules les requêtes réellement similaires sont regroupées. À l'issue de cette étape, une seule suggestion sera générée par groupe, ce qui évite de proposer des doublons aux administrateurs.
+
+### Matching
+
+Pour chaque groupe de requêtes, le pipeline identifie la définition du lexique la plus proche en comparant les vecteurs. Un seuil minimal empêche de rattacher une requête à une définition sans rapport réel : si aucune définition n'est suffisamment proche, le groupe est écarté plutôt que de produire une suggestion hasardeuse.
+
+### Génération
+
+Le LLM propose un synonyme concret pour chaque paire groupe-définition retenue. Il produit une sortie structurée : le synonyme lui-même, un score de confiance (de 0 à 100), et un raisonnement expliquant pourquoi ce terme correspond à la définition cible. Ces éléments seront présentés aux administrateurs pour les aider à prendre leur décision.
+
+### Déduplication
+
+Avant d'enregistrer une suggestion, le pipeline vérifie que le synonyme proposé n'existe pas déjà sur la définition cible. Ça évite de soumettre aux administrateurs des suggestions redondantes.
+
+### Garde-fous
+
+Le pipeline fonctionne avec un lot limité de requêtes par cycle (quelques dizaines), un budget temps contraint, et un verrouillage qui empêche deux exécutions simultanées. En pratique, un lot de cinquante recherches aboutit à une dizaine de suggestions exploitables après filtrage, clustering et déduplication.
 
 ## La supervision humaine : pourquoi l'IA ne décide pas seule
 
-Le pipeline nocturne produit des suggestions, pas des décisions. Chaque synonyme proposé doit passer par une validation humaine avant d'être ajouté au lexique. Ce choix est délibéré : un LLM peut proposer un rapprochement pertinent entre une recherche et une définition, mais il ne dispose pas de l'expertise métier nécessaire pour trancher dans les cas ambigus.
+Le pipeline nocturne produit des suggestions, pas des décisions. Chaque synonyme proposé passe par une validation humaine avant d'être ajouté au lexique. Ce choix est délibéré : un LLM peut proposer un rapprochement pertinent, mais il ne dispose pas de l'expertise métier pour trancher dans les cas ambigus.
 
 Prenons un exemple concret. Un utilisateur recherche « la sauce est trop épaisse ». Le pipeline pourrait suggérer de rattacher cette expression à la technique **Réduire**, alors qu'un expert culinaire sait que la bonne cible est **Détendre**, c'est-à-dire l'opération inverse, qui consiste à ajouter un liquide pour fluidifier une préparation. Ce type de nuance ne peut être résolu que par quelqu'un qui maîtrise le domaine.
 
-L'interface de validation présente à l'administrateur toutes les informations nécessaires pour prendre sa décision rapidement : la requête utilisateur d'origine (ou le cluster de requêtes regroupées), le synonyme suggéré, la définition cible avec sa description, le score de confiance du LLM, et le raisonnement qui a conduit à cette suggestion. L'objectif est de permettre une décision en quelques secondes, sans avoir à aller chercher du contexte ailleurs.
+L'interface de validation présente à l'administrateur tout ce dont il a besoin pour décider rapidement : la requête utilisateur d'origine (ou le cluster de requêtes regroupées), le synonyme suggéré, la définition cible avec sa description, le score de confiance du LLM, et le raisonnement derrière la suggestion. L'objectif : une décision en quelques secondes, sans aller chercher du contexte ailleurs.
 
-Trois actions sont possibles. **Valider** : le synonyme est ajouté à la définition, et l'embedding est automatiquement recalculé. **Rejeter** : la suggestion est écartée, avec possibilité d'indiquer un motif, ce qui permettra à terme d'améliorer le filtrage du pipeline. **Réassigner** : le synonyme est pertinent, mais rattaché à la mauvaise définition. L'administrateur peut le rediriger vers la bonne cible sans avoir à ressaisir quoi que ce soit.
+Trois actions sont possibles :
 
-Le rejet n'est pas définitif. Si le même besoin remonte régulièrement via de nouvelles recherches infructueuses, le pipeline finira par générer une nouvelle suggestion, potentiellement plus pertinente que la précédente. Le système est conçu pour être insistant sans être bloquant : il continue de signaler les lacunes tant qu'elles ne sont pas comblées.
+- **Valider** : le synonyme est ajouté à la définition, et l'embedding est automatiquement recalculé.
+- **Rejeter** : la suggestion est écartée, avec possibilité d'indiquer un motif (ce qui permettra à terme d'améliorer le filtrage du pipeline).
+- **Réassigner** : le synonyme est pertinent, mais rattaché à la mauvaise définition. L'administrateur le redirige vers la bonne cible sans avoir à ressaisir quoi que ce soit.
+
+Le rejet n'est pas définitif. Si le même besoin remonte régulièrement, le pipeline finira par générer une nouvelle suggestion, potentiellement plus pertinente. Le système est conçu pour être insistant sans être bloquant.
 
 ## Le cercle vertueux : comment le synonyme améliore la recherche
 
-Lorsqu'un administrateur valide une suggestion, plusieurs choses se produisent de manière transparente. Le synonyme est ajouté à la définition dans une table dédiée. Cette insertion déclenche automatiquement un marquage de l'embedding existant comme périmé. L'embedding est alors recalculé en intégrant le nouveau synonyme dans le texte concaténé (nom + description + synonymes). Il n'y a aucune action manuelle supplémentaire à effectuer : la chaîne est entièrement automatisée.
+Quand un administrateur valide une suggestion, tout s'enchaîne automatiquement. Le synonyme est ajouté à la définition, l'embedding existant est marqué comme périmé, puis recalculé en intégrant le nouveau synonyme dans le texte concaténé (nom + description + synonymes). Aucune action manuelle supplémentaire.
 
 Reprenons notre exemple fil rouge. Avant enrichissement, un utilisateur qui tape « faire revenir les oignons » obtient un score trop bas. Aucun résultat convaincant n'est retourné. La recherche est journalisée, passe par le pipeline nocturne, et une suggestion de synonyme « faire revenir » est générée pour la technique **Suer**. L'administrateur valide. À partir de ce moment, la même recherche retourne **Suer** parmi les premiers résultats. L'écart entre le vocabulaire de l'utilisateur et celui du lexique a été réduit d'un cran.
 
@@ -81,18 +105,12 @@ Reprenons notre exemple fil rouge. Avant enrichissement, un utilisateur qui tape
 
 Ce qui rend ce mécanisme puissant, c'est son caractère cumulatif. Chaque synonyme validé ne corrige pas seulement la recherche qui l'a généré : il améliore également toutes les recherches sémantiquement proches. Ajouter « faire revenir » sur **Suer** rapprochera également des requêtes comme « revenir à feu vif » ou « faire sauter sans colorer », même si ces formulations exactes n'ont jamais été soumises. Le vecteur enrichi capte un champ sémantique plus large que le seul synonyme ajouté.
 
-## Enrichissement manuel en complément
-
-Le pipeline nocturne n'est pas le seul canal d'enrichissement du lexique. Les experts métier peuvent ajouter des synonymes directement depuis l'interface d'administration, sans attendre qu'une recherche infructueuse déclenche le processus. C'est particulièrement utile lorsqu'un expert connaît d'avance les formulations courantes pour un terme. Par exemple, il sait que les cuisiniers parlent de « mouiller » pour désigner la technique **Déglacer**, ou de « faire tomber » pour **Compoter**.
-
-Le mécanisme sous-jacent est strictement le même que pour les synonymes issus du pipeline : une détection de doublons empêche d'ajouter un synonyme déjà existant, et l'embedding de la définition est automatiquement recalculé après chaque ajout ou suppression. Il n'y a pas de distinction entre un synonyme ajouté manuellement et un synonyme issu d'une suggestion validée : les deux alimentent la même mécanique et produisent le même effet sur la qualité de recherche.
-
-Ces deux canaux sont complémentaires. Le pipeline nocturne détecte des lacunes que les administrateurs n'auraient pas anticipées, en s'appuyant sur le comportement réel des utilisateurs. L'enrichissement manuel permet d'aller plus vite sur des cas évidents, sans attendre qu'un volume suffisant de recherches infructueuses ne s'accumule. Ensemble, ils garantissent que le lexique s'enrichit à la fois par l'usage et par l'expertise.
+Le pipeline nocturne n'est pas le seul canal d'enrichissement. Les experts métier peuvent aussi ajouter des synonymes directement depuis l'interface d'administration, quand ils connaissent d'avance les formulations courantes pour un terme. Par exemple, un expert sait que les cuisiniers parlent de « mouiller » pour désigner la technique **Déglacer**. Les deux canaux sont complémentaires : le pipeline détecte les lacunes à partir du comportement réel des utilisateurs, l'enrichissement manuel permet d'aller plus vite sur les cas évidents.
 
 ## Ce qu'on retient
 
-Pour un corpus de quelques centaines de définitions, les coûts d'exploitation de l'ensemble du système restent modestes, de l'ordre de quelques centimes par recherche et de moins d'un dollar par nuit pour le pipeline de génération de suggestions. Le ratio entre l'investissement et la valeur produite est très favorable : chaque cycle d'analyse améliore durablement l'expérience de recherche pour l'ensemble des utilisateurs.
+Pour un corpus de quelques centaines de définitions, les coûts d'exploitation restent modestes : quelques centimes par recherche, moins d'un dollar par nuit pour le pipeline de suggestions. Le ratio entre l'investissement et la valeur produite est très favorable.
 
-L'architecture décrite dans cet article n'est pas spécifique à un lexique culinaire. Elle s'applique à tout domaine où un référentiel métier spécialisé est confronté à des utilisateurs qui n'en maîtrisent pas le vocabulaire : le juridique, le médical, l'industrie, ou tout autre secteur disposant d'une terminologie normalisée. Les briques techniques (embeddings, LLM, base vectorielle) sont interchangeables ; ce qui compte, c'est l'assemblage en une boucle de feedback continue.
+Cette architecture n'est pas spécifique à un lexique culinaire. Elle s'applique à tout domaine où un référentiel métier spécialisé est confronté à des utilisateurs qui n'en maîtrisent pas le vocabulaire : juridique, médical, industrie… Les briques techniques (embeddings, LLM, base vectorielle) sont interchangeables ; ce qui compte, c'est l'assemblage en boucle de feedback continue.
 
-Le vrai différenciateur de cette approche n'est pas le LLM utilisé ni le modèle d'embedding choisi. C'est la boucle elle-même : capturer automatiquement les échecs, les analyser pour en extraire des suggestions concrètes, les soumettre à une validation humaine, et enrichir l'index à chaque validation. Le modèle d'IA changera, les seuils seront ajustés. Mais la boucle continuera de tourner, et chaque recherche infructueuse rendra le système un peu plus intelligent.
+Pour reproduire cette approche, les ingrédients sont relativement accessibles : un corpus structuré avec des définitions, un modèle d'embedding pour la recherche vectorielle, un LLM pour le filtrage et la génération de suggestions, et un pipeline batch pour orchestrer le tout. Le vrai travail n'est pas technique : c'est de mettre en place la boucle de capture des échecs et de s'assurer qu'un humain reste dans la boucle de validation.

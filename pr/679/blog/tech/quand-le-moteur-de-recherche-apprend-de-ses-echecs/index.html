@@ -325,11 +325,7 @@
 
                     <ol class="table-of-content" data-aos="fade-up">
                                     <li class="table-of-content__item">
-                        <a href="#pourquoi-la-recherche-classique-ne-suffit-pas">Pourquoi la recherche classique ne suffit pas</a>
-
-                                            </li>
-                                    <li class="table-of-content__item">
-                        <a href="#la-recherche-semantique-comme-reponse">La recherche sémantique comme réponse</a>
+                        <a href="#la-recherche-semantique-comme-point-de-depart">La recherche sémantique comme point de départ</a>
 
                                             </li>
                                     <li class="table-of-content__item">
@@ -367,11 +363,7 @@
 <p>Le problème auquel nous avons été confrontés est simple à formuler : les utilisateurs ne tapent presque jamais le bon mot. Un cuisinier qui cherche « faire revenir les oignons » s'attend à trouver un résultat. Pourtant, la technique indexée dans le lexique s'appelle <strong>Suer</strong>. De la même manière, « la sauce a des grumeaux » ne retourne rien, alors que les termes <strong>Chinoiser</strong> ou <strong>Passer au tamis</strong> figurent dans le référentiel.</p>
 <p>Ce n'est pas un bug. Il s'agit d'un écart structurel entre le vocabulaire courant des utilisateurs et la terminologie métier du lexique. Les cuisiniers décrivent ce qu'ils voient ou ce qu'ils font, avec leurs propres mots. Le lexique, lui, utilise des termes techniques normalisés. Ce type d'écart se retrouve dans tous les domaines spécialisés (juridique, médical, industrie…) dès qu'un référentiel métier est confronté à des utilisateurs qui n'en maîtrisent pas le vocabulaire.</p>
 <p>Notre objectif était de réduire cet écart de manière progressive, sans demander aux utilisateurs de changer leurs habitudes, et sans imposer une charge de maintenance permanente aux administrateurs du lexique.</p>
-<h2 id="pourquoi-la-recherche-classique-ne-suffit-pas" class="anchor-title"><a href="#pourquoi-la-recherche-classique-ne-suffit-pas">Pourquoi la recherche classique ne suffit pas</a></h2>
-<p>La première approche que nous avons envisagée était une recherche full-text classique, telle que celle proposée nativement par PostgreSQL. Ce type de moteur fonctionne par correspondance de mots : il découpe la requête en termes, applique éventuellement un stemming (réduction des mots à leur racine), puis cherche des correspondances dans les textes indexés.</p>
-<p>Le problème est que cette approche repose sur un prérequis implicite : il faut que la requête et le document partagent au moins quelques mots en commun. Or dans notre cas, « faire revenir les oignons » ne contient aucun mot présent dans la définition de <strong>Suer</strong>, dont la définition est « technique consistant à chauffer un aliment dans un corps gras à feu doux, sans coloration ». Le moteur ne peut tout simplement pas faire le lien.</p>
-<p>Il nous fallait un moteur capable de comprendre le sens d'une phrase, et non pas seulement les mots qui la composent.</p>
-<h2 id="la-recherche-semantique-comme-reponse" class="anchor-title"><a href="#la-recherche-semantique-comme-reponse">La recherche sémantique comme réponse</a></h2>
+<h2 id="la-recherche-semantique-comme-point-de-depart" class="anchor-title"><a href="#la-recherche-semantique-comme-point-de-depart">La recherche sémantique comme point de départ</a></h2>
 <p>Pour combler cet écart de vocabulaire, nous avons mis en place un moteur de recherche sémantique. Contrairement à une recherche classique qui compare des mots, la recherche sémantique compare des <strong>sens</strong>. Concrètement, chaque texte (requête utilisateur ou définition du lexique) est transformé en une représentation mathématique appelée <em>embedding</em> (un vecteur numérique) par un LLM. Deux phrases qui expriment la même idée se retrouvent proches dans cet espace, même si elles n'utilisent pas les mêmes mots.</p>
 <p>Le fonctionnement se décompose en trois étapes. L'utilisateur saisit sa recherche, par exemple « faire revenir les oignons ». Cette phrase est d'abord transformée en vecteur par le LLM. Ensuite, ce vecteur est comparé à ceux de toutes les définitions du lexique pour identifier les plus proches. Enfin, une étape de réordonnancement affine les résultats : les 15 meilleurs candidats sont réévalués pour ne retourner que les 5 plus pertinents.</p>
 <img src="/elao_/pr/679/%2E%2E/../resized/content/images/blog/2026/recherche-apprend-echecs/pipeline-recherche.svg/d836971452ffaeec94755bb68564047e.svg" alt="Pipeline de recherche sémantique en 3 étapes" title="Pipeline de recherche sémantique en 3 étapes" id="pipeline-de-recherche-semantique-en-3-etapes">

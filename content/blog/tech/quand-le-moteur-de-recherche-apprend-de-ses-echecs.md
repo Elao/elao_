@@ -17,15 +17,7 @@ Ce n'est pas un bug. Il s'agit d'un écart structurel entre le vocabulaire coura
 
 Notre objectif était de réduire cet écart de manière progressive, sans demander aux utilisateurs de changer leurs habitudes, et sans imposer une charge de maintenance permanente aux administrateurs du lexique.
 
-## Pourquoi la recherche classique ne suffit pas
-
-La première approche que nous avons envisagée était une recherche full-text classique, telle que celle proposée nativement par PostgreSQL. Ce type de moteur fonctionne par correspondance de mots : il découpe la requête en termes, applique éventuellement un stemming (réduction des mots à leur racine), puis cherche des correspondances dans les textes indexés.
-
-Le problème est que cette approche repose sur un prérequis implicite : il faut que la requête et le document partagent au moins quelques mots en commun. Or dans notre cas, « faire revenir les oignons » ne contient aucun mot présent dans la définition de **Suer**, dont la définition est « technique consistant à chauffer un aliment dans un corps gras à feu doux, sans coloration ». Le moteur ne peut tout simplement pas faire le lien.
-
-Il nous fallait un moteur capable de comprendre le sens d'une phrase, et non pas seulement les mots qui la composent.
-
-## La recherche sémantique comme réponse
+## La recherche sémantique comme point de départ
 
 Pour combler cet écart de vocabulaire, nous avons mis en place un moteur de recherche sémantique. Contrairement à une recherche classique qui compare des mots, la recherche sémantique compare des **sens**. Concrètement, chaque texte (requête utilisateur ou définition du lexique) est transformé en une représentation mathématique appelée *embedding* (un vecteur numérique) par un LLM. Deux phrases qui expriment la même idée se retrouvent proches dans cet espace, même si elles n'utilisent pas les mêmes mots.
 

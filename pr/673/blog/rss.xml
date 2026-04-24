@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/673/blog</link>
-        <pubDate>Mon, 16 Mar 2026 15:34:10 +0000</pubDate>
+        <pubDate>Fri, 24 Apr 2026 14:46:33 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/673/apple-touch-icon.png</url>
@@ -17,6 +17,64 @@
             <link>https://elao.github.io/elao_/pr/673/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/pr/673/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Les sub-agents Claude Code : isoler, déléguer, paralléliser</title>
+                <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comprendre les sub-agents de Claude Code, leurs cas d&#039;usage et comment ils permettent d&#039;optimiser vos workflows : isolation de contexte, choix du modèle et parallélisation. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/673/blog/ia/sub-agents-claude-code</guid>
+                <link>https://elao.github.io/elao_/pr/673/blog/ia/sub-agents-claude-code</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/thumbnails/sub-agents-claude-code.jpg/50405465fa31c6c7d14aed3da5fcec20.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les sub-agents Claude Code : isoler, déléguer, paralléliser</media:description>
+                                    </media:content>
+                                    <category>claude-code</category>
+                                    <category>ia</category>
+                                    <category>sub-agents</category>
+                                    <category>productivite</category>
+                                            </item>
+                    <item>
+                <title>Les temps ritualisés chez Elao : quand le dialogue devient une culture</title>
+                <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Entretiens de cycles, 1 to 1 RH, rétrospectives, baromètre interne… Découvrez les temps ritualisés qui rythment la vie chez Elao et font du dialogue une véritable culture d&#039;entreprise. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/673/blog/elao/temps-ritualises-dialogue-et-culture</guid>
+                <link>https://elao.github.io/elao_/pr/673/blog/elao/temps-ritualises-dialogue-et-culture</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/2026/rh-rituals/rh-rituals.jpg/049f7c2b6c27ec0957fd9bf8591a3634.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les temps ritualisés chez Elao : quand le dialogue devient une culture</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>dialogue</category>
+                                    <category>organisation</category>
+                                            </item>
+                    <item>
+                <title>Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</title>
+                <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Chez Elao, chaque membre de l&#039;équipe choisit son rythme de travail grâce aux cycles. On vous partage ce qui fonctionne, ce qu&#039;on a dû ajuster et les clés pour que la flexibilité reste un vrai levier. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/673/blog/elao/cycles-de-travail-et-flexibilite</guid>
+                <link>https://elao.github.io/elao_/pr/673/blog/elao/cycles-de-travail-et-flexibilite</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/2026/work-cycle/work-cycle.jpg/ba4b78a6dfbcd617a7cf6582cca9e4eb.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>flexibilite</category>
+                                    <category>organisation</category>
+                                            </item>
                     <item>
                 <title>Animer et structurer intelligemment : 4 fonctionnalités CSS qui changent la donne</title>
                 <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
@@ -27,7 +85,7 @@
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/673/blog/dev/nouveautes-css-2025-part2</guid>
                 <link>https://elao.github.io/elao_/pr/673/blog/dev/nouveautes-css-2025-part2</link>
                 <media:content
-                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail.jpg/9d220d4f4a86a04cb1be20c7a1d5764c.jpg"
+                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part2.png/8e8d57d79f2b56cc3bcb878e3563cfb3.png"
                     width="1200"
                     height="627"
                 >
@@ -40,7 +98,7 @@
                                             </item>
                     <item>
                 <title>Paralléliser des tâches avec Claude Code : comparatif de 4 approches</title>
-                <pubDate>Mon, 16 Mar 2026 15:33:01 +0000</pubDate>
+                <pubDate>Fri, 24 Apr 2026 14:43:01 +0000</pubDate>
                 <description>
                     <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : 
 séquentielle, batch, Agent Teams et Task Worker Pool.
@@ -58,26 +116,6 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                                     <category>claude-code</category>
                                     <category>ia</category>
                                     <category>automatisation</category>
-                                    <category>productivite</category>
-                                            </item>
-                    <item>
-                <title>Les sub-agents Claude Code : isoler, déléguer, paralléliser</title>
-                <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ Comprendre les sub-agents de Claude Code, leurs cas d&#039;usage et comment ils permettent d&#039;optimiser vos workflows : isolation de contexte, choix du modèle et parallélisation. ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/pr/673/blog/ia/sub-agents-claude-code</guid>
-                <link>https://elao.github.io/elao_/pr/673/blog/ia/sub-agents-claude-code</link>
-                <media:content
-                    url="https://elao.github.io/elao_/pr/673/%2E%2E/../resized/content/images/blog/thumbnails/sub-agents-claude-code.jpg/50405465fa31c6c7d14aed3da5fcec20.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Les sub-agents Claude Code : isoler, déléguer, paralléliser</media:description>
-                                    </media:content>
-                                    <category>claude-code</category>
-                                    <category>ia</category>
-                                    <category>sub-agents</category>
                                     <category>productivite</category>
                                             </item>
                     <item>

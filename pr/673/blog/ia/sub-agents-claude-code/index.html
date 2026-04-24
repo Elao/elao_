@@ -45,8 +45,8 @@
     "image": [
         "https://elao.github.io/elao_/pr/673/blog/ia/content/images/blog/thumbnails/sub-agents-claude-code.jpg"
     ],
-    "datePublished": "2026-03-11T00:00:00+00:00",
-    "dateModified": "2026-03-11T00:00:00+00:00",
+    "datePublished": "2026-04-24T00:00:00+00:00",
+    "dateModified": "2026-04-24T00:00:00+00:00",
     "author": [
         {
             "@type": "Person",
@@ -69,7 +69,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/673/build/app.4d504c52.css">
+                    <link rel="stylesheet" href="/elao_/pr/673/build/app.c5f57648.css">
         
                         <script src="/elao_/pr/673/build/runtime.91f216bf.js" defer></script><script src="/elao_/pr/673/build/408.fdfd8cfa.js" defer></script><script src="/elao_/pr/673/build/862.0c910c82.js" defer></script><script src="/elao_/pr/673/build/app.05db16c8.js" defer></script>
 
@@ -303,7 +303,7 @@
                                                     </span>
                     </div>
                                 <div class="article-info__date">
-                    <span>Publication <strong>11 mars 2026</strong></span>
+                    <span>Publication <strong>24 avril 2026</strong></span>
                                                         </div>
             </div>
 
@@ -422,7 +422,7 @@ test command and returns the result (pass/fail + error details).
 
 The main agent (Opus) then analyzes the failures and proposes fixes.</code></pre>
 <h3 id="impact-sur-le-cout-et-la-rapidite" class="anchor-title"><a href="#impact-sur-le-cout-et-la-rapidite">Impact sur le coût et la rapidité</a></h3>
-<p>L'intérêt n'est pas qu'intellectuel — il est aussi économique. Haiku est <strong>significativement moins cher</strong> qu'Opus en consommation de tokens. Si votre workflow lance 10 sub-agents pour des tâches triviales, les faire tourner sur Haiku plutôt qu'Opus peut diviser le coût de ces sous-tâches par un facteur important.</p>
+<p>L'intérêt n'est pas qu'intellectuel — il est aussi économique. Haiku est <strong>significativement moins cher par token</strong> qu'Opus. Si votre workflow lance 10 sub-agents pour des tâches triviales, les faire tourner sur Haiku plutôt qu'Opus peut diviser le coût de ces sous-tâches par un facteur important.</p>
 <p>Côté rapidité, les modèles plus légers ont aussi une <strong>latence plus faible</strong>. Un sub-agent Haiku qui exécute une commande et retourne 3 lignes de résultat sera plus réactif qu'un sub-agent Opus pour la même tâche — ce qui compte particulièrement quand on en lance plusieurs en parallèle.</p>
 <h2 id="paralleliser-des-taches" class="anchor-title"><a href="#paralleliser-des-taches">Paralléliser des tâches</a></h2>
 <p>Par défaut, Claude Code exécute tout séquentiellement : une action après l'autre, dans une seule conversation. Si vous avez 10 tâches indépendantes à traiter, il les fera une par une. Pour certaines tâches, c'est parfaitement acceptable. Mais quand chacune prend 30 secondes à une minute, l'addition devient douloureuse.</p>

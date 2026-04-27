@@ -52,7 +52,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
         "https://elao.github.io/elao_/blog/ia/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg"
     ],
     "datePublished": "2026-03-16T00:00:00+00:00",
-    "dateModified": "2026-04-21T11:53:03+00:00",
+    "dateModified": "2026-04-27T08:11:03+00:00",
     "author": [
         {
             "@type": "Person",
@@ -310,7 +310,7 @@ séquentielle, batch, Agent Teams et Task Worker Pool.
                     </div>
                                 <div class="article-info__date">
                     <span>Publication <strong>16 mars 2026</strong></span>
-                                                                <span>Modification <strong>21 avril 2026</strong></span>
+                                                                <span>Modification <strong>27 avril 2026</strong></span>
                                     </div>
             </div>
 
@@ -439,7 +439,7 @@ Look for error log lines matching these patterns: [...]
 </ul>
 <p><strong>Temps typique :</strong> ~4 minutes pour 10 imports.</p>
 <h2 id="approche-2-batch-parallele" class="anchor-title"><a href="#approche-2-batch-parallele">Approche 2 : batch parallèle</a></h2>
-<p>J'ai naturellement décrit à Claude Code mon souhait de paralléliser les imports via des sous-agents, en limitant le nombre d'agents simultanés pour ne pas avoir trop de processus PHP qui tournent en même temps. Chaque sous-agent devait exécuter un import, extraire les erreurs de mapping et les remonter à l'agent principal qui se chargerait de modifier le code.</p>
+<p>J'ai naturellement décrit à Claude Code mon souhait de paralléliser les imports via des <a href="/elao_/blog/ia/sub-agents-claude-code">sous-agents</a>, en limitant le nombre d'agents simultanés pour ne pas avoir trop de processus PHP qui tournent en même temps. Chaque sous-agent devait exécuter un import, extraire les erreurs de mapping et les remonter à l'agent principal qui se chargerait de modifier le code.</p>
 <p>Claude Code m'a tout de suite proposé cette approche par batch : découper les imports en lots et traiter chaque lot en parallèle via l'outil <code class="code-inline" id="eaeb30f9f18e0c50b178676f3eaef45f">Task</code> (renommé <code class="code-inline" id="7446050b848d839fe9847073ff94cfd6">Agent</code> depuis la version 2.1.63 de Claude Code).</p>
 <pre class="code-multiline language-markdown"><code class="language-markdown" id="609ea0e7e7e83674df6da1d8e1e300ad">Découper les 10 imports en lots de 4 :
   Lot 1 : [import-1, import-2, import-3, import-4]  → 4 agents en parallèle

@@ -1,7 +1,7 @@
 ---
 type:               "post"
 title:              "Les couleurs CSS en 2026 : 4 fonctionnalités pour des thèmes vivants et adaptatifs"
-date:               "2026-05-12"
+date:               "2026-05-11"
 lastModified:       ~
 tableOfContent:     3
 
@@ -16,7 +16,7 @@ authors:            [pmoreau]
 #tweetId:           "" # Ajouter l'id du Tweet après publication
 ---
 
-Dans les [deux](https://www.elao.com/blog/dev/nouveautes-css-2025) [premiers articles](https://www.elao.com/blog/dev/animer-structurer-css), on a vu comment CSS modernise sa façon de structurer le code et d'animer les interactions.
+Dans les deux premiers articles ([#1](https://www.elao.com/blog/dev/nouveautes-css-2025) et [#2](https://www.elao.com/blog/dev/nouveautes-css-2025-part2)), on a vu comment CSS modernise sa façon de structurer le code et d'animer les interactions.
 Cette fois, on s'attaque à un domaine où SASS, Less et leurs cousins préprocesseurs régnaient en maîtres depuis des années : **la gestion des couleurs**.
 
 Spoiler : aujourd'hui, CSS sait définir des couleurs vives au-delà du sRGB, en mélanger plusieurs, en dériver de nouvelles depuis une couleur existante, et basculer proprement entre thème clair et thème sombre. Le tout nativement, sans la moindre dépendance.

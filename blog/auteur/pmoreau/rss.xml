@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/pmoreau</link>
-        <pubDate>Mon, 11 May 2026 15:14:08 +0000</pubDate>
+        <pubDate>Mon, 11 May 2026 15:25:55 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -18,10 +18,10 @@
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/pmoreau/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
-                <title>Les couleurs CSS en 2026 : 4 fonctionnalités pour des thèmes vivants et adaptatifs</title>
+                <title>Les couleurs en CSS : 4 fonctionnalités pour des thèmes vivants et adaptatifs</title>
                 <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
                 <description>
-                    <![CDATA[ color(), color-mix(), syntaxe relative des couleurs, color-scheme et light-dark()… Découvrez comment CSS prend en charge nativement la gestion des couleurs et des thèmes, sans préprocesseur ni JavaScript.
+                    <![CDATA[ Découvrez comment CSS prend en charge nativement la gestion des couleurs et des thèmes, sans préprocesseur ni JavaScript.
  ]]>
                 </description>
                 <guid isPermaLink="true">https://elao.github.io/elao_/blog/dev/nouveautes-css-2025-part3</guid>
@@ -31,7 +31,7 @@
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">Les couleurs CSS en 2026 : 4 fonctionnalités pour des thèmes vivants et adaptatifs</media:description>
+                    <media:description type="plain">Les couleurs en CSS : 4 fonctionnalités pour des thèmes vivants et adaptatifs</media:description>
                                     </media:content>
                                     <category>css</category>
                                     <category>frontend</category>

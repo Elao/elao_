@@ -1,12 +1,11 @@
 ---
 type:               "post"
-title:              "Les couleurs CSS en 2026 : 4 fonctionnalités pour des thèmes vivants et adaptatifs"
+title:              "Les couleurs en CSS : 4 fonctionnalités pour des thèmes vivants et adaptatifs"
 date:               "2026-05-11"
 lastModified:       ~
 tableOfContent:     3
 
 description: >
-    color(), color-mix(), syntaxe relative des couleurs, color-scheme et light-dark()…
     Découvrez comment CSS prend en charge nativement la gestion des couleurs et des thèmes, sans préprocesseur ni JavaScript.
 
 thumbnail:          content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part3.jpg

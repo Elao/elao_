@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/ogandillon</link>
-        <pubDate>Mon, 11 May 2026 15:25:57 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 10:30:06 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,25 @@
             <link>https://elao.github.io/elao_/blog/auteur/ogandillon</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/ogandillon/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Dog at Work : comment on a transformé une belle idée en démarche sérieuse</title>
+                <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ À l&#039;occasion de la Journée Dog at Work, retour sur 4 ans de cohabitation chez Elao : une mise à jour du DUERP, une enquête d&#039;équipe et une charte dog friendly co-construite qui changent tout. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/dog-at-work</guid>
+                <link>https://elao.github.io/elao_/blog/elao/dog-at-work</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/elao/dog-at-work/thumbnail.jpg/de18cde4f921cfc7402f5e98026c9957.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Dog at Work : comment on a transformé une belle idée en démarche sérieuse</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>elao</category>
+                                            </item>
                     <item>
                 <title>Les temps ritualisés chez Elao : quand le dialogue devient une culture</title>
                 <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>

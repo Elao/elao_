@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Model\Job;
-use Stenope\Bundle\ContentManagerInterface;
-use Stenope\Bundle\Service\ContentUtils;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -14,21 +12,16 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/recrutement')]
 class JobController extends AbstractController
 {
-    private ContentManagerInterface $manager;
-
-    public function __construct(ContentManagerInterface $manager)
-    {
-        $this->manager = $manager;
-    }
-
-    #[Route(name: 'jobs')]
+    /**
+     * The jobs listing now lives on the {@link SiteController::carriere "carriere" page}.
+     * We keep this legacy route to permanently redirect to it.
+     */
+    #[Route(name: 'jobs', options: [
+        'stenope' => ['sitemap' => false],
+    ])]
     public function list(): Response
     {
-        $jobs = $this->manager->getContents(Job::class, ['date' => false], ['active' => true]);
-
-        return $this->render('job/index.html.twig', [
-            'jobs' => $jobs,
-        ])->setLastModified(\count($jobs) > 0 ? ContentUtils::max($jobs, 'lastModified') : null);
+        return $this->redirectToRoute('carriere', [], Response::HTTP_MOVED_PERMANENTLY);
     }
 
     #[Route('/{job<.+>}', name: 'job')]

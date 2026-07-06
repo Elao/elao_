@@ -1,10 +1,17 @@
 {% import "macros.html.twig" as macros %}
 {% extends 'base.html.twig' %}
 
+{% block meta_title "Carrière & offres d'emploi | Elao" %}
+{% block meta_description "Découvrez ce que c'est de travailler chez Elao : la vie d'équipe, notre culture, nos avantages et nos offres d'emploi ouvertes. Et si vous nous rejoigniez ?" %}
+
+{% block og_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('opengraph_image'))) %}
+{% block twitter_image absolute_url(asset(constant('App\\Model\\Job::DEFAULT_SOCIAL_IMG')|glide_image_preset('twitter_card'))) %}
+
 {% block content %}
     <div class="page-carriere container">
         {{ macros.breadcrumb([
-            { path: path('carriere'), label: 'Page Carrière' },
+            { path: path('homepage'), label: 'Accueil' },
+            { path: path('carriere'), label: 'Travailler chez Elao' },
         ]) }}
 
         <section class="header">

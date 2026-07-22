@@ -38,6 +38,13 @@
     padding-top: 0;
     margin-top: 0;
   }
+
+  // Souligne les liens de prose : la couleur ne doit pas être le seul indicateur (WCAG 1.4.1)
+  p a,
+  li a,
+  td a {
+    text-decoration: underline;
+  }
 }
 
 @media (max-width: $screen-md) {

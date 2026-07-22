@@ -63,6 +63,18 @@ blockquote:nth-of-type(even):not(.blockquote-primary),
     font-family: 'faktum bold';
   }
 
+  a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity ease-in .1s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      opacity: .7;
+    }
+  }
+
   cite {
     font-family: 'faktum bold';
     font-size: 16px;

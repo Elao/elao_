@@ -15,13 +15,13 @@ tags:               [design-system, storybook, ux, webdesign]
 thumbnail:          content/images/blog/2026/methodo/design-developpement-un-process-souvent-oublie/thumbnail.png
 ---
 
-**Épisode 1 · Ce fossé invisible que l'on a décidé de combler grâce au Storybook**
+## Épisode 1 · Ce fossé invisible que l'on a décidé de combler grâce au Storybook
 
 *Le travail sur le design d'une application et le développement sont deux faces différentes d'une même pièce et pourtant, la collaboration entre designers et développeurs n'est pas toujours fluide… Non pas par manque de volonté de la part des uns ou des autres, mais parce que personne n'a réellement appris comment faire.*
 
 Chez Elao, la mise en place progressive d'une phase de conception plus étendue, intégrant un travail poussé de design d'UX et UI, a mis en lumière un fossé que l'on n'avait pas anticipé entre design et intégration. Les vocabulaires, les outils et les façons de penser un produit qui diffèrent entre ces deux métiers nous ont amenés à repenser nos processus en y ajoutant, notamment, la construction d'un Storybook comme source de vérité partagée pour chaque projet. Ce premier article de la série revient sur les réflexions qui nous ont amenés à ces travaux.
 
-## 1) Ce que l'on n'apprend pas aux designers
+### 1) Ce que l'on n'apprend pas aux designers
 
 De façon générale, les formations en UX/UI design se concentrent sur les utilisateurs finaux : leurs besoins, leurs attentes et comment les recueillir au mieux pour créer les meilleures expériences et interfaces. On y saupoudre également des bases d'accessibilité et de code (HTML, CSS et JavaScript principalement) afin de pouvoir dialoguer avec les autres interlocuteurs impliqués dans la création d'applications et de sites web, et voilà.
 
@@ -37,7 +37,7 @@ En conclusion : les outils utilisés, la façon dont designers et développeurs 
 
 Une fois que ce constat est posé, la solution semble toute trouvée, non ?
 
-## 2) Parler la même langue
+### 2) Parler la même langue
 
 La réalité est un peu plus complexe que cela.
 
@@ -49,11 +49,13 @@ Avec le temps, on finit par ajuster le tir. Le designer apprend les bons termes,
 
 Mais le vocabulaire n'est encore que la surface du problème, car dans un contexte d'agence, les projets sont, par nature, évolutifs et, dans le cas d'Elao, nous n'avons qu'un seul designer UX/UI pour tous les projets.
 
-## 3) Storybook comme source de vérité
+### 3) Storybook comme source de vérité
 
 Sachant cela, nous nous sommes demandé où se trouverait la référence et comment garantir que les futures mises à jour restent cohérentes avec les choix initiaux. Certains choisiront le fichier Figma comme source de vérité mais dans notre cas, nous avons décidé qu'il s'agirait du Storybook (un projet = un Storybook), créé et maintenu par les développeurs à partir du fichier fourni par le designer.
 
-[Storybook](https://storybook.js.org/) est un outil open source qui permet de développer et documenter les composants d'une interface de façon isolée, en dehors de l'application. C'est un catalogue vivant : chaque élément UI, des plus simples comme un bouton aux plus complexes, y est visible avec ses variantes et ses états réels. Contrairement à un fichier Figma, ce que l'on voit dans Storybook, c'est le vrai code, tel qu'il sera rendu dans le produit final. C'est d'ailleurs ce qui en fait un outil utilisé par des équipes comme celles de GitHub, Airbnb ou Shopify pour maintenir la cohérence de leurs interfaces à grande échelle.
+<blockquote class="blockquote-secondary">
+<a href="https://storybook.js.org/">Storybook</a> est un outil open source qui permet de développer et documenter les composants d'une interface de façon isolée, en dehors de l'application. C'est un catalogue vivant : chaque élément UI, des plus simples comme un bouton aux plus complexes, y est visible avec ses variantes et ses états réels. Contrairement à un fichier Figma, ce que l'on voit dans Storybook, c'est le vrai code, tel qu'il sera rendu dans le produit final. C'est d'ailleurs ce qui en fait un outil utilisé par des équipes comme celles de GitHub, Airbnb ou Shopify pour maintenir la cohérence de leurs interfaces à grande échelle.
+</blockquote>
 
 Grâce au Storybook, nous pourrons, pour chaque projet :
 

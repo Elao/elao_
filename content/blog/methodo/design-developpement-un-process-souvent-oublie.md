@@ -12,7 +12,7 @@ description: >
 
 authors:            [eflahaut]
 tags:               [design-system, storybook, ux, webdesign]
-thumbnail:          content/images/blog/2026/methodo/design-developpement-un-process-souvent-oublie/thumbnail.png
+thumbnail:          content/images/blog/2026/methodo/design-developpement-un-process-souvent-oublie/couverture.png
 ---
 
 ## Épisode 1 · Ce fossé invisible que l'on a décidé de combler grâce au Storybook

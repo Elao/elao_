@@ -18,7 +18,8 @@ status: "In Progress"
 | T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | Terminé | 2026-07-28 |
 | T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | Terminé | 2026-07-28 |
 | Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | Terminé | 2026-07-28 |
-| Q2 — Validation manuelle (4 protocoles A/B/C/D, 7 pages, Chrome + Firefox + Safari, VoiceOver) | En attente | |
+| Q2a — Validation automatisée des points objectifs (Chrome DevTools) | Terminé | 2026-07-28 |
+| Q2b — Validation manuelle (visuel, souris, Firefox + Safari, VoiceOver) | En attente | |
 
 ## Journal
 
@@ -154,3 +155,63 @@ status: "In Progress"
 - 2 erreurs `Unsupported language "tree"` pendant le build : préexistantes, liées à une coloration syntaxique dans un article, sans rapport avec ce lot.
 - Les `Deprecated:` PHP au lancement viennent du décalage entre le PHP local et le 8.3 attendu par le projet — préexistants eux aussi.
 - `php-cs-fixer` et `phpstan` non lancés : aucun fichier PHP touché par ce lot.
+
+### 2026-07-28 : Q2a — Validation automatisée des points objectifs
+
+**Statut** : Terminé
+
+Passage sur `make serve` (Chrome DevTools) des étapes du protocole qui se vérifient en console, pour ne
+laisser au test manuel que le visuel, la souris, les autres navigateurs et VoiceOver.
+
+**A — Lien d'évitement** (sur `/`) :
+- A1 ✅ le lien est bien le **premier élément focusable** du document ; au focus, `top: 8px`, entièrement
+  dans le viewport, anneau non rogné (il faut 5 px = 2 d'offset + 3 de trait, on en a 8)
+- A1 ✅ règle appliquée au focus clavier : `outline: 3px solid rgb(127,26,85)`, `outline-offset: 2px`,
+  `box-shadow: rgb(255,255,255) 0 0 0 2px` — `:focus-visible` matche bien
+- A2 ✅ après `Entrée`, `document.activeElement` = `<main id="main" tabindex="-1">`
+- A3 ✅ le `Tab` suivant va au premier lien **dans `#main`** (`/nos-services/`), pas dans le header,
+  et l'anneau s'y applique
+- A4 ✅ `elementFromPoint` au centre du logo renvoie le `<path>` du logo, pas le lien d'évitement.
+  Hors focus, le lien est à `bottom: -51px` — au-dessus du viewport, il ne peut rien intercepter.
+
+**C — Reprise de focus Swup** : sur `/blog`, un article, `/equipe`, plus `history.back()` /
+`history.forward()` — à chaque fois `activeElement === #main`, `aria-busy` absent après transition,
+un seul `<main>`, `scrollY: 0`, lien d'évitement toujours présent (il survit bien aux transitions).
+
+**Écart au plan assumé — `headingSelector: 'h1'`**
+
+Le défaut du plugin (`h1, h2, [role=heading]`) prend le **premier** titre trouvé dans `#main`. Mesuré sur
+le build : **280 des 544 pages** de contenu n'ont aucun `<h1>` dans `#main`. Sur celles-là l'annonce
+partait sur le premier `<h2>` venu — vérifié sur `/blog` : « Navigation vers : Design et développement :
+un process souvent oublié (épisode 1) », soit le titre du premier article de la liste au lieu de celui de
+la page. Plus de la moitié du site annonçait donc autre chose que la page atteinte.
+
+Restreint à `'h1'`, le plugin retombe sur `document.title` quand il n'en trouve pas. Vérifié après
+correction : `/blog` → « Navigation vers : Le blog de l'équipe d'Elao » ; article → son `h1` ; `/equipe`
+→ son `h1`. Aucun cas dégradé : sur une page avec `h1` le comportement est inchangé (et même plus sûr,
+puisque le défaut aurait pris un `h2` le précédant dans l'ordre du document).
+
+Le plan listait cette dépendance aux `h1` en « risque à surveiller » sans la chiffrer ; la mesure montre
+qu'elle est majoritaire, d'où la correction plutôt que la simple mention. Elle annule la note de T4
+« `headingSelector` laissé au défaut ».
+
+**C-5 — Piège `aria-busy` sur les deux pages à `containers: []` : reproduit, mais moins grave qu'anticipé**
+
+Caractérisation précise, en instrumentant `window.__probe` pour distinguer transition Swup et
+rechargement dur :
+- Le défaut ne se manifeste **que si la page est chargée directement** (lien profond, rafraîchissement,
+  entrée externe). Swup lit `containers` une seule fois à l'initialisation, sur `<body>` — qui n'est
+  jamais remplacé. Arrivé sur `/nos-services/ia` **par Swup** depuis une autre page, `containers` vaut
+  encore `['#main','#nav']` et tout fonctionne : vérifié, `probe` survit, focus sur `#main`, pas d'
+  `aria-busy` résiduel, y compris en repartant de la page.
+- En entrée directe puis clic sur un lien interne : le contexte d'exécution est détruit et
+  `performance.navigation.type === 'navigate'` → Swup échoue et **le navigateur retombe sur un
+  chargement de page complet**.
+- `aria-busy="true"` est donc posé pendant la fenêtre d'échec (~2-3 s) puis **disparaît avec le
+  rechargement** — il ne reste pas collé. État final propre : pas d'`aria-busy`, un seul `<main>`, lien
+  d'évitement présent, focus sur `<body>` (le comportement natif d'un chargement de page, pas une
+  régression par rapport à un site sans Swup).
+
+**Verdict** : pas bloquant, contrairement à ce que le plan envisageait. Défaut préexistant, hors
+périmètre de ce lot, mais à ouvrir en ticket — il coûte la transition douce et la gestion du focus sur
+ces deux pages en entrée directe.

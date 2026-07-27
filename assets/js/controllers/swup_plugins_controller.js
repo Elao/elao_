@@ -26,6 +26,11 @@ export default class extends Controller {
             // SwupScrollPlugin.
             new SwupA11yPlugin({
                 contentSelector: '#main',
+                // `h1` seul, et non le défaut `h1, h2, [role=heading]` : 280 des 544 pages
+                // de contenu n'ont pas de `h1`, et le plugin y annoncerait le premier `h2`
+                // venu — sur /blog, le titre du premier article au lieu de celui de la page.
+                // Restreint à `h1`, il retombe sur `document.title`, toujours renseigné.
+                headingSelector: 'h1',
                 announcementTemplate: 'Navigation vers : {title}',
                 urlTemplate: 'Nouvelle page à l\'adresse {url}',
             }),

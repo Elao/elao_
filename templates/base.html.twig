@@ -108,6 +108,8 @@
                enabled: site.trackers.matomo is not empty,
            })
         }}>
+        {# Hors des conteneurs Swup (`containers`, plus haut) pour survivre aux transitions. #}
+        <a class="skip-link" href="#main">Aller au contenu principal</a>
         {% block header %}
             <header id="nav" class="header">
                 <div class="container">
@@ -190,7 +192,10 @@
                 </div>
             </header>
         {% endblock %}
-        <main id="main">
+        {# `tabindex="-1"` en dur : sans lui, Safari et Firefox ne déplacent pas le focus
+           sur une cible de fragment non focusable. Posé en JS, il serait perdu à chaque
+           remplacement de conteneur par Swup (`outerHTML`). #}
+        <main id="main" tabindex="-1">
             {% block content %}{% endblock %}
         </main>
         {% block footer %}

@@ -14,7 +14,7 @@ status: "In Progress"
 | T0 — Préparer l'environnement (`make install`, commit du doc d'audit sur la branche parente, création de la sous-branche) | Terminé | 2026-07-27 |
 | T1 — Indicateur de prise de focus visible (`base/_focus.scss`, import, suppression des 10 resets) | Terminé | 2026-07-28 |
 | T2 — Corriger le `<main>` imbriqué des articles (`templates/blog/article.html.twig`) | Terminé | 2026-07-28 |
-| T3 — Lien d'évitement vers le contenu principal (`components/_skip-link.scss`, import, `base.html.twig`) | En attente | |
+| T3 — Lien d'évitement vers le contenu principal (`components/_skip-link.scss`, import, `base.html.twig`) | Terminé | 2026-07-28 |
 | T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | En attente | |
 | T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | En attente | |
 | Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | En attente | |
@@ -75,4 +75,26 @@ status: "In Progress"
 **Fichiers modifiés** :
 - `templates/blog/article.html.twig`
 
-**Notes** : absence de risque visuel reconfirmée après coup — `grep` sur tout le dépôt : un seul `<main>` subsiste (`base.html.twig:193`), `.article-content__main` est la seule cible SCSS (`_article-content.scss:32,68`), l'élément `main` n'apparaît en SCSS que dans `_normalize.scss:24` (`display: block`, déjà le défaut d'un `div`) et aucun JS ne référence `main`.
+**Notes (T2)** : absence de risque visuel reconfirmée après coup — `grep` sur tout le dépôt : un seul `<main>` subsiste (`base.html.twig:193`), `.article-content__main` est la seule cible SCSS (`_article-content.scss:32,68`), l'élément `main` n'apparaît en SCSS que dans `_normalize.scss:24` (`display: block`, déjà le défaut d'un `div`) et aucun JS ne référence `main`.
+
+### 2026-07-28 : T3 — Lien d'évitement vers le contenu principal
+
+**Statut** : Terminé
+
+**Actions réalisées** :
+- Création de `assets/scss/components/_skip-link.scss` : masquage `position: absolute; top: -100px`, révélation `&:focus { top: 8px }`, `z-index: 1002`, fond `$color-primary` / texte `#fff`
+- `@import "components/_skip-link";` en tête du bloc « layout components » de `style.scss` (l. 20)
+- `templates/base.html.twig` : `<a class="skip-link" href="#main">Aller au contenu principal</a>` inséré juste après l'ouverture de `<body>`, avant `{% block header %}` — donc hors des conteneurs Swup (`['#main', '#nav']`)
+- `templates/base.html.twig` : `<main id="main">` → `<main id="main" tabindex="-1">`
+- `make lint.twig` OK · build Encore OK
+
+**Fichiers modifiés** :
+- `assets/scss/components/_skip-link.scss` (créé)
+- `assets/scss/style.scss` (1 import)
+- `templates/base.html.twig` (lien + `tabindex` + 2 commentaires Twig)
+
+**Notes** :
+- **Écart au plan (mineur)** : révélation à `top: 8px` et non `top: 0`. À `top: 0`, l'`outline-offset: 2px` de `base/_focus` place le bord de l'anneau à −2px, rogné par le viewport. `left: 8px` pour la même raison sur l'axe horizontal.
+- Contraste texte : `#fff` sur `$color-primary` (#7f1a55) ≈ 9,6:1 — largement au-dessus de 4,5:1. L'anneau de focus violet reste lisible car il se détache sur le fond blanc de la page, séparé du fond violet du lien par le halo blanc.
+- `z-index: 1002` reconfirmé suffisant : maximum du dépôt = 1001 (`snake.scss:8`), puis 1000 (`_nav-mobile.scss:17`).
+- `font-family: faktum semibold` sort non quoté du minifieur — comportement identique aux 3 autres occurrences déjà présentes dans le CSS compilé, pas une régression.

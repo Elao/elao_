@@ -1,0 +1,28 @@
+// Lien d'évitement vers le contenu principal (WCAG 2.4.1 / RGAA 12.7).
+//
+// Volontairement pas `.screen-reader` (base/_utilities) : cet utilitaire pose
+// `left: -10000px` sans aucune règle de révélation au focus, le lien resterait
+// donc invisible pour l'utilisateur clavier voyant — échec 2.4.7.
+//
+// Masqué hors écran par le haut plutôt que réduit à 1px au coin haut-gauche :
+// une boîte conservée dans le flux visuel intercepterait les clics sur le logo
+// du header. En `absolute`, le lien n'est pas non plus un flex item de `body`
+// (`display: flex; flex-direction: column`, base/_layout).
+.skip-link {
+  padding: 10px 20px;
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  z-index: 1002; // au-dessus du max du dépôt : 1001 (snake), 1000 (nav-mobile)
+  font-family: 'faktum semibold';
+  font-size: 18px;
+  color: #fff;
+  background: $color-primary;
+  border-radius: 0 0 6px 6px;
+
+  // `top: 8px` et non `0` : laisse la place à l'anneau de focus
+  // (`outline-offset: 2px`, base/_focus) sans qu'il soit rogné par le viewport.
+  &:focus {
+    top: 8px;
+  }
+}

@@ -13,6 +13,10 @@ export default class extends Controller {
     }
 
     _onPreConnect(event) {
+        // Lu une seule fois, à la configuration : un changement de préférence en cours
+        // de session n'est pas répercuté côté Swup (la partie CSS, elle, réagit).
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
         event.detail.options.plugins.push(
             // Swup remplace `#main` via `outerHTML` : sans ce plugin, le focus retombe
             // sur `<body>` et aucun lecteur d'écran n'est informé du changement de page.
@@ -28,7 +32,7 @@ export default class extends Controller {
             new SwupScrollPlugin(
                 {
                     doScrollingRightAway: true,
-                    animateScroll: {
+                    animateScroll: reducedMotion ? false : {
                         betweenPages: true,
                     }
                 }

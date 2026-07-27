@@ -16,7 +16,7 @@ status: "In Progress"
 | T2 — Corriger le `<main>` imbriqué des articles (`templates/blog/article.html.twig`) | Terminé | 2026-07-28 |
 | T3 — Lien d'évitement vers le contenu principal (`components/_skip-link.scss`, import, `base.html.twig`) | Terminé | 2026-07-28 |
 | T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | Terminé | 2026-07-28 |
-| T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | En attente | |
+| T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | Terminé | 2026-07-28 |
 | Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | En attente | |
 | Q2 — Validation manuelle (4 protocoles A/B/C/D, 7 pages, Chrome + Firefox + Safari, VoiceOver) | En attente | |
 
@@ -118,3 +118,19 @@ status: "In Progress"
 - `headingSelector` laissé au défaut (`h1, h2, [role=heading]`).
 - Ordre de priorité de l'annonce, tel que codé dans le plugin : `urlTemplate` → écrasé par `document.title` s'il existe → écrasé par le premier heading de `#main` s'il en trouve un. En pratique `urlTemplate` ne sert donc quasiment jamais sur ce site (le `<title>` est toujours renseigné) ; il est traduit par cohérence.
 - ⚠️ **`make lint.eslint` lance `npm run fix`, pas `npm run lint`** — c'est-à-dire `eslint --fix`, qui corrige silencieusement au lieu d'échouer. Le contrôle réel a donc été fait avec `npx eslint assets/js --ext .js,.json` (aucune correction automatique n'a été appliquée à ce commit). À signaler à l'équipe : la cible du Makefile ne remplit pas son rôle de garde-fou en CI.
+
+### 2026-07-28 : T5 — Neutraliser le défilement animé sous mouvement réduit
+
+**Statut** : Terminé
+
+**Actions réalisées** :
+- `swup_plugins_controller.js` : `const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;` en tête de `_onPreConnect`
+- `animateScroll: reducedMotion ? false : { betweenPages: true }` sur le `SwupScrollPlugin`
+- `npx eslint assets/js` : OK · build Encore : OK
+
+**Fichiers modifiés** :
+- `assets/js/controllers/swup_plugins_controller.js`
+
+**Notes** :
+- `doScrollingRightAway: true` est laissé inchangé : il pilote *quand* le défilement se produit, pas s'il est animé.
+- Limite assumée (déjà actée au plan) : `matchMedia` est lu une seule fois, à la configuration. Un changement de préférence en cours de session impose un rechargement — c'est ce que dit le protocole de test manuel D.

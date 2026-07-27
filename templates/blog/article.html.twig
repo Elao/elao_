@@ -148,7 +148,7 @@
         {% endif %}
 
         <div class="article-content">
-            <main class="article-content__main">
+            <div class="article-content__main">
 
                 {% if article.outdated %}
                     <div class="alert alert--info">
@@ -191,7 +191,7 @@
                         </div>
                     {% endif %}
                 {% endblock %}
-            </main>
+            </div>
             <aside class="article-content__aside">
                 {% if article.tweetId is not empty %}
                     <a href="{{ external_url('twitter_like', { tweet_id: article.tweetId }) }}" class="kudo" target="_blank">

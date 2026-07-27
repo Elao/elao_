@@ -36,8 +36,6 @@
   }
 
   &:focus {
-    outline: none;
-
     &::placeholder {
       opacity: .4;
     }
@@ -74,8 +72,6 @@
   }
 
   &:focus {
-    outline: none;
-
     &:before {
       opacity: .4;
     }

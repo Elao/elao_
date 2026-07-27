@@ -17,7 +17,7 @@ status: "In Progress"
 | T3 — Lien d'évitement vers le contenu principal (`components/_skip-link.scss`, import, `base.html.twig`) | Terminé | 2026-07-28 |
 | T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | Terminé | 2026-07-28 |
 | T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | Terminé | 2026-07-28 |
-| Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | En attente | |
+| Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | Terminé | 2026-07-28 |
 | Q2 — Validation manuelle (4 protocoles A/B/C/D, 7 pages, Chrome + Firefox + Safari, VoiceOver) | En attente | |
 
 ## Journal
@@ -134,3 +134,23 @@ status: "In Progress"
 **Notes** :
 - `doScrollingRightAway: true` est laissé inchangé : il pilote *quand* le défilement se produit, pas s'il est animé.
 - Limite assumée (déjà actée au plan) : `matchMedia` est lu une seule fois, à la configuration. Un changement de préférence en cours de session impose un rechargement — c'est ce que dit le protocole de test manuel D.
+
+### 2026-07-28 : Q1 — Vérifications automatiques
+
+**Statut** : Terminé
+
+**Résultats** :
+- `npx eslint assets/js --ext .js,.json` → **OK** (et non `make lint.eslint`, cf. note T4)
+- `make lint.twig` → **OK**, 52 fichiers
+- `make test` (= `build.content.without-images`) → **OK**, 607 pages générées
+
+**Contrôles complémentaires sur le HTML généré** (le build statique permet de vérifier le rendu réel plutôt que le seul template) :
+- Lien d'évitement et `<main id="main" tabindex="-1">` présents sur toutes les pages de contenu
+- Un seul `<main>` par page sur l'intégralité du build. Les 19 fichiers sans `<main>` sont tous des stubs de redirection Symfony (`<meta http-equiv="refresh">`, ex. `/la-tribu` → `/equipe`) — attendu, pas une lacune.
+- Page d'article vérifiée : `<main id="main">` unique + `<div class="article-content__main">` (T2 confirmé côté sortie)
+- `/nos-services/ia` et `/nos-services/optimiser` : `containers-value="[]"` confirmé dans le HTML. Défaut **préexistant**, hors périmètre de correction, mais c'est ce qui motive l'étape C-5 du test manuel (piège `aria-busy`).
+
+**Notes** :
+- 2 erreurs `Unsupported language "tree"` pendant le build : préexistantes, liées à une coloration syntaxique dans un article, sans rapport avec ce lot.
+- Les `Deprecated:` PHP au lancement viennent du décalage entre le PHP local et le 8.3 attendu par le projet — préexistants eux aussi.
+- `php-cs-fixer` et `phpstan` non lancés : aucun fichier PHP touché par ce lot.

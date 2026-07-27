@@ -15,7 +15,7 @@ status: "In Progress"
 | T1 — Indicateur de prise de focus visible (`base/_focus.scss`, import, suppression des 10 resets) | Terminé | 2026-07-28 |
 | T2 — Corriger le `<main>` imbriqué des articles (`templates/blog/article.html.twig`) | Terminé | 2026-07-28 |
 | T3 — Lien d'évitement vers le contenu principal (`components/_skip-link.scss`, import, `base.html.twig`) | Terminé | 2026-07-28 |
-| T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | En attente | |
+| T4 — Rétablir le focus après les transitions Swup (`@swup/a11y-plugin`, `swup_plugins_controller.js`) | Terminé | 2026-07-28 |
 | T5 — Neutraliser le défilement animé sous `prefers-reduced-motion` (`animateScroll` conditionnel) | En attente | |
 | Q1 — Vérifications automatiques (`make lint.eslint`, `make lint.twig`, `make test`) | En attente | |
 | Q2 — Validation manuelle (4 protocoles A/B/C/D, 7 pages, Chrome + Firefox + Safari, VoiceOver) | En attente | |
@@ -98,3 +98,23 @@ status: "In Progress"
 - Contraste texte : `#fff` sur `$color-primary` (#7f1a55) ≈ 9,6:1 — largement au-dessus de 4,5:1. L'anneau de focus violet reste lisible car il se détache sur le fond blanc de la page, séparé du fond violet du lien par le halo blanc.
 - `z-index: 1002` reconfirmé suffisant : maximum du dépôt = 1001 (`snake.scss:8`), puis 1000 (`_nav-mobile.scss:17`).
 - `font-family: faktum semibold` sort non quoté du minifieur — comportement identique aux 3 autres occurrences déjà présentes dans le CSS compilé, pas une régression.
+
+### 2026-07-28 : T4 — Rétablir le focus après les transitions Swup
+
+**Statut** : Terminé
+
+**Actions réalisées** :
+- `"@swup/a11y-plugin": "^3.0.0"` ajouté aux `dependencies` de `package.json`, avant `@swup/fade-theme`
+- `npm install` → **3.0.0** résolu (3 paquets ajoutés : le plugin + `on-demand-live-region` + `focus-options-polyfill`), `package-lock.json` mis à jour
+- `swup_plugins_controller.js` : import de `SwupA11yPlugin`, instancié **en premier** dans le `plugins.push()`, avec `contentSelector: '#main'` et les templates d'annonce en français
+- `npx eslint assets/js` : OK · build Encore : OK
+
+**Fichiers modifiés** :
+- `package.json`, `package-lock.json`
+- `assets/js/controllers/swup_plugins_controller.js`
+
+**Notes** :
+- API du plugin vérifiée dans `node_modules/@swup/a11y-plugin/dist/index.modern.js` avant d'écrire la config, plutôt que sur la foi de la doc. Confirmé : options `contentSelector` / `headingSelector` / `announcementTemplate` / `urlTemplate` ; hooks `contentReplaced` + `transitionStart` + `transitionEnd` ; `focus({ preventScroll: true })`. Conforme à ce que le plan décrivait (D1).
+- `headingSelector` laissé au défaut (`h1, h2, [role=heading]`).
+- Ordre de priorité de l'annonce, tel que codé dans le plugin : `urlTemplate` → écrasé par `document.title` s'il existe → écrasé par le premier heading de `#main` s'il en trouve un. En pratique `urlTemplate` ne sert donc quasiment jamais sur ce site (le `<title>` est toujours renseigné) ; il est traduit par cohérence.
+- ⚠️ **`make lint.eslint` lance `npm run fix`, pas `npm run lint`** — c'est-à-dire `eslint --fix`, qui corrige silencieusement au lieu d'échouer. Le contrôle réel a donc été fait avec `npx eslint assets/js --ext .js,.json` (aucune correction automatique n'a été appliquée à ce commit). À signaler à l'équipe : la cible du Makefile ne remplit pas son rôle de garde-fou en CI.

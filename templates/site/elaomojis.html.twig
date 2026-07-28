@@ -31,9 +31,14 @@
                 <h3>{{ section.title }}</h3>
                 <ul class="elaomojis">
                     {% for emoji in section.emojis %}
-                        <li class="elaomojis__item" aria-hidden="true">
+                        {# Le `aria-hidden="true"` qui était posé ici masquait un lien
+                           focalisable : au clavier on atterrissait sur un élément que
+                           les lecteurs d'écran ne pouvaient pas annoncer (WCAG 4.1.2,
+                           règle axe `aria-hidden-focus`). Le code de l'émoji sert de
+                           nom accessible, la vignette est purement décorative. #}
+                        <li class="elaomojis__item">
                             <a href="{{ asset('build/images/elaomojis/%s'|format(emoji.path)) }}" target="_blank">
-                                <span class="img" style="background: url('{{ asset('build/images/elaomojis/%s'|format(emoji.path)) }}')"></span>
+                                <span class="img" aria-hidden="true" style="background: url('{{ asset('build/images/elaomojis/%s'|format(emoji.path)) }}')"></span>
                                 {{ emoji.code }}
                             </a>
                         </li>

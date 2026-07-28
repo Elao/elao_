@@ -79,7 +79,13 @@
             <span>© 2005 - {{ 'now'|date('Y') }} - ELAO - Tous droits réservés</span>
             <a href="{{ path('legal') }}">Mentions légales</a>
             <a href="{{ path('privacy') }}">Protection des données</a>
-            <a id="see" href="#ssss">🐍</a>
+            {# `<button>` et non `<a>` : ce déclencheur ouvre l'easter egg via JS
+               (`app.js`, `getElementById('see')`), il ne mène nulle part — `#ssss`
+               n'existe pas. Le nom accessible est obligatoire sur un contrôle
+               focalisable (WCAG 4.1.2) ; l'émoji seul n'en fournit pas. #}
+            <button type="button" id="see" class="see-trigger" aria-label="Easter egg : lancer le jeu">
+                <span aria-hidden="true">🐍</span>
+            </button>
         </section>
     </div>
 </footer>

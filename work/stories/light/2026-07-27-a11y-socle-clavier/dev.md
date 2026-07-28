@@ -284,3 +284,44 @@ Build Encore OK, `make test` OK (607 pages).
 **Leçon pour les lots suivants** : sur ce dépôt, toute règle de composant portant `color` sur un `<a>`
 doit être posée **sur l'état** (`&:focus`, `&:hover`) et pas seulement sur la classe, sinon
 `generic/_a.scss` la bat. À vérifier en PR C, qui touche précisément aux couleurs de liens.
+
+### 2026-07-28 : Bouton « Échangeons » à 1,21:1 — trouvé en relecture
+
+**Statut** : Terminé
+
+**Signalé à l'œil pendant le test manuel de l'onglet `/nos-services/ia`.** Le bouton « Échangeons » de
+la section « Intéressé·e ? » s'affichait en **blanc sur `$color-secondary`** (#fee3e4) : **1,21:1**,
+illisible. Échec WCAG 1.4.3.
+
+**Cause — la même que celle du lien d'évitement**, à quelques heures d'intervalle :
+
+```scss
+.brick-conception a { color: #fff; }        // _brick.scss:20-22, (0,1,1)
+.btn--secondary    { color: $color-brand; } // _btn.scss:48-50,  (0,1,0) — perd
+```
+
+`.btn--secondary` est conçu pour changer **fond et texte ensemble** (rouge sur rose au repos, blanc sur
+rouge au survol). La règle générique de `.brick` force le blanc dès le repos sans toucher le fond, d'où
+la combinaison blanc-sur-rose qui n'était prévue nulle part.
+
+**Ni une régression de ce lot, ni un point d'audit** :
+- reproduit à l'identique sur **www.elao.com en production** (`color: rgb(255,255,255)` /
+  `background: rgb(254,227,228)`, ni survolé ni focalisé) → préexistant ;
+- absent de la check-list RGAA → l'audit ne l'avait pas vu non plus.
+
+**Impact chiffré sur le build : une seule page**, `/nos-services/ia`. C'est le seul endroit du site où
+un `.btn--secondary` est placé dans une `.brick`.
+
+**Correctif** — `a:not(.btn)` dans `_brick.scss` : les boutons portent déjà leurs propres couleurs, ils
+n'ont aucune raison de subir la surcharge de la brique. Vérifié après build : `color: rgb(255,67,69)` sur
+`background: rgb(254,227,228)` = **4,26:1**, conforme. Aucun autre lien de brique n'est affecté (aucun
+`a:not(.btn)` sur cette page, et une seule page concernée sur les 607).
+
+**Arbitrage** : correction intégrée à PR A plutôt que reportée en PR C (sa place logique dans le
+découpage). Motif retenu : même classe de bug que le correctif du lien d'évitement, risque visuel nul
+sur une page unique, et la PR devient cohérente sur le sujet « une règle générique qui bat un
+composant ».
+
+**Ce que ça confirme** : ce dépôt a un problème systémique de règles `a` larges qui battent les
+composants. Deux occurrences trouvées en une session, dont une jamais détectée en production. **PR C
+devrait commencer par un audit de ces règles**, pas par les contrastes un par un.

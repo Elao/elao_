@@ -15,10 +15,25 @@
   left: 8px;
   z-index: 1002; // au-dessus du max du dépôt : 1001 (snake), 1000 (nav-mobile)
   font-family: 'faktum semibold';
-  font-size: 18px;
+  // 24px n'est PAS un choix esthétique : blanc sur $color-brand ne donne que
+  // 3,42:1, sous les 4,5:1 exigés pour du texte normal (WCAG 1.4.3). À 24px le
+  // texte relève du « grand texte », dont le seuil est 3:1 — la règle passe.
+  // Réduire cette valeur casse la conformité. Même mécanisme que le hero du site,
+  // qui fait déjà du blanc sur ce rouge en très grande taille.
+  font-size: 24px;
   color: #fff;
-  background: $color-primary;
+  background: $color-brand;
   border-radius: 0 0 6px 6px;
+
+  // `generic/_a.scss` pose `a:hover, a:active, a:focus { color: $color-dark }`.
+  // Sa spécificité (0,1,1) bat celle de `.skip-link` (0,1,0) — et comme ce lien
+  // n'est visible QU'au focus, sans ce rappel son texte n'est jamais blanc : il
+  // s'affichait en bleu foncé sur le rouge de la charte. Ne pas retirer.
+  &:focus,
+  &:active,
+  &:hover {
+    color: #fff;
+  }
 
   // `top: 8px` et non `0` : laisse la place à l'anneau de focus
   // (`outline-offset: 2px`, base/_focus) sans qu'il soit rogné par le viewport.

@@ -236,3 +236,51 @@ du diff n'est que du reformatage npm.
 
 **Reste ouvert** : Q2b (validation manuelle visuelle / Firefox / Safari / VoiceOver / mouvement réduit).
 La synthèse de story sera écrite une fois ce passage fait.
+
+### 2026-07-28 : Correctif — couleur du lien d'évitement (retour de relecture)
+
+**Statut** : Terminé
+
+**Le bug, signalé à l'œil et confirmé en console.** `assets/scss/generic/_a.scss:9-13` pose
+`a:hover, a:active, a:focus { color: $color-dark }`. Spécificité **(0,1,1)** contre **(0,1,0)** pour
+`.skip-link` : la règle générique gagne. Et comme le lien d'évitement n'est visible **qu'au focus**, son
+`color: #fff` n'était **jamais** appliqué. Le texte s'affichait en `#0d3a5a` sur `$color-primary`, soit
+**1,23:1** — pratiquement illisible. C'est ce que la relecture a vu.
+
+Le piège est exactement celui que le plan décrivait pour les `outline` (une règle de composant qui bat
+une règle globale par spécificité), mais sur `color`, et je ne l'avais pas anticipé sur le lien lui-même.
+Il est passé au travers de la vérification automatisée parce que je contrôlais `outline` /
+`outline-offset` / `box-shadow` — pas `color`.
+
+**Correctif** — rappel explicite dans `_skip-link.scss` :
+
+```scss
+&:focus,
+&:active,
+&:hover {
+  color: #fff;
+}
+```
+
+`.skip-link:focus` est en (0,2,0), ce qui bat `a:focus` (0,1,1). Un commentaire dans le fichier explique
+pourquoi la règle est là, pour éviter qu'elle soit « nettoyée » comme redondante.
+
+**Changement de fond, demandé en relecture** : `$color-primary` → `$color-brand` (#ff4345), texte blanc.
+
+**Contrainte de contraste qui en découle.** Blanc sur `#ff4345` ne donne que **3,42:1**, sous les 4,5:1
+de WCAG 1.4.3 pour du texte normal. Quatre options mesurées et présentées ; retenue : **passer la taille
+à 24px**, ce qui fait basculer le texte dans la catégorie « grand texte » dont le seuil est **3:1** — les
+3,42:1 deviennent conformes. Même mécanisme que le hero du site, qui fait déjà du blanc sur ce rouge en
+grande taille. Le `font-size: 24px` est donc une **contrainte de conformité, pas un choix esthétique** :
+c'est écrit dans le fichier, le réduire casse 1.4.3.
+
+Alternatives écartées : texte `$color-text` sur le rouge (4,99:1, mais plus de blanc) et rouge assombri
+`#d6262a` (5,04:1, mais token hors charte — la refonte des tokens de contraste est le sujet P2-1, à part).
+
+**Vérifié après correction** : `color: rgb(255,255,255)`, `background: rgb(255,67,69)`,
+`font-size: 24px`, `:focus-visible` matche, boîte à `top: 8px` / hauteur 58px, anneau non rogné.
+Build Encore OK, `make test` OK (607 pages).
+
+**Leçon pour les lots suivants** : sur ce dépôt, toute règle de composant portant `color` sur un `<a>`
+doit être posée **sur l'état** (`&:focus`, `&:hover`) et pas seulement sur la classe, sinon
+`generic/_a.scss` la bat. À vérifier en PR C, qui touche précisément aux couleurs de liens.

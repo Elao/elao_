@@ -40,7 +40,10 @@
                             </span>
                         </a>
                     </div>
-                    <img src="{{ asset('build/images/pages/hosting/logo-rix.svg') }}" alt="" class="logo-rix">
+                    {# Seul contenu de sa colonne : un `alt` vide la rendait entièrement
+                       absente aux lecteurs d'écran, alors qu'elle porte l'identité de
+                       la marque présentée dans cette section. #}
+                    <img src="{{ asset('build/images/pages/hosting/logo-rix.svg') }}" alt="Logo Rix" class="logo-rix">
                 </div>
             </div>
 

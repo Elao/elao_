@@ -32,7 +32,7 @@ class ElaomojiParser
 
         $content = preg_replace_callback(
             '/(:[a-z0-9\+\-]+:)/',
-            fn (array $matches) => isset($emojis[$matches[1]]) ? $this->img($emojis[$matches[1]], trim($matches[1], ':')) : $matches[0],
+            fn (array $matches) => isset($emojis[$matches[1]]) ? $this->img($emojis[$matches[1]], $matches[1]) : $matches[0],
             $content,
         );
 
@@ -43,12 +43,26 @@ class ElaomojiParser
         return $content;
     }
 
-    private function img(string $path, string $alt): string
+    private function img(string $path, string $code): string
     {
         return sprintf(
             '<img class="emoji" src="%s" alt="%s">',
             $this->packages->getUrl('build/images/elaomojis/' . $path),
-            $alt,
+            htmlspecialchars($this->altFromCode($code), \ENT_QUOTES),
         );
+    }
+
+    /**
+     * Construit un texte alternatif lisible à partir du code de l'émoji.
+     *
+     * `:amelie-happy:` devenait `alt="amelie-happy"` : un slug, lu tel quel par les
+     * lecteurs d'écran. Faute de libellé rédigé dans `content/misc/elaomojis.yaml`
+     * (les 86 entrées n'ont que `code` et `path`), on humanise le code et on le
+     * préfixe pour signaler la nature de l'image. Reste une approximation : de vrais
+     * libellés éditoriaux feraient mieux.
+     */
+    private function altFromCode(string $code): string
+    {
+        return 'Elaomoji ' . str_replace('-', ' ', trim($code, ':'));
     }
 }

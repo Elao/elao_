@@ -3,13 +3,16 @@
         {% set term = content_get('App\\Model\\Glossary\\Term', slug) %}
         <li>
             {% if term.show %}
+                {# `alt=""` : le logo est redondant avec `term.name` juste à côté, dans
+                   le même lien. L'`alt` précédent exposait le chemin du fichier
+                   (« Logo build/images/technos/symfony.svg »), lu tel quel à voix haute. #}
                 <a href="{{ path('glossary_term', { term: term.slug })}}" class="{{ item_class|default('technologies__item') }}">
-                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="Logo {{ term.logo }}">
+                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="">
                     {{ term.name }}
                 </a>
             {% else %}
                 <div class="{{ item_class|default('technologies__item') }}">
-                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="Logo {{ term.logo }}">
+                    <img src="{{ asset(term.logo ?? "build/images/technos/default.svg") }}" alt="">
                     {{ term.name }}
                 </div>
             {% endif %}

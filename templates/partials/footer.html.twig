@@ -77,6 +77,9 @@
 
         <section class="footer__legals">
             <span>© 2005 - {{ 'now'|date('Y') }} - ELAO - Tous droits réservés</span>
+            {# Le plan du site doit être atteignable depuis toutes les pages : c'est ce
+               qui en fait un « accès multiple » au sens de WCAG 2.4.5. #}
+            <a href="{{ path('sitemap') }}">Plan du site</a>
             <a href="{{ path('legal') }}">Mentions légales</a>
             <a href="{{ path('privacy') }}">Protection des données</a>
             <a id="see" href="#ssss">🐍</a>

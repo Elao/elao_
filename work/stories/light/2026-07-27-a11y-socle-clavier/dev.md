@@ -215,3 +215,24 @@ rechargement dur :
 **Verdict** : pas bloquant, contrairement à ce que le plan envisageait. Défaut préexistant, hors
 périmètre de ce lot, mais à ouvrir en ticket — il coûte la transition douce et la gestion du focus sur
 ces deux pages en entrée directe.
+
+### 2026-07-28 : Ouverture de la PR
+
+**Statut** : Terminé
+
+- Branche poussée sur `origin`, **PR #690** ouverte : https://github.com/Elao/elao_/pull/690
+- Base `master`, assignée à `Le-Polemil`. **Aucune issue a11y n'existe sur le dépôt** → pas de mot-clé
+  de fermeture (vérifié via `gh issue list --search`).
+- Le commit `[A11y] Plan du chantier RGAA (4 PR)` (`f7c9d64dd`, branche `feat/a11y-rgaa-audit`) est
+  inclus dans la PR : la branche de story en descend. Le doc couvre les 4 lots, mais le laisser en
+  branche orpheline non poussée aurait privé la PR de son contexte de relecture — il arrive donc avec le
+  lot A, et les PR B/C/D y renverront.
+
+**Contrôle du `package-lock.json` avant push** — le diff affiche 1479 lignes modifiées / −1228 net, ce
+qui méritait vérification. Comparaison structurelle master ↔ branche : **3 paquets ajoutés**
+(`@swup/a11y-plugin`, `on-demand-live-region`, `focus-options-polyfill`), **0 retiré, 0 version
+modifiée**, y compris dans la section legacy `dependencies` (1029 → 1032, aucune suppression). Le volume
+du diff n'est que du reformatage npm.
+
+**Reste ouvert** : Q2b (validation manuelle visuelle / Firefox / Safari / VoiceOver / mouvement réduit).
+La synthèse de story sera écrite une fois ce passage fait.

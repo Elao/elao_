@@ -117,8 +117,12 @@
                     </div>
                 {% endif %}
 
+                {# Émojis nus : un lecteur d'écran énonce « manette de jeu vidéo,
+                   vélo, marmite » sans jamais dire de quoi il s'agit. Le nom sur la
+                   liste fournit ce contexte. Des libellés par émoji seraient plus
+                   riches, mais demandent une rédaction côté contenu. #}
                 {% if member.emojis is not empty %}
-                    <ul class="interests" data-aos="fade-in">
+                    <ul class="interests" aria-label="Centres d'intérêt de {{ member.name }}" data-aos="fade-in">
                         {% for emoji in member.emojis %}
                             <li>{{ emoji }}</li>
                         {% endfor %}

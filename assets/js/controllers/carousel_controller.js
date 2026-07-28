@@ -66,12 +66,21 @@ export default class extends Controller {
 
         this.dotsContainer = document.createElement('div');
         this.dotsContainer.classList.add('carousel__dots');
+        // Groupe nommé : sans ça, les puces sont annoncées isolément, sans dire à quoi
+        // elles servent.
+        this.dotsContainer.setAttribute('role', 'group');
+        this.dotsContainer.setAttribute('aria-label', 'Pagination du carrousel');
         const totalDots = Math.ceil((this.totalSlides - this.slidesToShowValue) / this.slidesToScrollValue) + 1;
 
         for (let i = 0; i < totalDots; i++) {
             const dot = document.createElement('button');
             dot.classList.add('carousel__dot');
             dot.dataset.index = i * this.slidesToScrollValue;
+            // `<button>` sans contenu : aucun nom accessible, la puce était annoncée
+            // « bouton » et rien d'autre (WCAG 4.1.2). `type` explicite pour éviter un
+            // envoi de formulaire si le carrousel est un jour imbriqué dans un `<form>`.
+            dot.type = 'button';
+            dot.setAttribute('aria-label', `Aller à la vue ${i + 1} sur ${totalDots}`);
             dot.addEventListener('click', () => this.goToSlide(i * this.slidesToScrollValue));
             this.dotsContainer.appendChild(dot);
         }
@@ -82,7 +91,15 @@ export default class extends Controller {
 
     updateDots() {
         this.dotsContainer.querySelectorAll('.carousel__dot').forEach((dot, i) => {
-            dot.classList.toggle('active', i * this.slidesToScrollValue === this.index);
+            const current = i * this.slidesToScrollValue === this.index;
+            dot.classList.toggle('active', current);
+            // La puce active n'était signalée que par une classe CSS, donc uniquement
+            // à l'œil. `aria-current` porte la même information aux lecteurs d'écran.
+            if (current) {
+                dot.setAttribute('aria-current', 'true');
+            } else {
+                dot.removeAttribute('aria-current');
+            }
         });
     }
 

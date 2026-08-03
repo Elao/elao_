@@ -9,6 +9,20 @@ $color-text: #390725;
 $color-info: #1e7695;
 $color-warning: #dbb371;
 
+// Liens qui portent déjà leurs propres couleurs (bouton, lien de marque, …).
+//
+// Les règles de lien de prose s'écrivent `.conteneur a { color: … }`, soit une
+// spécificité (0,1,1) : elles battent la classe posée sur le `<a>` lui-même, qui
+// n'est qu'en (0,1,0). Un bouton placé dans un tel conteneur se retrouve donc avec
+// la couleur de texte de la prose sur son propre fond — combinaison que personne
+// n'a prévue, et qui a déjà produit deux contrastes à 1,21:1.
+//
+// Les exclusions portent sur les classes de base (`.btn`, `.link`), toujours
+// présentes aux côtés de leurs variantes (`.btn--secondary`, `.link--brand`).
+// Chaînage de `:not()` plutôt que `:not(a, b)` : la forme à liste demande
+// Safari 16.4, le chaînage est supporté partout.
+$self-styled-links: ':not(.btn):not(.link):not(.animated-link):not(.brick-send-message)';
+
 // Breakpoints
 $screen-lg: 1280px; // desktop
 $screen-md: 1220px; // laptop

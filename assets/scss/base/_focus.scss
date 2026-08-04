@@ -1,0 +1,26 @@
+// Indicateur de prise de focus au clavier (WCAG 2.4.7 + 1.4.11 / RGAA 10.7).
+//
+// Double anneau : l'anneau violet porte sur les fonds clairs, le halo blanc sur les
+// fonds sombres. Sur $color-tertiary, aucune couleur unique n'atteint 3:1 — la
+// combinaison des deux garantit qu'au moins un anneau reste conforme sur les 8
+// tokens de la charte. Pas de surcharge par contexte.
+//
+// Pas de `border-radius` ici : la propriété s'applique à l'élément, pas à l'anneau,
+// et arrondirait les fonds carrés à la prise de focus.
+:focus-visible {
+  outline: 3px solid $color-primary;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+// Contrepartie du défilement animé vers l'ancre du lien d'évitement
+// (`scroll-behavior: smooth` sur `html`, base/_layout).
+// N.B. : ne couvre que le défilement. Les animations AOS restent actives
+// volontairement — les neutraliser en CSS laisserait les blocs `[data-aos]` à
+// `opacity: 0`, donc invisibles, précisément pour le public visé.
+// RGAA 13.8 (P1-7) n'est donc pas traité ici.
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

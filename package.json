@@ -26,6 +26,7 @@
     },
     "dependencies": {
         "@hotwired/stimulus": "^3.0.0",
+        "@swup/a11y-plugin": "^3.0.0",
         "@swup/fade-theme": "^1.0",
         "@swup/matomo-plugin": "^1.0.0",
         "@swup/progress-plugin": "^1.2.1",

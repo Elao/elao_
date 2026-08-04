@@ -27,10 +27,6 @@
     border: none;
     border-radius: 10px;
 
-    &:focus {
-      outline: none;
-    }
-
     &::selection {
       color: #fff;
       background: color.adjust(#fff, $alpha: -.8);

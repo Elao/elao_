@@ -9,9 +9,6 @@
   &:hover,
   &:active,
   &:focus {
-    box-shadow: none;
-    outline: none;
-
     .kudo__button {
       background-position: right;
     }
@@ -35,8 +32,6 @@
 }
 
 .kudo--active {
-  outline: none;
-  box-shadow: none;
   animation: kudo 1s steps(20) forwards;
 }
 

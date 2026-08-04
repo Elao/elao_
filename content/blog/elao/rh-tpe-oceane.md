@@ -1,10 +1,10 @@
 ---
-title: "Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH"
+title: "Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH (épisode 1)"
 date: '2026-07-08'
 lastModified: ~
 description: "Comment on a construit la fonction RH d'une boîte de 10 personnes : le point de départ"
 authors: [ mzelboch, ogandillon ]
-tableOfContent: false
+tableOfContent: 2
 tags: [ rh, team, elao ]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/oceane.jpg
 ---
@@ -66,6 +66,12 @@ On y parlera notamment :
 
 Si vous dirigez une petite structure, si vous débutez en RH, ou si vous vous demandez simplement « mais qu'est-ce que ça fait vraiment, une RH, dans une boîte de 10 personnes ? » cette série est pour vous.
 
+---
+
 On commence vraiment au prochain épisode, par les fondations.
 
 **À suivre.** 👋
+
+!!! note "Cet article fait partie d'une série de plusieurs épisodes"
+    **L'épisode suivant** est disponible :  
+    [« Construire la fonction RH d'une TPE : par où commencer ? (épisode 2) »](./rh-tpe-ep-02-par-ou-commencer.md).

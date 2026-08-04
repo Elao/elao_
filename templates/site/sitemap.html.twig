@@ -1,0 +1,105 @@
+{% import "macros.html.twig" as macros %}
+{% extends 'base.html.twig' %}
+
+{% block meta_title "Plan du site | Elao" %}
+{% block meta_description "Toutes les pages du site Elao, organisées par rubrique." %}
+
+{% block content %}
+    <div class="container">
+        {{ macros.breadcrumb([
+            { path: path('homepage'), label: 'Accueil' },
+            { path: '#', label: "Plan du site" },
+        ]) }}
+
+        <h1>Plan du site</h1>
+        <p>Toutes les rubriques du site, avec leurs pages. Le blog compte {{ blogCategories|length }} rubriques&nbsp;: elles mènent à l'ensemble des articles.</p>
+
+        {#
+            Chaque rubrique est une `<nav>` nommée : les lecteurs d'écran peuvent ainsi
+            sauter directement à celle qui les intéresse, au lieu de parcourir une liste
+            unique de plusieurs dizaines de liens.
+        #}
+        <div class="sitemap">
+            <nav class="sitemap__section" aria-labelledby="sitemap-services">
+                <h2 id="sitemap-services">Nos services</h2>
+                <ul>
+                    <li><a href="{{ path('services') }}">Tous nos services</a></li>
+                    <li><a href="{{ path('consulting') }}">Conseil et accompagnement</a></li>
+                    <li><a href="{{ path('application') }}">Application web et mobile</a></li>
+                    <li><a href="{{ path('hosting') }}">Hébergement</a></li>
+                    <li><a href="{{ path('ia') }}">Intelligence artificielle</a></li>
+                    <li><a href="{{ path('services_optimiser') }}">Optimiser</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-approach">
+                <h2 id="sitemap-approach">Notre démarche</h2>
+                <ul>
+                    <li><a href="{{ path('approach') }}">La démarche</a></li>
+                    <li><a href="{{ path('collaboration') }}">Collaboration</a></li>
+                    <li><a href="{{ path('methodology') }}">Méthodologie</a></li>
+                    <li><a href="{{ path('values') }}">Nos valeurs</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-case-studies">
+                <h2 id="sitemap-case-studies">Études de cas</h2>
+                <ul>
+                    <li><a href="{{ path('case_studies') }}">Toutes les études de cas</a></li>
+                    {% for caseStudy in caseStudies %}
+                        <li><a href="{{ path('case_study', { caseStudy: caseStudy.slug }) }}">{{ caseStudy.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-blog">
+                <h2 id="sitemap-blog">Blog</h2>
+                <ul>
+                    <li><a href="{{ path('blog') }}">Tous les articles</a></li>
+                    {% for category in blogCategories %}
+                        <li><a href="{{ path('blog_articles_from_path', { path: category }) }}">{{ category|u.camel.title }}</a></li>
+                    {% endfor %}
+                    <li><a href="{{ path('blog_rss') }}">Flux RSS</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-team">
+                <h2 id="sitemap-team">L'équipe</h2>
+                <ul>
+                    <li><a href="{{ path('team') }}">Toute l'équipe</a></li>
+                    {% for member in members %}
+                        <li><a href="{{ path('team_member', { member: member.slug }) }}">{{ member.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-jobs">
+                <h2 id="sitemap-jobs">Nous rejoindre</h2>
+                <ul>
+                    <li><a href="{{ path('carriere') }}">Page carrière</a></li>
+                    <li><a href="{{ path('jobs') }}">Nos offres</a></li>
+                    {% for job in jobs %}
+                        <li><a href="{{ path('job', { job: job.slug }) }}">{{ job.title|join(' ') }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-resources">
+                <h2 id="sitemap-resources">Ressources</h2>
+                <ul>
+                    <li><a href="{{ path('glossary') }}">Glossaire</a></li>
+                    <li><a href="{{ path('elaomojis') }}">Elaomojis</a></li>
+                </ul>
+            </nav>
+
+            <nav class="sitemap__section" aria-labelledby="sitemap-misc">
+                <h2 id="sitemap-misc">Informations</h2>
+                <ul>
+                    <li><a href="{{ path('contact') }}">Contact</a></li>
+                    <li><a href="{{ path('legal') }}">Mentions légales</a></li>
+                    <li><a href="{{ path('privacy') }}">Protection des données</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+{% endblock %}

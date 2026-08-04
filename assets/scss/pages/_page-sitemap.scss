@@ -1,0 +1,37 @@
+// Plan du site (WCAG 2.4.5 / RGAA 12.7).
+.sitemap {
+  margin: 40px 0 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.sitemap__section {
+  h2 {
+    margin-bottom: 15px;
+    font-family: 'faktum bold';
+    font-size: 24px;
+    color: $color-primary;
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    // Les liens de plan du site sont énumérés hors prose : le soulignement est le
+    // seul indice non chromatique qui les distingue (WCAG 1.4.1).
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .sitemap {
+    gap: 30px;
+  }
+}

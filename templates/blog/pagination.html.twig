@@ -10,25 +10,39 @@ Requires:
 {% set routeParams = routeParams ?? {} %}
 
 {% if maxPage != 1 %}
-    <ul class="pagination">
-        <li class="pagination__item pagination__item--nav">
-            <a href="{{ previousPage == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: previousPage })) }}">
-                <i class="icon icon--chevron-left" aria-hidden="true"></i>
-                <span class="screen-reader">Page précédente</span>
-            </a>
-        </li>
-        {% for number in 1..maxPage %}
-        <li class="pagination__item {{ page == number ? 'pagination__item--active' }}">
-            <a href="{{ number == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: number })) }}">
-                {{ number }}
-            </a>
-        </li>
-        {% endfor %}
-        <li class="pagination__item pagination__item--nav">
-            <a href="{{ path(route, routeParams|merge({ page: nextPage })) }}">
-                <i class="icon icon--chevron-right" aria-hidden="true"></i>
-                <span class="screen-reader">Page suivante</span>
-            </a>
-        </li>
-    </ul>
+    {# `<nav>` nommée : la pagination était une simple `<ul>`, donc ni identifiable
+       comme zone de navigation ni distinguable du menu principal (RGAA 12.6). #}
+    <nav aria-label="Pagination">
+        <ul class="pagination">
+            {# Le premier et le dernier lien mènent à la page courante quand on est déjà
+               à une extrémité : `aria-disabled` le signale sans retirer le focus, ce qui
+               ferait disparaître un arrêt de tabulation en cours de navigation. #}
+            <li class="pagination__item pagination__item--nav">
+                <a href="{{ previousPage == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: previousPage })) }}"
+                   {% if page == minPage %}aria-disabled="true"{% endif %}>
+                    <i class="icon icon--chevron-left" aria-hidden="true"></i>
+                    <span class="screen-reader">Page précédente</span>
+                </a>
+            </li>
+            {% for number in 1..maxPage %}
+                <li class="pagination__item {{ page == number ? 'pagination__item--active' }}">
+                    {# `aria-current="page"` : la page courante n'était signalée que par
+                       une classe CSS, donc uniquement à l'œil. Le libellé explicite
+                       évite par ailleurs une liste de liens nommés « 1, 2, 3 ». #}
+                    <a href="{{ number == minPage ? path(minPageRoute, routeParams) : path(route, routeParams|merge({ page: number })) }}"
+                       {% if page == number %}aria-current="page"{% endif %}
+                       aria-label="Page {{ number }}{{ page == number ? ' (page courante)' }}">
+                        {{ number }}
+                    </a>
+                </li>
+            {% endfor %}
+            <li class="pagination__item pagination__item--nav">
+                <a href="{{ path(route, routeParams|merge({ page: nextPage })) }}"
+                   {% if page == maxPage %}aria-disabled="true"{% endif %}>
+                    <i class="icon icon--chevron-right" aria-hidden="true"></i>
+                    <span class="screen-reader">Page suivante</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 {% endif %}

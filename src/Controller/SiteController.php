@@ -115,4 +115,41 @@ class SiteController extends AbstractController
     {
         return $this->render('site/social.html.twig');
     }
+
+    /**
+     * Plan du site — WCAG 2.4.5 (Accès multiples) / RGAA 12.7.
+     *
+     * À ne pas confondre avec le `sitemap.xml` que Stenope génère déjà : celui-ci
+     * s'adresse aux robots, celui-là aux humains. Le critère demande un second moyen
+     * d'atteindre chaque page, en plus de la navigation principale.
+     *
+     * Les collections sont chargées avec les mêmes filtres et le même tri que leurs
+     * pages d'index respectives, pour que le plan reflète ce que l'on trouve
+     * réellement en naviguant. Les 164 articles ne sont volontairement pas listés :
+     * un plan du site donne la structure, pas un index exhaustif — on s'arrête aux
+     * 7 rubriques du blog.
+     */
+    #[Route('/plan-du-site', name: 'sitemap')]
+    public function sitemap(ContentManagerInterface $manager): Response
+    {
+        $articles = $manager->getContents(Article::class, ['date' => false]);
+
+        // Rubriques du blog déduites du premier segment de slug (`dev/mon-article`),
+        // comme le fait la route `blog_articles_from_path`.
+        $categories = [];
+        foreach ($articles as $article) {
+            $segments = explode('/', $article->slug);
+            if (\count($segments) > 1) {
+                $categories[$segments[0]] = true;
+            }
+        }
+        ksort($categories);
+
+        return $this->render('site/sitemap.html.twig', [
+            'blogCategories' => array_keys($categories),
+            'caseStudies' => $manager->getContents(CaseStudy::class, ['date' => false], ['enabled' => true]),
+            'members' => $manager->getContents(Member::class, ['name' => true], ['active' => true, 'meta' => false]),
+            'jobs' => $manager->getContents(Job::class, ['date' => false], ['active' => true]),
+        ]);
+    }
 }

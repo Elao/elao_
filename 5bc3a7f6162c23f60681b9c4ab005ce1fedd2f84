@@ -1,0 +1,28 @@
+---------------------------------------------------------------------------
+
+by Le-Polemil at 2026-07-28T12:08:25Z
+
+## Deux correctifs suite à la relecture manuelle
+
+**1. Couleur du lien d'évitement écrasée par la cascade** (`73094f1`)
+
+`generic/_a.scss:9-13` pose `a:hover, a:active, a:focus { color: $color-dark }`. Spécificité (0,1,1) contre (0,1,0) pour `.skip-link` — et comme le lien n'est visible **qu'au focus**, son `color: #fff` n'était **jamais** appliqué : il s'affichait à **1,21:1**. Corrigé en posant la couleur sur l'état.
+
+Le fond passe aussi de `$color-primary` à `$color-brand` (#ff4345), avec **`font-size: 24px`** : blanc sur ce rouge ne donne que 3,42:1, sous les 4,5:1 de 1.4.3 ; à 24px le texte relève du « grand texte », seuil 3:1. **Le 24px est une contrainte de conformité, pas un choix esthétique** — c'est commenté dans le fichier.
+
+**2. Bouton « Échangeons » à 1,21:1** (`f1e4042`)
+
+Trouvé en relecture sur `/nos-services/ia`. Exactement la même classe de bug :
+
+```scss
+.brick-conception a { color: #fff; }        // (0,1,1)
+.btn--secondary    { color: $color-brand; } // (0,1,0) — perd
+```
+
+`.btn--secondary` change fond **et** texte ensemble ; la règle de brique force le blanc sans toucher le fond. **Préexistant** — reproduit à l'identique sur www.elao.com — et **absent de la check-list RGAA**. Une seule page concernée sur les 607 du build. Corrigé par `a:not(.btn)`, retour à 4,26:1.
+
+---
+
+**Ce que ça révèle** : le dépôt a un problème systémique de règles `a` larges qui battent les composants par spécificité. Deux occurrences en une session, dont une vivante en production depuis un moment. **Suggestion pour PR C** : commencer par un audit de ces règles plutôt que par les contrastes un par un.
+
+Points de test 4, 5 et 6 par ailleurs levés : l'anneau de la galerie n'est pas écrêté, l'anneau au clic sur `<select>` est le comportement natif attendu, et l'aperçu de signature n'est pas focalisable (seuls les 2 liens qu'il contient le sont, avec l'anneau natif dû au `all: revert`).

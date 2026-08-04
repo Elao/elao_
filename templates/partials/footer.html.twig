@@ -34,25 +34,25 @@
                 <ul>
                     <li>
                         <a href="{{ site.social.linkedin }}" target="_blank">
-                            <i class="icon icon--linkedin"></i>
+                            <i class="icon icon--linkedin" aria-hidden="true"></i>
                             Linkedin
                         </a>
                     </li>
                     <li>
                         <a href="{{ site.social.bluesky }}" target="_blank">
-                            <i class="icon icon--bluesky"></i>
+                            <i class="icon icon--bluesky" aria-hidden="true"></i>
                             Bluesky
                         </a>
                     </li>
                     <li>
                         <a href="{{ site.social.twitter }}" target="_blank">
-                            <i class="icon icon--x"></i>
+                            <i class="icon icon--x" aria-hidden="true"></i>
                             X
                         </a>
                     </li>
                     <li>
                         <a href="{{ site.social.github }}" target="_blank">
-                            <i class="icon icon--github"></i>
+                            <i class="icon icon--github" aria-hidden="true"></i>
                             Github
                         </a>
                     </li>
@@ -82,7 +82,13 @@
             <a href="{{ path('sitemap') }}">Plan du site</a>
             <a href="{{ path('legal') }}">Mentions légales</a>
             <a href="{{ path('privacy') }}">Protection des données</a>
-            <a id="see" href="#ssss">🐍</a>
+            {# `<button>` et non `<a>` : ce déclencheur ouvre l'easter egg via JS
+               (`app.js`, `getElementById('see')`), il ne mène nulle part — `#ssss`
+               n'existe pas. Le nom accessible est obligatoire sur un contrôle
+               focalisable (WCAG 4.1.2) ; l'émoji seul n'en fournit pas. #}
+            <button type="button" id="see" class="see-trigger" aria-label="Easter egg : lancer le jeu">
+                <span aria-hidden="true">🐍</span>
+            </button>
         </section>
     </div>
 </footer>

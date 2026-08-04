@@ -72,8 +72,23 @@
   border-top: solid 3px $color-secondary;
 
   span,
-  a {
+  a,
+  .see-trigger {
     margin: 0 30px;
+  }
+
+  // Le déclencheur de l'easter egg est passé de `<a>` à `<button>` pour porter un
+  // nom accessible : on neutralise les styles natifs du bouton pour conserver le
+  // rendu d'origine. Pas d'`outline: none` ici, l'anneau de focus doit rester.
+  .see-trigger {
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
 }
 
@@ -131,7 +146,8 @@
     flex-direction: column;
 
     span,
-    a {
+    a,
+    .see-trigger {
       margin: 0 0 10px;
     }
   }

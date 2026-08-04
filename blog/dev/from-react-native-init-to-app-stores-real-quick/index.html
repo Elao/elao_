@@ -68,9 +68,9 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/build/app.8e73be76.css">
+                    <link rel="stylesheet" href="/elao_/build/app.641ac71d.css">
         
-                        <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/862.0c910c82.js" defer></script><script src="/elao_/build/app.05db16c8.js" defer></script>
+                        <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/637.52390a93.js" defer></script><script src="/elao_/build/app.3aa3109e.js" defer></script>
 
                     
 
@@ -101,6 +101,7 @@
     </head>
     <body
         data-controller="swup-plugins symfony--ux-swup--swup swup-matomo" data-symfony--ux-swup--swup-containers-value="&#x5B;&quot;&#x23;main&quot;,&quot;&#x23;nav&quot;&#x5D;" data-symfony--ux-swup--swup-cache-value="true" data-symfony--ux-swup--swup-animate-history-browsing-value="true" data-symfony--ux-swup--swup-debug-value="false" data-symfony--ux-swup--swup-link-selector-value="a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;_profiler&quot;&#x5D;&#x29;,a&#x5B;href&#x5E;&#x3D;&quot;&#x2F;&quot;&#x5D;&#x3A;not&#x28;&#x5B;data-no-swup&#x5D;&#x29;&#x3A;not&#x28;&#x5B;target&#x3D;&quot;_blank&quot;&#x5D;&#x29;&#x3A;not&#x28;a&#x5B;href&#x5E;&#x3D;&quot;https&#x3A;&#x2F;&#x2F;elao.github.io&#x2F;elao_&#x2F;_profiler&quot;&#x5D;&#x29;" data-swup-matomo-enabled-value="false">
+                <a class="skip-link" href="#main">Aller au contenu principal</a>
                     <header id="nav" class="header">
                 <div class="container">
                     <!--
@@ -233,7 +234,7 @@
                         </button>
                                     </div>
             </header>
-                <main id="main">
+                        <main id="main" tabindex="-1">
                 <div class="container">
                                 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
             <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -414,7 +415,7 @@
                             </ol>
         
         <div class="article-content">
-            <main class="article-content__main">
+            <div class="article-content__main">
 
                 
                 
@@ -744,7 +745,7 @@ Run the app on any simulated or real android device found, as a release.</li>
 <p>Here's a working example of all we discussed above : <a href="https://github.com/Elao/AcmeApp" target="_blank">https://github.com/Elao/AcmeApp</a></p>
 <p><span class="side-note light">💡</span> <em>Note the handy <a href="https://github.com/Elao/AcmeApp/blob/master/Makefile" target="_blank">Makefile</a> that hides all complex build and release commands behind simple make tasks like:  <code class="code-inline" id="8bc7eb090ecf22d8475382f9253061d5">make run android</code> or <code class="code-inline" id="3a911a966cfb140fa8318a8d7959de55">make release-ios</code></em></p>
 <p>Also don't hesitate to reach out for help in the comment or on social medias.</p>
-                                                                </main>
+                                                                </div>
             <aside class="article-content__aside">
                             </aside>
         </div>
@@ -863,25 +864,25 @@ Run the app on any simulated or real android device found, as a release.</li>
                 <ul>
                     <li>
                         <a href="https://www.linkedin.com/company/elao/" target="_blank">
-                            <i class="icon icon--linkedin"></i>
+                            <i class="icon icon--linkedin" aria-hidden="true"></i>
                             Linkedin
                         </a>
                     </li>
                     <li>
                         <a href="https://bsky.app/profile/elao.com" target="_blank">
-                            <i class="icon icon--bluesky"></i>
+                            <i class="icon icon--bluesky" aria-hidden="true"></i>
                             Bluesky
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/elao" target="_blank">
-                            <i class="icon icon--x"></i>
+                            <i class="icon icon--x" aria-hidden="true"></i>
                             X
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/elao" target="_blank">
-                            <i class="icon icon--github"></i>
+                            <i class="icon icon--github" aria-hidden="true"></i>
                             Github
                         </a>
                     </li>
@@ -906,9 +907,12 @@ Run the app on any simulated or real android device found, as a release.</li>
 
         <section class="footer__legals">
             <span>© 2005 - 2026 - ELAO - Tous droits réservés</span>
+                        <a href="/elao_/plan-du-site">Plan du site</a>
             <a href="/elao_/legal">Mentions légales</a>
             <a href="/elao_/confidentialite">Protection des données</a>
-            <a id="see" href="#ssss">🐍</a>
+                        <button type="button" id="see" class="see-trigger" aria-label="Easter egg : lancer le jeu">
+                <span aria-hidden="true">🐍</span>
+            </button>
         </section>
     </div>
 </footer>

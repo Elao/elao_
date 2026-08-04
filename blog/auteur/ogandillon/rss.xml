@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/ogandillon</link>
-        <pubDate>Wed, 22 Jul 2026 15:06:08 +0000</pubDate>
+        <pubDate>Tue, 04 Aug 2026 14:38:25 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -18,7 +18,26 @@
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/ogandillon/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
-                <title>Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH</title>
+                <title>Construire la fonction RH d&#039;une TPE : par où commencer ? (épisode 2)</title>
+                <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ L&#039;administratif RH, c&#039;est comme les fondations d&#039;une maison : invisible une fois qu&#039;elle est construite, mais tout repose dessus. Épisode 2 : comment on a solidifié ce socle chez Elao, entre conformité et digitalisation. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/elao/rh-tpe-ep-02-par-ou-commencer</guid>
+                <link>https://elao.github.io/elao_/blog/elao/rh-tpe-ep-02-par-ou-commencer</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/elao/rh-tpe-oceane/episode-2-thumbnail.jpg/674a9331ae49ac9f17139ebc77f3f335.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Construire la fonction RH d&#039;une TPE : par où commencer ? (épisode 2)</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH (épisode 1)</title>
                 <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
                 <description>
                     <![CDATA[ Comment on a construit la fonction RH d&#039;une boîte de 10 personnes : le point de départ ]]>
@@ -30,7 +49,7 @@
                     width="1200"
                     height="627"
                 >
-                    <media:description type="plain">Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH</media:description>
+                    <media:description type="plain">Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH (épisode 1)</media:description>
                                     </media:content>
                                     <category>rh</category>
                                     <category>team</category>

@@ -13,6 +13,38 @@ credits:            { name: "Jon Tyson", url: "https://unsplash.com/@jontyson" }
 tags:               ["Tag 1", "Tag 2"]
 authors:            ["adefrance","tjarrand", "cmozzati"]
 tweetId: "1369737350830583811"
+
+# Notes de bas d'article. Le rendu de ces deux groupes est visible en fin de page.
+#
+# Écriture courte, si un seul bloc suffit : une liste de notes, sans `title` ni
+# `notes:`, titrée « Notes et références » par défaut.
+#
+#footnotes:
+#  - text:   "Conventions typographiques"                     # seul champ requis
+#    url:    "https://fr.wikipedia.org/wiki/…"                # facultatif : sans lui, la note reste du texte brut
+#    source: "Wikipédia"                                      # facultatif : affiché après le texte, séparé d'un tiret
+#    key:    "typo"                                           # facultatif : autorise l'appel [^typo]
+#
+# Écriture groupée, utilisée ci-dessous : plusieurs blocs titrés.
+footnotes:
+  - title: "Sources"
+    key:   "sources"       # facultatif : autorise les appels préfixés [^sources:…]
+    notes:
+      - { key: "typo", text: "Conventions typographiques", url: "https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques", source: "Wikipédia" }
+      - { key: "rgaa", text: "Référentiel général d'amélioration de l'accessibilité", url: "https://accessibilite.numerique.gouv.fr/", source: "DINUM" }
+  - title: "Pour aller plus loin"
+    key:   "lectures"
+    notes:
+      - { key: "median", text: "« Féminiser au point médian »", url: "http://romy.tetue.net/feminiser-au-point-median" }
+      - { key: "typochef", text: "TypoChef", url: "https://twitter.com/typochef", source: "Twitter" }
+#
+# La numérotation est continue d'un groupe à l'autre : les titres découpent
+# l'affichage, ils ne renumérotent pas. Sans quoi deux exposants « [1] »
+# cohabiteraient dans l'article sans qu'on sache lequel suivre.
+#
+# Les clés survivent au réordonnancement des listes, pas les numéros.
+# Un appel qui ne correspond à aucune note est laissé tel quel dans le texte,
+# plutôt que de produire un lien vers une ancre inexistante.
 ---
 
 ## Style
@@ -78,6 +110,40 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 !!! danger "Titre"
     Le même [composant](https://www.elao.com) dans le style "danger".
+
+### Les notes de bas d'article
+
+Les notes se déclarent dans le header de l'article et s'affichent en fin de page, sous leur titre. On les appelle depuis le texte avec `[^…]`, ce qui produit un exposant lié à la note — et un lien de retour vers le point d'appel.
+
+Quatre façons d'appeler une note, toutes rendues ici : par son numéro absolu[^1], par sa clé[^rgaa], par sa position dans un groupe[^lectures:1], ou par sa clé dans un groupe[^lectures:typochef].
+
+```md
+par son numéro absolu[^1], par sa clé[^rgaa],
+par sa position dans un groupe[^lectures:1], ou par sa clé dans un groupe[^lectures:typochef].
+```
+
+Remarquez que `[^lectures:1]` s'affiche `[3]` : la numérotation est continue d'un groupe à l'autre. Les titres découpent l'affichage, ils ne renumérotent pas — sinon deux exposants `[1]` cohabiteraient sans qu'on sache lequel suivre.
+
+Préférez les clés aux numéros : elles survivent au réordonnancement de la liste. Un appel qui ne correspond à aucune note reste affiché tel quel plutôt que de pointer vers une ancre inexistante.
+
+```yaml
+footnotes:
+  - title: "Sources"        # facultatif : « Notes et références » par défaut
+    key:   "sources"        # facultatif : autorise les appels [^sources:…]
+    notes:
+      - { key: "typo", text: "Conventions typographiques", url: "https://…", source: "Wikipédia" }
+  - title: "Pour aller plus loin"
+    key:   "lectures"
+    notes:
+      - { key: "median", text: "« Féminiser au point médian »", url: "http://…" }
+```
+
+Si un seul bloc suffit, une simple liste de notes fait l'affaire : ni `title` ni `notes:`, et le titre par défaut s'applique.
+
+```yaml
+footnotes:
+  - { text: "Conventions typographiques", url: "https://…", source: "Wikipédia" }
+```
 
 ### Les images
 

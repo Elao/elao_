@@ -178,29 +178,31 @@
 
                 {{ article.content|raw }}
                 {% block footnotes %}
-                    {% if article.footnotes %}
+                    {% for group in article.footnotes|default([]) %}
+                        {% set title_id = 'footnotes-title-' ~ loop.index %}
                         {# `h2` et non `h1` : le titre de l'article porte déjà le `h1` de la page. #}
-                        <section class="footnotes" aria-labelledby="footnotes-title">
-                            <h2 class="footnotes__title" id="footnotes-title">Notes</h2>
-                            <ol class="footnotes__list">
-                                {% for footnote in article.footnotes %}
+                        <section class="footnotes" aria-labelledby="{{ title_id }}">
+                            <h2 class="footnotes__title" id="{{ title_id }}">{{ group.title }}</h2>
+                            {# La numérotation est continue d'un groupe à l'autre, d'où `start`. #}
+                            <ol class="footnotes__list" start="{{ group.notes|first.number }}">
+                                {% for note in group.notes %}
                                     {# `tabindex` : sans lui, l'ancre ne déplacerait pas le focus sur un `li`. #}
-                                    <li class="footnotes__item" id="footnote-{{ loop.index }}" tabindex="-1">
-                                        {% if footnote.url|default %}
-                                            <a href="{{ footnote.url }}">{{ footnote.text }}</a>
+                                    <li class="footnotes__item" id="footnote-{{ note.number }}" tabindex="-1">
+                                        {% if note.url %}
+                                            <a href="{{ note.url }}">{{ note.text }}</a>
                                         {% else %}
-                                            {{ footnote.text }}
+                                            {{ note.text }}
                                         {% endif %}
-                                        {%- if footnote.source|default %} – {{ footnote.source }}{% endif %}
-                                        <a class="footnotes__backref" href="#footnote-ref-{{ loop.index }}">
-                                            <span class="screen-reader">Retour à l’appel de la note {{ loop.index }}</span>
+                                        {%- if note.source %} – {{ note.source }}{% endif %}
+                                        <a class="footnotes__backref" href="#footnote-ref-{{ note.number }}">
+                                            <span class="screen-reader">Retour à l’appel de la note {{ note.number }}</span>
                                             <span aria-hidden="true">↩</span>
                                         </a>
                                     </li>
                                 {% endfor %}
                             </ol>
                         </section>
-                    {% endif %}
+                    {% endfor %}
                 {% endblock %}
                 {% block credits %}
                     {% if article.credits %}

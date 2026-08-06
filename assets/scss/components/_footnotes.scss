@@ -8,6 +8,14 @@
   line-height: 1.5;
 }
 
+// Le filet marque la sortie du corps de l'article : un seul, quel que soit le
+// nombre de groupes. Les suivants s'enchaînent sous leur propre titre.
+.footnotes + .footnotes {
+  margin-top: 30px;
+  padding-top: 0;
+  border-top: none;
+}
+
 .footnotes__title {
   margin: 0 0 20px;
   padding: 0;

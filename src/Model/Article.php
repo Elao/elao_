@@ -77,11 +77,19 @@ class Article
     public ?array $credits = null;
 
     /**
-     * Notes de bas d'article, rendues par le bloc "footnotes" du template.
-     * Elles sont référencées dans le contenu par la syntaxe `[^n]`, où `n` est
-     * la position (1-indexée) de la note dans ce tableau.
+     * Notes de bas d'article, rendues par le bloc "footnotes" du template et
+     * référencées dans le contenu par la syntaxe `[^…]`.
      *
-     * @var list<array{text: string, url?: string|null, source?: string|null}>|null
+     * Le front-matter accepte soit une liste de notes — groupe unique, titré
+     * "Notes et références" — soit une liste de groupes titrés, chacun portant
+     * une clé et sa propre liste `notes`. Les deux écritures sont ramenées à la
+     * seconde par le processor, qui numérote les notes en continu.
+     *
+     * @var list<array{
+     *     title: string,
+     *     key: string|null,
+     *     notes: list<array{number: int, key: string|null, text: string, url: string|null, source: string|null}>,
+     * }>|null
      *
      * @see \App\Stenope\Processor\HtmlFootnotesProcessor
      */

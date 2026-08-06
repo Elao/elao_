@@ -77,6 +77,17 @@ class Article
     public ?array $credits = null;
 
     /**
+     * Notes de bas d'article, rendues par le bloc "footnotes" du template.
+     * Elles sont référencées dans le contenu par la syntaxe `[^n]`, où `n` est
+     * la position (1-indexée) de la note dans ce tableau.
+     *
+     * @var list<array{text: string, url?: string|null, source?: string|null}>|null
+     *
+     * @see \App\Stenope\Processor\HtmlFootnotesProcessor
+     */
+    public ?array $footnotes = null;
+
+    /**
      * Automatically generated
      *
      * @see TableOfContentProcessor

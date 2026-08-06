@@ -42,6 +42,10 @@ services:
     App\Stenope\Processor\HtmlAnchorProcessor:
         tags: [{ name: stenope.processor, priority: -20 }]
 
+    # Turns the `[^n]` markers into links towards the footnotes rendered by the article template.
+    App\Stenope\Processor\HtmlFootnotesProcessor:
+        tags: [{ name: stenope.processor, priority: -10 }]
+
     App\Stenope\Processor\GithubEditLinkProcessor:
         $repository: '%env(APP_GITHUB_REPO)%'
         $reference: '%env(APP_GITHUB_REF)%'

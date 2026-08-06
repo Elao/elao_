@@ -45,6 +45,20 @@
   td a {
     text-decoration: underline;
   }
+
+  // Appels de notes : `line-height: 0` évite que l'exposant élargisse l'interlignage.
+  // Pas de `position: relative` ici : cela créerait un bloc conteneur pour le
+  // `.screen-reader` en position absolue qu'il contient.
+  sup.footnote-ref {
+    vertical-align: super;
+    font-size: .7em;
+    line-height: 0;
+    margin-left: .2em;
+    margin-right: .1em;
+    a {
+      text-decoration: none !important;
+    }
+  }
 }
 
 @media (max-width: $screen-md) {

@@ -177,6 +177,31 @@
                 {% endif %}
 
                 {{ article.content|raw }}
+                {% block footnotes %}
+                    {% if article.footnotes %}
+                        {# `h2` et non `h1` : le titre de l'article porte déjà le `h1` de la page. #}
+                        <section class="footnotes" aria-labelledby="footnotes-title">
+                            <h2 class="footnotes__title" id="footnotes-title">Notes</h2>
+                            <ol class="footnotes__list">
+                                {% for footnote in article.footnotes %}
+                                    {# `tabindex` : sans lui, l'ancre ne déplacerait pas le focus sur un `li`. #}
+                                    <li class="footnotes__item" id="footnote-{{ loop.index }}" tabindex="-1">
+                                        {% if footnote.url|default %}
+                                            <a href="{{ footnote.url }}">{{ footnote.text }}</a>
+                                        {% else %}
+                                            {{ footnote.text }}
+                                        {% endif %}
+                                        {%- if footnote.source|default %} – {{ footnote.source }}{% endif %}
+                                        <a class="footnotes__backref" href="#footnote-ref-{{ loop.index }}">
+                                            <span class="screen-reader">Retour à l’appel de la note {{ loop.index }}</span>
+                                            <span aria-hidden="true">↩</span>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ol>
+                        </section>
+                    {% endif %}
+                {% endblock %}
                 {% block credits %}
                     {% if article.credits %}
                         <div class="article-credits">

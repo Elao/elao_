@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/696/blog</link>
-        <pubDate>Thu, 06 Aug 2026 15:45:38 +0000</pubDate>
+        <pubDate>Thu, 06 Aug 2026 16:38:10 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/696/apple-touch-icon.png</url>
@@ -197,7 +197,7 @@
                                             </item>
                     <item>
                 <title>Paralléliser des tâches avec Claude Code : comparatif de 4 approches</title>
-                <pubDate>Thu, 06 Aug 2026 15:42:11 +0000</pubDate>
+                <pubDate>Thu, 06 Aug 2026 16:33:14 +0000</pubDate>
                 <description>
                     <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : 
 séquentielle, batch, Agent Teams et Task Worker Pool.

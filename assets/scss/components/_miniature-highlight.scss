@@ -1,8 +1,12 @@
 @use "sass:color";
 
+/*
+ * Même principe que `.article-banner` : la vignette et le bloc de contenu s'empilent dans le flux,
+ * ce dernier étant remonté de `$article-highlight-overlap` pour chevaucher l'image.
+ * La hauteur de l'ensemble suit donc le contenu, sans réservation d'espace en dur.
+ */
 .miniature-highlight {
   margin: 0 0 70px;
-  padding-bottom: 190px;
   width: 100%;
   position: relative;
   display: flex;
@@ -17,7 +21,7 @@
 
 .miniature-highlight__image {
   width: calc(100% - 110px);
-  height: 480px;
+  height: $article-highlight-cover-height;
   border: none;
   overflow: hidden;
 
@@ -56,9 +60,9 @@
 }
 
 .miniature-highlight__content {
-  position: absolute;
-  top: 370px;
-  right: 0;
+  margin-top: -$article-highlight-overlap;
+  align-self: flex-end;
+  max-width: 100%;
   display: flex;
   align-items: flex-start;
 
@@ -73,8 +77,8 @@
   .details {
     padding: 50px 60px;
     width: 730px;
+    // Hauteur historique conservée comme plancher : un contenu plus long agrandit le bloc.
     min-height: 300px;
-    max-height: 400px;
     background: $color-brand;
     color: #fff;
     border: none;
@@ -91,6 +95,12 @@
       background: color.adjust($color-brand, $lightness: -2%);
     }
 
+    // Garde-fou : un mot très long (URL, nom de techno) ne doit pas déborder du bloc.
+    .title,
+    p {
+      overflow-wrap: break-word;
+    }
+
     .title {
       margin: 0 0 20px;
       font-family: 'antikor bold';
@@ -98,17 +108,20 @@
       color: #fff;
       line-height: normal !important;
     }
+
+    // Cf. `.article-header` : la marge basse du dernier paragraphe déséquilibrerait le bloc.
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media (max-width: $screen-md) {
   .miniature-highlight {
-    padding-bottom: 240px;
-
     .miniature-highlight__content {
       .details {
         width: 550px;
-        height: 350px;
+        min-height: 350px;
       }
     }
   }
@@ -125,6 +138,9 @@
 
     .miniature-highlight__content {
       width: 100%;
+      // L'image est masquée : plus de chevauchement à compenser.
+      margin-top: 0;
+      align-self: stretch;
       position: relative;
       top: unset;
       right: unset;

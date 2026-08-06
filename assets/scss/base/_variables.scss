@@ -16,6 +16,13 @@ $screen-sm: 995px;  // tablet
 $screen-xs: 760px;  // phone
 $screen-xxs: 380px; // small phone
 
+// Bandeau d'article (page article et article mis en avant du listing) :
+// hauteur de la couverture et hauteur dont le bloc titre/description la chevauche.
+$article-banner-cover-height: 450px;
+$article-banner-overlap: 40px;
+$article-highlight-cover-height: 480px;
+$article-highlight-overlap: 110px;
+
 // Code theme
 $code-font: monospace;
 $code-background: darken(#0d3a5a, 10%);

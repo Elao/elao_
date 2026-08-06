@@ -51,7 +51,8 @@
 
 @media (max-width: $screen-xs) {
   .article-tag-list {
-    margin: 25px 0 10px;
+    // 55px = les 25px d'origine + la marge basse de la description, neutralisée dans `.article-header`.
+    margin: 55px 0 10px;
     position: static;
     transform: none;
     width: 100%;

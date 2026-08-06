@@ -6,7 +6,7 @@ on:
     - cron: '30 7 * * 1,2,3,4,5' # At 08:30 (UTC, => 08:30 / 09:30 in Europe/Paris depending on the DST), each day of the week.
   push:
     branches:
-      - master
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

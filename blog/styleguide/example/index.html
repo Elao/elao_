@@ -77,7 +77,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/build/app.a1de9d2f.css">
+                    <link rel="stylesheet" href="/elao_/build/app.9996c613.css">
         
                         <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/637.52390a93.js" defer></script><script src="/elao_/build/app.3aa3109e.js" defer></script>
 
@@ -377,6 +377,9 @@
                                             <a href="#les-elements-typographiques">Les éléments typographiques</a>
                                         </li>
                                                                         <li>
+                                            <a href="#les-notes-de-bas-d-article">Les notes de bas d&#039;article</a>
+                                        </li>
+                                                                        <li>
                                             <a href="#les-images">Les images</a>
                                         </li>
                                                                         <li>
@@ -486,6 +489,25 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     Le même <a href="https://www.elao.com" target="_blank">composant</a> dans le style "danger".
 </p>
 </div>
+<h3 id="les-notes-de-bas-d-article" class="anchor-title"><a href="#les-notes-de-bas-d-article">Les notes de bas d'article</a></h3>
+<p>Les notes se déclarent dans le header de l'article et s'affichent en fin de page, sous leur titre. On les appelle depuis le texte avec <code class="code-inline" id="c0cd28b5ecda7ed5a6a9dd73cbd9b96a">[^…]</code>, ce qui produit un exposant lié à la note — et un lien de retour vers le point d'appel.</p>
+<p>Quatre façons d'appeler une note, toutes rendues ici : par son numéro absolu<sup class="footnote-ref"><a href="#footnote-1" id="footnote-ref-1"><span class="screen-reader">Voir la note </span><span aria-hidden="true">[</span>1<span aria-hidden="true">]</span></a></sup>, par sa clé<sup class="footnote-ref"><a href="#footnote-2" id="footnote-ref-2"><span class="screen-reader">Voir la note </span><span aria-hidden="true">[</span>2<span aria-hidden="true">]</span></a></sup>, par sa position dans un groupe<sup class="footnote-ref"><a href="#footnote-3" id="footnote-ref-3"><span class="screen-reader">Voir la note </span><span aria-hidden="true">[</span>3<span aria-hidden="true">]</span></a></sup>, ou par sa clé dans un groupe<sup class="footnote-ref"><a href="#footnote-4" id="footnote-ref-4"><span class="screen-reader">Voir la note </span><span aria-hidden="true">[</span>4<span aria-hidden="true">]</span></a></sup>.</p>
+<pre class="code-multiline language-md"><code class="language-md" id="b56c35bec58c6c45c9fdd60758838288">par son numéro absolu[^1], par sa clé[^rgaa],
+par sa position dans un groupe[^lectures:1], ou par sa clé dans un groupe[^lectures:typochef].</code></pre>
+<p>Remarquez que <code class="code-inline" id="31af428015086a8d93b447e2107eef84">[^lectures:1]</code> s'affiche <code class="code-inline" id="f2577a6fc29b900fe7d4c6321346be48">[3]</code> : la numérotation est continue d'un groupe à l'autre. Les titres découpent l'affichage, ils ne renumérotent pas — sinon deux exposants <code class="code-inline" id="35dba5d75538a9bbe0b4da4422759a0e">[1]</code> cohabiteraient sans qu'on sache lequel suivre.</p>
+<p>Préférez les clés aux numéros : elles survivent au réordonnancement de la liste. Un appel qui ne correspond à aucune note reste affiché tel quel plutôt que de pointer vers une ancre inexistante.</p>
+<pre class="code-multiline language-yaml"><code class="language-yaml" id="18f612f66b3c501cd92c745240fa3708"><span class="token key atrule">footnotes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Sources"</span>        <span class="token comment"># facultatif : « Notes et références » par défaut</span>
+    <span class="token key atrule">key</span><span class="token punctuation">:</span>   <span class="token string">"sources"</span>        <span class="token comment"># facultatif : autorise les appels [^sources:…]</span>
+    <span class="token key atrule">notes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> <span class="token string">"typo"</span><span class="token punctuation">,</span> <span class="token key atrule">text</span><span class="token punctuation">:</span> <span class="token string">"Conventions typographiques"</span><span class="token punctuation">,</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"https://…"</span><span class="token punctuation">,</span> <span class="token key atrule">source</span><span class="token punctuation">:</span> <span class="token string">"Wikipédia"</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">title</span><span class="token punctuation">:</span> <span class="token string">"Pour aller plus loin"</span>
+    <span class="token key atrule">key</span><span class="token punctuation">:</span>   <span class="token string">"lectures"</span>
+    <span class="token key atrule">notes</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> <span class="token string">"median"</span><span class="token punctuation">,</span> <span class="token key atrule">text</span><span class="token punctuation">:</span> <span class="token string">"« Féminiser au point médian »"</span><span class="token punctuation">,</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"http://…"</span> <span class="token punctuation">}</span></code></pre>
+<p>Si un seul bloc suffit, une simple liste de notes fait l'affaire : ni <code class="code-inline" id="d5d3db1765287eef77d7927cc956f50a">title</code> ni <code class="code-inline" id="0344c5998dc084e805b2ae6cf736e984">notes:</code>, et le titre par défaut s'applique.</p>
+<pre class="code-multiline language-yaml"><code class="language-yaml" id="98a5bc0bb48b86f50e53387642c05bd4"><span class="token key atrule">footnotes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">text</span><span class="token punctuation">:</span> <span class="token string">"Conventions typographiques"</span><span class="token punctuation">,</span> <span class="token key atrule">url</span><span class="token punctuation">:</span> <span class="token string">"https://…"</span><span class="token punctuation">,</span> <span class="token key atrule">source</span><span class="token punctuation">:</span> <span class="token string">"Wikipédia"</span> <span class="token punctuation">}</span></code></pre>
 <h3 id="les-images" class="anchor-title"><a href="#les-images">Les images</a></h3>
 <p>Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une légende, et si possible on crédite son auteur·ice.</p>
 <figure>
@@ -639,7 +661,45 @@ Sur PC : <kbd>Alt</kbd>+<kbd>0183</kbd> ou <kbd>Alt</kbd>+<kbd>00B7</kbd>.</p>
 <li>L'article <a href="http://romy.tetue.net/feminiser-au-point-median" target="_blank">« Féminiser au point médian »</a> ;</li>
 <li>Suivez <a href="https://twitter.com/typochef" target="_blank">TypoChef</a> sur Twitter.</li>
 </ul>
-                                                                                                                <div class="article-credits">
+                                                                                                            <section class="footnotes" aria-labelledby="footnotes-title-1">
+                            <h2 class="footnotes__title" id="footnotes-title-1">Sources</h2>
+                                                        <ol class="footnotes__list" start="1">
+                                                                                                        <li class="footnotes__item" id="footnote-1" tabindex="-1">
+                                                                                    <a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Conventions_typographiques">Conventions typographiques</a>
+                                         – Wikipédia                                        <a class="footnotes__backref" href="#footnote-ref-1">
+                                            <span class="screen-reader">Retour à l’appel de la note 1</span>
+                                            <span aria-hidden="true">↩</span>
+                                        </a>
+                                    </li>
+                                                                                                        <li class="footnotes__item" id="footnote-2" tabindex="-1">
+                                                                                    <a href="https://accessibilite.numerique.gouv.fr/">Référentiel général d&#039;amélioration de l&#039;accessibilité</a>
+                                         – DINUM                                        <a class="footnotes__backref" href="#footnote-ref-2">
+                                            <span class="screen-reader">Retour à l’appel de la note 2</span>
+                                            <span aria-hidden="true">↩</span>
+                                        </a>
+                                    </li>
+                                                            </ol>
+                        </section>
+                                                                                            <section class="footnotes" aria-labelledby="footnotes-title-2">
+                            <h2 class="footnotes__title" id="footnotes-title-2">Pour aller plus loin</h2>
+                                                        <ol class="footnotes__list" start="3">
+                                                                                                        <li class="footnotes__item" id="footnote-3" tabindex="-1">
+                                                                                    <a href="http://romy.tetue.net/feminiser-au-point-median">« Féminiser au point médian »</a>
+                                                                                <a class="footnotes__backref" href="#footnote-ref-3">
+                                            <span class="screen-reader">Retour à l’appel de la note 3</span>
+                                            <span aria-hidden="true">↩</span>
+                                        </a>
+                                    </li>
+                                                                                                        <li class="footnotes__item" id="footnote-4" tabindex="-1">
+                                                                                    <a href="https://twitter.com/typochef">TypoChef</a>
+                                         – Twitter                                        <a class="footnotes__backref" href="#footnote-ref-4">
+                                            <span class="screen-reader">Retour à l’appel de la note 4</span>
+                                            <span aria-hidden="true">↩</span>
+                                        </a>
+                                    </li>
+                                                            </ol>
+                        </section>
+                                                                                                <div class="article-credits">
                             Crédits: photo de couverture par
                                                             <a href="https://unsplash.com/@jontyson">
                                     Jon Tyson

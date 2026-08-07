@@ -2,8 +2,8 @@
 title: "À la rencontre d'Emmanuelle Aboaf, développeuse et conférencière en accessibilité web"
 date: '2026-08-10'
 lastModified: ~
-description: "Quel est l'impact d'un site non accessible pour les personnes handicapées ? Par quoi commencer pour intégrer l'accessibilité web à ses process ? Est-ce que l'IA peut nous aider dans la mise en conformité des sites ? Autant de sujet que nous avons abordé avec Emmanuelle Aboaf, à l'occasion de notre nouveau format : les Voix de notre veille."
-authors: [mzelboch, ogandillon]
+description: "Quel est l'impact d'un site non accessible pour les personnes handicapées ? Par quoi commencer pour intégrer l'accessibilité web à ses process ? Est-ce que l'IA peut nous aider dans la mise en conformité des sites ? Autant de sujets que nous avons abordé avec Emmanuelle Aboaf, à l'occasion de notre nouveau format : les voix de notre veille."
+authors: [equentin, eflahaut]
 tableOfContent: 2
 tags: [veille, a11y, inclusion]
 thumbnail: content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-d-emmanuel-aboaf/thumbnail.png
@@ -16,6 +16,9 @@ thumbnailResizeOptions:
     fit: fill
     bg: 1e7695
 footnotes:
+  - text: Référentiel général d’amélioration de l’accessibilité
+    url: https://accessibilite.numerique.gouv.fr/
+    source: Gouv.fr
   - text: Chronologie des évolutions réglementaires en matière d’accessibilité numérique en France
     url: https://access42.net/ressources/chronologie-evolutions-accessibilite-numerique-france/
     source: Access42
@@ -30,8 +33,8 @@ avec [Access 42](https://formations.access42.net/)) et donne aujourd'hui réguli
 L'accessibilité faisant partie des sujets qui nous paraissent particulièrement important, nous avons eu à coeur de
 rencontrer Emmanuelle que nous suivons depuis quelque temps à travers notre veille.
 
-Nous vous présentons donc à travers cet article les grands sujets que nous avons eu l'occasion d'aborder et ce que nous
-avons retenus !
+Nous vous présentons via cet article les grands sujets que nous avons eu l'occasion d'aborder et ce que nous avons
+retenus !
 
 ## Pourquoi l'accessibilité ?
 
@@ -60,7 +63,7 @@ Malheureusement, c'est le quotidien d'un grand nombre de personnes sur le web.
 Dans certaines formations, l'accessibilité est présentée comme utile à tous. Dans d'autres, l'accent est mis avant tout
 sur son impact positif pour les **personnes handicapées**. Nous avons voulu évoquer avec Emmanuelle la place des
 personnes handicapées dans ce process de l'accessibilité numérique en partant de son
-article ["Quand les innovations pensées pour les personnes handicapées deviennent universelles"](https://emmanuelle-aboaf.netlify.app/blog/article/quand-les-innovations-pensees-pour-les-personnes-handicapees-deviennent-universelles),
+article [« Quand les innovations pensées pour les personnes handicapées deviennent universelles »](https://emmanuelle-aboaf.netlify.app/blog/article/quand-les-innovations-pensees-pour-les-personnes-handicapees-deviennent-universelles),
 et plus spécifiquement de l'effet du **trottoir abaissé** pour tenter de répondre à cette question : <u>**en considérant
 l'accessibilité comme étant l'affaire de tous, ne mettons-nous pas encore une fois les personnes handicapées au second
 plan d'un sujet qui les concerne en premier lieu ?**</u>
@@ -88,10 +91,11 @@ place systématique des bonnes pratiques d'accessibilité web.
 
 L'accessibilité numérique peut, à première vue, sembler complexe à intégrer dans les process et peut représenter un
 effort considérable pour se mettre à niveau. Quand on ne connait pas vraiment le sujet, être en face de toutes les
-règles **RGAA** (Référentiel Général d'Amélioration de l'Accessibilité) peut être intimidant. Emmanuelle reconnait ainsi
-qu'appréhender cette centaine de critère peut être fastidieux et que certain d'entre eux ne sont pas toujours très
-compréhensibles. Mais lorsqu'on regarde de plus près, les erreurs les plus courantes sont assez simples à corriger, et
-une fois qu'on les a repérées, il est assez facile de les intégrer dans ses **process** **de développement accessible**.
+règles <abbr>**RGAA**</abbr> (Référentiel Général d'Amélioration de l'Accessibilité)[^1] peut être intimidant.
+Emmanuelle reconnait ainsi qu'appréhender cette centaine de critère peut être fastidieux et que certain d'entre eux ne
+sont pas toujours très compréhensibles. Mais lorsqu'on regarde de plus près, les erreurs les plus courantes sont assez
+simples à corriger, et une fois qu'on les a repérées, il est assez facile de les intégrer dans ses **process** **de
+développement accessible**.
 
 > Lorsque je fais des conférences et que je présente aux développeurs les 6 erreurs les plus courantes, qui sont les
 > plus faciles à corriger, ils sont stupéfaits car ils pensaient que c'était difficile à mettre en place. En fait, il y a
@@ -106,8 +110,8 @@ levier à activer.
 Embarquer l'ensemble des acteurs du projet est la seconde étape. L'accessibilité c'est l'affaire de tous : **le/la
 chef·fe de projet** qui va prendre en considération l'accessibilité dès la mise en place du projet, **le·s
 designeur·euses** qui vont intégrer les bonnes pratiques sur les maquettes, **le/la PO** qui va concevoir des tickets
-prenant en compte les critères d'accessibilités), **le·s développeur·euses** qui développent à partir des maquettes et
-tickets accessibles), les **QA/testeur·euses** qui vérifient la conformité.  
+prenant en compte les critères d'accessibilités, **le·s développeur·euses** qui développent à partir des maquettes et
+tickets accessibles, les **QA/testeur·euses** qui vérifient la conformité.  
 Enfin, intégrer l'accessibilité de manière concrète à ses process, c'est ce qui permettra à l'ensemble des équipes de
 mettre en place au fur et à mesure des **automatismes** afin que cela devienne naturel.
 
@@ -126,35 +130,33 @@ et des chances (texte fondateur sur le handicap).
 L'avancée de la France sur les questions d'accessibilité peine à se faire. En 2005, l'Etat s'était donné une échéance de
 dix ans pour rendre les **lieux publics accessibles**. En 2015, cet objectif n'a pas été atteint et une dérogation de
 dix années supplémentaire a été donnée. Sauf que l'année dernière, le constat est le même. Alors on continue d'avancer
-de dérogation en dérogation.  
+de dérogation en dérogation.
+
 Côté accessibilité web, en 20 ans, nous avons évolué pas à pas. Passée la loi du 11 février 2005, qui rend
 l'accessibilité numérique obligatoire pour les sites web du secteur public, il faudra attendre 2009 pour que les
 modalités d'application de la loi (RGAA) soient publiées. S'ensuivent ensuite plusieurs évolutions, avec l'extension de
 l'obligation légale à l'ensemble des sites de l'État et des collectivités territoriales, puis à une partie du secteur
 privé (en fonction de son chiffre d'affaires), jusqu'à concerner certains secteurs (banque, audiovisuel, e-commerce,
-téléphonie, etc.)[^1].
+téléphonie, etc.)[^2].
 Malgré ces évolutions, les entreprises françaises peinent à se conformer. Parmi les causes : le **facteur économique**.
 Les amendes en France sont dérisoires au regard du chiffre d'affaires des grandes entreprises, pour qui payer une amende
 coûte finalement moins cher, en temps et en argent, que de mettre leur site en conformité. La situation est ironique :
 la mise en conformité pèse ainsi davantage sur les petites structures, qui ont moins de moyens et de trafic, que sur les
 grandes.
 
-_La situation est ironique : la mise en conformité va peser ainsi davantage sur les petites structures, qui possèdent
-moins de moyens et de traffic, que sur les grandes._
-
 ### Zoom sur le Liquid Glass d'Apple
 
 Nous l'avons vu les GAFAM semblent très en avance sur le sujet de l'accessibilité par rapport à la France. Certaines
 grandes entreprises, comme **Apple**, ont notamment pris ce sujet au sérieux dans le développement de leur application.
-Cependant, comme l'évoque Emmanuelle dans son article [_"Comment ma cataracte a modifié mon approche de
-l'accessibilité"_](https://www.24joursdeweb.fr/2025/comment-ma-cataracte-a-modifie-mon-approche-de-l-accessibilite) il
-semble y avoir eu une régression importante de cette prise en considération de l'accessibilité, nottament avec la sortie
-de leur dernière interface sur iPhone : le **Liquid Glass**. Et la cause de cela se trouve être... **politique**.
-Emmanuelle nous explique que lors de son deuxième mandat, Donald Trump a décidé de supprimer le DEI (Diversity Equity
-and Inclusion - démarche organisationnelle favorisant la diversité, l'équité et l'inclusion). C'est une directive
-appliquée dans tous les services grâce à la loi ADA qui oblige les entreprises américaines à rendre accessible leurs
-produits de manière inclusive au risque d'être attaquée en justice. Les amendes étant très élevées, les entreprises
-jouaient le jeu.  
+Cependant, comme l'évoque Emmanuelle dans son
+article [« Comment ma cataracte a modifié mon approche de l'accessibilité »](https://www.24joursdeweb.fr/2025/comment-ma-cataracte-a-modifie-mon-approche-de-l-accessibilite)
+il semble y avoir eu une régression importante de cette prise en considération de l'accessibilité, nottament avec la
+sortie de leur dernière interface sur iPhone : le **Liquid Glass**. Et la cause de cela se trouve être... **politique**.
+Emmanuelle nous explique que lors de son deuxième mandat, Donald Trump a décidé de supprimer le <abbr>**DEI**</abbr>
+(Diversity Equity and Inclusion - démarche organisationnelle favorisant la diversité, l'équité et l'inclusion). C'est
+une directive appliquée dans tous les services grâce à la loi ADA qui oblige les entreprises américaines à rendre
+accessible leurs produits de manière inclusive au risque d'être attaquée en justice. Les amendes étant très élevées, les
+entreprises jouaient le jeu.  
 Face à cela, Apple avait plutôt bien résisté mais l'entreprise a dû faire face à des coupes budgétaires (suite à la
 suppression des directives), ce qui a, selon Emmanuelle, dû diminuer le budget alloué aux tests du liquid glass
 notamment.  
@@ -170,7 +172,7 @@ semble toujours assez loin derrière les GAFAM qui ont su prendre un train d'ava
 dernière sur l'accessibilité. Emmanuelle croit énormément en l'IA au service de l'accessibilité mais souligne néanmoins
 l'importance de rester vigilant et de garder **l'expertise humaine** au coeur du processus.
 
-L'IA est très utile pour les sujets qui peuvent **s'automatiser** (détecter des attributs alt manquants ou des champs
+L'IA est très utile pour les sujets qui peuvent **s'automatiser** (détecter des attributs `alt` manquants ou des champs
 sans étiquettes). Néanmoins ce genre de points ne représentent que 40% de l'accessibilité. Pour Emmanuelle, l'IA ne peut
 pas simuler les lecteurs d'écran ni la navigation au clavier, qui représentent pourtant autant de scénarios possibles à
 tester. C'est pourquoi des tests humains restent indispensables pour vérifier la **restitution** (sachant qu'elle peut
@@ -179,9 +181,9 @@ varier d'un lecteur d'écran à l'autre). Demander à l'IA de produire un site a
 > J'ai constaté avec mes recherches depuis plusieurs semaine que si on n'indique pas à l'IA que l'on souhaite un site
 > accessible, il ne le sera pas du tout. Elle ne va pas respecter les contrastes, les noms accessibles des boutons, elle
 > va oublier les étiquettes etc. Elle va oublier plein de choses. Et si je lui dis simplement que je souhaite un site
-> conforme au RGAA, l'IA ne va pas appliquer les cent et quelques critères, elle va en oublier, interpréter à sa façon et
-> halluciner. Par exemple elle va oublier de restituer les messages d'erreur ou de mettre le format attendu pour les mail,
-> les dates.
+> conforme au RGAA, l'IA ne va pas appliquer les cent et quelques critères, elle va en oublier, interpréter à sa façon
+> et halluciner. Par exemple elle va oublier de restituer les messages d'erreur ou de mettre le format attendu pour les
+> mails, les dates.
 
 Pour Emmanuelle, ce sont les **skills** qui vont être importants et entrer en jeu, car ce sont le reflet de nos
 expertises techniques. Cela suppose alors d'être formé à l'accessibilité afin de savoir tester et vérifier la

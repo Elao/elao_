@@ -1,12 +1,24 @@
+/*
+ * Grille en deux rangées, superposées de `$article-banner-overlap` :
+ *  - rangée 1 : la couverture (au moins `$article-banner-cover-height`) et, ancrée en bas à droite,
+ *    la carte des méta-données (`.article-info`) ;
+ *  - rangée 2 : le bloc titre + description (`.article-header`), remonté sur la couverture.
+ *
+ * Les deux rangées sont dimensionnées par leur contenu : un titre ou une description longs
+ * agrandissent le bloc vers le bas sans déborder, ni sur la couverture, ni sur la suite de la page.
+ */
 .article-banner {
-  margin-bottom: 310px;
-  height: 450px;
+  margin-bottom: 50px;
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax($article-banner-cover-height, auto) auto;
 }
 
 .article-banner__cover {
-  height: 100%;
+  grid-area: 1 / 1;
   width: 815px;
+  max-width: 100%;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -15,7 +27,6 @@
 @media (max-width: $screen-md) {
   .article-banner {
     margin-bottom: 0;
-    height: unset;
     display: flex;
     flex-direction: column;
     align-items: flex-end;

@@ -1,6 +1,6 @@
 ---
 title: "À la rencontre d'Emmanuelle Aboaf, développeuse et conférencière en accessibilité web"
-date: '2026-08-10'
+date: '2026-08-20'
 lastModified: ~
 description: "Quel est l'impact d'un site non accessible pour les personnes handicapées ? Par quoi commencer pour intégrer l'accessibilité web à ses process ? Est-ce que l'IA peut nous aider dans la mise en conformité des sites ? Autant de sujets que nous avons abordé avec Emmanuelle Aboaf, à l'occasion de notre nouveau format : les voix de notre veille."
 authors: [equentin, eflahaut]

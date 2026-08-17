@@ -221,6 +221,34 @@ Pensez à préciser dans le markdown le langage dans lequel est votre code, si v
 </html>
 ```
 
+### Les tableaux
+
+La syntaxe Markdown suffit : une ligne de séparation sous l'en-tête, et autant de `|` que de colonnes. Les deux-points placés dans cette ligne alignent la colonne — `---:` à droite, `:---:` au centre.
+
+| Commande | Rôle | Durée |
+|---|---|---:|
+| `make install` | Dépendances | 2 min |
+| `make serve` | Serveurs de dev | 10 s |
+| `make lint` | Tous les linters | 45 s |
+
+```md
+| Commande | Rôle | Durée |
+|---|---|---:|
+| `make install` | Dépendances | 2 min |
+```
+
+Passé un certain nombre de colonnes, un tableau ne tient plus sur un téléphone : plutôt que de comprimer le texte jusqu'à le casser mot par mot, il défile horizontalement dans son propre cadre, sans emporter la page avec lui. Rien à écrire pour cela, c'est automatique.
+
+| Langage | Extension | Coloration attendue | Commande de lint | Remarque |
+|---|---|---|---|---|
+| PHP | `.php` | `php` | `make lint.php-cs-fixer` | Ruleset `@Symfony`, strict types requis |
+| Twig | `.html.twig` | `twig` | `make lint.twig` | Templates du site et du blog |
+| YAML | `.yaml` | `yaml` | `make lint.yaml` | Configuration Symfony et front-matter |
+
+Le cadre défilant est atteignable au clavier, et il s'annonce sous le titre qui précède le tableau — ici « Les tableaux ». Écrivez donc un titre parlant avant un tableau : c'est lui qui sert de nom.
+
+Un tableau reste un tableau de données : évitez de vous en servir pour mettre en page deux colonnes de texte. Et gardez les en-têtes courts, ce sont eux qui fixent la largeur des colonnes.
+
 ### Bonus
 
 Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : [Unsplash](https://unsplash.com/) (chouchou ❤️), [Pexels](https://www.pexels.com/), etc.

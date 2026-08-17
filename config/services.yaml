@@ -46,6 +46,10 @@ services:
     App\Stenope\Processor\HtmlFootnotesProcessor:
         tags: [{ name: stenope.processor, priority: -10 }]
 
+    # Wraps content tables in a scrollable container, named after the heading above them.
+    App\Stenope\Processor\HtmlTablesProcessor:
+        tags: [{ name: stenope.processor, priority: -15 }]
+
     App\Stenope\Processor\GithubEditLinkProcessor:
         $repository: '%env(APP_GITHUB_REPO)%'
         $reference: '%env(APP_GITHUB_REF)%'

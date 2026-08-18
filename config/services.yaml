@@ -50,6 +50,10 @@ services:
     App\Stenope\Processor\HtmlTablesProcessor:
         tags: [{ name: stenope.processor, priority: -15 }]
 
+    # Wraps animated GIFs in a container with a play/pause control (WCAG 2.2.2).
+    App\Stenope\Processor\HtmlAnimatedImagesProcessor:
+        tags: [{ name: stenope.processor, priority: -16 }]
+
     App\Stenope\Processor\GithubEditLinkProcessor:
         $repository: '%env(APP_GITHUB_REPO)%'
         $reference: '%env(APP_GITHUB_REF)%'

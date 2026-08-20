@@ -1,0 +1,79 @@
+// Image animée du contenu, munie de sa commande de lecture / pause (WCAG 2.2.2).
+// Cf. `HtmlAnimatedImagesProcessor` et `animated_image_controller`.
+.animated-image {
+  position: relative;
+  // Le conteneur reprend la place que l'image occupait seule : `generic/_img.scss`
+  // pose `margin: 35px auto` sur les images de contenu. Laissée sur l'image, cette
+  // marge se retrouverait *à l'intérieur* du conteneur — le bouton, positionné par
+  // rapport à lui, flotterait alors au-dessus du vide plutôt que sur le visuel, et
+  // le centrage horizontal serait perdu.
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 35px auto;
+
+  img,
+  .animated-image__frame {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  // `display: block` ci-dessus bat le `[hidden] { display: none }` de la feuille
+  // du navigateur : sans ce rappel, l'image reste affichée sous le canvas qui la
+  // remplace, et le visuel apparaît en double.
+  img[hidden] {
+    display: none;
+  }
+}
+
+.animated-image__toggle {
+  // Haut-gauche de l'image, décalé vers l'intérieur pour ne pas mordre sur le
+  // bord — la cible reste ainsi entièrement sur le visuel.
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  // Fond sombre opaque plutôt que translucide : le contraste du pictogramme ne
+  // doit pas dépendre de l'image qui se trouve dessous. Blanc sur $color-dark
+  // donne 11,86:1, très au-delà des 3:1 exigés pour un élément non textuel.
+  background: $color-dark;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in .1s;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  // Pas d'`outline: none` ici : l'anneau de focus global doit rester (cf. base/_focus).
+}
+
+.animated-image__icons {
+  display: flex;
+}
+
+.animated-image__icon {
+  display: block;
+}
+
+// La permutation est portée par la classe d'état plutôt que par le JS, pour que
+// le rendu reste cohérent si le script n'a pas encore pris la main.
+.animated-image__icon--play { display: none; }
+
+// Une image d'une seule vue n'a rien à contrôler : le décodeur retire la commande
+// plutôt que d'afficher un bouton sans effet.
+.animated-image--static .animated-image__toggle { display: none; }
+
+.animated-image--paused {
+  .animated-image__icon--pause { display: none; }
+  .animated-image__icon--play { display: block; }
+}

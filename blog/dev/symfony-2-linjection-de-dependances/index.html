@@ -67,7 +67,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/build/app.9e130113.css">
+                    <link rel="stylesheet" href="/elao_/build/app.4aa1b462.css">
         
                         <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/637.52390a93.js" defer></script><script src="/elao_/build/app.3aa3109e.js" defer></script>
 
@@ -454,7 +454,7 @@ Note: Le loader de fichiers .ini n'a pas été représenté puisqu'il ne permet 
 <p><strong>Le dumper Graphviz</strong>: Ce dumper a pour objectif de générer un dump exploitable par le logiciel <a href="http://graphviz.org/" target="_blank">Graphviz</a> ; il va nous permettre d'obtenir un graphique représentant nos services et leurs dépendances.
 <strong><strong>Le cache:</strong></strong> Afin d'accélérer le fonctionnement des applications utilisant l'injection de dépendances, il est évident que les différents fichiers de configuration ne seront pas reparsés à chaque appel. En réalité, le container sera dumpé sous la forme d'une classe PHP et mise en cache.</p>
 <p>Attardons nous un peu sur ces fameuses définitions de services qui sont un peu la pierre angulaire de l'injection de dépendances.</p>
-<table style="width: 100%;" border="0">
+<div class="table-scroll" tabindex="0" role="group" aria-label="Symfony 2 et l'injection de dépendances"><table style="width: 100%;" border="0">
   <tr>
     <th colspan="2">
       Définition d'un service (La classe Definition)
@@ -530,7 +530,7 @@ Note: Le loader de fichiers .ini n'a pas été représenté puisqu'il ne permet 
       Annotations associées au service (nous y reviendrons plus tard)
     </td>
   </tr>
-</table>
+</table></div>
 <p>A partir de ces informations, le builder sera capable de recréer la méthode permettant d'accéder au service.
 De façon très synthétique et grossière, la définition nous permettrait d'aboutir à une méthode comme ceci:</p>
 <pre class="code-multiline language-php"><code class="language-php" id="3ab82ac5281b69656e9032b652ba4861"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>

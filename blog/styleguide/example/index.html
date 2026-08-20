@@ -77,7 +77,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/build/app.9e130113.css">
+                    <link rel="stylesheet" href="/elao_/build/app.4aa1b462.css">
         
                         <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/637.52390a93.js" defer></script><script src="/elao_/build/app.3aa3109e.js" defer></script>
 
@@ -386,6 +386,9 @@
                                             <a href="#le-code">Le code</a>
                                         </li>
                                                                         <li>
+                                            <a href="#les-tableaux">Les tableaux</a>
+                                        </li>
+                                                                        <li>
                                             <a href="#bonus">Bonus</a>
                                         </li>
                                                             </ol>
@@ -557,6 +560,74 @@ par sa position dans un groupe[^lectures:1], ou par sa clé dans un groupe[^lect
     C'est mieux
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code></pre>
+<h3 id="les-tableaux" class="anchor-title"><a href="#les-tableaux">Les tableaux</a></h3>
+<p>La syntaxe Markdown suffit : une ligne de séparation sous l'en-tête, et autant de <code class="code-inline" id="b99834bc19bbad24580b3adfa04fb947">|</code> que de colonnes. Les deux-points placés dans cette ligne alignent la colonne — <code class="code-inline" id="9b5bac60abbbadb8b5afde5184c09d6a">---:</code> à droite, <code class="code-inline" id="8664ad5bfd42f972a9a4dffa049905cc">:---:</code> au centre.</p>
+<div class="table-scroll" tabindex="0" role="group" aria-label="Les tableaux"><table>
+<thead>
+<tr>
+<th>Commande</th>
+<th>Rôle</th>
+<th style="text-align: right;">Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code class="code-inline" id="12b64827119f4815ca8d43608d228f36">make install</code></td>
+<td>Dépendances</td>
+<td style="text-align: right;">2 min</td>
+</tr>
+<tr>
+<td><code class="code-inline" id="4e72a84a2c0202547720df8baec08696">make serve</code></td>
+<td>Serveurs de dev</td>
+<td style="text-align: right;">10 s</td>
+</tr>
+<tr>
+<td><code class="code-inline" id="bbcdcb8404d8b656716e555dd6de2665">make lint</code></td>
+<td>Tous les linters</td>
+<td style="text-align: right;">45 s</td>
+</tr>
+</tbody>
+</table></div>
+<pre class="code-multiline language-md"><code class="language-md" id="664f98c3c8a1d52da5d0dfb3d82f5950"><span class="token table"><span class="token table-header-row"><span class="token punctuation">|</span><span class="token table-header important"> Commande </span><span class="token punctuation">|</span><span class="token table-header important"> Rôle </span><span class="token punctuation">|</span><span class="token table-header important"> Durée </span><span class="token punctuation">|</span>
+</span><span class="token table-line"><span class="token punctuation">|</span><span class="token punctuation">---</span><span class="token punctuation">|</span><span class="token punctuation">---</span><span class="token punctuation">|</span><span class="token punctuation">---:</span><span class="token punctuation">|</span>
+</span><span class="token table-data-rows"><span class="token punctuation">|</span><span class="token table-data"> <span class="token code-snippet code keyword">`make install`</span> </span><span class="token punctuation">|</span><span class="token table-data"> Dépendances </span><span class="token punctuation">|</span><span class="token table-data"> 2 min </span><span class="token punctuation">|</span></span></span></code></pre>
+<p>Passé un certain nombre de colonnes, un tableau ne tient plus sur un téléphone : plutôt que de comprimer le texte jusqu'à le casser mot par mot, il défile horizontalement dans son propre cadre, sans emporter la page avec lui. Rien à écrire pour cela, c'est automatique.</p>
+<div class="table-scroll" tabindex="0" role="group" aria-label="Les tableaux"><table>
+<thead>
+<tr>
+<th>Langage</th>
+<th>Extension</th>
+<th>Coloration attendue</th>
+<th>Commande de lint</th>
+<th>Remarque</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PHP</td>
+<td><code class="code-inline" id="ad6f7b6e406aeacc3d3e084929fdce9a">.php</code></td>
+<td><code class="code-inline" id="e1bfd762321e409cee4ac0b6e841963c">php</code></td>
+<td><code class="code-inline" id="920396bbc891a5c8c23a7106247df10a">make lint.php-cs-fixer</code></td>
+<td>Ruleset <code class="code-inline" id="cdb7c5d1bc622ae29bc61f7febb959f6">@Symfony</code>, strict types requis</td>
+</tr>
+<tr>
+<td>Twig</td>
+<td><code class="code-inline" id="179bb61ed08762754f8bdc0a3ffa8c4b">.html.twig</code></td>
+<td><code class="code-inline" id="5669b8e487543ef439f7020f986f6c2d">twig</code></td>
+<td><code class="code-inline" id="edb85382d05b9b95e131960e17af8e8b">make lint.twig</code></td>
+<td>Templates du site et du blog</td>
+</tr>
+<tr>
+<td>YAML</td>
+<td><code class="code-inline" id="80f2c9646844369e3ed39cc12152f9d8">.yaml</code></td>
+<td><code class="code-inline" id="6eedc03a68a69933c763e674f2d7c42f">yaml</code></td>
+<td><code class="code-inline" id="eb67d7e01476fd9949aa7b924b4297fb">make lint.yaml</code></td>
+<td>Configuration Symfony et front-matter</td>
+</tr>
+</tbody>
+</table></div>
+<p>Le cadre défilant est atteignable au clavier, et il s'annonce sous le titre qui précède le tableau — ici « Les tableaux ». Écrivez donc un titre parlant avant un tableau : c'est lui qui sert de nom.</p>
+<p>Un tableau reste un tableau de données : évitez de vous en servir pour mettre en page deux colonnes de texte. Et gardez les en-têtes courts, ce sont eux qui fixent la largeur des colonnes.</p>
 <h3 id="bonus" class="anchor-title"><a href="#bonus">Bonus</a></h3>
 <p>Comme toujours, on essaie tant que possible de choisir des photos libres de droit et d'en créditer les auteurs. Quelques sites de photos libres de droit : <a href="https://unsplash.com/" target="_blank">Unsplash</a> (chouchou ❤️), <a href="https://www.pexels.com/" target="_blank">Pexels</a>, etc.</p>
 <p>Pour créditer l'auteur de la photo de couverture, renseignez la clé <code class="code-inline" id="928735d6f2c63bee316dd511c8ccaf55">credits</code> dans le header de l'article :</p>

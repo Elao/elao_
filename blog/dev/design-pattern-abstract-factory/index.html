@@ -67,7 +67,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/build/app.9e130113.css">
+                    <link rel="stylesheet" href="/elao_/build/app.4aa1b462.css">
         
                         <script src="/elao_/build/runtime.3f08dc02.js" defer></script><script src="/elao_/build/408.fdfd8cfa.js" defer></script><script src="/elao_/build/637.52390a93.js" defer></script><script src="/elao_/build/app.3aa3109e.js" defer></script>
 
@@ -357,7 +357,7 @@
                 
                 
                 <p>Deuxième article d'une série consacrée aux Design Patterns. Aujourd'hui, le pattern <code class="code-inline" id="65e83a834deb2a41513d933cb5fa5570">AbstractFactory</code> où il sera question de produits, de familles et de fabriques (<em>factories</em>, au pluriel s'il vous plaît).</p>
-<table width="100%">
+<div class="table-scroll" tabindex="0" role="group" aria-label="Tableau"><table width="100%">
     <tr>
         <td>
             <figure>
@@ -374,7 +374,7 @@
             </figure>
         </td>
     </tr>
-</table>
+</table></div>
 <div class="admonition info">
 <p>
     Le livre <strong><strong>Head First Design Patterns</strong></strong> (<a href="/elao_/../design-pattern-factory-method.md">dont j'ai déjà vanté les mérites</a>) regroupe les deux patterns <code id="d021d5f9d4069111c20ea6ad534fd22c">Factory Method</code> et <code id="65e83a834deb2a41513d933cb5fa5570">AbstractFactory</code> dans un même chapitre consultable en ligne et intitulé <a href="https://www.safaribooksonline.com/library/view/head-first-design/0596007124/ch04.html" target="_blank">The Factory Pattern: Baking with OO Goodness</a>. Je ne saurais trop vous encourager à le consulter !
@@ -410,7 +410,7 @@
 <h2 id="resolution-de-la-problematique-a-l-aide-du-dp-abstractfactory" class="anchor-title"><a href="#resolution-de-la-problematique-a-l-aide-du-dp-abstractfactory">Résolution de la problématique à l'aide du DP AbstractFactory</a></h2>
 <p>Vous l'aurez sans doute deviné, nous nous trouvons en présence de trois familles de produits différentes : la famille des produits Github, la famille des produits Gitlab et la famille des produits Bickbucket. Dans chacune de ces familles, on retrouve un produit <code class="code-inline" id="820d17d3f859f4391cce177be0c93fde">Crawler</code> et un produit <code class="code-inline" id="9a83ab0d60fed7c37d928ccb30d1b6ae">Parser</code> conçus pour collaborer ensemble.</p>
 <p>Comment garantir que j'utilise des produits d'une même famille ? Réponse : le pattern <strong>Abstract Factory</strong>. Ce qui nous donne le récapitulatif suivant :</p>
-<table>
+<div class="table-scroll" tabindex="0" role="group" aria-label="Résolution de la problématique à l'aide du DP AbstractFactory"><table>
     <tr>
         <th> </th>
         <th>Github</th>
@@ -458,7 +458,7 @@
         <td>GitlabFactory</td>
         <td>BitBucketFactory</td>
     </tr>
-</table>
+</table></div>
 <h2 id="explication-de-la-solution" class="anchor-title"><a href="#explication-de-la-solution">Explication de la solution</a></h2>
 <ul>
 <li>j'ai introduit une interface <code class="code-inline" id="4e989432907405ee26f3acdc4c264fec">SCMCrawlerInterface</code> qu'implémentent les crawlers de chaque famille</li>

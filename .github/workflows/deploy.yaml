@@ -3,7 +3,8 @@ name: Deploy production
 on:
   workflow_dispatch: ~
   schedule:
-    - cron: '30 7 * * 1,2,3,4,5' # At 08:30 (UTC, => 08:30 / 09:30 in Europe/Paris depending on the DST), each day of the week.
+    - cron: '30 8 * * 1,2,3,4,5' # At 08:30 in Europe/Paris (DST handled by GitHub), monday to friday.
+      timezone: 'Europe/Paris'
   push:
     branches:
       - main

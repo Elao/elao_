@@ -1,6 +1,6 @@
 ---
 title: "À la rencontre d'Emmanuelle Aboaf, développeuse et conférencière en accessibilité web"
-date: '2026-08-20'
+date: '2026-08-24'
 lastModified: ~
 description: "Quel est l'impact d'un site non accessible pour les personnes handicapées ? Par quoi commencer pour intégrer l'accessibilité web à ses process ? Est-ce que l'IA peut nous aider dans la mise en conformité des sites ? Autant de sujets que nous avons abordé avec Emmanuelle Aboaf, à l'occasion de notre nouveau format : les voix de notre veille."
 authors: [equentin, eflahaut]
@@ -164,7 +164,7 @@ Bien que la France prenne le virage de l'IA (notamment via des grandes entrepris
 semble toujours assez loin derrière les GAFAM qui ont su prendre un train d'avance.
 
 > Le Liquid Glass est passé au travers, parce que je pense qu'il n'y a pas eu suffisamment d'étapes de faites, de
-> testeurs, à cause de la réduction du budget.
+> testeurs, à cause de la réduction du budget dédiée au DEI.
 
 ## IA et accessibilité
 
@@ -178,7 +178,7 @@ pas simuler les lecteurs d'écran ni la navigation au clavier, qui représentent
 tester. C'est pourquoi des tests humains restent indispensables pour vérifier la **restitution** (sachant qu'elle peut
 varier d'un lecteur d'écran à l'autre). Demander à l'IA de produire un site accessible ne suffit donc pas.
 
-> J'ai constaté avec mes recherches depuis plusieurs semaine que si on n'indique pas à l'IA que l'on souhaite un site
+> J'ai constaté avec mes recherches depuis plusieurs semaines que si on n'indique pas à l'IA que l'on souhaite un site
 > accessible, il ne le sera pas du tout. Elle ne va pas respecter les contrastes, les noms accessibles des boutons, elle
 > va oublier les étiquettes etc. Elle va oublier plein de choses. Et si je lui dis simplement que je souhaite un site
 > conforme au RGAA, l'IA ne va pas appliquer les cent et quelques critères, elle va en oublier, interpréter à sa façon
@@ -197,7 +197,7 @@ Pour résumer, avec des **skills**, du **context engineering** fait correctement
 navigation).
 
 Cependant, comme beaucoup le constatent, le virage que nos métiers prennent avec l'IA pose question. Emmanuelle évoque
-l'impacte de l'IA dans son quotidien de développeuse.
+l'impact de l'IA dans son quotidien de développeuse.
 
 > En développant, on doit passer systématiquement par l'IA, c'est elle qui fait le job à notre place. Moi qui adore
 > coder, finalement aujourd'hui à quel moment je code ? Je vais vérifier ce que produit l'IA, et lui indiquer si je trouve

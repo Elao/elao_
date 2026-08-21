@@ -9,25 +9,30 @@ use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
 
 /**
- * Enveloppe les images animées du contenu dans un conteneur muni d'une commande
- * de lecture / pause.
+ * Enveloppe les images animées du contenu dans un conteneur confié à
+ * `animated_image_controller`, qui y pose une commande de lecture / pause.
  *
  * Un GIF animé démarre seul et boucle indéfiniment : il entre donc dans le champ
  * de WCAG 2.2.2 (RGAA 13.8), qui exige un moyen de mettre en pause, arrêter ou
  * masquer tout mouvement automatique de plus de cinq secondes. Le format n'offre
- * aucun contrôle natif, contrairement à `<video>` — d'où cette commande ajoutée
- * au build.
+ * aucun contrôle natif, contrairement à `<video>` — d'où cette commande.
  *
  * Le conteneur est produit ici plutôt qu'en Twig parce que ces images viennent du
- * markdown des articles : elles n'ont pas de gabarit où insérer un bouton.
+ * markdown des articles : elles n'ont pas de gabarit où l'insérer. Et il est
+ * produit au build plutôt que côté client parce qu'il porte la mise en page :
+ * `.animated-image` reprend la marge que `generic/_img.scss` posait sur l'image,
+ * l'ajouter après coup décalerait le contenu.
  *
- * Seuls les GIF sont concernés. Les PNG et WebP animés existent mais le dépôt
- * n'en contient aucun, et les détecter demanderait de lire l'en-tête de chaque
- * fichier — on s'en tiendra à l'extension tant que ce n'est pas nécessaire.
+ * La commande, elle, est posée par le contrôleur. Son existence et son libellé
+ * dépendent de ce que le navigateur sait faire : un GIF d'une seule image n'a rien
+ * à contrôler, et sans `ImageDecoder` la commande arrête l'animation au lieu de la
+ * suspendre. Rien de tout cela n'est connu au build — un bouton rendu ici serait
+ * affirmé avant qu'on sache s'il aura un effet, et inerte si le script échoue à se
+ * charger.
  *
- * La mise en pause elle-même est faite côté client (`animated_image_controller`) :
- * elle consiste à figer l'image courante sur un canvas. Rien ne peut la produire
- * au build, puisqu'il s'agit de l'état de l'animation au moment du clic.
+ * Seuls les GIF sont concernés, elaomojis exclus. Les PNG et WebP animés existent
+ * mais le dépôt n'en contient aucun, et les détecter demanderait de lire l'en-tête
+ * de chaque fichier — on s'en tiendra à l'extension tant que ce n'est pas nécessaire.
  */
 class HtmlAnimatedImagesProcessor implements ProcessorInterface
 {
@@ -50,7 +55,13 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
             return;
         }
 
-        $images = $crawler->filter('img');
+        // Les elaomojis sont des GIF, mais des GIF de la taille d'un caractère, posés
+        // au fil du texte par `ElaomojisProcessor` (`.emoji` vaut `height: 1em` et
+        // `display: inline-block`). Les enrober les arracherait de leur phrase — le
+        // conteneur est un bloc centré avec ses propres marges — et la commande y
+        // serait plus grande que l'image qu'elle contrôle. Le critère vise le
+        // mouvement qui s'impose à la lecture, pas un emoji de 25 px au fil d'un texte.
+        $images = $crawler->filter('img:not(.emoji)');
 
         if (0 === $images->count()) {
             return;
@@ -99,9 +110,21 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
     private function wrap(\DOMElement $image): void
     {
         $document = $image->ownerDocument;
-        $parent = $image->parentNode;
 
-        if (null === $document || null === $parent) {
+        if (null === $document) {
+            return;
+        }
+
+        // Quand l'image est le seul contenu de son paragraphe — ce que produit le
+        // markdown `![…](…)` —, le conteneur prend la place du paragraphe au lieu de
+        // s'y nicher : un `<div>` dans un `<p>` est invalide, et l'analyseur du
+        // navigateur le remonte hors du paragraphe en synthétisant des paragraphes
+        // vides. L'arbre rendu ne correspondrait alors plus à celui pour lequel la
+        // feuille de style est écrite.
+        $target = $this->soleParagraphOf($image) ?? $image;
+        $parent = $target->parentNode;
+
+        if (null === $parent) {
             return;
         }
 
@@ -109,63 +132,37 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
         $wrapper->setAttribute('class', 'animated-image');
         $wrapper->setAttribute('data-controller', 'animated-image');
 
-        $parent->replaceChild($wrapper, $image);
+        $parent->replaceChild($wrapper, $target);
         $wrapper->appendChild($image);
 
         $image->setAttribute('data-animated-image-target', 'image');
-
-        $wrapper->appendChild($this->createToggle($document));
     }
 
     /**
-     * Le nom accessible du bouton change avec l'état plutôt que d'être fixe et
-     * doublé d'un `aria-pressed` : les deux mécanismes ensemble se recouvrent, et
-     * « Lancer l'animation » dit à lui seul ce que fera l'activation.
-     *
-     * Les deux pictogrammes sont posés ici et permutés par la feuille de style
-     * selon l'état : le bouton reste utilisable si le JS échoue à se charger —
-     * il ne fera rien, mais il n'affichera pas non plus un état mensonger.
+     * Le paragraphe dont l'image est le seul contenu, s'il y en a un.
      */
-    private function createToggle(\DOMDocument $document): \DOMElement
+    private function soleParagraphOf(\DOMElement $image): ?\DOMElement
     {
-        $button = $document->createElement('button');
-        $button->setAttribute('type', 'button');
-        $button->setAttribute('class', 'animated-image__toggle');
-        $button->setAttribute('data-animated-image-target', 'toggle');
-        $button->setAttribute('data-action', 'animated-image#toggle');
+        $parent = $image->parentNode;
 
-        $icons = $document->createElement('span');
-        $icons->setAttribute('class', 'animated-image__icons');
-        $icons->setAttribute('aria-hidden', 'true');
-        $icons->appendChild($this->createIcon($document, 'pause'));
-        $icons->appendChild($this->createIcon($document, 'play'));
-        $button->appendChild($icons);
+        if (!$parent instanceof \DOMElement || 'p' !== $parent->nodeName) {
+            return null;
+        }
 
-        $label = $document->createElement('span', 'Mettre l’animation en pause');
-        $label->setAttribute('class', 'screen-reader');
-        $label->setAttribute('data-animated-image-target', 'label');
-        $button->appendChild($label);
+        foreach ($parent->childNodes as $node) {
+            if ($node === $image) {
+                continue;
+            }
 
-        return $button;
-    }
+            // Le markdown laisse des retours à la ligne autour de l'image : seul un
+            // contenu visible interdit de remplacer le paragraphe.
+            if ($node instanceof \DOMText && '' === trim($node->wholeText)) {
+                continue;
+            }
 
-    private function createIcon(\DOMDocument $document, string $name): \DOMElement
-    {
-        $svg = $document->createElement('svg');
-        $svg->setAttribute('class', "animated-image__icon animated-image__icon--$name");
-        $svg->setAttribute('viewBox', '0 0 24 24');
-        $svg->setAttribute('width', '18');
-        $svg->setAttribute('height', '18');
-        $svg->setAttribute('focusable', 'false');
-        $svg->setAttribute('aria-hidden', 'true');
+            return null;
+        }
 
-        $path = $document->createElement('path');
-        $path->setAttribute('fill', 'currentColor');
-        $path->setAttribute('d', 'pause' === $name
-            ? 'M8 5h3v14H8zm5 0h3v14h-3z'
-            : 'M8 5l11 7-11 7z');
-        $svg->appendChild($path);
-
-        return $svg;
+        return $parent;
     }
 }

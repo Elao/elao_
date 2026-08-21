@@ -30,9 +30,9 @@ use Stenope\Bundle\Content;
  * affirmé avant qu'on sache s'il aura un effet, et inerte si le script échoue à se
  * charger.
  *
- * Seuls les GIF sont concernés. Les PNG et WebP animés existent mais le dépôt
- * n'en contient aucun, et les détecter demanderait de lire l'en-tête de chaque
- * fichier — on s'en tiendra à l'extension tant que ce n'est pas nécessaire.
+ * Seuls les GIF sont concernés, elaomojis exclus. Les PNG et WebP animés existent
+ * mais le dépôt n'en contient aucun, et les détecter demanderait de lire l'en-tête
+ * de chaque fichier — on s'en tiendra à l'extension tant que ce n'est pas nécessaire.
  */
 class HtmlAnimatedImagesProcessor implements ProcessorInterface
 {
@@ -55,7 +55,13 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
             return;
         }
 
-        $images = $crawler->filter('img');
+        // Les elaomojis sont des GIF, mais des GIF de la taille d'un caractère, posés
+        // au fil du texte par `ElaomojisProcessor` (`.emoji` vaut `height: 1em` et
+        // `display: inline-block`). Les enrober les arracherait de leur phrase — le
+        // conteneur est un bloc centré avec ses propres marges — et la commande y
+        // serait plus grande que l'image qu'elle contrôle. Le critère vise le
+        // mouvement qui s'impose à la lecture, pas un emoji de 25 px au fil d'un texte.
+        $images = $crawler->filter('img:not(.emoji)');
 
         if (0 === $images->count()) {
             return;

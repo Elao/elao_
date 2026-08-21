@@ -9,25 +9,30 @@ use Stenope\Bundle\Behaviour\ProcessorInterface;
 use Stenope\Bundle\Content;
 
 /**
- * Enveloppe les images animées du contenu dans un conteneur muni d'une commande
- * de lecture / pause.
+ * Enveloppe les images animées du contenu dans un conteneur confié à
+ * `animated_image_controller`, qui y pose une commande de lecture / pause.
  *
  * Un GIF animé démarre seul et boucle indéfiniment : il entre donc dans le champ
  * de WCAG 2.2.2 (RGAA 13.8), qui exige un moyen de mettre en pause, arrêter ou
  * masquer tout mouvement automatique de plus de cinq secondes. Le format n'offre
- * aucun contrôle natif, contrairement à `<video>` — d'où cette commande ajoutée
- * au build.
+ * aucun contrôle natif, contrairement à `<video>` — d'où cette commande.
  *
  * Le conteneur est produit ici plutôt qu'en Twig parce que ces images viennent du
- * markdown des articles : elles n'ont pas de gabarit où insérer un bouton.
+ * markdown des articles : elles n'ont pas de gabarit où l'insérer. Et il est
+ * produit au build plutôt que côté client parce qu'il porte la mise en page :
+ * `.animated-image` reprend la marge que `generic/_img.scss` posait sur l'image,
+ * l'ajouter après coup décalerait le contenu.
+ *
+ * La commande, elle, est posée par le contrôleur. Son existence et son libellé
+ * dépendent de ce que le navigateur sait faire : un GIF d'une seule image n'a rien
+ * à contrôler, et sans `ImageDecoder` la commande arrête l'animation au lieu de la
+ * suspendre. Rien de tout cela n'est connu au build — un bouton rendu ici serait
+ * affirmé avant qu'on sache s'il aura un effet, et inerte si le script échoue à se
+ * charger.
  *
  * Seuls les GIF sont concernés. Les PNG et WebP animés existent mais le dépôt
  * n'en contient aucun, et les détecter demanderait de lire l'en-tête de chaque
  * fichier — on s'en tiendra à l'extension tant que ce n'est pas nécessaire.
- *
- * La mise en pause elle-même est faite côté client (`animated_image_controller`) :
- * elle consiste à figer l'image courante sur un canvas. Rien ne peut la produire
- * au build, puisqu'il s'agit de l'état de l'animation au moment du clic.
  */
 class HtmlAnimatedImagesProcessor implements ProcessorInterface
 {
@@ -113,59 +118,5 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
         $wrapper->appendChild($image);
 
         $image->setAttribute('data-animated-image-target', 'image');
-
-        $wrapper->appendChild($this->createToggle($document));
-    }
-
-    /**
-     * Le nom accessible du bouton change avec l'état plutôt que d'être fixe et
-     * doublé d'un `aria-pressed` : les deux mécanismes ensemble se recouvrent, et
-     * « Lancer l'animation » dit à lui seul ce que fera l'activation.
-     *
-     * Les deux pictogrammes sont posés ici et permutés par la feuille de style
-     * selon l'état : le bouton reste utilisable si le JS échoue à se charger —
-     * il ne fera rien, mais il n'affichera pas non plus un état mensonger.
-     */
-    private function createToggle(\DOMDocument $document): \DOMElement
-    {
-        $button = $document->createElement('button');
-        $button->setAttribute('type', 'button');
-        $button->setAttribute('class', 'animated-image__toggle');
-        $button->setAttribute('data-animated-image-target', 'toggle');
-        $button->setAttribute('data-action', 'animated-image#toggle');
-
-        $icons = $document->createElement('span');
-        $icons->setAttribute('class', 'animated-image__icons');
-        $icons->setAttribute('aria-hidden', 'true');
-        $icons->appendChild($this->createIcon($document, 'pause'));
-        $icons->appendChild($this->createIcon($document, 'play'));
-        $button->appendChild($icons);
-
-        $label = $document->createElement('span', 'Mettre l’animation en pause');
-        $label->setAttribute('class', 'screen-reader');
-        $label->setAttribute('data-animated-image-target', 'label');
-        $button->appendChild($label);
-
-        return $button;
-    }
-
-    private function createIcon(\DOMDocument $document, string $name): \DOMElement
-    {
-        $svg = $document->createElement('svg');
-        $svg->setAttribute('class', "animated-image__icon animated-image__icon--$name");
-        $svg->setAttribute('viewBox', '0 0 24 24');
-        $svg->setAttribute('width', '18');
-        $svg->setAttribute('height', '18');
-        $svg->setAttribute('focusable', 'false');
-        $svg->setAttribute('aria-hidden', 'true');
-
-        $path = $document->createElement('path');
-        $path->setAttribute('fill', 'currentColor');
-        $path->setAttribute('d', 'pause' === $name
-            ? 'M8 5h3v14H8zm5 0h3v14h-3z'
-            : 'M8 5l11 7-11 7z');
-        $svg->appendChild($path);
-
-        return $svg;
     }
 }

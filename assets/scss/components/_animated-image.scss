@@ -65,13 +65,9 @@
   display: block;
 }
 
-// La permutation est portée par la classe d'état plutôt que par le JS, pour que
-// le rendu reste cohérent si le script n'a pas encore pris la main.
+// La permutation est portée par la classe d'état plutôt que par le JS : l'état
+// visuel du bouton n'est ainsi décrit qu'à un seul endroit.
 .animated-image__icon--play { display: none; }
-
-// Une image d'une seule vue n'a rien à contrôler : le décodeur retire la commande
-// plutôt que d'afficher un bouton sans effet.
-.animated-image--static .animated-image__toggle { display: none; }
 
 .animated-image--paused {
   .animated-image__icon--pause { display: none; }

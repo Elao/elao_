@@ -104,9 +104,21 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
     private function wrap(\DOMElement $image): void
     {
         $document = $image->ownerDocument;
-        $parent = $image->parentNode;
 
-        if (null === $document || null === $parent) {
+        if (null === $document) {
+            return;
+        }
+
+        // Quand l'image est le seul contenu de son paragraphe — ce que produit le
+        // markdown `![…](…)` —, le conteneur prend la place du paragraphe au lieu de
+        // s'y nicher : un `<div>` dans un `<p>` est invalide, et l'analyseur du
+        // navigateur le remonte hors du paragraphe en synthétisant des paragraphes
+        // vides. L'arbre rendu ne correspondrait alors plus à celui pour lequel la
+        // feuille de style est écrite.
+        $target = $this->soleParagraphOf($image) ?? $image;
+        $parent = $target->parentNode;
+
+        if (null === $parent) {
             return;
         }
 
@@ -114,9 +126,37 @@ class HtmlAnimatedImagesProcessor implements ProcessorInterface
         $wrapper->setAttribute('class', 'animated-image');
         $wrapper->setAttribute('data-controller', 'animated-image');
 
-        $parent->replaceChild($wrapper, $image);
+        $parent->replaceChild($wrapper, $target);
         $wrapper->appendChild($image);
 
         $image->setAttribute('data-animated-image-target', 'image');
+    }
+
+    /**
+     * Le paragraphe dont l'image est le seul contenu, s'il y en a un.
+     */
+    private function soleParagraphOf(\DOMElement $image): ?\DOMElement
+    {
+        $parent = $image->parentNode;
+
+        if (!$parent instanceof \DOMElement || 'p' !== $parent->nodeName) {
+            return null;
+        }
+
+        foreach ($parent->childNodes as $node) {
+            if ($node === $image) {
+                continue;
+            }
+
+            // Le markdown laisse des retours à la ligne autour de l'image : seul un
+            // contenu visible interdit de remplacer le paragraphe.
+            if ($node instanceof \DOMText && '' === trim($node->wholeText)) {
+                continue;
+            }
+
+            return null;
+        }
+
+        return $parent;
     }
 }

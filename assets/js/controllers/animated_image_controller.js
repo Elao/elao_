@@ -38,6 +38,10 @@ export default class extends Controller {
         this.frames = null;
         this.index = 0;
         this.timer = null;
+        this.playing = false;
+        // Marque la boucle de lecture courante : le décodage étant asynchrone, une
+        // boucle abandonnée peut reprendre après qu'une autre a été lancée.
+        this.generation = 0;
         this.canvas = null;
         this.decoder = null;
         this.toggleButton = null;
@@ -98,6 +102,9 @@ export default class extends Controller {
 
     pause() {
         this._stopTimer();
+        // Abandonne la boucle courante : sans quoi celle qui attend un décodage
+        // reprendrait la main après la pause.
+        ++this.generation;
         this._setState(false);
     }
 
@@ -107,7 +114,7 @@ export default class extends Controller {
         }
 
         this._setState(true);
-        this._advance();
+        this._advance(++this.generation);
     }
 
     // — Lecture pilotée ————————————————————————————————————————————————
@@ -146,10 +153,21 @@ export default class extends Controller {
 
             this.decoder = decoder;
             this.frames = track.frameCount;
-            this._mountCanvas();
+
+            // Le canvas est rendu hors document, puis substitué à l'image une fois la
+            // première image dessinée : posé avant, il resterait vide le temps du
+            // décodage, à la place d'une image déjà visible.
+            this._createCanvas();
 
             await this._render(0);
 
+            if (this.destroyed) {
+                this._abandonTakeOver();
+
+                return;
+            }
+
+            this._showCanvas();
             this._mountToggle();
 
             if (this.reduced) {
@@ -172,6 +190,13 @@ export default class extends Controller {
 
             this._mountToggle();
             this._setState(true);
+
+            // Le mode dégradé doit honorer `prefers-reduced-motion` comme le fait
+            // l'absence de décodeur : l'échec du décodage n'est pas une raison de
+            // laisser tourner l'animation.
+            if (this.reduced) {
+                this._whenLoaded(() => this._freeze());
+            }
         }
     }
 
@@ -184,12 +209,10 @@ export default class extends Controller {
         this.imageTarget.hidden = false;
     }
 
-    _mountCanvas() {
+    _createCanvas() {
         const image = this.imageTarget;
         const canvas = document.createElement('canvas');
 
-        canvas.width = image.naturalWidth;
-        canvas.height = image.naturalHeight;
         canvas.className = 'animated-image__frame';
 
         // Le canvas devient le rendu visible : il reprend l'alternative textuelle
@@ -204,13 +227,15 @@ export default class extends Controller {
             canvas.setAttribute('aria-hidden', 'true');
         }
 
-        image.after(canvas);
-        image.hidden = true;
-
         this.canvas = canvas;
         // Surtout pas `this.context` : Stimulus s'en sert pour son propre contexte,
         // et l'écraser casse `this.element` — donc tout le contrôleur, en silence.
         this.ctx = canvas.getContext('2d');
+    }
+
+    _showCanvas() {
+        this.imageTarget.after(this.canvas);
+        this.imageTarget.hidden = true;
     }
 
     async _render(index) {
@@ -218,16 +243,26 @@ export default class extends Controller {
             return 100;
         }
 
-        const { image } = await this.decoder.decode({ frameIndex: index });
+        // L'échec du décodage n'est pas rattrapé ici : `_takeOver` en a besoin pour
+        // rendre la main au `<img>`, et `_advance` pour arrêter la boucle.
+        const { image: frame } = await this.decoder.decode({ frameIndex: index });
+
+        // Les dimensions viennent de l'image décodée et non du `<img>` : celui-ci peut
+        // n'être pas encore chargé quand on prend la main, ses dimensions intrinsèques
+        // valent alors 0, et le canvas serait invisible.
+        if (this.canvas.width !== frame.displayWidth || this.canvas.height !== frame.displayHeight) {
+            this.canvas.width = frame.displayWidth;
+            this.canvas.height = frame.displayHeight;
+        }
 
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.ctx.drawImage(image, 0, 0);
+        this.ctx.drawImage(frame, 0, 0);
 
         // `duration` est en microsecondes, et peut manquer. Les navigateurs
         // imposent un plancher de 20 ms aux GIF, on s'aligne dessus.
-        const duration = image.duration ? image.duration / 1000 : 100;
+        const duration = frame.duration ? frame.duration / 1000 : 100;
 
-        image.close();
+        frame.close();
 
         return Math.max(duration, 20);
     }
@@ -235,19 +270,36 @@ export default class extends Controller {
     /**
      * Rend l'image courante puis programme la suivante. Le décodage étant
      * asynchrone, on revérifie l'état de lecture après l'attente : une pause
-     * demandée entre-temps ne doit pas relancer la boucle.
+     * demandée entre-temps ne doit pas relancer la boucle. `generation` distingue
+     * les boucles entre elles — sans quoi une pause puis une reprise pendant un
+     * décodage en laisseraient deux tourner de front, avançant l'animation deux
+     * fois plus vite et n'en programmant plus qu'une seule à couper.
      */
-    async _advance() {
-        const delay = await this._render(this.index);
+    async _advance(generation) {
+        if (generation !== this.generation) {
+            return;
+        }
 
-        if (this.destroyed || !this.playing) {
+        let delay;
+
+        try {
+            delay = await this._render(this.index);
+        } catch {
+            // `close()` sur le décodeur — donc un démontage pendant l'attente — rejette
+            // le décodage en cours. Rien à signaler, il n'y a plus rien à rendre. Et si
+            // le décodage échoue pour une autre raison, la boucle s'arrête au lieu de
+            // relancer indéfiniment un décodage voué à échouer.
+            return;
+        }
+
+        if (this.destroyed || !this.playing || generation !== this.generation) {
             return;
         }
 
         this.timer = window.setTimeout(() => {
             this.timer = null;
             this.index = (this.index + 1) % this.frames;
-            this._advance();
+            this._advance(generation);
         }, delay);
     }
 
@@ -261,6 +313,13 @@ export default class extends Controller {
     // — Mode dégradé ———————————————————————————————————————————————————
 
     _freeze() {
+        // L'attente du chargement de l'image survit au démontage du contrôleur : une
+        // navigation Swup avant la fin du chargement ne doit pas geler une image qui
+        // n'est plus dans le document.
+        if (this.destroyed) {
+            return;
+        }
+
         const image = this.imageTarget;
 
         if (this.canvas || !image.naturalWidth) {

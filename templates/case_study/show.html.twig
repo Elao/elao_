@@ -93,6 +93,21 @@
         <div class="page-project__content">
             {{ caseStudy.content|raw }}
 
+            {% block credits %}
+                {% if caseStudy.credits %}
+                    <div class="article-credits">
+                        Crédits: photo de couverture par
+                        {% if caseStudy.credits.url %}
+                            <a href="{{ caseStudy.credits.url }}">
+                                {{ caseStudy.credits.name }}
+                            </a>
+                        {% else %}
+                            {{ caseStudy.credits.name }}
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endblock %}
+
             <h2 class="h2--dash">La tribu</h2>
             <p>Voici les personnes de l'équipe qui ont contribué au projet.</p>
             <ul class="project-team">

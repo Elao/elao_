@@ -1,6 +1,8 @@
 .page-job-posting {}
 
 .page-job-posting__content {
+  @include prose-links;
+
   padding-left: 200px;
 
   p {

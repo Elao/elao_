@@ -17,11 +17,10 @@
   color: #fff;
   border: none;
 
-  // `:not(.btn)` : cette règle (0,1,1) battait `.btn--secondary` (0,1,0), qui
-  // change pourtant fond ET texte ensemble. Le bouton se retrouvait en blanc sur
-  // son fond rose pâle d'origine — 1,21:1, illisible (WCAG 1.4.3). Les boutons
-  // portent déjà leurs propres couleurs, ils n'ont pas besoin de cette surcharge.
-  a:not(.btn) {
+  // Cette règle (0,1,1) battait `.btn--secondary` (0,1,0), qui change pourtant fond
+  // ET texte ensemble : le bouton se retrouvait en blanc sur son fond rose pâle
+  // d'origine — 1,21:1, illisible (WCAG 1.4.3). Cf. `$self-styled-links`.
+  a#{$self-styled-links} {
     color: #fff;
   }
 }

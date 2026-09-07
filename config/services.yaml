@@ -50,9 +50,44 @@ services:
     App\Stenope\Processor\HtmlTablesProcessor:
         tags: [{ name: stenope.processor, priority: -15 }]
 
+    # Découpe un article au format entretien en zone commune + un corps par mode de lecture.
+    # Après le DefaultTocProcessor (-90), dont il reprend la profondeur de sommaire,
+    # et avant les TableOfContentProcessor par mode (-100).
+    App\Stenope\Processor\ArticleReadingModesProcessor:
+        tags: [{ name: stenope.processor, priority: -95 }]
+
+    # Re-découpe les citations du mode entretien en remises en contexte et prises de parole.
+    # Après la découpe des modes (-95), et sur la seule propriété du mode entretien : ces
+    # blocs sont ainsi mécaniquement indisponibles ailleurs.
+    App\Stenope\Processor\HtmlInterviewBlocksProcessor:
+        tags: [{ name: stenope.processor, priority: -96 }]
+
     App\Stenope\Processor\GithubEditLinkProcessor:
         $repository: '%env(APP_GITHUB_REPO)%'
         $reference: '%env(APP_GITHUB_REF)%'
+
+    # Un sommaire par mode de lecture, sur le modèle des trois `ResizeImagesContentProcessor`
+    # ci-dessous : même classe, plusieurs instances, chacune sur sa propriété.
+    # Le sommaire principal, lui, a été neutralisé par l'ArticleReadingModesProcessor —
+    # il ne porterait plus que les titres de la zone commune.
+    # `parent` plutôt qu'une définition repartant de zéro : les profondeurs min et max
+    # sont posées sur la définition du bundle par `StenopeExtension`, depuis
+    # `stenope.processors.toc`. Les redéclarer ici les figerait aux valeurs par défaut
+    # du constructeur, et une configuration de projet ne s'appliquerait qu'au sommaire
+    # des articles ordinaires. Les tags, eux, ne s'héritent pas : d'où leur reprise.
+    table_of_content_processor.article.narrative:
+        parent: Stenope\Bundle\Processor\TableOfContentProcessor
+        arguments:
+            $contentProperty: narrativeContent
+            $tableOfContentProperty: narrativeTableOfContent
+        tags: [{ name: stenope.processor, priority: -100 }]
+
+    table_of_content_processor.article.interview:
+        parent: Stenope\Bundle\Processor\TableOfContentProcessor
+        arguments:
+            $contentProperty: interviewContent
+            $tableOfContentProperty: interviewTableOfContent
+        tags: [{ name: stenope.processor, priority: -100 }]
 
     resize_images_content_processor.case_study:
         class: App\Stenope\Processor\ResizeImagesContentProcessor
@@ -78,7 +113,7 @@ services:
         arguments:
             $provider: '@.inner'
             $disabled: '%env(bool:INCLUDE_SAMPLES)%'
-            $ignored: ['styleguide/example', 'elao/trame-itw']
+            $ignored: ['styleguide/example', 'styleguide/entretien-deux-modes', 'elao/trame-itw']
 
     App\Stenope\Manager\FilteringArticlesContentManager:
         decorates: Stenope\Bundle\ContentManagerInterface

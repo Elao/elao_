@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+    <channel>
+        <title>Le blog de l'équipe d'Elao</title>
+        <description>Découvrez nos articles techniques (ou non), rédigés par les membres de l'équipe d'Elao !</description>
+        <copyright>
+            Elao - L’utilisation des flux RSS de elao.com est réservée à un usage strictement personnel, non
+            professionnel et non collectif. Toute autre exploitation doit faire l’objet d’une autorisation et donner
+            lieu au versement d’une rémunération. Contact : contact@elao.com
+        </copyright>
+        <link>https://elao.github.io/elao_/pr/707/blog</link>
+        <pubDate>Tue, 08 Sep 2026 16:24:13 +0000</pubDate>
+        <language>fr</language>
+        <image>
+            <url>https://elao.github.io/elao_/pr/707/apple-touch-icon.png</url>
+            <title>Le blog de l'équipe d'Elao</title>
+            <link>https://elao.github.io/elao_/pr/707/blog</link>
+        </image>
+        <atom:link href="https://elao.github.io/elao_/pr/707/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>Le format d&#039;article à deux modes de lecture</title>
+                <pubDate>Tue, 08 Sep 2026 16:21:37 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comment écrire un article qui porte deux lectures — un récit et l&#039;entretien intégral — et bascule de l&#039;une à l&#039;autre. Contenu fictif, à usage de démonstration. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/styleguide/entretien-deux-modes</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/styleguide/entretien-deux-modes</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/interviews/trame-itw.jpg/f3793f49e7159a81a5891d6b7994c10c.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le format d&#039;article à deux modes de lecture</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>À la rencontre d&#039;Emmanuelle Aboaf, développeuse et conférencière en accessibilité web</title>
+                <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Quel est l&#039;impact d&#039;un site non accessible pour les personnes handicapées ? Par quoi commencer pour intégrer l&#039;accessibilité web à ses process ? Est-ce que l&#039;IA peut nous aider dans la mise en conformité des sites ? Autant de sujets que nous avons abordés avec Emmanuelle Aboaf, à l&#039;occasion de notre nouveau format : les voix de notre veille. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/methodo/voix-de-notre-veille/a-la-rencontre-d-emmanuelle-aboaf</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/methodo/voix-de-notre-veille/a-la-rencontre-d-emmanuelle-aboaf</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-d-emmanuelle-aboaf/thumbnail.png/63df601f6c3f076bacbda0464cba0cf1.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">À la rencontre d&#039;Emmanuelle Aboaf, développeuse et conférencière en accessibilité web</media:description>
+                                    </media:content>
+                                    <category>veille</category>
+                                    <category>a11y</category>
+                                    <category>inclusion</category>
+                                            </item>
+                    <item>
+                <title>Construire la fonction RH d&#039;une TPE : par où commencer ? (épisode 2)</title>
+                <pubDate>Wed, 05 Aug 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ L&#039;administratif RH, c&#039;est comme les fondations d&#039;une maison : invisible une fois qu&#039;elle est construite, mais tout repose dessus. Épisode 2 : comment on a solidifié ce socle chez Elao, entre conformité et digitalisation. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/elao/rh-tpe-ep-02-par-ou-commencer</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/elao/rh-tpe-ep-02-par-ou-commencer</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/elao/rh-tpe-oceane/episode-2-thumbnail.jpg/674a9331ae49ac9f17139ebc77f3f335.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Construire la fonction RH d&#039;une TPE : par où commencer ? (épisode 2)</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>Design et développement : un process souvent oublié (épisode 1)</title>
+                <pubDate>Wed, 22 Jul 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Designers et développeurs travaillent ensemble au quotidien, et pourtant, leurs façons de faire et de communiquer restent souvent bien éloignées. Chez Elao, on a décidé de combler ce fossé. Une partie de notre réponse tient en un mot : Storybook.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/methodo/design-developpement-un-process-souvent-oublie</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/methodo/design-developpement-un-process-souvent-oublie</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/methodo/design-developpement-un-process-souvent-oublie/couverture.png/36d065e732b684b7c7cd38ec81ac5d3b.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Design et développement : un process souvent oublié (épisode 1)</media:description>
+                                    </media:content>
+                                    <category>design-system</category>
+                                    <category>storybook</category>
+                                    <category>ux</category>
+                                    <category>webdesign</category>
+                                            </item>
+                    <item>
+                <title>Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH (épisode 1)</title>
+                <pubDate>Wed, 08 Jul 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comment on a construit la fonction RH d&#039;une boîte de 10 personnes : le point de départ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/elao/rh-tpe-oceane</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/elao/rh-tpe-oceane</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/elao/rh-tpe-oceane/oceane.jpg/8e1e5b73fa9c9311fed31cfd4f6c6762.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, notre RH (épisode 1)</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>Dog at Work : comment on a transformé une belle idée en démarche sérieuse</title>
+                <pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ À l&#039;occasion de la Journée Dog at Work, retour sur 4 ans de cohabitation chez Elao : une mise à jour du DUERP, une enquête d&#039;équipe et une charte dog friendly co-construite qui changent tout. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/elao/dog-at-work</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/elao/dog-at-work</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/elao/dog-at-work/thumbnail.jpg/de18cde4f921cfc7402f5e98026c9957.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Dog at Work : comment on a transformé une belle idée en démarche sérieuse</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>team</category>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>Les couleurs en CSS : 4 fonctionnalités pour des thèmes vivants et adaptatifs</title>
+                <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Découvrez comment CSS prend en charge nativement la gestion des couleurs et des thèmes, sans préprocesseur ni JavaScript.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/dev/nouveautes-css-2025-part3</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/dev/nouveautes-css-2025-part3</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part3.jpg/0d67d5a59eb57d499b8a62e79cd00770.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les couleurs en CSS : 4 fonctionnalités pour des thèmes vivants et adaptatifs</media:description>
+                                    </media:content>
+                                    <category>css</category>
+                                    <category>frontend</category>
+                                    <category>design-system</category>
+                                    <category>theming</category>
+                                            </item>
+                    <item>
+                <title>Les sub-agents Claude Code : isoler, déléguer, paralléliser</title>
+                <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comprendre les sub-agents de Claude Code, leurs cas d&#039;usage et comment ils permettent d&#039;optimiser vos workflows : isolation de contexte, choix du modèle et parallélisation. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/ia/sub-agents-claude-code</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/ia/sub-agents-claude-code</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/thumbnails/sub-agents-claude-code.jpg/50405465fa31c6c7d14aed3da5fcec20.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les sub-agents Claude Code : isoler, déléguer, paralléliser</media:description>
+                                    </media:content>
+                                    <category>claude-code</category>
+                                    <category>ia</category>
+                                    <category>sub-agents</category>
+                                    <category>productivite</category>
+                                            </item>
+                    <item>
+                <title>Les temps ritualisés chez Elao : quand le dialogue devient une culture</title>
+                <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Entretiens de cycles, 1 to 1 RH, rétrospectives, baromètre interne… Découvrez les temps ritualisés qui rythment la vie chez Elao et font du dialogue une véritable culture d&#039;entreprise. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/elao/temps-ritualises-dialogue-et-culture</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/elao/temps-ritualises-dialogue-et-culture</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/rh-rituals/rh-rituals.jpg/049f7c2b6c27ec0957fd9bf8591a3634.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Les temps ritualisés chez Elao : quand le dialogue devient une culture</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>dialogue</category>
+                                    <category>organisation</category>
+                                            </item>
+                    <item>
+                <title>Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</title>
+                <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Chez Elao, chaque membre de l&#039;équipe choisit son rythme de travail grâce aux cycles. On vous partage ce qui fonctionne, ce qu&#039;on a dû ajuster et les clés pour que la flexibilité reste un vrai levier. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/elao/cycles-de-travail-et-flexibilite</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/elao/cycles-de-travail-et-flexibilite</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/work-cycle/work-cycle.jpg/ba4b78a6dfbcd617a7cf6582cca9e4eb.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Cycles de travail : la flexibilité qui marche… à condition de poser un cadre</media:description>
+                                    </media:content>
+                                    <category>rh</category>
+                                    <category>flexibilite</category>
+                                    <category>organisation</category>
+                                            </item>
+                    <item>
+                <title>Animer et structurer intelligemment : 4 fonctionnalités CSS qui changent la donne</title>
+                <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ View Transitions, Scroll-Driven Animations, animation-composition, @property… Découvrez les fonctionnalités CSS modernes qui transforment la façon d&#039;animer et de structurer les interactions — sans JavaScript.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/dev/nouveautes-css-2025-part2</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/dev/nouveautes-css-2025-part2</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part2.png/8e8d57d79f2b56cc3bcb878e3563cfb3.png"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Animer et structurer intelligemment : 4 fonctionnalités CSS qui changent la donne</media:description>
+                                    </media:content>
+                                    <category>css</category>
+                                    <category>frontend</category>
+                                    <category>animation</category>
+                                    <category>design-system</category>
+                                            </item>
+                    <item>
+                <title>Paralléliser des tâches avec Claude Code : comparatif de 4 approches</title>
+                <pubDate>Tue, 08 Sep 2026 16:21:37 +0000</pubDate>
+                <description>
+                    <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : 
+séquentielle, batch, Agent Teams et Task Worker Pool.
+ ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/pr/707/blog/ia/paralleliser-taches-claude-code</guid>
+                <link>https://elao.github.io/elao_/pr/707/blog/ia/paralleliser-taches-claude-code</link>
+                <media:content
+                    url="https://elao.github.io/elao_/pr/707/%2E%2E/../resized/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg/33ec849322ec6117eed8e4742456e0dd.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Paralléliser des tâches avec Claude Code : comparatif de 4 approches</media:description>
+                                    </media:content>
+                                    <category>claude-code</category>
+                                    <category>ia</category>
+                                    <category>automatisation</category>
+                                    <category>productivite</category>
+                                            </item>
+            </channel>
+</rss>

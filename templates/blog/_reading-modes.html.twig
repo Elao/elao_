@@ -1,0 +1,21 @@
+{#
+    Bloc d'annonce des deux modes de lecture, posé juste après la bannière.
+
+    @var article \App\Model\Article
+    @var modes   list<\App\Model\Article\ReadingMode>
+#}
+<div class="reading-modes" data-aos="fade-up">
+    <div class="reading-modes__intro">
+        {% if article.readingModesIntro %}
+            {{ article.readingModesIntro|markdownify|raw }}
+        {% else %}
+            <p>
+                Cet article existe en deux modes de lecture. Le <strong>récit</strong> en restitue
+                l’essentiel, en un format narratif. L’<strong>entretien intégral</strong> rend
+                l’échange tel qu’il s’est tenu, dans les mots de chacun.
+            </p>
+        {% endif %}
+    </div>
+
+    {% include 'blog/_reading-modes-controls.html.twig' with { modes: modes } only %}
+</div>

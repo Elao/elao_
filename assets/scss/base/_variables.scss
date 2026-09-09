@@ -6,6 +6,11 @@ $color-tertiary: #f4756d;
 $color-dark: #0d3a5a;
 $color-light: #2ecccb;
 $color-text: #390725;
+// Dérivé du rouge de marque pour du petit texte sur fond clair : $color-brand ne
+// tient que 3,42:1, sous le seuil de 4,5:1. Teinte (359,4°) et saturation (100 %)
+// conservées à l'identique, luminance abaissée de 18 % — premier palier qui franchit
+// le seuil, donc le plus proche de l'original qui soit utilisable. 4,81:1.
+$color-brand-dark: #e60002;
 $color-info: #1e7695;
 $color-warning: #dbb371;
 

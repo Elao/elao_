@@ -90,3 +90,7 @@ Dans le prochain épisode, on attaque le gros morceau, celui qui fait peur à be
 internalisation.** Le grand saut.
 
 **À suivre.** 👋
+
+!!! note "Cet article fait partie d'une série de plusieurs épisodes"
+    **L'épisode suivant** est disponible :  
+    [« Internaliser la paie, le grand saut ! (épisode 3) »](./rh-tpe-ep-03-internaliser-la-paie.md).

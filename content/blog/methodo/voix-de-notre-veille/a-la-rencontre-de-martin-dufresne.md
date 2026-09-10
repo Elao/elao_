@@ -7,10 +7,11 @@ description:        "Pourquoi l'IA nous fatigue-t-elle plus qu'elle ne nous soul
 authors:            [msteinhausser, equentin]
 tableOfContent:     3
 tags:               [veille, ia]
-thumbnail:          content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne/thumbnail.jpg
+thumbnail:          content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne/thumbnail-3f353ae3.jpg
 thumbnailResizeOptions: # l'image porte une bannière : on la complète au fond plutôt que de la rogner
     article_thumbnail.lg:
         fit: fill
+        fillpos: left
         bg: white
     article_thumbnail.md:
         fit: fill

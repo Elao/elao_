@@ -62,68 +62,73 @@ footnotes:
 <!-- mode: narratif -->
 
 Ce mois-ci nous sommes allés à la rencontre de [Martin Dufresne](https://martindufresne.com/), une trentaine d'années
-dans l'informatique au compteur et une newsletter technique qu'il publie chaque semaine.
-Ayant commencé comme développeur de jeux vidéo pour enfants, pour poursuivre avec du développement web, il travaille à
-présent depuis 10 à 12 ans avec l'intelligence artificielle. Il mène également de la recherche indépendante et des
-travaux sur l'informatique quantique depuis sept ou huit ans.
-Formateur en entreprise comme en école, il s'intéresse aussi à la cybersécurité et à l'architecture logicielle. La
-vulgarisation est venue avec l'enseignement et en écrivant, notamment sur l'un des sujets du moment : « parce que l'IA,
-c'est bien le fun, mais on a rarement l'occasion de comprendre comment ça fonctionne ».
+dans l'informatique au compteur et une newsletter technique qu'il publie chaque semaine. Ayant commencé comme
+développeur de jeux vidéo pour enfants, pour poursuivre avec du développement web, il travaille à présent depuis plus de
+10 ans avec l'intelligence artificielle. Il mène également de la recherche indépendante et des travaux sur
+l'informatique quantique depuis environ huit ans. Formateur en entreprise comme en école, il s'intéresse aussi à la
+cybersécurité et à l'architecture logicielle. La vulgarisation est venue avec l'enseignement et en écrivant, notamment
+sur l'un des sujets du moment : _« parce que l'IA, c'est bien le fun, mais on a rarement l'occasion de comprendre
+comment ça fonctionne »_.
 
 Un collègue nous l'a fait découvrir il y a près de deux ans, via sa newsletter. Ce qui nous accroche : des sujets
 techniques, portés par des réflexions ancrées sur ses propres travaux, et un vrai talent pour les analogies parlantes.
 On le lit [sur son blog](https://martindufresne.com/blog/) comme sur
-[sa newsletter Substack](https://substack.com/@martindufresne). Son énergie va aujourd'hui à un projet de recherche
-personnel appliqué à la cybersécurité, la morphogénèse logicielle : un petit système d'exploitation qui s'auto-répare.
-On peut lui bousiller tous ses outils de démarrage, il détecte l'anomalie, se répare en se basant sur l'historique de
-ses voisins et redémarre. « Et ça fonctionne merveilleusement bien. »
+[sa newsletter Substack](https://substack.com/@martindufresne).
+
+Son énergie va aujourd'hui à un projet de recherche personnel appliqué à la cybersécurité : la morphogénèse logicielle,
+un petit système d'exploitation qui s'auto-répare. _« Et ça fonctionne merveilleusement bien. ☺️ »_ (_on en reparle plus
+loin…_ 👀)
 
 Voici les grands sujets que nous avons abordés avec lui, et ce que nous en avons retenu.
 
 ## « On est toujours dans une roue »
 
 Nous voulions aborder la fatigue, l'un des sujets qui nous a rapprochés de lui. Dans
-[« La disparition des temps morts : l'autre visage de la fatigue liée à l'IA »](https://martindufresne.substack.com/p/la-disparition-des-temps-morts-lautre)
-, il décrit ce que produit la délégation à des agents IA des tâches faciles ou à faible valeur : il ne reste que des
+[_« La disparition des temps morts : l'autre visage de la fatigue liée à l'IA »_](https://martindufresne.substack.com/p/la-disparition-des-temps-morts-lautre),
+il décrit ce que produit la délégation à des agents IA des tâches faciles ou à faible valeur : il ne reste que des
 tâches à forte charge de réflexion, sans ces petits moments qui laissaient le cerveau souffler. Chez Elao, la même
 fatigue est apparue à mesure que ces outils se sont installés dans le quotidien, et ce sont les développeur·euses qui
 ont tiré la sonnette d'alarme. Une journée de team building y a été consacrée, d'où deux pistes : des moments de
-respiration hors de notre cœur de métier, et un rythme inspiré de Shape Up, trois semaines de production puis une de
+respiration hors de notre cœur de métier, et un rythme inspiré de **Shape Up**, trois semaines de production puis une de
 relâche. Nous nous cherchons encore.
 
 Eva lui a demandé quels garde-fous tiennent, chez lui, dans la durée. Son organisation d'abord : le travail de fond le
 matin, où il se sait le plus performant, du sport l'après-midi pour se changer les idées, l'enseignement le soir. Ce qui
-lui donne « à peu près des demi-journées de travail, mais du travail très intensif ». Puis le constat : « tout le monde
-pensait que ça allait dégager du temps. Finalement, ça en prend plus. » Comme l'IA fait une grosse partie du travail, on
-prend deux à trois fois plus de tâches en se disant qu'elle s'en chargera, et « on se retrouve à la fin de la semaine
-bien plus fatigué qu'on ne l'était avant ».
+lui donne _« à peu près des demi-journées de travail, mais du travail très intensif »_. Puis le constat : _« tout le
+monde pensait que ça allait dégager du temps. Finalement, ça en prend plus. »_ Comme l'IA fait une grosse partie du
+travail, on prend deux à trois fois plus de tâches en se disant qu'elle s'en chargera, et _« on se retrouve à la fin de
+la semaine bien plus fatigué qu'on ne l'était avant »_.
 
-Sur notre approche, il nous encourage : « votre idée de réfléchir à une nouvelle approche de travail, ça va être gagnant
-pour tous ».
+Sur notre approche, il nous encourage :
 
-Là où il voit la perte la plus nette, c'est sur la créativité : « On est comme sur le mode pilote automatique, tout le
-temps, à toujours générer du travail, sans vraiment réfléchir. On n'arrête pas de produire, de produire, de produire et
-finalement, tout se ressemble. Il n'y a pas vraiment de renouvellement, parce qu'on n'a plus le temps de renouveler nos
-propres idées. C'est une drôle de période. »
+> Votre idée de réfléchir à une nouvelle approche de travail, ça va être gagnant pour tous.
+
+Là où il voit la perte la plus nette, c'est sur la créativité :
+
+> On est comme sur le mode pilote automatique, tout le temps, à toujours générer du travail, sans vraiment réfléchir. On
+> n'arrête pas de produire, de produire, de produire et finalement, tout se ressemble. Il n'y a pas vraiment de
+> renouvellement, parce qu'on n'a plus le temps de renouveler nos propres idées. C'est une drôle de période.
+> <cite>— Martin Dufresne</cite>
 
 Maxime lui a décrit le point dur chez nous. Ce n'est plus le développement, où nous avons accepté une certaine capacité
-à lâcher prise en mettant notre énergie sur l'encodage de nos pratiques dans le harnais. C'est tout ce qu'il faut
-prévoir en amont : les itérations, les maquettes, les explorations, la validation technique. D'où ce que nous appelons
-entre nous le mur des décisions, ces arbitrages qui se répartissaient avant sur une semaine entière et qui tiennent
-maintenant dans une journée. Restait à savoir quel garde-fou il s'était trouvé, lui.
+à lâcher prise en mettant notre énergie sur l'encodage de nos pratiques dans le harnais (_les règles et les outils que
+nous donnons aux agents_). C'est tout ce qu'il faut prévoir en amont : les itérations, les maquettes, les explorations,
+la validation technique. D'où ce que nous appelons entre nous **le mur des décisions**, ces arbitrages qui se
+répartissaient avant sur une semaine entière et qui tiennent maintenant dans une journée.  
+_Restait à savoir quel **garde-fou** il s'était trouvé, lui._
 
-« Actuellement, je n'en ai pas. Je pense qu'on vit tous un peu ce syndrome du mur. » Il teste beaucoup de nouvelles
-approches pour l'éviter, sans résultat pour l'instant : le mur arrive à chaque fin de journée, et « le lendemain, c'est
-un recommencement ».
+_« Actuellement, je n'en ai pas. Je pense qu'on vit tous un peu ce syndrome du mur. »_ Il teste beaucoup de nouvelles
+approches pour l'éviter, sans résultat pour l'instant : le mur arrive à chaque fin de journée, et _« le lendemain, c'est
+un recommencement »_.
 
 Comme la pression vient du fait qu'il faut produire, on multiplie les tentatives plutôt que de s'arrêter pour chercher :
-« Je pense que si on prenait une pause pour réfléchir à comment justement régler ce problème-là, on finirait par le
-trouver, mais le flot constant de travail fait qu'on ne le prend jamais. » Le seul temps disponible, ce sont les
-vacances ou les congés, « et on n'a plus le goût ». Il termine là-dessus :
+_« Je pense que si on prenait une pause pour réfléchir à comment justement régler ce problème-là, on finirait par le
+trouver, mais le flot constant de travail fait qu'on ne le prend jamais. »_ Le seul temps disponible, ce sont les
+vacances ou les congés, _« et on n'a plus le goût »_. Il termine là-dessus :
 
 > Finalement, on est toujours dans une roue. Je pense qu'il va falloir prendre le temps de sortir de la roue pour
 > réussir à trouver une nouvelle approche.
-> <cite>Martin Dufresne</cite>
+> <cite>— Martin Dufresne</cite>
 
 ### Quand le projet est pensé sans l'équipe
 
@@ -133,64 +138,77 @@ marche à franchir pour entrer dans un projet dont on n'a défini ni les specs n
 
 Martin répond en indépendant qui embarque dans beaucoup d'équipes. Les chargés de projet qui réussissent le mieux à
 entrer dans un projet s'assoient avec tous les membres de l'équipe et se font expliquer le projet étape par étape, du
-début à la fin. Cela peut être long : « J'ai déjà vu que ça prenait la semaine au complet. » Pour lui ce n'est pas une
+début à la fin. Cela peut être long : _« J'ai déjà vu que ça prenait la semaine au complet. »_ Pour lui ce n'est pas une
 perte de temps mais un gain : en sachant le pourquoi de chaque décision, on a un portrait global du projet, le chargé de
 projet peut beaucoup mieux outiller ses équipes, et il est lui-même moins perdu.
 
-Le problème, souvent, est plus haut. Sur les projets où il a travaillé au Québec, « tout le process créatif est fait
-indépendamment des développeurs », et le chargé de projet arrive quasiment en même temps qu'eux. Les devs découvrent
-alors ce qu'il va y avoir dans l'interface, et « finalement, tout le monde y perd ».
+Le problème, souvent, est plus haut. Sur les projets où il a travaillé au Québec, _« tout le process créatif est fait
+indépendamment des développeurs »_, et le chargé de projet arrive quasiment en même temps qu'eux. Les devs découvrent
+alors ce qu'il va y avoir dans l'interface, et _« finalement, tout le monde y perd »_.
 
 Nous lui avons décrit ce qui a changé chez nous. Nous avions pour habitude d'embarquer tout le monde dès la phase de
 conception, mais l'IA a changé la donne en avant-vente : elle capte et structure les besoins plus vite et plus finement
 qu'avant. Résultat, le backlog est déjà écrit et les grosses fonctionnalités validées au moment de passer le projet à
 l'équipe, et une seule personne en détient la connaissance.
 
-Sa réponse : « quand une seule personne détient toute la connaissance du projet, ça fait un petit peu l'effet du
-téléphone arabe ». Quand vient le moment de transmettre, « chacun a un petit bout, mais personne n'a l'ensemble ». Il
-invite à revoir ce fonctionnement, « parce qu'au final le projet écope, tout le monde écope ». Et il ajoute ce que cela
-produit sur une équipe : « ça met un stress inutile sur une équipe qui doit rendre un projet pensé sans elle ».
+Sa réponse : _« quand une seule personne détient toute la connaissance du projet, ça fait un petit peu l'effet du
+téléphone arabe »_. Quand vient le moment de transmettre, _« chacun a un petit bout, mais personne n'a l'ensemble »_. Il
+invite à revoir ce fonctionnement, _« parce qu'au final le projet écope, tout le monde écope »_. Et il ajoute ce que
+cela produit sur une équipe : _« ça met un stress inutile sur une équipe qui doit rendre un projet pensé sans elle »_.
 
 ## Où est passé le plaisir ?
 
-Dans [« Le coût caché du codage de l'IA »](https://martindufresne.substack.com/p/le-cout-cache-du-codage-de-lia), Martin
-parle du flow, cet état dans lequel on rentre lorsque le défi rencontre la compétence à un juste équilibre, et du risque
-d'aboutir à des développeurs très productifs mais étrangement détachés. Maxime lui a raconté ce que ça donne chez nous :
-la joie s'est déplacée en fin de journée, quand on constate que l'IA a produit quelque chose de satisfaisant, plus vite
-et avec une finition parfois au-delà de ce que nous savions fournir avant. Sauf que c'est elle qui l'a produit. Restait
-à savoir où lui trouve encore de la joie et de la passion.
+Dans [_« Le coût caché du codage de l'IA »_](https://martindufresne.substack.com/p/le-cout-cache-du-codage-de-lia),
+Martin parle du **flow**, cet état dans lequel on rentre lorsque le défi rencontre la compétence à un juste équilibre,
+et du risque d'aboutir à des développeurs très productifs mais étrangement détachés. Maxime lui a raconté ce que ça
+donne chez nous : la joie s'est déplacée en fin de journée, quand on constate que l'IA a produit quelque chose de
+satisfaisant, plus vite et avec une finition parfois au-delà de ce que nous savions fournir avant. Sauf que c'est elle
+qui l'a produit.  
+_Restait à savoir où lui trouve encore **de la joie** et **de la passion**._
 
-Sa réponse tient dans la niche. La morphogénèse logicielle est un sujet sur lequel presque personne ne travaille, et
-c'est exactement ce qui la lui rend praticable : « j'ai beau utiliser l'intelligence artificielle, elle n'a pas vraiment
-de réponse à mes questions ». Là où l'outil n'a rien à proposer, l'espace de créer revient : « J'arrive à me libérer
-l'esprit, puis à créer avec ce projet-là. »
+Sa réponse tient dans la niche. Il travaille depuis près de deux ans sur le sujet de la **morphogénèse logicielle** : un
+petit système d'exploitation qui s'auto-répare.
+
+> On peut lui bousiller tous ses outils de démarrage, il détecte l'anomalie et
+> s'auto-répare en se basant sur l'historique de ses voisins, puis redémarre.  
+> Et ça fonctionne merveilleusement bien. ☺️
+
+Le système utilise ce qu'on appelle des **automates cellulaires**. Chaque automate agit de son côté, un bit à la fois,
+sur sa petite portion du problème. C'est la somme des actions locales qui produit le comportement d'ensemble. Et ça ne
+consomme presque rien.
+
+C'est un sujet sur lequel presque personne ne travaille, et c'est exactement ce qui le lui rend praticable pour trouver
+du plaisir : _« j'ai beau utiliser l'intelligence artificielle, elle n'a pas vraiment de réponse à mes questions »_. Là
+où l'outil n'a rien à proposer, l'espace de créer revient :
+
+> J'arrive à me libérer l'esprit, puis à créer avec ce projet-là.
 
 C'est aussi pour cela qu'il a laissé le développement de côté depuis plusieurs mois, au profit de ce projet de recherche
 et de l'enseignement. L'enseignement lui rend de la créativité par un autre chemin : il cherche pour ses étudiants des
 idées de projets qu'ils ne s'attendent pas à voir sur Internet, et leur fait construire en ce moment un agent IA
-complètement autonome, capable d'aller magasiner pour lui. « Pour eux, c'est magique. » Pour lui, c'est une sortie du
-quotidien : « ça me permet de tester des idées que je n'aurais normalement pas pris le temps de tester ». Il pousse le
-même réflexe jusqu'aux petits projets qu'il prépare pour ses cours, qu'il fait sans IA, « simplement pour avoir un peu
-le plaisir ».
+complètement autonome, capable d'aller magasiner pour lui. _« Pour eux, c'est magique. »_ Pour lui, c'est une sortie du
+quotidien : _« ça me permet de tester des idées que je n'aurais normalement pas pris le temps de tester »_. Il pousse le
+même réflexe jusqu'aux petits projets qu'il prépare pour ses cours, qu'il fait sans IA, _« simplement pour avoir un peu
+le plaisir »_.
 
-Ailleurs, il ne s'en cache pas : « Mais sinon, je n'ai plus tant de plaisir dans le développement. »
+Ailleurs, il ne s'en cache pas : _« Mais sinon, je n'ai plus tant de plaisir dans le développement. »_
 
-Ce qu'il a perdu dans le développement, c'est le défi. « À l'époque, il y avait des défis. Tu rencontrais un bug majeur,
-tu avais le défi de passer par-dessus et de réussir à le régler. » Aujourd'hui l'IA trouve la solution, et il ne reste
-que la fierté sans son objet : « tu vas juste être fier de dire "j'ai réglé le problème", mais tu n'as rien réglé. La
-machine l'a réglé pour toi, et toi, de ton côté, tu as juste regardé ce qu'elle a fait. »
+Ce qu'il a perdu dans le développement, c'est le défi. _« À l'époque, il y avait des défis. Tu rencontrais un bug
+majeur, tu avais le défi de passer par-dessus et de réussir à le régler. »_ Aujourd'hui l'IA trouve la solution, et il
+ne reste que la fierté sans son objet : _« tu vas juste être fier de dire “j'ai réglé le problème”, mais tu n'as rien
+réglé. La machine l'a réglé pour toi, et toi, de ton côté, tu as juste regardé ce qu'elle a fait. »_
 
 Eva a relancé sur cette impression d'être devenu un simple exécutant, qui lit et valide sans plus coder. Il la retrouve
-dans les agences : « il y a beaucoup de frustration dans les agences du fait qu'on ne fait plus vraiment notre métier »,
-alors que « le plaisir qu'on avait en choisissant ce métier, c'était justement de développer, de créer, d'imaginer ».
-Avec une conséquence qu'il constate autour de lui : « il y en a plein qui abandonnent le métier parce qu'ils n'ont plus
-aucun plaisir à le faire. On perd des gens qu'on n'aurait normalement pas perdus. »
+dans les agences : _« il y a beaucoup de frustration dans les agences du fait qu'on ne fait plus vraiment notre métier
+»_, alors que _« le plaisir qu'on avait en choisissant ce métier, c'était justement de développer, de créer, d'imaginer
+»_. Avec une conséquence qu'il constate autour de lui : _« il y en a plein qui abandonnent le métier parce qu'ils n'ont
+plus aucun plaisir à le faire. On perd des gens qu'on n'aurait normalement pas perdus. »_
 
-L'open source, où il a contribué, lui donne moins de plaisir pour une autre raison : « tout le monde semble être devenu
-expert avec l'IA », et « on ne peut plus savoir qui a fait le travail ». Ce qu'il observe : « Il y a tellement de gens
-qui disent "ah, je sais, je sais", mais au final, personne ne sait vraiment. » Ceux qui savent vraiment, selon lui,
-prennent du recul et se tiennent à l'écart de ce flot continu. « On les entend de moins en moins parler. Et c'est ceux
-qui ont le moins de compétences qui parlent le plus. Au final, ça nuit à tout le monde. »
+L'open source, où il a contribué, lui donne moins de plaisir pour une autre raison : _« tout le monde semble être devenu
+expert avec l'IA »_, et _« on ne peut plus savoir qui a fait le travail »_. Ce qu'il observe : _« Il y a tellement de
+gens qui disent “ah, je sais, je sais”, mais au final, personne ne sait vraiment. »_ Ceux qui savent vraiment, selon
+lui, prennent du recul et se tiennent à l'écart de ce flot continu. _« On les entend de moins en moins parler. Et c'est
+ceux qui ont le moins de compétences qui parlent le plus. Au final, ça nuit à tout le monde. »_
 
 ## Le web va-t-il finir par tous se ressembler ?
 
@@ -198,196 +216,209 @@ Notre designeuse nous a remonté la même inquiétude, côté UI et UX. L'IA fai
 parcours, mais sur la partie interface, elle craint de perdre en créativité si elle ne fait pas elle-même ses maquettes,
 et de ne plus trouver de sens dans un métier justement très créatif. Eva a demandé à Martin comment il voit ça, lui.
 
-Diplômé en graphisme et ancien intégrateur, il tient à ce que l'humain garde la main : « Ce n'est pas vrai que la
-machine sait comment construire une interface. » Ce ne sont que de gros algorithmes qui vont par probabilité ; comme ils
-ont analysé beaucoup d'interfaces, toutes les interfaces se ressemblent et reprennent le même concept, sans être
-forcément performantes. Là où « l'humain sait très bien que dans tel cas, l'usager va être gagnant en mettant le bouton
-à cet endroit-là plutôt qu'à cet endroit-là », l'IA « ira selon la plus grande probabilité ».
+Diplômé en graphisme et ancien intégrateur, il tient à ce que l'humain garde la main : _« Ce n'est pas vrai que la
+machine sait comment construire une interface. »_ Ce ne sont que de gros algorithmes qui vont par probabilité ; comme
+ils ont analysé beaucoup d'interfaces, toutes les interfaces se ressemblent et reprennent le même concept, sans être
+forcément performantes. Là où _« l'humain sait très bien que dans tel cas, l'usager va être gagnant en mettant le bouton
+à cet endroit-là plutôt qu'à cet endroit-là »_, l'IA _« ira selon la plus grande probabilité »_.
 
-Le constat qu'il en tire : « Quand on regarde les designs récents, tout se ressemble. On dirait qu'ils sont tous faits
-sur le même moule. » Et la règle qui va avec : « Dans ce domaine-là, moins on utilise l'IA, plus on a un produit de
-qualité pour les usagers. » Il reconnaît que cela prend plus de temps, tout en estimant qu'on en retire des bénéfices.
+Le constat qu'il en tire :
+
+> Quand on regarde les designs récents, tout se ressemble. On dirait qu'ils sont tous faits sur le même moule.
+>
+> Dans ce domaine-là, moins on utilise l'IA, plus on a un produit de qualité pour les usagers.
+> <cite>— Martin Dufresne</cite>
+
+Il reconnaît que cela prend plus de temps, tout en estimant qu'on en retire des bénéfices.
 
 Maxime lui a opposé un souvenir : il y a 10 à 15 ans, on tenait un peu le même discours face aux premiers frameworks
 CSS, et ils ont finalement participé à faire émerger des standards à partir desquels le web s'est structuré et
 professionnalisé, sans pour autant toujours uniformiser les créations. La solution est-elle de se passer de l'IA sur ces
 aspects, ou de trouver comment encoder sa personnalité et sa créativité dans les process qu'on lance avec elle ?
 
-« Je pense que c'est un peu un mix des deux. » Le problème, tel qu'il le voit, tient plus à la phase qu'à l'outil : nous
-serions dans « une zone tampon, où les gens ne font pas la deuxième partie, celle de mixer la créativité humaine avec
-l'IA ». Une période où l'on délègue trop, « probablement parce que c'est une nouvelle technologie et qu'il faudra encore
-plusieurs années avant que la hype descende ».
+_« Je pense que c'est un peu un mix des deux. »_ Le problème, tel qu'il le voit, tient plus à la phase qu'à l'outil :
+nous serions dans _« une zone tampon, où les gens ne font pas la deuxième partie, celle de mixer la créativité humaine
+avec l'IA »_. Une période où l'on délègue trop, _« probablement parce que c'est une nouvelle technologie et qu'il faudra
+encore plusieurs années avant que la hype descende »_.
 
-Il en veut pour précédent l'époque des sites en Macromedia Flash. Au début, « les sites se ressemblaient presque tous »,
-puis « la créativité et les nouveaux outils ont embarqué », et on a eu quelque chose de plus personnalisé. Il attend le
-même cycle sur trois ou quatre ans, peut-être un peu moins : « la base, la fondation, on va la faire faire par l'IA,
-puis tout ce qui est le process humain, la spécificité, va revenir dans la balance. »
+Il en veut pour précédent l'époque des sites en **Macromedia Flash**. Au début, _« les sites se ressemblaient presque
+tous »_, puis _« la créativité et les nouveaux outils ont embarqué »_, et on a eu quelque chose de plus personnalisé. Il
+attend le même cycle sur trois ou quatre ans, peut-être un peu moins : _« la base, la fondation, on va la faire faire
+par l'IA, puis tout ce qui est le process humain, la spécificité, va revenir dans la balance. »_
 
 ## Apprendre quand la machine a déjà la réponse
 
 Dans
-[« La fin du code : Que reste-t-il quand le logiciel ne vaut plus rien ? »](https://martindufresne.substack.com/p/la-fin-du-code-que-reste-t-il-quand)
-, Martin décrit le passage de l'artisan du code à l'architecte de l'intention. Cela résonne chez nous, où la part de
+[_« La fin du code : Que reste-t-il quand le logiciel ne vaut plus rien ? »_](https://martindufresne.substack.com/p/la-fin-du-code-que-reste-t-il-quand),
+Martin décrit le passage de l'artisan du code à **l'architecte de l'intention**. Cela résonne chez nous, où la part de
 temps passée sur la production de code recule au profit de la conception et des ateliers. Un junior doit pourtant
 continuer à maîtriser et comprendre ce qu'il produit, et Maxime lui a demandé comment il transmet ça.
 
-Il met l'emphase sur la compréhension fine des problèmes plutôt que sur le code : « Le code, la machine va toujours le
-produire plus rapidement. » Il donne donc à ses étudiants du code qui ne fonctionne pas, et les force à se passer de
-l'IA comme d'Internet. Sans chercher forcément à ce qu'ils le résolvent : « je veux qu'ils réfléchissent à pourquoi j'ai
-ce problème-là, puis ce seraient quoi les pistes de solution pour le résoudre ».
+Il met l'emphase sur la compréhension fine des problèmes plutôt que sur le code : _« Le code, la machine va toujours le
+produire plus rapidement. »_ Il donne donc à ses étudiants du code qui ne fonctionne pas, et les force à se passer de
+l'IA comme d'Internet. Sans chercher forcément à ce qu'ils le résolvent : _« je veux qu'ils réfléchissent à pourquoi
+j'ai ce problème-là, puis ce seraient quoi les pistes de solution pour le résoudre »_.
 
-« Au début ils détestent. Ils me détestent. Mais au final, ils me remercient », parce qu'à force ils finissent par
-comprendre l'architecture du produit. Il n'en fait pas pour autant une certitude : « Est-ce que c'est la bonne voie ? Je
-ne sais pas. »
+_« Au début ils détestent. Ils me détestent. Mais au final, ils me remercient »_, parce qu'à force ils finissent par
+comprendre l'architecture du produit. Il n'en fait pas pour autant une certitude : _« Est-ce que c'est la bonne voie ?
+Je ne sais pas. »_
 
 Il fait le même exercice côté visuel : deux ou trois images, et trois concepts d'interface à construire sans IA. Son
-observation : « je me rends compte que les gens ne sont comme plus capables, on a comme perdu cette créativité-là ».
-Même chose côté développement, avec un junior privé d'Internet et d'IA devant un problème : « Tu le mets devant un mur
-blanc : il n'est plus capable de parler, plus capable de réfléchir. » D'où sa façon de résumer l'exercice : « il s'agit
-de forcer les gens à réutiliser leur cerveau ».
+observation : _« je me rends compte que les gens ne sont comme plus capables, on a comme perdu cette créativité-là »_.
+Même chose côté développement, avec un junior privé d'Internet et d'IA devant un problème : _« Tu le mets devant un mur
+blanc : il n'est plus capable de parler, plus capable de réfléchir. »_ D'où sa façon de résumer l'exercice : _« il
+s'agit de forcer les gens à réutiliser leur cerveau »_.
 
 Il évalue donc rarement ses étudiants sur le fait qu'ils produisent le meilleur code, ou même du code fonctionnel, mais
-« vraiment sur la réflexion qu'ils ont par rapport à l'interface ou par rapport au code ». L'effet qu'il observe : « ils
-ont moins peur, ils se permettent plus de créativité, plus de folie, en sachant que ce n'est pas grave s'ils font des
-erreurs. Au moins, ils ont réfléchi. »
+_« vraiment sur la réflexion qu'ils ont par rapport à l'interface ou par rapport au code »_. L'effet qu'il observe : _«
+ils ont moins peur, ils se permettent plus de créativité, plus de folie, en sachant que ce n'est pas grave s'ils font
+des erreurs. Au moins, ils ont réfléchi. »_
 
-Le début de carrière, lui, a changé de nature. Avant, on arrivait dans une boîte, on voyait les seniors, « c'était nos
-mentors et notre objectif ». Aujourd'hui, « il faut combattre l'IA, il faut combattre les seniors… Finalement, ils
-deviennent tellement stressés qu'ils ne savent plus trop où aller. »
+Le début de carrière, lui, a changé de nature. Avant, on arrivait dans une boîte, on voyait les seniors, _« c'était nos
+mentors et notre objectif »_. Aujourd'hui, _« il faut combattre l'IA, il faut combattre les seniors… Finalement, ils
+deviennent tellement stressés qu'ils ne savent plus trop où aller. »_
 
-Ce vers quoi il pousse ses juniors : « À partir du moment où tu as du plaisir à faire quelque chose, je pense que la
-créativité, puis la facilité d'apprendre, puis de pousser tes capacités, revient. C'est vers là qu'il faut pousser les
-juniors, peu importe le domaine. En tout cas, c'est ma vision de la chose. »
+Ce vers quoi il pousse ses juniors, peu importe le domaine : chercher à retrouver du plaisir à faire les choses. Avec le
+plaisir, on redevient créatif, on apprend plus facilement, et on pousse ses capacités plus loin. _« En tout cas, c'est
+ma vision de la chose. »_
 
 ## Écrire à la main, pour réfléchir
 
 L'écriture de Martin est venue de l'enseignement : les mêmes questions revenaient chez ses élèves débutants, alors il a
 lancé une newsletter pour vulgariser des concepts assez techniques et les rendre accessibles à n'importe qui. Dans
-[« Plus de gens devraient écrire »](https://martindufresne.substack.com/p/plus-de-gens-devraient-ecrire), il défend
+[_« Plus de gens devraient écrire »_](https://martindufresne.substack.com/p/plus-de-gens-devraient-ecrire), il défend
 l'écriture comme exercice de pensée plutôt que comme moyen de se faire lire. Maxime lui a demandé pourquoi il la
 plébiscite encore autant à l'heure des contenus générés en masse.
 
-Sa réponse : « Principalement parce que lorsqu'on écrit, on réfléchit. Ça nous force à réfléchir à ce qu'on dit. » À
-écrire moins, observe-t-il, on devient plus impulsif : « on dit quelque chose, puis après on réfléchit ».
+Sa réponse : _« Principalement parce que lorsqu'on écrit, on réfléchit. Ça nous force à réfléchir à ce qu'on dit. »_ À
+écrire moins, observe-t-il, on devient plus impulsif : _« on dit quelque chose, puis après on réfléchit »_.
 
-Sa pratique tient d'un artisanat qu'on qualifierait presque d'anachronique 😁 : « Je suis encore de la vieille école.
-J'écris beaucoup à la main, sur papier, surtout quand je développe des projets. » Il lui arrive d'écrire tout un projet
-à la main, graphiques compris. « Souvent, pendant que je le fais, je me rends compte de ce qui n'est pas logique dans le
-projet. » Interrogé là-dessus, il répond ne rien déléguer de ce processus à l'IA.
+Sa pratique tient d'un artisanat qu'on qualifierait presque d'anachronique 😁 : _« Je suis encore de la vieille école.
+J'écris beaucoup à la main, sur papier, surtout quand je développe des projets. »_ Il lui arrive d'écrire tout un projet
+à la main, graphiques compris. _« Souvent, pendant que je le fais, je me rends compte de ce qui n'est pas logique dans
+le projet. »_ Interrogé là-dessus, il répond ne rien déléguer de ce processus à l'IA.
 
-Sa newsletter n'a aucune publicité et une centaine d'abonnés, et il ne pousse pas plus que ça : « si les gens
-accrochent, ils s'inscrivent, c'est correct ». Ce qu'il en retire : « ça me permet de réfléchir et de parler des sujets
-qui me tiennent à cœur. Si ça peut toucher des gens, tant mieux. Mais j'écris d'abord pour moi. »
+Sa newsletter n'a aucune publicité et une centaine d'abonnés, et il ne pousse pas plus que ça : _« si les gens
+accrochent, ils s'inscrivent, c'est correct »_. Ce qu'il en retire : _« ça me permet de réfléchir et de parler des
+sujets qui me tiennent à cœur. Si ça peut toucher des gens, tant mieux. Mais j'écris d'abord pour moi. »_
 
-### « Je n'écris aucun article dont je suis 100 % satisfait »
+### Se satisfaire du nécessaire
 
-Dans [« Soixante-dix pour cent »](https://martindufresne.substack.com/p/soixante-dix-pour-cent), Martin défend la règle
-des 70 % contre la recherche de la perfection : s'acharner sur les derniers pourcents coûte un temps fou pour un gain
-marginal. Maxime lui rapporte sa propre vision aujourd'hui, bien qu'ayant du mal à l'appliquer : viser 100 % plutôt que
-se satisfaire de moins, c'est souvent une façon de ne pas trancher, et parfois un frein pour se lancer ou se sentir
-légitime. Y arrive-t-il vraiment, lui ?
+Dans [_« Soixante-dix pour cent »_](https://martindufresne.substack.com/p/soixante-dix-pour-cent), Martin défend **la
+règle des 70 %** de satisfaction contre la recherche de la perfection : s'acharner sur les derniers pourcents coûte un
+temps fou pour un gain marginal. Maxime lui rapporte sa propre vision aujourd'hui, bien qu'ayant du mal à l'appliquer :
+viser 100 % plutôt que se satisfaire de moins, c'est souvent une façon de ne pas trancher, et parfois un frein pour se
+lancer ou se sentir légitime.  
+_Y arrive-t-il vraiment, lui ?_
 
-« Oui, j'arrive à l'appliquer aujourd'hui. » Et il part du même endroit que nous : « Moi aussi, j'ai été très, très
-perfectionniste : je visais toujours le 100 %. » Ce qui l'a fait basculer n'est pas une théorie mais une observation :
-quel que soit le produit, il devait retravailler dès la mise en production. « Donc je n'arrivais jamais, de toute façon,
-au 100 %. » Le bénéfice est autant psychologique que productif : « Ça m'a libéré énormément de stress. Et ça m'a permis
-d'avancer beaucoup plus vite sur mes travaux. »
+_« Oui, j'arrive à l'appliquer aujourd'hui. »_ Et il part du même endroit que nous : _« Moi aussi, j'ai été très, très
+perfectionniste : je visais toujours le 100 %. »_ Ce qui l'a fait basculer n'est pas une théorie mais une observation :
+quel que soit le produit, il devait retravailler dès la mise en production. _« Donc je n'arrivais jamais, de toute
+façon, au 100 %. »_ Le bénéfice est autant psychologique que productif : _« Ça m'a libéré énormément de stress. Et ça
+m'a permis d'avancer beaucoup plus vite sur mes travaux. »_
 
-Il se méfie d'ailleurs des règles trop fermes, y compris des siennes : « Je n'ai pas tant de règles que ça. Je m'en crée
-pour voir si elles tiennent. » Les 45 minutes d'écriture quotidienne ont tenu les 10 à 12 premiers numéros, avant qu'il
-les fasse sauter en se trouvant trop limité dans ce qu'il voulait expliquer.
+Il se méfie d'ailleurs des règles trop fermes, y compris des siennes : _« Je n'ai pas tant de règles que ça. Je m'en
+crée pour voir si elles tiennent. »_ Les 45 minutes d'écriture quotidienne ont tenu les 10 à 12 premiers numéros, avant
+qu'il les fasse sauter en se trouvant trop limité dans ce qu'il voulait expliquer.
 
-Sur son procédé d'écriture : il couche les points principaux, les traite tous, « puis une fois que j'ai écrit la
-conclusion, je sais que l'article n'est pas complet. Mais je me dis : elle est suffisamment complète pour que les gens
-en tirent des bénéfices, donc je la pousse quand même. »
+Sur son procédé d'écriture : il couche les points principaux, les traite tous, puis _« une fois que j'ai écrit la
+conclusion, je sais que l'article n'est pas complet. Mais je me dis : il est suffisamment complet pour que les gens en
+tirent des bénéfices, donc je le pousse quand même. »_
 
-« Je n'écris aucun article dont je suis 100 % satisfait. »
+> Je n'écris aucun article dont je suis 100 % satisfait.
+> <cite>— Martin Dufresne</cite>
 
 ## L'IA qu'on choisit, l'IA qu'on subit
 
-Connaît-il cette culpabilité de prendre le temps de faire soi-même quand l'outil irait plus vite ? « Oui, oui, oui, je
-la subis, je la subis souvent. » Il trie selon la nature de la tâche. Les tâches chronophages qui reviennent tout le
-temps, « qu'elle les fasse, ça ne me dérange pas ». Le créatif, l'architectural, tout ce qui demande de la réflexion, il
-ne l'utilise pas du tout. « Est-ce que ça fait de mes produits des meilleurs produits ? Je ne pense pas, mais ça fait au
-moins des produits plus humains. »
+Connaît-il cette culpabilité de prendre le temps de faire soi-même quand l'outil irait plus vite ? _« Oui, oui, oui, je
+la subis, je la subis souvent. »_ Il trie selon la nature de la tâche. Les tâches chronophages qui reviennent tout le
+temps, _« qu'elle les fasse, ça ne me dérange pas »_. Le créatif, l'architectural, tout ce qui demande de la réflexion,
+il ne l'utilise pas du tout. _« Est-ce que ça fait de mes produits des meilleurs produits ? Je ne pense pas, mais ça
+fait au moins des produits plus humains. »_
 
 Eva l'a ensuite interrogé sur l'empreinte écologique, la nôtre ayant fortement augmenté depuis que nous utilisons ces
 outils au quotidien. Lui n'utilise pas de gros modèles de langage, seulement de petits modèles locaux, moins gourmands.
 Mais sa critique ne porte pas d'abord sur l'IA qu'on choisit, elle porte sur celle qu'on subit, citant ces résumés
-générés (les Google Overviews) qui coiffent les résultats de recherche, plus récemment en Europe : « Est-ce que c'était
-vraiment nécessaire ? » Sa formule résume le problème : « Aujourd'hui, tout est prétexte à consommer de l'IA, et avec
-les impacts qui viennent avec. » Il salue l'approche de Firefox, « qui permet de désactiver entièrement l'IA du
-navigateur », et pointe Chrome, où l'option a disparu : « C'est tu l'utilises ou tu l'utilises. »
+générés (les Google Overviews) qui coiffent les résultats de recherche, plus récemment en Europe : _« Est-ce que c'était
+vraiment nécessaire ? »_ Sa formule résume le problème : _« Aujourd'hui, tout est prétexte à consommer de l'IA, et avec
+les impacts qui viennent avec. »_ Il salue l'approche de Firefox, _« qui permet de désactiver entièrement l'IA du
+navigateur »_, et pointe Chrome, où l'option a disparu : _« C'est tu l'utilises ou tu l'utilises. »_
 
-Son pronostic n'est pas optimiste : « À terme on va foncer dans le mur. » Il ne croit pas aux efforts que les grandes
-compagnies annoncent, faute d'intérêt financier, et attend une législation pour encadrer tout ça, « mais vu la vitesse
-des gouvernements, on va attendre longtemps ».
+Son pronostic n'est pas optimiste : _« À terme on va foncer dans le mur. »_ Il ne croit pas aux efforts que les grandes
+compagnies annoncent, faute d'intérêt financier, et attend une législation pour encadrer tout ça, _« mais vu la vitesse
+des gouvernements, on va attendre longtemps »_.
 
 ## Les quinze minutes où l'on a vraiment du plaisir
 
 Dans
-[« L'idée de devoir réfléchir intensément me manque »](https://martindufresne.substack.com/p/lidee-de-devoir-reflechir-intensement)
-, Martin décrit deux traits qui cohabitent en lui : le Bâtisseur, celui qui veut créer et livrer avec pragmatisme, et le
+[_« L'idée de devoir réfléchir intensément me manque »_](https://martindufresne.substack.com/p/lidee-de-devoir-reflechir-intensement),
+Martin décrit deux traits qui cohabitent en lui : le Bâtisseur, celui qui veut créer et livrer avec pragmatisme, et le
 Penseur, qui a besoin de ruminer un problème difficile pendant des jours. Maxime s'est reconnu dans une variante plus
 têtue, l'acharné qui s'accroche jusqu'à la solution élégante, et qui constate que cette force est aujourd'hui moins
 récompensée : chacun peut produire à toute vitesse une solution ad-hoc qui fonctionne. Ce qui devient accessible, ce
 n'est pas le savoir, c'est le fait de s'en passer.
 
-Martin le rejoint : « Oui, moi aussi, j'ai été longtemps à m'acharner. Je m'acharne encore, d'ailleurs. » Son
+Martin le rejoint : _« Oui, moi aussi, j'ai été longtemps à m'acharner. Je m'acharne encore, d'ailleurs. »_ Son
 acharnement s'est simplement déplacé vers de petites choses. Aujourd'hui, il a tendance à se dire qu'il va créer une
-fonction qu'on retrouve à peu près partout, « mais y ajouter un petit peu ma touche » : parfois très subtil, un effet en
-survol sur une icône, unique au produit. « Dans le fond, ça m'a pris 15 minutes. Mais c'est 15 minutes où j'ai eu
-vraiment du plaisir. C'est ma façon à moi d'aller chercher ce petit côté magique. »
+fonction qu'on retrouve à peu près partout, _« mais y ajouter un petit peu ma touche »_ : parfois très subtil, un effet
+en survol sur une icône, unique au produit. _« Dans le fond, ça m'a pris 15 minutes. Mais c'est 15 minutes où j'ai eu
+vraiment du plaisir. C'est ma façon à moi d'aller chercher ce petit côté magique. »_
 
-Il se décrit comme « le petit gars acharné qui s'amuse à essayer de réinventer le monde sur Internet à chaque jour », et
-se revendique « encore un grand enfant » : il navigue, voit une icône avec un petit effet, et « waouuuuh ». Sa
-justification : « On a cette compétence, cette connaissance-là, qui n'est pas donnée à tous. Donc aussi bien en tirer du
-plaisir. »
+Il se décrit comme _« le petit gars acharné qui s'amuse à essayer de réinventer le monde sur Internet chaque jour »_, et
+se revendique _« encore un grand enfant »_ : il navigue, voit une icône avec un petit effet, et _« waouuuuh »_. Sa
+justification : _« On a cette compétence, cette connaissance-là, qui n'est pas donnée à tous. Donc aussi bien en tirer
+du plaisir. »_
 
-Il cache aussi des easter eggs dans les gros projets, des portions cachées. Dans certains, une combinaison de touches
-donnait un petit jeu de Sudoku : « On s'entend, quand on travaille dans un tableur toute la journée, avoir de quoi se
-détendre sans quitter le projet, ça peut être plaisant. » Les clients ne le demandent jamais, mais ils trouvent que « ça
-ajoute un petit côté humain à leur outil », et « c'est très rare qu'on me demande de le retirer ».
+Il cache aussi des _easter eggs_ dans les gros projets, des portions cachées. Dans certains, une combinaison de touches
+donnait un petit jeu de Sudoku : _« On s'entend, quand on travaille dans un tableur toute la journée, avoir de quoi se
+détendre sans quitter le projet, ça peut être plaisant. »_ Les clients ne le demandent jamais, mais ils trouvent que _«
+ça ajoute un petit côté humain à leur outil »_, et _« c'est très rare qu'on me demande de le retirer »_.
 
-## Pour conclure
+## Ce qui lui manque le plus
 
-Nous cherchions des méthodes, il n'en avait pas de toute faite. Ce qui manque le plus à Martin de l'époque d'avant n'est
-pas la technique, c'est l'échange : « c'était l'époque où on échangeait vraiment. Ça pouvait être quelque chose de très,
-très petit, mais tout le monde se partageait la connaissance. » Aujourd'hui, « les gens publient à tout va. Des choses
-qui n'ont plus vraiment de saveur », alors qu'avant « les découvertes avaient une petite saveur ».
+Nous lui avons demandé s'il gardait un regret de l'époque d'avant. Ce n'est pas la technique : c'est l'échange. _«
+C'était l'époque où on échangeait vraiment. Ça pouvait être quelque chose de très, très petit, mais tout le monde se
+partageait la connaissance. »_ Aujourd'hui, _« les gens publient à tout va. Des choses qui n'ont plus vraiment de saveur
+»_, alors qu'avant _« les découvertes avaient une petite saveur »_.
 
-Puis : « Tout le monde peut désormais tout faire rapidement, sans réfléchir, et ça, ça manque. Il n'y a plus de
-réflexion, de fond, il n'y a plus de communication, il n'y a plus de partage. »
+> Tout le monde peut désormais tout faire rapidement, sans réfléchir, et ça, ça manque. Il n'y a plus de réflexion, de
+> fond, il n'y a plus de communication, il n'y a plus de partage.
+> <cite>— Martin Dufresne</cite>
 
-Reste un conseil, qui vaut autant pour un junior devant un mur blanc que pour un senior qui ne reconnaît plus son
-métier :
+## Pour finir
+
+Nous cherchions des méthodes, il n'en avait pas de toute faite. Reste un conseil, qui vaut autant pour un junior devant
+un mur blanc que pour un senior qui ne reconnaît plus son métier :
 
 > À partir du moment où tu as du plaisir à faire quelque chose, je pense que la créativité, puis la facilité
 > d'apprendre, puis de pousser tes capacités, revient.
-> <cite>Martin Dufresne</cite>
+> <cite>— Martin Dufresne</cite>
 
-Nous remercions chaleureusement Martin pour son temps, sa franchise et sa bonne humeur. Ce qui devait être une interview
-d'une heure est devenu une conversation à trois, où nous avons autant parlé de nos propres impasses que des siennes.
-Nous attendons la suite de sa morphogénèse, qu'il espère terminer d'ici la fin de l'automne. Et il nous a laissé une
-invitation que nous vous transmettons : si vous avez des idées de sujets pour sa newsletter, écrivez-lui.
+Nous remercions chaleureusement Martin pour son temps, sa franchise et sa bonne humeur. Nous avons grandement apprécié
+cet échange, très enrichissant. Ce qui devait être une interview d'une heure est devenu une conversation à trois, où
+nous avons autant parlé de nos propres impasses que des siennes. Nous attendons la suite de sa morphogénèse logicielle,
+qu'il espère terminer d'ici la fin de l'automne.
 
-## Pour suivre Martin
+Et il nous a laissé une invitation que nous vous transmettons : si vous avez des idées de sujets pour sa newsletter,
+écrivez-lui !
+
+### Pour suivre Martin
 
 - [Son site](https://martindufresne.com/)
 - [Son blog](https://martindufresne.com/blog/)
 - [Sa newsletter sur Substack](https://substack.com/@martindufresne)
 - [Son compte Bluesky](https://bsky.app/profile/mdufresne.bsky.social)
 
-## Les voix qu'il nous recommande
+### Les voix qu'il nous recommande
 
-- **Paul Gauthier**, créateur d'Aider, pour suivre « l'évolution du pair programming en ligne de commande et la façon
-  dont les LLM peuvent s'intégrer dans le flux du développeur » : [LinkedIn](https://www.linkedin.com/in/paulgauthier/)
+- **Paul Gauthier**, créateur d'Aider, pour suivre _« l'évolution du pair programming en ligne de commande et la façon
+  dont les LLM peuvent s'intégrer dans le flux du développeur »_ : [LinkedIn](https://www.linkedin.com/in/paulgauthier/)
   et [X](https://x.com/paulgauthier).
-- **Ethan Mollick**, professeur aux États-Unis, qui « parle énormément de tout ce qui est de la posture à adopter face à
-  l'IA, l'expérimentation » : sa newsletter [One Useful Thing](https://www.oneusefulthing.org/) et
+- **Ethan Mollick**, professeur aux États-Unis, qui _« parle énormément de tout ce qui est de la posture à adopter face
+  à l'IA, l'expérimentation »_ : sa newsletter [One Useful Thing](https://www.oneusefulthing.org/) et
   [X](https://x.com/emollick).
-- **Clément Delangue**, de Hugging Face : « Parle beaucoup du mouvement open source, de la souveraineté et des
-  modèles. » Son [LinkedIn](https://www.linkedin.com/in/clementdelangue/).
+- **Clément Delangue**, de Hugging Face : _« Parle beaucoup du mouvement open source, de la souveraineté et des modèles.
+  »_ Son [LinkedIn](https://www.linkedin.com/in/clementdelangue/).
 
 <!-- mode: entretien -->
 
@@ -430,9 +461,9 @@ que je fais de l'informatique : on a eu le temps de se former 😁
 
 L'écriture m'est venue du fait que, comme j'enseigne beaucoup à des gens qui débutent dans le métier, on me posait de
 nombreuses questions. Et ce n'est pas toujours évident d'amener un sujet pour qu'il soit compris lorsqu'il est assez
-technique. Donc je me suis dit : je vais partir une newsletter, puis je vais simplement vulgariser des concepts qui sont
-assez techniques, et je vais essayer de les rendre accessibles à n'importe qui. Peu importe que tu sois dans le domaine
-ou pas.
+technique. Donc je me suis dit : je vais partir d'une newsletter, puis je vais simplement vulgariser des concepts qui
+sont assez techniques, et je vais essayer de les rendre accessibles à n'importe qui. Peu importe que tu sois dans le
+domaine ou pas.
 
 Au début, le concept de la newsletter était assez simple. Je voulais prendre 45 minutes le matin pour écrire tout ce que
 j'avais dans la tête. Une fois que c'était fini, c'était fini. Finalement, les sujets sont devenus de plus en plus
@@ -446,8 +477,9 @@ c'est un sujet qui revient régulièrement, donc je l'aborde, puis j'essaie de l
 
 > Parmi les articles qui nous ont particulièrement marqués :
 > [« La Résilience par la Perte : Pourquoi mon code doit mourir pour survivre »](https://martindufresne.com/blog/la-r%C3%A9silience-par-la-erte_pourquoi-mon-code-doit-mourir-pour-survivre/)
-> et le concept de la _morphogénèse logicielle_. Il y a 2 ou 3 ans encore, les liens qu'il tisse entre le logiciel et le
-> vivant auraient pu passer pour de la science-fiction. Avec la vitesse actuelle, ça nous semble tout à fait crédible.
+> et le concept de la **morphogénèse logicielle**. Il y a 2 ou 3 ans encore, les liens qu'il tisse entre le logiciel et
+> le vivant auraient pu passer pour de la science-fiction. Avec la vitesse actuelle, ça nous semble tout à fait
+> crédible.
 
 > **Maxime :** La morphogénèse logicielle, c'est quoi exactement, et où tu en es sur le sujet ?
 
@@ -474,26 +506,26 @@ je travaille, que je me suis dit : il doit y avoir une approche qu'on pourrait p
 Tout ce qui est morphogénèse, dans le fond, c'est rendre la machine autonome, capable de s'auto-réguler. Je suis parti
 sur le créneau de la cybersécurité, mais je suis persuadé qu'il y aura bien d'autres applications.
 
-C'est très léger en termes de consommation de ressources : ça utilise ce qu'on appelle des automates cellulaires, qui
-modifient un bit à la fois. Chaque automate agit de son côté, sur sa petite portion du problème, un peu comme une équipe
-de travailleurs indépendants. C'est la somme de ces actions locales qui produit le comportement d'ensemble. Et ça ne
-consomme presque rien.
+C'est très léger en termes de consommation de ressources : ça utilise ce qu'on appelle des **automates cellulaires**,
+qui modifient un bit à la fois. Chaque automate agit de son côté, sur sa petite portion du problème, un peu comme une
+équipe de travailleurs indépendants. C'est la somme de ces actions locales qui produit le comportement d'ensemble. Et ça
+ne consomme presque rien.
 
 ## Ses constats
 
 ### « L'IA ne dégage pas de temps, ça en prend plus »
 
 > Dans
-> [« La disparition des temps morts : l’autre visage de la fatigue liée à l’IA »](https://martindufresne.substack.com/p/la-disparition-des-temps-morts-lautre)
-> , Martin décrit ce que produit la délégation des tâches faciles ou à faible valeur à des agents IA : il ne reste que
-> des tâches à forte charge de réflexion, sans ces petits moments qui laissaient le cerveau souffler, mais avec le
-> sentiment d'avancer.
+> [« La disparition des temps morts : l’autre visage de la fatigue liée à l’IA »](https://martindufresne.substack.com/p/la-disparition-des-temps-morts-lautre),
+> Martin décrit ce que produit la délégation des tâches faciles ou à faible valeur à des agents IA : il ne reste que des
+> tâches à forte charge de réflexion, sans ces petits moments qui laissaient le cerveau souffler, mais avec le sentiment
+> d'avancer.
 >
 > Nous vivons pleinement cela à l'agence, au point que des développeurs ont tiré la sonnette d'alarme. Nous y avons
 > consacré une journée de team building et des ateliers pour que chacun s'exprime. Deux pistes en sont sorties : des
 > moments de respiration en dehors du cœur de métier (par exemple aider une association, travailler une passion, prendre
-> du temps pour soi) et un rythme inspiré de Shape Up : trois semaines de production puis une semaine de relâche. Nous
-> nous cherchons encore.
+> du temps pour soi) et un rythme inspiré de **Shape Up** : trois semaines de production puis une semaine de relâche.
+> Nous nous cherchons encore.
 
 > **Eva :** Comment tu gères cette fatigue cognitive au quotidien ? Est-ce que tu as trouvé des garde-fous qui tiennent
 > dans la durée ?
@@ -528,9 +560,9 @@ moins productif, et ça nuit à tout le monde.
 > lâcher prise et gagner en confiance, en mettant notre énergie sur l'encodage de nos pratiques dans le harnais (_les
 > règles et les outils que nous donnons aux agents_). C'est plutôt le fait de tout prévoir en amont et de passer plus de
 > temps sur la conception : les itérations, les maquettes, les explorations, la validation technique. Durant la journée,
-> il y a ce que j'appelle le mur des décisions, que tu te prends dans la face, là où avant ces mêmes décisions étaient
-> réparties sur une semaine entière. Et à la fin de la journée, tu es épuisé, parfois sans même avoir encore produit
-> quelque chose de concret. Est-ce que toi, tu as un garde-fou pour t'empêcher d'en arriver là ?
+> il y a ce que j'appelle **le mur des décisions**, que tu te prends dans la face, là où avant ces mêmes décisions
+> étaient réparties sur une semaine entière. Et à la fin de la journée, tu es épuisé, parfois sans même avoir encore
+> produit quelque chose de concret. Est-ce que toi, tu as un garde-fou pour t'empêcher d'en arriver là ?
 
 Actuellement, je n'en ai pas. Je pense qu'on vit tous un peu ce syndrome du mur. Je travaille beaucoup à tester des
 nouvelles approches pour m'éviter ce mur-là, mais jusqu'à présent, non ; il arrive à chaque fin de journée. Et je trouve
@@ -548,8 +580,8 @@ Finalement, on est toujours dans une roue. Je pense qu'il va falloir prendre le 
 ### « Le développement est moins plaisant aujourd'hui qu'à l'époque »
 
 > Dans [« Le coût caché du codage de l'IA »](https://martindufresne.substack.com/p/le-cout-cache-du-codage-de-lia),
-> Martin parle du flow : l'état dans lequel on rentre lorsque le défi rencontre la compétence à un juste équilibre et où
-> l'on est complètement absorbé. Il parle aujourd'hui du risque d'aboutir à des développeurs très productifs mais
+> Martin parle du **flow** : l'état dans lequel on rentre lorsque le défi rencontre la compétence à un juste équilibre
+> et où l'on est complètement absorbé. Il parle aujourd'hui du risque d'aboutir à des développeurs très productifs mais
 > étrangement détachés, jamais passionnés. Nous le ressentons : la fatigue et la satisfaction ont changé de nature. Là
 > où l'on se prenait la tête trois heures sur un bug, où l'on finissait exténués mais fiers d'avoir trouvé, et où
 > s'arrêter était naturel, aujourd'hui on lance un agent, on vérifie, on relance, et on ne trouve plus de raison de
@@ -665,10 +697,10 @@ affiches se ressemblent, il n'y a pas de vie, on n'est pas touché par le messag
 
 ### « Au début, ils me détestent. Mais au final, ils me remercient »
 
-> L'IA rebat les cartes et change en profondeur notre métier. Son « de l'artisan du code à l'architecte de l'intention
-> », dans
-> [« La fin du code : Que reste-t-il quand le logiciel ne vaut plus rien ? »](https://martindufresne.substack.com/p/la-fin-du-code-que-reste-t-il-quand)
-> , résonne fort chez nous : la part de temps passé sur la production de code recule au profit de la conception et des
+> L'IA rebat les cartes et change en profondeur notre métier. Son « de l'artisan du code à **l'architecte de
+> l'intention** », dans
+> [« La fin du code : Que reste-t-il quand le logiciel ne vaut plus rien ? »](https://martindufresne.substack.com/p/la-fin-du-code-que-reste-t-il-quand),
+> résonne fort chez nous : la part de temps passé sur la production de code recule au profit de la conception et des
 > ateliers, et nous passons progressivement de 80 % de production vers 80 % de conception. L'expertise technique pure
 > n'est plus le premier critère de valeur. Pour autant, sans conserver le même attachement à la technique que ce qu'un
 > senior pouvait avoir auparavant, un junior doit continuer à maîtriser et comprendre ce qu'il produit.
@@ -832,8 +864,8 @@ Sauf que je me suis rendu compte que peu importe le produit, j'avais beau dire �
 production je devais retravailler. Il y avait toujours quelque chose qui manquait. Donc je n'arrivais jamais, de toute
 façon, au 100 %.
 
-En appliquant la règle des 70 %, je me dis : pourvu que les fonctionnalités essentielles y soient, je sais que je vais
-retravailler le projet de toute façon. Tout ce que je voulais implémenter, j'y arriverai, mais sur le long terme.
+En appliquant **la règle des 70 %**, je me dis : pourvu que les fonctionnalités essentielles y soient, je sais que je
+vais retravailler le projet de toute façon. Tout ce que je voulais implémenter, j'y arriverai, mais sur le long terme.
 
 J'y vais donc au 70 %, pourvu que l'application soit utilisable et solide. Je la lance en prod, et j'ajoute les petites
 fonctionnalités ensuite, tranquillement. Ça m'a libéré énormément de stress. Et ça m'a permis d'avancer beaucoup plus
@@ -851,19 +883,18 @@ peut-être à d'autres.
 
 Quand je décide de faire un article, je trouve d'abord le sujet, puis je couche les points principaux que je veux
 dedans. Je les traite tous, puis une fois que j'ai écrit la conclusion, je sais que l'article n'est pas complet. Mais je
-me dis : elle est suffisamment complète pour que les gens en tirent des bénéfices, donc je la pousse quand même. Et je
+me dis : il est suffisamment complet pour que les gens en tirent des bénéfices, donc je le pousse quand même. Je
 n'écris aucun article dont je suis 100 % satisfait.
 
 ### « Je reste le petit gars acharné qui s'amuse à réinventer le monde »
 
 > Dans
-> [« L'idée de devoir réfléchir intensément me manque »](https://martindufresne.substack.com/p/lidee-de-devoir-reflechir-intensement)
-> , Martin décrit deux traits qui cohabitent en lui : le Bâtisseur, celui qui veut créer, livrer avec pragmatisme, et le
+> [« L'idée de devoir réfléchir intensément me manque »](https://martindufresne.substack.com/p/lidee-de-devoir-reflechir-intensement),
+> Martin décrit deux traits qui cohabitent en lui : le Bâtisseur, celui qui veut créer, livrer avec pragmatisme, et le
 > Penseur, qui a besoin de ruminer un problème difficile pendant des jours, parfois des semaines. Lors de ses études, il
 > était de ceux qui s'entêtaient ainsi, là où la plupart allaient chercher de l'aide ou abandonnaient. Il considère
-> cette capacité de réflexion prolongée comme son atout majeur.  
-> Longtemps, le développement a nourri ces deux traits. Aujourd'hui, l'IA comble le Bâtisseur, mais laisse le Penseur à
-> sec…
+> cette capacité de réflexion prolongée comme son atout majeur. Longtemps, le développement a nourri ces deux traits.
+> Aujourd'hui, l'IA comble le Bâtisseur, mais laisse le Penseur à sec…
 
 > **Maxime :** Je ne suis pas sûr de me considérer comme un penseur, mais plutôt comme un acharné : m'accrocher à une
 > tâche et comprendre de bout en bout, trouver une solution élégante même à un problème mineur, m'investir là où
@@ -886,7 +917,7 @@ en tirer du plaisir.
 
 Les clients ne me demandent jamais le petit effet sur l'icône ou sur le bouton, mais ils trouvent que ça ajoute un petit
 côté humain à leur outil. C'est très rare qu'on me demande de le retirer.
-Ce que j'aime beaucoup faire, souvent sur de gros projets, c'est ce qu'on appelle des easter eggs, des portions
+Ce que j'aime beaucoup faire, souvent sur de gros projets, c'est ce qu'on appelle des _easter eggs_, des portions
 cachées : dans certains, une combinaison de touches te donnait un petit jeu de Sudoku. On s'entend, quand on travaille
 dans un tableur toute la journée, avoir de quoi se détendre sans quitter le projet, ça peut être plaisant. C'est le
 genre de petites choses que j'ajoute même si ce n'est pas demandé. J'y prends du plaisir. Je suis un grand enfant.
@@ -934,14 +965,14 @@ newsletter : en trouver chaque semaine sans être redondant.
 > Il nous a laissé une invitation, vous l'avez compris, mais nous vous la retransmettons : si vous avez des idées de
 > sujets pour sa newsletter, écrivez-lui !
 
-## Pour suivre Martin
+### Pour suivre Martin
 
 - [Son site](https://martindufresne.com/)
 - [Son blog](https://martindufresne.com/blog/)
 - [Sa newsletter sur Substack](https://substack.com/@martindufresne)
 - [Son compte Bluesky](https://bsky.app/profile/mdufresne.bsky.social)
 
-## Les voix qu'il nous recommande
+### Les voix qu'il nous recommande
 
 > Nous avons terminé en lui demandant qui gagnerait à être suivi. Des personnes comme lui, qui publient. Voici une
 > petite liste :

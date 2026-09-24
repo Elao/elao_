@@ -1,0 +1,33 @@
+{#
+    Contrôles de bascule entre les modes de lecture.
+
+    Des boutons `aria-pressed` dans un groupe nommé, et non un `tablist` : le motif
+    d'onglets suppose que les panneaux soient les frères du groupe, or les sommaires
+    restent à leur emplacement, hors des sections de mode. Même information annoncée,
+    sans mentir sur la structure.
+
+    `disabled` est posé au rendu et retiré par le contrôleur Stimulus à la connexion.
+    Sans script la bascule est inopérante : autant que le bouton le dise, plutôt que
+    d'offrir une commande qui ne répond pas.
+
+    @var modes list<\App\Model\Article\ReadingMode>
+    @var label string Nom accessible du groupe
+#}
+<div class="reading-modes__controls" role="group" aria-label="{{ label|default('Mode de lecture') }}">
+    {% for mode in modes %}
+        <button
+            type="button"
+            class="reading-modes__control"
+            aria-pressed="{{ mode.default ? 'true' : 'false' }}"
+            disabled
+            data-blog--reading-modes-target="control"
+            data-action="blog--reading-modes#select"
+            data-reading-mode="{{ mode.slug }}"
+        >
+            <span class="reading-modes__control-label">{{ mode.label }}</span>
+            {% if mode.readingTime %}
+                <span class="reading-modes__control-time">{{ mode.readingTime }} min de lecture</span>
+            {% endif %}
+        </button>
+    {% endfor %}
+</div>

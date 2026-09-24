@@ -46,7 +46,11 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    {# Vide pour tout article qui ne déclare pas le format entretien. #}
+    {% set readingModes = article.readingModes %}
+    <div class="container"{% if readingModes is not empty %} {{ stimulus_controller('blog/reading_modes', {
+        defaultMode: readingModes|first.slug,
+    }) }}{% endif %}>
         {#
             The following code builds a breadcrumb trail for the article.
             `parentPaths` is an array of the path segments of the article's URL, excluding the article's title.
@@ -127,24 +131,28 @@
             </div>
         </div>
 
-        {% if article.tableOfContent is not empty %}
-            <ol class="table-of-content" data-aos="fade-up">
-                {% for headline in article.tableOfContent %}
-                    <li class="table-of-content__item">
-                        <a href="#{{ headline.id }}">{{ headline.content }}</a>
+        {% if readingModes is not empty %}
+            {% include 'blog/_reading-modes.html.twig' with { article: article, modes: readingModes } only %}
 
-                        {% if headline.children is not empty %}
-                            <ol class="table-of-content__sub-level">
-                                {% for child in headline.children %}
-                                        <li>
-                                            <a href="#{{ child.id }}">{{ child.content }}</a>
-                                        </li>
-                                {% endfor %}
-                            </ol>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ol>
+            {#
+                Les sommaires restent à leur emplacement d'origine, hors des sections de mode :
+                un seul est affiché à la fois, celui du mode actif.
+            #}
+            {% for mode in readingModes %}
+                {% if mode.tableOfContent is not empty %}
+                    <nav
+                        class="reading-mode{{ mode.default ? ' is-active' : '' }}"
+                        data-blog--reading-modes-target="mode"
+                        data-reading-mode="{{ mode.slug }}"
+                        aria-labelledby="reading-mode-toc-{{ mode.slug }}"
+                    >
+                        <h2 class="reading-mode__title" id="reading-mode-toc-{{ mode.slug }}">Sommaire — {{ mode.label }}</h2>
+                        {% include 'blog/_table-of-content.html.twig' with { tableOfContent: mode.tableOfContent } only %}
+                    </nav>
+                {% endif %}
+            {% endfor %}
+        {% elseif article.tableOfContent is not empty %}
+            {% include 'blog/_table-of-content.html.twig' with { tableOfContent: article.tableOfContent, aos: 'fade-up' } only %}
         {% endif %}
 
         <div class="article-content">
@@ -177,6 +185,37 @@
                 {% endif %}
 
                 {{ article.content|raw }}
+
+                {% for mode in readingModes %}
+                    {#
+                        `id` sur la section : l'adresse `#<mode>` désigne alors un élément réel,
+                        et le contrôleur y voit le mode à activer.
+                    #}
+                    <section
+                        id="{{ mode.slug }}"
+                        class="reading-mode{{ mode.default ? ' is-active' : '' }}"
+                        tabindex="-1"
+                        data-blog--reading-modes-target="mode panel"
+                        data-reading-mode="{{ mode.slug }}"
+                        aria-labelledby="reading-mode-title-{{ mode.slug }}"
+                    >
+                        {#
+                            Titre de mode : masqué à l'écran quand les scripts tournent — les
+                            contrôles nomment déjà le mode affiché — mais toujours restitué aux
+                            technologies d'assistance, et visible sans script, où les deux modes
+                            se lisent l'un après l'autre.
+                        #}
+                        <h2 class="reading-mode__title" id="reading-mode-title-{{ mode.slug }}">{{ mode.label }}</h2>
+
+                        {{ mode.content|raw }}
+
+                        {% include 'blog/_reading-modes-controls.html.twig' with {
+                            modes: readingModes,
+                            label: 'Mode de lecture — fin de la section « ' ~ mode.label ~ ' »',
+                        } only %}
+                    </section>
+                {% endfor %}
+
                 {% block footnotes %}
                     {% for group in article.footnotes|default([]) %}
                         {% set title_id = 'footnotes-title-' ~ loop.index %}
@@ -194,10 +233,14 @@
                                             {{ note.text }}
                                         {% endif %}
                                         {%- if note.source %} – {{ note.source }}{% endif %}
-                                        <a class="footnotes__backref" href="#footnote-ref-{{ note.number }}">
-                                            <span class="screen-reader">Retour à l’appel de la note {{ note.number }}</span>
-                                            <span aria-hidden="true">↩</span>
-                                        </a>
+                                        {# Pas d'ancre de retour pour une note que le corps n'appelle pas :
+                                           le lien ne mènerait nulle part. Cas d'une bibliographie. #}
+                                        {% if note.anchored %}
+                                            <a class="footnotes__backref" href="#footnote-ref-{{ note.number }}">
+                                                <span class="screen-reader">Retour à l’appel de la note {{ note.number }}</span>
+                                                <span aria-hidden="true">↩</span>
+                                            </a>
+                                        {% endif %}
                                     </li>
                                 {% endfor %}
                             </ol>

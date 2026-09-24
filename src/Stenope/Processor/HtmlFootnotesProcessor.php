@@ -29,7 +29,7 @@ use Stenope\Bundle\Content;
  * technologies d'assistance plutôt que de compter sur un attribut `title`, qui
  * n'entre dans le calcul du nom accessible qu'à défaut de contenu.
  *
- * @phpstan-type Note array{number: int, key: string|null, text: string, url: string|null, source: string|null}
+ * @phpstan-type Note array{number: int, key: string|null, text: string, url: string|null, source: string|null, anchored: bool}
  * @phpstan-type Group array{title: string, key: string|null, notes: list<Note>}
  *
  * @see \App\Model\Article::$footnotes
@@ -83,7 +83,31 @@ class HtmlFootnotesProcessor implements ProcessorInterface
             $this->replaceMarkers($node, $groups, $anchored);
         }
 
+        // Une note que le corps n'appelle jamais n'a pas d'ancre de retour : le gabarit
+        // ne doit pas en proposer une. C'est le cas d'une bibliographie, rassemblée en
+        // fin d'article sans être appelée depuis le texte.
+        $data['footnotes'] = $this->markAnchored($groups, $anchored);
+
         $this->crawlers->save($content, $data, $this->property);
+    }
+
+    /**
+     * Reporte sur chaque note le fait qu'elle a reçu une ancre de retour dans le corps.
+     *
+     * @param list<Group>      $groups
+     * @param array<int, true> $anchored Numéros des notes réellement appelées
+     *
+     * @return list<Group>
+     */
+    private function markAnchored(array $groups, array $anchored): array
+    {
+        foreach ($groups as $groupIndex => $group) {
+            foreach ($group['notes'] as $noteIndex => $note) {
+                $groups[$groupIndex]['notes'][$noteIndex]['anchored'] = isset($anchored[$note['number']]);
+            }
+        }
+
+        return $groups;
     }
 
     /**
@@ -121,6 +145,8 @@ class HtmlFootnotesProcessor implements ProcessorInterface
                     'text' => (string) $rawNote['text'],
                     'url' => isset($rawNote['url']) ? (string) $rawNote['url'] : null,
                     'source' => isset($rawNote['source']) ? (string) $rawNote['source'] : null,
+                    // Passé à `true` par {@see self::markAnchored()} si le corps appelle la note.
+                    'anchored' => false,
                 ];
             }
 

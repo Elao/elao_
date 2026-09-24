@@ -1,0 +1,28 @@
+{#
+    Sommaire d'un contenu, extrait du gabarit d'article pour être rendu une fois par
+    mode de lecture sur les articles au format entretien.
+
+    `aos` n'est passé que pour le sommaire d'un article ordinaire, toujours visible.
+    Un sommaire de mode ne doit pas être animé : masqué au chargement, il n'obtiendrait
+    jamais sa classe `aos-animate` et resterait à `opacity: 0` une fois révélé.
+
+    @var tableOfContent \Stenope\Bundle\TableOfContent\TableOfContent
+    @var aos            string|null
+#}
+<ol class="table-of-content"{% if aos|default(false) %} data-aos="{{ aos }}"{% endif %}>
+    {% for headline in tableOfContent %}
+        <li class="table-of-content__item">
+            <a href="#{{ headline.id }}">{{ headline.content }}</a>
+
+            {% if headline.children is not empty %}
+                <ol class="table-of-content__sub-level">
+                    {% for child in headline.children %}
+                        <li>
+                            <a href="#{{ child.id }}">{{ child.content }}</a>
+                        </li>
+                    {% endfor %}
+                </ol>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ol>

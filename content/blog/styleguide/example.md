@@ -145,6 +145,8 @@ footnotes:
   - { text: "Conventions typographiques", url: "https://…", source: "Wikipédia" }
 ```
 
+Rien n'oblige à appeler une note depuis le corps. Une note jamais appelée est simplement listée, sans son ancre de retour, qui ne mènerait nulle part : de quoi rassembler une bibliographie en fin d'article, à côté des liens déjà posés dans le texte.
+
 ### Les images
 
 Une image (qui a du sens, ça n'inclut pas les gifs rigolos) a toujours une légende, et si possible on crédite son auteur·ice.

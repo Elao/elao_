@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Model\Article\ReadingMode;
+use App\Stenope\Processor\ArticleReadingModesProcessor;
 use App\Stenope\Processor\AuthorProcessor;
 use App\Stenope\Processor\GithubEditLinkProcessor;
 use Stenope\Bundle\Attribute\SuggestedDebugQuery;
@@ -22,7 +24,24 @@ use Stenope\Bundle\TableOfContent\TableOfContent;
 #[SuggestedDebugQuery('Matching slug', filters: "_.slug matches '/symfony/'", orders: 'desc:date')]
 class Article
 {
-    public string $type;
+    public const TYPE_POST = 'post';
+
+    /**
+     * Article portant deux modes de lecture, récit et entretien.
+     *
+     * @see ArticleReadingModesProcessor
+     */
+    public const TYPE_INTERVIEW = 'interview';
+
+    public const READING_MODE_NARRATIVE = 'narratif';
+    public const READING_MODE_INTERVIEW = 'entretien';
+
+    private const READING_MODE_LABELS = [
+        self::READING_MODE_NARRATIVE => 'Récit',
+        self::READING_MODE_INTERVIEW => 'Entretien intégral',
+    ];
+
+    public string $type = self::TYPE_POST;
     public string $title;
     public string $slug;
     public string $content;
@@ -88,7 +107,7 @@ class Article
      * @var list<array{
      *     title: string,
      *     key: string|null,
-     *     notes: list<array{number: int, key: string|null, text: string, url: string|null, source: string|null}>,
+     *     notes: list<array{number: int, key: string|null, text: string, url: string|null, source: string|null, anchored: bool}>,
      * }>|null
      *
      * @see \App\Stenope\Processor\HtmlFootnotesProcessor
@@ -101,6 +120,35 @@ class Article
      * @see TableOfContentProcessor
      */
     public ?TableOfContent $tableOfContent = null;
+
+    /**
+     * En-tête d'un article au format entretien : texte du bloc d'annonce, et
+     * libellé / durée de lecture de chaque mode. Tout y est facultatif ; les
+     * libellés retombent sur {@see self::READING_MODE_LABELS}.
+     *
+     * Privée, et renseignée par son setter : une propriété publique du même nom masquerait
+     * `getReadingModes()` en Twig, où l'accès à une propriété l'emporte sur l'accesseur.
+     *
+     * @var array{
+     *     intro?: string|null,
+     *     narratif?: array{label?: string|null, readingTime?: int|null}|null,
+     *     entretien?: array{label?: string|null, readingTime?: int|null}|null,
+     * }|null
+     */
+    private ?array $readingModes = null;
+
+    /**
+     * Corps et sommaire de chaque mode de lecture, découpés du contenu.
+     *
+     * Renseignés uniquement pour un article au format entretien ; ailleurs,
+     * `content` porte le contenu entier comme auparavant.
+     *
+     * @see ArticleReadingModesProcessor
+     */
+    public ?string $narrativeContent = null;
+    public ?TableOfContent $narrativeTableOfContent = null;
+    public ?string $interviewContent = null;
+    public ?TableOfContent $interviewTableOfContent = null;
 
     /**
      * True if the article is obsolete/outdated.
@@ -147,5 +195,73 @@ class Article
     public function getAuthorsArray(): array
     {
         return array_values($this->authors);
+    }
+
+    /**
+     * @param array{
+     *     intro?: string|null,
+     *     narratif?: array{label?: string|null, readingTime?: int|null}|null,
+     *     entretien?: array{label?: string|null, readingTime?: int|null}|null,
+     * }|null $readingModes
+     */
+    public function setReadingModes(?array $readingModes): void
+    {
+        $this->readingModes = $readingModes;
+    }
+
+    public function isInterview(): bool
+    {
+        return self::TYPE_INTERVIEW === $this->type;
+    }
+
+    /**
+     * Texte du bloc d'annonce, quand la rédaction surcharge celui du gabarit.
+     */
+    public function getReadingModesIntro(): ?string
+    {
+        return $this->readingModes['intro'] ?? null;
+    }
+
+    /**
+     * Les modes de lecture effectivement présents dans l'article. Vide pour tout
+     * article qui n'est pas au format entretien.
+     *
+     * L'ordre est celui déclaré ici — récit puis entretien —, et non celui des
+     * séparateurs dans le markdown : le récit est le mode d'arrivée quelle que soit
+     * la façon dont l'article est écrit.
+     *
+     * @return list<ReadingMode>
+     */
+    public function getReadingModes(): array
+    {
+        if (!$this->isInterview()) {
+            return [];
+        }
+
+        $modes = [];
+
+        foreach ([
+            self::READING_MODE_NARRATIVE => [$this->narrativeContent, $this->narrativeTableOfContent],
+            self::READING_MODE_INTERVIEW => [$this->interviewContent, $this->interviewTableOfContent],
+        ] as $slug => [$content, $tableOfContent]) {
+            if (null === $content) {
+                continue;
+            }
+
+            $config = $this->readingModes[$slug] ?? null;
+
+            $modes[] = new ReadingMode(
+                $slug,
+                $config['label'] ?? self::READING_MODE_LABELS[$slug],
+                $config['readingTime'] ?? null,
+                $content,
+                $tableOfContent,
+                // Le premier mode présent est celui affiché à l'arrivée.
+                // Cf. l'ordre fixe documenté plus haut.
+                [] === $modes,
+            );
+        }
+
+        return $modes;
     }
 }

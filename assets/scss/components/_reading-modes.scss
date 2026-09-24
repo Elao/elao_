@@ -1,0 +1,143 @@
+// Bloc d'annonce et contrôles de bascule d'un article à deux modes de lecture.
+
+// Le mode inactif est retiré du rendu, donc aussi de la restitution : `display: none`,
+// et non une simple invisibilité à l'écran.
+//
+// La règle est conditionnée à `html:not(.no-js)`. Sans script, les deux modes restent
+// lisibles l'un après l'autre. Avec script, `no-js` est retiré en tête de `<head>`
+// (base.html.twig), donc avant le premier rendu : le mode inactif n'apparaît jamais,
+// même le temps d'une image, et sans script d'anti-clignotement dédié.
+html:not(.no-js) .reading-mode:not(.is-active) {
+  display: none;
+}
+
+// Le titre de mode nomme la section pour les technologies d'assistance et pour la
+// lecture sans script. À l'écran, les contrôles disent déjà quel mode est affiché.
+html:not(.no-js) .reading-mode__title {
+  @extend .screen-reader;
+}
+
+// Le focus est porté sur la section à la bascule, pour annoncer le mode activé.
+// L'anneau global de :focus-visible n'a rien à signaler ici : la cible n'est pas
+// une commande, et le lecteur n'a pas déplacé le focus lui-même.
+.reading-mode:focus {
+  outline: none;
+}
+
+// Le bloc annonce, il n'expose pas : il tient en quelques lignes au-dessus d'un article
+// long, et ses proportions restent en retrait de celles du corps.
+.reading-modes {
+  // Marge basse indispensable : le sommaire qui suit est sur le même fond, les deux
+  // blocs se confondraient sans séparation.
+  margin: 40px 0;
+  padding: 26px 32px;
+  background: $color-secondary;
+  color: $color-text;
+
+  @media (max-width: $screen-sm) {
+    padding: 22px;
+  }
+}
+
+.reading-modes__intro {
+  font-family: 'faktum regular';
+  font-size: 16px;
+  line-height: 1.55;
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    font-family: 'faktum bold';
+  }
+}
+
+.reading-modes__controls {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reading-modes__control {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 18px;
+  border: 2px solid $color-primary;
+  background: #fff;
+  color: $color-primary;
+  text-align: left;
+  cursor: pointer;
+  transition: background ease-in .1s, color ease-in .1s;
+
+  &[aria-pressed='true'] {
+    background: $color-primary;
+    color: #fff;
+  }
+
+  // Servi inerte, activé par le contrôleur Stimulus : sans script, la bascule
+  // n'a aucun effet, autant que le bouton le dise.
+  &:disabled {
+    cursor: default;
+    border-color: $color-tertiary;
+    color: $color-text;
+
+    &[aria-pressed='true'] {
+      background: $color-tertiary;
+      color: $color-text;
+    }
+  }
+
+  &:not(:disabled):hover,
+  &:not(:disabled):active {
+    background: $color-primary;
+    color: #fff;
+  }
+}
+
+.reading-modes__control-label {
+  font-family: 'antikor bold';
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.reading-modes__control-time {
+  font-family: 'faktum regular';
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+// Sur petit écran, les contrôles s'empilent : la durée passe sur la même ligne que le
+// libellé, calée à droite, plutôt que d'ajouter une ligne à chacun des deux boutons.
+// L'alignement se fait sur la ligne de base, pour que la durée suive la première ligne
+// du libellé même quand celui-ci en occupe deux.
+@media (max-width: $screen-xs) {
+  .reading-modes__control {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 14px;
+  }
+
+  .reading-modes__control-label {
+    flex: 1;
+  }
+
+  .reading-modes__control-time {
+    flex: none;
+    text-align: right;
+  }
+}
+
+// Rappel des contrôles en fin de mode : hors du bloc d'annonce, donc sans son fond.
+.reading-mode .reading-modes__controls {
+  margin: 60px 0 0;
+  padding-top: 26px;
+  border-top: 1px solid $color-tertiary;
+}

@@ -1,3 +1,0 @@
-Contact: security@elao.com
-Expires: Wed, 1 Jan 2030 00:00 +0200
-Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/6906BF0C8B9F4C1A744D82E4027032B8CC8E1651

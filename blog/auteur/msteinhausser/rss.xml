@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog/auteur/msteinhausser</link>
-        <pubDate>Wed, 09 Sep 2026 07:37:11 +0000</pubDate>
+        <pubDate>Thu, 24 Sep 2026 07:08:52 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -18,8 +18,43 @@
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/auteur/msteinhausser/rss.xml" rel="self" type="application/rss+xml"/>
                     <item>
+                <title>« On est toujours dans une roue » : à la rencontre de Martin Dufresne</title>
+                <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Pourquoi l&#039;IA nous fatigue-t-elle plus qu&#039;elle ne nous soulage ? Où est passé le plaisir de développer ? Comment apprendre quand la machine a déjà la réponse ? Autant de sujets que nous avons abordés avec Martin Dufresne, développeur, chercheur indépendant et formateur, pour le deuxième épisode des voix de notre veille. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne</guid>
+                <link>https://elao.github.io/elao_/blog/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne/thumbnail-3f353ae3.jpg/8f46be212d26a140058581907e8f4171.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">« On est toujours dans une roue » : à la rencontre de Martin Dufresne</media:description>
+                                    </media:content>
+                                    <category>veille</category>
+                                    <category>ia</category>
+                                            </item>
+                    <item>
+                <title>Le format d&#039;article à deux modes de lecture</title>
+                <pubDate>Thu, 24 Sep 2026 07:02:25 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comment écrire un article qui porte deux lectures — un récit et l&#039;entretien intégral — et bascule de l&#039;une à l&#039;autre. Contenu fictif, à usage de démonstration. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/styleguide/entretien-deux-modes</guid>
+                <link>https://elao.github.io/elao_/blog/styleguide/entretien-deux-modes</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/interviews/trame-itw.jpg/f3793f49e7159a81a5891d6b7994c10c.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le format d&#039;article à deux modes de lecture</media:description>
+                                    </media:content>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
                 <title>Guide pratique pour l&#039;écriture de tests sensibles au temps</title>
-                <pubDate>Wed, 09 Sep 2026 07:31:01 +0000</pubDate>
+                <pubDate>Thu, 24 Sep 2026 07:02:25 +0000</pubDate>
                 <description>
                     <![CDATA[ Une logique basée sur des éléments temporels complique la rédaction de scénarios fiables dans le temps.
 Heureusement, des solutions existent. Démonstration avec Symfony, PHPUnit et Foundry.

@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/blog</link>
-        <pubDate>Wed, 09 Sep 2026 07:33:46 +0000</pubDate>
+        <pubDate>Thu, 24 Sep 2026 07:06:10 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/apple-touch-icon.png</url>
@@ -17,6 +17,24 @@
             <link>https://elao.github.io/elao_/blog</link>
         </image>
         <atom:link href="https://elao.github.io/elao_/blog/rss.xml" rel="self" type="application/rss+xml"/>
+                    <item>
+                <title>« On est toujours dans une roue » : à la rencontre de Martin Dufresne</title>
+                <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+                <description>
+                    <![CDATA[ Pourquoi l&#039;IA nous fatigue-t-elle plus qu&#039;elle ne nous soulage ? Où est passé le plaisir de développer ? Comment apprendre quand la machine a déjà la réponse ? Autant de sujets que nous avons abordés avec Martin Dufresne, développeur, chercheur indépendant et formateur, pour le deuxième épisode des voix de notre veille. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne</guid>
+                <link>https://elao.github.io/elao_/blog/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-de-martin-dufresne/thumbnail-3f353ae3.jpg/8f46be212d26a140058581907e8f4171.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">« On est toujours dans une roue » : à la rencontre de Martin Dufresne</media:description>
+                                    </media:content>
+                                    <category>veille</category>
+                                    <category>ia</category>
+                                            </item>
                     <item>
                 <title>Internaliser la paie, le grand saut ! (épisode 3)</title>
                 <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
@@ -34,6 +52,23 @@
                                     </media:content>
                                     <category>rh</category>
                                     <category>team</category>
+                                    <category>elao</category>
+                                            </item>
+                    <item>
+                <title>Le format d&#039;article à deux modes de lecture</title>
+                <pubDate>Thu, 24 Sep 2026 07:02:25 +0000</pubDate>
+                <description>
+                    <![CDATA[ Comment écrire un article qui porte deux lectures — un récit et l&#039;entretien intégral — et bascule de l&#039;une à l&#039;autre. Contenu fictif, à usage de démonstration. ]]>
+                </description>
+                <guid isPermaLink="true">https://elao.github.io/elao_/blog/styleguide/entretien-deux-modes</guid>
+                <link>https://elao.github.io/elao_/blog/styleguide/entretien-deux-modes</link>
+                <media:content
+                    url="https://elao.github.io/elao_/resized/content/images/blog/interviews/trame-itw.jpg/f3793f49e7159a81a5891d6b7994c10c.jpg"
+                    width="1200"
+                    height="627"
+                >
+                    <media:description type="plain">Le format d&#039;article à deux modes de lecture</media:description>
+                                    </media:content>
                                     <category>elao</category>
                                             </item>
                     <item>
@@ -211,49 +246,6 @@
                                     <category>rh</category>
                                     <category>flexibilite</category>
                                     <category>organisation</category>
-                                            </item>
-                    <item>
-                <title>Animer et structurer intelligemment : 4 fonctionnalités CSS qui changent la donne</title>
-                <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
-                <description>
-                    <![CDATA[ View Transitions, Scroll-Driven Animations, animation-composition, @property… Découvrez les fonctionnalités CSS modernes qui transforment la façon d&#039;animer et de structurer les interactions — sans JavaScript.
- ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/blog/dev/nouveautes-css-2025-part2</guid>
-                <link>https://elao.github.io/elao_/blog/dev/nouveautes-css-2025-part2</link>
-                <media:content
-                    url="https://elao.github.io/elao_/resized/content/images/blog/2026/dev/nouveautes-css-2025/thumbnail-part2.png/8e8d57d79f2b56cc3bcb878e3563cfb3.png"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Animer et structurer intelligemment : 4 fonctionnalités CSS qui changent la donne</media:description>
-                                    </media:content>
-                                    <category>css</category>
-                                    <category>frontend</category>
-                                    <category>animation</category>
-                                    <category>design-system</category>
-                                            </item>
-                    <item>
-                <title>Paralléliser des tâches avec Claude Code : comparatif de 4 approches</title>
-                <pubDate>Wed, 09 Sep 2026 07:31:01 +0000</pubDate>
-                <description>
-                    <![CDATA[ Retour d&#039;expérience sur 4 approches de parallélisation de tâches dans Claude Code : 
-séquentielle, batch, Agent Teams et Task Worker Pool.
- ]]>
-                </description>
-                <guid isPermaLink="true">https://elao.github.io/elao_/blog/ia/paralleliser-taches-claude-code</guid>
-                <link>https://elao.github.io/elao_/blog/ia/paralleliser-taches-claude-code</link>
-                <media:content
-                    url="https://elao.github.io/elao_/resized/content/images/blog/thumbnails/paralleliser-taches-claude-code.jpg/33ec849322ec6117eed8e4742456e0dd.jpg"
-                    width="1200"
-                    height="627"
-                >
-                    <media:description type="plain">Paralléliser des tâches avec Claude Code : comparatif de 4 approches</media:description>
-                                    </media:content>
-                                    <category>claude-code</category>
-                                    <category>ia</category>
-                                    <category>automatisation</category>
-                                    <category>productivite</category>
                                             </item>
             </channel>
 </rss>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 230" font-family="Inter, system-ui, sans-serif">
+  <!-- Step 1 -->
+  <rect x="10" y="30" width="200" height="140" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="10" y="30" width="200" height="4" rx="2" fill="#E63946"/>
+  <text x="110" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a">Requête utilisateur</text>
+  <text x="110" y="100" text-anchor="middle" font-size="12" fill="#4a4a4a">« faire revenir</text>
+  <text x="110" y="118" text-anchor="middle" font-size="12" fill="#4a4a4a">les oignons »</text>
+  <rect x="35" y="132" width="150" height="24" rx="4" fill="rgba(230,57,70,0.08)"/>
+  <text x="110" y="149" text-anchor="middle" font-size="10" fill="#8a8a8a">Transformée en vecteur</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="240" y="108" text-anchor="middle" font-size="24" fill="#8a8a8a">→</text>
+
+  <!-- Step 2 -->
+  <rect x="270" y="30" width="200" height="140" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="270" y="30" width="200" height="4" rx="2" fill="#457B9D"/>
+  <text x="370" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a">Recherche vectorielle</text>
+  <text x="370" y="100" text-anchor="middle" font-size="12" fill="#4a4a4a">Comparaison cosinus</text>
+  <text x="370" y="118" text-anchor="middle" font-size="12" fill="#4a4a4a">avec le lexique</text>
+  <rect x="295" y="132" width="150" height="24" rx="4" fill="rgba(69,123,157,0.08)"/>
+  <text x="370" y="149" text-anchor="middle" font-size="10" fill="#8a8a8a">Top 15 résultats</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="500" y="108" text-anchor="middle" font-size="24" fill="#8a8a8a">→</text>
+
+  <!-- Step 3 -->
+  <rect x="530" y="30" width="200" height="140" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="530" y="30" width="200" height="4" rx="2" fill="#2A9D8F"/>
+  <text x="630" y="72" text-anchor="middle" font-size="13" font-weight="700" fill="#1a1a1a">Réordonnancement</text>
+  <text x="630" y="100" text-anchor="middle" font-size="12" fill="#4a4a4a">Affine la pertinence</text>
+  <text x="630" y="118" text-anchor="middle" font-size="12" fill="#4a4a4a">des candidats</text>
+  <rect x="555" y="132" width="150" height="24" rx="4" fill="rgba(42,157,143,0.08)"/>
+  <text x="630" y="149" text-anchor="middle" font-size="10" fill="#8a8a8a">Top 5 retournés</text>
+
+  <!-- Arrow 3→Result -->
+  <text x="760" y="108" text-anchor="middle" font-size="24" fill="#8a8a8a">→</text>
+
+  <!-- Result -->
+  <rect x="790" y="55" width="100" height="90" rx="10" fill="#fff" stroke="#2A9D8F" stroke-width="2"/>
+  <text x="840" y="95" text-anchor="middle" font-size="13" font-weight="700" fill="#2A9D8F">Top 5</text>
+  <text x="840" y="115" text-anchor="middle" font-size="11" fill="#4a4a4a">résultats</text>
+
+  <!-- Bottom note -->
+  <rect x="220" y="185" width="460" height="28" rx="6" fill="rgba(244,162,97,0.10)" stroke="rgba(244,162,97,0.30)" stroke-width="1"/>
+  <text x="450" y="204" text-anchor="middle" font-size="11" fill="#1a1a1a">Contenu indexé par définition = nom + description + <tspan font-weight="700" fill="#E63946">synonymes</tspan></text>
+</svg>

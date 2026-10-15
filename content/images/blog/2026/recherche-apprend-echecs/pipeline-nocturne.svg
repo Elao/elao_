@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" font-family="Inter, system-ui, sans-serif">
+  <!-- Row 1: Steps 1-3 -->
+
+  <!-- Step 1 - Chargement -->
+  <rect x="10" y="20" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="10" y="20" width="250" height="4" rx="2" fill="#E63946"/>
+  <circle cx="38" cy="52" r="14" fill="rgba(230,57,70,0.08)"/>
+  <text x="38" y="57" text-anchor="middle" font-size="14" font-weight="800" fill="#E63946">1</text>
+  <text x="64" y="57" font-size="13" font-weight="700" fill="#1a1a1a">Chargement</text>
+  <text x="135" y="85" text-anchor="middle" font-size="11" fill="#4a4a4a">Lot de recherches non résolues</text>
+  <rect x="35" y="100" width="190" height="24" rx="4" fill="rgba(230,57,70,0.08)"/>
+  <text x="130" y="116" text-anchor="middle" font-size="10" fill="#8a8a8a">Triées par fréquence décroissante</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="290" y="85" text-anchor="middle" font-size="24" fill="#8a8a8a">→</text>
+
+  <!-- Step 2 - Filtrage -->
+  <rect x="320" y="20" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="320" y="20" width="250" height="4" rx="2" fill="#E63946"/>
+  <circle cx="348" cy="52" r="14" fill="rgba(230,57,70,0.08)"/>
+  <text x="348" y="57" text-anchor="middle" font-size="14" font-weight="800" fill="#E63946">2</text>
+  <text x="374" y="57" font-size="13" font-weight="700" fill="#1a1a1a">Filtrage</text>
+  <text x="445" y="85" text-anchor="middle" font-size="11" fill="#4a4a4a">Le LLM écarte les requêtes hors domaine</text>
+  <rect x="345" y="100" width="190" height="24" rx="4" fill="rgba(230,57,70,0.08)"/>
+  <text x="440" y="116" text-anchor="middle" font-size="10" fill="#8a8a8a">Ex : « météo demain » → écarté</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="600" y="85" text-anchor="middle" font-size="24" fill="#8a8a8a">→</text>
+
+  <!-- Step 3 - Clustering -->
+  <rect x="630" y="20" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="630" y="20" width="250" height="4" rx="2" fill="#457B9D"/>
+  <circle cx="658" cy="52" r="14" fill="rgba(69,123,157,0.08)"/>
+  <text x="658" y="57" text-anchor="middle" font-size="14" font-weight="800" fill="#457B9D">3</text>
+  <text x="684" y="57" font-size="13" font-weight="700" fill="#1a1a1a">Clustering</text>
+  <text x="755" y="85" text-anchor="middle" font-size="11" fill="#4a4a4a">Regroupe les requêtes similaires</text>
+  <rect x="655" y="100" width="190" height="24" rx="4" fill="rgba(69,123,157,0.08)"/>
+  <text x="750" y="116" text-anchor="middle" font-size="10" fill="#8a8a8a">1 suggestion par groupe</text>
+
+  <!-- Arrow row 1 → row 2 -->
+  <text x="755" y="175" text-anchor="middle" font-size="24" fill="#8a8a8a">↓</text>
+
+  <!-- Row 2: Steps 4-6 (reversed direction) -->
+
+  <!-- Step 4 - Matching -->
+  <rect x="630" y="210" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="630" y="210" width="250" height="4" rx="2" fill="#457B9D"/>
+  <circle cx="658" cy="242" r="14" fill="rgba(69,123,157,0.08)"/>
+  <text x="658" y="247" text-anchor="middle" font-size="14" font-weight="800" fill="#457B9D">4</text>
+  <text x="684" y="247" font-size="13" font-weight="700" fill="#1a1a1a">Matching</text>
+  <text x="755" y="275" text-anchor="middle" font-size="11" fill="#4a4a4a">Identifie la définition la plus proche</text>
+  <rect x="655" y="290" width="190" height="24" rx="4" fill="rgba(69,123,157,0.08)"/>
+  <text x="750" y="306" text-anchor="middle" font-size="10" fill="#8a8a8a">Seuil minimal de similarité</text>
+
+  <!-- Arrow 4→5 -->
+  <text x="610" y="275" text-anchor="middle" font-size="24" fill="#8a8a8a">←</text>
+
+  <!-- Step 5 - Génération -->
+  <rect x="320" y="210" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="320" y="210" width="250" height="4" rx="2" fill="#2A9D8F"/>
+  <circle cx="348" cy="242" r="14" fill="rgba(42,157,143,0.08)"/>
+  <text x="348" y="247" text-anchor="middle" font-size="14" font-weight="800" fill="#2A9D8F">5</text>
+  <text x="374" y="247" font-size="13" font-weight="700" fill="#1a1a1a">Génération</text>
+  <text x="445" y="275" text-anchor="middle" font-size="11" fill="#4a4a4a">Le LLM propose un synonyme</text>
+  <rect x="345" y="290" width="190" height="24" rx="4" fill="rgba(42,157,143,0.08)"/>
+  <text x="440" y="306" text-anchor="middle" font-size="10" fill="#8a8a8a">+ score de confiance + raisonnement</text>
+
+  <!-- Arrow 5→6 -->
+  <text x="300" y="275" text-anchor="middle" font-size="24" fill="#8a8a8a">←</text>
+
+  <!-- Step 6 - Déduplication -->
+  <rect x="10" y="210" width="250" height="120" rx="10" fill="#fff" stroke="#e8e4da" stroke-width="1"/>
+  <rect x="10" y="210" width="250" height="4" rx="2" fill="#2A9D8F"/>
+  <circle cx="38" cy="242" r="14" fill="rgba(42,157,143,0.08)"/>
+  <text x="38" y="247" text-anchor="middle" font-size="14" font-weight="800" fill="#2A9D8F">6</text>
+  <text x="64" y="247" font-size="13" font-weight="700" fill="#1a1a1a">Déduplication</text>
+  <text x="135" y="275" text-anchor="middle" font-size="11" fill="#4a4a4a">Vérifie que le synonyme n'existe pas</text>
+  <rect x="35" y="290" width="190" height="24" rx="4" fill="rgba(42,157,143,0.08)"/>
+  <text x="130" y="306" text-anchor="middle" font-size="10" fill="#8a8a8a">Suggestion prête pour validation</text>
+</svg>

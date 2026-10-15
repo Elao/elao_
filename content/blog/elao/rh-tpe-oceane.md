@@ -3,7 +3,7 @@ title: "Quels sont les bénéfices d’une RH en TPE ? Témoignage d’Océane, 
 date: '2026-07-08'
 lastModified: ~
 description: "Comment on a construit la fonction RH d'une boîte de 10 personnes : le point de départ"
-authors: [ mzelboch, ogandillon ]
+authors: [ogandillon, mzelboch]
 tableOfContent: 2
 tags: [ rh, team, elao ]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/oceane.jpg

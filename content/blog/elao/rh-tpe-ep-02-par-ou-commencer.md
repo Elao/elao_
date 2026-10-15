@@ -3,7 +3,7 @@ title: "Construire la fonction RH d'une TPE : par où commencer ? (épisode 2)"
 date: '2026-08-05'
 lastModified: ~
 description: "L'administratif RH, c'est comme les fondations d'une maison : invisible une fois qu'elle est construite, mais tout repose dessus. Épisode 2 : comment on a solidifié ce socle chez Elao, entre conformité et digitalisation."
-authors: [mzelboch, ogandillon]
+authors: [ogandillon, mzelboch]
 tableOfContent: 2
 tags: [rh, team, elao]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/episode-2-thumbnail.jpg

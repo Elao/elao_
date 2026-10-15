@@ -3,7 +3,7 @@ title: "Internaliser la paie, le grand saut ! (épisode 3)"
 date: '2026-09-14'
 lastModified: ~
 description: "Des bulletins justes, mais jamais à date fixe : c'est ce qui nous a poussés à internaliser la paie. Récit d'un grand saut, entre montée en compétence et boule au ventre."
-authors: [mzelboch, ogandillon]
+authors: [ogandillon, mzelboch]
 tableOfContent: 2
 tags: [rh, team, elao]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/episode-3-thumbnail.jpg

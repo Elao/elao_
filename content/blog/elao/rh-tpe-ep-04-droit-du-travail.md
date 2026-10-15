@@ -3,7 +3,7 @@ title: "Le droit du travail, version vécue (épisode 4)"
 date: '2026-10-15'
 lastModified: ~
 description: "Quand on est une petite boîte qui voit grand, le droit du travail n'est pas une théorie : c'est du vécu. Récit, sans filtre, de deux dossiers qui m'ont donné du fil à retordre."
-authors: [mzelboch, ogandillon]
+authors: [ogandillon, mzelboch]
 tableOfContent: 2
 tags: [rh, team, elao]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/episode-4-thumbnail.jpg

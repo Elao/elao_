@@ -3,7 +3,7 @@ title: "Internaliser la paie, le grand saut ! (épisode 3)"
 date: '2026-09-14'
 lastModified: ~
 description: "Des bulletins justes, mais jamais à date fixe : c'est ce qui nous a poussés à internaliser la paie. Récit d'un grand saut, entre montée en compétence et boule au ventre."
-authors: [mzelboch, ogandillon]
+authors: [ogandillon, mzelboch]
 tableOfContent: 2
 tags: [rh, team, elao]
 thumbnail: content/images/blog/2026/elao/rh-tpe-oceane/episode-3-thumbnail.jpg
@@ -98,3 +98,7 @@ On se retrouve très bientôt pour le prochain épisode, consacré cette fois au
 Syntec** : comment s'y retrouver dans le droit du travail sans armée de juristes.
 
 **À bientôt.** 👋
+
+!!! note "Cet article fait partie d'une série de plusieurs épisodes"
+    **L'épisode suivant** est disponible :  
+    [« Le droit du travail, version vécue (épisode 4) »](./rh-tpe-ep-04-droit-du-travail.md).

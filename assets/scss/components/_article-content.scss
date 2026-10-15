@@ -40,11 +40,8 @@
   }
 
   // Souligne les liens de prose : la couleur ne doit pas être le seul indicateur (WCAG 1.4.1)
-  p a,
-  li a,
-  td a {
-    text-decoration: underline;
-  }
+  // Mutualisé depuis, pour appliquer la même règle aux autres contenus rédactionnels.
+  @include prose-links;
 
   // Appels de notes : `line-height: 0` évite que l'exposant élargisse l'interlignage.
   // Pas de `position: relative` ici : cela créerait un bloc conteneur pour le

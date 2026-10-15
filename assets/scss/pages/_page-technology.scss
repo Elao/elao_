@@ -1,4 +1,6 @@
 .page-technology {
+  @include prose-links;
+
   padding: 0 110px;
 
   .article-list {

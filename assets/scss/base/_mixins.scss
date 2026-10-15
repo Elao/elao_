@@ -1,0 +1,24 @@
+// Premier fichier de mixins du projet. Introduit pour un besoin précis : la règle de
+// soulignement des liens de prose doit s'appliquer à l'identique sur cinq conteneurs
+// rédactionnels, et une divergence entre eux serait un défaut d'accessibilité
+// silencieux.
+
+// Souligne les liens de prose (WCAG 1.4.1 / RGAA 10.6).
+//
+// Le critère interdit que la couleur soit le seul moyen de distinguer un lien de son
+// texte environnant. Le soulignement est l'indice non chromatique attendu.
+//
+// Restreint à `p`, `li` et `td` : ce sont les contextes où un lien est noyé dans du
+// texte. Les liens isolés (boutons, cartes, listes de navigation) sont identifiables
+// par leur position et leur mise en forme, et les souligner alourdirait la page sans
+// bénéfice.
+//
+// Les liens auto-stylés sont exclus : un bouton placé dans un paragraphe ne doit pas
+// se retrouver souligné. Cf. `$self-styled-links`.
+@mixin prose-links {
+  p a#{$self-styled-links},
+  li a#{$self-styled-links},
+  td a#{$self-styled-links} {
+    text-decoration: underline;
+  }
+}

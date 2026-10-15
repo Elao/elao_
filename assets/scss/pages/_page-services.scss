@@ -291,7 +291,7 @@
       li {
         font-size: 17px;
 
-        a {
+        a#{$self-styled-links} {
           color: #fff;
           text-decoration: underline;
           transition: color ease-in .1s;
@@ -334,7 +334,7 @@
         font-size: 40px;
       }
 
-      a {
+      a#{$self-styled-links} {
         color: $color-text;
         text-decoration: underline;
         transition: color ease-in .1s;

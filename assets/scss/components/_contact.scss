@@ -121,8 +121,12 @@
     flex-direction: column;
   }
 
+  // Le bloc est en `$color-primary`, ses liens en `$color-info` (`generic/_a.scss`) :
+  // sans soulignement, rien d'autre que la teinte ne distingue l'adresse cliquable du
+  // nom « elao » qui la précède — échec WCAG 1.4.1 / RGAA 10.6.
   a {
     border: none;
+    text-decoration: underline;
   }
 
   .name {

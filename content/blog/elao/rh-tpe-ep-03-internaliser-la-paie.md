@@ -98,3 +98,7 @@ On se retrouve très bientôt pour le prochain épisode, consacré cette fois au
 Syntec** : comment s'y retrouver dans le droit du travail sans armée de juristes.
 
 **À bientôt.** 👋
+
+!!! note "Cet article fait partie d'une série de plusieurs épisodes"
+    **L'épisode suivant** est disponible :  
+    [« Le droit du travail, version vécue (épisode 4) »](./rh-tpe-ep-04-droit-du-travail.md).

@@ -40,7 +40,6 @@ ses réponses.
 
 > Cette spécialisation, je l'ai cultivée avec le temps, mais ça a tout de suite fait partie de mon focus quand je me suis
 > intéressée au design. J'avais envie de mettre mes compétences au service de quelque chose d'un peu plus grand que moi.
-> <cite>— Tamara Sredojevic</cite>
 
 ## L'accessibilité : de la formation des juniors aux process d'entreprise
 
@@ -54,7 +53,6 @@ les premier·es à intervenir dans la chaîne de production.
 
 > C'est important de ne pas laisser partir des trucs que les devs ne vont pas régler tout seuls, ce n'est pas leur
 > travail.
-> <cite>— Tamara Sredojevic</cite>
 
 Pour monter en compétence sur ce sujet, il n'y a pas de recette miracle : la **formation** auprès d'organismes agréés
 est la solution la plus adaptée. Bien évidemment, souligne Tamara, c'est une démarche qui demande du temps et des
@@ -67,7 +65,6 @@ Tamara évoque aussi un point structurant :
 
 > Ce qui est important de comprendre en tant que designer, c'est que les responsabilités qui touchent à
 > l'accessibilité, elles, vont varier en fonction de l'écosystème dans lequel on travaille.
-> <cite>— Tamara Sredojevic</cite>
 
 En effet, la taille d'une entreprise conditionne souvent les moyens et les ressources attribués à ce genre de démarche.
 D'autres facteurs, tels que la possibilité ou non de mettre en place un design system, la présence de développeurs en
@@ -85,7 +82,6 @@ sujets d'accessibilité**.
 > que ça pourrait être dilué, histoire qu'ils ne le découvrent pas en entreprise parce qu'on leur dit qu'on a une
 > obligation de conformité. Je trouve même ça presque injuste, parce que certaines écoles sont très chères et tu sors de
 > là, tu n'es pas prêt.
-> <cite>— Tamara Sredojevic</cite>
 
 ### L'accessibilité au sein des entreprises
 
@@ -97,10 +93,9 @@ Et cela va bien au-delà des métiers du digital et peut toucher tout le monde, 
 > d'anglais. Ça lui est arrivé d'avoir une étudiante aveugle. Il était bien content de m'avoir ce jour-là parce qu'il ne
 > savait pas ce qu'il devait faire. Et la fac ne lui proposait pas d'accompagnement sur comment on gère ce cas de figure,
 > il n'a pas été formé pour ça.
-> <cite>— Tamara Sredojevic</cite>
 
 On pourrait être assez horrifié par le chiffre mentionné par Tamara lors de sa conférence au Mixit de cette année
-(_« Design validiste : comment rompre les normes systémiques »_), qui indique que **seulement 0,57 % des sites sont
+([_« Design validiste : comment rompre les normes systémiques »_](https://mixitconf.org/2026/design-validiste-comment-rompre-les-normes-systemiques)), qui indique que **seulement 0,57 % des sites sont
 totalement conformes au <abbr>RGAA</abbr>** (Référentiel Général d'Amélioration de l'Accessibilité). Cependant, elle
 nous a apporté une nuance intéressante.  
 Bien que ce chiffre soit un véritable indicateur de la prise en compte du sujet dans la société, il ne prend pas en
@@ -109,7 +104,6 @@ considération le travail des équipes en interne.
 > Le taux de conformité est important. Mais il ne raconte certainement pas toute l'histoire de la démarche accessible
 > d'une entreprise. Peut-être qu'au sein d'une structure, la démarche avance mais qu'elle n'est pas encore visible sur
 > les taux de conformité.
-> <cite>— Tamara Sredojevic</cite>
 
 Lors d'un audit, une équipe digitale peut travailler très dur sans pour autant obtenir un taux convenable. Il peut y
 avoir plusieurs raisons à cela :
@@ -118,7 +112,6 @@ avoir plusieurs raisons à cela :
 
   > C'est ce que l'on a fait cette année quand nous avons refait notre audit. On a fait auditer les pages les plus
   > représentatives, les plus visitées, plutôt que celles avec une structure simple.
-  > <cite>— Tamara Sredojevic</cite>
 
 - Un audit est une photographie à un instant T et la production évolue beaucoup dans le temps. Un site non conforme
   aujourd'hui pourrait l'être demain.
@@ -141,7 +134,6 @@ structures, mais la réalité de l'écosystème des entreprises est aussi à pre
 > produit qui exclut une partie de la population, sans que tu aies activement cherché ce résultat-là, mais sans que tu
 > aies rien fait non plus pour l'éviter. Parce qu'en fait, **l'accessibilité, elle n'arrive pas par hasard, elle
 > s'organise.**
-> <cite>— Tamara Sredojevic</cite>
 
 ## Pour comprendre l'accessibilité, aller à la rencontre des personnes concernées
 
@@ -154,7 +146,6 @@ en test utilisateur, quand un retour vient bousculer toutes nos certitudes sur u
 
 > J'ai commencé par Emmanuelle Aboaf, et je suis tombée de ma chaise. Ça a mis en perspective toute la théorie que je
 > pouvais avoir.
-> <cite>— Tamara Sredojevic</cite>
 
 _Emmanuelle Aboaf, que nous avons
 d'ailleurs [rencontrée pour le premier épisode de cette série](./a-la-rencontre-d-emmanuelle-aboaf.md)._
@@ -167,24 +158,28 @@ qu'on entend trop peu.
 > Ce sont des gens qu'on n'interroge jamais, auxquels on s'intéresse peu. Et j'aime bien l'idée de mettre en avant leurs
 > paroles plutôt que ce que moi j'en pense. La parole d'une personne concernée, c'est la dimension humaine de ce qui est
 > écrit dans un référentiel.
-> <cite>— Tamara Sredojevic</cite>
 
 Une histoire de vie touche souvent davantage qu'une règle parmi tant d'autres :
 
 > Ce n'est pas la même chose de raconter à quelqu'un que le contraste est insuffisant au regard de tel critère, que de
 > lui dire : « J'ai rencontré une jeune femme malvoyante la semaine dernière, qui m'a dit qu'elle n'aurait jamais pu être
 > designer alors qu'elle adore le design, parce que les outils ne sont pas faits pour elle. »
-> <cite>— Tamara Sredojevic</cite>
 
 Derrière chaque critère, Tamara voit des besoins humains qui ne sont pas encore considérés comme la norme. Et plus elle
 avance, plus ce décalage lui paraît inacceptable :
 
 > Plus je travaille en accessibilité, plus je la sens, cette injustice, et ça m'aide à continuer.
-> <cite>— Tamara Sredojevic</cite>
 
 Elle espère qu'un jour, la société regardera l'exclusion des personnes handicapées avec le même regard qu'elle porte
 aujourd'hui sur d'autres combats pour les droits civiques, tout en sachant que ces avancées restent fragiles et peuvent
 aussi reculer selon le contexte économique et politique.
+
+<figure>
+    <img src="content/images/blog/2026/methodo/voix-de-notre-veille/a-la-rencontre-de-tamara-sredojevic/tamara-paris-web.jpg" alt="Tamara Sredojevic, micro en main et souriante, assise sur un canapé en palettes aux côtés de deux autres intervenants, lors d'une table ronde à Paris Web.">
+    <figcaption>
+      <span class="figure__credits">Photos : Paris Web, par Aurore Trélaün</span>
+    </figcaption>
+</figure>
 
 ## Accessibilité et neuroatypie
 
@@ -205,7 +200,6 @@ traduire le principe. À l'époque, le terme et le principe de design neuro-incl
 > digital. C'est juste que ça se concentre sur les besoins des personnes qui sont surtout neurodivergentes, comme des
 > personnes qui ont un <abbr title="Trouble du Spectre de l'Autisme">TSA</abbr> ou un TDAH. Ça peut aussi être des
 > personnes qui souffrent de stress post-traumatique.
-> <cite>— Tamara Sredojevic</cite>
 
 L'enjeu du design neuro-inclusif est ainsi de **réduire les stimuli venant du monde extérieur**, et de concevoir un outil
 adapté à toutes les façons de fonctionner. Le RGAA prend déjà quelques critères neuro-inclusifs en compte, comme le fait
@@ -226,7 +220,6 @@ d'échanger autour de l'accessibilité et surtout, de **contrer les idées reçu
 
 > Ce dont on a besoin, c'est que plus de monde sache répondre à ces idées reçues pour qu'elles ne servent pas d'excuse au
 > manque de priorisation de l'accessibilité. Il faut que le monde comprenne le sens de pourquoi on fait tout ça.
-> <cite>— Tamara Sredojevic</cite>
 
 Aujourd'hui, son jeu de cartes l'accompagne dans toutes ses sensibilisations. Tamara l'utilise fréquemment en
 introduction de ses talks, avant même de parler de technologies d'assistance ou des règles RGAA. Un système qui lui
@@ -237,7 +230,6 @@ permet de poser les bases, d'établir un vocabulaire commun afin d'avancer ensem
 > avancer sur les choses qui pourraient les empêcher d'aller plus loin. L'idée, c'est vraiment de dire : « vous pensez
 > des trucs qui sont faux, mais c'est ok. » Et si je ne commence pas par là, les gens, je ne les embarque pas, parce
 > qu'ils ont l'impression d'être le mauvais élève.
-> <cite>— Tamara Sredojevic</cite>
 
 Le jeu de cartes de Tamara, disponible gratuitement sur son site, s'adresse aux designers, mais aussi à toute personne
 s'intéressant à l'accessibilité et souhaitant construire un argumentaire impactant autour du sujet.
@@ -273,7 +265,6 @@ leur ensemble.
 > Tout s'est bien passé mais on t'envoie un document à signer par la poste et tu ne peux pas le lire pour x raisons.
 > Comment l'entreprise a-t-elle anticipé ce besoin ? Est-ce qu'elle te propose des documents en format adapté ou est-ce
 > qu'il va falloir encore une fois que tu trouves une parade pour signer le papier ?
-> <cite>— Tamara Sredojevic</cite>
 
 Bien évidemment, Tamara souligne que ce process est plus facile à mettre en place et à imaginer quand les personnes
 concernées font partie des services de conception.
@@ -289,7 +280,6 @@ Elle soulève aussi la question de la **fiabilité**. Selon elle, l'arrivée de 
 web : produits en masse, en un clic, les contenus sortent sans le moindre critère de qualité.
 
 > C'est un peu comme du fast-food, en version digitale.
-> <cite>— Tamara Sredojevic</cite>
 
 Et même si l'IA produisait un résultat acceptable, un problème de fond demeure : sans formation, comment savoir si ce
 qu'elle propose est réellement conforme ? Que l'on regarde le code ou le design, il faut des repères pour en juger.
@@ -299,7 +289,6 @@ expérimentés :
 > Je n'ai pas 20 ans d'audit derrière moi, donc je doute, c'est humain. Alors face à une IA, je fais quoi ? Est-ce que
 > je lui fais confiance ? Est-ce qu'elle est plus compétente que moi ? Est-ce qu'on en est sûr ? Je ne peux pas répondre
 > à ces questions.
-> <cite>— Tamara Sredojevic</cite>
 
 En se référant à l'IA, on prend également le risque de ne jamais apprendre réellement, puisque c'est la machine qui fait
 à notre place.  
@@ -307,7 +296,6 @@ Tamara s'interroge sur l'avenir du design accessible à l'ère du « tout IA » 
 
 > Quand les seniors partiront à la retraite, il va rester des juniors et des IA. Je ne sais pas si c'est ça qu'on veut.
 > Moi, j'ai un avis, mais il faut poser cette question aux gens et qu'on y réfléchisse ensemble.
-> <cite>— Tamara Sredojevic</cite>
 
 Dans son quotidien en tant que référente accessibilité à la MAIF, Tamara s'appuie sur un **design system** très abouti,
 qui lui permet d'itérer sans IA. Elle confie y avoir recours de façon ponctuelle, notamment pour analyser des retours
@@ -317,7 +305,6 @@ l'exercice a ses limites :
 
 > Des fois, il y a des bonnes idées. Mais si l'IA ne fournit pas une bonne idée tout de suite dans sa réponse, tu ne vas
 > nulle part, et tu le sais.
-> <cite>— Tamara Sredojevic</cite>
 
 Et au fond, un échange de cinq minutes avec un UX writer ou un ancien journaliste de l'équipe donnerait un résultat
 équivalent, voire meilleur, puisqu'il connaît déjà le contexte et les contraintes liées aux projets.
@@ -328,7 +315,6 @@ métier. L'expérience l'a laissée mal à l'aise :
 > J'avais l'impression de rouler avec un 4x4. J'avais une culpabilité tout du long parce que j'essayais d'apprendre des
 > trucs. Notre santé mentale est déjà vachement mise à l'épreuve. Et en plus, maintenant, tu as honte d'essayer de
 > comprendre comment ça marche.
-> <cite>— Tamara Sredojevic</cite>
 
 Autre source de malaise : la question de la **propriété intellectuelle**. Là où les designers allaient autrefois
 chercher l'inspiration sur des mood boards, Behance ou Pinterest, l'IA propose directement des résultats, sans que l'on
@@ -336,7 +322,6 @@ sache d'où ils viennent.
 
 > C'est terrible pour les gens qui ont bossé des heures et des heures sur leur truc. C'est avalé par une IA et refourgué
 > à un autre designer dans le monde.
-> <cite>— Tamara Sredojevic</cite>
 
 ## Peut-on faire de l'art en design web ?
 
@@ -353,7 +338,6 @@ en fonction de ses entraînements.
 
 > C'est vraiment une jolie façon d'expliquer à quelqu'un ce que c'est que l'interaction design. Ce n'est peut-être pas
 > quelque chose que tu vas exposer dans un musée ou dans une galerie, mais il y a de la poésie là-dedans je trouve.
-> <cite>— Tamara Sredojevic</cite>
 
 Pour Tamara, on peut ainsi mettre de l'art dans son métier de plein de façons. Elle prend l'exemple de ses talks, dans
 lesquels elle parle beaucoup de cinéma, ce qui lui permet de raconter son parcours et d'ajouter un peu de spectacle pour
@@ -362,7 +346,6 @@ intéresser les gens. Au final, l'art devient presque un outil.
 > Bien sûr que je ne fais pas du design artistique, mais il ne faut pas oublier à quoi ça sert l'art. Il sert à toucher
 > les gens, donc il faut s'en servir quand on peut. Parce qu'il y a plein de designers hyper frustrés qui n'intègrent pas
 > d'art dans leur pratique alors qu'il y a plein de choses à faire !
-> <cite>— Tamara Sredojevic</cite>
 
 ## Pour conclure
 
@@ -385,6 +368,6 @@ Si vous souhaitez en savoir plus sur son super travail, voici quelques ressource
 
 **Conférences**
 
-- « Design validiste : comment rompre les normes systémiques » — Mixit 2026
+- [« Design validiste : comment rompre les normes systémiques »](https://mixitconf.org/2026/design-validiste-comment-rompre-les-normes-systemiques) — Mixit 2026
 - « Accessibilité et inclusion : au-delà de la conformité » — Designers Éthiques Rennes 2025
 - « Défendre et industrialiser l'accessibilité en tant qu'UX designer » — Paris Web 2024

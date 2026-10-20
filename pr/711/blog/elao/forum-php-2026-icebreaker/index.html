@@ -360,10 +360,11 @@
 
                 
                 
-                <p>Le jeudi 8 octobre, à 9 h 30, la plénière d'ouverture du <strong>Forum PHP 2026</strong> a commencé par une partie de jeu vidéo.
-Toute la salle, téléphone en main, répartie en deux équipes, <strong>Volta</strong> et <strong>Edison</strong>, sur fond d'<em>Exposition
-universelle</em>.</p>
-<p>Ce jeu, l'AFUP nous a demandé de le concevoir et de le développer. Voici comment il est construit, et ce qu'il s'est
+                <p>Le jeudi 8 octobre, à 9 h 30, la plénière d'ouverture du <strong>Forum PHP 2026</strong> a commencé par un jeu multijoueur sur téléphone.
+Toute la salle, répartie en deux équipes, <strong>Volta</strong> et <strong>Edison</strong>, s'est affrontée téléphone en main, sur fond
+d'<em>Exposition universelle</em>.</p>
+<p>Ce jeu, l'<a href="https://afup.org/home" target="_blank">AFUP</a> nous a demandé de le concevoir et de le développer. Voici comment nous l'avons
+construit, et ce qu'il s'est
 passé pendant ces sept minutes.</p>
 <h2 id="le-principe" class="anchor-title"><a href="#le-principe">Le principe</a></h2>
 <p>Le joueur scanne un QR code projeté sur l'écran de la salle, son téléphone lui attribue une équipe, et la partie
@@ -393,7 +394,7 @@ salle de plusieurs centaines de personnes si le serveur tombe à la première ma
 <tbody>
 <tr>
 <td>Framework</td>
-<td>Symfony 7.4 LTS, PHP 8.4</td>
+<td><a href="https://symfony.com/" target="_blank">Symfony</a> 7.4 LTS, PHP 8.4</td>
 </tr>
 <tr>
 <td>Serveur</td>
@@ -405,11 +406,11 @@ salle de plusieurs centaines de personnes si le serveur tombe à la première ma
 </tr>
 <tr>
 <td>État partagé</td>
-<td>Redis, via phpredis en connexion persistante</td>
+<td><a href="https://redis.io/" target="_blank">Redis</a>, via <a href="https://github.com/phpredis/phpredis" target="_blank">phpredis</a> en connexion persistante</td>
 </tr>
 <tr>
 <td>Front</td>
-<td>AssetMapper et Stimulus, sans build Node</td>
+<td><a href="https://symfony.com/doc/current/frontend/asset_mapper.html" target="_blank">AssetMapper</a> et <a href="https://stimulus.hotwired.dev/" target="_blank">Stimulus</a>, sans build Node</td>
 </tr>
 </tbody>
 </table></div>
@@ -419,11 +420,13 @@ le kernel reste en mémoire et chaque requête se contente d'incrémenter un com
 est plafonnée à 15 appuis par seconde pour éviter que quelques scripts bien sentis ne décident du résultat.</p>
 <p>L'écran projeté et l'écran joueur sont deux surfaces de <strong>la même application Symfony</strong>, qui partagent la machine à
 états et le topic Mercure. Pas d'application front séparée : elle aurait ajouté de la coordination sans rien résoudre.</p>
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-marche.png/3ed399062376ad240ce5f4a26888181b.png" alt="L'écran joueur pendant la première manche, la marche : deux éléphants, un par équipe, avancent à chaque appui sous un grand bouton « Tape ! »" title="L'écran joueur pendant la première manche, la marche : deux éléphants, un par équipe, avancent à chaque appui sous un grand bouton « Tape ! »" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-marche.png/3ed399062376ad240ce5f4a26888181b.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-marche.png/8d71264ca88472935c30bddd211bdbd4.png 2x," id="l-ecran-joueur-pendant-la-premiere-manche-la-marche-deux-elephants-un-par-equipe-avancent-a-chaque-appui-sous-un-grand-bouton-tape">
 <h2 id="tester-avant-le-jour-j" class="anchor-title"><a href="#tester-avant-le-jour-j">Tester avant le jour J</a></h2>
-<p>Puisqu'on ne pouvait pas rater la partie, on a beaucoup testé :</p>
+<p>Pour s'assurer que tout fonctionnerait parfaitement le jour J, on a beaucoup testé :</p>
 <ul>
-<li>des <strong>tests unitaires</strong> contre un vrai Redis, pour vérifier l'atomicité des compteurs ;</li>
-<li>des <strong>tests de bout en bout</strong> avec Playwright, d'abord sur mobile, sur Chromium et sur WebKit ;</li>
+<li>des <strong>tests unitaires</strong> avec <a href="https://phpunit.de/" target="_blank">PHPUnit</a> contre un vrai Redis, pour vérifier l'atomicité des compteurs ;</li>
+<li>des <strong>tests de bout en bout</strong> avec <a href="https://playwright.dev/" target="_blank">Playwright</a>, d'abord sur mobile, sur Chromium et sur WebKit ;</li>
 <li>des <strong>tests de charge</strong> avec <a href="https://k6.io/" target="_blank">k6</a>, sur la configuration de production.</li>
 </ul>
 <p>Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
@@ -432,7 +435,7 @@ répondait toujours en une fraction de milliseconde.</p>
 <p>Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à surveiller que tout se passe bien. Une
 façon un peu particulière de vivre une plénière. Pas de cris, pas d'applaudissements, mais des courbes qui s'envolent
 d'un coup quand l'animateur lance la première manche, et l'attente que les temps de réponse, eux, restent bien à plat.</p>
-<p>Ils sont restés à plat. Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :</p>
+<p>Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :</p>
 <ul>
 <li><strong>221 joueurs</strong> : 111 chez Volta, 110 chez Edison ;</li>
 <li><strong>52 847 gestes</strong> comptés, en 19 152 envois groupés ;</li>
@@ -449,10 +452,8 @@ rament et soufflent en même temps, ça reste un sacré spectacle.</p>
 s'était bien passé, que j'ai vraiment pu souffler. Un vrai soulagement.</p>
 <h2 id="ce-que-j-en-retiens" class="anchor-title"><a href="#ce-que-j-en-retiens">Ce que j'en retiens</a></h2>
 <p>Un projet qui ne se joue qu'une fois, ça change la manière de travailler. Pendant des semaines, chaque choix technique
-s'est posé la même question : <em>et si ça casse en direct ?</em> On a testé, chargé, mesuré, et quand les tests automatisés ne
+a généré la même question : <em>et si ça casse en direct ?</em> On a testé, chargé, mesuré, et quand les tests automatisés ne
 suffisaient plus, on a pris de vrais téléphones en main pour ramer et souffler dedans, encore et encore.</p>
-<p>Tout ça pour sept minutes. Sept minutes passées les yeux rivés sur des courbes, puis un message de Xavier, et enfin le
-droit de souffler à mon tour.</p>
 <p>Et puis, il faut le dire : c'était un projet vraiment sympa à mettre en place. Développer un mini-jeu, avec des
 montgolfières, des barques et une ola, ça change du quotidien. Et voir l'équipe de l'AFUP contente du rendu, ça fait
 toujours plaisir.</p>

@@ -375,6 +375,10 @@ s'enchaîne en quatre manches pilotées par l'animateur depuis une console d'adm
 <li><strong>La montgolfière</strong> : on souffle dans le micro ;</li>
 <li><strong>La ola</strong> : chaque équipe se lève à son tour. Cette manche ne mesure rien, elle est purement scénique.</li>
 </ol>
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-intro.png/ef15ac9b13d1bb5f5ad3cc028e532e9a.png" alt="L'écran joueur avant la partie : le joueur découvre son équipe, Volta, et vérifie ses quatre gestes (taper, ramer, autoriser le micro, souffler) pendant que la salle se remplit" title="L'écran joueur avant la partie : le joueur découvre son équipe, Volta, et vérifie ses quatre gestes (taper, ramer, autoriser le micro, souffler) pendant que la salle se remplit" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-intro.png/ef15ac9b13d1bb5f5ad3cc028e532e9a.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-intro.png/68d32413e050fc1169bcf56943bbafa5.png 2x," id="l-ecran-joueur-avant-la-partie-le-joueur-decouvre-son-equipe-volta-et-verifie-ses-quatre-gestes-taper-ramer-autoriser-le-micro-souffler-pendant-que-la-salle-se-remplit">
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/console-animateur.png/a40f9afd017e94c83dd98e2eb2ddbeb1.png" alt="La console animateur : phase courante et boutons pour démarrer la partie ou passer à la manche suivante, compteurs d'appuis et de joueurs connectés par équipe, score en direct et aperçu de l'écran de salle avec son QR code" title="La console animateur : phase courante et boutons pour démarrer la partie ou passer à la manche suivante, compteurs d'appuis et de joueurs connectés par équipe, score en direct et aperçu de l'écran de salle avec son QR code" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/console-animateur.png/a40f9afd017e94c83dd98e2eb2ddbeb1.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/console-animateur.png/c0663c358f3564815338671417a0e150.png 2x," id="la-console-animateur-phase-courante-et-boutons-pour-demarrer-la-partie-ou-passer-a-la-manche-suivante-compteurs-d-appuis-et-de-joueurs-connectes-par-equipe-score-en-direct-et-apercu-de-l-ecran-de-salle-avec-son-qr-code">
 <p>Les trois premières manches rapportent un point à l'équipe gagnante. Puis, au moment d'annoncer le résultat, l'écran
 projeté et tous les téléphones basculent sur une <strong>fausse page d'exception Symfony</strong>. Le résultat ne sera jamais donné : ce crash
 lance le jeu de piste de l'AFUP, qui se poursuit sur <code class="code-inline" id="7897677d663f8e39cb8fc422d091c06d">jeu.afup.org</code>.</p>
@@ -431,13 +435,33 @@ est plafonnée à 15 appuis par seconde pour éviter que quelques scripts bien s
 </ul>
 <p>Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
 répondait toujours en une fraction de milliseconde.</p>
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/674fab3117dfa1e4252fe7ae75f1cd05.png" alt="Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185" title="Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/674fab3117dfa1e4252fe7ae75f1cd05.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/bdc033f671547c2a8440cc0f5866f6b8.png 2x," id="rapport-du-dernier-test-de-charge-650-joueurs-simules-sur-une-partie-complete-de-4-min-25-299-046-requetes-https-1-127-par-seconde-en-moyenne-0-de-requetes-en-echec-650-connexions-mercure-tenues-53-6-ms-au-p95-pour-un-lot-d-appuis-trajet-internet-compris-et-aucun-appui-perdu-sur-783-185">
 <h2 id="le-jour-j-en-chiffres" class="anchor-title"><a href="#le-jour-j-en-chiffres">Le jour J, en chiffres</a></h2>
 <p>Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à surveiller que tout se passe bien. Une
 façon un peu particulière de vivre une plénière. Pas de cris, pas d'applaudissements, mais des courbes qui s'envolent
 d'un coup quand l'animateur lance la première manche, et l'attente que les temps de réponse, eux, restent bien à plat.</p>
 <p>Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :</p>
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/a6fab3a80d90b226f74d89d47b73bc44.png" alt="Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous" title="Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/a6fab3a80d90b226f74d89d47b73bc44.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/76fdd97b9173daf08a9575371b518ce4.png 2x," id="les-chiffres-de-la-partie-221-joueurs-52-847-gestes-environ-1-400-appuis-par-seconde-en-manche-1-victoire-de-volta-2-a-1-le-detail-est-disponible-dans-la-version-accessible-ci-dessous">
+<details>
+<summary>Version accessible</summary>
+<p>Partie jouée sur intro.afup.org le jeudi 8 octobre, entre 9 h 24 et 9 h 38.</p>
 <ul>
-<li><strong>221 joueurs</strong> : 111 chez Volta, 110 chez Edison ;</li>
+<li>221 joueurs inscrits : 111 chez Volta, 110 chez Edison ;</li>
+<li>52 847 gestes comptés ;</li>
+<li>environ 1 400 appuis par seconde pendant la manche 1 ;</li>
+<li>victoire de Volta, 2 à 1.</li>
+</ul>
+<p>Deux équipes presque à égalité :</p>
+<ul>
+<li>Manche 1, tap : Volta gagne avec 13 995 gestes contre 13 770 pour Edison (27 765 au total) ;</li>
+<li>Manche 2, rame : Volta gagne avec 5 264 gestes contre 4 695 pour Edison (9 959 au total) ;</li>
+<li>Manche 3, souffle : Edison gagne avec 7 954 gestes contre 7 169 pour Volta (15 123 au total).</li>
+</ul>
+</details>
+<p>Côté serveur :</p>
+<ul>
 <li><strong>52 847 gestes</strong> comptés, en 19 152 envois groupés ;</li>
 <li><strong>12 081 requêtes</strong> dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;</li>
 <li><strong>1,2 ms</strong> de temps de traitement médian pour un appui (6,1 ms au p95).</li>

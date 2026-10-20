@@ -9,11 +9,12 @@ tags: [elao, afup, ForumPHP, symfony, frankenphp]
 thumbnail: content/images/blog/2026/elao/afup-icebreaker/thumbnail.jpg
 ---
 
-Le jeudi 8 octobre, à 9 h 30, la plénière d'ouverture du **Forum PHP 2026** a commencé par une partie de jeu vidéo.
-Toute la salle, téléphone en main, répartie en deux équipes, **Volta** et **Edison**, sur fond d'_Exposition
-universelle_.
+Le jeudi 8 octobre, à 9 h 30, la plénière d'ouverture du **Forum PHP 2026** a commencé par un jeu multijoueur sur téléphone.
+Toute la salle, répartie en deux équipes, **Volta** et **Edison**, s'est affrontée téléphone en main, sur fond
+d'_Exposition universelle_.
 
-Ce jeu, l'AFUP nous a demandé de le concevoir et de le développer. Voici comment il est construit, et ce qu'il s'est
+Ce jeu, l'[AFUP](https://afup.org/home) nous a demandé de le concevoir et de le développer. Voici comment nous l'avons
+construit, et ce qu'il s'est
 passé pendant ces sept minutes.
 
 ## Le principe
@@ -42,11 +43,11 @@ Nous visions entre 300 et 1000 joueurs. À 1000 joueurs qui tapent frénétiquem
 
 | Composant | Choix |
 |---|---|
-| Framework | Symfony 7.4 LTS, PHP 8.4 |
+| Framework | [Symfony](https://symfony.com/) 7.4 LTS, PHP 8.4 |
 | Serveur | [FrankenPHP](https://frankenphp.dev/), en **worker mode** |
 | Temps réel | [Mercure](https://mercure.rocks/), le hub intégré à FrankenPHP |
-| État partagé | Redis, via phpredis en connexion persistante |
-| Front | AssetMapper et Stimulus, sans build Node |
+| État partagé | [Redis](https://redis.io/), via [phpredis](https://github.com/phpredis/phpredis) en connexion persistante |
+| Front | [AssetMapper](https://symfony.com/doc/current/frontend/asset_mapper.html) et [Stimulus](https://stimulus.hotwired.dev/), sans build Node |
 
 Le **worker mode** est le cœur du dispositif : sans lui, chaque appui démarrerait un kernel Symfony complet. Avec lui,
 le kernel reste en mémoire et chaque requête se contente d'incrémenter un compteur dans Redis.
@@ -57,12 +58,14 @@ est plafonnée à 15 appuis par seconde pour éviter que quelques scripts bien s
 L'écran projeté et l'écran joueur sont deux surfaces de **la même application Symfony**, qui partagent la machine à
 états et le topic Mercure. Pas d'application front séparée : elle aurait ajouté de la coordination sans rien résoudre.
 
+![L'écran joueur pendant la première manche, la marche : deux éléphants, un par équipe, avancent à chaque appui sous un grand bouton « Tape ! »](content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-marche.png)
+
 ## Tester avant le jour J
 
-Puisqu'on ne pouvait pas rater la partie, on a beaucoup testé :
+Pour s'assurer que tout fonctionnerait parfaitement le jour J, on a beaucoup testé :
 
-- des **tests unitaires** contre un vrai Redis, pour vérifier l'atomicité des compteurs ;
-- des **tests de bout en bout** avec Playwright, d'abord sur mobile, sur Chromium et sur WebKit ;
+- des **tests unitaires** avec [PHPUnit](https://phpunit.de/) contre un vrai Redis, pour vérifier l'atomicité des compteurs ;
+- des **tests de bout en bout** avec [Playwright](https://playwright.dev/), d'abord sur mobile, sur Chromium et sur WebKit ;
 - des **tests de charge** avec [k6](https://k6.io/), sur la configuration de production.
 
 Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
@@ -74,7 +77,7 @@ Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à 
 façon un peu particulière de vivre une plénière. Pas de cris, pas d'applaudissements, mais des courbes qui s'envolent
 d'un coup quand l'animateur lance la première manche, et l'attente que les temps de réponse, eux, restent bien à plat.
 
-Ils sont restés à plat. Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :
+Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :
 
 - **221 joueurs** : 111 chez Volta, 110 chez Edison ;
 - **52 847 gestes** comptés, en 19 152 envois groupés ;
@@ -95,11 +98,8 @@ s'était bien passé, que j'ai vraiment pu souffler. Un vrai soulagement.
 ## Ce que j'en retiens
 
 Un projet qui ne se joue qu'une fois, ça change la manière de travailler. Pendant des semaines, chaque choix technique
-s'est posé la même question : _et si ça casse en direct ?_ On a testé, chargé, mesuré, et quand les tests automatisés ne
+a généré la même question : _et si ça casse en direct ?_ On a testé, chargé, mesuré, et quand les tests automatisés ne
 suffisaient plus, on a pris de vrais téléphones en main pour ramer et souffler dedans, encore et encore.
-
-Tout ça pour sept minutes. Sept minutes passées les yeux rivés sur des courbes, puis un message de Xavier, et enfin le
-droit de souffler à mon tour.
 
 Et puis, il faut le dire : c'était un projet vraiment sympa à mettre en place. Développer un mini-jeu, avec des
 montgolfières, des barques et une ola, ça change du quotidien. Et voir l'équipe de l'AFUP contente du rendu, ça fait

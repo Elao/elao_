@@ -27,6 +27,10 @@ s'enchaîne en quatre manches pilotées par l'animateur depuis une console d'adm
 3. **La montgolfière** : on souffle dans le micro ;
 4. **La ola** : chaque équipe se lève à son tour. Cette manche ne mesure rien, elle est purement scénique.
 
+![L'écran joueur avant la partie : le joueur découvre son équipe, Volta, et vérifie ses quatre gestes (taper, ramer, autoriser le micro, souffler) pendant que la salle se remplit](content/images/blog/2026/elao/afup-icebreaker/ecran-joueur-intro.png)
+
+![La console animateur : phase courante et boutons pour démarrer la partie ou passer à la manche suivante, compteurs d'appuis et de joueurs connectés par équipe, score en direct et aperçu de l'écran de salle avec son QR code](content/images/blog/2026/elao/afup-icebreaker/console-animateur.png)
+
 Les trois premières manches rapportent un point à l'équipe gagnante. Puis, au moment d'annoncer le résultat, l'écran
 projeté et tous les téléphones basculent sur une **fausse page d'exception Symfony**. Le résultat ne sera jamais donné : ce crash
 lance le jeu de piste de l'AFUP, qui se poursuit sur `jeu.afup.org`.
@@ -71,6 +75,8 @@ Pour s'assurer que tout fonctionnerait parfaitement le jour J, on a beaucoup tes
 Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
 répondait toujours en une fraction de milliseconde.
 
+![Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185](content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png)
+
 ## Le jour J, en chiffres
 
 Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à surveiller que tout se passe bien. Une
@@ -79,7 +85,27 @@ d'un coup quand l'animateur lance la première manche, et l'attente que les temp
 
 Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :
 
-- **221 joueurs** : 111 chez Volta, 110 chez Edison ;
+![Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous](content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png)
+
+<details>
+<summary>Version accessible</summary>
+<p>Partie jouée sur intro.afup.org le jeudi 8 octobre, entre 9 h 24 et 9 h 38.</p>
+<ul>
+<li>221 joueurs inscrits : 111 chez Volta, 110 chez Edison ;</li>
+<li>52 847 gestes comptés ;</li>
+<li>environ 1 400 appuis par seconde pendant la manche 1 ;</li>
+<li>victoire de Volta, 2 à 1.</li>
+</ul>
+<p>Deux équipes presque à égalité :</p>
+<ul>
+<li>Manche 1, tap : Volta gagne avec 13 995 gestes contre 13 770 pour Edison (27 765 au total) ;</li>
+<li>Manche 2, rame : Volta gagne avec 5 264 gestes contre 4 695 pour Edison (9 959 au total) ;</li>
+<li>Manche 3, souffle : Edison gagne avec 7 954 gestes contre 7 169 pour Volta (15 123 au total).</li>
+</ul>
+</details>
+
+Côté serveur :
+
 - **52 847 gestes** comptés, en 19 152 envois groupés ;
 - **12 081 requêtes** dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;
 - **1,2 ms** de temps de traitement médian pour un appui (6,1 ms au p95).

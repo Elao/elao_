@@ -70,7 +70,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/711/build/app.6e8c2b7c.css">
+                    <link rel="stylesheet" href="/elao_/pr/711/build/app.2b67c1c7.css">
         
                         <script src="/elao_/pr/711/build/runtime.637d1405.js" defer></script><script src="/elao_/pr/711/build/910.3a4e12b3.js" defer></script><script src="/elao_/pr/711/build/637.52390a93.js" defer></script><script src="/elao_/pr/711/build/app.ed5069e3.js" defer></script>
 
@@ -385,8 +385,9 @@ lance le jeu de piste de l'AFUP, qui se poursuit sur <code class="code-inline" i
 <h2 id="une-seule-partie-en-direct-sans-reprise" class="anchor-title"><a href="#une-seule-partie-en-direct-sans-reprise">Une seule partie, en direct, sans reprise</a></h2>
 <p>C'est la contrainte qui a guidé tous nos choix : <strong>le jeu ne se joue qu'une fois</strong>. Pas de deuxième essai devant une
 salle de plusieurs centaines de personnes si le serveur tombe à la première manche.</p>
-<p>Nous visions entre 300 et 1000 joueurs. À 1000 joueurs qui tapent frénétiquement, ça représente environ
-<strong>2500 requêtes par seconde</strong> sur une seule route, pendant une vingtaine de secondes.</p>
+<p>Nous attendions environ 500 joueurs. À 500 joueurs qui tapent frénétiquement, ça représente environ
+<strong>1250 requêtes par seconde</strong> sur une seule route, pendant une vingtaine de secondes. Pour garder de la marge, nous
+avons dimensionné et testé le jeu pour 650 joueurs.</p>
 <h3 id="la-stack" class="anchor-title"><a href="#la-stack">La stack</a></h3>
 <div class="table-scroll" tabindex="0" role="group" aria-label="La stack"><table>
 <thead>
@@ -433,8 +434,8 @@ est plafonnée à 15 appuis par seconde pour éviter que quelques scripts bien s
 <li>des <strong>tests de bout en bout</strong> avec <a href="https://playwright.dev/" target="_blank">Playwright</a>, d'abord sur mobile, sur Chromium et sur WebKit ;</li>
 <li>des <strong>tests de charge</strong> avec <a href="https://k6.io/" target="_blank">k6</a>, sur la configuration de production.</li>
 </ul>
-<p>Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
-répondait toujours en une fraction de milliseconde.</p>
+<p>Les tests de charge ont été rassurants : sur une partie complète jouée par 650 joueurs simulés, aucune requête n'a
+échoué et aucun appui n'a été perdu, avec des temps de réponse de 53,6 ms au p95, trajet internet compris.</p>
 <img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/674fab3117dfa1e4252fe7ae75f1cd05.png" alt="Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185" title="Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/674fab3117dfa1e4252fe7ae75f1cd05.png 1x,
 /elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png/bdc033f671547c2a8440cc0f5866f6b8.png 2x," id="rapport-du-dernier-test-de-charge-650-joueurs-simules-sur-une-partie-complete-de-4-min-25-299-046-requetes-https-1-127-par-seconde-en-moyenne-0-de-requetes-en-echec-650-connexions-mercure-tenues-53-6-ms-au-p95-pour-un-lot-d-appuis-trajet-internet-compris-et-aucun-appui-perdu-sur-783-185">
 <h2 id="le-jour-j-en-chiffres" class="anchor-title"><a href="#le-jour-j-en-chiffres">Le jour J, en chiffres</a></h2>

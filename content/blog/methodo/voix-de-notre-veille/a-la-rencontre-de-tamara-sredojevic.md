@@ -18,8 +18,8 @@ thumbnailResizeOptions: # l'image porte une bannière : on la complète au fond 
         bg: 1e7695
 ---
 
-Il y a quelques semaines, Eva et Emmanuelle ont rencontré [Tamara Sredojevic](https://www.tamarasredojevic.com/),
-**designeuse**, **référente en accessibilité numérique** à la Digital Factory de la MAIF et membre de l'association
+Il y a quelques semaines, Eva et Emmanuelle ont rencontré [Tamara Sredojevic](https://tamarasredojevic.com/fr),
+**designer**, **référente en accessibilité numérique** à la Digital Factory de la MAIF et membre de l'association
 Designers Éthiques.
 
 Accessibilité, design neuro-inclusif, intelligence artificielle, formations, art... cet échange a donné lieu à des
@@ -31,8 +31,8 @@ fil de cet article !
 Étudiante en cinéma à Oxford, Tamara a d'abord été monteuse et assistante réalisateur à Paris, avant de travailler dans
 le marketing digital à Londres. C'est à son retour en France, il y a quelques années, qu'elle se lance dans une
 formation de design. Elle rejoint alors des communautés de femmes dans la tech et s'intéresse de plus près à
-l'accessibilité numérique au travers des travaux de femmes telles que Anna Cook (Microsoft), Anna Milan (Woman Make),
-Stéphanie Walter ou encore Anne-Sophie Tranchet.
+l'accessibilité numérique au travers des travaux de femmes telles que [Anna Cook](https://annaecook.com) (Microsoft), [Hannah Milan](https://hannahmilan.com) (Women Make),
+[Stéphanie Walter](https://stephaniewalter.design) ou encore [Anne-Sophie Tranchet](https://www.hello-bokeh.fr).
 
 La période du Covid devient également pour elle l'occasion de se questionner plus en profondeur sur l'utilité de son
 métier et de ses réalisations pour les autres, et c'est au travers des sujets d'accessibilité numérique qu'elle trouve
@@ -74,7 +74,7 @@ En somme, il est important d'identifier quels sont nos bagages, ce vers quoi nou
 que nous avons à disposition et dans quel environnement nous évoluons.
 
 Nous nous sommes également interrogées sur le rôle que jouent les formations UI/UX actuelles dans cette montée en
-compétence des juniors. Le constat, que partage aussi Emmanuelle, notre UI/UX designeuse, sortie d'école il y a un an,
+compétence des juniors. Le constat, que partage aussi Emmanuelle, notre UI/UX designer, sortie d'école il y a un an,
 est que les formations et cursus en design (UX/UI, Direction Artistique, Motion...) **n'intègrent pas suffisamment les
 sujets d'accessibilité**.
 
@@ -139,7 +139,7 @@ structures, mais la réalité de l'écosystème des entreprises est aussi à pre
 
 Dès ses débuts dans le domaine du design, Tamara est allée à la rencontre des **personnes directement concernées** par
 l'accessibilité numérique, pour échanger avec elles sur leur quotidien, leurs difficultés et leurs besoins (_ndlr : vous
-pouvez retrouver l'ensemble de ses interviews [sur son site](https://www.tamarasredojevic.com/writing)_). Si beaucoup de
+pouvez retrouver l'ensemble de ses interviews [sur son site](https://tamarasredojevic.com/fr/writing/)_). Si beaucoup de
 ses interlocuteurs travaillent eux-mêmes dans le numérique, ce sont les échanges avec des personnes extérieures au
 secteur qui l'ont le plus marquée. Elle y a entendu un discours qu'elle n'avait pas l'habitude d'entendre, un peu comme
 en test utilisateur, quand un retour vient bousculer toutes nos certitudes sur un design.
@@ -331,7 +331,7 @@ artistique ou un artiste qui va exposer ses œuvres. Cependant, un design bien p
 finesse et combler l'écart entre le beau et l'utile.
 
 Elle nous donne l'exemple de sa participation au jury d'une école de design à Nantes, où les étudiant·es en master de
-design présentaient leurs parcours et leurs projets professionnels. Parmi eux, une designeuse a particulièrement attiré
+design présentaient leurs parcours et leurs projets professionnels. Parmi eux, une designer a particulièrement attiré
 son attention en concevant une application dont le but était d'éviter le piège de l'hyper-performance dans le running.
 Pour cela, la candidate avait imaginé une interface matérialisant l'état physique de l'utilisateur sous forme de fleur
 en fonction de ses entraînements.
@@ -360,8 +360,8 @@ moment !
 
 Si vous souhaitez en savoir plus sur son super travail, voici quelques ressources que nous vous conseillons 👇🏻
 
-- Allez faire un tour sur [son site internet](https://www.tamarasredojevic.com/) et en particulier sur
-  [les articles de ses rencontres](https://www.tamarasredojevic.com/writing) avec les personnes directement impactées
+- Allez faire un tour sur [son site internet](https://tamarasredojevic.com/fr) et en particulier sur
+  [les articles de ses rencontres](https://tamarasredojevic.com/fr/writing) avec les personnes directement impactées
   par l'accessibilité
 - Inscrivez-vous à [sa newsletter](https://tamarasredojevic.substack.com/about), publiée tous les deux mois
 - Découvrez [son jeu de cartes](https://www.tamarasredojevic.com/fr/accessibility-deck) pour déconstruire les clichés
@@ -369,5 +369,5 @@ Si vous souhaitez en savoir plus sur son super travail, voici quelques ressource
 **Conférences**
 
 - [« Design validiste : comment rompre les normes systémiques »](https://mixitconf.org/2026/design-validiste-comment-rompre-les-normes-systemiques) — Mixit 2026
-- « Accessibilité et inclusion : au-delà de la conformité » — Designers Éthiques Rennes 2025
-- « Défendre et industrialiser l'accessibilité en tant qu'UX designer » — Paris Web 2024
+- [« Accessibilité et inclusion : au-delà de la conformité »](https://peertube.designersethiques.org/w/byW8nFhrwyjiUgh2KqA9kR) — Designers Éthiques Rennes 2025
+- [« Défendre et industrialiser l'accessibilité en tant qu'UX designer »](https://vimeo.com/1016083521?fl=pl&fe=cm) — Paris Web 2024

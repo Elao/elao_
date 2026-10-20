@@ -76,8 +76,6 @@ Pour s'assurer que tout fonctionnerait parfaitement le jour J, on a beaucoup tes
 Les tests de charge ont été rassurants : sur une partie complète jouée par 650 joueurs simulés, aucune requête n'a
 échoué et aucun appui n'a été perdu, avec des temps de réponse de 53,6 ms au p95, trajet internet compris.
 
-![Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185](content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png)
-
 ## Le jour J, en chiffres
 
 Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à surveiller que tout se passe bien. Une

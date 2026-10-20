@@ -40,8 +40,9 @@ lance le jeu de piste de l'AFUP, qui se poursuit sur `jeu.afup.org`.
 C'est la contrainte qui a guidé tous nos choix : **le jeu ne se joue qu'une fois**. Pas de deuxième essai devant une
 salle de plusieurs centaines de personnes si le serveur tombe à la première manche.
 
-Nous visions entre 300 et 1000 joueurs. À 1000 joueurs qui tapent frénétiquement, ça représente environ
-**2500 requêtes par seconde** sur une seule route, pendant une vingtaine de secondes.
+Nous attendions environ 500 joueurs. À 500 joueurs qui tapent frénétiquement, ça représente environ
+**1250 requêtes par seconde** sur une seule route, pendant une vingtaine de secondes. Pour garder de la marge, nous
+avons dimensionné et testé le jeu pour 650 joueurs.
 
 ### La stack
 
@@ -72,8 +73,8 @@ Pour s'assurer que tout fonctionnerait parfaitement le jour J, on a beaucoup tes
 - des **tests de bout en bout** avec [Playwright](https://playwright.dev/), d'abord sur mobile, sur Chromium et sur WebKit ;
 - des **tests de charge** avec [k6](https://k6.io/), sur la configuration de production.
 
-Les tests de charge ont été rassurants : le serveur encaissait le rythme de 1000 joueurs qui tapent en même temps, et
-répondait toujours en une fraction de milliseconde.
+Les tests de charge ont été rassurants : sur une partie complète jouée par 650 joueurs simulés, aucune requête n'a
+échoué et aucun appui n'a été perdu, avec des temps de réponse de 53,6 ms au p95, trajet internet compris.
 
 ![Rapport du dernier test de charge : 650 joueurs simulés sur une partie complète de 4 min 25, 299 046 requêtes HTTPS (1 127 par seconde en moyenne), 0 % de requêtes en échec, 650 connexions Mercure tenues, 53,6 ms au p95 pour un lot d'appuis trajet internet compris, et aucun appui perdu sur 783 185](content/images/blog/2026/elao/afup-icebreaker/test-de-charge.png)
 

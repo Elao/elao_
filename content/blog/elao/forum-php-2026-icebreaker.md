@@ -86,30 +86,17 @@ d'un coup quand l'animateur lance la première manche, et l'attente que les temp
 
 Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :
 
-![Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous](content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png)
+![Les chiffres de la partie : 221 joueurs, 52 847 gestes, 12 081 requêtes dans la minute la plus chargée, 1,2 ms de traitement médian. Le détail est disponible dans la version accessible ci-dessous](content/images/blog/2026/elao/afup-icebreaker/chiffres-jour-j.png)
 
 <details>
 <summary>Version accessible</summary>
-<p>Partie jouée sur intro.afup.org le jeudi 8 octobre, entre 9 h 24 et 9 h 38.</p>
 <ul>
-<li>221 joueurs inscrits : 111 chez Volta, 110 chez Edison ;</li>
-<li>52 847 gestes comptés ;</li>
-<li>environ 1 400 appuis par seconde pendant la manche 1 ;</li>
-<li>victoire de Volta, 2 à 1.</li>
-</ul>
-<p>Deux équipes presque à égalité :</p>
-<ul>
-<li>Manche 1, tap : Volta gagne avec 13 995 gestes contre 13 770 pour Edison (27 765 au total) ;</li>
-<li>Manche 2, rame : Volta gagne avec 5 264 gestes contre 4 695 pour Edison (9 959 au total) ;</li>
-<li>Manche 3, souffle : Edison gagne avec 7 954 gestes contre 7 169 pour Volta (15 123 au total).</li>
+<li>221 joueurs : 111 chez Volta, 110 chez Edison ;</li>
+<li>52 847 gestes comptés, en 19 152 envois groupés ;</li>
+<li>12 081 requêtes dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;</li>
+<li>1,2 ms de temps de traitement médian pour un appui (6,1 ms au p95).</li>
 </ul>
 </details>
-
-Côté serveur :
-
-- **52 847 gestes** comptés, en 19 152 envois groupés ;
-- **12 081 requêtes** dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;
-- **1,2 ms** de temps de traitement médian pour un appui (6,1 ms au p95).
 
 Côté jeu, la partie a été serrée : Volta remporte la marche avec **225 appuis d'avance sur près de 28 000**, puis la
 barque. Edison se rattrape sur la montgolfière. **Victoire de Volta, 2 à 1**… que la salle n'a jamais vue s'afficher,

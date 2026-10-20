@@ -443,30 +443,17 @@ est plafonnée à 15 appuis par seconde pour éviter que quelques scripts bien s
 façon un peu particulière de vivre une plénière. Pas de cris, pas d'applaudissements, mais des courbes qui s'envolent
 d'un coup quand l'animateur lance la première manche, et l'attente que les temps de réponse, eux, restent bien à plat.</p>
 <p>Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :</p>
-<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/a6fab3a80d90b226f74d89d47b73bc44.png" alt="Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous" title="Les chiffres de la partie : 221 joueurs, 52 847 gestes, environ 1 400 appuis par seconde en manche 1, victoire de Volta 2 à 1. Le détail est disponible dans la version accessible ci-dessous" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/a6fab3a80d90b226f74d89d47b73bc44.png 1x,
-/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-partie.png/76fdd97b9173daf08a9575371b518ce4.png 2x," id="les-chiffres-de-la-partie-221-joueurs-52-847-gestes-environ-1-400-appuis-par-seconde-en-manche-1-victoire-de-volta-2-a-1-le-detail-est-disponible-dans-la-version-accessible-ci-dessous">
+<img src="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-jour-j.png/1f4f9cbd632ba51ba156b1d9153e6459.png" alt="Les chiffres de la partie : 221 joueurs, 52 847 gestes, 12 081 requêtes dans la minute la plus chargée, 1,2 ms de traitement médian. Le détail est disponible dans la version accessible ci-dessous" title="Les chiffres de la partie : 221 joueurs, 52 847 gestes, 12 081 requêtes dans la minute la plus chargée, 1,2 ms de traitement médian. Le détail est disponible dans la version accessible ci-dessous" srcset="/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-jour-j.png/1f4f9cbd632ba51ba156b1d9153e6459.png 1x,
+/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/chiffres-jour-j.png/69fe1d7ab392fba0e583b5ae5c5a2ee2.png 2x," id="les-chiffres-de-la-partie-221-joueurs-52-847-gestes-12-081-requetes-dans-la-minute-la-plus-chargee-1-2-ms-de-traitement-median-le-detail-est-disponible-dans-la-version-accessible-ci-dessous">
 <details>
 <summary>Version accessible</summary>
-<p>Partie jouée sur intro.afup.org le jeudi 8 octobre, entre 9 h 24 et 9 h 38.</p>
 <ul>
-<li>221 joueurs inscrits : 111 chez Volta, 110 chez Edison ;</li>
-<li>52 847 gestes comptés ;</li>
-<li>environ 1 400 appuis par seconde pendant la manche 1 ;</li>
-<li>victoire de Volta, 2 à 1.</li>
-</ul>
-<p>Deux équipes presque à égalité :</p>
-<ul>
-<li>Manche 1, tap : Volta gagne avec 13 995 gestes contre 13 770 pour Edison (27 765 au total) ;</li>
-<li>Manche 2, rame : Volta gagne avec 5 264 gestes contre 4 695 pour Edison (9 959 au total) ;</li>
-<li>Manche 3, souffle : Edison gagne avec 7 954 gestes contre 7 169 pour Volta (15 123 au total).</li>
+<li>221 joueurs : 111 chez Volta, 110 chez Edison ;</li>
+<li>52 847 gestes comptés, en 19 152 envois groupés ;</li>
+<li>12 081 requêtes dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;</li>
+<li>1,2 ms de temps de traitement médian pour un appui (6,1 ms au p95).</li>
 </ul>
 </details>
-<p>Côté serveur :</p>
-<ul>
-<li><strong>52 847 gestes</strong> comptés, en 19 152 envois groupés ;</li>
-<li><strong>12 081 requêtes</strong> dans la minute la plus chargée, avec un pic à 520 requêtes dans la même seconde ;</li>
-<li><strong>1,2 ms</strong> de temps de traitement médian pour un appui (6,1 ms au p95).</li>
-</ul>
 <p>Côté jeu, la partie a été serrée : Volta remporte la marche avec <strong>225 appuis d'avance sur près de 28 000</strong>, puis la
 barque. Edison se rattrape sur la montgolfière. <strong>Victoire de Volta, 2 à 1</strong>… que la salle n'a jamais vue s'afficher,
 crash oblige.</p>

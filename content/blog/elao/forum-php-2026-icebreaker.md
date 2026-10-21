@@ -82,6 +82,14 @@ Le 8 octobre, je n'étais pas dans la salle : j'étais devant le monitoring, à 
 façon un peu particulière de vivre une plénière. Pas de cris, pas d'applaudissements, mais des courbes qui s'envolent
 d'un coup quand l'animateur lance la première manche, et l'attente que les temps de réponse, eux, restent bien à plat.
 
+<figure>
+    <img src="content/images/blog/2026/elao/afup-icebreaker/ecran-salle-qrcode.jpg" alt="L'écran de salle projeté en plénière avant la partie : « Scanne pour entrer », un grand QR code, l'adresse jeu.afup.org et le compteur « 165 joueurs présents »">
+    <figcaption>
+      <span class="figure__legend">L'écran de salle, pendant que les joueurs arrivent</span>
+      <span class="figure__credits">Crédit photo : Cecile Hamerel</span>
+    </figcaption>
+</figure>
+
 Et ils le sont bien restés ! Voici les chiffres de la partie, tirés de l'état du jeu conservé dans Redis et des logs d'accès du serveur :
 
 ![Les chiffres de la partie : 221 joueurs, 52 847 gestes, 12 081 requêtes dans la minute la plus chargée, 1,2 ms de traitement médian. Le détail est disponible dans la version accessible ci-dessous](content/images/blog/2026/elao/afup-icebreaker/chiffres-jour-j.png)

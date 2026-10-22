@@ -9,7 +9,7 @@
             lieu au versement d’une rémunération. Contact : contact@elao.com
         </copyright>
         <link>https://elao.github.io/elao_/pr/711/blog</link>
-        <pubDate>Wed, 21 Oct 2026 07:22:46 +0000</pubDate>
+        <pubDate>Thu, 22 Oct 2026 14:03:15 +0000</pubDate>
         <language>fr</language>
         <image>
             <url>https://elao.github.io/elao_/pr/711/apple-touch-icon.png</url>
@@ -26,11 +26,15 @@
                 <guid isPermaLink="true">https://elao.github.io/elao_/pr/711/blog/elao/forum-php-2026-icebreaker</guid>
                 <link>https://elao.github.io/elao_/pr/711/blog/elao/forum-php-2026-icebreaker</link>
                 <media:content
-                    url="https://elao.github.io/elao_/pr/711/content/images/blog/2026/elao/afup-icebreaker/thumbnail.jpg"
+                    url="https://elao.github.io/elao_/pr/711/%2E%2E/../resized/content/images/blog/2026/elao/afup-icebreaker/thumbnail.jpg/4f00a1599d3e3c07d6fe2e0ec81606e7.jpg"
                     width="1200"
                     height="627"
                 >
                     <media:description type="plain">Forum PHP 2026 : 221 téléphones, 7 minutes de jeu et zéro droit à l&#039;erreur</media:description>
+                                            <media:credit
+                            role="photographer"
+                            scheme="urn:ebu"
+                        >Cecile Hamerel</media:credit>
                                     </media:content>
                                     <category>elao</category>
                                     <category>afup</category>
@@ -96,7 +100,7 @@
                                             </item>
                     <item>
                 <title>Le format d&#039;article à deux modes de lecture</title>
-                <pubDate>Wed, 21 Oct 2026 07:21:37 +0000</pubDate>
+                <pubDate>Thu, 22 Oct 2026 14:02:09 +0000</pubDate>
                 <description>
                     <![CDATA[ Comment écrire un article qui porte deux lectures — un récit et l&#039;entretien intégral — et bascule de l&#039;une à l&#039;autre. Contenu fictif, à usage de démonstration. ]]>
                 </description>

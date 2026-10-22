@@ -251,7 +251,7 @@
                     {% if article.credits %}
                         <div class="article-credits">
                             Crédits: photo de couverture par
-                            {% if article.credits.url %}
+                            {% if article.credits.url ?? null %}
                                 <a href="{{ article.credits.url }}">
                                     {{ article.credits.name }}
                                 </a>

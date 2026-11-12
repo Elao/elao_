@@ -11,6 +11,8 @@
 }
 
 .page-project__content {
+  @include prose-links;
+
   margin-left: auto;
   max-width: calc(100% - 200px);
 

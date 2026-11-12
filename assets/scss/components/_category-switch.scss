@@ -92,6 +92,23 @@
           }
         }
 
+        // Deux des quatre tuiles échouaient en blanc (WCAG 1.4.3, seuil 4,5:1 pour du
+        // texte de 20px) : `$color-light` donnait 1,98:1 et `$color-brand` 3,42:1.
+        // `$color-text` est le token de la charte qui passe sur les deux — 8,62:1 et
+        // 4,99:1. Les tuiles `$color-primary` (9,63:1) et `$color-info` (5,15:1)
+        // gardent le blanc.
+        &:first-child,
+        &:nth-child(3) {
+          p, span {
+            color: $color-text;
+          }
+
+          svg path {
+            fill: $color-text;
+            stroke: $color-text;
+          }
+        }
+
         &:before, &:after {
           background-color: transparent;
           content: "";

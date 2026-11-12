@@ -40,11 +40,8 @@
   }
 
   // Souligne les liens de prose : la couleur ne doit pas être le seul indicateur (WCAG 1.4.1)
-  p a,
-  li a,
-  td a {
-    text-decoration: underline;
-  }
+  // Mutualisé depuis, pour appliquer la même règle aux autres contenus rédactionnels.
+  @include prose-links;
 
   // Bloc repliable (ex. version accessible d'une infographie) : filets haut et bas pour le
   // détacher de la prose, et flèche rétablie car `_normalize.scss` passe `summary` en

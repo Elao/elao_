@@ -341,7 +341,7 @@
       margin-bottom: 70px;
     }
 
-    a {
+    a#{$self-styled-links} {
       color: #FFF;
       font-weight: bold;
       text-decoration: underline;

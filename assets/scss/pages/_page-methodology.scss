@@ -81,7 +81,7 @@
         position: relative;
         color: $color-secondary;
 
-        a {
+        a#{$self-styled-links} {
           color: $color-secondary;
           text-decoration: underline;
 
@@ -151,7 +151,7 @@
             display: none;
           }
 
-          a {
+          a#{$self-styled-links} {
             color: #fff;
             text-decoration: underline;
             transition: color ease-in .1s;

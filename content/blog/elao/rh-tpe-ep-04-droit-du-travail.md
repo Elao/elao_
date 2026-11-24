@@ -140,3 +140,7 @@ des décisions concrètes, humaines, qu'on prend en s'appuyant sur le cadre plut
 à des projets que d'autres, plus grands, jugeraient trop compliqués.**
 
 **À suivre.** 👋
+
+!!! note "Cet article fait partie d'une série de plusieurs épisodes"
+    **L'épisode suivant** est disponible :  
+    [« Recruter, quand chaque personne compte double (épisode 5) »](./rh-tpe-ep-05-recruter.md).

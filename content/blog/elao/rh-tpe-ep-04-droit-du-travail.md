@@ -143,4 +143,4 @@ des décisions concrètes, humaines, qu'on prend en s'appuyant sur le cadre plut
 
 !!! note "Cet article fait partie d'une série de plusieurs épisodes"
     **L'épisode suivant** est disponible :  
-    [« Recruter, quand chaque personne compte double (épisode 5) »](./rh-tpe-ep-05-recruter.md).
+    [« Recruter avec méthode, sans perdre l’humain (épisode 5) »](./rh-tpe-ep-05-recruter.md).

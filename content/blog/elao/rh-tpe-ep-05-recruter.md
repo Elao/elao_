@@ -1,5 +1,5 @@
 ---
-title: "Recruter, quand chaque personne compte double (épisode 5)"
+title: "Recruter avec méthode, sans perdre l’humain (épisode 5)"
 date: '2026-11-25'
 lastModified: ~
 description: "Trois entretiens de deux heures pour s'apercevoir, à la fin, qu'on n'était pas sur la même fourchette de salaire. L'erreur qui a tout changé dans notre façon de recruter."
@@ -100,7 +100,7 @@ sans doute le plus beau tournant de notre manière de recruter.
 Recruter dans une équipe de dix, ce n'est pas remplir une case. C'est choisir la personne avec qui on va passer ses
 journées, et qui va, à sa façon, infléchir la culture du groupe. Ça mérite de la méthode autant que de l'attention.
 
-**Mais trouver la bonne personne, aussi important que ce soit, ne représente que la moitié du chemin. Le plus dur, et
-le plus beau, commence le jour où elle dit oui.**
+**Mais trouver la bonne personne, aussi important que ce soit, ne représente que la moitié du chemin. Le plus dur reste
+de lui donner envie de rester parmi nous et de s’épanouir sur son nouveau poste.**
 
 **À suivre.** 👋

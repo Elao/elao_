@@ -69,7 +69,7 @@
                         document.querySelector('html').classList.remove('no-js');
         </script>
 
-                    <link rel="stylesheet" href="/elao_/pr/712/build/app.072c9a7c.css">
+                    <link rel="stylesheet" href="/elao_/pr/712/build/app.06085b9a.css">
         
                         <script src="/elao_/pr/712/build/runtime.a808e3b5.js" defer></script><script src="/elao_/pr/712/build/910.3a4e12b3.js" defer></script><script src="/elao_/pr/712/build/637.52390a93.js" defer></script><script src="/elao_/pr/712/build/app.ed5069e3.js" defer></script>
 
@@ -339,7 +339,7 @@
 <p>"To perform some "heavy" action after the response has been streamed to the user".</p>
 </blockquote>
 <p>Une question que vous vous posez surement si vous n'avez pas eu l'occasion de travailler avec cet évènement : "Quand est-ce que je peux utiliser l'évènement "kernel.terminate" pour effectuer mes traitements ?" La réponse en image :</p>
-<img src="/elao_/pr/712/%2E%2E/../resized/content/images/blog/2013/1331.png/cfa7e548b3f7f5f7b658a5c83319a648.png" alt='Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522' title='Utilisation de lévènement kernel.terminate sous Symfony2" width="488" height="522' srcset="/elao_/pr/712/%2E%2E/../resized/content/images/blog/2013/1331.png/cfa7e548b3f7f5f7b658a5c83319a648.png 1x,
+<img src="/elao_/pr/712/%2E%2E/../resized/content/images/blog/2013/1331.png/cfa7e548b3f7f5f7b658a5c83319a648.png" alt="Utilisation de lévènement kernel.terminate sous Symfony2&quot; width=&quot;488&quot; height=&quot;522" title="Utilisation de lévènement kernel.terminate sous Symfony2&quot; width=&quot;488&quot; height=&quot;522" srcset="/elao_/pr/712/%2E%2E/../resized/content/images/blog/2013/1331.png/cfa7e548b3f7f5f7b658a5c83319a648.png 1x,
 /elao_/pr/712/%2E%2E/../resized/content/images/blog/2013/1331.png/9a55d5b3bf73e2cfcf88bfe14a229a6f.png 2x," id="utilisation-de-levenement-kernel-terminate-sous-symfony2-width-488-height-522">
 <p>Concrètement, vous pouvez quasiment tout faire si vous utilisez cet évènement. A une chose près : votre traitement ne doit pas altérer la réponse. Pourquoi ? Parce qu'il est déclenché après que la réponse soit envoyé au client. Il n'y à donc plus moyen d'y rajouter des informations ou d'en altérer son contenu dans le but de l'envoyer au client. (Attention kernel.terminate a été rajouté en Symfony2.1, donc si vous êtes encore en 2.0, vous pouvez oublier).</p>
 <pre class="code-multiline language-php"><code class="language-php" id="38c7dd195387b31fd56c1084d99ce24d"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span>

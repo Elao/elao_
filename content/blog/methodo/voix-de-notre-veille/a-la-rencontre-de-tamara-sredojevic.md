@@ -1,7 +1,7 @@
 ---
 type:               interview
 title:              "« L'accessibilité n'arrive pas par hasard, elle s'organise » : à la rencontre de Tamara Sredojevic"
-date:               '2026-12-02'
+date:               '2026-11-30'
 lastModified:       ~
 description:        "Pour Tamara Sredojevic, la parole des personnes concernées est le meilleur argument pour faire avancer l'accessibilité. Formation des juniors, conformité, design neuro-inclusif, IA, art : elle nous a livré un échange sincère et inspirant."
 authors:            [equentin, eflahaut]
